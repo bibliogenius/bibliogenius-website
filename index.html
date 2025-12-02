@@ -32,12 +32,22 @@
 
     <!-- Hero Section -->
     <header class="hero-bg text-white pt-20 pb-24 px-6 relative overflow-hidden">
+        <!-- Language Switcher -->
+        <div class="absolute top-6 right-6 z-20">
+            <select id="lang-switcher"
+                class="bg-gray-800 text-white border border-gray-600 rounded-md px-2 py-1 text-sm focus:outline-none focus:border-blue-400">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
         <div class="max-w-4xl mx-auto text-center relative z-10">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 id="hero-title" class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 La bibliothèque de demain,<br>
                 <span class="text-blue-400">chez vous.</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-[30rem] mx-auto font-light">
+            <p id="hero-subtitle" class="text-xl md:text-2xl text-gray-300 mb-10 max-w-[30rem] mx-auto font-light">
                 Gérez vos livres, gardez vos données, partagez avec vos voisins.<br>
                 <span class="text-sm font-bold uppercase tracking-widest text-blue-300 mt-4 block">Projet Open Source &
                     Citoyen</span>
@@ -49,9 +59,9 @@
                         <path
                             d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                     </svg>
-                    Voir le Code (GitHub)
+                    <span id="btn-github-text">Voir le Code (GitHub)</span>
                 </a>
-                <a href="#contact"
+                <a href="#contact" id="btn-tester"
                     class="bg-white hover:bg-gray-100 text-gray-900 font-bold py-3 px-8 rounded-full transition shadow-lg">
                     Devenir Testeur
                 </a>
@@ -66,25 +76,28 @@
                 <div class="mb-4 flex justify-center h-24 items-center">
                     <span class="text-6xl">📱</span>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Local-First</h3>
-                <p class="text-gray-600">Vos données sont stockées sur votre téléphone. Pas de cloud obligatoire, pas de
+                <h3 id="feature-local-title" class="text-xl font-bold mb-3">Local-First</h3>
+                <p id="feature-local-desc" class="text-gray-600">Vos données sont stockées sur votre téléphone. Pas de
+                    cloud obligatoire, pas de
                     tracking. Vous êtes propriétaire de votre bibliothèque.</p>
             </div>
             <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
                 <div class="mb-4 flex justify-center h-24 items-center">
                     <span class="text-6xl">🤝</span>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Partage P2P</h3>
-                <p class="text-gray-600">Prêtez vos livres à vos amis ou voisins de confiance. Créez un réseau de
+                <h3 id="feature-p2p-title" class="text-xl font-bold mb-3">Partage P2P</h3>
+                <p id="feature-p2p-desc" class="text-gray-600">Prêtez vos livres à vos amis ou voisins de confiance.
+                    Créez un réseau de
                     lecture local et décentralisé.</p>
             </div>
             <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
                 <div class="mb-4 flex justify-center h-24 items-center">
                     <span class="text-6xl">🧙‍♂️</span>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Assistant Bibliothécaire</h3>
-                <p class="text-gray-600">Une aide magique pour classer et découvrir vos livres, sans jamais envoyer vos
-                    données personnelles aux GAFAM.</p>
+                <h3 id="feature-ai-title" class="text-xl font-bold mb-3">Assistant Bibliothécaire</h3>
+                <p id="feature-ai-desc" class="text-gray-600">Une aide magique pour classer et découvrir vos livres,
+                    sans jamais envoyer vos
+                    données personnelles.</p>
             </div>
         </div>
     </section>
@@ -92,19 +105,23 @@
     <!-- Experimentation Section -->
     <section class="bg-blue-50 py-20 px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8 text-gray-900">Expérimentons ensemble</h2>
-            <p class="text-lg text-gray-700 mb-10 leading-relaxed">
+            <h2 id="exp-title" class="text-3xl font-bold mb-8 text-gray-900">Expérimentons ensemble</h2>
+            <p id="exp-desc" class="text-lg text-gray-700 mb-10 leading-relaxed">
                 BiblioGenius est un projet citoyen. <br>
                 Nous cherchons des bibliothèques, des associations et des voisins pour tester de nouveaux usages :
             </p>
             <div class="flex flex-wrap justify-center gap-4 mb-10">
-                <span class="bg-white px-4 py-2 rounded-lg shadow-sm font-medium text-blue-800">📚 Clubs de
+                <span id="tag-clubs" class="bg-white px-4 py-2 rounded-lg shadow-sm font-medium text-blue-800">📚 Clubs
+                    de
                     lecture</span>
-                <span class="bg-white px-4 py-2 rounded-lg shadow-sm font-medium text-blue-800">🏘️ Boîtes à livres
+                <span id="tag-boxes" class="bg-white px-4 py-2 rounded-lg shadow-sm font-medium text-blue-800">🏘️
+                    Boîtes à livres
                     connectées</span>
-                <span class="bg-white px-4 py-2 rounded-lg shadow-sm font-medium text-blue-800">🏢 Bibliothèques
+                <span id="tag-assoc" class="bg-white px-4 py-2 rounded-lg shadow-sm font-medium text-blue-800">🏢
+                    Bibliothèques
                     associatives</span>
-                <span class="bg-white px-4 py-2 rounded-lg shadow-sm font-medium text-blue-800">🗂️ Centres de
+                <span id="tag-centers" class="bg-white px-4 py-2 rounded-lg shadow-sm font-medium text-blue-800">🗂️
+                    Centres de
                     documentation</span>
             </div>
         </div>
@@ -113,18 +130,172 @@
     <!-- Footer / Contact -->
     <footer id="contact" class="bg-gray-900 text-gray-400 py-12 px-6 text-center">
         <div class="max-w-2xl mx-auto">
-            <h2 class="text-2xl text-white font-bold mb-6">Rejoignez l'aventure</h2>
-            <p class="mb-8">Le projet est en développement actif. Écrivez-nous pour participer ou tester.</p>
+            <h2 id="footer-title" class="text-2xl text-white font-bold mb-6">Rejoignez l'aventure</h2>
+            <p id="footer-desc" class="mb-8">Le projet est en développement actif. Écrivez-nous pour participer ou
+                tester.</p>
             <a href="mailto:contact@bibliogenius.org"
                 class="text-xl text-blue-400 hover:text-blue-300 font-bold underline">contact@bibliogenius.org</a>
 
             <div class="mt-12 pt-8 border-t border-gray-800 text-sm">
-                <p>© 2025 BiblioGenius. Open Source (MIT License).</p>
-                <p class="mt-2">Soutenu par la communauté NGI Zero (Candidat).</p>
+                <p id="footer-copyright">© 2025 BiblioGenius. Open Source (MIT License).</p>
+                <p id="footer-support" class="mt-2">Soutenu par la communauté NGI Zero (Candidat).</p>
             </div>
         </div>
     </footer>
 
+    <script>
+        const translations = {
+            fr: {
+                title: "BiblioGenius - La bibliothèque de demain, chez vous.",
+                hero_title: "La bibliothèque de demain,<br><span class=\"text-blue-400\">chez vous.</span>",
+                hero_subtitle: "Gérez vos livres, gardez vos données, partagez avec vos voisins.<br><span class=\"text-sm font-bold uppercase tracking-widest text-blue-300 mt-4 block\">Projet Open Source & Citoyen</span>",
+                btn_github: "Voir le Code (GitHub)",
+                btn_tester: "Devenir Testeur",
+                feature_local_title: "Local-First",
+                feature_local_desc: "Vos données sont stockées sur votre téléphone. Pas de cloud obligatoire, pas de tracking. Vous êtes propriétaire de votre bibliothèque.",
+                feature_p2p_title: "Partage P2P",
+                feature_p2p_desc: "Prêtez vos livres à vos amis ou voisins de confiance. Créez un réseau de lecture local et décentralisé.",
+                feature_ai_title: "Assistant Bibliothécaire",
+                feature_ai_desc: "Une aide magique pour classer et découvrir vos livres, en gardant le contrôle sur vos données personnelles.",
+                exp_title: "Expérimentons ensemble",
+                exp_desc: "BiblioGenius est un projet citoyen. <br>Nous cherchons des bibliothèques, des associations et des voisins pour tester de nouveaux usages :",
+                tag_clubs: "📚 Clubs de lecture",
+                tag_boxes: "🏘️ Boîtes à livres connectées",
+                tag_assoc: "🏢 Bibliothèques associatives",
+                tag_centers: "🗂️ Centres de documentation",
+                footer_title: "Rejoignez l'aventure",
+                footer_desc: "Le projet est en développement actif. Écrivez-nous pour participer ou tester.",
+                footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
+                footer_support: "Soutenu par la communauté NGI Zero (Candidat)."
+            },
+            en: {
+                title: "BiblioGenius - The library of tomorrow, at home.",
+                hero_title: "The library of tomorrow,<br><span class=\"text-blue-400\">at home.</span>",
+                hero_subtitle: "Manage your books, keep your data, share with neighbors.<br><span class=\"text-sm font-bold uppercase tracking-widest text-blue-300 mt-4 block\">Open Source & Civic Project</span>",
+                btn_github: "View Code (GitHub)",
+                btn_tester: "Become a Tester",
+                feature_local_title: "Local-First",
+                feature_local_desc: "Your data is stored on your phone. No mandatory cloud, no tracking. You own your library.",
+                feature_p2p_title: "P2P Sharing",
+                feature_p2p_desc: "Lend your books to trusted friends or neighbors. Create a local and decentralized reading network.",
+                feature_ai_title: "Librarian Assistant",
+                feature_ai_desc: "Magical help to classify and discover your books, while keeping control over your personal data.",
+                exp_title: "Let's experiment together",
+                exp_desc: "BiblioGenius is a civic project. <br>We are looking for libraries, associations, and neighbors to test new uses:",
+                tag_clubs: "📚 Book Clubs",
+                tag_boxes: "🏘️ Connected Book Boxes",
+                tag_assoc: "🏢 Community Libraries",
+                tag_centers: "🗂️ Documentation Centers",
+                footer_title: "Join the adventure",
+                footer_desc: "The project is in active development. Write to us to participate or test.",
+                footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
+                footer_support: "Supported by the NGI Zero community (Candidate)."
+            },
+            es: {
+                title: "BiblioGenius - La biblioteca del mañana, en casa.",
+                hero_title: "La biblioteca del mañana,<br><span class=\"text-blue-400\">en casa.</span>",
+                hero_subtitle: "Gestiona tus libros, guarda tus datos, comparte con vecinos.<br><span class=\"text-sm font-bold uppercase tracking-widest text-blue-300 mt-4 block\">Proyecto Open Source & Ciudadano</span>",
+                btn_github: "Ver Código (GitHub)",
+                btn_tester: "Ser Tester",
+                feature_local_title: "Local-First",
+                feature_local_desc: "Tus datos se guardan en tu teléfono. Sin nube obligatoria, sin rastreo. Eres dueño de tu biblioteca.",
+                feature_p2p_title: "Intercambio P2P",
+                feature_p2p_desc: "Presta tus libros a amigos o vecinos de confianza. Crea una red de lectura local y descentralizada.",
+                feature_ai_title: "Asistente Bibliotecario",
+                feature_ai_desc: "Ayuda mágica para clasificar y descubrir tus libros, manteniendo el control sobre tus datos personales.",
+                exp_title: "Experimentemos juntos",
+                exp_desc: "BiblioGenius es un proyecto ciudadano. <br>Buscamos bibliotecas, asociaciones y vecinos para probar nuevos usos:",
+                tag_clubs: "📚 Clubes de lectura",
+                tag_boxes: "🏘️ Cajas de libros conectadas",
+                tag_assoc: "🏢 Bibliotecas asociativas",
+                tag_centers: "🗂️ Centros de documentación",
+                footer_title: "Únete a la aventura",
+                footer_desc: "El proyecto está en desarrollo activo. Escríbenos para participar o probar.",
+                footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
+                footer_support: "Apoyado por la comunidad NGI Zero (Candidato)."
+            },
+            de: {
+                title: "BiblioGenius - Die Bibliothek von morgen, zu Hause.",
+                hero_title: "Die Bibliothek von morgen,<br><span class=\"text-blue-400\">zu Hause.</span>",
+                hero_subtitle: "Verwalten Sie Ihre Bücher, behalten Sie Ihre Daten, teilen Sie mit Nachbarn.<br><span class=\"text-sm font-bold uppercase tracking-widest text-blue-300 mt-4 block\">Open Source & Bürgerprojekt</span>",
+                btn_github: "Code ansehen (GitHub)",
+                btn_tester: "Tester werden",
+                feature_local_title: "Local-First",
+                feature_local_desc: "Ihre Daten werden auf Ihrem Telefon gespeichert. Keine Cloud-Pflicht, kein Tracking. Sie besitzen Ihre Bibliothek.",
+                feature_p2p_title: "P2P-Teilen",
+                feature_p2p_desc: "Verleihen Sie Ihre Bücher an vertrauenswürdige Freunde oder Nachbarn. Erstellen Sie ein lokales und dezentrales Lesenetzwerk.",
+                feature_ai_title: "Bibliotheksassistent",
+                feature_ai_desc: "Magische Hilfe zum Klassifizieren und Entdecken Ihrer Bücher, während Sie die Kontrolle über Ihre persönlichen Daten behalten.",
+                exp_title: "Lassen Sie uns gemeinsam experimentieren",
+                exp_desc: "BiblioGenius ist ein Bürgerprojekt. <br>Wir suchen Bibliotheken, Vereine und Nachbarn, um neue Nutzungsmöglichkeiten zu testen:",
+                tag_clubs: "📚 Buchclubs",
+                tag_boxes: "🏘️ Vernetzte Bücherboxen",
+                tag_assoc: "🏢 Vereinsbibliotheken",
+                tag_centers: "🗂️ Dokumentationszentren",
+                footer_title: "Mach mit beim Abenteuer",
+                footer_desc: "Das Projekt befindet sich in aktiver Entwicklung. Schreiben Sie uns, um teilzunehmen oder zu testen.",
+                footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
+                footer_support: "Unterstützt von der NGI Zero Community (Kandidat)."
+            }
+        };
+
+        function setLanguage(lang) {
+            if (!translations[lang]) lang = 'en'; // Fallback to English
+
+            const t = translations[lang];
+            document.documentElement.lang = lang;
+            document.title = t.title;
+
+            // Helper to safely set HTML content
+            const setHtml = (id, content) => {
+                const el = document.getElementById(id);
+                if (el) el.innerHTML = content;
+            };
+
+            // Helper to safely set Text content
+            const setText = (id, content) => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = content;
+            };
+
+            setHtml('hero-title', t.hero_title);
+            setHtml('hero-subtitle', t.hero_subtitle);
+            setText('btn-github-text', t.btn_github);
+            setText('btn-tester', t.btn_tester);
+            setText('feature-local-title', t.feature_local_title);
+            setText('feature-local-desc', t.feature_local_desc);
+            setText('feature-p2p-title', t.feature_p2p_title);
+            setText('feature-p2p-desc', t.feature_p2p_desc);
+            setText('feature-ai-title', t.feature_ai_title);
+            setText('feature-ai-desc', t.feature_ai_desc);
+            setText('exp-title', t.exp_title);
+            setHtml('exp-desc', t.exp_desc);
+            setText('tag-clubs', t.tag_clubs);
+            setText('tag-boxes', t.tag_boxes);
+            setText('tag-assoc', t.tag_assoc);
+            setText('tag-centers', t.tag_centers);
+            setText('footer-title', t.footer_title);
+            setText('footer-desc', t.footer_desc);
+            setText('footer-copyright', t.footer_copyright);
+            setText('footer-support', t.footer_support);
+
+            // Update selector
+            document.getElementById('lang-switcher').value = lang;
+        }
+
+        // Detect user language
+        const userLang = navigator.language || navigator.userLanguage;
+        const langCode = userLang.split('-')[0];
+        const defaultLang = translations[langCode] ? langCode : 'en';
+
+        // Initialize
+        setLanguage(defaultLang);
+
+        // Event Listener
+        document.getElementById('lang-switcher').addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+    </script>
 </body>
 
 </html>
