@@ -5,9 +5,6 @@ amuse-gueules:
   - name: "Rillettes"
     quantity: "450g"
     contributor: "Calo Luna"
-  - name: "Canapés (pain)"
-    quantity: "70"
-    contributor: "Calo Luna"
   - name: "Cakes chorizo fromage"
     quantity: "2"
     contributor: "Famille Calo Luna"
@@ -19,6 +16,9 @@ pain:
   - name: "Pain"
     quantity: "Assortiment"
     contributor: "Elise & Ivan, Emilie et/ou François & Nelly"
+  - name: "Canapés (pain)"
+    quantity: "70"
+    contributor: "Calo Luna"
 
 entrées:
   - name: "Saumon fumé"
