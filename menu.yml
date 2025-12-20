@@ -11,6 +11,9 @@ amuse-gueules:
   - name: "Cakes chorizo fromage"
     quantity: "2"
     contributor: "Famille Calo Luna"
+  - name: "Bâtonnets panés à la mozzarella"
+    quantity: "300g"
+    contributor: "Famille Calo Luna"
 
 entrées:
   - name: "Saumon fumé"
