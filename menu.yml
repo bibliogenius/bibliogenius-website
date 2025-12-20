@@ -15,6 +15,11 @@ amuse-gueules:
     quantity: "300g"
     contributor: "Famille Calo Luna"
 
+pain:
+  - name: "Pain"
+    quantity: "Assortiment"
+    contributor: "Elise & Ivan, Emilie et/ou François & Nelly"
+
 entrées:
   - name: "Saumon fumé"
     quantity: "700g"
