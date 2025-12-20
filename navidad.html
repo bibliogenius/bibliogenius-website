@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Noël</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #c41e3a;
+            --primary-dark: #8b0000;
+            --accent: #d4af37;
+            --bg-dark: #121212;
+            --text-light: #f5f5f5;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/navidad_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #snow-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        #auth-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .auth-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            border-radius: 2rem;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .auth-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .auth-input {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            outline: none;
+        }
+
+        .auth-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .auth-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            width: 90%;
+            padding: 3rem;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin: 2rem 0;
+            display: none;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+            color: var(--text-light);
+        }
+
+        .menu-section {
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .menu-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        .dish-list {
+            list-style: none;
+        }
+
+        .dish-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .dish-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
+
+        .dish-info {
+            flex: 1;
+        }
+
+        .dish-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .dish-meta {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            font-style: italic;
+        }
+
+        .dish-qty {
+            background: var(--primary);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 1rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="snow-canvas"></canvas>
+
+    <div id="auth-overlay">
+        <div class="auth-card">
+            <h2>Accès Restreint</h2>
+            <input type="password" id="pass-field" class="auth-input" placeholder="Entrez le mot de passe">
+            <button onclick="checkAuth()" class="auth-btn">Entrer</button>
+            <p id="auth-error" style="color:var(--primary); margin-top:1rem; display:none;">Mot de passe incorrect</p>
+        </div>
+    </div>
+
+    <div class="container" id="main-content">
+        <header>
+            <h1>Joyeux Noël</h1>
+            <p class="subtitle">Célébration Festive</p>
+        </header>
+
+        <section class="menu-section">
+            <h2 class="menu-title">Le Festin de Noël</h2>
+            <div id="menu-content">
+                <!-- Content will be injected by JS -->
+            </div>
+            <div
+                style="margin-top: 2rem; font-size: 0.9rem; font-style: italic; opacity: 0.7; text-align: center; border-top: 1px solid var(--glass-border); padding-top: 1.5rem;">
+                Vous souhaitez ajouter un plat ou une boisson ? <br>
+                Envoyez un message à Federico pour mettre à jour le menu.
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2025 - Célébration de Noël.<br>
+            <small style="opacity: 0.6; font-size: 0.7rem; margin-top: 0.5rem; display: block;">
+                sponsorisé par BiblioGenius international Calo Luna Organisation à but purement gustatif
+            </small>
+        </footer>
+    </div>
+
+    <script>
+        // --- Static Menu Data ---
+        const menuData = {
+            categories: [
+                {
+                    title: "Amuse-gueules",
+                    items: [
+                        { name: "Hoummous", quantity: "800g", contributor: "Calo Luna" },
+                        { name: "Rillettes", quantity: "450g", contributor: "Calo Luna" },
+                        { name: "Canapés (pain)", quantity: "70", contributor: "Calo Luna" },
+                        { name: "Cakes chorizo fromage", quantity: "2", contributor: "Famille Calo Luna" }
+                    ]
+                },
+                {
+                    title: "Entrées",
+                    items: [
+                        { name: "Saumon fumé", quantity: "400g", contributor: "Calo Luna" }
+                    ]
+                },
+                {
+                    title: "Plats",
+                    items: [
+                        { name: "Empanadas", quantity: "Assortiment", contributor: "Osvaldo & Eve" },
+                        { name: "Tajine pommes de terre poulet", quantity: "1 plat", contributor: "Nelly & François" }
+                    ]
+                },
+                {
+                    title: "Fromages",
+                    items: [
+                        { name: "Plateau de fromages", quantity: "Assortiment", contributor: "Fabienne & Patrick" }
+                    ]
+                },
+                {
+                    title: "Desserts",
+                    items: [
+                        { name: "Fondant au chocolat", quantity: "1 gâteau", contributor: "Emilie" },
+                        { name: "Truffes", quantity: "Assortiment", contributor: "Emilie" },
+                        { name: "Fruits ou salade de fruits", quantity: "Assortiment", contributor: "Nelly & François" },
+                        { name: "Pain d'épices", quantity: "1 pain", contributor: "Frédérique" },
+                        { name: "Bûches de Noël", quantity: "4", contributor: "Famille Calo Luna" },
+                        { name: "Macarons", quantity: "20", contributor: "Famille Calo Luna" }
+                    ]
+                },
+                {
+                    title: "Boissons",
+                    items: [
+                        { name: "Champagne", quantity: "3 bouteilles", contributor: "Osvaldo & Eve" },
+                        { name: "Champagne", quantity: "1 bouteille", contributor: "Famille Calo Luna" },
+                        { name: "Vin blanc", quantity: "1 bouteille", contributor: "Famille Calo Luna" }
+                    ]
+                }
+            ]
+        };
+
+        // --- Auth Logic ---
+        function checkAuth() {
+            const pass = document.getElementById('pass-field').value;
+            if (pass === 'noel') {
+                document.getElementById('auth-overlay').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+                document.body.style.overflow = 'auto';
+                displayMenu();
+            } else {
+                document.getElementById('auth-error').style.display = 'block';
+            }
+        }
+
+        // Allow Enter key to trigger auth
+        document.getElementById('pass-field').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') checkAuth();
+        });
+
+        // --- Snow Effect ---
+        const canvas = document.getElementById('snow-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, snowflakes;
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        }
+
+        function createSnowflakes() {
+            const count = 150;
+            snowflakes = [];
+            for (let i = 0; i < count; i++) {
+                snowflakes.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    r: Math.random() * 4 + 1,
+                    speed: Math.random() * 2 + 0.5
+                });
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+            ctx.beginPath();
+            for (let i = 0; i < snowflakes.length; i++) {
+                let p = snowflakes[i];
+                ctx.moveTo(p.x, p.y);
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+                p.y += p.speed;
+                p.x += Math.sin(p.y / 50) * 0.5;
+                if (p.y > height) snowflakes[i].y = -10;
+            }
+            ctx.fill();
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        createSnowflakes();
+        animate();
+
+        // --- Menu Display ---
+        function displayMenu() {
+            const content = document.getElementById('menu-content');
+            let html = '';
+
+            menuData.categories.forEach(category => {
+                if (category.items.length > 0) {
+                    html += `<h3 style="font-family: 'Playfair Display', serif; color: var(--accent); margin: 2rem 0 1rem 0; font-size: 1.5rem; letter-spacing: 1px; border-left: 3px solid var(--primary); padding-left: 1rem;">${category.title}</h3>`;
+                    html += '<ul class="dish-list">';
+                    category.items.forEach(dish => {
+                        html += `
+                            <li class="dish-item">
+                                <div class="dish-info">
+                                    <div class="dish-name">${dish.name}</div>
+                                    <div class="dish-meta">Par ${dish.contributor}</div>
+                                </div>
+                                <span class="dish-qty">${dish.quantity}</span>
+                            </li>
+                        `;
+                    });
+                    html += '</ul>';
+                }
+            });
+            content.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

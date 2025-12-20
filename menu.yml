@@ -1,0 +1,62 @@
+amuse-gueules:
+  - name: "Hoummous"
+    quantity: "800g"
+    contributor: "Calo Luna"
+  - name: "Rillettes"
+    quantity: "450g"
+    contributor: "Calo Luna"
+  - name: "Canapés (pain)"
+    quantity: "70"
+    contributor: "Calo Luna"
+  - name: "Cakes chorizo fromage"
+    quantity: "2"
+    contributor: "Famille Calo Luna"
+
+entrées:
+  - name: "Saumon fumé"
+    quantity: "400g"
+    contributor: "Calo Luna"
+
+plats:
+  - name: "Empanadas"
+    quantity: "Assortiment"
+    contributor: "Osvaldo & Eve"
+  - name: "Tajine pommes de terre poulet"
+    quantity: "1 plat"
+    contributor: "Nelly & François"
+
+fromages:
+  - name: "Plateau de fromages"
+    quantity: "Assortiment"
+    contributor: "Fabienne & Patrick"
+
+desserts:
+  - name: "Fondant au chocolat"
+    quantity: "1 gâteau"
+    contributor: "Emilie"
+  - name: "Truffes"
+    quantity: "Assortiment"
+    contributor: "Emilie"
+  - name: "Fruits ou salade de fruits"
+    quantity: "Assortiment"
+    contributor: "Nelly & François"
+  - name: "Pain d'épices"
+    quantity: "1 pain"
+    contributor: "Frédérique"
+  - name: "Bûches de Noël"
+    quantity: "4"
+    contributor: "Famille Calo Luna"
+  - name: "Macarons"
+    quantity: "20"
+    contributor: "Famille Calo Luna"
+
+boissons:
+  - name: "Champagne"
+    quantity: "3 bouteilles"
+    contributor: "Osvaldo & Eve"
+  - name: "Champagne"
+    quantity: "1 bouteille"
+    contributor: "Famille Calo Luna"
+  - name: "Vin blanc"
+    quantity: "1 bouteille"
+    contributor: "Famille Calo Luna"
