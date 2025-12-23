@@ -281,7 +281,7 @@
                 {
                     title: "Pain",
                     items: [
-                        { name: "Pain", quantity: "Assortiment", contributor: "Elise & Ivan, Emilie et/ou François & Nelly" },
+                        { name: "Pain", quantity: "Assortiment", contributor: "Elise & Ivan, Emilie et/ou François & Nelly", cancelled: true },
                         { name: "Canapés (pain)", quantity: "70", contributor: "Calo Luna" }
                     ]
                 },
@@ -305,7 +305,7 @@
                 {
                     title: "Fromages",
                     items: [
-                        { name: "Plateau de fromages", quantity: "Assortiment", contributor: "Fabienne & Patrick" },
+                        { name: "Plateau de fromages", quantity: "Assortiment", contributor: "Fabienne & Patrick", cancelled: true },
                         { name: "Fromage", quantity: "Assortiment", contributor: "Ivonne & Julien" }
                     ]
                 },
@@ -326,8 +326,8 @@
                         { name: "Champagne", quantity: "3 bouteilles", contributor: "Osvaldo & Eve" },
                         { name: "Champagne", quantity: "1 bouteille", contributor: "Famille Calo Luna" },
                         { name: "Vin blanc", quantity: "1 bouteille", contributor: "Famille Calo Luna" },
-                        { name: "Jus pétillant", quantity: "1 bouteille", contributor: "Elise et Ivan" },
-                        { name: "Vin", quantity: "1 bouteille", contributor: "Elise et Ivan" },
+                        { name: "Jus pétillant", quantity: "1 bouteille", contributor: "Elise et Ivan", cancelled: true },
+                        { name: "Vin", quantity: "1 bouteille", contributor: "Elise et Ivan", cancelled: true },
                         { name: "Vin rouge", quantity: "1 bouteille", contributor: "Ivonne & Julien" },
                         { name: "Vin blanc", quantity: "1 bouteille", contributor: "Ivonne & Julien" },
                         { name: "Citronnade", quantity: "1 bouteille", contributor: "Osvaldo & Eve" },
@@ -411,8 +411,9 @@
                     html += `<h3 style="font-family: 'Playfair Display', serif; color: var(--accent); margin: 2rem 0 1rem 0; font-size: 1.5rem; letter-spacing: 1px; border-left: 3px solid var(--primary); padding-left: 1rem;">${category.title}</h3>`;
                     html += '<ul class="dish-list">';
                     category.items.forEach(dish => {
+                        const cancelledStyle = dish.cancelled ? 'text-decoration: line-through; opacity: 0.5;' : '';
                         html += `
-                            <li class="dish-item">
+                            <li class="dish-item" style="${cancelledStyle}">
                                 <div class="dish-info">
                                     <div class="dish-name">${dish.name}</div>
                                     <div class="dish-meta">Par ${dish.contributor}</div>
