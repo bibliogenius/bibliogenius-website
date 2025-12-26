@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribuer à BiblioGenius</title>
+    <!-- Same styles as index -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .split-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .split-card {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .split-card h3 {
+            margin-top: 0;
+            color: var(--accent-light);
+            font-size: 1.5rem;
+        }
+
+        .download-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .download-list li {
+            margin-bottom: 1rem;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .download-icon {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .version-tag {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero" style="min-height: 40vh; padding-bottom: 2rem;">
+        <div class="lang-switcher">
+            <a href="index.html" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">← Retour</a>
+        </div>
+        <div class="hero-content">
+            <h1>Contribuer au Projet</h1>
+            <p>Devenez testeur Alpha ou rejoignez le développement.</p>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 4rem 1rem;">
+
+        <div class="split-container">
+            <!-- Tester Section -->
+            <div class="split-card">
+                <h3>🧪 Devenir Testeur Alpha</h3>
+                <p>Installez la dernière version et aidez-nous à trouver les bugs.</p>
+
+                <div class="alert"
+                    style="background: rgba(255,165,0,0.1); border-left: 4px solid orange; padding: 1rem; margin: 1rem 0;">
+                    <strong>Dernière version :</strong> <span class="version-tag">v0.6.0-alpha.1</span>
+                </div>
+
+                <ul class="download-list">
+                    <li>
+                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.6.0-alpha.1/BiblioGenius-macOS.dmg"
+                            class="download-btn">
+                            <span class="download-icon">🍎</span>
+                            <div>
+                                <strong>macOS</strong><br>
+                                <small>Puce Apple (M1/M2) & Intel</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.6.0-alpha.1/app-release.apk"
+                            class="download-btn">
+                            <span class="download-icon">🤖</span>
+                            <div>
+                                <strong>Android</strong><br>
+                                <small>APK (Installation manuelle)</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.6.0-alpha.1/BiblioGenius-Windows.zip"
+                            class="download-btn">
+                            <span class="download-icon">🪟</span>
+                            <div>
+                                <strong>Windows</strong><br>
+                                <small>Zip portable</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.6.0-alpha.1/BiblioGenius-Linux.tar.gz"
+                            class="download-btn">
+                            <span class="download-icon">🐧</span>
+                            <div>
+                                <strong>Linux</strong><br>
+                                <small>Tarball (Ubuntu/Debian)</small>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <hr style="border-color: rgba(255,255,255,0.1); margin: 2rem 0;">
+
+                <h4>🐛 Un bug ?</h4>
+                <p>Signalez-le simplement :</p>
+                <div style="display: flex; gap: 10px;">
+                    <a href="mailto:contact@bibliogenius.org" class="btn btn-secondary" style="font-size: 0.9rem;">Par
+                        Email</a>
+                    <a href="https://github.com/bibliogenius/bibliogenius-app/issues/new" class="btn btn-secondary"
+                        style="font-size: 0.9rem;">Sur GitHub</a>
+                </div>
+            </div>
+
+            <!-- Developer Section -->
+            <div class="split-card">
+                <h3>💻 Espace Contributeurs</h3>
+                <p>Le code est 100% Open Source.</p>
+
+                <ul style="margin: 1.5rem 0; padding-left: 1.2rem; line-height: 1.6;">
+                    <li><strong>Backend :</strong> Rust (Axum, SQLite, Tantivy)</li>
+                    <li><strong>Application :</strong> Flutter (Mobile & Desktop)</li>
+                    <li><strong>Hub :</strong> Symfony (PHP)</li>
+                </ul>
+
+                <a href="https://github.com/bibliogenius" class="btn btn-primary"
+                    style="width: 100%; text-align: center; justify-content: center;">
+                    Explorer l'Organisation GitHub
+                </a>
+
+                <div style="margin-top: 2rem;">
+                    <h4>Où commencer ?</h4>
+                    <p style="font-size: 0.9rem; color: #aaa;">Consultez les issues "Good First Issue" sur nos dépôts.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center;">
+            <p>© 2025 BiblioGenius. <a href="index.html" style="color:white;">Retour à l'accueil</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
