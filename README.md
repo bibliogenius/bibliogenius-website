@@ -35,7 +35,6 @@ Modify `index.html` or `styles.css` directly. Ensure assets are optimized before
 ## 🔗 Related Repositories
 
 - [**bibliogenius-app**](https://github.com/bibliogenius/bibliogenius-app): The application featured on this site.
-- [**bibliogenius-docs**](https://github.com/bibliogenius/bibliogenius-docs): Technical documentation linked from here.
 
 ## 📄 License
 
