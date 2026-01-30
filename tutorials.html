@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Tutoriels - BiblioGenius</title>
+    <meta name="description" id="meta-desc"
+        content="Apprenez à utiliser BiblioGenius avec nos guides vidéo : import, gestion, partage.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tutorials-container {
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tutorial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tutorial-card {
+            background: var(--white);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tutorial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .tutorial-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .tutorial-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+        }
+
+        .tutorial-desc {
+            font-size: 0.95rem;
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+
+        .badge-lang {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-new {
+            background: #dcfce7;
+            color: #166534;
+            margin-right: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero" style="padding: 3rem 1.5rem;">
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <select id="lang-switcher" class="lang-select" aria-label="Choisir la langue">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+        <div class="hero-content">
+            <h1 id="hero-title">Tutoriels Vidéo</h1>
+            <p id="hero-subtitle">Maîtrisez BiblioGenius en quelques minutes.</p>
+        </div>
+    </header>
+
+    <main class="tutorials-container">
+        <a href="index.html" class="back-link" id="btn-back">← Retour à l'accueil</a>
+
+        <div class="tutorial-grid">
+            <!-- Video 1: Import -->
+            <article class="tutorial-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/o2rZeG_hH4w" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div style="text-align: center; margin-top: 0.5rem;">
+                    <a href="https://www.youtube.com/watch?v=o2rZeG_hH4w" target="_blank"
+                        style="font-size: 0.8rem; color: #6b7280; text-decoration: underline;">
+                        Si la vidéo ne s'affiche pas, cliquez ici pour la voir sur YouTube
+                    </a>
+                </div>
+                <div class="tutorial-content">
+                    <div style="margin-bottom: 0.75rem;">
+                        <span class="badge-lang badge-new">Nouveau</span>
+                        <span class="badge-lang">Audio: Français</span>
+                    </div>
+                    <h2 class="tutorial-title" id="vid-import-title">Comment importer vos livres</h2>
+                    <p class="tutorial-desc" id="vid-import-desc">
+                        Découvrez comment migrer vos données depuis Gleeph, Babelio ou Goodreads vers BiblioGenius en
+                        moins de 2 minutes.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Placeholder for future videos 
+            <article class="tutorial-card" style="opacity: 0.6; pointer-events: none;">
+                <div class="video-container" style="display: flex; align-items: center; justify-content: center; background: #f3f4f6;">
+                    <span style="font-size: 3rem;">🔜</span>
+                </div>
+                <div class="tutorial-content">
+                    <h2 class="tutorial-title" id="vid-coming-soon-title">Bientôt disponible...</h2>
+                    <p class="tutorial-desc" id="vid-coming-soon-desc">
+                        D'autres tutoriels sur le partage P2P et la gestion des prêts arrivent très vite !
+                    </p>
+                </div>
+            </article> 
+            -->
+        </div>
+
+        <div class="text-center" style="margin-top: 4rem;">
+            <p id="footer-note">Vous ne trouvez pas ce que vous cherchez ? <a href="mailto:contact@bibliogenius.org"
+                    style="color: var(--primary-color); font-weight: bold;">Contactez-nous</a>.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p id="footer-text">© 2025 BiblioGenius. Votre bibliothèque, vos règles.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                page_title: "Tutoriels - BiblioGenius",
+                meta_desc: "Apprenez à utiliser BiblioGenius avec nos guides vidéo : import, gestion, partage.",
+                hero_title: "Tutoriels Vidéo",
+                hero_subtitle: "Maîtrisez BiblioGenius en quelques minutes.",
+                btn_back: "← Retour à l'accueil",
+                vid_import_title: "Comment importer vos livres",
+                vid_import_desc: "Découvrez comment migrer vos données depuis Gleeph, Babelio ou Goodreads vers BiblioGenius en moins de 2 minutes.",
+                footer_note: "Vous ne trouvez pas ce que vous cherchez ? <a href=\"mailto:contact@bibliogenius.org\" style=\"color: var(--primary-color); font-weight: bold;\">Contactez-nous</a>.",
+                footer_text: "© 2025 BiblioGenius. Votre bibliothèque, vos règles."
+            },
+            en: {
+                page_title: "Tutorials - BiblioGenius",
+                meta_desc: "Learn how to use BiblioGenius with our video guides: import, management, sharing.",
+                hero_title: "Video Tutorials",
+                hero_subtitle: "Master BiblioGenius in minutes.",
+                btn_back: "← Back to home",
+                vid_import_title: "How to import your books",
+                vid_import_desc: "Learn how to migrate your data from Gleeph, Babelio or Goodreads to BiblioGenius in less than 2 minutes. (French Audio)",
+                footer_note: "Can't find what you're looking for? <a href=\"mailto:contact@bibliogenius.org\" style=\"color: var(--primary-color); font-weight: bold;\">Contact us</a>.",
+                footer_text: "© 2025 BiblioGenius. Your library, your rules."
+            },
+            es: {
+                page_title: "Tutoriales - BiblioGenius",
+                meta_desc: "Aprende a usar BiblioGenius con nuestras guías en video: importación, gestión, compartir.",
+                hero_title: "Tutoriales en Video",
+                hero_subtitle: "Domina BiblioGenius en minutos.",
+                btn_back: "← Volver al inicio",
+                vid_import_title: "Cómo importar tus libros",
+                vid_import_desc: "Descubre cómo migrar tus datos de Gleeph, Babelio o Goodreads a BiblioGenius en menos de 2 minutos. (Audio en francés)",
+                footer_note: "¿No encuentras lo que buscas? <a href=\"mailto:contact@bibliogenius.org\" style=\"color: var(--primary-color); font-weight: bold;\">Contáctanos</a>.",
+                footer_text: "© 2025 BiblioGenius. Tu biblioteca, tus reglas."
+            },
+            de: {
+                page_title: "Anleitungen - BiblioGenius",
+                meta_desc: "Lernen Sie BiblioGenius mit unseren Videoanleitungen: Import, Verwaltung, Teilen.",
+                hero_title: "Videoanleitungen",
+                hero_subtitle: "Beherrschen Sie BiblioGenius in wenigen Minuten.",
+                btn_back: "← Zurück zur Startseite",
+                vid_import_title: "Wie Sie Ihre Bücher importieren",
+                vid_import_desc: "Erfahren Sie, wie Sie Ihre Daten von Gleeph, Babelio oder Goodreads in weniger als 2 Minuten zu BiblioGenius migrieren. (Audio auf Französisch)",
+                footer_note: "Finden Sie nicht, wonach Sie suchen? <a href=\"mailto:contact@bibliogenius.org\" style=\"color: var(--primary-color); font-weight: bold;\">Kontaktieren Sie uns</a>.",
+                footer_text: "© 2025 BiblioGenius. Ihre Bibliothek, Ihre Regeln."
+            }
+        };
+
+        function setLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+
+            // Save to local storage
+            localStorage.setItem('bibliogenius_lang', lang);
+
+            const t = translations[lang];
+            document.documentElement.lang = lang;
+            document.getElementById('page-title').textContent = t.page_title;
+            document.getElementById('meta-desc').setAttribute('content', t.meta_desc);
+
+            const setHtml = (id, content) => {
+                const el = document.getElementById(id);
+                if (el) el.innerHTML = content;
+            };
+
+            const setText = (id, content) => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = content;
+            };
+
+            setText('hero-title', t.hero_title);
+            setText('hero-subtitle', t.hero_subtitle);
+            setText('btn_back', t.btn_back);
+            setText('vid-import-title', t.vid_import_title);
+            setText('vid-import-desc', t.vid_import_desc);
+            setHtml('footer-note', t.footer_note);
+            setText('footer-text', t.footer_text);
+
+            document.getElementById('lang-switcher').value = lang;
+        }
+
+        // Check local storage first, then navigator
+        const storedLang = localStorage.getItem('bibliogenius_lang');
+        const userLang = navigator.language || navigator.userLanguage;
+        const systemLang = userLang.split('-')[0];
+        const defaultLang = translations[storedLang] ? storedLang : (translations[systemLang] ? systemLang : 'en');
+
+        setLanguage(defaultLang);
+
+        document.getElementById('lang-switcher').addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+    </script>
+</body>
+
+</html>

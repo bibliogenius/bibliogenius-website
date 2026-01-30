@@ -98,6 +98,26 @@
         </div>
     </section>
 
+    <!-- Free Your Library Section -->
+    <section class="free-library">
+        <div class="container">
+            <h2 id="free-library-title">Libérez votre bibliothèque</h2>
+            <p id="free-library-desc">
+                Vos livres ne doivent pas être prisonniers d'une plateforme.
+                Importez facilement vos données depuis vos anciennes applications.
+            </p>
+            <div class="platform-logos">
+                <div class="platform-logo"><span>📱</span> Gleeph</div>
+                <div class="platform-logo"><span>📖</span> Babelio</div>
+                <div class="platform-logo"><span>🌎</span> Goodreads</div>
+                <div class="platform-logo"><span>📦</span> inventaire.io</div>
+            </div>
+            <a href="free-your-library.html" id="btn-free-library" class="btn btn-primary">
+                Voir les tutoriels d'import
+            </a>
+        </div>
+    </section>
+
     <!-- Footer / Contact -->
     <footer id="contact" class="footer">
         <div class="container">
@@ -105,8 +125,11 @@
             <p id="footer-desc">Le projet est en développement actif. Écrivez-nous pour participer ou tester.</p>
             <a href="mailto:contact@bibliogenius.org">contact@bibliogenius.org</a>
             <br><br>
-            <a href="contribute.html" style="color:var(--accent-color); text-decoration: none;">➜ Espace
-                Contributeurs</a>
+            <a href="contribute.html" id="link-contribute" style="color:var(--accent-color); text-decoration: none;">➜
+                Espace Contributeurs</a>
+            <br>
+            <a href="tutorials.html" id="link-tutorials" style="color:var(--accent-color); text-decoration: none;">➜
+                Tutoriels Vidéo</a>
 
             <div class="footer-bottom">
                 <p id="footer-copyright">© 2025 BiblioGenius. Open Source (MIT License).</p>
@@ -138,9 +161,14 @@
                 tag_assoc: "🏢 Bibliothèques associatives",
                 tag_centers: "🗂️ Centres de documentation",
                 footer_title: "Rejoignez l'aventure",
+                footer_contribute: "➜ Espace Contributeurs",
+                footer_tutorials: "➜ Tutoriels Vidéo",
                 footer_desc: "Le projet est en développement actif. Écrivez-nous pour participer ou tester.",
                 footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
-                footer_support: "Soutenu par la communauté NGI Zero (Candidat)."
+                footer_support: "Soutenu par la communauté NGI Zero (Candidat).",
+                free_library_title: "Libérez votre bibliothèque",
+                free_library_desc: "Vos livres ne doivent pas être prisonniers d'une plateforme. Importez facilement vos données depuis vos anciennes applications.",
+                btn_free_library: "Voir les tutoriels d'import"
             },
             en: {
                 title: "BiblioGenius - The library of tomorrow, at home.",
@@ -163,9 +191,14 @@
                 tag_assoc: "🏢 Community Libraries",
                 tag_centers: "🗂️ Documentation Centers",
                 footer_title: "Join the adventure",
+                footer_contribute: "➜ Contributors Space",
+                footer_tutorials: "➜ Video Tutorials",
                 footer_desc: "The project is in active development. Write to us to participate or test.",
                 footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
-                footer_support: "Supported by the NGI Zero community (Candidate)."
+                footer_support: "Supported by the NGI Zero community (Candidate).",
+                free_library_title: "Free your library",
+                free_library_desc: "Your books shouldn't be trapped on one platform. Easily import your data from your old apps.",
+                btn_free_library: "View import tutorials"
             },
             es: {
                 title: "BiblioGenius - La biblioteca del mañana, en casa.",
@@ -188,9 +221,14 @@
                 tag_assoc: "🏢 Bibliotecas asociativas",
                 tag_centers: "🗂️ Centros de documentación",
                 footer_title: "Únete a la aventura",
+                footer_contribute: "➜ Espacio de Colaboradores",
+                footer_tutorials: "➜ Tutoriales en Video",
                 footer_desc: "El proyecto está en desarrollo activo. Escríbenos para participar o probar.",
                 footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
-                footer_support: "Apoyado por la comunidad NGI Zero (Candidato)."
+                footer_support: "Apoyado por la comunidad NGI Zero (Candidato).",
+                free_library_title: "Libera tu biblioteca",
+                free_library_desc: "Tus libros no devraient estar prisioneros de una plataforma. Importa fácilmente tus datos desde tus aplicaciones antiguas.",
+                btn_free_library: "Ver tutoriales de importación"
             },
             de: {
                 title: "BiblioGenius - Die Bibliothek von morgen, zu Hause.",
@@ -213,14 +251,22 @@
                 tag_assoc: "🏢 Vereinsbibliotheken",
                 tag_centers: "🗂️ Dokumentationszentren",
                 footer_title: "Mach mit beim Abenteuer",
+                footer_contribute: "➜ Bereich für Mitwirkende",
+                footer_tutorials: "➜ Videoanleitungen",
                 footer_desc: "Das Projekt befindet sich in aktiver Entwicklung. Schreiben Sie uns, um teilzunehmen oder zu testen.",
                 footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
-                footer_support: "Unterstützt von der NGI Zero Community (Kandidat)."
+                footer_support: "Unterstützt von der NGI Zero Community (Kandidat).",
+                free_library_title: "Befreien Sie Ihre Bibliothek",
+                free_library_desc: "Ihre Bücher sollten nicht auf einer Plattform gefangen sein. Importieren Sie Ihre Daten ganz einfach aus Ihren alten Apps.",
+                btn_free_library: "Import-Anleitungen ansehen"
             }
         };
 
         function setLanguage(lang) {
             if (!translations[lang]) lang = 'en'; // Fallback to English
+
+            // Save to local storage
+            localStorage.setItem('bibliogenius_lang', lang);
 
             const t = translations[lang];
             document.documentElement.lang = lang;
@@ -238,7 +284,7 @@
 
             setHtml('hero-title', t.hero_title);
             setHtml('hero-subtitle', t.hero_subtitle);
-            setText('btn-github-text', t.btn_github);
+            setText('btn_github-text', t.btn_github);
             setText('btn-tester', t.btn_tester);
             setText('feature-local-title', t.feature_local_title);
             setText('feature-local-desc', t.feature_local_desc);
@@ -255,16 +301,23 @@
             setText('tag-assoc', t.tag_assoc);
             setText('tag-centers', t.tag_centers);
             setText('footer-title', t.footer_title);
+            setText('link-contribute', t.footer_contribute);
+            setText('link-tutorials', t.footer_tutorials);
             setText('footer-desc', t.footer_desc);
             setText('footer-copyright', t.footer_copyright);
             setText('footer-support', t.footer_support);
+            setText('free-library-title', t.free_library_title);
+            setText('free-library-desc', t.free_library_desc);
+            setText('btn-free-library', t.btn_free_library);
 
             document.getElementById('lang-switcher').value = lang;
         }
 
+        // Check local storage first, then navigator
+        const storedLang = localStorage.getItem('bibliogenius_lang');
         const userLang = navigator.language || navigator.userLanguage;
-        const langCode = userLang.split('-')[0];
-        const defaultLang = translations[langCode] ? langCode : 'en';
+        const systemLang = userLang.split('-')[0];
+        const defaultLang = translations[storedLang] ? storedLang : (translations[systemLang] ? systemLang : 'en');
 
         setLanguage(defaultLang);
 

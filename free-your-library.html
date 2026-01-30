@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Libérez votre bibliothèque - BiblioGenius</title>
+    <meta name="description" id="meta-desc"
+        content="Tutoriels pour importer vos données depuis Gleeph, Babelio, Goodreads, inventaire.io vers BiblioGenius.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tutorial-container {
+            padding: 4rem 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tutorial-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .tutorial-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .platform-card h2 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .platform-icon {
+            font-size: 1.5rem;
+        }
+
+        .steps {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .steps li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .steps li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero" style="padding: 3rem 1.5rem;">
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <select id="lang-switcher" class="lang-select" aria-label="Choisir la langue">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+        <div class="hero-content">
+            <h1 id="hero-title">Libérez votre bibliothèque</h1>
+            <p id="hero-subtitle">Vos livres ne doivent pas être prisonniers d'une plateforme.</p>
+        </div>
+    </header>
+
+    <main class="tutorial-container">
+        <p id="intro-text" style="text-align: center; font-size: 1.125rem; margin-bottom: 3rem;">
+            BiblioGenius est conçu pour respecter votre souveraineté numérique. Voici comment récupérer vos données
+            BiblioGenius est conçu pour respecter votre souveraineté numérique. Voici comment récupérer vos données
+            depuis les plateformes les plus courantes pour les importer chez vous.
+        </p>
+
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <a href="tutorials.html" class="btn btn-primary"
+                style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+                <span id="btn-watch-video">Voir le tutoriel vidéo</span>
+            </a>
+        </div>
+
+        <article class="platform-card" id="gleeph">
+            <h2 id="gleeph-title"><span class="platform-icon">📱</span> Gleeph</h2>
+            <p id="gleeph-desc">Exportez votre bibliothèque au format CSV :</p>
+            <ul class="steps" id="gleeph-steps">
+                <li>Ouvrez l'application Gleeph sur votre mobile.</li>
+                <li>Allez dans l'onglet <strong>Profil</strong>.</li>
+                <li>Appuyez sur la roue dentée (Paramètres) en haut à droite.</li>
+                <li>Sélectionnez <strong>Exporter mes données</strong>.</li>
+                <li>Vous recevrez un fichier CSV par email ou pourrez l'enregistrer directement.</li>
+            </ul>
+        </article>
+
+        <article class="platform-card" id="babelio">
+            <h2 id="babelio-title"><span class="platform-icon">📖</span> Babelio</h2>
+            <p id="babelio-desc">Récupérez votre liste de lecture :</p>
+            <ul class="steps" id="babelio-steps">
+                <li>Connectez-vous à votre compte sur le site Babelio.</li>
+                <li>Allez dans <strong>Mes livres</strong>.</li>
+                <li>Cherchez le lien <strong>Exporter mes livres</strong> (souvent en bas de page ou dans les options de
+                    liste).</li>
+                <li>Téléchargez le fichier CSV généré.</li>
+            </ul>
+        </article>
+
+        <article class="platform-card" id="goodreads">
+            <h2 id="goodreads-title"><span class="platform-icon">🌎</span> Goodreads</h2>
+            <p id="goodreads-desc">L'export standard de Goodreads :</p>
+            <ul class="steps" id="goodreads-steps">
+                <li>Allez sur <a href="https://www.goodreads.com">Goodreads.com</a> et connectez-vous.</li>
+                <li>Cliquez sur <strong>My Books</strong> dans la barre de navigation.</li>
+                <li>Dans le menu de gauche, cliquez sur <strong>Import and Export</strong>.</li>
+                <li>Cliquez sur le bouton <strong>Export Library</strong> en haut à droite.</li>
+                <li>Attendez que le fichier soit généré et cliquez sur le lien de téléchargement.</li>
+            </ul>
+        </article>
+
+        <article class="platform-card" id="inventaire">
+            <h2 id="inventaire-title"><span class="platform-icon">📦</span> inventaire.io</h2>
+            <p id="inventaire-desc">Le projet ami respectueux des données :</p>
+            <ul class="steps" id="inventaire-steps">
+                <li>Connectez-vous à <a href="https://inventaire.io">inventaire.io</a>.</li>
+                <li>Allez dans vos <strong>Paramètres</strong> de profil.</li>
+                <li>Recherchez la section <strong>Données</strong> ou <strong>Export</strong>.</li>
+                <li>Choisissez le format CSV ou JSON (BiblioGenius préfère le CSV pour le moment).</li>
+            </ul>
+        </article>
+
+        <section style="text-align: center; margin-top: 4rem;">
+            <h3 id="next-title">Et ensuite ?</h3>
+            <p id="next-desc">Une fois votre fichier en main, ouvrez BiblioGenius et utilisez l'assistant de migration
+                pour importer vos livres en un clic.</p>
+            <a href="index.html" id="btn-back-home" class="back-home">← Retour à l'accueil</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p id="footer-text">© 2025 BiblioGenius. Votre bibliothèque, vos règles.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                page_title: "Libérez votre bibliothèque - BiblioGenius",
+                meta_desc: "Tutoriels pour importer vos données depuis Gleeph, Babelio, Goodreads, inventaire.io vers BiblioGenius.",
+                hero_title: "Libérez votre bibliothèque",
+                hero_subtitle: "Vos livres ne doivent pas être prisonniers d'une plateforme.",
+                intro_text: "BiblioGenius est conçu pour respecter votre souveraineté numérique. Voici comment récupérer vos données depuis les plateformes les plus courantes pour les importer chez vous.",
+                btn_watch_video: "Voir le tutoriel vidéo",
+                gleeph_title: "📱 Gleeph",
+                gleeph_desc: "Exportez votre bibliothèque au format CSV :",
+                gleeph_steps: "<li>Ouvrez l'application Gleeph sur votre mobile.</li><li>Allez dans l'onglet <strong>Profil</strong>.</li><li>Appuyez sur la roue dentée (Paramètres) en haut à droite.</li><li>Sélectionnez <strong>Exporter mes données</strong>.</li><li>Vous recevrez un fichier CSV par email ou pourrez l'enregistrer directement.</li>",
+                babelio_title: "📖 Babelio",
+                babelio_desc: "Récupérez votre liste de lecture :",
+                babelio_steps: "<li>Connectez-vous à votre compte sur le site Babelio.</li><li>Allez dans <strong>Mes livres</strong>.</li><li>Cherchez le lien <strong>Exporter mes livres</strong> (souvent en bas de page ou dans les options de liste).</li><li>Téléchargez le fichier CSV généré.</li>",
+                goodreads_title: "🌎 Goodreads",
+                goodreads_desc: "L'export standard de Goodreads :",
+                goodreads_steps: "<li>Allez sur <a href=\"https://www.goodreads.com\">Goodreads.com</a> et connectez-vous.</li><li>Cliquez sur <strong>My Books</strong> dans la barre de navigation.</li><li>Dans le menu de gauche, cliquez sur <strong>Import and Export</strong>.</li><li>Cliquez sur le bouton <strong>Export Library</strong> en haut à droite.</li><li>Attendez que le fichier soit généré et cliquez sur le lien de téléchargement.</li>",
+                inventaire_title: "📦 inventaire.io",
+                inventaire_desc: "Le projet ami respectueux des données :",
+                inventaire_steps: "<li>Connectez-vous à <a href=\"https://inventaire.io\">inventaire.io</a>.</li><li>Allez dans vos <strong>Paramètres</strong> de profil.</li><li>Recherchez la section <strong>Données</strong> ou <strong>Export</strong>.</li><li>Choisissez le format CSV ou JSON (BiblioGenius préfère le CSV pour le moment).</li>",
+                next_title: "Et ensuite ?",
+                next_desc: "Une fois votre fichier en main, ouvrez BiblioGenius et utilisez l'assistant de migration pour importer vos livres en un clic.",
+                btn_back_home: "← Retour à l'accueil",
+                footer_text: "© 2025 BiblioGenius. Votre bibliothèque, vos règles."
+            },
+            en: {
+                page_title: "Free your library - BiblioGenius",
+                meta_desc: "Tutorials to import your data from Gleeph, Babelio, Goodreads, inventaire.io to BiblioGenius.",
+                hero_title: "Free your library",
+                hero_subtitle: "Your books shouldn't be trapped on one platform.",
+                intro_text: "BiblioGenius is designed to respect your digital sovereignty. Here's how to retrieve your data from the most common platforms to import them at home.",
+                btn_watch_video: "Watch video tutorial",
+                gleeph_title: "📱 Gleeph",
+                gleeph_desc: "Export your library in CSV format:",
+                gleeph_steps: "<li>Open the Gleeph app on your mobile.</li><li>Go to the <strong>Profile</strong> tab.</li><li>Tap the gear icon (Settings) at the top right.</li><li>Select <strong>Export my data</strong>.</li><li>You will receive a CSV file by email or can save it directly.</li>",
+                babelio_title: "📖 Babelio",
+                babelio_desc: "Retrieve your reading list:",
+                babelio_steps: "<li>Log in to your account on the Babelio website.</li><li>Go to <strong>My books</strong>.</li><li>Look for the <strong>Export my books</strong> link (usually at the bottom of the page or in list options).</li><li>Download the generated CSV file.</li>",
+                goodreads_title: "🌎 Goodreads",
+                goodreads_desc: "The standard Goodreads export:",
+                goodreads_steps: "<li>Go to <a href=\"https://www.goodreads.com\">Goodreads.com</a> and log in.</li><li>Click on <strong>My Books</strong> in the navigation bar.</li><li>In the left menu, click on <strong>Import and Export</strong>.</li><li>Click the <strong>Export Library</strong> button at the top right.</li><li>Wait for the file to be generated and click the download link.</li>",
+                inventaire_title: "📦 inventaire.io",
+                inventaire_desc: "The data-friendly sibling project:",
+                inventaire_steps: "<li>Log in to <a href=\"https://inventaire.io\">inventaire.io</a>.</li><li>Go to your profile <strong>Settings</strong>.</li><li>Look for the <strong>Data</strong> or <strong>Export</strong> section.</li><li>Choose CSV or JSON format (BiblioGenius prefers CSV for now).</li>",
+                next_title: "What's next?",
+                next_desc: "Once you have your file, open BiblioGenius and use the migration wizard to import your books in one click.",
+                btn_back_home: "← Back to home",
+                footer_text: "© 2025 BiblioGenius. Your library, your rules."
+            },
+            es: {
+                page_title: "Libera tu biblioteca - BiblioGenius",
+                meta_desc: "Tutoriales para importar tus datos desde Gleeph, Babelio, Goodreads, inventaire.io a BiblioGenius.",
+                hero_title: "Libera tu biblioteca",
+                hero_subtitle: "Tus libros no deberían estar prisioneros de una plataforma.",
+                intro_text: "BiblioGenius está diseñado para respetar tu soberanía digital. Aquí tienes cómo recuperar tus datos de las plataformas más comunes para importarlos en casa.",
+                btn_watch_video: "Ver tutorial en video",
+                gleeph_title: "📱 Gleeph",
+                gleeph_desc: "Exporta tu biblioteca en formato CSV:",
+                gleeph_steps: "<li>Abre la aplicación Gleeph en tu móvil.</li><li>Ve a la pestaña <strong>Perfil</strong>.</li><li>Toca el icono del engranaje (Ajustes) arriba a la derecha.</li><li>Selecciona <strong>Exportar mis datos</strong>.</li><li>Recibirás un archivo CSV por email o podrás guardarlo directamente.</li>",
+                babelio_title: "📖 Babelio",
+                babelio_desc: "Recupera tu lista de lectura:",
+                babelio_steps: "<li>Inicia sesión en tu cuenta en el sitio de Babelio.</li><li>Ve a <strong>Mis libros</strong>.</li><li>Busca el enlace <strong>Exportar mis libros</strong> (normalmente al final de la página o en las opciones de lista).</li><li>Descarga el archivo CSV generado.</li>",
+                goodreads_title: "🌎 Goodreads",
+                goodreads_desc: "La exportación estándar de Goodreads:",
+                goodreads_steps: "<li>Ve a <a href=\"https://www.goodreads.com\">Goodreads.com</a> e inicia sesión.</li><li>Haz clic en <strong>My Books</strong> en la barra de navegación.</li><li>En el menú de la izquierda, haz clic en <strong>Import and Export</strong>.</li><li>Haz clic en el botón <strong>Export Library</strong> arriba a la derecha.</li><li>Espera a que se genere el archivo y haz clic en el enlace de descarga.</li>",
+                inventaire_title: "📦 inventaire.io",
+                inventaire_desc: "El proyecto amigo respetuoso de los datos:",
+                inventaire_steps: "<li>Inicia sesión en <a href=\"https://inventaire.io\">inventaire.io</a>.</li><li>Ve a los <strong>Ajustes</strong> de tu perfil.</li><li>Busca la sección <strong>Datos</strong> o <strong>Exportar</strong>.</li><li>Elige el formato CSV o JSON (BiblioGenius prefiere CSV por ahora).</li>",
+                next_title: "¿Y ahora qué?",
+                next_desc: "Una vez que tengas tu archivo, abre BiblioGenius y usa el asistente de migración para importar tus libros con un solo clic.",
+                btn_back_home: "← Volver al inicio",
+                footer_text: "© 2025 BiblioGenius. Tu biblioteca, tus reglas."
+            },
+            de: {
+                page_title: "Befreien Sie Ihre Bibliothek - BiblioGenius",
+                meta_desc: "Anleitungen zum Importieren Ihrer Daten von Gleeph, Babelio, Goodreads, inventaire.io zu BiblioGenius.",
+                hero_title: "Befreien Sie Ihre Bibliothek",
+                hero_subtitle: "Ihre Bücher sollten nicht auf einer Plattform gefangen sein.",
+                intro_text: "BiblioGenius wurde entwickelt, um Ihre digitale Souveränität zu respektieren. Hier erfahren Sie, wie Sie Ihre Daten von den gängigsten Plattformen abrufen, um sie zu Hause zu importieren.",
+                btn_watch_video: "Videoanleitung ansehen",
+                gleeph_title: "📱 Gleeph",
+                gleeph_desc: "Exportieren Sie Ihre Bibliothek im CSV-Format:",
+                gleeph_steps: "<li>Öffnen Sie die Gleeph-App auf Ihrem Handy.</li><li>Gehen Sie zum Tab <strong>Profil</strong>.</li><li>Tippen Sie auf das Zahnrad-Symbol (Einstellungen) oben rechts.</li><li>Wählen Sie <strong>Meine Daten exportieren</strong>.</li><li>Sie erhalten eine CSV-Datei per E-Mail oder können sie direkt speichern.</li>",
+                babelio_title: "📖 Babelio",
+                babelio_desc: "Rufen Sie Ihre Leseliste ab:",
+                babelio_steps: "<li>Melden Sie sich bei Ihrem Konto auf der Babelio-Website an.</li><li>Gehen Sie zu <strong>Meine Bücher</strong>.</li><li>Suchen Sie nach dem Link <strong>Meine Bücher exportieren</strong> (meist unten auf der Seite oder in den Listenoptionen).</li><li>Laden Sie die generierte CSV-Datei herunter.</li>",
+                goodreads_title: "🌎 Goodreads",
+                goodreads_desc: "Der Standard-Goodreads-Export:",
+                goodreads_steps: "<li>Gehen Sie auf <a href=\"https://www.goodreads.com\">Goodreads.com</a> und melden Sie sich an.</li><li>Klicken Sie in der Navigationsleiste auf <strong>My Books</strong>.</li><li>Klicken Sie im linken Menü auf <strong>Import and Export</strong>.</li><li>Klicken Sie oben rechts auf die Schaltfläche <strong>Export Library</strong>.</li><li>Warten Sie, bis die Datei generiert wurde, und klicken Sie auf den Download-Link.</li>",
+                inventaire_title: "📦 inventaire.io",
+                inventaire_desc: "Das datenfreundliche Geschwisterprojekt:",
+                inventaire_steps: "<li>Melden Sie sich bei <a href=\"https://inventaire.io\">inventaire.io</a> an.</li><li>Gehen Sie zu Ihren Profil-<strong>Einstellungen</strong>.</li><li>Suchen Sie den Abschnitt <strong>Daten</strong> oder <strong>Export</strong>.</li><li>Wählen Sie das CSV- oder JSON-Format (BiblioGenius bevorzugt derzeit CSV).</li>",
+                next_title: "Wie geht es weiter?",
+                next_desc: "Sobald Sie Ihre Datei haben, öffnen Sie BiblioGenius und verwenden Sie den Migrationsassistenten, um Ihre Bücher mit einem Klick zu importieren.",
+                btn_back_home: "← Zurück zur Startseite",
+                footer_text: "© 2025 BiblioGenius. Ihre Bibliothek, Ihre Regeln."
+            }
+        };
+
+        function setLanguage(lang) {
+            if (!translations[lang]) lang = 'en';
+
+            // Save to local storage
+            localStorage.setItem('bibliogenius_lang', lang);
+
+            const t = translations[lang];
+            document.documentElement.lang = lang;
+            document.getElementById('page-title').textContent = t.page_title;
+            document.getElementById('meta-desc').setAttribute('content', t.meta_desc);
+
+            const setHtml = (id, content) => {
+                const el = document.getElementById(id);
+                if (el) el.innerHTML = content;
+            };
+
+            const setText = (id, content) => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = content;
+            };
+
+            setText('hero-title', t.hero_title);
+            setText('hero-subtitle', t.hero_subtitle);
+            setText('intro-text', t.intro_text);
+            setText('btn-watch-video', t.btn_watch_video);
+            setHtml('gleeph-title', t.gleeph_title);
+            setText('gleeph-desc', t.gleeph_desc);
+            setHtml('gleeph-steps', t.gleeph_steps);
+            setHtml('babelio-title', t.babelio_title);
+            setText('babelio-desc', t.babelio_desc);
+            setHtml('babelio-steps', t.babelio_steps);
+            setHtml('goodreads-title', t.goodreads_title);
+            setText('goodreads-desc', t.goodreads_desc);
+            setHtml('goodreads-steps', t.goodreads_steps);
+            setHtml('inventaire-title', t.inventaire_title);
+            setText('inventaire-desc', t.inventaire_desc);
+            setHtml('inventaire-steps', t.inventaire_steps);
+            setText('next-title', t.next_title);
+            setText('next-desc', t.next_desc);
+            setText('btn-back-home', t.btn_back_home);
+            setText('footer-text', t.footer_text);
+
+            document.getElementById('lang-switcher').value = lang;
+        }
+
+        // Check local storage first, then navigator
+        const storedLang = localStorage.getItem('bibliogenius_lang');
+        const userLang = navigator.language || navigator.userLanguage;
+        const systemLang = userLang.split('-')[0];
+        const defaultLang = translations[storedLang] ? storedLang : (translations[systemLang] ? systemLang : 'en');
+
+        setLanguage(defaultLang);
+
+        document.getElementById('lang-switcher').addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+    </script>
+</body>
+
+</html>
