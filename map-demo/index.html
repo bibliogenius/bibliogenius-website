@@ -19,9 +19,25 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
 
     <style>
+        :root {
+            --primary-dark: #0f291e;
+            /* Deep Forest */
+            --primary: #154f30;
+            /* Classic Green */
+            --accent: #d4a373;
+            /* Old Paper Gold */
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --border-glass: rgba(255, 255, 255, 0.6);
+            --shadow-glass: 0 8px 32px rgba(0, 30, 0, 0.08);
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -29,7 +45,8 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: var(--font-sans);
+            color: var(--primary-dark);
         }
 
         #map {
@@ -37,25 +54,33 @@
             width: 100%;
         }
 
-        /* Header Bar */
+        /* Header Bar - Floating Glass */
         .header {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            max-width: 1200px;
             z-index: 1001;
-            background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+            background: var(--bg-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
             padding: 12px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            box-shadow: var(--shadow-glass);
         }
 
         .header h1 {
-            color: #fff;
-            font-size: 18px;
-            font-weight: 600;
+            color: var(--primary);
+            font-family: var(--font-serif);
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -67,197 +92,199 @@
         }
 
         .btn {
-            padding: 8px 16px;
-            border-radius: 6px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            /* Pill shape */
             font-size: 13px;
-            font-weight: 500;
+            font-weight: 600;
             text-decoration: none;
-            transition: all 0.2s;
+            transition: all 0.2s ease;
             cursor: pointer;
             border: none;
         }
 
         .btn-primary {
-            background: #fff;
-            color: #065f46;
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(21, 79, 48, 0.2);
         }
 
         .btn-primary:hover {
-            background: #ecfdf5;
+            background: var(--primary-dark);
             transform: translateY(-1px);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.15);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--primary-dark);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(0, 0, 0, 0.1);
         }
 
-        /* Filter Bar */
+        /* Filter Bar - Pill Cluster */
         .filter-bar {
             position: fixed;
-            top: 56px;
-            left: 0;
-            right: 0;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
             z-index: 1000;
-            background: #fff;
-            padding: 12px 24px;
             display: flex;
-            gap: 12px;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            gap: 10px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .filter-label {
-            font-size: 13px;
-            color: #64748b;
-            font-weight: 500;
+            display: none;
+            /* Cleaner look */
         }
 
         .filter-btn {
             padding: 8px 16px;
-            border-radius: 20px;
+            border-radius: 30px;
             font-size: 13px;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
-            border: 2px solid #e2e8f0;
-            background: #fff;
-            color: #475569;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: var(--bg-glass);
+            backdrop-filter: blur(8px);
+            color: var(--primary-dark);
             transition: all 0.2s;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .filter-btn:hover {
-            border-color: #cbd5e1;
-            background: #f8fafc;
+            transform: translateY(-1px);
+            background: #fff;
         }
 
         .filter-btn.active {
-            border-color: currentColor;
-            background: currentColor;
+            background: var(--primary);
             color: #fff;
+            border-color: var(--primary);
         }
 
-        .filter-btn[data-category="all"] {
-            --btn-color: #1f2937;
-        }
-
-        .filter-btn[data-category="all"].active {
-            background: #1f2937;
-            border-color: #1f2937;
-        }
-
-        .filter-btn[data-category="policy_gov"] {
-            --btn-color: #8b5cf6;
-            color: #7c3aed;
+        /* Colors for dots/badges/buttons */
+        .policy_gov .dot {
+            background: #8b5cf6;
         }
 
         .filter-btn[data-category="policy_gov"].active {
-            background: #8b5cf6;
-            border-color: #8b5cf6;
-            color: #fff;
+            background: #7c3aed;
         }
 
-        .filter-btn[data-category="policy_library"] {
-            --btn-color: #3b82f6;
-            color: #2563eb;
+        .policy_library .dot {
+            background: #3b82f6;
         }
 
         .filter-btn[data-category="policy_library"].active {
-            background: #3b82f6;
-            border-color: #3b82f6;
-            color: #fff;
+            background: #2563eb;
         }
 
-        .filter-btn[data-category="initiative"] {
-            --btn-color: #22c55e;
-            color: #16a34a;
+        .initiative .dot {
+            background: #16a34a;
         }
 
         .filter-btn[data-category="initiative"].active {
-            background: #22c55e;
-            border-color: #22c55e;
-            color: #fff;
+            background: #16a34a;
         }
 
-        /* Legend */
+        /* Legend - Card Glass */
         .legend {
             position: fixed;
             bottom: 30px;
-            left: 30px;
+            right: 30px;
+            /* Moved to right for better balance */
+            left: auto;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-            max-width: 320px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-glass);
+            max-width: 300px;
+            border: 1px solid var(--border-glass);
         }
 
         .legend h2 {
-            font-size: 16px;
-            font-weight: 600;
-            color: #065f46;
-            margin-bottom: 4px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-family: var(--font-serif);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
         }
 
         .legend p {
-            font-size: 12px;
-            color: #64748b;
+            font-size: 13px;
+            color: #555;
             line-height: 1.5;
+            margin-bottom: 20px;
         }
 
         .legend-items {
-            margin-top: 16px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 12px;
         }
 
         .legend-item {
             display: flex;
             align-items: center;
-            font-size: 13px;
-            color: #334155;
+            font-size: 14px;
+            color: var(--primary-dark);
+            font-weight: 500;
         }
 
         .dot {
-            height: 12px;
-            width: 12px;
+            height: 10px;
+            width: 10px;
             border-radius: 50%;
-            margin-right: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-right: 12px;
+            position: relative;
+        }
+
+        /* Ring effect for dots */
+        .dot::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid currentColor;
+            opacity: 0.3;
         }
 
         .dot.purple {
-            background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+            background: #8b5cf6;
+            color: #8b5cf6;
         }
 
         .dot.blue {
-            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            background: #3b82f6;
+            color: #3b82f6;
         }
 
         .dot.green {
-            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+            background: #16a34a;
+            color: #16a34a;
         }
 
         .stats {
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid #e2e8f0;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
+            gap: 4px;
         }
 
         .stat {
@@ -265,135 +292,164 @@
         }
 
         .stat-value {
-            font-size: 20px;
+            font-family: var(--font-serif);
+            font-size: 24px;
             font-weight: 700;
-            color: #065f46;
-        }
-
-        .stat-label {
-            font-size: 10px;
-            color: #64748b;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Custom Popup Styles */
-        .leaflet-popup-content-wrapper {
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-        }
-
-        .leaflet-popup-content {
-            margin: 16px;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .popup-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .popup-badge.policy_gov {
-            background: #ede9fe;
-            color: #6d28d9;
-        }
-
-        .popup-badge.policy_library {
-            background: #dbeafe;
-            color: #1d4ed8;
-        }
-
-        .popup-badge.initiative {
-            background: #dcfce7;
-            color: #15803d;
-        }
-
-        .popup-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: #1a1a2e;
+            color: var(--primary);
+            line-height: 1;
             margin-bottom: 4px;
         }
 
-        .popup-city {
-            font-size: 12px;
-            color: #64748b;
+        .stat-label {
+            font-size: 9px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        /* Custom Popup Styles - Elegant */
+        .leaflet-popup-content-wrapper {
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .leaflet-popup-content {
+            margin: 0;
+            padding: 20px;
+            font-family: var(--font-sans);
+        }
+
+        .popup-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
             margin-bottom: 12px;
+        }
+
+        .popup-badge.policy_gov {
+            background: #f3f0ff;
+            color: #7c3aed;
+        }
+
+        .popup-badge.policy_library {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        .popup-badge.initiative {
+            background: #f0fdf4;
+            color: #16a34a;
+        }
+
+        .popup-title {
+            font-family: var(--font-serif);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .popup-city {
+            font-size: 13px;
+            color: #888;
+            font-style: italic;
+            font-family: var(--font-serif);
+            margin-bottom: 16px;
         }
 
         .popup-desc {
-            font-size: 12px;
-            color: #475569;
-            line-height: 1.5;
-            margin-bottom: 12px;
+            font-size: 13px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 16px;
         }
 
         .popup-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: #047857;
+            display: inline-block;
+            color: var(--primary);
             font-size: 12px;
-            font-weight: 500;
+            font-weight: 700;
             text-decoration: none;
+            border-bottom: 2px solid rgba(21, 79, 48, 0.2);
+            padding-bottom: 2px;
+            transition: all 0.2s;
         }
 
         .popup-link:hover {
-            text-decoration: underline;
+            border-color: var(--primary);
         }
 
-        /* Demo Badge */
+        /* Demo Badge -> "EBLIDA Verified" seal look */
         .demo-badge {
             position: fixed;
-            top: 70px;
-            right: 24px;
+            bottom: 30px;
+            left: 30px;
+            /* Swapped with legend location */
             z-index: 1002;
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-            color: #92400e;
-            padding: 6px 12px;
-            border-radius: 6px;
+            background: #fff;
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
             font-size: 11px;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .demo-badge::before {
+            content: '●';
+            color: #ef4444;
+            /* Recording dot style */
+            font-size: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         /* Responsive */
         @media (max-width: 768px) {
+            .header {
+                width: 100%;
+                top: 0;
+                border-radius: 0 0 16px 16px;
+            }
+
             .legend {
                 bottom: 20px;
-                left: 20px;
                 right: 20px;
+                left: 20px;
                 max-width: none;
             }
 
-            .header h1 {
-                font-size: 14px;
-            }
-
-            .btn {
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-
             .filter-bar {
-                top: 52px;
-                padding: 10px 16px;
-                gap: 8px;
-            }
-
-            .filter-btn {
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-
-            .demo-badge {
-                display: none;
+                top: 85px;
+                width: 100%;
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding: 0 20px;
             }
         }
     </style>
@@ -566,7 +622,11 @@
                     <a href="detail.html?id=${lib.id}" class="popup-link">
                         View Full Details →
                     </a>
-                `, { maxWidth: 300 });
+                `, {
+                    maxWidth: 300,
+                    autoPanPaddingTopLeft: [0, 180],
+                    autoPan: true
+                });
 
                 currentClusterGroup.addLayer(marker);
             });

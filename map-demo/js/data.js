@@ -28,7 +28,7 @@ const CATEGORY_ICONS = {
 const CATEGORY_COLORS = {
     [CATEGORIES.POLICY_GOV]: '#8b5cf6',      // Purple for government
     [CATEGORIES.POLICY_LIBRARY]: '#3b82f6',  // Blue for library policies
-    [CATEGORIES.INITIATIVE]: '#22c55e'       // Green for initiatives
+    [CATEGORIES.INITIATIVE]: '#16a34a'       // Green for initiatives
 };
 
 // Real data from IFLA, EBLIDA, and European green library initiatives

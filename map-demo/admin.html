@@ -439,12 +439,9 @@
                 <span class="nav-item-icon">🗺️</span>
                 <span>View Map</span>
             </a>
-            <span class="nav-item-icon">📋</span>
-            <span>All Entries</span>
-            </a>
-            <a href="#" class="nav-item" onclick="debugData()">
-                <span class="nav-item-icon">🐞</span>
-                <span>Debug Data</span>
+            <a href="admin.html" class="nav-item active">
+                <span class="nav-item-icon">📋</span>
+                <span>All Entries</span>
             </a>
         </nav>
     </aside>
@@ -742,24 +739,7 @@
             }
         });
 
-        // Debug
-        function debugData() {
-            const data = localStorage.getItem('green_librarian_entries');
-            console.log('--- DEBUG DATA START ---');
-            console.log(data);
-            console.log('--- DEBUG DATA END ---');
 
-            if (!data) {
-                alert('No data found in localStorage for key "green_librarian_entries".');
-            } else {
-                try {
-                    const parsed = JSON.parse(data);
-                    alert(`Found ${parsed.length} entries.\nCheck console for full data.\nKey: green_librarian_entries`);
-                } catch (e) {
-                    alert('Data found but invalid JSON: ' + e.message);
-                }
-            }
-        }
 
         // Initialize
         renderTable();
