@@ -43,7 +43,7 @@
                     </svg>
                     <span id="btn-github-text">Voir le Code (GitHub)</span>
                 </a>
-                <a href="mailto:contact@bibliogenius.org" id="btn-tester" class="btn btn-secondary">
+                <a href="#" onclick="openContact(event)" id="btn-tester" class="btn btn-secondary">
                     Devenir Testeur
                 </a>
             </div>
@@ -61,15 +61,15 @@
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">🤝</span>
-                    <h3 id="feature-p2p-title">Partage P2P</h3>
+                    <h3 id="feature-p2p-title">Partage Réseau</h3>
                     <p id="feature-p2p-desc">Prêtez vos livres à vos amis ou voisins de confiance. Créez un réseau de
                         lecture local et décentralisé.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="feature-icon">🧙‍♂️</span>
-                    <h3 id="feature-ai-title">Assistant Bibliothécaire</h3>
-                    <p id="feature-ai-desc">Connectez vos agents IA locaux (Claude, Ollama) à votre bibliothèque via le
-                        protocole ouvert MCP.</p>
+                    <span class="feature-icon">🛡️</span>
+                    <h3 id="feature-privacy-title">Vie Privée</h3>
+                    <p id="feature-privacy-desc">Pas de traçage, pas de publicité. Votre vie privée est respectée par
+                        défaut (Privacy by Design).</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">🧩</span>
@@ -118,18 +118,18 @@
          </div>
      </section>-->
 
-     <!-- Footer / Contact -->
+    <!-- Footer / Contact -->
     <footer id="contact" class="footer">
         <div class="container">
             <h2 id="footer-title">Rejoignez l'aventure</h2>
             <p id="footer-desc">Le projet est en développement actif. Écrivez-nous pour participer ou tester.</p>
-            <a href="mailto:contact@bibliogenius.org">contact@bibliogenius.org</a>
+            <a href="#" onclick="openContact(event)">contact [at] bibliogenius.org</a>
             <br><br>
             <a href="contribute.html" id="link-contribute" style="color:var(--accent-color); text-decoration: none;">➜
                 Espace Contributeurs</a>
             <br>
-            <a href="tutorials.html" id="link-tutorials" style="color:var(--accent-color); text-decoration: none;">➜
-                Tutoriels Vidéo</a>
+            <!-- <a href="tutorials.html" id="link-tutorials" style="color:var(--accent-color); text-decoration: none;">➜
+                Tutoriels Vidéo</a> -->
 
             <div class="footer-bottom">
                 <p id="footer-copyright">© 2025 BiblioGenius. Open Source (MIT License).</p>
@@ -148,10 +148,10 @@
                 btn_tester: "Devenir Testeur",
                 feature_local_title: "Local-First",
                 feature_local_desc: "Vos données vous appartiennent. Fonctionne hors-ligne, sans cloud.",
-                feature_p2p_title: "Partage P2P",
+                feature_p2p_title: "Partage Réseau",
                 feature_p2p_desc: "Prêtez vos livres à vos amis ou voisins de confiance. Créez un réseau de lecture local et décentralisé.",
-                feature_ai_title: "Assistant Bibliothécaire",
-                feature_ai_desc: "Connectez vos agents IA locaux (Claude, Ollama) à votre bibliothèque via le protocole ouvert MCP.",
+                feature_privacy_title: "Vie Privée",
+                feature_privacy_desc: "Pas de traçage, pas de publicité. Votre vie privée est respectée par défaut (Privacy by Design).",
                 feature_modular_title: "Modulaire",
                 feature_modular_desc: "Une application qui s'adapte à votre usage : lecteur, famille, association ou enseignant.",
                 exp_title: "Expérimentons ensemble",
@@ -178,10 +178,10 @@
                 btn_tester: "Become a Tester",
                 feature_local_title: "Local-First",
                 feature_local_desc: "Your data belongs to you. Works offline, no cloud required.",
-                feature_p2p_title: "P2P Sharing",
+                feature_p2p_title: "Network Sharing",
                 feature_p2p_desc: "Lend your books to trusted friends or neighbors. Create a local and decentralized reading network.",
-                feature_ai_title: "Librarian Assistant",
-                feature_ai_desc: "Connect your local AI agents (Claude, Ollama) to your library via the open MCP protocol.",
+                feature_privacy_title: "Privacy",
+                feature_privacy_desc: "No tracking, no ads. Your privacy is respected by default (Privacy by Design).",
                 feature_modular_title: "Modular",
                 feature_modular_desc: "An app that adapts to your needs: reader, family, association, or teacher.",
                 exp_title: "Let's experiment together",
@@ -208,10 +208,10 @@
                 btn_tester: "Ser Tester",
                 feature_local_title: "Local-First",
                 feature_local_desc: "Tus datos te pertenecen. Funciona sin conexión, sin nube.",
-                feature_p2p_title: "Intercambio P2P",
+                feature_p2p_title: "Compartir en Red",
                 feature_p2p_desc: "Presta tus libros a amigos o vecinos de confianza. Crea una red de lectura local y descentralizada.",
-                feature_ai_title: "Asistente Bibliotecario",
-                feature_ai_desc: "Conecta tus agentes de IA locales (Claude, Ollama) a tu biblioteca vía el protocolo abierto MCP.",
+                feature_privacy_title: "Privacidad",
+                feature_privacy_desc: "Sin rastreo, sin publicidad. Tu privacidad es respetada por defecto (Privacy by Design).",
                 feature_modular_title: "Modular",
                 feature_modular_desc: "Una aplicación que se adapta a tu uso: lector, familia, asociación o profesor.",
                 exp_title: "Experimentemos juntos",
@@ -238,10 +238,10 @@
                 btn_tester: "Tester werden",
                 feature_local_title: "Local-First",
                 feature_local_desc: "Ihre Daten gehören Ihnen. Funktioniert offline, ohne Cloud.",
-                feature_p2p_title: "P2P-Teilen",
+                feature_p2p_title: "Netzwerk-Teilen",
                 feature_p2p_desc: "Verleihen Sie Ihre Bücher an vertrauenswürdige Freunde oder Nachbarn. Erstellen Sie ein lokales und dezentrales Lesenetzwerk.",
-                feature_ai_title: "Bibliotheksassistent",
-                feature_ai_desc: "Verbinden Sie Ihre lokalen KI-Agenten (Claude, Ollama) über das offene MCP-Protokoll mit Ihrer Bibliothek.",
+                feature_privacy_title: "Privatsphäre",
+                feature_privacy_desc: "Kein Tracking, keine Werbung. Ihre Privatsphäre wird standardmäßig respektiert (Privacy by Design).",
                 feature_modular_title: "Modular",
                 feature_modular_desc: "Eine App, die sich an Ihre Bedürfnisse anpasst: Leser, Familie, Verein oder Lehrer.",
                 exp_title: "Lassen Sie uns gemeinsam experimentieren",
@@ -290,8 +290,8 @@
             setText('feature-local-desc', t.feature_local_desc);
             setText('feature-p2p-title', t.feature_p2p_title);
             setText('feature-p2p-desc', t.feature_p2p_desc);
-            setText('feature-ai-title', t.feature_ai_title);
-            setText('feature-ai-desc', t.feature_ai_desc);
+            setText('feature-privacy-title', t.feature_privacy_title);
+            setText('feature-privacy-desc', t.feature_privacy_desc);
             setText('feature-modular-title', t.feature_modular_title);
             setText('feature-modular-desc', t.feature_modular_desc);
             setText('exp-title', t.exp_title);
@@ -324,6 +324,14 @@
         document.getElementById('lang-switcher').addEventListener('change', (e) => {
             setLanguage(e.target.value);
         });
+
+        // Email Obfuscation to prevent spam
+        function openContact(e) {
+            e.preventDefault();
+            const user = 'contact';
+            const domain = 'bibliogenius.org';
+            window.location.href = `mailto:${user}@${domain}`;
+        }
     </script>
 </body>
 
