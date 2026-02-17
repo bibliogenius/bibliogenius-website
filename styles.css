@@ -244,6 +244,41 @@ a {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+/* Test App Section */
+.test-app {
+    padding: 4rem 1.5rem;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.test-app h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.test-app p {
+    font-size: 1.125rem;
+    color: #374151;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.test-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .test-buttons {
+        flex-direction: row;
+    }
+}
+
 /* Free Library Section */
 .free-library {
     padding: 5rem 1.5rem;
