@@ -122,7 +122,7 @@
                     🍎 <span id="btn-testflight-text">Tester sur iOS (TestFlight)</span>
                 </a>
             </div>
-            <p id="android-note" class="android-note">🤖 <span id="android-note-text">Android bientôt disponible sur F-Droid</span></p>
+            <p id="android-note" class="android-note">🤖 <a href="#" onclick="openContact(event)" id="android-note-text" style="color: inherit; text-decoration: underline;">Android disponible sur demande</a></p>
         </div>
     </section>
 
@@ -177,7 +177,7 @@
                 test_title: "Testez l'application",
                 test_desc: "BiblioGenius est disponible en bêta. Rejoignez les premiers testeurs !",
                 btn_testflight: "Tester sur iOS (TestFlight)",
-                android_note: "Android bientôt disponible sur F-Droid",
+                android_note: "Android disponible sur demande",
                 feature_local_title: "Local-First",
                 feature_local_desc: "Vos données vous appartiennent. Fonctionne hors-ligne, sans cloud.",
                 feature_p2p_title: "Partage Réseau",
@@ -211,7 +211,7 @@
                 test_title: "Test the App",
                 test_desc: "BiblioGenius is available in beta. Join the first testers!",
                 btn_testflight: "Test on iOS (TestFlight)",
-                android_note: "Android coming soon on F-Droid",
+                android_note: "Android available on request",
                 feature_local_title: "Local-First",
                 feature_local_desc: "Your data belongs to you. Works offline, no cloud required.",
                 feature_p2p_title: "Network Sharing",
@@ -245,7 +245,7 @@
                 test_title: "Prueba la aplicación",
                 test_desc: "BiblioGenius está disponible en beta. ¡Únete a los primeros testers!",
                 btn_testflight: "Probar en iOS (TestFlight)",
-                android_note: "Android próximamente en F-Droid",
+                android_note: "Android disponible bajo petición",
                 feature_local_title: "Local-First",
                 feature_local_desc: "Tus datos te pertenecen. Funciona sin conexión, sin nube.",
                 feature_p2p_title: "Compartir en Red",
@@ -279,7 +279,7 @@
                 test_title: "Testen Sie die App",
                 test_desc: "BiblioGenius ist als Beta verfügbar. Werden Sie einer der ersten Tester!",
                 btn_testflight: "Auf iOS testen (TestFlight)",
-                android_note: "Android bald auf F-Droid verfügbar",
+                android_note: "Android auf Anfrage verfügbar",
                 feature_local_title: "Local-First",
                 feature_local_desc: "Ihre Daten gehören Ihnen. Funktioniert offline, ohne Cloud.",
                 feature_p2p_title: "Netzwerk-Teilen",
@@ -333,7 +333,8 @@
             setText('test-title', t.test_title);
             setText('test-desc', t.test_desc);
             setText('btn-testflight-text', t.btn_testflight);
-            setText('android-note-text', t.android_note);
+            const androidEl = document.getElementById('android-note-text');
+            if (androidEl) androidEl.textContent = t.android_note;
             setText('feature-local-title', t.feature_local_title);
             setText('feature-local-desc', t.feature_local_desc);
             setText('feature-p2p-title', t.feature_p2p_title);
