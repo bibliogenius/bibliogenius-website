@@ -50,6 +50,20 @@
         </div>
     </header>
 
+    <!-- App Showcase -->
+    <section class="app-showcase">
+        <div class="container">
+            <div class="showcase-frame">
+                <picture>
+                    <source id="showcase-mobile-src" media="(max-width: 768px)"
+                        srcset="assets/home-bibliogenius-mobile-en.jpg">
+                    <img id="showcase-desktop-img" src="assets/home-bibliogenius-en.jpg"
+                        alt="BiblioGenius — library view" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section class="features">
         <div class="container">
@@ -66,16 +80,16 @@
                         lecture local et décentralisé.</p>
                 </div>
                 <div class="feature-card">
-                    <span class="feature-icon">🛡️</span>
-                    <h3 id="feature-privacy-title">Vie Privée</h3>
-                    <p id="feature-privacy-desc">Pas de traçage, pas de publicité. Votre vie privée est respectée par
-                        défaut (Privacy by Design).</p>
+                    <span class="feature-icon">🔐</span>
+                    <h3 id="feature-e2ee-title">Chiffré & Privé</h3>
+                    <p id="feature-e2ee-desc">Pas de traçage, pas de publicité. Vos données sont chiffrées de bout en
+                        bout : personne ne peut les lire, même pas le serveur.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">🧩</span>
                     <h3 id="feature-modular-title">Modulaire</h3>
                     <p id="feature-modular-desc">Une application qui s'adapte à votre usage : lecteur, famille,
-                        association ou enseignant.</p>
+                        association, bibliothécaire, libraire ou enseignant.</p>
                 </div>
             </div>
         </div>
@@ -132,8 +146,8 @@
                 Tutoriels Vidéo</a> -->
 
             <div class="footer-bottom">
-                <p id="footer-copyright">© 2025 BiblioGenius. Open Source (MIT License).</p>
-                <p id="footer-support">Soutenu par la communauté NGI Zero (Candidat).</p>
+                <p id="footer-copyright">© 2026 BiblioGenius. Open Source (MIT License).</p>
+                <p id="footer-support">Soutenu par la communauté NGI Zero.</p>
             </div>
         </div>
     </footer>
@@ -150,10 +164,10 @@
                 feature_local_desc: "Vos données vous appartiennent. Fonctionne hors-ligne, sans cloud.",
                 feature_p2p_title: "Partage Réseau",
                 feature_p2p_desc: "Prêtez vos livres à vos amis ou voisins de confiance. Créez un réseau de lecture local et décentralisé.",
-                feature_privacy_title: "Vie Privée",
-                feature_privacy_desc: "Pas de traçage, pas de publicité. Votre vie privée est respectée par défaut (Privacy by Design).",
+                feature_e2ee_title: "Chiffré & Privé",
+                feature_e2ee_desc: "Pas de traçage, pas de publicité. Vos données sont chiffrées de bout en bout : personne ne peut les lire, même pas le serveur.",
                 feature_modular_title: "Modulaire",
-                feature_modular_desc: "Une application qui s'adapte à votre usage : lecteur, famille, association ou enseignant.",
+                feature_modular_desc: "Une application qui s'adapte à votre usage : lecteur, famille, association, bibliothécaire, libraire ou enseignant.",
                 exp_title: "Expérimentons ensemble",
                 exp_desc: "BiblioGenius est un projet citoyen. <br>Nous cherchons des bibliothèques, des associations et des voisins pour tester de nouveaux usages :",
                 tag_clubs: "📚 Clubs de lecture",
@@ -164,8 +178,8 @@
                 footer_contribute: "➜ Espace Contributeurs",
                 footer_tutorials: "➜ Tutoriels Vidéo",
                 footer_desc: "Le projet est en développement actif. Écrivez-nous pour participer ou tester.",
-                footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
-                footer_support: "Soutenu par la communauté NGI Zero (Candidat).",
+                footer_copyright: "© 2026 BiblioGenius. Open Source (MIT License).",
+                footer_support: "Soutenu par la communauté NGI Zero.",
                 free_library_title: "Libérez votre bibliothèque",
                 free_library_desc: "Vos livres ne doivent pas être prisonniers d'une plateforme. Importez facilement vos données depuis vos anciennes applications.",
                 btn_free_library: "Voir les tutoriels d'import"
@@ -180,10 +194,10 @@
                 feature_local_desc: "Your data belongs to you. Works offline, no cloud required.",
                 feature_p2p_title: "Network Sharing",
                 feature_p2p_desc: "Lend your books to trusted friends or neighbors. Create a local and decentralized reading network.",
-                feature_privacy_title: "Privacy",
-                feature_privacy_desc: "No tracking, no ads. Your privacy is respected by default (Privacy by Design).",
+                feature_e2ee_title: "Encrypted & Private",
+                feature_e2ee_desc: "No tracking, no ads. Your data is end-to-end encrypted: no one can read it, not even the server.",
                 feature_modular_title: "Modular",
-                feature_modular_desc: "An app that adapts to your needs: reader, family, association, or teacher.",
+                feature_modular_desc: "An app that adapts to your needs: reader, family, association, librarian, bookseller, or teacher.",
                 exp_title: "Let's experiment together",
                 exp_desc: "BiblioGenius is a civic project. <br>We are looking for libraries, associations, and neighbors to test new uses:",
                 tag_clubs: "📚 Book Clubs",
@@ -194,8 +208,8 @@
                 footer_contribute: "➜ Contributors Space",
                 footer_tutorials: "➜ Video Tutorials",
                 footer_desc: "The project is in active development. Write to us to participate or test.",
-                footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
-                footer_support: "Supported by the NGI Zero community (Candidate).",
+                footer_copyright: "© 2026 BiblioGenius. Open Source (MIT License).",
+                footer_support: "Supported by the NGI Zero community.",
                 free_library_title: "Free your library",
                 free_library_desc: "Your books shouldn't be trapped on one platform. Easily import your data from your old apps.",
                 btn_free_library: "View import tutorials"
@@ -210,10 +224,10 @@
                 feature_local_desc: "Tus datos te pertenecen. Funciona sin conexión, sin nube.",
                 feature_p2p_title: "Compartir en Red",
                 feature_p2p_desc: "Presta tus libros a amigos o vecinos de confianza. Crea una red de lectura local y descentralizada.",
-                feature_privacy_title: "Privacidad",
-                feature_privacy_desc: "Sin rastreo, sin publicidad. Tu privacidad es respetada por defecto (Privacy by Design).",
+                feature_e2ee_title: "Cifrado y Privado",
+                feature_e2ee_desc: "Sin rastreo, sin publicidad. Tus datos están cifrados de extremo a extremo: nadie puede leerlos, ni siquiera el servidor.",
                 feature_modular_title: "Modular",
-                feature_modular_desc: "Una aplicación que se adapta a tu uso: lector, familia, asociación o profesor.",
+                feature_modular_desc: "Una aplicación que se adapta a tu uso: lector, familia, asociación, bibliotecario, librero o profesor.",
                 exp_title: "Experimentemos juntos",
                 exp_desc: "BiblioGenius es un proyecto ciudadano. <br>Buscamos bibliotecas, asociaciones y vecinos para probar nuevos usos:",
                 tag_clubs: "📚 Clubes de lectura",
@@ -224,8 +238,8 @@
                 footer_contribute: "➜ Espacio de Colaboradores",
                 footer_tutorials: "➜ Tutoriales en Video",
                 footer_desc: "El proyecto está en desarrollo activo. Escríbenos para participar o probar.",
-                footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
-                footer_support: "Apoyado por la comunidad NGI Zero (Candidato).",
+                footer_copyright: "© 2026 BiblioGenius. Open Source (MIT License).",
+                footer_support: "Apoyado por la comunidad NGI Zero.",
                 free_library_title: "Libera tu biblioteca",
                 free_library_desc: "Tus libros no devraient estar prisioneros de una plataforma. Importa fácilmente tus datos desde tus aplicaciones antiguas.",
                 btn_free_library: "Ver tutoriales de importación"
@@ -240,10 +254,10 @@
                 feature_local_desc: "Ihre Daten gehören Ihnen. Funktioniert offline, ohne Cloud.",
                 feature_p2p_title: "Netzwerk-Teilen",
                 feature_p2p_desc: "Verleihen Sie Ihre Bücher an vertrauenswürdige Freunde oder Nachbarn. Erstellen Sie ein lokales und dezentrales Lesenetzwerk.",
-                feature_privacy_title: "Privatsphäre",
-                feature_privacy_desc: "Kein Tracking, keine Werbung. Ihre Privatsphäre wird standardmäßig respektiert (Privacy by Design).",
+                feature_e2ee_title: "Verschlüsselt & Privat",
+                feature_e2ee_desc: "Kein Tracking, keine Werbung. Ihre Daten sind Ende-zu-Ende verschlüsselt: niemand kann sie lesen, nicht einmal der Server.",
                 feature_modular_title: "Modular",
-                feature_modular_desc: "Eine App, die sich an Ihre Bedürfnisse anpasst: Leser, Familie, Verein oder Lehrer.",
+                feature_modular_desc: "Eine App, die sich an Ihre Bedürfnisse anpasst: Leser, Familie, Verein, Bibliothekar, Buchhändler oder Lehrer.",
                 exp_title: "Lassen Sie uns gemeinsam experimentieren",
                 exp_desc: "BiblioGenius ist ein Bürgerprojekt. <br>Wir suchen Bibliotheken, Vereine und Nachbarn, um neue Nutzungsmöglichkeiten zu testen:",
                 tag_clubs: "📚 Buchclubs",
@@ -254,8 +268,8 @@
                 footer_contribute: "➜ Bereich für Mitwirkende",
                 footer_tutorials: "➜ Videoanleitungen",
                 footer_desc: "Das Projekt befindet sich in aktiver Entwicklung. Schreiben Sie uns, um teilzunehmen oder zu testen.",
-                footer_copyright: "© 2025 BiblioGenius. Open Source (MIT License).",
-                footer_support: "Unterstützt von der NGI Zero Community (Kandidat).",
+                footer_copyright: "© 2026 BiblioGenius. Open Source (MIT License).",
+                footer_support: "Unterstützt von der NGI Zero Community.",
                 free_library_title: "Befreien Sie Ihre Bibliothek",
                 free_library_desc: "Ihre Bücher sollten nicht auf einer Plattform gefangen sein. Importieren Sie Ihre Daten ganz einfach aus Ihren alten Apps.",
                 btn_free_library: "Import-Anleitungen ansehen"
@@ -290,8 +304,8 @@
             setText('feature-local-desc', t.feature_local_desc);
             setText('feature-p2p-title', t.feature_p2p_title);
             setText('feature-p2p-desc', t.feature_p2p_desc);
-            setText('feature-privacy-title', t.feature_privacy_title);
-            setText('feature-privacy-desc', t.feature_privacy_desc);
+            setText('feature-e2ee-title', t.feature_e2ee_title);
+            setText('feature-e2ee-desc', t.feature_e2ee_desc);
             setText('feature-modular-title', t.feature_modular_title);
             setText('feature-modular-desc', t.feature_modular_desc);
             setText('exp-title', t.exp_title);
@@ -311,6 +325,13 @@
             setText('btn-free-library', t.btn_free_library);
 
             document.getElementById('lang-switcher').value = lang;
+
+            // Swap showcase screenshots per language (fallback: en)
+            const imgLang = lang;
+            const mobileSrc = document.getElementById('showcase-mobile-src');
+            const desktopImg = document.getElementById('showcase-desktop-img');
+            if (mobileSrc) mobileSrc.srcset = 'assets/home-bibliogenius-mobile-' + imgLang + '.jpg';
+            if (desktopImg) desktopImg.src = 'assets/home-bibliogenius-' + imgLang + '.jpg';
         }
 
         // Check local storage first, then navigator

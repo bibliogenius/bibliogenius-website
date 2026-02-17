@@ -154,6 +154,28 @@ a {
     background-color: #f3f4f6;
 }
 
+/* App Showcase */
+.app-showcase {
+    margin-top: -3rem;
+    padding: 0 1.5rem 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.showcase-frame {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.showcase-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Features Grid */
 .features {
     padding: 5rem 0;
@@ -304,6 +326,13 @@ a {
 
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .showcase-frame {
+        max-width: 280px;
+        border-radius: 1.5rem;
     }
 }
 
