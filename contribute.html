@@ -4,11 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contribuer à BiblioGenius</title>
-    <!-- Same styles as index -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap"
-        rel="stylesheet">
+    <title>Contribuer à BiblioGenius - Testeur Alpha & Développement Open Source</title>
+    <meta name="description" content="Devenez testeur Alpha ou contribuez au développement de BiblioGenius, application Open Source de gestion de bibliothèque. Rust, Flutter, Symfony.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://bibliogenius.org/contribute.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bibliogenius.org/contribute.html">
+    <meta property="og:title" content="Contribuer à BiblioGenius - Testeur Alpha & Open Source">
+    <meta property="og:description" content="Devenez testeur Alpha ou contribuez au développement de BiblioGenius. Backend Rust, App Flutter, Hub Symfony.">
+    <meta property="og:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contribuer à BiblioGenius - Open Source">
+    <meta name="twitter:description" content="Testez l'application ou contribuez au code. Rust, Flutter, Symfony.">
+    <meta name="twitter:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
     <link rel="stylesheet" href="styles.css">
     <style>
         .split-container {
@@ -27,7 +47,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .split-card h3 {
+        .split-card h2 {
             margin-top: 0;
             color: var(--accent-light);
             font-size: 1.5rem;
@@ -84,34 +104,37 @@
 
 <body>
 
-    <header class="hero" style="min-height: 40vh; padding-bottom: 2rem;">
-        <div class="lang-switcher">
+    <a href="#main-content" class="skip-link">Aller au contenu</a>
+
+    <header class="hero" role="banner" style="min-height: 40vh; padding-bottom: 2rem;">
+        <nav class="lang-switcher" aria-label="Navigation">
             <a href="index.html" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">← Retour</a>
-        </div>
+        </nav>
         <div class="hero-content">
             <h1>Contribuer au Projet</h1>
             <p>Devenez testeur Alpha ou rejoignez le développement.</p>
         </div>
     </header>
 
-    <section class="container" style="padding: 4rem 1rem;">
+    <main id="main-content">
+    <section class="container" style="padding: 4rem 1rem;" aria-label="Contribution">
 
         <div class="split-container">
             <!-- Tester Section -->
             <div class="split-card">
-                <h3>🧪 Devenir Testeur Alpha</h3>
+                <h2><span aria-hidden="true">🧪</span> Devenir Testeur Alpha</h2>
                 <p>Installez la dernière version et aidez-nous à trouver les bugs.</p>
 
-                <div class="alert"
+                <div role="status"
                     style="background: rgba(255,165,0,0.1); border-left: 4px solid orange; padding: 1rem; margin: 1rem 0;">
-                    <strong>Dernière version :</strong> <span class="version-tag">v0.6.5-alpha.16+325</span>
+                    <strong>Dernière version :</strong> <span class="version-tag">v0.7.2-alpha.2</span>
                 </div>
 
-                <ul class="download-list">
+                <ul class="download-list" aria-label="Téléchargements">
                     <li>
-                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.6.5-alpha.16+325/BiblioGenius-macOS.dmg"
+                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.7.2-alpha.2/BiblioGenius-macOS.dmg"
                             class="download-btn">
-                            <span class="download-icon">🍎</span>
+                            <span class="download-icon" aria-hidden="true">🍎</span>
                             <div>
                                 <strong>macOS</strong><br>
                                 <small>Puce Apple (M1/M2) & Intel</small>
@@ -119,19 +142,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.6.5-alpha.16+325/app-release.apk"
-                            class="download-btn">
-                            <span class="download-icon">🤖</span>
+                        <a href="https://testflight.apple.com/v1/app/6757465461"
+                            class="download-btn" target="_blank" rel="noopener">
+                            <span class="download-icon" aria-hidden="true">📱</span>
                             <div>
-                                <strong>Android</strong><br>
-                                <small>APK (Installation manuelle)</small>
+                                <strong>iOS</strong><br>
+                                <small>TestFlight</small>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.6.5-alpha.16+325/BiblioGenius-Windows.zip"
+                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.7.2-alpha.2/BiblioGenius-Windows.zip"
                             class="download-btn">
-                            <span class="download-icon">🪟</span>
+                            <span class="download-icon" aria-hidden="true">🪟</span>
                             <div>
                                 <strong>Windows</strong><br>
                                 <small>Zip portable</small>
@@ -139,22 +162,31 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.6.5-alpha.9/BiblioGenius-Linux.tar.gz"
+                        <a href="https://github.com/bibliogenius/bibliogenius-app/releases/download/v0.7.2-alpha.2/BiblioGenius-Linux.tar.gz"
                             class="download-btn">
-                            <span class="download-icon">🐧</span>
+                            <span class="download-icon" aria-hidden="true">🐧</span>
                             <div>
                                 <strong>Linux</strong><br>
                                 <small>Tarball (Ubuntu/Debian)</small>
                             </div>
                         </a>
                     </li>
+                    <li>
+                        <span class="download-btn" style="opacity: 0.6; cursor: default;" aria-disabled="true">
+                            <span class="download-icon" aria-hidden="true">🤖</span>
+                            <div>
+                                <strong>Android</strong><br>
+                                <small>Disponible sur demande</small>
+                            </div>
+                        </span>
+                    </li>
                 </ul>
 
                 <hr style="border-color: rgba(255,255,255,0.1); margin: 2rem 0;">
 
-                <h4>🐛 Un bug ?</h4>
+                <h3><span aria-hidden="true">🐛</span> Un bug ?</h3>
                 <p>Signalez-le simplement :</p>
-                <div style="display: flex; gap: 10px;">
+                <div style="display: flex; gap: 10px; margin-top: 0.5rem;">
                     <a href="mailto:contact@bibliogenius.org" class="btn btn-secondary" style="font-size: 0.9rem;">Par
                         Email</a>
                     <a href="https://github.com/bibliogenius/bibliogenius-app/issues/new" class="btn btn-secondary"
@@ -164,11 +196,11 @@
 
             <!-- Developer Section -->
             <div class="split-card">
-                <h3>💻 Espace Contributeurs</h3>
+                <h2><span aria-hidden="true">💻</span> Espace Contributeurs</h2>
                 <p>Le code est 100% Open Source.</p>
 
                 <ul style="margin: 1.5rem 0; padding-left: 1.2rem; line-height: 1.6;">
-                    <li><strong>Backend :</strong> Rust (Axum, SQLite, Tantivy)</li>
+                    <li><strong>Backend :</strong> Rust (Axum, SeaORM, SQLite)</li>
                     <li><strong>Application :</strong> Flutter (Mobile & Desktop)</li>
                     <li><strong>Hub :</strong> Symfony (PHP)</li>
                 </ul>
@@ -179,15 +211,15 @@
                 </a>
 
                 <div style="margin-top: 2rem;">
-                    <h4>Où commencer ?</h4>
-                    <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 1rem;">
+                    <h3>Où commencer ?</h3>
+                    <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 1rem;">
                         Consultez nos issues "Good First Issue" — des tâches accessibles pour bien démarrer :
                     </p>
-                    <ul class="download-list">
+                    <ul class="download-list" aria-label="Good First Issues par projet">
                         <li>
                             <a href="https://github.com/bibliogenius/bibliogenius-app/issues?q=is%3Aopen+label%3A%22good+first+issue%22"
-                                class="download-btn" aria-label="Voir les Good First Issues pour l'application Flutter">
-                                <span class="download-icon">📱</span>
+                                class="download-btn" aria-label="Good First Issues — Application Flutter : traductions, tests, UI">
+                                <span class="download-icon" aria-hidden="true">📱</span>
                                 <div>
                                     <strong>App Flutter</strong><br>
                                     <small>Traductions, tests, UI</small>
@@ -196,8 +228,8 @@
                         </li>
                         <li>
                             <a href="https://github.com/bibliogenius/bibliogenius-public/issues?q=is%3Aopen+label%3A%22good+first+issue%22"
-                                class="download-btn" aria-label="Voir les Good First Issues pour le site web">
-                                <span class="download-icon">🌐</span>
+                                class="download-btn" aria-label="Good First Issues — Site web : accessibilité, traduction">
+                                <span class="download-icon" aria-hidden="true">🌐</span>
                                 <div>
                                     <strong>Site Web</strong><br>
                                     <small>Accessibilité, traduction</small>
@@ -206,8 +238,8 @@
                         </li>
                         <li>
                             <a href="https://github.com/bibliogenius/bibliogenius/issues?q=is%3Aopen+label%3A%22good+first+issue%22"
-                                class="download-btn" aria-label="Voir les Good First Issues pour le serveur Rust">
-                                <span class="download-icon">🦀</span>
+                                class="download-btn" aria-label="Good First Issues — Serveur Rust : documentation, tests">
+                                <span class="download-icon" aria-hidden="true">🦀</span>
                                 <div>
                                     <strong>Serveur Rust</strong><br>
                                     <small>Documentation, tests</small>
@@ -220,10 +252,11 @@
         </div>
 
     </section>
+    </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container" style="text-align: center;">
-            <p>© 2025 BiblioGenius. <a href="index.html" style="color:white;">Retour à l'accueil</a></p>
+            <p>© 2025-2026 BiblioGenius — <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-light);">AGPL-3.0</a> | <a href="index.html" style="color:white;">Retour à l'accueil</a></p>
         </div>
     </footer>
 
