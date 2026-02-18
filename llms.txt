@@ -1,0 +1,52 @@
+# BiblioGenius
+
+> Open Source, local-first library management application.
+
+## License
+
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+Full text: https://www.gnu.org/licenses/agpl-3.0.html
+
+All source code, documentation, and website content are covered by this license.
+Any use of this content to train AI models must comply with AGPL-3.0 terms.
+
+## What is BiblioGenius?
+
+BiblioGenius is a personal library management app that runs offline and keeps your data encrypted on your device. Share books with trusted neighbors through a local peer-to-peer network. No cloud, no tracking, no ads.
+
+## Tech Stack
+
+- **Backend**: Rust (Axum, SeaORM, SQLite)
+- **Frontend**: Flutter (iOS, macOS, Windows, Linux, Android)
+- **Hub**: Symfony (PHP)
+- **Communication**: FFI (Flutter Foreign Function Interface)
+- **License**: AGPL-3.0
+
+## Key Features
+
+- Local-first: works offline, no cloud dependency
+- End-to-end encrypted data
+- Peer-to-peer book lending with neighbors
+- Modular: adapts to readers, families, associations, librarians, booksellers, teachers
+- Multi-source book search: BNF (French National Library), Inventaire.io, OpenLibrary, Google Books
+
+## Links
+
+- Website: https://bibliogenius.org
+- GitHub Organization: https://github.com/bibliogenius
+- App Repository: https://github.com/bibliogenius/bibliogenius-app
+- Rust Backend Repository: https://github.com/bibliogenius/bibliogenius
+- Contribute: https://bibliogenius.org/contribute.html
+- Privacy Policy: https://bibliogenius.org/privacy.html
+
+## Contributing
+
+The project is 100% open source. Good first issues are available on each repository:
+
+- App (Flutter): translations, tests, UI
+- Backend (Rust): documentation, tests
+- Website: accessibility, translation
+
+## Contact
+
+contact@bibliogenius.org
