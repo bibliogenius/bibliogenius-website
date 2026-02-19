@@ -46,6 +46,7 @@
             padding: 2rem;
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            align-self: flex-start;
         }
 
         .split-card h2 {
@@ -56,43 +57,51 @@
 
         .split-card h3 {
             color: #f3f4f6;
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
         }
 
         .download-list {
             list-style: none;
             padding: 0;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
 
         .download-list li {
-            margin-bottom: 1rem;
+            margin-bottom: 0.625rem;
         }
 
         .download-btn {
             display: flex;
             align-items: center;
-            padding: 0.8rem 1rem;
-            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 8px;
             text-decoration: none;
             color: white;
             transition: background 0.2s;
+            gap: 0.75rem;
         }
 
         .download-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.16);
         }
 
         .download-icon {
-            margin-right: 10px;
-            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            font-size: 1.4rem;
+            line-height: 1;
         }
 
         .download-icon svg {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             fill: currentColor;
-            vertical-align: middle;
         }
 
         .version-tag {
@@ -156,7 +165,7 @@
                     <li>
                         <a href="https://testflight.apple.com/v1/app/6757465461"
                             class="download-btn" target="_blank" rel="noopener">
-                            <span class="download-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.1 6.05C.486 6.05 0 6.53 0 7.13A1.08 1.08 0 0 0 1.1 8.21C1.72 8.21 2.21 7.73 2.21 7.13C2.21 6.53 1.72 6.05 1.1 6.05M8.71 6.07C5.35 6.07 3.25 8.36 3.25 12C3.25 15.67 5.35 17.95 8.71 17.95C12.05 17.95 14.16 15.67 14.16 12C14.16 8.36 12.05 6.07 8.71 6.07M19.55 6.07C17.05 6.07 15.27 7.45 15.27 9.5C15.27 11.13 16.28 12.15 18.4 12.64L19.89 13C21.34 13.33 21.93 13.81 21.93 14.64C21.93 15.6 20.96 16.28 19.58 16.28C18.17 16.28 17.11 15.59 17 14.53H15C15.08 16.65 16.82 17.95 19.46 17.95C22.25 17.95 24 16.58 24 14.4C24 12.69 23 11.72 20.68 11.19L19.35 10.89C17.94 10.55 17.36 10.1 17.36 9.34C17.36 8.38 18.24 7.74 19.54 7.74C20.85 7.74 21.75 8.39 21.85 9.46H23.81C23.76 7.44 22.09 6.07 19.55 6.07M8.71 7.82C10.75 7.82 12.06 9.45 12.06 12C12.06 14.57 10.75 16.2 8.71 16.2C6.65 16.2 5.35 14.57 5.35 12C5.35 9.45 6.65 7.82 8.71 7.82M.111 9.31V17.76H2.1V9.31H.11Z"/></svg></span>
+                            <span class="download-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span>
                             <div>
                                 <strong>iOS</strong><br>
                                 <small>TestFlight</small>
@@ -194,7 +203,7 @@
                     </li>
                 </ul>
 
-                <hr style="border-color: rgba(255,255,255,0.1); margin: 2rem 0;">
+                <hr style="border-color: rgba(255,255,255,0.1); margin: 1.5rem 0;">
 
                 <h3><span aria-hidden="true">🐛</span> Un bug ?</h3>
                 <p>Signalez-le simplement :</p>
@@ -222,7 +231,7 @@
                     Explorer l'Organisation GitHub
                 </a>
 
-                <div style="margin-top: 2rem;">
+                <div style="margin-top: 1.5rem;">
                     <h3>Où commencer ?</h3>
                     <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 1rem;">
                         Consultez nos issues "Good First Issue" — des tâches accessibles pour bien démarrer :
