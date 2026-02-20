@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{lang}}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutoriels - BiblioGenius</title>
-    <meta name="description" content="Apprenez à utiliser BiblioGenius avec nos guides vidéo : import, gestion, partage.">
+    <title>{{title}}</title>
+    <meta name="description" content="{{meta_description}}">
 
-    <link rel="canonical" href="https://bibliogenius.org/tutorials.html">
-    <link rel="alternate" hreflang="de" href="https://bibliogenius.org/de/tutorials.html">
-    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/tutorials.html">
-    <link rel="alternate" hreflang="es" href="https://bibliogenius.org/es/tutorials.html">
-    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/tutorials.html">
-    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/tutorials.html">
+    <link rel="canonical" href="{{canonical_url}}">
+{{hreflang}}
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap"
@@ -111,21 +107,18 @@
     <header class="hero" style="padding: 3rem 1.5rem;">
         <!-- Language Switcher -->
         <div class="lang-switcher">
-            <select onchange="location.href=this.value" class="lang-select" aria-label="Langue">
-            <option value="/de/tutorials.html">Deutsch</option>
-            <option value="/en/tutorials.html">English</option>
-            <option value="/es/tutorials.html">Español</option>
-            <option value="/tutorials.html" selected>Français</option>
+            <select onchange="location.href=this.value" class="lang-select" aria-label="{{lang_label}}">
+{{lang_switcher}}
             </select>
         </div>
         <div class="hero-content">
-            <h1>Tutoriels Vidéo</h1>
-            <p>Maîtrisez BiblioGenius en quelques minutes.</p>
+            <h1>{{hero_title}}</h1>
+            <p>{{hero_subtitle}}</p>
         </div>
     </header>
 
     <main class="tutorials-container">
-        <a href="/" class="back-link">← Retour à l'accueil</a>
+        <a href="{{url:index}}" class="back-link">{{btn_back}}</a>
 
         <div class="tutorial-grid">
             <!-- Video 1: Import -->
@@ -138,16 +131,16 @@
                 <div style="text-align: center; margin-top: 0.5rem;">
                     <a href="https://www.youtube.com/watch?v=o2rZeG_hH4w" target="_blank"
                         style="font-size: 0.8rem; color: #6b7280; text-decoration: underline;">
-                        Si la vidéo ne s'affiche pas, cliquez ici pour la voir sur YouTube
+                        {{video_fallback_link}}
                     </a>
                 </div>
                 <div class="tutorial-content">
                     <div style="margin-bottom: 0.75rem;">
-                        <span class="badge-lang badge-new">Nouveau</span>
-                        <span class="badge-lang">Audio: Français</span>
+                        <span class="badge-lang badge-new">{{badge_new}}</span>
+                        <span class="badge-lang">{{badge_audio}}</span>
                     </div>
-                    <h2 class="tutorial-title">Comment importer vos livres</h2>
-                    <p class="tutorial-desc">Découvrez comment migrer vos données depuis Gleeph, Babelio ou Goodreads vers BiblioGenius en moins de 2 minutes.</p>
+                    <h2 class="tutorial-title">{{vid_import_title}}</h2>
+                    <p class="tutorial-desc">{{vid_import_desc}}</p>
                 </div>
             </article>
 
@@ -157,21 +150,21 @@
                     <span style="font-size: 3rem;">&#x1F51C;</span>
                 </div>
                 <div class="tutorial-content">
-                    <h2 class="tutorial-title">Bientôt disponible...</h2>
-                    <p class="tutorial-desc">D'autres tutoriels sur le partage P2P et la gestion des prêts arrivent très vite !</p>
+                    <h2 class="tutorial-title">{{vid_coming_soon_title}}</h2>
+                    <p class="tutorial-desc">{{vid_coming_soon_desc}}</p>
                 </div>
             </article>
             -->
         </div>
 
         <div class="text-center" style="margin-top: 4rem;">
-            <p>Vous ne trouvez pas ce que vous cherchez ? <a href="mailto:contact@bibliogenius.org" style="color: var(--primary-color); font-weight: bold;">Contactez-nous</a>.</p>
+            <p>{{footer_note}}</p>
         </div>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>© 2025 BiblioGenius. Votre bibliothèque, vos règles.</p>
+            <p>{{footer_text}}</p>
         </div>
     </footer>
 </body>

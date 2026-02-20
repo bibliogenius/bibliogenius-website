@@ -1,0 +1,65 @@
+# BiblioGenius Contribute Page — English
+# Translate all values. Keep HTML tags (<em>, <strong>, <br>, &nbsp;) as-is.
+# Reference: fr.yml
+
+# -- Metadata --
+lang_name: English
+title: Contribute to BiblioGenius - Alpha Tester & Open Source Development
+meta_description: Become an Alpha tester or contribute to BiblioGenius development, an Open Source library management app. Rust, Flutter, Symfony.
+og_title: Contribute to BiblioGenius - Alpha Tester & Open Source
+og_description: Become an Alpha tester or contribute to BiblioGenius development. Rust backend, Flutter app, Symfony hub.
+og_locale: en_US
+
+# -- Navigation --
+skip_link: Skip to content
+nav_label: Navigation
+lang_label: Language
+back: ← Back
+
+# -- Hero --
+hero_title: Contribute to the Project
+hero_subtitle: Become an Alpha tester or join the development effort.
+
+# -- Section --
+section_contribution: Contribution
+
+# -- Tester Card --
+tester_title: Become an Alpha Tester
+tester_desc: Install the latest version and help us find bugs.
+latest_version_label: "Latest version:"
+downloads_aria: Downloads
+macos_desc: Apple Silicon (M1/M2) & Intel
+windows_desc: Portable zip
+linux_desc: Tarball (Ubuntu/Debian)
+android_desc: Available on request
+
+# -- Bug Report --
+bug_title: Found a bug?
+bug_desc: "Report it easily:"
+btn_email: By Email
+btn_github: On GitHub
+
+# -- Developer Card --
+dev_title: Contributors Space
+dev_desc: The code is 100% Open Source.
+stack_app_label: "App:"
+btn_explore_github: Explore the GitHub Organization
+where_to_start: Where to start?
+where_to_start_desc: "Check out our \"Good First Issue\" issues — accessible tasks to get started:"
+
+# -- Good First Issues --
+gfi_aria: Good First Issues by project
+gfi_app_title: Flutter App
+gfi_app_desc: Translations, tests, UI
+gfi_app_aria: "Good First Issues — Flutter App: translations, tests, UI"
+gfi_web_title: Website
+gfi_web_desc: Accessibility, translation
+gfi_web_aria: "Good First Issues — Website: accessibility, translation"
+gfi_rust_title: Rust Server
+gfi_rust_desc: Documentation, tests
+gfi_rust_aria: "Good First Issues — Rust Server: documentation, tests"
+
+# -- Footer --
+footer_copyright: "© 2025-2026 BiblioGenius — <a href=\"https://www.gnu.org/licenses/agpl-3.0.html\" style=\"color:var(--accent-light);\">AGPL-3.0</a>"
+footer_back: Back to home
+ecoindex_alt: EcoIndex site score

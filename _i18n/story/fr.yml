@@ -1,0 +1,88 @@
+# BiblioGenius Story Page — Français
+# Fichier de référence pour les traducteurs.
+# Traduisez toutes les valeurs. Conservez les balises HTML (<em>, <strong>, <br>, &nbsp;) telles quelles.
+
+# -- Métadonnées --
+lang_name: Français
+title: BiblioGenius — Vos livres vous appartiennent
+meta_description: Découvrez BiblioGenius : l'application gratuite et open source pour gérer votre bibliothèque personnelle et partager vos livres directement avec vos proches.
+og_title: BiblioGenius — Vos livres vous appartiennent
+og_description: Gérez votre bibliothèque, partagez vos livres, gardez le contrôle. Gratuit, open source, sans piège.
+
+# -- Navigation --
+skip_link: Aller au contenu
+nav_label: Navigation
+lang_label: Langue
+back: ← Accueil
+
+# -- Hero --
+hero_title: Vous avez 200&nbsp;livres<br>chez&nbsp;vous.
+hero_p1: Vous savez que vous avez prêté <em>Les Misérables</em> à quelqu'un. Mais à&nbsp;qui&nbsp;?
+hero_p2: Vous êtes en librairie, un roman vous fait de l'oeil, et vous hésitez&nbsp;: <em>&laquo;&nbsp;Est-ce que je l'ai déjà, celui-là&nbsp;?&nbsp;&raquo;</em>
+hero_p3: Et ce soir, votre voisine sonne à la porte&nbsp;: <em>&laquo;&nbsp;Tu aurais pas un bon livre à me prêter&nbsp;?&nbsp;&raquo;</em>
+hero_p4: Bonne question. Vous l'avez peut-être. Quelque part. Sur une étagère. Ou chez&nbsp;quelqu'un.
+
+# -- Le problème --
+ch_problem: Le constat
+problem_title: Le problème
+problem_p1: Aujourd'hui, gérer sa bibliothèque personnelle, c'est au mieux un carnet, au pire l'oubli pur et simple.
+problem_p2: Et les applications existantes&nbsp;? Elles centralisent vos données sur leurs serveurs. Vos lectures, vos goûts, vos habitudes... tout est analysé, monétisé, enfermé derrière un compte.
+problem_p3: <strong>Si l'app ferme demain, votre bibliothèque disparaît avec elle.</strong>
+
+# -- Agitation --
+ch_agit: Ce que ça change
+agit_title: Concrètement
+agit_p1: Imaginez&nbsp;: vous avez passé trois ans à construire votre catalogue en ligne. 500&nbsp;livres. Des notes, des étagères personnalisées, des prêts soigneusement suivis.
+agit_p2: Un matin, l'application change ses conditions d'utilisation. Ou pire&nbsp;: elle ferme ses portes.
+agit_p3: Tout s'évapore. Trois ans de travail. Perdus.
+agit_p4: Et même quand tout fonctionne, vous ne pouvez pas <em>vraiment</em> prêter un livre à un ami. Vous pouvez lui &laquo;&nbsp;recommander&nbsp;&raquo; un titre.
+quote1: Recommander, ce n'est pas partager.<br>Ce n'est pas la même chose que tendre un livre à quelqu'un en disant&nbsp;: <em>Tiens, tu vas adorer.</em>
+
+# -- Solution --
+ch_solution: La réponse
+solution_title: La bibliothèque qui vous&nbsp;appartient
+solution_p1: Scannez un code-barres. Le livre apparaît avec sa couverture, son résumé, ses informations détaillées.
+solution_p2: Classez vos lectures. Suivez vos prêts. Retrouvez en un instant qui a emprunté quoi.
+solution_p3: Et surtout&nbsp;: <strong>vos données restent sur votre téléphone.</strong> Pas de compte obligatoire. Pas de serveur distant. Pas de publicité.
+solution_p4: Votre bibliothèque fonctionne même sans internet. Elle est à vous, un point c'est tout.
+solution_p5: Et si vous changez de téléphone&nbsp;? Un tap pour tout sauvegarder, un tap pour tout restaurer. Vos livres vous suivent, toujours.
+
+# -- Moment wow --
+ch_wow: Le partage
+wow_title: Le moment où tout&nbsp;change
+wow_p1: Maintenant, imaginez autre chose.
+wow_p2: Votre amie Sophie a aussi BiblioGenius. Vous scannez son QR&nbsp;code. En une seconde, sa bibliothèque apparaît sur votre téléphone.
+wow_p3: Pas besoin de cloud. Pas besoin d'intermédiaire. Pas besoin que vous soyez sur le même &laquo;&nbsp;réseau social&nbsp;&raquo;.
+quote2: C'est comme si elle vous ouvrait la porte de sa bibliothèque et vous disait&nbsp;: <em>Sers-toi.</em>
+wow_p4: Vous voyez qu'elle a <em>Dune</em>. Vous le demandez en prêt. Elle accepte. L'application suit tout&nbsp;: qui a le livre, depuis quand, et quand il devrait revenir.
+wow_p5: <strong>Le prêt pair-à-pair.</strong> Direct, simple, humain. Pas un algorithme qui décide. Juste deux personnes qui partagent une passion.
+
+# -- Features --
+ch_features: En pratique
+features_title: Ce que BiblioGenius vous&nbsp;apporte
+feat1: <strong>Un scanner instantané</strong>&nbsp;: ajoutez un livre en une seconde, couverture et résumé inclus
+feat2: <strong>Tout votre catalogue dans la poche</strong>&nbsp;: romans, BD, mangas, manuels, livres audio
+feat3: <strong>Le suivi des prêts</strong>&nbsp;: fini les <em>&laquo;&nbsp;je te l'ai rendu, si&nbsp;si&nbsp;&raquo;</em>
+feat4: <strong>Des statistiques de lecture</strong>&nbsp;: pages lues, livres terminés, badges à débloquer
+feat5: <strong>Le mode hors-ligne</strong>&nbsp;: votre bibliothèque fonctionne même sans internet
+feat6: <strong>L'export libre</strong>&nbsp;: récupérez toutes vos données quand vous voulez
+features_note: Gratuit et open source. Transparent, éthique, sans piège.
+
+# -- Vision --
+ch_vision: La vision
+vision_title: Pourquoi BiblioGenius existe
+vision_p1: Parce que nous croyons que <strong>vos livres vous appartiennent</strong>. Pas à une entreprise.
+vision_p2: Parce que le partage, le vrai, c'est un geste direct entre deux personnes, pas un bouton &laquo;&nbsp;recommander&nbsp;&raquo; sur une plateforme.
+vision_p3: Parce qu'une bibliothèque devrait être un bien commun de quartier, pas une base de données exploitée.
+vision_coda: BiblioGenius est un projet citoyen et open source, développé en Europe, soutenu par sa communauté. Demain, il connectera les boîtes à livres de votre rue, le club de lecture de votre médiathèque, et la bibliothèque de votre immeuble.
+
+# -- CTA --
+cta_title: Vos livres méritent mieux<br>qu'un&nbsp;algorithme.
+cta_p1: Téléchargez BiblioGenius. Scannez votre premier livre.
+cta_p2: Et la prochaine fois que votre voisine sonnera à la porte pour demander <em>&laquo;&nbsp;Tu aurais pas un bon livre à me prêter&nbsp;?&nbsp;&raquo;</em>, vous saurez exactement quoi répondre.
+btn_ios: Tester sur iOS
+btn_android: Android disponible sur demande
+btn_source: Voir le code source
+
+# -- Footer --
+colophon: Projet open source <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; Aucune donnée collectée

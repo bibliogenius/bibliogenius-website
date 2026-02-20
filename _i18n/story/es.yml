@@ -1,0 +1,88 @@
+# BiblioGenius Story Page — Español
+# Traduzca todos los valores. Conserve las etiquetas HTML (<em>, <strong>, <br>, &nbsp;) tal cual.
+# Referencia: fr.yml
+
+# -- Metadatos --
+lang_name: Español
+title: BiblioGenius — Tus libros te pertenecen
+meta_description: Descubre BiblioGenius: la aplicación gratuita y open source para gestionar tu biblioteca personal y compartir libros directamente con tu entorno.
+og_title: BiblioGenius — Tus libros te pertenecen
+og_description: Gestiona tu biblioteca, comparte tus libros, mantén el control. Gratuito, open source, sin trampa.
+
+# -- Navegación --
+skip_link: Ir al contenido
+nav_label: Navegación
+lang_label: Idioma
+back: ← Inicio
+
+# -- Hero --
+hero_title: Tienes 200&nbsp;libros<br>en&nbsp;casa.
+hero_p1: Sabes que le prestaste <em>Los Miserables</em> a alguien. Pero ¿a&nbsp;quién?
+hero_p2: Estás en la librería, una novela te llama la atención y dudas: <em>«&nbsp;¿Ya tengo este?&nbsp;»</em>
+hero_p3: Y esta noche, tu vecina toca el timbre: <em>«&nbsp;¿Tienes un buen libro para prestarme?&nbsp;»</em>
+hero_p4: Buena pregunta. Quizás lo tienes. En algún lugar. En una estantería. O en casa de&nbsp;alguien.
+
+# -- El problema --
+ch_problem: La situación
+problem_title: El problema
+problem_p1: Hoy, gestionar tu biblioteca personal es, en el mejor de los casos, una libreta; en el peor, el olvido total.
+problem_p2: ¿Y las aplicaciones existentes? Centralizan tus datos en sus servidores. Tus lecturas, tus gustos, tus hábitos... todo es analizado, monetizado, encerrado tras una cuenta.
+problem_p3: <strong>Si la app cierra mañana, tu biblioteca desaparece con ella.</strong>
+
+# -- Agitación --
+ch_agit: Lo que implica
+agit_title: En concreto
+agit_p1: Imagina: has pasado tres años construyendo tu catálogo en línea. 500&nbsp;libros. Notas, estanterías personalizadas, préstamos cuidadosamente seguidos.
+agit_p2: Una mañana, la aplicación cambia sus condiciones de uso. O peor: cierra sus puertas.
+agit_p3: Todo se evapora. Tres años de trabajo. Perdidos.
+agit_p4: Y cuando todo funciona, no puedes <em>realmente</em> prestar un libro a un amigo. Puedes «&nbsp;recomendarle&nbsp;» un título.
+quote1: Recomendar no es compartir.<br>No es lo mismo que darle un libro a alguien diciendo: <em>Toma, te va a encantar.</em>
+
+# -- Solución --
+ch_solution: La respuesta
+solution_title: La biblioteca que realmente te&nbsp;pertenece
+solution_p1: Escanea un código de barras. El libro aparece con su portada, su resumen y su información detallada.
+solution_p2: Clasifica tus lecturas. Sigue tus préstamos. Encuentra al instante quién tomó prestado qué.
+solution_p3: Y sobre todo: <strong>tus datos se quedan en tu teléfono.</strong> Sin cuenta obligatoria. Sin servidor remoto. Sin publicidad.
+solution_p4: Tu biblioteca funciona incluso sin internet. Es tuya, punto.
+solution_p5: ¿Y si cambias de teléfono? Un toque para guardar todo, un toque para restaurar. Tus libros te siguen, siempre.
+
+# -- Momento wow --
+ch_wow: Compartir
+wow_title: El momento en que todo&nbsp;cambia
+wow_p1: Ahora, imagina otra cosa.
+wow_p2: Tu amiga Sofía también tiene BiblioGenius. Escaneas su código QR. En un segundo, su biblioteca aparece en tu teléfono.
+wow_p3: Sin necesidad de nube. Sin intermediarios. Sin estar en la misma «&nbsp;red social&nbsp;».
+quote2: Es como si te abriera la puerta de su biblioteca y dijera: <em>Sírvete.</em>
+wow_p4: Ves que tiene <em>Dune</em>. Se lo pides prestado. Acepta. La app lo sigue todo: quién tiene el libro, desde cuándo y cuándo debe volver.
+wow_p5: <strong>Préstamo entre pares.</strong> Directo, simple, humano. Ningún algoritmo decide. Solo dos personas compartiendo una pasión.
+
+# -- Features --
+ch_features: En práctica
+features_title: Lo que BiblioGenius te&nbsp;ofrece
+feat1: <strong>Escáner instantáneo</strong>: añade un libro en un segundo, portada y resumen incluidos
+feat2: <strong>Todo tu catálogo en el bolsillo</strong>: novelas, cómics, mangas, manuales, audiolibros
+feat3: <strong>Seguimiento de préstamos</strong>: se acabaron los <em>«&nbsp;ya te lo devolví, te lo juro&nbsp;»</em>
+feat4: <strong>Estadísticas de lectura</strong>: páginas leídas, libros terminados, insignias por desbloquear
+feat5: <strong>Modo sin conexión</strong>: tu biblioteca funciona incluso sin internet
+feat6: <strong>Exportación libre</strong>: recupera todos tus datos cuando quieras
+features_note: Gratuito y open source. Transparente, ético, sin trampa.
+
+# -- Visión --
+ch_vision: La visión
+vision_title: Por qué existe BiblioGenius
+vision_p1: Porque creemos que <strong>tus libros te pertenecen</strong>. No a una empresa.
+vision_p2: Porque compartir de verdad es un gesto directo entre dos personas, no un botón «&nbsp;recomendar&nbsp;» en una plataforma.
+vision_p3: Porque una biblioteca debería ser un bien común del barrio, no una base de datos explotada.
+vision_coda: BiblioGenius es un proyecto ciudadano y open source, desarrollado en Europa, apoyado por su comunidad. Mañana, conectará las cajas de libros de tu calle, el club de lectura de tu biblioteca y la estantería de tu edificio.
+
+# -- CTA --
+cta_title: Tus libros merecen algo mejor<br>que un&nbsp;algoritmo.
+cta_p1: Descarga BiblioGenius. Escanea tu primer libro.
+cta_p2: Y la próxima vez que tu vecina toque el timbre para preguntar <em>«&nbsp;¿Tienes un buen libro para prestarme?&nbsp;»</em>, sabrás exactamente qué responder.
+btn_ios: Probar en iOS
+btn_android: Android disponible bajo petición
+btn_source: Ver código fuente
+
+# -- Footer --
+colophon: Proyecto open source <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; Ningún dato recopilado

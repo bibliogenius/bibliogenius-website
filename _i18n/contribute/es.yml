@@ -1,0 +1,65 @@
+# BiblioGenius Contribute Page — Español
+# Traduzca todos los valores. Conserve las etiquetas HTML (<em>, <strong>, <br>, &nbsp;) tal cual.
+# Referencia: fr.yml
+
+# -- Metadatos --
+lang_name: Español
+title: Contribuir a BiblioGenius - Tester Alpha y Desarrollo Open Source
+meta_description: Conviértase en tester Alpha o contribuya al desarrollo de BiblioGenius, aplicación Open Source de gestión de bibliotecas. Rust, Flutter, Symfony.
+og_title: Contribuir a BiblioGenius - Tester Alpha y Open Source
+og_description: Conviértase en tester Alpha o contribuya al desarrollo de BiblioGenius. Backend Rust, App Flutter, Hub Symfony.
+og_locale: es_ES
+
+# -- Navegación --
+skip_link: Ir al contenido
+nav_label: Navegación
+lang_label: Idioma
+back: ← Volver
+
+# -- Hero --
+hero_title: Contribuir al Proyecto
+hero_subtitle: Conviértase en tester Alpha o únase al desarrollo.
+
+# -- Sección --
+section_contribution: Contribución
+
+# -- Tarjeta Tester --
+tester_title: Convertirse en Tester Alpha
+tester_desc: Instale la última versión y ayúdenos a encontrar errores.
+latest_version_label: "Última versión:"
+downloads_aria: Descargas
+macos_desc: Chip Apple (M1/M2) e Intel
+windows_desc: Zip portable
+linux_desc: Tarball (Ubuntu/Debian)
+android_desc: Disponible bajo petición
+
+# -- Reporte de Errores --
+bug_title: ¿Un error?
+bug_desc: "Repórtelo fácilmente:"
+btn_email: Por Email
+btn_github: En GitHub
+
+# -- Tarjeta Desarrollador --
+dev_title: Espacio de Contribuidores
+dev_desc: El código es 100% Open Source.
+stack_app_label: "Aplicación:"
+btn_explore_github: Explorar la Organización GitHub
+where_to_start: ¿Por dónde empezar?
+where_to_start_desc: "Consulte nuestras issues \"Good First Issue\" — tareas accesibles para comenzar:"
+
+# -- Good First Issues --
+gfi_aria: Good First Issues por proyecto
+gfi_app_title: App Flutter
+gfi_app_desc: Traducciones, tests, UI
+gfi_app_aria: "Good First Issues — Aplicación Flutter: traducciones, tests, UI"
+gfi_web_title: Sitio Web
+gfi_web_desc: Accesibilidad, traducción
+gfi_web_aria: "Good First Issues — Sitio web: accesibilidad, traducción"
+gfi_rust_title: Servidor Rust
+gfi_rust_desc: Documentación, tests
+gfi_rust_aria: "Good First Issues — Servidor Rust: documentación, tests"
+
+# -- Pie de página --
+footer_copyright: "© 2025-2026 BiblioGenius — <a href=\"https://www.gnu.org/licenses/agpl-3.0.html\" style=\"color:var(--accent-light);\">AGPL-3.0</a>"
+footer_back: Volver al inicio
+ecoindex_alt: Puntuación EcoIndex del sitio

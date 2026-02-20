@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="description" content="{{meta_description}}">
+
+    <link rel="canonical" href="{{canonical_url}}">
+{{hreflang}}
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .tutorial-container {
+            padding: 4rem 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tutorial-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .tutorial-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .platform-card h2 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .platform-icon {
+            font-size: 1.5rem;
+        }
+
+        .steps {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .steps li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .steps li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero" style="padding: 3rem 1.5rem;">
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <select onchange="location.href=this.value" class="lang-select" aria-label="{{lang_label}}">
+{{lang_switcher}}
+            </select>
+        </div>
+        <div class="hero-content">
+            <h1>{{hero_title}}</h1>
+            <p>{{hero_subtitle}}</p>
+        </div>
+    </header>
+
+    <main class="tutorial-container">
+        <p style="text-align: center; font-size: 1.125rem; margin-bottom: 3rem;">
+            {{intro_text}}
+        </p>
+
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <a href="{{url:tutorials}}" class="btn btn-primary"
+                style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+                <span>{{btn_watch_video}}</span>
+            </a>
+        </div>
+
+        <article class="platform-card" id="gleeph">
+            <h2><span class="platform-icon">&#x1F4F1;</span> {{gleeph_title}}</h2>
+            <p>{{gleeph_desc}}</p>
+            <ul class="steps">
+                {{gleeph_steps}}
+            </ul>
+        </article>
+
+        <article class="platform-card" id="babelio">
+            <h2><span class="platform-icon">&#x1F4D6;</span> {{babelio_title}}</h2>
+            <p>{{babelio_desc}}</p>
+            <ul class="steps">
+                {{babelio_steps}}
+            </ul>
+        </article>
+
+        <article class="platform-card" id="goodreads">
+            <h2><span class="platform-icon">&#x1F30E;</span> {{goodreads_title}}</h2>
+            <p>{{goodreads_desc}}</p>
+            <ul class="steps">
+                {{goodreads_steps}}
+            </ul>
+        </article>
+
+        <article class="platform-card" id="inventaire">
+            <h2><span class="platform-icon">&#x1F4E6;</span> {{inventaire_title}}</h2>
+            <p>{{inventaire_desc}}</p>
+            <ul class="steps">
+                {{inventaire_steps}}
+            </ul>
+        </article>
+
+        <section style="text-align: center; margin-top: 4rem;">
+            <h3>{{next_title}}</h3>
+            <p>{{next_desc}}</p>
+            <a href="{{url:index}}" class="back-home">{{btn_back_home}}</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>{{footer_text}}</p>
+        </div>
+    </footer>
+</body>
+
+</html>

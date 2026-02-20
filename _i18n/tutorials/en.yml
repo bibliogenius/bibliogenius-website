@@ -1,0 +1,33 @@
+# BiblioGenius Tutorials Page — English
+# Translate all values. Keep HTML tags (<em>, <strong>, <a>) as-is.
+# Reference: fr.yml
+
+# -- Metadata --
+lang_name: English
+title: Tutorials - BiblioGenius
+meta_description: Learn how to use BiblioGenius with our video guides: import, management, sharing.
+
+# -- Navigation --
+lang_label: Language
+btn_back: ← Back to home
+
+# -- Hero --
+hero_title: Video Tutorials
+hero_subtitle: Master BiblioGenius in minutes.
+
+# -- Badges --
+badge_new: New
+badge_audio: Audio: French
+
+# -- Video 1: Import --
+vid_import_title: How to import your books
+vid_import_desc: Learn how to migrate your data from Gleeph, Babelio or Goodreads to BiblioGenius in less than 2 minutes. (French Audio)
+video_fallback_link: If the video doesn't load, click here to watch it on YouTube
+
+# -- Placeholder (future videos) --
+vid_coming_soon_title: Coming soon...
+vid_coming_soon_desc: More tutorials on P2P sharing and loan management are on their way!
+
+# -- Footer --
+footer_note: Can't find what you're looking for? <a href="mailto:contact@bibliogenius.org" style="color: var(--primary-color); font-weight: bold;">Contact us</a>.
+footer_text: © 2025 BiblioGenius. Your library, your rules.

@@ -1,0 +1,88 @@
+# BiblioGenius Story Page — English
+# Translate all values. Keep HTML tags (<em>, <strong>, <br>, &nbsp;) as-is.
+# Reference: fr.yml
+
+# -- Metadata --
+lang_name: English
+title: BiblioGenius — Your books belong to you
+meta_description: Discover BiblioGenius: the free, open-source app to manage your personal library and share books directly with the people around you.
+og_title: BiblioGenius — Your books belong to you
+og_description: Manage your library, share your books, stay in control. Free, open source, no strings attached.
+
+# -- Navigation --
+skip_link: Skip to content
+nav_label: Navigation
+lang_label: Language
+back: ← Home
+
+# -- Hero --
+hero_title: You have 200&nbsp;books<br>at&nbsp;home.
+hero_p1: You know you lent <em>Les Misérables</em> to someone. But to&nbsp;whom?
+hero_p2: You're at the bookshop, a novel catches your eye, and you hesitate: <em>"Do I already have this one?"</em>
+hero_p3: And tonight, your neighbour rings the doorbell: <em>"Do you have a good book I could borrow?"</em>
+hero_p4: Good question. Maybe you do. Somewhere. On a shelf. Or at someone's&nbsp;place.
+
+# -- The problem --
+ch_problem: The issue
+problem_title: The problem
+problem_p1: Today, managing a personal library means a notebook at best, total oblivion at worst.
+problem_p2: And the existing apps? They centralise your data on their servers. Your reading habits, your tastes... everything is analysed, monetised, locked behind an account.
+problem_p3: <strong>If the app shuts down tomorrow, your library vanishes with it.</strong>
+
+# -- Agitation --
+ch_agit: What it means
+agit_title: In practice
+agit_p1: Imagine: you've spent three years building your catalogue online. 500&nbsp;books. Notes, custom shelves, carefully tracked loans.
+agit_p2: One morning, the app changes its terms of service. Or worse: it shuts down.
+agit_p3: Everything evaporates. Three years of work. Gone.
+agit_p4: And even when everything works, you can't <em>truly</em> lend a book to a friend. You can "recommend" a title.
+quote1: Recommending is not sharing.<br>It's not the same as handing a book to someone and saying: <em>Here, you'll love this.</em>
+
+# -- Solution --
+ch_solution: The answer
+solution_title: The library that truly belongs&nbsp;to&nbsp;you
+solution_p1: Scan a barcode. The book appears with its cover, summary, and detailed information.
+solution_p2: Organise your reads. Track your loans. Instantly find out who borrowed what.
+solution_p3: And above all: <strong>your data stays on your phone.</strong> No account required. No remote server. No ads.
+solution_p4: Your library works even without internet. It's yours, full stop.
+solution_p5: What if you change phones? One tap to save everything, one tap to restore. Your books follow you, always.
+
+# -- Wow moment --
+ch_wow: Sharing
+wow_title: The moment everything&nbsp;changes
+wow_p1: Now, imagine something else.
+wow_p2: Your friend Sophie also has BiblioGenius. You scan her QR&nbsp;code. In one second, her library appears on your phone.
+wow_p3: No cloud needed. No middleman. No need to be on the same "social network."
+quote2: It's as if she opened the door to her library and said: <em>Help yourself.</em>
+wow_p4: You see she has <em>Dune</em>. You request a loan. She accepts. The app tracks everything: who has the book, since when, and when it should come back.
+wow_p5: <strong>Peer-to-peer lending.</strong> Direct, simple, human. No algorithm deciding. Just two people sharing a passion.
+
+# -- Features --
+ch_features: In practice
+features_title: What BiblioGenius gives&nbsp;you
+feat1: <strong>Instant scanner</strong>: add a book in one second, cover and summary included
+feat2: <strong>Your entire catalogue in your pocket</strong>: novels, comics, manga, textbooks, audiobooks
+feat3: <strong>Loan tracking</strong>: no more <em>"I already returned it, I swear"</em>
+feat4: <strong>Reading statistics</strong>: pages read, books finished, badges to unlock
+feat5: <strong>Offline mode</strong>: your library works even without internet
+feat6: <strong>Free export</strong>: retrieve all your data whenever you want
+features_note: Free and open source. Transparent, ethical, no strings attached.
+
+# -- Vision --
+ch_vision: The vision
+vision_title: Why BiblioGenius exists
+vision_p1: Because we believe <strong>your books belong to you</strong>. Not to a company.
+vision_p2: Because real sharing is a direct gesture between two people, not a "recommend" button on a platform.
+vision_p3: Because a library should be a neighbourhood commons, not an exploited database.
+vision_coda: BiblioGenius is a citizen-led, open-source project, developed in Europe, supported by its community. Tomorrow, it will connect the book boxes on your street, your local reading club, and the library in your building.
+
+# -- CTA --
+cta_title: Your books deserve better<br>than an&nbsp;algorithm.
+cta_p1: Download BiblioGenius. Scan your first book.
+cta_p2: And next time your neighbour rings the doorbell to ask <em>"Do you have a good book I could borrow?"</em>, you'll know exactly what to answer.
+btn_ios: Test on iOS
+btn_android: Android available on request
+btn_source: View source code
+
+# -- Footer --
+colophon: Open source project <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; No data collected

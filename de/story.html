@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioGenius — Ihre Bücher gehören Ihnen</title>
+    <meta name="description" content="Entdecken Sie BiblioGenius: die kostenlose Open-Source-App zur Verwaltung Ihrer persönlichen Bibliothek und zum direkten Teilen von Büchern mit Ihrem Umfeld.">
+
+    <link rel="canonical" href="https://bibliogenius.org/de/story.html">
+    <link rel="alternate" hreflang="de" href="https://bibliogenius.org/de/story.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/story.html">
+    <link rel="alternate" hreflang="es" href="https://bibliogenius.org/es/story.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/story.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/story.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://bibliogenius.org/de/story.html">
+    <meta property="og:title" content="BiblioGenius — Ihre Bücher gehören Ihnen">
+    <meta property="og:description" content="Verwalten Sie Ihre Bibliothek, teilen Sie Ihre Bücher, behalten Sie die Kontrolle. Kostenlos, Open Source, ohne Haken.">
+    <meta property="og:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <style>
+        /* --- Story page overrides --- */
+
+        .story-col {
+            max-width: 640px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .scene {
+            padding: 5rem 1.5rem 4rem;
+        }
+        .scene + .scene { padding-top: 4rem; }
+
+        .scene--hero {
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .scene--hero h1 {
+            font-size: clamp(2rem, 5.5vw, 3.25rem);
+            margin-bottom: 2.5rem;
+            color: #fff;
+            text-align: center;
+        }
+        .scene--hero p {
+            font-size: 1.125rem;
+            color: #fff;
+            margin: 0 0 1rem;
+        }
+        .scene--hero p:last-of-type {
+            margin-top: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        .scene--light { background: var(--bg-color); }
+        .scene--alt { background: var(--secondary-bg); }
+        .scene--dark {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #e2e8f0;
+        }
+        .scene--dark h2 { color: #f1f5f9; }
+        .scene--dark p { color: #cbd5e1; }
+        .scene--dark strong { color: #f1f5f9; }
+
+        .scene h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            margin-bottom: 1.75rem;
+        }
+
+        .scene p {
+            font-size: 1.0625rem;
+            margin-bottom: 1.125rem;
+            line-height: 1.7;
+        }
+
+        .pullquote {
+            position: relative;
+            margin: 2rem 0;
+            padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+            border: none;
+            border-radius: 6px;
+            background: rgba(37, 99, 235, 0.06);
+            font-size: 1.1875rem;
+            font-style: italic;
+            color: var(--heading-color);
+            line-height: 1.55;
+        }
+        .pullquote::before {
+            content: '\ab';
+            position: absolute;
+            left: 0.75rem;
+            top: 1.25rem;
+            font-size: 1.5rem;
+            font-style: normal;
+            color: var(--primary-color);
+            opacity: 0.6;
+        }
+        .scene--dark .pullquote {
+            background: rgba(255, 255, 255, 0.06);
+            color: #f1f5f9;
+        }
+        .scene--dark .pullquote::before {
+            color: var(--accent-light);
+        }
+
+        .ch {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--primary-color);
+            margin-bottom: 0.625rem;
+        }
+        .scene--dark .ch { color: var(--accent-light); }
+        .scene--alt .ch { color: var(--secondary-text); }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            color: #d1d5db;
+            font-size: 0.5rem;
+        }
+        .divider::before,
+        .divider::after {
+            content: '';
+            width: 2rem;
+            height: 1px;
+            background: #d1d5db;
+        }
+        .scene--dark + .scene--light .divider,
+        .scene--light + .scene--dark .divider { display: none; }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding: 0.75rem 0 0.75rem 1.75rem;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1.0625rem;
+            line-height: 1.6;
+        }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.15rem;
+            width: 7px;
+            height: 7px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+        .feature-list strong { color: var(--heading-color); }
+        .feature-list .sep { color: #9ca3af; }
+
+        .features-note {
+            margin-top: 2rem;
+            font-size: 0.9375rem;
+            color: #6b7280;
+        }
+
+        .scene--cta { text-align: center; padding-bottom: 5rem; }
+        .scene--cta h2 {
+            font-size: clamp(1.75rem, 5vw, 2.75rem);
+            margin-bottom: 1.75rem;
+        }
+        .scene--cta p {
+            max-width: none;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+
+        .cta-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            border-radius: 9999px;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.15s;
+        }
+        .cta-link:active { transform: scale(0.97); }
+        .cta-link--fill {
+            background: var(--primary-color);
+            color: #fff;
+        }
+        .cta-link--fill:hover { background: var(--primary-hover); }
+        .cta-link--ghost {
+            background: transparent;
+            color: #94a3b8;
+            border: 1px solid #334155;
+        }
+        .cta-link--ghost:hover { border-color: #94a3b8; color: #e2e8f0; }
+
+        button.cta-link {
+            border: none;
+            cursor: pointer;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .cta-android {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9375rem;
+            color: #94a3b8;
+        }
+        .cta-android svg {
+            width: 1.125em;
+            height: 1.125em;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+        .cta-android button {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            text-decoration: underline;
+            cursor: pointer;
+            font: inherit;
+            padding: 0;
+        }
+        .cta-android button:hover { color: #e2e8f0; }
+
+        .cta-link svg {
+            width: 1.125em;
+            height: 1.125em;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 768px) {
+            .has-spine .story-col {
+                border-left: 2px solid var(--primary-color);
+                padding-left: 2rem;
+            }
+            .scene--dark.has-spine .story-col {
+                border-left-color: var(--accent-light);
+            }
+            .pullquote { margin-left: 0; }
+            .scene { padding: 6rem 2rem 5rem; }
+        }
+
+        .story-topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .story-topbar-name {
+            font-weight: 700;
+            font-size: 0.8125rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #f1f5f9;
+            text-decoration: none;
+        }
+        .story-topbar-back {
+            font-size: 0.8125rem;
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .story-topbar-back:hover { color: var(--accent-color); }
+
+        .colophon {
+            background: #0f172a;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.8125rem;
+            color: #64748b;
+        }
+        .colophon a { color: #94a3b8; }
+
+        .vision-coda {
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: #6b7280;
+        }
+
+        @media (max-width: 480px) {
+            .scene { padding: 4rem 1.25rem 3rem; }
+            .scene--hero { padding-top: 5rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; }
+        }
+
+        @media print {
+            .story-topbar, .cta-row, .colophon { display: none; }
+            .scene { min-height: auto; padding: 2rem 0; }
+            .scene--dark { background: #fff !important; color: #000 !important; }
+            .scene--dark h2, .scene--dark p { color: #000 !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+<nav class="story-topbar" aria-label="Navigation">
+    <a href="/" class="story-topbar-name">BiblioGenius</a>
+    <div style="display:flex;align-items:center;gap:1rem;">
+        <a href="/" class="story-topbar-back">← Startseite</a>
+        <select onchange="location.href=this.value" aria-label="Sprache" style="background:#1f2937;color:#fff;border:1px solid #4b5563;padding:0.2rem 0.4rem;border-radius:0.375rem;font-size:0.8125rem;cursor:pointer;">
+            <option value="/de/story.html" selected>Deutsch</option>
+            <option value="/en/story.html">English</option>
+            <option value="/es/story.html">Español</option>
+            <option value="/story.html">Français</option>
+        </select>
+    </div>
+</nav>
+
+<main id="main">
+
+    <header class="scene scene--dark scene--hero" role="banner">
+        <div class="story-col">
+            <h1>Sie haben 200&nbsp;Bücher<br>zu&nbsp;Hause.</h1>
+            <p>Sie wissen, dass Sie <em>Les Misérables</em> jemandem geliehen haben. Aber&nbsp;wem?</p>
+            <p>Sie stehen in der Buchhandlung, ein Roman fällt Ihnen auf, und Sie zögern: <em>„Habe ich das schon?"</em></p>
+            <p>Und heute Abend klingelt Ihre Nachbarin: <em>„Hast du ein gutes Buch zum Ausleihen?"</em></p>
+            <p>Gute Frage. Vielleicht haben Sie es. Irgendwo. In einem Regal. Oder bei&nbsp;jemandem.</p>
+        </div>
+    </header>
+
+    <section class="scene scene--light">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">Die Lage</span>
+            <h2>Das Problem</h2>
+            <p>Heute bedeutet die Verwaltung einer persönlichen Bibliothek bestenfalls ein Notizbuch, schlimmstenfalls völliges Vergessen.</p>
+            <p>Und die vorhandenen Apps? Sie zentralisieren Ihre Daten auf ihren Servern. Ihre Lesegewohnheiten, Ihr Geschmack... alles wird analysiert, monetarisiert, hinter einem Konto eingesperrt.</p>
+            <p><strong>Wenn die App morgen schließt, verschwindet Ihre Bibliothek mit ihr.</strong></p>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">&#9670;</div>
+
+    <section class="scene scene--alt has-spine">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">Was das bedeutet</span>
+            <h2>Konkret</h2>
+            <p>Stellen Sie sich vor: Sie haben drei Jahre damit verbracht, Ihren Katalog online aufzubauen. 500&nbsp;Bücher. Notizen, individuelle Regale, sorgfältig verfolgte Ausleihen.</p>
+            <p>Eines Morgens ändert die App ihre Nutzungsbedingungen. Oder schlimmer: Sie wird eingestellt.</p>
+            <p>Alles verfliegt. Drei Jahre Arbeit. Verloren.</p>
+            <p>Und selbst wenn alles funktioniert, können Sie einem Freund nicht <em>wirklich</em> ein Buch leihen. Sie können ihm einen Titel „empfehlen".</p>
+
+            <blockquote class="pullquote">
+                Empfehlen ist nicht Teilen.<br>Es ist nicht dasselbe, wie jemandem ein Buch zu reichen und zu sagen: <em>Hier, das wirst du lieben.</em>
+            </blockquote>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">&#9670;</div>
+
+    <section class="scene scene--light">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">Die Antwort</span>
+            <h2>Die Bibliothek, die wirklich Ihnen&nbsp;gehört</h2>
+            <p>Scannen Sie einen Barcode. Das Buch erscheint mit Cover, Zusammenfassung und Details.</p>
+            <p>Ordnen Sie Ihre Lektüre. Verfolgen Sie Ihre Ausleihen. Finden Sie sofort heraus, wer was ausgeliehen hat.</p>
+            <p>Und vor allem: <strong>Ihre Daten bleiben auf Ihrem Telefon.</strong> Kein Konto erforderlich. Kein Remote-Server. Keine Werbung.</p>
+            <p>Ihre Bibliothek funktioniert auch ohne Internet. Sie gehört Ihnen, Punkt.</p>
+            <p>Was, wenn Sie Ihr Telefon wechseln? Ein Tippen zum Speichern, ein Tippen zum Wiederherstellen. Ihre Bücher folgen Ihnen, immer.</p>
+        </div>
+    </section>
+
+    <section class="scene scene--dark has-spine">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">Teilen</span>
+            <h2>Der Moment, in dem sich alles&nbsp;ändert</h2>
+            <p>Stellen Sie sich jetzt etwas anderes vor.</p>
+            <p>Ihre Freundin Sophie hat auch BiblioGenius. Sie scannen ihren QR&nbsp;Code. In einer Sekunde erscheint ihre Bibliothek auf Ihrem Telefon.</p>
+            <p>Keine Cloud nötig. Kein Vermittler. Kein gemeinsames „soziales Netzwerk" nötig.</p>
+
+            <blockquote class="pullquote">
+                Es ist, als würde sie die Tür zu ihrer Bibliothek öffnen und sagen: <em>Bedien dich.</em>
+            </blockquote>
+
+            <p>Sie sehen, dass sie <em>Dune</em> hat. Sie bitten um eine Ausleihe. Sie akzeptiert. Die App verfolgt alles: wer das Buch hat, seit wann und wann es zurückkommen soll.</p>
+            <p><strong>Peer-to-Peer-Verleih.</strong> Direkt, einfach, menschlich. Kein Algorithmus entscheidet. Nur zwei Menschen, die eine Leidenschaft teilen.</p>
+        </div>
+    </section>
+
+    <section class="scene scene--light">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">In der Praxis</span>
+            <h2>Was BiblioGenius Ihnen&nbsp;bietet</h2>
+            <ul class="feature-list">
+                <li><strong>Sofort-Scanner</strong>: Fügen Sie ein Buch in einer Sekunde hinzu, Cover und Zusammenfassung inklusive</li>
+                <li><strong>Ihr gesamter Katalog in der Tasche</strong>: Romane, Comics, Manga, Lehrbücher, Hörbücher</li>
+                <li><strong>Ausleih-Verfolgung</strong>: Schluss mit <em>„Ich hab's dir doch zurückgegeben"</em></li>
+                <li><strong>Lesestatistiken</strong>: gelesene Seiten, beendete Bücher, Abzeichen zum Freischalten</li>
+                <li><strong>Offline-Modus</strong>: Ihre Bibliothek funktioniert auch ohne Internet</li>
+                <li><strong>Freier Export</strong>: Holen Sie sich Ihre Daten jederzeit zurück</li>
+            </ul>
+            <p class="features-note">Kostenlos und Open Source. Transparent, ethisch, ohne Haken.</p>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">&#9670;</div>
+
+    <section class="scene scene--alt">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">Die Vision</span>
+            <h2>Warum es BiblioGenius gibt</h2>
+            <p>Weil wir glauben, dass <strong>Ihre Bücher Ihnen gehören</strong>. Nicht einem Unternehmen.</p>
+            <p>Weil echtes Teilen eine direkte Geste zwischen zwei Menschen ist, nicht ein „Empfehlen"-Button auf einer Plattform.</p>
+            <p>Weil eine Bibliothek ein Gemeingut der Nachbarschaft sein sollte, keine ausgebeutete Datenbank.</p>
+            <p class="vision-coda">BiblioGenius ist ein bürgerliches Open-Source-Projekt, entwickelt in Europa, unterstützt von seiner Community. Morgen wird es die Bücherboxen in Ihrer Straße, den Leseclub Ihrer Bibliothek und die Büchersammlung Ihres Hauses verbinden.</p>
+        </div>
+    </section>
+
+    <section class="scene scene--dark scene--cta">
+        <div class="story-col">
+            <h2>Ihre Bücher verdienen Besseres<br>als einen&nbsp;Algorithmus.</h2>
+            <p>Laden Sie BiblioGenius herunter. Scannen Sie Ihr erstes Buch.</p>
+            <p>Und wenn Ihre Nachbarin das nächste Mal klingelt und fragt <em>„Hast du ein gutes Buch zum Ausleihen?"</em>, wissen Sie genau, was Sie antworten.</p>
+            <div class="cta-row">
+                <a href="https://testflight.apple.com/v1/app/6757465461" class="cta-link cta-link--fill" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                    Auf iOS testen
+                </a>
+                <span class="cta-android">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg>
+                    <button type="button" onclick="openContact(event)">Android auf Anfrage verfügbar</button>
+                </span>
+            </div>
+            <div class="cta-row" style="margin-top:1rem;">
+                <a href="https://github.com/bibliogenius/bibliogenius-app" class="cta-link cta-link--ghost" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    Quellcode ansehen
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="colophon">Open-Source-Projekt <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; Keine Daten erhoben</footer>
+
+<script>function openContact(e){e.preventDefault();var u='contact',d='bibliogenius.org';location.href='mailto:'+u+'@'+d+'?subject=Test%20Android'}</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+# BiblioGenius Index Page — Deutsch
+# Übersetzen Sie alle Werte. HTML-Tags (<em>, <strong>, <br>, &nbsp;) beibehalten.
+# Referenz: fr.yml
+
+# -- Metadaten --
+lang_name: Deutsch
+title: BiblioGenius - Open-Source-Bibliotheksverwaltung, lokal und privat
+meta_description: "BiblioGenius: Open-Source-App zur Verwaltung Ihrer persönlichen Bibliothek, offline und verschlüsselt. Teilen Sie Ihre Bücher mit Ihren Nachbarn. Testen Sie die Beta!"
+og_title: BiblioGenius - Open-Source-Bibliotheksverwaltung, lokal und privat
+og_description: Open-Source-App zur Verwaltung Ihrer persönlichen Bibliothek, offline und verschlüsselt. Teilen Sie Ihre Bücher mit Ihren Nachbarn.
+og_locale: de_DE
+og_locale_alternates: <meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="es_ES">
+schema_description: Open-Source-App zur Verwaltung Ihrer persönlichen Bibliothek und zum Teilen Ihrer Bücher.
+
+# -- Navigation --
+skip_link: Zum Inhalt springen
+nav_label: Sprache
+lang_label: Sprache wählen
+
+# -- Hero --
+hero_title: Die Bibliothek von morgen,<br><span>zu Hause.</span>
+hero_subtitle: Verwalten Sie Ihre Bücher, behalten Sie Ihre Daten, teilen Sie mit Nachbarn.<br><span class="hero-tagline">Digitale Souveränität & Open Source</span>
+btn_github: Code ansehen (GitHub)
+btn_tester: Tester werden
+btn_story: Die Geschichte entdecken
+
+# -- Showcase --
+showcase_alt: BiblioGenius-Screenshot mit der Bibliotheksansicht und Buchcovern
+
+# -- Funktionen --
+features_title: Funktionen
+feature_local_title: Local-First
+feature_local_desc: Ihre Daten gehören Ihnen. Funktioniert offline, ohne Cloud.
+feature_p2p_title: Netzwerk-Teilen
+feature_p2p_desc: Verleihen Sie Ihre Bücher an vertrauenswürdige Freunde oder Nachbarn. Erstellen Sie ein lokales und dezentrales Lesenetzwerk.
+feature_e2ee_title: Verschlüsselt & Privat
+feature_e2ee_desc: "Kein Tracking, keine Werbung. Ihre Daten sind Ende-zu-Ende verschlüsselt: niemand kann sie lesen, nicht einmal der Server."
+feature_modular_title: Modular
+feature_modular_desc: "Eine App, die sich an Ihre Bedürfnisse anpasst: Leser, Familie, Verein, Bibliothekar, Buchhändler oder Lehrer."
+
+# -- Experimentieren --
+exp_title: Lassen Sie uns gemeinsam experimentieren
+exp_desc: "BiblioGenius ist ein Bürgerprojekt. <br>Wir suchen Bibliotheken, Vereine und Nachbarn, um neue Nutzungsmöglichkeiten zu testen:"
+tag_clubs: Buchclubs
+tag_boxes: Vernetzte Bücherboxen
+tag_assoc: Vereinsbibliotheken
+tag_centers: Dokumentationszentren
+
+# -- App testen --
+test_title: Testen Sie die App
+test_desc: BiblioGenius ist als Beta verfügbar. Werden Sie einer der ersten Tester!
+btn_testflight: Auf iOS testen (TestFlight)
+android_note: Android auf Anfrage verfügbar
+
+# -- Bibliothek befreien (auskommentiert) --
+free_library_title: Befreien Sie Ihre Bibliothek
+free_library_desc: Ihre Bücher sollten nicht auf einer Plattform gefangen sein. Importieren Sie Ihre Daten ganz einfach aus Ihren alten Apps.
+btn_free_library: Import-Anleitungen ansehen
+
+# -- Fußzeile --
+footer_title: Mach mit beim Abenteuer
+footer_desc: Das Projekt befindet sich in aktiver Entwicklung. Schreiben Sie uns, um teilzunehmen oder zu testen.
+footer_contribute: "➜ Bereich für Mitwirkende"
+footer_tutorials: "➜ Videoanleitungen"
+footer_copyright: © 2025-2026 BiblioGenius — Open Source (<a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a>)
+ecoindex_alt: EcoIndex-Bewertung der Website

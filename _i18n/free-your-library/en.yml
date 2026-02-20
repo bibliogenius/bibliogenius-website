@@ -1,0 +1,47 @@
+# BiblioGenius Free Your Library Page — English
+# Translate all values. Keep HTML tags (<em>, <strong>, <a>, etc.) as-is.
+# Reference: fr.yml
+
+# -- Metadata --
+lang_name: English
+title: Free your library - BiblioGenius
+meta_description: Tutorials to import your data from Gleeph, Babelio, Goodreads, inventaire.io to BiblioGenius.
+
+# -- Navigation --
+lang_label: Choose language
+
+# -- Hero --
+hero_title: Free your library
+hero_subtitle: Your books shouldn't be trapped on one platform.
+
+# -- Intro --
+intro_text: BiblioGenius is designed to respect your digital sovereignty. Here's how to retrieve your data from the most common platforms to import them at home.
+btn_watch_video: Watch video tutorial
+
+# -- Gleeph --
+gleeph_title: Gleeph
+gleeph_desc: Export your library in CSV format:
+gleeph_steps: <li>Open the Gleeph app on your mobile.</li><li>Go to the <strong>Profile</strong> tab.</li><li>Tap the gear icon (Settings) at the top right.</li><li>Select <strong>Export my data</strong>.</li><li>You will receive a CSV file by email or can save it directly.</li>
+
+# -- Babelio --
+babelio_title: Babelio
+babelio_desc: Retrieve your reading list:
+babelio_steps: <li>Log in to your account on the Babelio website.</li><li>Go to <strong>My books</strong>.</li><li>Look for the <strong>Export my books</strong> link (usually at the bottom of the page or in list options).</li><li>Download the generated CSV file.</li>
+
+# -- Goodreads --
+goodreads_title: Goodreads
+goodreads_desc: The standard Goodreads export:
+goodreads_steps: <li>Go to <a href="https://www.goodreads.com">Goodreads.com</a> and log in.</li><li>Click on <strong>My Books</strong> in the navigation bar.</li><li>In the left menu, click on <strong>Import and Export</strong>.</li><li>Click the <strong>Export Library</strong> button at the top right.</li><li>Wait for the file to be generated and click the download link.</li>
+
+# -- inventaire.io --
+inventaire_title: inventaire.io
+inventaire_desc: The data-friendly sibling project:
+inventaire_steps: <li>Log in to <a href="https://inventaire.io">inventaire.io</a>.</li><li>Go to your profile <strong>Settings</strong>.</li><li>Look for the <strong>Data</strong> or <strong>Export</strong> section.</li><li>Choose CSV or JSON format (BiblioGenius prefers CSV for now).</li>
+
+# -- Next --
+next_title: What's next?
+next_desc: Once you have your file, open BiblioGenius and use the migration wizard to import your books in one click.
+btn_back_home: ← Back to home
+
+# -- Footer --
+footer_text: © 2025 BiblioGenius. Your library, your rules.

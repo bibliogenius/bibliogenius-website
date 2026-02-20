@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioGenius — Vos livres vous appartiennent</title>
+    <meta name="description" content="Découvrez BiblioGenius : l'application gratuite et open source pour gérer votre bibliothèque personnelle et partager vos livres directement avec vos proches.">
+
+    <link rel="canonical" href="https://bibliogenius.org/story.html">
+    <link rel="alternate" hreflang="de" href="https://bibliogenius.org/de/story.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/story.html">
+    <link rel="alternate" hreflang="es" href="https://bibliogenius.org/es/story.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/story.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/story.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://bibliogenius.org/story.html">
+    <meta property="og:title" content="BiblioGenius — Vos livres vous appartiennent">
+    <meta property="og:description" content="Gérez votre bibliothèque, partagez vos livres, gardez le contrôle. Gratuit, open source, sans piège.">
+    <meta property="og:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <style>
+        /* --- Story page overrides --- */
+
+        .story-col {
+            max-width: 640px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .scene {
+            padding: 5rem 1.5rem 4rem;
+        }
+        .scene + .scene { padding-top: 4rem; }
+
+        .scene--hero {
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .scene--hero h1 {
+            font-size: clamp(2rem, 5.5vw, 3.25rem);
+            margin-bottom: 2.5rem;
+            color: #fff;
+            text-align: center;
+        }
+        .scene--hero p {
+            font-size: 1.125rem;
+            color: #fff;
+            margin: 0 0 1rem;
+        }
+        .scene--hero p:last-of-type {
+            margin-top: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        .scene--light { background: var(--bg-color); }
+        .scene--alt { background: var(--secondary-bg); }
+        .scene--dark {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #e2e8f0;
+        }
+        .scene--dark h2 { color: #f1f5f9; }
+        .scene--dark p { color: #cbd5e1; }
+        .scene--dark strong { color: #f1f5f9; }
+
+        .scene h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            margin-bottom: 1.75rem;
+        }
+
+        .scene p {
+            font-size: 1.0625rem;
+            margin-bottom: 1.125rem;
+            line-height: 1.7;
+        }
+
+        .pullquote {
+            position: relative;
+            margin: 2rem 0;
+            padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+            border: none;
+            border-radius: 6px;
+            background: rgba(37, 99, 235, 0.06);
+            font-size: 1.1875rem;
+            font-style: italic;
+            color: var(--heading-color);
+            line-height: 1.55;
+        }
+        .pullquote::before {
+            content: '\ab';
+            position: absolute;
+            left: 0.75rem;
+            top: 1.25rem;
+            font-size: 1.5rem;
+            font-style: normal;
+            color: var(--primary-color);
+            opacity: 0.6;
+        }
+        .scene--dark .pullquote {
+            background: rgba(255, 255, 255, 0.06);
+            color: #f1f5f9;
+        }
+        .scene--dark .pullquote::before {
+            color: var(--accent-light);
+        }
+
+        .ch {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--primary-color);
+            margin-bottom: 0.625rem;
+        }
+        .scene--dark .ch { color: var(--accent-light); }
+        .scene--alt .ch { color: var(--secondary-text); }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            color: #d1d5db;
+            font-size: 0.5rem;
+        }
+        .divider::before,
+        .divider::after {
+            content: '';
+            width: 2rem;
+            height: 1px;
+            background: #d1d5db;
+        }
+        .scene--dark + .scene--light .divider,
+        .scene--light + .scene--dark .divider { display: none; }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding: 0.75rem 0 0.75rem 1.75rem;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1.0625rem;
+            line-height: 1.6;
+        }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.15rem;
+            width: 7px;
+            height: 7px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+        .feature-list strong { color: var(--heading-color); }
+        .feature-list .sep { color: #9ca3af; }
+
+        .features-note {
+            margin-top: 2rem;
+            font-size: 0.9375rem;
+            color: #6b7280;
+        }
+
+        .scene--cta { text-align: center; padding-bottom: 5rem; }
+        .scene--cta h2 {
+            font-size: clamp(1.75rem, 5vw, 2.75rem);
+            margin-bottom: 1.75rem;
+        }
+        .scene--cta p {
+            max-width: none;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+
+        .cta-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            border-radius: 9999px;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.15s;
+        }
+        .cta-link:active { transform: scale(0.97); }
+        .cta-link--fill {
+            background: var(--primary-color);
+            color: #fff;
+        }
+        .cta-link--fill:hover { background: var(--primary-hover); }
+        .cta-link--ghost {
+            background: transparent;
+            color: #94a3b8;
+            border: 1px solid #334155;
+        }
+        .cta-link--ghost:hover { border-color: #94a3b8; color: #e2e8f0; }
+
+        button.cta-link {
+            border: none;
+            cursor: pointer;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .cta-android {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9375rem;
+            color: #94a3b8;
+        }
+        .cta-android svg {
+            width: 1.125em;
+            height: 1.125em;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+        .cta-android button {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            text-decoration: underline;
+            cursor: pointer;
+            font: inherit;
+            padding: 0;
+        }
+        .cta-android button:hover { color: #e2e8f0; }
+
+        .cta-link svg {
+            width: 1.125em;
+            height: 1.125em;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 768px) {
+            .has-spine .story-col {
+                border-left: 2px solid var(--primary-color);
+                padding-left: 2rem;
+            }
+            .scene--dark.has-spine .story-col {
+                border-left-color: var(--accent-light);
+            }
+            .pullquote { margin-left: 0; }
+            .scene { padding: 6rem 2rem 5rem; }
+        }
+
+        .story-topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .story-topbar-name {
+            font-weight: 700;
+            font-size: 0.8125rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #f1f5f9;
+            text-decoration: none;
+        }
+        .story-topbar-back {
+            font-size: 0.8125rem;
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .story-topbar-back:hover { color: var(--accent-color); }
+
+        .colophon {
+            background: #0f172a;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.8125rem;
+            color: #64748b;
+        }
+        .colophon a { color: #94a3b8; }
+
+        .vision-coda {
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: #6b7280;
+        }
+
+        @media (max-width: 480px) {
+            .scene { padding: 4rem 1.25rem 3rem; }
+            .scene--hero { padding-top: 5rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; }
+        }
+
+        @media print {
+            .story-topbar, .cta-row, .colophon { display: none; }
+            .scene { min-height: auto; padding: 2rem 0; }
+            .scene--dark { background: #fff !important; color: #000 !important; }
+            .scene--dark h2, .scene--dark p { color: #000 !important; }
+        }
+    </style>
+</head>
+
+<body>
+
+<a href="#main" class="skip-link">Aller au contenu</a>
+
+<nav class="story-topbar" aria-label="Navigation">
+    <a href="/" class="story-topbar-name">BiblioGenius</a>
+    <div style="display:flex;align-items:center;gap:1rem;">
+        <a href="/" class="story-topbar-back">← Accueil</a>
+        <select onchange="location.href=this.value" aria-label="Langue" style="background:#1f2937;color:#fff;border:1px solid #4b5563;padding:0.2rem 0.4rem;border-radius:0.375rem;font-size:0.8125rem;cursor:pointer;">
+            <option value="/de/story.html">Deutsch</option>
+            <option value="/en/story.html">English</option>
+            <option value="/es/story.html">Español</option>
+            <option value="/story.html" selected>Français</option>
+        </select>
+    </div>
+</nav>
+
+<main id="main">
+
+    <header class="scene scene--dark scene--hero" role="banner">
+        <div class="story-col">
+            <h1>Vous avez 200&nbsp;livres<br>chez&nbsp;vous.</h1>
+            <p>Vous savez que vous avez prêté <em>Les Misérables</em> à quelqu'un. Mais à&nbsp;qui&nbsp;?</p>
+            <p>Vous êtes en librairie, un roman vous fait de l'oeil, et vous hésitez&nbsp;: <em>&laquo;&nbsp;Est-ce que je l'ai déjà, celui-là&nbsp;?&nbsp;&raquo;</em></p>
+            <p>Et ce soir, votre voisine sonne à la porte&nbsp;: <em>&laquo;&nbsp;Tu aurais pas un bon livre à me prêter&nbsp;?&nbsp;&raquo;</em></p>
+            <p>Bonne question. Vous l'avez peut-être. Quelque part. Sur une étagère. Ou chez&nbsp;quelqu'un.</p>
+        </div>
+    </header>
+
+    <section class="scene scene--light">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">Le constat</span>
+            <h2>Le problème</h2>
+            <p>Aujourd'hui, gérer sa bibliothèque personnelle, c'est au mieux un carnet, au pire l'oubli pur et simple.</p>
+            <p>Et les applications existantes&nbsp;? Elles centralisent vos données sur leurs serveurs. Vos lectures, vos goûts, vos habitudes... tout est analysé, monétisé, enfermé derrière un compte.</p>
+            <p><strong>Si l'app ferme demain, votre bibliothèque disparaît avec elle.</strong></p>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">&#9670;</div>
+
+    <section class="scene scene--alt has-spine">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">Ce que ça change</span>
+            <h2>Concrètement</h2>
+            <p>Imaginez&nbsp;: vous avez passé trois ans à construire votre catalogue en ligne. 500&nbsp;livres. Des notes, des étagères personnalisées, des prêts soigneusement suivis.</p>
+            <p>Un matin, l'application change ses conditions d'utilisation. Ou pire&nbsp;: elle ferme ses portes.</p>
+            <p>Tout s'évapore. Trois ans de travail. Perdus.</p>
+            <p>Et même quand tout fonctionne, vous ne pouvez pas <em>vraiment</em> prêter un livre à un ami. Vous pouvez lui &laquo;&nbsp;recommander&nbsp;&raquo; un titre.</p>
+
+            <blockquote class="pullquote">
+                Recommander, ce n'est pas partager.<br>Ce n'est pas la même chose que tendre un livre à quelqu'un en disant&nbsp;: <em>Tiens, tu vas adorer.</em>
+            </blockquote>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">&#9670;</div>
+
+    <section class="scene scene--light">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">La réponse</span>
+            <h2>La bibliothèque qui vous&nbsp;appartient</h2>
+            <p>Scannez un code-barres. Le livre apparaît avec sa couverture, son résumé, ses informations détaillées.</p>
+            <p>Classez vos lectures. Suivez vos prêts. Retrouvez en un instant qui a emprunté quoi.</p>
+            <p>Et surtout&nbsp;: <strong>vos données restent sur votre téléphone.</strong> Pas de compte obligatoire. Pas de serveur distant. Pas de publicité.</p>
+            <p>Votre bibliothèque fonctionne même sans internet. Elle est à vous, un point c'est tout.</p>
+            <p>Et si vous changez de téléphone&nbsp;? Un tap pour tout sauvegarder, un tap pour tout restaurer. Vos livres vous suivent, toujours.</p>
+        </div>
+    </section>
+
+    <section class="scene scene--dark has-spine">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">Le partage</span>
+            <h2>Le moment où tout&nbsp;change</h2>
+            <p>Maintenant, imaginez autre chose.</p>
+            <p>Votre amie Sophie a aussi BiblioGenius. Vous scannez son QR&nbsp;code. En une seconde, sa bibliothèque apparaît sur votre téléphone.</p>
+            <p>Pas besoin de cloud. Pas besoin d'intermédiaire. Pas besoin que vous soyez sur le même &laquo;&nbsp;réseau social&nbsp;&raquo;.</p>
+
+            <blockquote class="pullquote">
+                C'est comme si elle vous ouvrait la porte de sa bibliothèque et vous disait&nbsp;: <em>Sers-toi.</em>
+            </blockquote>
+
+            <p>Vous voyez qu'elle a <em>Dune</em>. Vous le demandez en prêt. Elle accepte. L'application suit tout&nbsp;: qui a le livre, depuis quand, et quand il devrait revenir.</p>
+            <p><strong>Le prêt pair-à-pair.</strong> Direct, simple, humain. Pas un algorithme qui décide. Juste deux personnes qui partagent une passion.</p>
+        </div>
+    </section>
+
+    <section class="scene scene--light">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">En pratique</span>
+            <h2>Ce que BiblioGenius vous&nbsp;apporte</h2>
+            <ul class="feature-list">
+                <li><strong>Un scanner instantané</strong>&nbsp;: ajoutez un livre en une seconde, couverture et résumé inclus</li>
+                <li><strong>Tout votre catalogue dans la poche</strong>&nbsp;: romans, BD, mangas, manuels, livres audio</li>
+                <li><strong>Le suivi des prêts</strong>&nbsp;: fini les <em>&laquo;&nbsp;je te l'ai rendu, si&nbsp;si&nbsp;&raquo;</em></li>
+                <li><strong>Des statistiques de lecture</strong>&nbsp;: pages lues, livres terminés, badges à débloquer</li>
+                <li><strong>Le mode hors-ligne</strong>&nbsp;: votre bibliothèque fonctionne même sans internet</li>
+                <li><strong>L'export libre</strong>&nbsp;: récupérez toutes vos données quand vous voulez</li>
+            </ul>
+            <p class="features-note">Gratuit et open source. Transparent, éthique, sans piège.</p>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">&#9670;</div>
+
+    <section class="scene scene--alt">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">La vision</span>
+            <h2>Pourquoi BiblioGenius existe</h2>
+            <p>Parce que nous croyons que <strong>vos livres vous appartiennent</strong>. Pas à une entreprise.</p>
+            <p>Parce que le partage, le vrai, c'est un geste direct entre deux personnes, pas un bouton &laquo;&nbsp;recommander&nbsp;&raquo; sur une plateforme.</p>
+            <p>Parce qu'une bibliothèque devrait être un bien commun de quartier, pas une base de données exploitée.</p>
+            <p class="vision-coda">BiblioGenius est un projet citoyen et open source, développé en Europe, soutenu par sa communauté. Demain, il connectera les boîtes à livres de votre rue, le club de lecture de votre médiathèque, et la bibliothèque de votre immeuble.</p>
+        </div>
+    </section>
+
+    <section class="scene scene--dark scene--cta">
+        <div class="story-col">
+            <h2>Vos livres méritent mieux<br>qu'un&nbsp;algorithme.</h2>
+            <p>Téléchargez BiblioGenius. Scannez votre premier livre.</p>
+            <p>Et la prochaine fois que votre voisine sonnera à la porte pour demander <em>&laquo;&nbsp;Tu aurais pas un bon livre à me prêter&nbsp;?&nbsp;&raquo;</em>, vous saurez exactement quoi répondre.</p>
+            <div class="cta-row">
+                <a href="https://testflight.apple.com/v1/app/6757465461" class="cta-link cta-link--fill" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                    Tester sur iOS
+                </a>
+                <span class="cta-android">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg>
+                    <button type="button" onclick="openContact(event)">Android disponible sur demande</button>
+                </span>
+            </div>
+            <div class="cta-row" style="margin-top:1rem;">
+                <a href="https://github.com/bibliogenius/bibliogenius-app" class="cta-link cta-link--ghost" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    Voir le code source
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="colophon">Projet open source <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; Aucune donnée collectée</footer>
+
+<script>function openContact(e){e.preventDefault();var u='contact',d='bibliogenius.org';location.href='mailto:'+u+'@'+d+'?subject=Test%20Android'}</script>
+
+</body>
+</html>

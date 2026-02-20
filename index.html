@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BiblioGenius - Gestion de bibliothèque Open Source, locale et privée</title>
-    <meta name="description"
-        content="BiblioGenius : application Open Source pour gérer votre bibliothèque personnelle, hors-ligne et chiffrée. Partagez vos livres avec vos voisins. Essayez la bêta !">
+    <meta name="description" content="BiblioGenius : application Open Source pour gérer votre bibliothèque personnelle, hors-ligne et chiffrée. Partagez vos livres avec vos voisins. Essayez la bêta !">
 
     <!-- Canonical & hreflang -->
     <link rel="canonical" href="https://bibliogenius.org/">
+    <link rel="alternate" hreflang="de" href="https://bibliogenius.org/de/">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/">
+    <link rel="alternate" hreflang="es" href="https://bibliogenius.org/es/">
     <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/">
-    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/">
-    <link rel="alternate" hreflang="es" href="https://bibliogenius.org/">
-    <link rel="alternate" hreflang="de" href="https://bibliogenius.org/">
     <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/">
 
     <!-- Open Graph -->
@@ -23,14 +22,12 @@
     <meta property="og:description" content="Application Open Source pour gérer votre bibliothèque personnelle, hors-ligne et chiffrée. Partagez vos livres avec vos voisins.">
     <meta property="og:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:locale:alternate" content="es_ES">
-    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="es_ES"><meta property="og:locale:alternate" content="de_DE">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BiblioGenius - Gestion de bibliothèque Open Source">
-    <meta name="twitter:description" content="Application Open Source pour gérer votre bibliothèque, hors-ligne et chiffrée.">
+    <meta name="twitter:title" content="BiblioGenius - Gestion de bibliothèque Open Source, locale et privée">
+    <meta name="twitter:description" content="Application Open Source pour gérer votre bibliothèque personnelle, hors-ligne et chiffrée. Partagez vos livres avec vos voisins.">
     <meta name="twitter:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
 
     <!-- Favicon -->
@@ -39,7 +36,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <link rel="author" type="text/markdown" href="/llms.txt">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -69,33 +66,26 @@
     <header class="hero" role="banner">
         <!-- Language Switcher -->
         <nav class="lang-switcher" aria-label="Langue">
-            <select id="lang-switcher" class="lang-select" aria-label="Choisir la langue">
-                <option value="fr">Français</option>
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="de">Deutsch</option>
+            <select onchange="location.href=this.value" class="lang-select" aria-label="Choisir la langue">
+            <option value="/de/">Deutsch</option>
+            <option value="/en/">English</option>
+            <option value="/es/">Español</option>
+            <option value="/" selected>Français</option>
             </select>
         </nav>
         <div class="hero-content">
-            <h1 id="hero-title">
-                La bibliothèque de demain,<br>
-                <span>chez vous.</span>
-            </h1>
-            <p id="hero-subtitle">
-                Gérez vos livres, gardez vos données, partagez avec vos voisins.<br>
-                <span class="hero-tagline">Souveraineté Numérique & Open Source</span>
-            </p>
+            <h1>La bibliothèque de demain,<br><span>chez vous.</span></h1>
+            <p>Gérez vos livres, gardez vos données, partagez avec vos voisins.<br><span class="hero-tagline">Souveraineté Numérique & Open Source</span></p>
             <div class="hero-buttons">
                 <a href="https://github.com/bibliogenius/bibliogenius-app" class="btn btn-primary">
                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
                             d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                     </svg>
-                    <span id="btn-github-text">Voir le Code (GitHub)</span>
+                    <span>Voir le Code (GitHub)</span>
                 </a>
-                <a href="#tester" id="btn-tester" class="btn btn-secondary">
-                    Devenir Testeur
-                </a>
+                <a href="#tester" class="btn btn-secondary">Devenir Testeur</a>
+                <a href="/story.html" class="btn btn-secondary" style="border:1px solid rgba(255,255,255,0.2);">Découvrir l'histoire</a>
             </div>
         </div>
     </header>
@@ -107,11 +97,11 @@
         <div class="container">
             <div class="showcase-frame">
                 <picture>
-                    <source id="showcase-mobile-webp" media="(max-width: 768px)"
-                        srcset="assets/home-bibliogenius-mobile-en.webp" type="image/webp">
-                    <source id="showcase-mobile-src" media="(max-width: 768px)"
-                        srcset="assets/home-bibliogenius-mobile-en.jpg">
-                    <img id="showcase-desktop-img" src="assets/home-bibliogenius-en.jpg"
+                    <source media="(max-width: 768px)"
+                        srcset="/assets/home-bibliogenius-mobile-fr.webp" type="image/webp">
+                    <source media="(max-width: 768px)"
+                        srcset="/assets/home-bibliogenius-mobile-fr.jpg">
+                    <img src="/assets/home-bibliogenius-fr.jpg"
                         alt="Capture d'écran de BiblioGenius montrant la vue bibliothèque avec les couvertures de livres" loading="lazy">
                 </picture>
             </div>
@@ -121,30 +111,27 @@
     <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <h2 class="sr-only" id="features-title">Fonctionnalités</h2>
+            <h2 class="sr-only">Fonctionnalités</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="2" width="24" height="44" rx="5" fill="#2563eb"/><rect x="15" y="8" width="18" height="28" rx="1.5" fill="#fff"/><path d="M20 22l4 4 6-8" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="40" width="8" height="2" rx="1" fill="#93c5fd"/></svg></span>
-                    <h3 id="feature-local-title">Local-First</h3>
-                    <p id="feature-local-desc">Vos données vous appartiennent. Fonctionne hors-ligne, sans cloud.</p>
+                    <h3>Local-First</h3>
+                    <p>Vos données vous appartiennent. Fonctionne hors-ligne, sans cloud.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M14 12L34 12M14 12L24 38M34 12L24 38" stroke="#dbeafe" stroke-width="2.5"/><circle cx="14" cy="12" r="7" fill="#2563eb"/><circle cx="34" cy="12" r="7" fill="#2563eb"/><circle cx="24" cy="38" r="7" fill="#2563eb"/><circle cx="14" cy="12" r="3" fill="#fff"/><circle cx="34" cy="12" r="3" fill="#fff"/><circle cx="24" cy="38" r="3" fill="#fff"/></svg></span>
-                    <h3 id="feature-p2p-title">Partage Réseau</h3>
-                    <p id="feature-p2p-desc">Prêtez vos livres à vos amis ou voisins de confiance. Créez un réseau de
-                        lecture local et décentralisé.</p>
+                    <h3>Partage Réseau</h3>
+                    <p>Prêtez vos livres à vos amis ou voisins de confiance. Créez un réseau de lecture local et décentralisé.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L6 12v12c0 11 8 18 18 20 10-2 18-9 18-20V12L24 4z" fill="#2563eb"/><rect x="19" y="24" width="10" height="9" rx="2" fill="#fff"/><path d="M21 24v-4a3 3 0 016 0v4" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="28.5" r="1.5" fill="#2563eb"/></svg></span>
-                    <h3 id="feature-e2ee-title">Chiffré & Privé</h3>
-                    <p id="feature-e2ee-desc">Pas de traçage, pas de publicité. Vos données sont chiffrées de bout en
-                        bout : personne ne peut les lire, même pas le serveur.</p>
+                    <h3>Chiffré & Privé</h3>
+                    <p>Pas de traçage, pas de publicité. Vos données sont chiffrées de bout en bout : personne ne peut les lire, même pas le serveur.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="18" height="18" rx="4" fill="#2563eb"/><rect x="26" y="4" width="18" height="18" rx="4" fill="#93c5fd"/><rect x="4" y="26" width="18" height="18" rx="4" fill="#93c5fd"/><rect x="26" y="26" width="18" height="18" rx="4" fill="#2563eb"/></svg></span>
-                    <h3 id="feature-modular-title">Modulaire</h3>
-                    <p id="feature-modular-desc">Une application qui s'adapte à votre usage : lecteur, famille,
-                        association, bibliothécaire, libraire ou enseignant.</p>
+                    <h3>Modulaire</h3>
+                    <p>Une application qui s'adapte à votre usage : lecteur, famille, association, bibliothécaire, libraire ou enseignant.</p>
                 </div>
             </div>
         </div>
@@ -153,16 +140,13 @@
     <!-- Experimentation Section -->
     <section class="experiment">
         <div class="container">
-            <h2 id="exp-title">Expérimentons ensemble</h2>
-            <p id="exp-desc">
-                BiblioGenius est un projet citoyen. <br>
-                Nous cherchons des bibliothèques, des associations et des voisins pour tester de nouveaux usages :
-            </p>
+            <h2>Expérimentons ensemble</h2>
+            <p>BiblioGenius est un projet citoyen. <br>Nous cherchons des bibliothèques, des associations et des voisins pour tester de nouveaux usages :</p>
             <div class="tags">
-                <span class="tag"><svg class="tag-icon" aria-hidden="true" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 8a2 2 0 012-2h10a2 2 0 012 2v32a2 2 0 01-2 2H8a2 2 0 01-2-2V8z" fill="#2563eb"/><path d="M20 10l4-4 4 4v28l-4-3-4 3V10z" fill="#1e40af"/><path d="M28 8a2 2 0 012-2h10a2 2 0 012 2v32a2 2 0 01-2 2H30a2 2 0 01-2-2V8z" fill="#2563eb"/></svg> <span id="tag-clubs">Clubs de lecture</span></span>
-                <span class="tag"><svg class="tag-icon" aria-hidden="true" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M8 22l10-10 6 6 8-8 8 8v22H8V22z" fill="#93c5fd"/><path d="M4 42h40v4H4z" fill="#2563eb"/><rect x="14" y="28" width="6" height="14" rx="1" fill="#2563eb"/><rect x="28" y="24" width="6" height="18" rx="1" fill="#2563eb"/><circle cx="36" cy="10" r="3" fill="#2563eb"/><circle cx="18" cy="16" r="3" fill="#2563eb"/><path d="M18 16l7-3M29 13l7-3" stroke="#2563eb" stroke-width="1.5"/></svg> <span id="tag-boxes">Boîtes à livres connectées</span></span>
-                <span class="tag"><svg class="tag-icon" aria-hidden="true" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="16" width="32" height="28" rx="2" fill="#2563eb"/><path d="M14 16V10a10 10 0 0120 0v6" fill="none" stroke="#2563eb" stroke-width="4"/><rect x="16" y="22" width="16" height="14" rx="2" fill="#fff"/><path d="M20 22h8v6l-4 3-4-3z" fill="#93c5fd"/><circle cx="24" cy="12" r="4" fill="#93c5fd"/></svg> <span id="tag-assoc">Bibliothèques associatives</span></span>
-                <span class="tag"><svg class="tag-icon" aria-hidden="true" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="28" height="36" rx="3" fill="#2563eb"/><rect x="12" y="14" width="16" height="2.5" rx="1" fill="#fff"/><rect x="12" y="20" width="12" height="2.5" rx="1" fill="#93c5fd"/><rect x="12" y="26" width="14" height="2.5" rx="1" fill="#93c5fd"/><rect x="12" y="32" width="10" height="2.5" rx="1" fill="#93c5fd"/><rect x="14" y="2" width="28" height="36" rx="3" fill="#93c5fd" opacity="0.4"/></svg> <span id="tag-centers">Centres de documentation</span></span>
+                <span class="tag"><svg class="tag-icon" aria-hidden="true" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 8a2 2 0 012-2h10a2 2 0 012 2v32a2 2 0 01-2 2H8a2 2 0 01-2-2V8z" fill="#2563eb"/><path d="M20 10l4-4 4 4v28l-4-3-4 3V10z" fill="#1e40af"/><path d="M28 8a2 2 0 012-2h10a2 2 0 012 2v32a2 2 0 01-2 2H30a2 2 0 01-2-2V8z" fill="#2563eb"/></svg> <span>Clubs de lecture</span></span>
+                <span class="tag"><svg class="tag-icon" aria-hidden="true" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M8 22l10-10 6 6 8-8 8 8v22H8V22z" fill="#93c5fd"/><path d="M4 42h40v4H4z" fill="#2563eb"/><rect x="14" y="28" width="6" height="14" rx="1" fill="#2563eb"/><rect x="28" y="24" width="6" height="18" rx="1" fill="#2563eb"/><circle cx="36" cy="10" r="3" fill="#2563eb"/><circle cx="18" cy="16" r="3" fill="#2563eb"/><path d="M18 16l7-3M29 13l7-3" stroke="#2563eb" stroke-width="1.5"/></svg> <span>Boîtes à livres connectées</span></span>
+                <span class="tag"><svg class="tag-icon" aria-hidden="true" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="16" width="32" height="28" rx="2" fill="#2563eb"/><path d="M14 16V10a10 10 0 0120 0v6" fill="none" stroke="#2563eb" stroke-width="4"/><rect x="16" y="22" width="16" height="14" rx="2" fill="#fff"/><path d="M20 22h8v6l-4 3-4-3z" fill="#93c5fd"/><circle cx="24" cy="12" r="4" fill="#93c5fd"/></svg> <span>Bibliothèques associatives</span></span>
+                <span class="tag"><svg class="tag-icon" aria-hidden="true" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="28" height="36" rx="3" fill="#2563eb"/><rect x="12" y="14" width="16" height="2.5" rx="1" fill="#fff"/><rect x="12" y="20" width="12" height="2.5" rx="1" fill="#93c5fd"/><rect x="12" y="26" width="14" height="2.5" rx="1" fill="#93c5fd"/><rect x="12" y="32" width="10" height="2.5" rx="1" fill="#93c5fd"/><rect x="14" y="2" width="28" height="36" rx="3" fill="#93c5fd" opacity="0.4"/></svg> <span>Centres de documentation</span></span>
             </div>
         </div>
     </section>
@@ -170,34 +154,29 @@
     <!-- Test the App Section -->
     <section id="tester" class="test-app">
         <div class="container">
-            <h2 id="test-title">Testez l'application</h2>
-            <p id="test-desc">BiblioGenius est disponible en bêta. Rejoignez les premiers testeurs !</p>
+            <h2>Testez l'application</h2>
+            <p>BiblioGenius est disponible en bêta. Rejoignez les premiers testeurs !</p>
             <div class="test-buttons">
                 <a href="https://testflight.apple.com/v1/app/6757465461" target="_blank" rel="noopener" class="btn btn-primary">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:1.2em;height:1.2em;fill:currentColor;flex-shrink:0;"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg> <span id="btn-testflight-text">Tester sur iOS (TestFlight)</span>
+                    <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:1.2em;height:1.2em;fill:currentColor;flex-shrink:0;"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg> <span>Tester sur iOS (TestFlight)</span>
                 </a>
             </div>
-            <p id="android-note" class="android-note"><svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:1.2em;height:1.2em;fill:currentColor;vertical-align:-0.15em;"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg> <button type="button" onclick="openContact(event)" id="android-note-text" style="background:none;border:none;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;padding:0;">Android disponible sur demande</button></p>
+            <p class="android-note"><svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:1.2em;height:1.2em;fill:currentColor;vertical-align:-0.15em;"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg> <button type="button" onclick="openContact(event)" style="background:none;border:none;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;padding:0;">Android disponible sur demande</button></p>
         </div>
     </section>
 
     <!-- Free Your Library Section -->
     <!-- <section class="free-library">
          <div class="container">
-             <h2 id="free-library-title">Libérez votre bibliothèque</h2>
-             <p id="free-library-desc">
-                 Vos livres ne doivent pas être prisonniers d'une plateforme.
-                 Importez facilement vos données depuis vos anciennes applications.
-             </p>
+             <h2>Libérez votre bibliothèque</h2>
+             <p>Vos livres ne doivent pas être prisonniers d'une plateforme. Importez facilement vos données depuis vos anciennes applications.</p>
              <div class="platform-logos">
                  <div class="platform-logo"><span>📱</span> Gleeph</div>
                  <div class="platform-logo"><span>📖</span> Babelio</div>
                  <div class="platform-logo"><span>🌎</span> Goodreads</div>
                  <div class="platform-logo"><span>📦</span> inventaire.io</div>
              </div>
-             <a href="free-your-library.html" id="btn-free-library" class="btn btn-primary">
-                 Voir les tutoriels d'import
-             </a>
+             <a href="free-your-library.html" class="btn btn-primary">Voir les tutoriels d'import</a>
          </div>
      </section>-->
 
@@ -206,18 +185,16 @@
     <!-- Footer / Contact -->
     <footer id="contact" class="footer" role="contentinfo">
         <div class="container">
-            <h2 id="footer-title">Rejoignez l'aventure</h2>
-            <p id="footer-desc">Le projet est en développement actif. Écrivez-nous pour participer ou tester.</p>
+            <h2>Rejoignez l'aventure</h2>
+            <p>Le projet est en développement actif. Écrivez-nous pour participer ou tester.</p>
             <button type="button" onclick="openContact(event)" class="contact-btn">contact [at] bibliogenius.org</button>
             <br><br>
-            <a href="contribute.html" id="link-contribute" style="color:var(--accent-color); text-decoration: none;">➜
-                Espace Contributeurs</a>
+            <a href="/contribute.html" style="color:var(--accent-color); text-decoration: none;">➜ Espace Contributeurs</a>
             <br>
-            <!-- <a href="tutorials.html" id="link-tutorials" style="color:var(--accent-color); text-decoration: none;">➜
-                Tutoriels Vidéo</a> -->
+            <!-- <a href="tutorials.html" style="color:var(--accent-color); text-decoration: none;">➜ Tutoriels Vidéo</a> -->
 
             <div class="footer-bottom">
-                <p id="footer-copyright">© 2025-2026 BiblioGenius — Open Source (<a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a>)</p>
+                <p>© 2025-2026 BiblioGenius — Open Source (<a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a>)</p>
                 <a href="https://bff.ecoindex.fr/redirect/?url=https://bibliogenius.org/" target="_blank" rel="noopener" style="display:inline-block;margin-top:1rem;">
                     <img src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://bibliogenius.org/" alt="Score EcoIndex du site" loading="lazy">
                 </a>
@@ -225,226 +202,7 @@
         </div>
     </footer>
 
-    <script>
-        const translations = {
-            fr: {
-                title: "BiblioGenius - Gestion de bibliothèque Open Source, locale et privée",
-                hero_title: "La bibliothèque de demain,<br><span>chez vous.</span>",
-                hero_subtitle: "Gérez vos livres, gardez vos données, partagez avec vos voisins.<br><span class=\"hero-tagline\">Souveraineté Numérique & Open Source</span>",
-                btn_github: "Voir le Code (GitHub)",
-                btn_tester: "Devenir Testeur",
-                test_title: "Testez l'application",
-                test_desc: "BiblioGenius est disponible en bêta. Rejoignez les premiers testeurs !",
-                btn_testflight: "Tester sur iOS (TestFlight)",
-                android_note: "Android disponible sur demande",
-                feature_local_title: "Local-First",
-                feature_local_desc: "Vos données vous appartiennent. Fonctionne hors-ligne, sans cloud.",
-                feature_p2p_title: "Partage Réseau",
-                feature_p2p_desc: "Prêtez vos livres à vos amis ou voisins de confiance. Créez un réseau de lecture local et décentralisé.",
-                feature_e2ee_title: "Chiffré & Privé",
-                feature_e2ee_desc: "Pas de traçage, pas de publicité. Vos données sont chiffrées de bout en bout : personne ne peut les lire, même pas le serveur.",
-                feature_modular_title: "Modulaire",
-                feature_modular_desc: "Une application qui s'adapte à votre usage : lecteur, famille, association, bibliothécaire, libraire ou enseignant.",
-                exp_title: "Expérimentons ensemble",
-                exp_desc: "BiblioGenius est un projet citoyen. <br>Nous cherchons des bibliothèques, des associations et des voisins pour tester de nouveaux usages :",
-                tag_clubs: "Clubs de lecture",
-                tag_boxes: "Boîtes à livres connectées",
-                tag_assoc: "Bibliothèques associatives",
-                tag_centers: "Centres de documentation",
-                footer_title: "Rejoignez l'aventure",
-                footer_contribute: "➜ Espace Contributeurs",
-                footer_tutorials: "➜ Tutoriels Vidéo",
-                footer_desc: "Le projet est en développement actif. Écrivez-nous pour participer ou tester.",
-                footer_copyright: "© 2025-2026 BiblioGenius — Open Source (AGPL-3.0)",
-                free_library_title: "Libérez votre bibliothèque",
-                free_library_desc: "Vos livres ne doivent pas être prisonniers d'une plateforme. Importez facilement vos données depuis vos anciennes applications.",
-                btn_free_library: "Voir les tutoriels d'import"
-            },
-            en: {
-                title: "BiblioGenius - Open Source Library Management, Local & Private",
-                hero_title: "The library of tomorrow,<br><span>at home.</span>",
-                hero_subtitle: "Manage your books, keep your data, share with neighbors.<br><span class=\"hero-tagline\">Digital Sovereignty & Open Source</span>",
-                btn_github: "View Code (GitHub)",
-                btn_tester: "Become a Tester",
-                test_title: "Test the App",
-                test_desc: "BiblioGenius is available in beta. Join the first testers!",
-                btn_testflight: "Test on iOS (TestFlight)",
-                android_note: "Android available on request",
-                feature_local_title: "Local-First",
-                feature_local_desc: "Your data belongs to you. Works offline, no cloud required.",
-                feature_p2p_title: "Network Sharing",
-                feature_p2p_desc: "Lend your books to trusted friends or neighbors. Create a local and decentralized reading network.",
-                feature_e2ee_title: "Encrypted & Private",
-                feature_e2ee_desc: "No tracking, no ads. Your data is end-to-end encrypted: no one can read it, not even the server.",
-                feature_modular_title: "Modular",
-                feature_modular_desc: "An app that adapts to your needs: reader, family, association, librarian, bookseller, or teacher.",
-                exp_title: "Let's experiment together",
-                exp_desc: "BiblioGenius is a civic project. <br>We are looking for libraries, associations, and neighbors to test new uses:",
-                tag_clubs: "Book Clubs",
-                tag_boxes: "Connected Book Boxes",
-                tag_assoc: "Community Libraries",
-                tag_centers: "Documentation Centers",
-                footer_title: "Join the adventure",
-                footer_contribute: "➜ Contributors Space",
-                footer_tutorials: "➜ Video Tutorials",
-                footer_desc: "The project is in active development. Write to us to participate or test.",
-                footer_copyright: "© 2025-2026 BiblioGenius — Open Source (AGPL-3.0)",
-                free_library_title: "Free your library",
-                free_library_desc: "Your books shouldn't be trapped on one platform. Easily import your data from your old apps.",
-                btn_free_library: "View import tutorials"
-            },
-            es: {
-                title: "BiblioGenius - Gestión de biblioteca Open Source, local y privada",
-                hero_title: "La biblioteca del mañana,<br><span>en casa.</span>",
-                hero_subtitle: "Gestiona tus libros, guarda tus datos, comparte con vecinos.<br><span class=\"hero-tagline\">Soberanía Digital y Open Source</span>",
-                btn_github: "Ver Código (GitHub)",
-                btn_tester: "Ser Tester",
-                test_title: "Prueba la aplicación",
-                test_desc: "BiblioGenius está disponible en beta. ¡Únete a los primeros testers!",
-                btn_testflight: "Probar en iOS (TestFlight)",
-                android_note: "Android disponible bajo petición",
-                feature_local_title: "Local-First",
-                feature_local_desc: "Tus datos te pertenecen. Funciona sin conexión, sin nube.",
-                feature_p2p_title: "Compartir en Red",
-                feature_p2p_desc: "Presta tus libros a amigos o vecinos de confianza. Crea una red de lectura local y descentralizada.",
-                feature_e2ee_title: "Cifrado y Privado",
-                feature_e2ee_desc: "Sin rastreo, sin publicidad. Tus datos están cifrados de extremo a extremo: nadie puede leerlos, ni siquiera el servidor.",
-                feature_modular_title: "Modular",
-                feature_modular_desc: "Una aplicación que se adapta a tu uso: lector, familia, asociación, bibliotecario, librero o profesor.",
-                exp_title: "Experimentemos juntos",
-                exp_desc: "BiblioGenius es un proyecto ciudadano. <br>Buscamos bibliotecas, asociaciones y vecinos para probar nuevos usos:",
-                tag_clubs: "Clubes de lectura",
-                tag_boxes: "Cajas de libros conectadas",
-                tag_assoc: "Bibliotecas asociativas",
-                tag_centers: "Centros de documentación",
-                footer_title: "Únete a la aventura",
-                footer_contribute: "➜ Espacio de Colaboradores",
-                footer_tutorials: "➜ Tutoriales en Video",
-                footer_desc: "El proyecto está en desarrollo activo. Escríbenos para participar o probar.",
-                footer_copyright: "© 2025-2026 BiblioGenius — Open Source (AGPL-3.0)",
-                free_library_title: "Libera tu biblioteca",
-                free_library_desc: "Tus libros no devraient estar prisioneros de una plataforma. Importa fácilmente tus datos desde tus aplicaciones antiguas.",
-                btn_free_library: "Ver tutoriales de importación"
-            },
-            de: {
-                title: "BiblioGenius - Open-Source-Bibliotheksverwaltung, lokal und privat",
-                hero_title: "Die Bibliothek von morgen,<br><span>zu Hause.</span>",
-                hero_subtitle: "Verwalten Sie Ihre Bücher, behalten Sie Ihre Daten, teilen Sie mit Nachbarn.<br><span class=\"hero-tagline\">Digitale Souveränität & Open Source</span>",
-                btn_github: "Code ansehen (GitHub)",
-                btn_tester: "Tester werden",
-                test_title: "Testen Sie die App",
-                test_desc: "BiblioGenius ist als Beta verfügbar. Werden Sie einer der ersten Tester!",
-                btn_testflight: "Auf iOS testen (TestFlight)",
-                android_note: "Android auf Anfrage verfügbar",
-                feature_local_title: "Local-First",
-                feature_local_desc: "Ihre Daten gehören Ihnen. Funktioniert offline, ohne Cloud.",
-                feature_p2p_title: "Netzwerk-Teilen",
-                feature_p2p_desc: "Verleihen Sie Ihre Bücher an vertrauenswürdige Freunde oder Nachbarn. Erstellen Sie ein lokales und dezentrales Lesenetzwerk.",
-                feature_e2ee_title: "Verschlüsselt & Privat",
-                feature_e2ee_desc: "Kein Tracking, keine Werbung. Ihre Daten sind Ende-zu-Ende verschlüsselt: niemand kann sie lesen, nicht einmal der Server.",
-                feature_modular_title: "Modular",
-                feature_modular_desc: "Eine App, die sich an Ihre Bedürfnisse anpasst: Leser, Familie, Verein, Bibliothekar, Buchhändler oder Lehrer.",
-                exp_title: "Lassen Sie uns gemeinsam experimentieren",
-                exp_desc: "BiblioGenius ist ein Bürgerprojekt. <br>Wir suchen Bibliotheken, Vereine und Nachbarn, um neue Nutzungsmöglichkeiten zu testen:",
-                tag_clubs: "Buchclubs",
-                tag_boxes: "Vernetzte Bücherboxen",
-                tag_assoc: "Vereinsbibliotheken",
-                tag_centers: "Dokumentationszentren",
-                footer_title: "Mach mit beim Abenteuer",
-                footer_contribute: "➜ Bereich für Mitwirkende",
-                footer_tutorials: "➜ Videoanleitungen",
-                footer_desc: "Das Projekt befindet sich in aktiver Entwicklung. Schreiben Sie uns, um teilzunehmen oder zu testen.",
-                footer_copyright: "© 2025-2026 BiblioGenius — Open Source (AGPL-3.0)",
-                free_library_title: "Befreien Sie Ihre Bibliothek",
-                free_library_desc: "Ihre Bücher sollten nicht auf einer Plattform gefangen sein. Importieren Sie Ihre Daten ganz einfach aus Ihren alten Apps.",
-                btn_free_library: "Import-Anleitungen ansehen"
-            }
-        };
-
-        function setLanguage(lang) {
-            if (!translations[lang]) lang = 'en'; // Fallback to English
-
-            // Save to local storage
-            localStorage.setItem('bibliogenius_lang', lang);
-
-            const t = translations[lang];
-            document.documentElement.lang = lang;
-            document.title = t.title;
-
-            const setHtml = (id, content) => {
-                const el = document.getElementById(id);
-                if (el) el.innerHTML = content;
-            };
-
-            const setText = (id, content) => {
-                const el = document.getElementById(id);
-                if (el) el.textContent = content;
-            };
-
-            setHtml('hero-title', t.hero_title);
-            setHtml('hero-subtitle', t.hero_subtitle);
-            setText('btn_github-text', t.btn_github);
-            setText('btn-tester', t.btn_tester);
-            setText('test-title', t.test_title);
-            setText('test-desc', t.test_desc);
-            setText('btn-testflight-text', t.btn_testflight);
-            const androidEl = document.getElementById('android-note-text');
-            if (androidEl) androidEl.textContent = t.android_note;
-            setText('feature-local-title', t.feature_local_title);
-            setText('feature-local-desc', t.feature_local_desc);
-            setText('feature-p2p-title', t.feature_p2p_title);
-            setText('feature-p2p-desc', t.feature_p2p_desc);
-            setText('feature-e2ee-title', t.feature_e2ee_title);
-            setText('feature-e2ee-desc', t.feature_e2ee_desc);
-            setText('feature-modular-title', t.feature_modular_title);
-            setText('feature-modular-desc', t.feature_modular_desc);
-            setText('exp-title', t.exp_title);
-            setHtml('exp-desc', t.exp_desc);
-            setText('tag-clubs', t.tag_clubs);
-            setText('tag-boxes', t.tag_boxes);
-            setText('tag-assoc', t.tag_assoc);
-            setText('tag-centers', t.tag_centers);
-            setText('footer-title', t.footer_title);
-            setText('link-contribute', t.footer_contribute);
-            setText('link-tutorials', t.footer_tutorials);
-            setText('footer-desc', t.footer_desc);
-            setText('footer-copyright', t.footer_copyright);
-            setText('free-library-title', t.free_library_title);
-            setText('free-library-desc', t.free_library_desc);
-            setText('btn-free-library', t.btn_free_library);
-
-            document.getElementById('lang-switcher').value = lang;
-
-            // Swap showcase screenshots per language (fallback: en)
-            const imgLang = lang;
-            const mobileWebp = document.getElementById('showcase-mobile-webp');
-            const mobileSrc = document.getElementById('showcase-mobile-src');
-            const desktopImg = document.getElementById('showcase-desktop-img');
-            if (mobileWebp) mobileWebp.srcset = 'assets/home-bibliogenius-mobile-' + imgLang + '.webp';
-            if (mobileSrc) mobileSrc.srcset = 'assets/home-bibliogenius-mobile-' + imgLang + '.jpg';
-            if (desktopImg) desktopImg.src = 'assets/home-bibliogenius-' + imgLang + '.jpg';
-        }
-
-        // Check local storage first, then navigator
-        const storedLang = localStorage.getItem('bibliogenius_lang');
-        const userLang = navigator.language || navigator.userLanguage;
-        const systemLang = userLang.split('-')[0];
-        const defaultLang = translations[storedLang] ? storedLang : (translations[systemLang] ? systemLang : 'en');
-
-        setLanguage(defaultLang);
-
-        document.getElementById('lang-switcher').addEventListener('change', (e) => {
-            setLanguage(e.target.value);
-        });
-
-        // Email Obfuscation to prevent spam
-        function openContact(e) {
-            e.preventDefault();
-            const user = 'contact';
-            const domain = 'bibliogenius.org';
-            window.location.href = `mailto:${user}@${domain}`;
-        }
-    </script>
+    <script>function openContact(e){e.preventDefault();var u='contact',d='bibliogenius.org';location.href='mailto:'+u+'@'+d;}</script>
 </body>
 
 </html>
