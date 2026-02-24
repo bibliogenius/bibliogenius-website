@@ -1,6 +1,6 @@
 # BiblioGenius Website
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![Status](https://img.shields.io/badge/status-live-success)](https://bibliogenius.org)
 
 Public website for [bibliogenius.org](https://bibliogenius.org) - app showcase, documentation, and project story.
@@ -111,4 +111,4 @@ make clean    # Remove generated language subdirectories (keeps French root file
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [GNU AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.html).
