@@ -16,6 +16,11 @@ schema_description: Application Open Source pour gérer votre bibliothèque pers
 skip_link: Aller au contenu
 nav_label: Langue
 lang_label: Choisir la langue
+nav_site_label: Navigation principale
+nav_home: Accueil
+nav_story: Notre histoire
+nav_docs: Documentation
+nav_contribute: Contribuer
 
 # -- Hero --
 hero_title: La bibliothèque de demain,<br><span>chez vous.</span>

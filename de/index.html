@@ -31,12 +31,12 @@
     <meta name="twitter:image" content="https://bibliogenius.org/assets/home-bibliogenius-de.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 
-    <link rel="author" type="text/markdown" href="/llms.txt">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="author" type="text/markdown" href="../llms.txt">
+    <link rel="stylesheet" href="../styles.css">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -64,14 +64,25 @@
 
     <!-- Hero Section -->
     <header class="hero" role="banner">
-        <!-- Language Switcher -->
-        <nav class="lang-switcher" aria-label="Sprache">
-            <select onchange="location.href=this.value" class="lang-select" aria-label="Sprache wählen">
-            <option value="/de/" selected>Deutsch</option>
-            <option value="/en/">English</option>
-            <option value="/es/">Español</option>
-            <option value="/">Français</option>
-            </select>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+            <a href="index.html" class="site-nav-logo">BiblioGenius</a>
+            <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="site-nav-menu" id="site-nav-menu">
+                <a href="index.html" class="site-nav-link">Startseite</a>
+                <a href="story.html" class="site-nav-link">Unsere Geschichte</a>
+                <a href="docs/index.html" class="site-nav-link">Dokumentation</a>
+                <a href="contribute.html" class="site-nav-link">Mitmachen</a>
+                <select onchange="location.href=this.value" class="lang-select" aria-label="Sprache wählen">
+            <option value="index.html" selected>Deutsch</option>
+            <option value="../en/index.html">English</option>
+            <option value="../es/index.html">Español</option>
+            <option value="../index.html">Français</option>
+                </select>
+            </div>
         </nav>
         <div class="hero-content">
             <h1>Die Bibliothek von morgen,<br><span>zu Hause.</span></h1>
@@ -85,7 +96,7 @@
                     <span>Code ansehen (GitHub)</span>
                 </a>
                 <a href="#tester" class="btn btn-secondary">Tester werden</a>
-                <a href="/de/story.html" class="btn btn-secondary" style="border:1px solid rgba(255,255,255,0.2);">Die Geschichte entdecken</a>
+                <a href="story.html" class="btn btn-secondary" style="border:1px solid rgba(255,255,255,0.2);">Die Geschichte entdecken</a>
             </div>
         </div>
     </header>
@@ -98,10 +109,10 @@
             <div class="showcase-frame">
                 <picture>
                     <source media="(max-width: 768px)"
-                        srcset="/assets/home-bibliogenius-mobile-de.webp" type="image/webp">
+                        srcset="../assets/home-bibliogenius-mobile-de.webp" type="image/webp">
                     <source media="(max-width: 768px)"
-                        srcset="/assets/home-bibliogenius-mobile-de.jpg">
-                    <img src="/assets/home-bibliogenius-de.jpg"
+                        srcset="../assets/home-bibliogenius-mobile-de.jpg">
+                    <img src="../assets/home-bibliogenius-de.jpg"
                         alt="BiblioGenius-Screenshot mit der Bibliotheksansicht und Buchcovern" loading="lazy">
                 </picture>
             </div>
@@ -189,7 +200,7 @@
             <p>Das Projekt befindet sich in aktiver Entwicklung. Schreiben Sie uns, um teilzunehmen oder zu testen.</p>
             <button type="button" onclick="openContact(event)" class="contact-btn">contact [at] bibliogenius.org</button>
             <br><br>
-            <a href="/contribute.html" style="color:var(--accent-color); text-decoration: none;">➜ Bereich für Mitwirkende</a>
+            <a href="contribute.html" style="color:var(--accent-color); text-decoration: none;">➜ Bereich für Mitwirkende</a>
             <br>
             <!-- <a href="tutorials.html" style="color:var(--accent-color); text-decoration: none;">➜ Videoanleitungen</a> -->
 
@@ -203,6 +214,23 @@
     </footer>
 
     <script>function openContact(e){e.preventDefault();var u='contact',d='bibliogenius.org';location.href='mailto:'+u+'@'+d;}</script>
+    <script>
+    (function() {
+        var toggle = document.querySelector('.site-nav-toggle');
+        var menu = document.getElementById('site-nav-menu');
+        if (!toggle || !menu) return;
+        toggle.addEventListener('click', function() {
+            var isOpen = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+        menu.querySelectorAll('.site-nav-link').forEach(function(a) {
+            a.addEventListener('click', function() {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
 </body>
 
 </html>

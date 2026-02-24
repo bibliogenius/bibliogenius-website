@@ -10,6 +10,11 @@ meta_description: Lernen Sie BiblioGenius mit unseren Videoanleitungen: Import, 
 # -- Navigation --
 lang_label: Sprache
 btn_back: ← Zurück zur Startseite
+nav_site_label: Hauptnavigation
+nav_home: Startseite
+nav_story: Unsere Geschichte
+nav_docs: Dokumentation
+nav_contribute: Mitmachen
 
 # -- Hero --
 hero_title: Videoanleitungen

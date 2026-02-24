@@ -10,6 +10,11 @@ meta_description: Apprenez à utiliser BiblioGenius avec nos guides vidéo : imp
 # -- Navigation --
 lang_label: Langue
 btn_back: ← Retour à l'accueil
+nav_site_label: Navigation principale
+nav_home: Accueil
+nav_story: Notre histoire
+nav_docs: Documentation
+nav_contribute: Contribuer
 
 # -- Hero --
 hero_title: Tutoriels Vidéo

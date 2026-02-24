@@ -16,6 +16,11 @@ schema_description: Open source app to manage your personal library and share yo
 skip_link: Skip to content
 nav_label: Language
 lang_label: Choose language
+nav_site_label: Main navigation
+nav_home: Home
+nav_story: Our Story
+nav_docs: Documentation
+nav_contribute: Contribute
 
 # -- Hero --
 hero_title: The library of tomorrow,<br><span>at home.</span>

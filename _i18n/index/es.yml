@@ -16,6 +16,11 @@ schema_description: Aplicación Open Source para gestionar tu biblioteca persona
 skip_link: Ir al contenido
 nav_label: Idioma
 lang_label: Elegir idioma
+nav_site_label: Navegacion principal
+nav_home: Inicio
+nav_story: Nuestra historia
+nav_docs: Documentacion
+nav_contribute: Contribuir
 
 # -- Hero --
 hero_title: La biblioteca del mañana,<br><span>en casa.</span>

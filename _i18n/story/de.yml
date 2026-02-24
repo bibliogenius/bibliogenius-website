@@ -14,6 +14,11 @@ skip_link: Zum Inhalt springen
 nav_label: Navigation
 lang_label: Sprache
 back: ← Startseite
+nav_site_label: Hauptnavigation
+nav_home: Startseite
+nav_story: Unsere Geschichte
+nav_docs: Dokumentation
+nav_contribute: Mitmachen
 
 # -- Hero --
 hero_title: Sie haben 200&nbsp;Bücher<br>zu&nbsp;Hause.

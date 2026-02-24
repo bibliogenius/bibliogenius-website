@@ -15,6 +15,11 @@ skip_link: Skip to content
 nav_label: Navigation
 lang_label: Language
 back: ← Back
+nav_site_label: Main navigation
+nav_home: Home
+nav_story: Our Story
+nav_docs: Documentation
+nav_contribute: Contribute
 
 # -- Hero --
 hero_title: Contribute to the Project

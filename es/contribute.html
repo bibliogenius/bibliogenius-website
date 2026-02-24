@@ -30,12 +30,12 @@
     <meta name="twitter:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 
-    <link rel="author" type="text/markdown" href="/llms.txt">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="author" type="text/markdown" href="../llms.txt">
+    <link rel="stylesheet" href="../styles.css">
     <style>
         .split-container {
             display: flex;
@@ -133,14 +133,25 @@
     <a href="#main-content" class="skip-link">Ir al contenido</a>
 
     <header class="hero" role="banner" style="min-height: 40vh; padding-bottom: 2rem;">
-        <nav class="lang-switcher" aria-label="Navegación">
-            <a href="/es/" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">← Volver</a>
-            <select onchange="location.href=this.value" aria-label="Idioma" style="background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:0.3rem 0.5rem;border-radius:0.375rem;font-size:0.85rem;cursor:pointer;">
-            <option value="/de/contribute.html">Deutsch</option>
-            <option value="/en/contribute.html">English</option>
-            <option value="/es/contribute.html" selected>Español</option>
-            <option value="/contribute.html">Français</option>
-            </select>
+        <nav class="site-nav" aria-label="Navegacion principal">
+            <a href="index.html" class="site-nav-logo">BiblioGenius</a>
+            <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="site-nav-menu" id="site-nav-menu">
+                <a href="index.html" class="site-nav-link">Inicio</a>
+                <a href="story.html" class="site-nav-link">Nuestra historia</a>
+                <a href="docs/index.html" class="site-nav-link">Documentacion</a>
+                <a href="contribute.html" class="site-nav-link">Contribuir</a>
+                <select onchange="location.href=this.value" class="lang-select" aria-label="Idioma">
+            <option value="../de/contribute.html">Deutsch</option>
+            <option value="../en/contribute.html">English</option>
+            <option value="contribute.html" selected>Español</option>
+            <option value="../contribute.html">Français</option>
+                </select>
+            </div>
         </nav>
         <div class="hero-content">
             <h1>Contribuir al Proyecto</h1>
@@ -287,13 +298,30 @@
 
     <footer class="footer" role="contentinfo">
         <div class="container" style="text-align: center;">
-            <p>© 2025-2026 BiblioGenius — <a href=\"https://www.gnu.org/licenses/agpl-3.0.html\" style=\"color:var(--accent-light);\">AGPL-3.0</a> | <a href="/es/" style="color:white;">Volver al inicio</a></p>
+            <p>© 2025-2026 BiblioGenius — <a href=\"https://www.gnu.org/licenses/agpl-3.0.html\" style=\"color:var(--accent-light);\">AGPL-3.0</a> | <a href="index.html" style="color:white;">Volver al inicio</a></p>
             <a href="https://bff.ecoindex.fr/redirect/?url=https://bibliogenius.org/contribute.html" target="_blank" rel="noopener" style="display:inline-block;margin-top:1rem;">
                 <img src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://bibliogenius.org/contribute.html" alt="Puntuación EcoIndex del sitio" loading="lazy">
             </a>
         </div>
     </footer>
 
+    <script>
+    (function() {
+        var toggle = document.querySelector('.site-nav-toggle');
+        var menu = document.getElementById('site-nav-menu');
+        if (!toggle || !menu) return;
+        toggle.addEventListener('click', function() {
+            var isOpen = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+        menu.querySelectorAll('.site-nav-link').forEach(function(a) {
+            a.addEventListener('click', function() {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
 </body>
 
 </html>

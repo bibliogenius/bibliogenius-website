@@ -16,6 +16,11 @@ schema_description: Open-Source-App zur Verwaltung Ihrer persönlichen Bibliothe
 skip_link: Zum Inhalt springen
 nav_label: Sprache
 lang_label: Sprache wählen
+nav_site_label: Hauptnavigation
+nav_home: Startseite
+nav_story: Unsere Geschichte
+nav_docs: Dokumentation
+nav_contribute: Mitmachen
 
 # -- Hero --
 hero_title: Die Bibliothek von morgen,<br><span>zu Hause.</span>

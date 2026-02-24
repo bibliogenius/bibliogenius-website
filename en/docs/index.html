@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - BiblioGenius</title>
+    <meta name="description" content="BiblioGenius documentation and user guides">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Documentation - BiblioGenius">
+    <meta property="og:description" content="BiblioGenius documentation and user guides">
+    <meta property="og:url" content="https://bibliogenius.org/en/docs/">
+    <meta property="og:site_name" content="BiblioGenius">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Documentation - BiblioGenius">
+    <meta name="twitter:description" content="BiblioGenius documentation and user guides">
+
+    <link rel="canonical" href="https://bibliogenius.org/en/docs/">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .docs-container {
+            padding: 3rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .doc-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .doc-group-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6b7280;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .doc-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .doc-card {
+            background: var(--white);
+            border-radius: 0.75rem;
+            padding: 1.25rem 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.15s, box-shadow 0.15s;
+            display: block;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .doc-card h4 {
+            font-size: 1.05rem;
+            margin-bottom: 0.35rem;
+            color: var(--heading-color);
+        }
+
+        .doc-card p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.5;
+            margin: 0;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "BiblioGenius", "item": "https://bibliogenius.org/en/"},
+            {"@type": "ListItem", "position": 2, "name": "Documentation"}
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="hero" style="padding: 2.5rem 1.5rem;">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="../index.html" class="site-nav-logo">BiblioGenius</a>
+            <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="site-nav-menu" id="site-nav-menu">
+                <a href="../index.html" class="site-nav-link">Home</a>
+                <a href="../story.html" class="site-nav-link">Our Story</a>
+                <a href="index.html" class="site-nav-link">Documentation</a>
+                <a href="../contribute.html" class="site-nav-link">Contribute</a>
+                <select onchange="location.href=this.value" class="lang-select" aria-label="Language">
+            <option value="index.html" selected>English</option>
+            <option value="../../docs/index.html">Francais</option>
+                </select>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Documentation</h1>
+            <p>Guides and tutorials to master BiblioGenius</p>
+        </div>
+    </header>
+
+    <main id="main-content" class="docs-container">
+        <a href="../../index.html" class="back-link">&larr; Back to home</a>
+
+        <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">All guides</h2>
+        <p style="color: #6b7280; margin-bottom: 2rem;">Choose a topic to get started</p>
+
+        <div class="doc-group">
+            <h3 class="doc-group-title">Library</h3>
+            <div class="doc-cards">
+                <a href="add-book.html" class="doc-card">
+                    <h4>How to add a book</h4>
+                    <p>Guide to adding books by scanning, searching or manual entry</p>
+                </a>
+                <a href="organize-shelves.html" class="doc-card">
+                    <h4>How to organize my shelves</h4>
+                    <p>Create thematic shelves and organize your books your way</p>
+                </a>
+                <a href="reading-progress.html" class="doc-card">
+                    <h4>How to track reading progress</h4>
+                    <p>Track your progress through books and earn XP</p>
+                </a>
+            </div>
+        </div>
+        <div class="doc-group">
+            <h3 class="doc-group-title">Search</h3>
+            <div class="doc-cards">
+                <a href="external-search.html" class="doc-card">
+                    <h4>How to search external catalogs</h4>
+                    <p>Find books in the BNF, OpenLibrary, Inventaire and other sources</p>
+                </a>
+                <a href="import-books.html" class="doc-card">
+                    <h4>Importing Books</h4>
+                    <p>Import your books from Gleeph, Goodreads, Babelio or a CSV file</p>
+                </a>
+            </div>
+        </div>
+        <div class="doc-group">
+            <h3 class="doc-group-title">Network</h3>
+            <div class="doc-cards">
+                <a href="connect-friends.html" class="doc-card">
+                    <h4>How to connect with friends</h4>
+                    <p>Share your library and connect with other readers</p>
+                </a>
+                <a href="contacts.html" class="doc-card">
+                    <h4>How to manage contacts</h4>
+                    <p>Add friends and libraries to your network</p>
+                </a>
+                <a href="network.html" class="doc-card">
+                    <h4>How to explore the network</h4>
+                    <p>Discover and browse your contacts' catalogs</p>
+                </a>
+                <a href="lending.html" class="doc-card">
+                    <h4>How to lend a book</h4>
+                    <p>Manage lending your books to contacts</p>
+                </a>
+                <a href="requests.html" class="doc-card">
+                    <h4>How to manage requests</h4>
+                    <p>View and manage incoming and outgoing borrow requests</p>
+                </a>
+            </div>
+        </div>
+        <div class="doc-group">
+            <h3 class="doc-group-title">Advanced</h3>
+            <div class="doc-cards">
+                <a href="collections.html" class="doc-card">
+                    <h4>How to use Collections</h4>
+                    <p>Group your books into custom lists</p>
+                </a>
+                <a href="audio.html" class="doc-card">
+                    <h4>How to use audio features</h4>
+                    <p>Listen to free audiobooks from LibriVox, Litterature Audio and Internet Archive</p>
+                </a>
+                <a href="memory-game.html" class="doc-card">
+                    <h4>How to play Memory</h4>
+                    <p>Test your memory with your book covers</p>
+                </a>
+            </div>
+        </div>
+        <div class="doc-group">
+            <h3 class="doc-group-title">Data</h3>
+            <div class="doc-cards">
+                <a href="privacy-data.html" class="doc-card">
+                    <h4>Where is my data stored</h4>
+                    <p>Everything about local storage and data privacy</p>
+                </a>
+                <a href="profile.html" class="doc-card">
+                    <h4>My Profile</h4>
+                    <p>Reading statistics, badges, goals and leaderboard</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>BiblioGenius - Open-source, local-first.</p>
+        </div>
+    </footer>
+    <script>
+    (function() {
+        var toggle = document.querySelector('.site-nav-toggle');
+        var menu = document.getElementById('site-nav-menu');
+        if (!toggle || !menu) return;
+        toggle.addEventListener('click', function() {
+            var isOpen = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+        menu.querySelectorAll('.site-nav-link').forEach(function(a) {
+            a.addEventListener('click', function() {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
+</body>
+
+</html>

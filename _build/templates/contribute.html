@@ -26,12 +26,12 @@
     <meta name="twitter:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{root}}favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{root}}favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{root}}apple-touch-icon.png">
 
-    <link rel="author" type="text/markdown" href="/llms.txt">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="author" type="text/markdown" href="{{root}}llms.txt">
+    <link rel="stylesheet" href="{{root}}styles.css">
     <style>
         .split-container {
             display: flex;
@@ -129,11 +129,22 @@
     <a href="#main-content" class="skip-link">{{skip_link}}</a>
 
     <header class="hero" role="banner" style="min-height: 40vh; padding-bottom: 2rem;">
-        <nav class="lang-switcher" aria-label="{{nav_label}}">
-            <a href="{{url:index}}" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">{{back}}</a>
-            <select onchange="location.href=this.value" aria-label="{{lang_label}}" style="background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:0.3rem 0.5rem;border-radius:0.375rem;font-size:0.85rem;cursor:pointer;">
+        <nav class="site-nav" aria-label="{{nav_site_label}}">
+            <a href="index.html" class="site-nav-logo">BiblioGenius</a>
+            <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="site-nav-menu" id="site-nav-menu">
+                <a href="index.html" class="site-nav-link">{{nav_home}}</a>
+                <a href="{{url:story}}" class="site-nav-link">{{nav_story}}</a>
+                <a href="docs/index.html" class="site-nav-link">{{nav_docs}}</a>
+                <a href="{{url:contribute}}" class="site-nav-link">{{nav_contribute}}</a>
+                <select onchange="location.href=this.value" class="lang-select" aria-label="{{lang_label}}">
 {{lang_switcher}}
-            </select>
+                </select>
+            </div>
         </nav>
         <div class="hero-content">
             <h1>{{hero_title}}</h1>
@@ -287,6 +298,23 @@
         </div>
     </footer>
 
+    <script>
+    (function() {
+        var toggle = document.querySelector('.site-nav-toggle');
+        var menu = document.getElementById('site-nav-menu');
+        if (!toggle || !menu) return;
+        toggle.addEventListener('click', function() {
+            var isOpen = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+        menu.querySelectorAll('.site-nav-link').forEach(function(a) {
+            a.addEventListener('click', function() {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
 </body>
 
 </html>

@@ -10,6 +10,11 @@ meta_description: Learn how to use BiblioGenius with our video guides: import, m
 # -- Navigation --
 lang_label: Language
 btn_back: ← Back to home
+nav_site_label: Main navigation
+nav_home: Home
+nav_story: Our Story
+nav_docs: Documentation
+nav_contribute: Contribute
 
 # -- Hero --
 hero_title: Video Tutorials

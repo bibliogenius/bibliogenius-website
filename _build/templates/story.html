@@ -8,9 +8,9 @@
 
     <link rel="canonical" href="{{canonical_url}}">
 {{hreflang}}
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{root}}favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{root}}favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{root}}apple-touch-icon.png">
 
     <meta property="og:type" content="article">
     <meta property="og:url" content="{{og_url}}">
@@ -18,7 +18,7 @@
     <meta property="og:description" content="{{og_description}}">
     <meta property="og:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
 
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="{{root}}styles.css">
 
     <style>
         /* --- Story page overrides --- */
@@ -260,36 +260,13 @@
             .scene { padding: 6rem 2rem 5rem; }
         }
 
-        .story-topbar {
+        .site-nav.site-nav--fixed {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 1.5rem;
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             border-bottom: 1px solid rgba(255,255,255,0.06);
         }
-        .story-topbar-name {
-            font-weight: 700;
-            font-size: 0.8125rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #f1f5f9;
-            text-decoration: none;
-        }
-        .story-topbar-back {
-            font-size: 0.8125rem;
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .story-topbar-back:hover { color: var(--accent-color); }
 
         .colophon {
             background: #0f172a;
@@ -317,7 +294,7 @@
         }
 
         @media print {
-            .story-topbar, .cta-row, .colophon { display: none; }
+            .site-nav, .cta-row, .colophon { display: none; }
             .scene { min-height: auto; padding: 2rem 0; }
             .scene--dark { background: #fff !important; color: #000 !important; }
             .scene--dark h2, .scene--dark p { color: #000 !important; }
@@ -329,11 +306,19 @@
 
 <a href="#main" class="skip-link">{{skip_link}}</a>
 
-<nav class="story-topbar" aria-label="{{nav_label}}">
-    <a href="/" class="story-topbar-name">BiblioGenius</a>
-    <div style="display:flex;align-items:center;gap:1rem;">
-        <a href="/" class="story-topbar-back">{{back}}</a>
-        <select onchange="location.href=this.value" aria-label="{{lang_label}}" style="background:#1f2937;color:#fff;border:1px solid #4b5563;padding:0.2rem 0.4rem;border-radius:0.375rem;font-size:0.8125rem;cursor:pointer;">
+<nav class="site-nav site-nav--fixed" aria-label="{{nav_site_label}}">
+    <a href="index.html" class="site-nav-logo">BiblioGenius</a>
+    <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    <div class="site-nav-menu" id="site-nav-menu">
+        <a href="index.html" class="site-nav-link">{{nav_home}}</a>
+        <a href="{{url:story}}" class="site-nav-link">{{nav_story}}</a>
+        <a href="docs/index.html" class="site-nav-link">{{nav_docs}}</a>
+        <a href="{{url:contribute}}" class="site-nav-link">{{nav_contribute}}</a>
+        <select onchange="location.href=this.value" class="lang-select" aria-label="{{lang_label}}">
 {{lang_switcher}}
         </select>
     </div>
@@ -467,6 +452,23 @@
 <footer class="colophon">{{colophon}}</footer>
 
 <script>function openContact(e){e.preventDefault();var u='contact',d='bibliogenius.org';location.href='mailto:'+u+'@'+d+'?subject=Test%20Android'}</script>
+<script>
+(function() {
+    var toggle = document.querySelector('.site-nav-toggle');
+    var menu = document.getElementById('site-nav-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+    menu.querySelectorAll('.site-nav-link').forEach(function(a) {
+        a.addEventListener('click', function() {
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+</script>
 
 </body>
 </html>
