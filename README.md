@@ -1,41 +1,114 @@
 # BiblioGenius Website
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status](https://img.shields.io/badge/status-live-success)](https://bibliogenius.com)
+[![Status](https://img.shields.io/badge/status-live-success)](https://bibliogenius.org)
 
-**The public landing page and marketing website for BiblioGenius.**
+Public website for [bibliogenius.org](https://bibliogenius.org) - app showcase, documentation, and project story.
 
-This repository hosts the static website files for the project's public presence.
+## Prerequisites
 
-## 🚀 Overview
+- Python 3
+- `pip install markdown` (used for doc generation)
 
-- **Stack**: Static HTML, CSS, assets.
-- **Host**: GitHub Pages / Netlify (Deployment agnostic).
-- **Purpose**: App download links, feature showcase, and project mission.
+## Project structure
 
-## 📋 Prerequisites
+```
+_build/
+  build.py              # Build script: templates + YAML/Markdown -> HTML
+  templates/
+    index.html          # Homepage template
+    story.html          # "Our Story" page template
+    contribute.html     # Contribute page template
+    free-your-library.html
+    tutorials.html
+    _doc.html           # Doc article template (prefix _ = not a page)
+    _doc-index.html     # Doc index template
 
-- No build system required. Just a web browser and text editor.
+_i18n/
+  {page}/{lang}.yml     # Translations per page (fr, en, es, de)
 
-## ⚡ Quick Start
+_docs/
+  {slug}/{lang}.md      # Documentation guides (Markdown + frontmatter)
+  {slug}/images/        # Screenshots for that guide
+  _ui/{lang}.yml        # Shared UI strings for doc pages (sidebar, nav, footer)
 
-```bash
-# Clone repository
-git clone https://github.com/bibliogenius/bibliogenius-public.git
-cd bibliogenius-public
-
-# Open locally
-open index.html
+assets/                 # CSS, images, fonts
+docs/                   # Generated doc HTML (do not edit)
+{lang}/                 # Generated translated pages (do not edit)
 ```
 
-## 🛠️ Development
+French (`fr`) is the default language. French pages are generated at the site root; other languages go into `/{lang}/` subdirectories.
 
-Modify `index.html` or `styles.css` directly. Ensure assets are optimized before adding them to the `/assets` folder.
+## Quick start
 
-## 🔗 Related Repositories
+```bash
+make build    # Generate all HTML from templates + translations
+make serve    # Local dev server at http://localhost:8000
+```
 
-- [**bibliogenius-app**](https://github.com/bibliogenius/bibliogenius-app): The application featured on this site.
+You can also build a single page: `python3 _build/build.py story`
 
-## 📄 License
+## Common workflows
+
+### Edit an existing page
+
+1. Modify the YAML values in `_i18n/{page}/{lang}.yml` (keep HTML tags as-is)
+2. Run `make build`
+
+To change the page layout or structure, edit `_build/templates/{page}.html`. Placeholders use `{{key}}` syntax, resolved from the YAML translations.
+
+### Add a new language
+
+```bash
+make new LANG=pt        # Creates _i18n/story/pt.yml from the French reference
+```
+
+For full coverage, also copy the YAML files for each page directory under `_i18n/` and translate them. Then `make build`.
+
+### Add or edit a documentation guide
+
+Docs live in `_docs/{slug}/{lang}.md` with YAML frontmatter:
+
+```yaml
+---
+title: How to add a book
+description: Guide for adding books by scan, search, or manual entry
+order: 1
+group: library
+---
+
+Markdown content here...
+```
+
+Available groups: `library`, `discovery`, `social`, `advanced`, `data`.
+
+To add a new guide: create `_docs/{slug}/fr.md` (and other languages), add images in `_docs/{slug}/images/`, then `make build`.
+
+### Add a new page (not a doc)
+
+1. Create `_build/templates/{page}.html` with `{{key}}` placeholders
+2. Create `_i18n/{page}/` with at least `fr.yml`
+3. Run `make build`
+
+Cross-page links use `{{url:page_name}}` - the build script resolves them to correct relative paths per language.
+
+## Deployment
+
+Push to `main`. GitHub Pages serves the site automatically.
+
+Generated files (`docs/`, `{lang}/`, root HTML) are committed to the repo since GitHub Pages serves static files directly.
+
+## Cleanup
+
+```bash
+make clean    # Remove generated language subdirectories (keeps French root files)
+```
+
+## Related repositories
+
+- [bibliogenius](https://github.com/bibliogenius/bibliogenius) - Rust backend
+- [bibliogenius-app](https://github.com/bibliogenius/bibliogenius-app) - Flutter frontend
+
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
