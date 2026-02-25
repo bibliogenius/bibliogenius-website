@@ -2,7 +2,7 @@
 title: Comment jouer au Memory
 description: Testez votre memoire avec les couvertures de vos livres
 order: 15
-group: advanced
+group: games
 ---
 
 Le jeu de Memory utilise les couvertures de vos propres livres pour creer un jeu de paires. Retournez les cartes et retrouvez les paires le plus rapidement possible.

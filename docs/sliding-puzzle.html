@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment organiser mes etageres - Documentation - BiblioGenius</title>
-    <meta name="description" content="Creez des etageres thematiques et organisez vos livres a votre facon">
+    <title>Comment jouer au Taquin - Documentation - BiblioGenius</title>
+    <meta name="description" content="Reconstituez une couverture en faisant glisser les tuiles">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Comment organiser mes etageres - Documentation - BiblioGenius">
-    <meta property="og:description" content="Creez des etageres thematiques et organisez vos livres a votre facon">
-    <meta property="og:url" content="https://bibliogenius.org/docs/organize-shelves.html">
+    <meta property="og:title" content="Comment jouer au Taquin - Documentation - BiblioGenius">
+    <meta property="og:description" content="Reconstituez une couverture en faisant glisser les tuiles">
+    <meta property="og:url" content="https://bibliogenius.org/docs/sliding-puzzle.html">
     <meta property="og:site_name" content="BiblioGenius">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Comment organiser mes etageres - Documentation - BiblioGenius">
-    <meta name="twitter:description" content="Creez des etageres thematiques et organisez vos livres a votre facon">
+    <meta name="twitter:title" content="Comment jouer au Taquin - Documentation - BiblioGenius">
+    <meta name="twitter:description" content="Reconstituez une couverture en faisant glisser les tuiles">
 
-    <link rel="canonical" href="https://bibliogenius.org/docs/organize-shelves.html">
-    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/organize-shelves.html">
-    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/organize-shelves.html">
-    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/organize-shelves.html">
+    <link rel="canonical" href="https://bibliogenius.org/docs/sliding-puzzle.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/sliding-puzzle.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/sliding-puzzle.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/sliding-puzzle.html">
 
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
@@ -233,7 +233,7 @@
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "BiblioGenius", "item": "https://bibliogenius.org/"},
             {"@type": "ListItem", "position": 2, "name": "Documentation", "item": "https://bibliogenius.org/docs/"},
-            {"@type": "ListItem", "position": 3, "name": "Comment organiser mes etageres"}
+            {"@type": "ListItem", "position": 3, "name": "Comment jouer au Taquin"}
         ]
     }
     </script>
@@ -256,8 +256,8 @@
                 <a href="index.html" class="site-nav-link">Documentation</a>
                 <a href="../contribute.html" class="site-nav-link">Contribuer</a>
                 <select onchange="location.href=this.value" class="lang-select" aria-label="Langue">
-            <option value="../en/docs/organize-shelves.html">English</option>
-            <option value="organize-shelves.html" selected>Francais</option>
+            <option value="../en/docs/sliding-puzzle.html">English</option>
+            <option value="sliding-puzzle.html" selected>Francais</option>
                 </select>
             </div>
         </nav>
@@ -278,7 +278,7 @@
                 <div class="sidebar-group">
                     <div class="sidebar-group-label">Bibliotheque</div>
                     <a href="add-book.html" class="sidebar-link">Comment ajouter un livre</a>
-                    <a href="organize-shelves.html" class="sidebar-link active" aria-current="page">Comment organiser mes etageres</a>
+                    <a href="organize-shelves.html" class="sidebar-link">Comment organiser mes etageres</a>
                     <a href="reading-progress.html" class="sidebar-link">Comment suivre ma progression de lecture</a>
                 </div>
                 <div class="sidebar-group">
@@ -308,21 +308,48 @@
 
             <article class="doc-content">
                 <a href="index.html" class="back-link">&larr; Tous les guides</a>
-                <h1>Comment organiser mes etageres</h1>
-<p>Les etageres vous permettent de classer vos livres par theme, genre ou tout autre critere.</p>
-<p><img loading="lazy" alt="Vue des etageres" src="images/organize-shelves/shelves-view.png" /></p>
-<h2 id="creer-et-gerer-des-etageres">Creer et gerer des etageres</h2>
+                <h1>Comment jouer au Taquin</h1>
+<p>Le Taquin utilise une des couvertures de vos livres comme image a reconstituer. Faites glisser les tuiles pour retrouver l'image complete.</p>
+<h2 id="3-niveaux-de-difficulte">3 niveaux de difficulte</h2>
+<table>
+<thead>
+<tr>
+<th>Niveau</th>
+<th>Grille</th>
+<th>Tuiles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Facile</td>
+<td>3x3</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Moyen</td>
+<td>4x4</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Difficile</td>
+<td>5x5</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comment-jouer">Comment jouer</h2>
 <ol>
-<li>Creez des etageres thematiques pour vos livres (ex : "SF", "Favoris").</li>
-<li>Dans votre Bibliotheque, appuyez sur une etagere pour filtrer.</li>
-<li>Appuyez sur l'icone de tri pour entrer en mode reorganisation.</li>
-<li>Faites glisser les livres dans l'ordre souhaite, ou appuyez sur A-Z pour un tri automatique par auteur.</li>
-<li>Appuyez sur le bouton de validation pour sauvegarder !</li>
+<li>Choisissez un niveau de difficulte</li>
+<li>Une couverture de votre bibliotheque est selectionnee au hasard</li>
+<li>L'image est decoupee en tuiles avec un espace vide</li>
+<li>Touchez une tuile adjacente a l'espace vide pour la faire glisser</li>
+<li>Placez toutes les tuiles dans le bon ordre pour terminer le puzzle</li>
+<li>Une image de reference est affichee pour vous aider</li>
 </ol>
-<h2 id="attribuer-des-livres-aux-etageres">Attribuer des livres aux etageres</h2>
-<p>Depuis la fiche d'un livre, vous pouvez l'assigner a une ou plusieurs etageres. Un meme livre peut apparaitre sur plusieurs etageres.</p>
-<h2 id="reorganiser-lordre">Reorganiser l'ordre</h2>
-<p>Passez en mode reorganisation pour changer l'ordre des livres par glisser-deposer, ou utilisez le tri automatique (par auteur, titre, date d'ajout).</p>
+<h2 id="score">Score</h2>
+<p>Votre score est base sur le nombre de coups et le temps ecoule. Moins de coups et un temps plus rapide donnent un meilleur score.</p>
+<h2 id="classement">Classement</h2>
+<p>Vos meilleurs scores sont enregistres pour chaque niveau. Tentez de battre vos propres records !</p>
             </article>
         </div>
     </main>

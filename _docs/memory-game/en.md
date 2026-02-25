@@ -2,7 +2,7 @@
 title: How to play Memory
 description: Test your memory with your book covers
 order: 15
-group: advanced
+group: games
 ---
 
 The Memory game uses your own book covers to create a matching pairs game. Flip the cards and find all pairs as quickly as possible.
