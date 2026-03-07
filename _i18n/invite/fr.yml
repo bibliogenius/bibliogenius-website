@@ -1,0 +1,23 @@
+# BiblioGenius Invite Page - Francais
+
+# -- Metadonnees --
+lang_name: Francais
+page_title: Invitation BiblioGenius
+meta_description: Rejoignez une bibliotheque partagee sur BiblioGenius, l'application de gestion de bibliotheque open source.
+og_title: Invitation BiblioGenius
+og_description: Quelqu'un souhaite partager sa bibliotheque avec vous sur BiblioGenius.
+og_locale: fr_FR
+
+# -- Invite content --
+aria_invite: Invitation de connexion
+loading_text: Chargement de l'invitation...
+invite_label: Invitation de
+invite_text: souhaite se connecter avec vous sur BiblioGenius pour partager des livres.
+btn_open_app: Ouvrir dans l'application
+not_installed_text: L'application ne s'est pas ouverte ? Installez BiblioGenius, puis revenez sur ce lien.
+btn_desktop: Ordinateur (GitHub)
+btn_copy_link: Copier le lien
+link_copied: Lien copie !
+error_no_data: Ce lien d'invitation est invalide ou incomplet.
+error_invalid: Impossible de lire les donnees d'invitation.
+fallback_name: Bibliotheque

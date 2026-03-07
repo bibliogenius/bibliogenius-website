@@ -1,0 +1,23 @@
+# BiblioGenius Invite Page - English
+
+# -- Metadata --
+lang_name: English
+page_title: BiblioGenius Invitation
+meta_description: Join a shared library on BiblioGenius, the open source library management app.
+og_title: BiblioGenius Invitation
+og_description: Someone wants to share their library with you on BiblioGenius.
+og_locale: en_US
+
+# -- Invite content --
+aria_invite: Connection invitation
+loading_text: Loading invitation...
+invite_label: Invitation from
+invite_text: wants to connect with you on BiblioGenius to share books.
+btn_open_app: Open in app
+not_installed_text: The app didn't open? Install BiblioGenius first, then come back to this link.
+btn_desktop: Desktop (GitHub)
+btn_copy_link: Copy link
+link_copied: Link copied!
+error_no_data: This invitation link is invalid or incomplete.
+error_invalid: Unable to read invitation data.
+fallback_name: Library

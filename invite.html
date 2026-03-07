@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation BiblioGenius</title>
+    <meta name="description" content="Rejoignez une bibliotheque partagee sur BiblioGenius, l'application de gestion de bibliotheque open source.">
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://bibliogenius.org/invite.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/invite.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/invite.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/invite.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bibliogenius.org/invite.html">
+    <meta property="og:title" content="Invitation BiblioGenius">
+    <meta property="og:description" content="Quelqu'un souhaite partager sa bibliotheque avec vous sur BiblioGenius.">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .invite-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .invite-card {
+            background: var(--white);
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem 2rem;
+            max-width: 440px;
+            width: 100%;
+        }
+        .invite-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .invite-label {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0.25rem;
+        }
+        .invite-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-bottom: 0.5rem;
+            word-break: break-word;
+        }
+        .invite-text {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+        .invite-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.875rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+            width: 100%;
+            justify-content: center;
+        }
+        .invite-btn:hover { background: var(--primary-hover); }
+        .invite-btn:focus-visible { box-shadow: var(--focus-ring); outline: none; }
+        .invite-fallback {
+            display: none;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .invite-fallback.visible { display: block; }
+        .invite-fallback p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        .store-links {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .store-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: border-color 0.2s;
+        }
+        .store-link:hover { border-color: var(--primary-color); }
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: transparent;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .copy-btn:hover { border-color: var(--primary-color); }
+        .copy-btn.copied { border-color: #22c55e; color: #16a34a; }
+        .loading-state {
+            color: #6b7280;
+            font-size: 1rem;
+        }
+        .error-state {
+            color: #dc2626;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="invite-container" id="main-content">
+        <div class="invite-card" role="region" aria-label="Invitation de connexion">
+            <!-- Loading state -->
+            <div id="loading">
+                <div class="invite-icon" aria-hidden="true">&#128218;</div>
+                <p class="loading-state">Chargement de l'invitation...</p>
+            </div>
+
+            <!-- Invite content (hidden until JS decodes) -->
+            <div id="invite-content" style="display: none;">
+                <div class="invite-icon" aria-hidden="true">&#128218;</div>
+                <p class="invite-label">Invitation de</p>
+                <p class="invite-name" id="library-name"></p>
+                <p class="invite-text">souhaite se connecter avec vous sur BiblioGenius pour partager des livres.</p>
+
+                <button class="invite-btn" id="open-app-btn" aria-label="Ouvrir dans l'application">
+                    &#128279; Ouvrir dans l'application
+                </button>
+
+                <div class="invite-fallback" id="fallback">
+                    <p>L'application ne s'est pas ouverte ? Installez BiblioGenius, puis revenez sur ce lien.</p>
+                    <div class="store-links">
+                        <a href="https://github.com/SorellaLabs/BiblioGenius/releases" class="store-link" aria-label="GitHub Releases">
+                            &#128187; Ordinateur (GitHub)
+                        </a>
+                    </div>
+                    <button class="copy-btn" id="copy-btn" aria-label="Copier le lien">
+                        &#128203; Copier le lien
+                    </button>
+                </div>
+            </div>
+
+            <!-- Error state -->
+            <div id="error" style="display: none;">
+                <div class="invite-icon" aria-hidden="true">&#128218;</div>
+                <p class="error-state" id="error-text"></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    (function() {
+        'use strict';
+        var loading = document.getElementById('loading');
+        var content = document.getElementById('invite-content');
+        var errorEl = document.getElementById('error');
+        var errorText = document.getElementById('error-text');
+        var nameEl = document.getElementById('library-name');
+        var openBtn = document.getElementById('open-app-btn');
+        var fallback = document.getElementById('fallback');
+        var copyBtn = document.getElementById('copy-btn');
+
+        // The fragment (#) is never sent to the server - privacy safe
+        var hash = window.location.hash;
+        if (!hash || hash.length < 2) {
+            loading.style.display = 'none';
+            errorEl.style.display = 'block';
+            errorText.textContent = 'Ce lien d'invitation est invalide ou incomplet.';
+            return;
+        }
+
+        var fragment = hash.substring(1);
+        var payload;
+        try {
+            // base64url decode
+            var b64 = fragment.replace(/-/g, '+').replace(/_/g, '/');
+            while (b64.length % 4) b64 += '=';
+            var json = atob(b64);
+            payload = JSON.parse(json);
+        } catch (e) {
+            loading.style.display = 'none';
+            errorEl.style.display = 'block';
+            errorText.textContent = 'Impossible de lire les donnees d'invitation.';
+            return;
+        }
+
+        var libraryName = payload.name || 'Bibliotheque';
+        nameEl.textContent = libraryName;
+        document.title = libraryName + ' - Invitation BiblioGenius';
+
+        loading.style.display = 'none';
+        content.style.display = 'block';
+
+        // Deep link: try custom scheme first
+        var deepLink = 'bibliogenius://invite#' + fragment;
+
+        openBtn.addEventListener('click', function() {
+            // Try to open the app
+            window.location.href = deepLink;
+
+            // After a delay, show fallback if we're still on this page
+            setTimeout(function() {
+                fallback.classList.add('visible');
+            }, 2000);
+        });
+
+        // Copy the full invite link
+        copyBtn.addEventListener('click', function() {
+            var link = window.location.href;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(link).then(function() {
+                    copyBtn.classList.add('copied');
+                    copyBtn.innerHTML = '&#10003; Lien copie !';
+                    setTimeout(function() {
+                        copyBtn.classList.remove('copied');
+                        copyBtn.innerHTML = '&#128203; Copier le lien';
+                    }, 3000);
+                });
+            } else {
+                // Fallback for older browsers
+                var ta = document.createElement('textarea');
+                ta.value = link;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                copyBtn.classList.add('copied');
+                copyBtn.innerHTML = '&#10003; Lien copie !';
+                setTimeout(function() {
+                    copyBtn.classList.remove('copied');
+                    copyBtn.innerHTML = '&#128203; Copier le lien';
+                }, 3000);
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appID": "RF374CUSUZ.com.bibliogenius.app",
+        "paths": ["/invite*", "/en/invite*", "/de/invite*", "/es/invite*"]
+      }
+    ]
+  }
+}
