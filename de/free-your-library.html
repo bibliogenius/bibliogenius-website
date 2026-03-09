@@ -88,7 +88,7 @@
     <header class="hero" style="padding: 3rem 1.5rem;">
         <!-- Language Switcher -->
         <div class="lang-switcher">
-            <select onchange="location.href=this.value" class="lang-select" aria-label="Sprache wählen">
+            <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Sprache wählen">
             <option value="free-your-library.html" selected>Deutsch</option>
             <option value="../en/free-your-library.html">English</option>
             <option value="../es/free-your-library.html">Español</option>

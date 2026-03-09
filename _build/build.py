@@ -44,6 +44,28 @@ OG_LOCALES = {
     'es': 'es_ES',
 }
 
+# Language redirect script (injected only in default-lang pages)
+# Redirects non-French browsers to /en/ equivalent.
+# Respects manual language choice via sessionStorage.
+LANG_REDIRECT_SCRIPT = '''<script>
+(function(){
+  if(sessionStorage.getItem('lang_chosen'))return;
+  var l=navigator.language||navigator.userLanguage||'';
+  if(l.substring(0,2)!=='fr'){
+    var p=location.pathname;
+    location.replace(p.replace(/^\\/(?!en\\/|de\\/|es\\/)/, '/en/'));
+  }
+})();
+</script>'''
+
+
+def inject_lang_chosen(html):
+    """Add sessionStorage flag to language switcher so manual choice is remembered."""
+    return html.replace(
+        'onchange="location.href=this.value"',
+        "onchange=\"sessionStorage.setItem('lang_chosen','1');location.href=this.value\""
+    )
+
 
 def load_yaml(path):
     """Load a flat YAML file (key: value pairs, # comments, blank lines)."""
@@ -430,6 +452,11 @@ def build_docs():
             html = html.replace('{{nav_contribute}}', ui.get('nav_contribute', 'Contribute'))
             html = html.replace('{{lang_label}}', ui.get('lang_label', 'Language'))
 
+            # Inject language redirect script for default-lang doc pages
+            if lang == DEFAULT_LANG and 'en' in all_ui:
+                html = html.replace('<head>', '<head>\n' + LANG_REDIRECT_SCRIPT, 1)
+            html = inject_lang_chosen(html)
+
             out_file = os.path.join(out_dir, f'{slug}.html')
             with open(out_file, 'w', encoding='utf-8') as f:
                 f.write(html)
@@ -477,6 +504,11 @@ def build_docs():
         html = html.replace('{{nav_docs}}', ui.get('nav_docs', 'Documentation'))
         html = html.replace('{{nav_contribute}}', ui.get('nav_contribute', 'Contribute'))
         html = html.replace('{{lang_label}}', ui.get('lang_label', 'Language'))
+
+        # Inject language redirect script for default-lang doc index
+        if lang == DEFAULT_LANG and 'en' in all_ui:
+            html = html.replace('<head>', '<head>\n' + LANG_REDIRECT_SCRIPT, 1)
+        html = inject_lang_chosen(html)
 
         index_file = os.path.join(out_dir, 'index.html')
         with open(index_file, 'w', encoding='utf-8') as f:
@@ -548,6 +580,11 @@ def build():
 
             if missing:
                 print(f'  [{lang}] Fallback: {", ".join(missing)}')
+
+            # Inject language redirect script for default-lang pages
+            if lang == DEFAULT_LANG and 'en' in langs:
+                html = html.replace('<head>', '<head>\n' + LANG_REDIRECT_SCRIPT, 1)
+            html = inject_lang_chosen(html)
 
             out = output_path(page_name, lang)
             with open(out, 'w', encoding='utf-8') as f:

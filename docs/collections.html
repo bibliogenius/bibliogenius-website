@@ -2,6 +2,16 @@
 <html lang="fr">
 
 <head>
+<script>
+(function(){
+  if(sessionStorage.getItem('lang_chosen'))return;
+  var l=navigator.language||navigator.userLanguage||'';
+  if(l.substring(0,2)!=='fr'){
+    var p=location.pathname;
+    location.replace(p.replace(/^\/(?!en\/|de\/|es\/)/, '/en/'));
+  }
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comment utiliser les Collections - Documentation - BiblioGenius</title>
@@ -255,7 +265,7 @@
                 <a href="../story.html" class="site-nav-link">Notre histoire</a>
                 <a href="index.html" class="site-nav-link">Documentation</a>
                 <a href="../contribute.html" class="site-nav-link">Contribuer</a>
-                <select onchange="location.href=this.value" class="lang-select" aria-label="Langue">
+                <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Langue">
             <option value="../en/docs/collections.html">English</option>
             <option value="collections.html" selected>Francais</option>
                 </select>

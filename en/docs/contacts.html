@@ -255,7 +255,7 @@
                 <a href="../story.html" class="site-nav-link">Our Story</a>
                 <a href="index.html" class="site-nav-link">Documentation</a>
                 <a href="../contribute.html" class="site-nav-link">Contribute</a>
-                <select onchange="location.href=this.value" class="lang-select" aria-label="Language">
+                <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Language">
             <option value="contacts.html" selected>English</option>
             <option value="../../docs/contacts.html">Francais</option>
                 </select>

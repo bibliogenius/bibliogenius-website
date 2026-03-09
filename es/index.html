@@ -73,10 +73,10 @@
             </button>
             <div class="site-nav-menu" id="site-nav-menu">
                 <a href="index.html" class="site-nav-link">Inicio</a>
-                <a href="../story.html" class="site-nav-link">Nuestra historia</a>
+                <a href="story.html" class="site-nav-link">Nuestra historia</a>
                 <a href="docs/index.html" class="site-nav-link">Documentacion</a>
-                <a href="../contribute.html" class="site-nav-link">Contribuir</a>
-                <select onchange="location.href=this.value" class="lang-select" aria-label="Elegir idioma">
+                <a href="contribute.html" class="site-nav-link">Contribuir</a>
+                <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Elegir idioma">
             <option value="../de/index.html">Deutsch</option>
             <option value="../en/index.html">English</option>
             <option value="index.html" selected>Español</option>
@@ -96,7 +96,7 @@
                     <span>Ver Código (GitHub)</span>
                 </a>
                 <a href="#tester" class="btn btn-secondary">Ser Tester</a>
-                <a href="../story.html" class="btn btn-secondary" style="border:1px solid rgba(255,255,255,0.2);">Descubre la historia</a>
+                <a href="story.html" class="btn btn-secondary" style="border:1px solid rgba(255,255,255,0.2);">Descubre la historia</a>
             </div>
         </div>
     </header>
@@ -200,7 +200,7 @@
             <p>El proyecto está en desarrollo activo. Escríbenos para participar o probar.</p>
             <button type="button" onclick="openContact(event)" class="contact-btn">contact [at] bibliogenius.org</button>
             <br><br>
-            <a href="../contribute.html" style="color:var(--accent-color); text-decoration: none;">➜ Espacio de Colaboradores</a>
+            <a href="contribute.html" style="color:var(--accent-color); text-decoration: none;">➜ Espacio de Colaboradores</a>
             <br>
             <!-- <a href="tutorials.html" style="color:var(--accent-color); text-decoration: none;">➜ Tutoriales en Video</a> -->
 

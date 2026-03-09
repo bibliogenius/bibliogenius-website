@@ -322,7 +322,7 @@
         <a href="story.html" class="site-nav-link">Unsere Geschichte</a>
         <a href="docs/index.html" class="site-nav-link">Dokumentation</a>
         <a href="contribute.html" class="site-nav-link">Mitmachen</a>
-        <select onchange="location.href=this.value" class="lang-select" aria-label="Sprache">
+        <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Sprache">
             <option value="story.html" selected>Deutsch</option>
             <option value="../en/story.html">English</option>
             <option value="../es/story.html">Español</option>
