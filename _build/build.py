@@ -32,6 +32,7 @@ I18N_DIR = os.path.join(SITE_DIR, '_i18n')
 BASE_URL = 'https://bibliogenius.org'
 DEFAULT_LANG = 'fr'
 DOCS_DIR = os.path.join(SITE_DIR, '_docs')
+VERSION_FILE = os.path.join(SCRIPT_DIR, 'version.txt')
 
 # Sidebar group ordering
 DOC_GROUPS = ['library', 'discovery', 'social', 'advanced', 'data']
@@ -519,6 +520,14 @@ def build_docs():
     return total
 
 
+def load_app_version():
+    """Load app version from version.txt."""
+    if os.path.isfile(VERSION_FILE):
+        with open(VERSION_FILE, encoding='utf-8') as f:
+            return f.read().strip()
+    return ''
+
+
 def build():
     filter_pages = set(sys.argv[1:]) if len(sys.argv) > 1 else None
     pages = discover_pages(filter_pages)
@@ -526,6 +535,10 @@ def build():
     if not pages:
         print('No pages found. Check _build/templates/ and _i18n/ directories.')
         sys.exit(1)
+
+    app_version = load_app_version()
+    if app_version:
+        print(f'App version: {app_version}')
 
     # Collect all page language sets for cross-page URL resolution
     all_page_langs = {name: set(info['langs'].keys()) for name, info in pages.items()}
@@ -548,6 +561,7 @@ def build():
             html = html.replace('{{lang}}', lang)
             html = html.replace('{{canonical_url}}', BASE_URL + page_url(page_name, lang))
             html = html.replace('{{og_url}}', BASE_URL + page_url(page_name, lang))
+            html = html.replace('{{app_version}}', app_version)
             html = html.replace('{{lang_switcher}}', build_switcher(page_name, langs, lang))
 
             # Cross-page links: {{url:page_name}} (relative paths)
