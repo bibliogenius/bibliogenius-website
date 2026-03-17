@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<script>
+(function(){
+  if(sessionStorage.getItem('lang_chosen'))return;
+  var l=navigator.language||navigator.userLanguage||'';
+  if(l.substring(0,2)!=='fr'){
+    var p=location.pathname;
+    location.replace(p.replace(/^\/(?!en\/|de\/|es\/)/, '/en/'));
+  }
+})();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - BiblioGenius</title>
+    <meta name="description" content="Historique des versions de BiblioGenius : nouvelles fonctionnalités, corrections et améliorations.">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Changelog - BiblioGenius">
+    <meta property="og:description" content="Historique des versions de BiblioGenius : nouvelles fonctionnalités, corrections et améliorations.">
+    <meta property="og:url" content="https://bibliogenius.org/changelog.html">
+    <meta property="og:site_name" content="BiblioGenius">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Changelog - BiblioGenius">
+    <meta name="twitter:description" content="Historique des versions de BiblioGenius : nouvelles fonctionnalités, corrections et améliorations.">
+
+    <link rel="canonical" href="https://bibliogenius.org/changelog.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/changelog.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/changelog.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/changelog.html">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .changelog-layout {
+            display: flex;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            gap: 2.5rem;
+        }
+
+        /* Version nav */
+        .changelog-nav {
+            width: 200px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 1.5rem;
+            align-self: flex-start;
+            max-height: calc(100vh - 3rem);
+            overflow-y: auto;
+        }
+
+        .changelog-nav h2 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #6b7280;
+            margin-bottom: 0.75rem;
+        }
+
+        .changelog-nav a {
+            display: block;
+            padding: 0.3rem 0.75rem;
+            color: #374151;
+            text-decoration: none;
+            font-size: 0.85rem;
+            border-radius: 0.375rem;
+            border-left: 2px solid transparent;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .changelog-nav a:hover {
+            background: #f3f4f6;
+            color: var(--primary-color);
+        }
+
+        .changelog-nav a.active {
+            background: #eff6ff;
+            color: var(--primary-color);
+            font-weight: 600;
+            border-left-color: var(--primary-color);
+        }
+
+        /* Content */
+        .changelog-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .changelog-content h2 {
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e5e7eb;
+            scroll-margin-top: 1.5rem;
+        }
+
+        .changelog-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .changelog-content h2 small {
+            font-size: 0.8rem;
+            color: #6b7280;
+            font-weight: 400;
+            margin-left: 0.5rem;
+        }
+
+        .changelog-link {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #6b7280;
+            text-decoration: none;
+            padding: 0.15rem 0.4rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.25rem;
+            transition: color 0.15s, border-color 0.15s;
+        }
+
+        .changelog-link:hover {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .changelog-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.25rem;
+        }
+
+        .changelog-content li {
+            margin-bottom: 0.4rem;
+            line-height: 1.6;
+        }
+
+        .changelog-content li strong {
+            color: var(--heading-color);
+        }
+
+        .changelog-content code {
+            background: #f3f4f6;
+            padding: 0.15rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.9em;
+        }
+
+        /* Mobile */
+        .changelog-nav-toggle {
+            display: none;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            font-family: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .changelog-layout {
+                flex-direction: column;
+                padding: 1.5rem 1rem;
+            }
+
+            .changelog-nav {
+                width: 100%;
+                position: static;
+                max-height: none;
+                display: none;
+            }
+
+            .changelog-nav.open {
+                display: block;
+            }
+
+            .changelog-nav-toggle {
+                display: block;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "BiblioGenius", "item": "https://bibliogenius.org/"},
+            {"@type": "ListItem", "position": 2, "name": "Changelog"}
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="hero" style="padding: 2.5rem 1.5rem;">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html" class="site-nav-logo">BiblioGenius</a>
+            <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="site-nav-menu" id="site-nav-menu">
+                <a href="index.html" class="site-nav-link">Accueil</a>
+                <a href="story.html" class="site-nav-link">Notre histoire</a>
+                <a href="docs/index.html" class="site-nav-link">Documentation</a>
+                <a href="contribute.html" class="site-nav-link">Contribuer</a>
+                <a href="blog/" class="site-nav-link">Blog</a>
+                <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Choisir la langue">
+            <option value="en/changelog.html">English</option>
+            <option value="changelog.html" selected>Français</option>
+                </select>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Changelog</h1>
+            <p>Historique des versions et des changements</p>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="changelog-layout">
+            <button class="changelog-nav-toggle" aria-expanded="false" aria-controls="changelog-nav" aria-label="Versions">
+                &#9776; Versions
+            </button>
+
+            <nav class="changelog-nav" id="changelog-nav" aria-label="Versions">
+                <h2>Versions</h2>
+                <a href="#0-8-7">0.8.7</a>
+                <a href="#0-8-6">0.8.6</a>
+                <a href="#0-8-5">0.8.5</a>
+                <a href="#0-8-4">0.8.4</a>
+                <a href="#0-8-2">0.8.2</a>
+                <a href="#0-8-1">0.8.1</a>
+                <a href="#0-8-0">0.8.0</a>
+                <a href="#0-7-2">0.7.2</a>
+                <a href="#0-7-1">0.7.1</a>
+                <a href="#0-7-0">0.7.0</a>
+                <a href="#0-6-6">0.6.6</a>
+                <a href="#0-6-5">0.6.5</a>
+            </nav>
+
+            <article class="changelog-content">
+<h2 id="0-8-7">0.8.7 <small>17 mars 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.6-alpha.6...v0.8.7-beta.3" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.7-beta.3" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>macOS DMG</strong> : distribution via DMG avec runtime sécurisé et repli Keychain résilient</li>
+<li><strong>Empreinte appareil</strong> : enregistrement du modèle et fingerprint de l'appareil sur le hub</li>
+<li><strong>Stabilité pairs</strong> : rafraîchissement catalogue, cache hors-ligne, persistance du nom des pairs</li>
+<li><strong>Notifications</strong> : refonte UX complète, filtre emprunts, correction nom des pairs</li>
+<li><strong>Compatibilité</strong> : correction <code>ClipRect</code> pour Flutter 3.38</li>
+</ul>
+<h2 id="0-8-6">0.8.6 <small>13 mars 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.5-beta.6...v0.8.6-alpha.6" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.6-alpha.3" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>Catalogue hub unifié</strong> : rendu uniforme et chargement plus rapide des bibliothèques pair</li>
+<li><strong>Scan en masse</strong> : fonctionnalité de scan par lot avec redirection vers l'étagère scannée</li>
+<li><strong>Statistiques</strong> : quantité et qualité enrichies, couleurs harmonisées avec le profil</li>
+<li><strong>Localisation</strong> : ajout de l'italien, corrections turques, nettoyage i18n</li>
+<li><strong>UI</strong> : logo, barre de recherche, bordure nav basse, dates du journal d'opérations</li>
+</ul>
+<h2 id="0-8-5">0.8.5 <small>7 mars 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.4-alpha.4...v0.8.5-beta.6" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.8.5-beta.6" class="changelog-link">tag</a></h2>
+<ul>
+<li><strong>Fil d'activité</strong> : nouveau flux d'activité avec badges "nouveau"</li>
+<li><strong>Gestion des emprunts</strong> : demandes d'emprunt, UX notifications, badge statut de lecture modifiable au tap</li>
+<li><strong>Découverte réseau</strong> : cross-référence noms mDNS avec les pairs sauvegardés, repli 5G</li>
+<li><strong>UI</strong> : option barre de navigation basse, rafraîchissement instantané des couvertures, quick action partage</li>
+</ul>
+<h2 id="0-8-4">0.8.4 <small>4 mars 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.2-alpha.3...v0.8.4-alpha.4" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.8.4-alpha.4" class="changelog-link">tag</a></h2>
+<ul>
+<li><strong>Annuaire hub</strong> : écran Explore, suivi/désabonnement de bibliothèques, requêtes entrantes</li>
+<li><strong>Collections</strong> : refactorisation vers FFI direct, regroupement dans la bibliothèque</li>
+<li><strong>Navigation web</strong> : connexion et navigation des bibliothèques pair via navigateur web</li>
+<li><strong>Sync appareil</strong> : module de sécurité sync avec écran de revue</li>
+<li><strong>Couvertures</strong> : prise de photo via caméra de l'appareil</li>
+</ul>
+<h2 id="0-8-2">0.8.2 <small>26 février 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.1-alpha.2...v0.8.2-alpha.3" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.8.2-alpha.3" class="changelog-link">tag</a></h2>
+<ul>
+<li><strong>Liens d'invitation courts</strong> : partage de profil simplifié avec URL courte via le hub</li>
+<li><strong>Bouton partage</strong> : nouveau bouton de partage de profil</li>
+<li><strong>Accessibilité</strong> : prérequis d'accessibilité ajoutés (travail en cours)</li>
+</ul>
+<h2 id="0-8-1">0.8.1 <small>25 février 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.0-alpha.2...v0.8.1-alpha.2" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.8.1-alpha.2" class="changelog-link">tag</a></h2>
+<ul>
+<li><strong>Jeu de mémoire</strong> : nouveau mini-jeu avec les couvertures de votre bibliothèque, tableau des scores et animations</li>
+<li><strong>Puzzle glissant</strong> : jeu de puzzle avec les couvertures, écran dédié et hub de jeux</li>
+<li><strong>Aide</strong> : section d'aide enrichie</li>
+<li><strong>Traductions</strong> : ajout du portugais et du turc</li>
+</ul>
+<h2 id="0-8-0">0.8.0 <small>20 février 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.7.2-alpha.2...v0.8.0-alpha.2" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.8.0-alpha.2" class="changelog-link">tag</a></h2>
+<ul>
+<li><strong>Chiffrement de bout en bout (E2EE)</strong> : échange de clés par QR code v2, indicateur E2EE dans l'interface, chiffrement des requêtes de prêt</li>
+<li><strong>Hub relais</strong> : interface de configuration du hub relais dans les paramètres</li>
+<li><strong>Licence AGPL-3.0</strong> : passage du projet sous licence AGPL-3.0</li>
+<li><strong>Support CJK</strong> : polices de repli pour japonais, chinois et coréen, squelettes .po</li>
+<li><strong>Langues</strong> : ajout du bulgare, support des variantes régionales (pt-BR, zh-TW...)</li>
+<li><strong>Prêts</strong> : approbation automatique configurable, compteur de requêtes en attente</li>
+</ul>
+<h2 id="0-7-2">0.7.2 <small>13 février 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.7.1-alpha.7...v0.7.2-alpha.2" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.7.2-alpha.2" class="changelog-link">tag</a></h2>
+<ul>
+<li><strong>Internationalisation</strong> : migration des traductions vers des fichiers .po, recherche multilingue</li>
+<li><strong>Thème</strong> : personnalisation du thème dans les paramètres, optimisation du thème par défaut</li>
+<li><strong>Audit UX</strong> : corrections basées sur des personas, déduplication de recherche, résolution de 4 frictions majeures</li>
+<li><strong>Classement</strong> : corrections de l'affichage du leaderboard sur le profil et entre pairs</li>
+</ul>
+<h2 id="0-7-1">0.7.1 <small>10 février 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.7.0-alpha.1...v0.7.1-alpha.7" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.7.1-alpha.7" class="changelog-link">tag</a></h2>
+<ul>
+<li><strong>Module Classement</strong> : leaderboard de gamification entre bibliothèques connectées</li>
+</ul>
+<h2 id="0-7-0">0.7.0 <small>6 février 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.6.6-alpha.4...v0.7.0-alpha.1" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.7.0-alpha.1" class="changelog-link">tag</a></h2>
+<ul>
+<li><strong>Découverte P2P</strong> : repli mDNS via hostname.local, suppression du fallback 127.0.0.1</li>
+<li><strong>Architecture propre</strong> : migration des écrans Flutter vers le pattern Repository</li>
+<li><strong>Chemin base de données</strong> : migration du dossier d'installation</li>
+<li><strong>Optimisations</strong> : statut de lecture, recherche en ligne, import, cache pair</li>
+</ul>
+<h2 id="0-6-6">0.6.6 <small>25 janvier 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.6.5-alpha.21...v0.6.6-alpha.4" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.6.6-alpha.4" class="changelog-link">tag</a></h2>
+<ul>
+<li><strong>Emprunts et prêts</strong> : corrections et améliorations de la fonctionnalité d'emprunt</li>
+<li><strong>UX/UI</strong> : amélioration des états vides, gestion de la visibilité de l'avatar, amélioration de la recherche</li>
+<li><strong>Statistiques</strong> : page de statistiques et affichage du tableau de bord améliorés</li>
+<li><strong>Actions rapides</strong> : nouveau bouton d'actions rapides dans la bannière</li>
+<li><strong>Installation simplifiée</strong> : suppression de l'assistant de configuration, auto-initialisation, support ES/DE</li>
+</ul>
+<h2 id="0-6-5">0.6.5 <small>12 janvier 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.6.5-alpha.21" class="changelog-link">tag</a></h2>
+<ul>
+<li><strong>Version initiale alpha</strong> : gestion de bibliothèque personnelle, ajout/scan de livres, recherche en ligne</li>
+<li><strong>Réseau local</strong> : découverte de pairs via mDNS, navigation dans les bibliothèques voisines</li>
+<li><strong>Interface</strong> : tableau de bord, collections, étagères, profil avec badges de gamification</li>
+</ul>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>BiblioGenius &mdash; Open Source, local, chiffré.</p>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        var navToggle = document.querySelector('.site-nav-toggle');
+        var navMenu = document.getElementById('site-nav-menu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function() {
+                var isOpen = navMenu.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', isOpen);
+            });
+            navMenu.querySelectorAll('.site-nav-link').forEach(function(a) {
+                a.addEventListener('click', function() {
+                    navMenu.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+    })();
+    </script>
+    <script>
+    (function() {
+        var nav = document.getElementById('changelog-nav');
+        var toggle = document.querySelector('.changelog-nav-toggle');
+        if (toggle && nav) {
+            toggle.addEventListener('click', function() {
+                var isOpen = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', isOpen);
+            });
+            nav.querySelectorAll('a').forEach(function(a) {
+                a.addEventListener('click', function() {
+                    nav.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // Highlight active version on scroll
+        var headings = document.querySelectorAll('.changelog-content h2[id]');
+        var links = nav ? nav.querySelectorAll('a') : [];
+        if (headings.length && links.length) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        links.forEach(function(l) { l.classList.remove('active'); });
+                        var active = nav.querySelector('a[href="#' + entry.target.id + '"]');
+                        if (active) active.classList.add('active');
+                    }
+                });
+            }, { rootMargin: '-20% 0px -60% 0px' });
+            headings.forEach(function(h) { observer.observe(h); });
+        }
+    })();
+    </script>
+</body>
+
+</html>

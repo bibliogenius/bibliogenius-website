@@ -1,0 +1,124 @@
+{% macro lang_label(code) %}{% if code == "fr" %}Français{% elif code == "en" %}English{% elif code == "es" %}Español{% elif code == "de" %}Deutsch{% else %}{{ code }}{% endif %}{% endmacro %}
+
+
+{% macro og_locale(lang) %}{% if lang == "fr" %}fr_FR{% elif lang == "en" %}en_US{% elif lang == "es" %}es_ES{% elif lang == "de" %}de_DE{% else %}{{ lang }}{% endif %}{% endmacro %}
+
+
+{% macro hreflang_tags(current_lang, permalink, translations) %}
+    <link rel="alternate" hreflang="{{ current_lang }}" href="{{ permalink }}">
+{%- for trans in translations %}
+    <link rel="alternate" hreflang="{{ trans.lang }}" href="{{ trans.permalink }}">
+{%- endfor %}
+{%- if current_lang == config.default_language %}
+    <link rel="alternate" hreflang="x-default" href="{{ permalink }}">
+{%- else %}
+{%- for trans in translations %}{% if trans.lang == config.default_language %}
+    <link rel="alternate" hreflang="x-default" href="{{ trans.permalink }}">
+{%- endif %}{% endfor %}
+{%- endif %}
+{% endmacro %}
+
+
+{% macro lang_switcher(current_lang, permalink, translations, label) %}
+{% if translations | length > 0 %}
+<select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="{{ label | default(value='Language') }}">
+    <option value="{{ permalink }}" selected>{{ self::lang_label(code=current_lang) }}</option>
+{%- for trans in translations %}
+    <option value="{{ trans.permalink }}">{{ self::lang_label(code=trans.lang) }}</option>
+{%- endfor %}
+</select>
+{% endif %}
+{% endmacro %}
+
+
+{% macro head(title, description, lang, permalink, translations, og_image) %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+
+    <link rel="canonical" href="{{ permalink }}">
+{{ self::hreflang_tags(current_lang=lang, permalink=permalink, translations=translations) }}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ permalink }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:site_name" content="BiblioGenius">
+    <meta property="og:locale" content="{{ self::og_locale(lang=lang) }}">
+{%- if og_image %}
+    <meta property="og:image" content="{{ og_image }}">
+{%- endif %}
+{%- for trans in translations %}
+    <meta property="og:locale:alternate" content="{{ self::og_locale(lang=trans.lang) }}">
+{%- endfor %}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+{%- if og_image %}
+    <meta name="twitter:image" content="{{ og_image }}">
+{%- endif %}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ config.extra.site_url }}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ config.extra.site_url }}/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ config.extra.site_url }}/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="{{ config.extra.site_url }}/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ config.base_url }}/rss.xml">
+{% endmacro %}
+
+
+{% macro site_nav(lang, permalink, translations) %}
+<nav class="site-nav" aria-label="Navigation">
+    <a href="{{ config.extra.site_url }}/" class="site-nav-logo">BiblioGenius</a>
+    <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    <div class="site-nav-menu" id="site-nav-menu">
+        <a href="{{ config.extra.site_url }}/" class="site-nav-link">{% if lang == "fr" %}Accueil{% else %}Home{% endif %}</a>
+        <a href="{{ config.extra.site_url }}/story.html" class="site-nav-link">{% if lang == "fr" %}Notre histoire{% else %}Our Story{% endif %}</a>
+        <a href="{{ config.base_url }}/" class="site-nav-link" style="color:#fff;">Blog</a>
+        <a href="{{ config.extra.site_url }}/docs/" class="site-nav-link">Documentation</a>
+        {{ self::lang_switcher(current_lang=lang, permalink=permalink, translations=translations, label="Langue") }}
+    </div>
+</nav>
+{% endmacro %}
+
+
+{% macro footer(lang) %}
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <p>BiblioGenius — Open Source, local-first.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2025-2026 BiblioGenius — <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a></p>
+        </div>
+    </div>
+</footer>
+{% endmacro %}
+
+
+{% macro mobile_menu_script() %}
+<script>
+(function() {
+    var toggle = document.querySelector('.site-nav-toggle');
+    var menu = document.getElementById('site-nav-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+    menu.querySelectorAll('.site-nav-link').forEach(function(a) {
+        a.addEventListener('click', function() {
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+</script>
+{% endmacro %}

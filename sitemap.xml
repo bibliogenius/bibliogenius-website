@@ -110,6 +110,18 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Changelog -->
+  <url>
+    <loc>https://bibliogenius.org/changelog.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/en/changelog.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Privacy (English only) -->
   <url>
     <loc>https://bibliogenius.org/privacy.html</loc>

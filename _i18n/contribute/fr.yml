@@ -20,7 +20,8 @@ nav_home: Accueil
 nav_story: Notre histoire
 nav_docs: Documentation
 nav_contribute: Contribuer
-
+nav_blog: Blog
+nav_changelog: Changelog
 # -- Hero --
 hero_title: Contribuer au Projet
 hero_subtitle: Devenez testeur Alpha ou rejoignez le développement.

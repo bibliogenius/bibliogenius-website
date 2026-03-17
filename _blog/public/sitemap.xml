@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://bibliogenius.org/blog/</loc>
+    </url>
+    <url>
+        <loc>https://bibliogenius.org/blog/appel-testeurs/</loc>
+        <lastmod>2026-03-19</lastmod>
+    </url>
+    <url>
+        <loc>https://bibliogenius.org/blog/en/</loc>
+    </url>
+    <url>
+        <loc>https://bibliogenius.org/blog/en/appel-testeurs/</loc>
+        <lastmod>2026-03-19</lastmod>
+    </url>
+    <url>
+        <loc>https://bibliogenius.org/blog/en/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://bibliogenius.org/blog/es/</loc>
+    </url>
+    <url>
+        <loc>https://bibliogenius.org/blog/es/appel-testeurs/</loc>
+        <lastmod>2026-03-19</lastmod>
+    </url>
+    <url>
+        <loc>https://bibliogenius.org/blog/es/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://bibliogenius.org/blog/page/1/</loc>
+    </url>
+</urlset>

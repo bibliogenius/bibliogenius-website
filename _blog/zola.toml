@@ -1,0 +1,30 @@
+base_url = "https://bibliogenius.org/blog"
+title = "BiblioGenius Blog"
+description = "Actualités, coulisses et réflexions autour de BiblioGenius"
+
+default_language = "fr"
+compile_sass = false
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+minify_html = false
+build_search_index = false
+
+[languages.en]
+title = "BiblioGenius Blog"
+description = "News, behind the scenes and thoughts about BiblioGenius"
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+
+[languages.es]
+title = "BiblioGenius Blog"
+description = "Novedades, entre bastidores y reflexiones sobre BiblioGenius"
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+site_name = "BiblioGenius"
+site_url = "https://bibliogenius.org"
+author = "Federico"

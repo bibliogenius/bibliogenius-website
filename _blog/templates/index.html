@@ -1,0 +1,66 @@
+{% import "macros/common.html" as macros %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+{{ macros::head(title=config.title, description=config.description, lang=lang, permalink=section.permalink, translations=section.translations, og_image="") }}
+    <style>
+        .blog-container { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .blog-header { text-align: center; margin-bottom: 3rem; }
+        .blog-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .blog-header p { color: #6b7280; font-size: 1.125rem; }
+        .blog-header .rss-link { font-size: 0.875rem; color: var(--primary-color); }
+        .post-card { background: var(--white); border-radius: 0.75rem; padding: 1.5rem 2rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); transition: transform 0.15s, box-shadow 0.15s; }
+        .post-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        .post-card a { text-decoration: none; color: inherit; display: block; }
+        .post-meta { font-size: 0.8rem; color: #9ca3af; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.75rem; }
+        .post-tag { background: #eff6ff; color: var(--primary-color); padding: 0.15rem 0.5rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 600; }
+        .post-title { font-size: 1.35rem; font-weight: 700; color: var(--heading-color); margin-bottom: 0.5rem; }
+        .post-excerpt { color: #4b5563; line-height: 1.6; font-size: 0.95rem; }
+        .post-read-more { color: var(--primary-color); font-weight: 600; font-size: 0.875rem; margin-top: 0.75rem; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <header class="hero" role="banner" style="padding: 2.5rem 1.5rem;">
+        {{ macros::site_nav(lang=lang, permalink=section.permalink, translations=section.translations) }}
+        <div class="hero-content">
+            <h1>Blog</h1>
+            <p>{{ config.description }}</p>
+        </div>
+    </header>
+
+    <main class="blog-container">
+        <div class="blog-header">
+            <a href="{{ config.base_url }}/rss.xml" class="rss-link">&#128225; Flux RSS</a>
+        </div>
+
+        {% for page in paginator.pages %}
+        <article class="post-card">
+            <a href="{{ page.permalink }}">
+                <div class="post-meta">
+                    <time datetime="{{ page.date }}">{{ page.date | date(format="%d/%m/%Y") }}</time>
+                    {% if page.extra.tags %}
+                    {% for tag in page.extra.tags %}
+                    <span class="post-tag">{{ tag }}</span>
+                    {% endfor %}
+                    {% endif %}
+                    {% if page.reading_time %}
+                    <span>{{ page.reading_time }} min</span>
+                    {% endif %}
+                </div>
+                <h2 class="post-title">{{ page.title }}</h2>
+                <p class="post-excerpt">{{ page.description | default(value="") }}</p>
+                <span class="post-read-more">{% if lang == "fr" %}Lire la suite &rarr;{% else %}Read more &rarr;{% endif %}</span>
+            </a>
+        </article>
+        {% endfor %}
+
+        {% if paginator.pages | length == 0 %}
+        <p style="text-align:center; color:#9ca3af; padding: 3rem 0;">{% if lang == "fr" %}Aucun article pour le moment.{% else %}No posts yet.{% endif %}</p>
+        {% endif %}
+    </main>
+
+    {{ macros::footer(lang=lang) }}
+    {{ macros::mobile_menu_script() }}
+</body>
+</html>

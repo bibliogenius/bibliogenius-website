@@ -19,7 +19,8 @@ nav_home: Home
 nav_story: Our Story
 nav_docs: Documentation
 nav_contribute: Contribute
-
+nav_blog: Blog
+nav_changelog: Changelog
 # -- Hero --
 hero_title: You have 200&nbsp;books<br>at&nbsp;home.
 hero_p1: You know you lent <em>Les Misérables</em> to someone. But to&nbsp;whom?

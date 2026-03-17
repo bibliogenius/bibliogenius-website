@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BiblioGenius Blog</title>
+      <link>https://bibliogenius.org/blog</link>
+      <description>Actualités, coulisses et réflexions autour de BiblioGenius</description>
+      <generator>Zola</generator>
+      <language>fr</language>
+      <atom:link href="https://bibliogenius.org/blog/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Thu, 19 Mar 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>BiblioGenius cherche ses premiers testeurs</title>
+          <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://bibliogenius.org/blog/appel-testeurs/</link>
+          <guid>https://bibliogenius.org/blog/appel-testeurs/</guid>
+          <description xml:base="https://bibliogenius.org/blog/appel-testeurs/">&lt;p&gt;T&#x27;as combien de livres chez toi ? Et tes amis, t&#x27;as une idée de ce qu&#x27;ils ont sur leurs étagères ?&lt;&#x2F;p&gt;
+&lt;p&gt;On achète des livres qu&#x27;on a déjà autour de nous. On cherche des recommandations sur des applis qui nous pistent... alors que les meilleurs conseils sont à deux pas.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;BiblioGenius&lt;&#x2F;strong&gt; change la donne.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;comment-ca-marche&quot;&gt;Comment ça marche&lt;&#x2F;h2&gt;
+&lt;p&gt;Tu scannes le code-barres d&#x27;un livre : couverture, résumé, tout apparaît. En quelques minutes, ta bibliothèque prend forme. Collections, étagères, suivi de lecture. Et tout reste sur ton téléphone. Pas de cloud, pas de compte, pas de traçage.&lt;&#x2F;p&gt;
+&lt;p&gt;Ton amie a aussi BiblioGenius ? Tu scannes son QR code et sa bibliothèque apparaît sur ton écran. Le roman que tu cherchais depuis des mois ? Il était à dix mètres de chez toi. Tu le demandes en prêt, elle accepte. Tout est chiffré de bout en bout.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;pourquoi-tester-maintenant&quot;&gt;Pourquoi tester maintenant ?&lt;&#x2F;h2&gt;
+&lt;p&gt;L&#x27;application est en bêta. Chaque retour compte : un bug repéré, une idée, une friction dans l&#x27;interface. En testant maintenant, tu façonnes le projet dès ses débuts.&lt;&#x2F;p&gt;
+&lt;p&gt;C&#x27;est gratuit, open source, et conçu par des passionnés.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rejoindre-la-beta&quot;&gt;Rejoindre la bêta&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;iPhone &#x2F; iPad&lt;&#x2F;strong&gt; : installe via &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;testflight.apple.com&#x2F;v1&#x2F;app&#x2F;6757465461&quot;&gt;TestFlight&lt;&#x2F;a&gt;, c&#x27;est immédiat.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Android&lt;&#x2F;strong&gt; : rejoins le test sur &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;play.google.com&#x2F;apps&#x2F;testing&#x2F;com.bibliogenius.app&quot;&gt;Google Play&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Mac &#x2F; Windows &#x2F; Linux&lt;&#x2F;strong&gt; : télécharge la dernière version sur la &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;bibliogenius.org&#x2F;contribute.html&quot;&gt;page Contribuer&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;div class=&quot;video-facade&quot; style=&quot;max-width:560px;margin:2rem auto;&quot;&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=h8jYyvVPeDg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; style=&quot;display:block;position:relative;padding-bottom:56.25%;background:#000;border-radius:0.5rem;overflow:hidden;text-decoration:none;&quot;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;img.youtube.com&#x2F;vi&#x2F;h8jYyvVPeDg&#x2F;maxresdefault.jpg&quot; alt=&quot;Vidéo de présentation BiblioGenius&quot; loading=&quot;lazy&quot; style=&quot;position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;&quot;&gt;
+&lt;span style=&quot;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:rgba(0,0,0,0.7);border-radius:12px;display:flex;align-items:center;justify-content:center;&quot;&gt;
+&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;white&quot;&gt;&lt;polygon points=&quot;8,5 19,12 8,19&quot;&#x2F;&gt;&lt;&#x2F;svg&gt;
+&lt;&#x2F;span&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Tes livres t&#x27;appartiennent. Deviens le chercheur de trésors de ta communauté.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>

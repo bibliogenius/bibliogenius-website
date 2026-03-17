@@ -19,7 +19,8 @@ nav_home: Inicio
 nav_story: Nuestra historia
 nav_docs: Documentacion
 nav_contribute: Contribuir
-
+nav_blog: Blog
+nav_changelog: Changelog
 # -- Hero --
 hero_title: Tienes 200&nbsp;libros<br>en&nbsp;casa.
 hero_p1: Sabes que le prestaste <em>Los Miserables</em> a alguien. Pero ¿a&nbsp;quién?

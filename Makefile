@@ -1,14 +1,25 @@
 # BiblioGenius — Static site build
 # Usage:
-#   make build          Generate all story pages from templates + translations
+#   make build          Generate all pages + blog
+#   make site           Generate site pages only (Python)
+#   make blog           Generate blog only (Zola)
 #   make new LANG=pt    Create a new translation file from the French reference
 #   make serve          Start a local dev server on port 8000
 #   make clean          Remove generated language subdirectories
 
-.PHONY: build clean serve new
+.PHONY: build site blog clean serve new
 
-build:
+build: site blog
+
+site:
 	python3 _build/build.py
+
+blog:
+	cd _blog && zola build
+	@rm -rf blog
+	@cp -r _blog/public blog
+	@rm -f blog/robots.txt blog/sitemap.xml
+	@echo "Blog built → blog/"
 
 new:
 	@test -n "$(LANG)" || { echo "Usage: make new LANG=pt"; exit 1; }

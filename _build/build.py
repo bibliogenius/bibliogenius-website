@@ -32,6 +32,7 @@ I18N_DIR = os.path.join(SITE_DIR, '_i18n')
 BASE_URL = 'https://bibliogenius.org'
 DEFAULT_LANG = 'fr'
 DOCS_DIR = os.path.join(SITE_DIR, '_docs')
+CHANGELOG_DIR = os.path.join(SITE_DIR, '_changelog')
 VERSION_FILE = os.path.join(SCRIPT_DIR, 'version.txt')
 
 # Sidebar group ordering
@@ -451,6 +452,8 @@ def build_docs():
             html = html.replace('{{nav_story}}', ui.get('nav_story', 'Our Story'))
             html = html.replace('{{nav_docs}}', ui.get('nav_docs', 'Documentation'))
             html = html.replace('{{nav_contribute}}', ui.get('nav_contribute', 'Contribute'))
+            html = html.replace('{{nav_blog}}', ui.get('nav_blog', 'Blog'))
+            html = html.replace('{{nav_changelog}}', ui.get('nav_changelog', 'Changelog'))
             html = html.replace('{{lang_label}}', ui.get('lang_label', 'Language'))
 
             # Inject language redirect script for default-lang doc pages
@@ -504,6 +507,8 @@ def build_docs():
         html = html.replace('{{nav_story}}', ui.get('nav_story', 'Our Story'))
         html = html.replace('{{nav_docs}}', ui.get('nav_docs', 'Documentation'))
         html = html.replace('{{nav_contribute}}', ui.get('nav_contribute', 'Contribute'))
+        html = html.replace('{{nav_blog}}', ui.get('nav_blog', 'Blog'))
+        html = html.replace('{{nav_changelog}}', ui.get('nav_changelog', 'Changelog'))
         html = html.replace('{{lang_label}}', ui.get('lang_label', 'Language'))
 
         # Inject language redirect script for default-lang doc index
@@ -515,6 +520,151 @@ def build_docs():
         with open(index_file, 'w', encoding='utf-8') as f:
             f.write(html)
         print(f'  {os.path.relpath(index_file, SITE_DIR)}')
+        total += 1
+
+    return total
+
+
+def changelog_url(lang):
+    """URL path for the changelog page."""
+    if lang == DEFAULT_LANG:
+        return '/changelog.html'
+    return f'/{lang}/changelog.html'
+
+
+def changelog_output_path(lang):
+    """Filesystem path for the generated changelog page."""
+    if lang == DEFAULT_LANG:
+        return os.path.join(SITE_DIR, 'changelog.html')
+    out_dir = os.path.join(SITE_DIR, lang)
+    os.makedirs(out_dir, exist_ok=True)
+    return os.path.join(out_dir, 'changelog.html')
+
+
+def build_changelog_hreflang(langs):
+    """Build hreflang tags for the changelog page."""
+    tags = []
+    for lang in sorted(langs):
+        tags.append(f'    <link rel="alternate" hreflang="{lang}" href="{BASE_URL}{changelog_url(lang)}">')
+    tags.append(f'    <link rel="alternate" hreflang="x-default" href="{BASE_URL}{changelog_url(DEFAULT_LANG)}">')
+    return '\n'.join(tags)
+
+
+def build_changelog_switcher(all_meta, current_lang):
+    """Language switcher for the changelog page."""
+    opts = []
+    for lang in sorted(all_meta):
+        name = all_meta[lang].get('lang_name', lang.upper())
+        sel = ' selected' if lang == current_lang else ''
+        if current_lang == DEFAULT_LANG:
+            url = f'{lang}/changelog.html' if lang != DEFAULT_LANG else 'changelog.html'
+        elif lang == DEFAULT_LANG:
+            url = '../changelog.html'
+        elif lang == current_lang:
+            url = 'changelog.html'
+        else:
+            url = f'../{lang}/changelog.html'
+        opts.append(f'            <option value="{url}"{sel}>{name}</option>')
+    return '\n'.join(opts)
+
+
+def build_version_nav(html_content):
+    """Extract h2 headings from changelog HTML and build a sidebar nav."""
+    headings = re.findall(r'<h2 id="([^"]+)">([^<]+)', html_content)
+    lines = []
+    for anchor, label in headings:
+        # Strip the <small> part — label is just the version number
+        lines.append(f'                <a href="#{anchor}">{label.strip()}</a>')
+    return '\n'.join(lines)
+
+
+def build_changelog():
+    """Build changelog page from _changelog/ Markdown files."""
+    import markdown
+
+    if not os.path.isdir(CHANGELOG_DIR):
+        return 0
+
+    tpl_path = os.path.join(TEMPLATE_DIR, '_changelog.html')
+    if not os.path.isfile(tpl_path):
+        print('WARNING: _changelog.html template not found, skipping changelog.')
+        return 0
+
+    with open(tpl_path, encoding='utf-8') as f:
+        template = f.read()
+
+    # Discover languages from Markdown files in _changelog/
+    all_meta = {}
+    all_body = {}
+    for fname in sorted(os.listdir(CHANGELOG_DIR)):
+        if not fname.endswith('.md'):
+            continue
+        lang = fname[:-3]
+        md_path = os.path.join(CHANGELOG_DIR, fname)
+        with open(md_path, encoding='utf-8') as f:
+            raw = f.read()
+        meta, body = parse_frontmatter(raw)
+        all_meta[lang] = meta
+        all_body[lang] = body
+
+    if not all_meta:
+        return 0
+
+    all_langs = sorted(all_meta.keys())
+    hreflang = build_changelog_hreflang(all_langs)
+
+    md = markdown.Markdown(extensions=['fenced_code', 'tables', 'toc'])
+
+    total = 0
+    print(f'\n--- Changelog ---')
+
+    for lang in all_langs:
+        meta = all_meta[lang]
+        body = all_body[lang]
+        root = '' if lang == DEFAULT_LANG else '../'
+
+        md.reset()
+        content_html = md.convert(body)
+
+        # Replace toc-generated ids with clean version-only anchors
+        def clean_h2_id(m):
+            old_id = m.group(1)
+            text = m.group(2)
+            # Extract version number (before <small>)
+            version = re.sub(r'\s*<small>.*', '', text).strip()
+            anchor = re.sub(r'[^a-z0-9]+', '-', version.lower()).strip('-')
+            return f'<h2 id="{anchor}">{text}</h2>'
+
+        content_html = re.sub(r'<h2 id="([^"]*)">(.*?)</h2>', clean_h2_id, content_html)
+
+        version_nav = build_version_nav(content_html)
+        switcher = build_changelog_switcher(all_meta, lang)
+
+        html = template
+        html = html.replace('{{root}}', root)
+        html = html.replace('{{lang}}', lang)
+        html = html.replace('{{canonical_url}}', BASE_URL + changelog_url(lang))
+        html = html.replace('{{hreflang}}', hreflang)
+        html = html.replace('{{og_locale}}', OG_LOCALES.get(lang, lang))
+        html = html.replace('{{lang_switcher}}', switcher)
+        html = html.replace('{{version_nav}}', version_nav)
+        html = html.replace('{{content}}', content_html)
+        html = html.replace('{{breadcrumb_home}}', BASE_URL + page_url('index', lang))
+        html = html.replace('{{nav_site_label}}', meta.get('nav_site_label', 'Main navigation'))
+
+        # Replace all remaining {{key}} placeholders from frontmatter
+        for key, value in meta.items():
+            html = html.replace(f'{{{{{key}}}}}', value)
+
+        # Inject language redirect script for default-lang pages
+        if lang == DEFAULT_LANG and 'en' in all_meta:
+            html = html.replace('<head>', '<head>\n' + LANG_REDIRECT_SCRIPT, 1)
+        html = inject_lang_chosen(html)
+
+        out_file = changelog_output_path(lang)
+        with open(out_file, 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f'  {os.path.relpath(out_file, SITE_DIR)}')
         total += 1
 
     return total
@@ -542,6 +692,15 @@ def build():
 
     # Collect all page language sets for cross-page URL resolution
     all_page_langs = {name: set(info['langs'].keys()) for name, info in pages.items()}
+
+    # Register changelog languages so {{url:changelog}} resolves in templates
+    changelog_langs = set()
+    if os.path.isdir(CHANGELOG_DIR):
+        for f in os.listdir(CHANGELOG_DIR):
+            if f.endswith('.md'):
+                changelog_langs.add(f[:-3])
+    if changelog_langs:
+        all_page_langs['changelog'] = changelog_langs
 
     total = 0
     for page_name, info in sorted(pages.items()):
@@ -610,7 +769,11 @@ def build():
     doc_count = build_docs()
     total += doc_count
 
-    print(f'\nDone! {total} pages generated ({total - doc_count} pages + {doc_count} docs).')
+    # Build changelog
+    changelog_count = build_changelog()
+    total += changelog_count
+
+    print(f'\nDone! {total} pages generated.')
 
 
 if __name__ == '__main__':

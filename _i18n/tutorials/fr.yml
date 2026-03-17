@@ -15,7 +15,8 @@ nav_home: Accueil
 nav_story: Notre histoire
 nav_docs: Documentation
 nav_contribute: Contribuer
-
+nav_blog: Blog
+nav_changelog: Changelog
 # -- Hero --
 hero_title: Tutoriels Vidéo
 hero_subtitle: Maîtrisez BiblioGenius en quelques minutes.

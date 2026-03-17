@@ -1,0 +1,102 @@
+{% import "macros/common.html" as macros %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+{% set og_img = page.extra.og_image | default(value="") %}
+{{ macros::head(title=page.title ~ " — BiblioGenius Blog", description=page.description | default(value=""), lang=lang, permalink=page.permalink, translations=page.translations, og_image=og_img) }}
+    <style>
+        .article-container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .article-header { margin-bottom: 2.5rem; }
+        .article-header h1 { font-size: 2.25rem; line-height: 1.25; margin-bottom: 1rem; }
+        .article-meta { font-size: 0.875rem; color: #6b7280; display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .article-tag { background: #eff6ff; color: var(--primary-color); padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; text-decoration: none; }
+        .article-body { line-height: 1.8; font-size: 1.0625rem; }
+        .article-body h2 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 0.75rem; padding-bottom: 0.25rem; border-bottom: 1px solid #e5e7eb; }
+        .article-body h3 { font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+        .article-body p { margin-bottom: 1.25rem; }
+        .article-body img { max-width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1.5rem 0; }
+        .article-body blockquote { border-left: 3px solid var(--primary-color); margin: 1.5rem 0; padding: 1rem 1.5rem; background: rgba(37,99,235,0.04); border-radius: 0 6px 6px 0; font-style: italic; color: var(--heading-color); }
+        .article-body code { background: #f3f4f6; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-body pre { background: #1f2937; color: #e5e7eb; padding: 1rem 1.25rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; }
+        .article-body pre code { background: none; padding: 0; color: inherit; }
+        .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.4rem; }
+        .article-body a { color: var(--primary-color); }
+        .article-footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb; }
+        .back-link { color: var(--primary-color); font-weight: 600; text-decoration: none; }
+        .share-section { margin-top: 1.5rem; }
+        .share-section p { font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem; }
+        .share-links { display: flex; gap: 0.75rem; }
+        .share-link { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.75rem; border: 1px solid #d1d5db; border-radius: 0.375rem; font-size: 0.8rem; color: var(--text-color); text-decoration: none; transition: border-color 0.2s; }
+        .share-link:hover { border-color: var(--primary-color); color: var(--primary-color); }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ page.title }}",
+        "description": "{{ page.description | default(value='') }}",
+        "url": "{{ page.permalink }}",
+        "datePublished": "{{ page.date }}",
+        {% if page.updated %}"dateModified": "{{ page.updated }}",{% endif %}
+        "author": {
+            "@type": "Organization",
+            "name": "BiblioGenius"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "BiblioGenius",
+            "url": "https://bibliogenius.org"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <header class="hero" role="banner" style="padding: 2.5rem 1.5rem;">
+        {{ macros::site_nav(lang=lang, permalink=page.permalink, translations=page.translations) }}
+        <div class="hero-content">
+            <p style="margin:0;"><a href="{{ config.base_url }}/" style="color:var(--accent-light); text-decoration:none;">Blog</a></p>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <header class="article-header">
+                <h1>{{ page.title }}</h1>
+                <div class="article-meta">
+                    <time datetime="{{ page.date }}">{{ page.date | date(format="%d/%m/%Y") }}</time>
+                    {% if page.reading_time %}
+                    <span>&#128337; {{ page.reading_time }} min</span>
+                    {% endif %}
+                    {% if page.extra.tags %}
+                    {% for tag in page.extra.tags %}
+                    <span class="article-tag">{{ tag }}</span>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </header>
+
+            <div class="article-body">
+                {{ page.content | safe }}
+            </div>
+
+            <footer class="article-footer">
+                <a href="{{ config.base_url }}/" class="back-link">&larr; {% if lang == "fr" %}Tous les articles{% else %}All posts{% endif %}</a>
+
+                <div class="share-section">
+                    <p>{% if lang == "fr" %}Partager cet article{% else %}Share this post{% endif %}</p>
+                    <div class="share-links">
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.permalink | urlencode }}" target="_blank" rel="noopener" class="share-link">LinkedIn</a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.permalink | urlencode }}" target="_blank" rel="noopener" class="share-link">Facebook</a>
+                    </div>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    {{ macros::footer(lang=lang) }}
+    {{ macros::mobile_menu_script() }}
+</body>
+</html>

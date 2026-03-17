@@ -21,7 +21,8 @@ nav_home: Inicio
 nav_story: Nuestra historia
 nav_docs: Documentacion
 nav_contribute: Contribuir
-
+nav_blog: Blog
+nav_changelog: Changelog
 # -- Hero --
 hero_title: La biblioteca del mañana,<br><span>en casa.</span>
 hero_subtitle: Organiza tus libros, comparte con tu comunidad.<br><span class="hero-tagline">Sin cloud, sin cuenta. Open Source.</span>
