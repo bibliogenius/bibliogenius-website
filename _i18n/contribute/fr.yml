@@ -37,7 +37,7 @@ downloads_aria: Téléchargements
 macos_desc: Puce Apple (M1/M2) & Intel
 windows_desc: Zip portable
 linux_desc: Tarball (Ubuntu/Debian)
-android_desc: Disponible sur demande
+android_desc: Test fermé Google Play
 
 # -- Bug Report --
 bug_title: Un bug ?

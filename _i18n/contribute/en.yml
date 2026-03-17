@@ -37,7 +37,7 @@ downloads_aria: Downloads
 macos_desc: Apple Silicon (M1/M2) & Intel
 windows_desc: Portable zip
 linux_desc: Tarball (Ubuntu/Debian)
-android_desc: Available on request
+android_desc: Closed test on Google Play
 
 # -- Bug Report --
 bug_title: Found a bug?

@@ -37,7 +37,7 @@ downloads_aria: Descargas
 macos_desc: Chip Apple (M1/M2) e Intel
 windows_desc: Zip portable
 linux_desc: Tarball (Ubuntu/Debian)
-android_desc: Disponible bajo petición
+android_desc: Test cerrado en Google Play
 
 # -- Reporte de Errores --
 bug_title: ¿Un error?
