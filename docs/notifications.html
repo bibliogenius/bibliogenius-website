@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
+<script>
+(function(){
+  if(sessionStorage.getItem('lang_chosen'))return;
+  var l=navigator.language||navigator.userLanguage||'';
+  if(l.substring(0,2)!=='fr'){
+    var p=location.pathname;
+    location.replace(p.replace(/^\/(?!en\/|de\/|es\/)/, '/en/'));
+  }
+})();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to add a book - Documentation - BiblioGenius</title>
-    <meta name="description" content="Guide to adding books by scanning, searching or manual entry">
+    <title>Notifications - Documentation - BiblioGenius</title>
+    <meta name="description" content="Suivez les demandes de connexion, les emprunts et les correspondances de votre liste de souhaits">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="How to add a book - Documentation - BiblioGenius">
-    <meta property="og:description" content="Guide to adding books by scanning, searching or manual entry">
-    <meta property="og:url" content="https://bibliogenius.org/en/docs/add-book.html">
+    <meta property="og:title" content="Notifications - Documentation - BiblioGenius">
+    <meta property="og:description" content="Suivez les demandes de connexion, les emprunts et les correspondances de votre liste de souhaits">
+    <meta property="og:url" content="https://bibliogenius.org/docs/notifications.html">
     <meta property="og:site_name" content="BiblioGenius">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="How to add a book - Documentation - BiblioGenius">
-    <meta name="twitter:description" content="Guide to adding books by scanning, searching or manual entry">
+    <meta name="twitter:title" content="Notifications - Documentation - BiblioGenius">
+    <meta name="twitter:description" content="Suivez les demandes de connexion, les emprunts et les correspondances de votre liste de souhaits">
 
-    <link rel="canonical" href="https://bibliogenius.org/en/docs/add-book.html">
-    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/add-book.html">
-    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/add-book.html">
-    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/add-book.html">
+    <link rel="canonical" href="https://bibliogenius.org/docs/notifications.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/notifications.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/notifications.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/notifications.html">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../../favicon-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <style>
         .doc-layout {
             display: flex;
@@ -231,9 +241,9 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "BiblioGenius", "item": "https://bibliogenius.org/en/"},
-            {"@type": "ListItem", "position": 2, "name": "Documentation", "item": "https://bibliogenius.org/en/docs/"},
-            {"@type": "ListItem", "position": 3, "name": "How to add a book"}
+            {"@type": "ListItem", "position": 1, "name": "BiblioGenius", "item": "https://bibliogenius.org/"},
+            {"@type": "ListItem", "position": 2, "name": "Documentation", "item": "https://bibliogenius.org/docs/"},
+            {"@type": "ListItem", "position": 3, "name": "Notifications"}
         ]
     }
     </script>
@@ -243,7 +253,7 @@
     <a href="#main-content" class="skip-link">Skip to content</a>
 
     <header class="hero" style="padding: 2.5rem 1.5rem;">
-        <nav class="site-nav" aria-label="Main navigation">
+        <nav class="site-nav" aria-label="Navigation principale">
             <a href="../index.html" class="site-nav-logo">BiblioGenius</a>
             <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
                 <span class="hamburger-line"></span>
@@ -251,21 +261,21 @@
                 <span class="hamburger-line"></span>
             </button>
             <div class="site-nav-menu" id="site-nav-menu">
-                <a href="../index.html" class="site-nav-link">Home</a>
-                <a href="../story.html" class="site-nav-link">Our Story</a>
+                <a href="../index.html" class="site-nav-link">Accueil</a>
+                <a href="../story.html" class="site-nav-link">Notre histoire</a>
                 <a href="index.html" class="site-nav-link">Documentation</a>
-                <a href="../contribute.html" class="site-nav-link">Contribute</a>
+                <a href="../contribute.html" class="site-nav-link">Contribuer</a>
                 <a href="../blog/" class="site-nav-link">Blog</a>
                 <a href="../changelog.html" class="site-nav-link">Changelog</a>
-                <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Language">
-            <option value="add-book.html" selected>English</option>
-            <option value="../../docs/add-book.html">Francais</option>
+                <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Langue">
+            <option value="../en/docs/notifications.html">English</option>
+            <option value="notifications.html" selected>Francais</option>
                 </select>
             </div>
         </nav>
         <div class="hero-content">
             <h1>Documentation</h1>
-            <p>Guides and tutorials to master BiblioGenius</p>
+            <p>Guides et tutoriels pour maitriser BiblioGenius</p>
         </div>
     </header>
 
@@ -278,56 +288,65 @@
             <nav class="doc-sidebar" id="doc-sidebar" aria-label="Guide">
                 <h2>Guide</h2>
                 <div class="sidebar-group">
-                    <div class="sidebar-group-label">Library</div>
-                    <a href="add-book.html" class="sidebar-link active" aria-current="page">How to add a book</a>
-                    <a href="organize-shelves.html" class="sidebar-link">How to organize my shelves</a>
-                    <a href="reading-progress.html" class="sidebar-link">How to track reading progress</a>
+                    <div class="sidebar-group-label">Bibliotheque</div>
+                    <a href="add-book.html" class="sidebar-link">Comment ajouter un livre</a>
+                    <a href="organize-shelves.html" class="sidebar-link">Comment organiser mes etageres</a>
+                    <a href="reading-progress.html" class="sidebar-link">Comment suivre ma progression de lecture</a>
                 </div>
                 <div class="sidebar-group">
-                    <div class="sidebar-group-label">Search</div>
-                    <a href="external-search.html" class="sidebar-link">How to search external catalogs</a>
-                    <a href="import-books.html" class="sidebar-link">Importing Books</a>
+                    <div class="sidebar-group-label">Recherche</div>
+                    <a href="external-search.html" class="sidebar-link">Comment chercher dans les catalogues externes</a>
+                    <a href="import-books.html" class="sidebar-link">Importer des livres</a>
                 </div>
                 <div class="sidebar-group">
-                    <div class="sidebar-group-label">Network</div>
-                    <a href="connect-friends.html" class="sidebar-link">How to connect with friends</a>
-                    <a href="contacts.html" class="sidebar-link">How to manage contacts</a>
-                    <a href="network.html" class="sidebar-link">How to explore the network</a>
-                    <a href="lending.html" class="sidebar-link">How to lend a book</a>
-                    <a href="notifications.html" class="sidebar-link">Notifications</a>
-                    <a href="requests.html" class="sidebar-link">How to manage requests</a>
+                    <div class="sidebar-group-label">Reseau</div>
+                    <a href="connect-friends.html" class="sidebar-link">Comment se connecter avec des amis</a>
+                    <a href="contacts.html" class="sidebar-link">Comment gerer mes contacts</a>
+                    <a href="network.html" class="sidebar-link">Comment explorer le reseau</a>
+                    <a href="lending.html" class="sidebar-link">Comment preter un livre</a>
+                    <a href="notifications.html" class="sidebar-link active" aria-current="page">Notifications</a>
+                    <a href="requests.html" class="sidebar-link">Gerer les demandes</a>
                 </div>
                 <div class="sidebar-group">
-                    <div class="sidebar-group-label">Advanced</div>
-                    <a href="collections.html" class="sidebar-link">How to use Collections</a>
-                    <a href="audio.html" class="sidebar-link">How to use audio features</a>
+                    <div class="sidebar-group-label">Avance</div>
+                    <a href="collections.html" class="sidebar-link">Comment utiliser les Collections</a>
+                    <a href="audio.html" class="sidebar-link">Comment utiliser les fonctionnalites audio</a>
                 </div>
                 <div class="sidebar-group">
-                    <div class="sidebar-group-label">Data</div>
-                    <a href="privacy-data.html" class="sidebar-link">Where is my data stored</a>
-                    <a href="profile.html" class="sidebar-link">My Profile</a>
+                    <div class="sidebar-group-label">Donnees</div>
+                    <a href="privacy-data.html" class="sidebar-link">Ou sont stockees mes donnees</a>
+                    <a href="profile.html" class="sidebar-link">Mon profil</a>
                 </div>
             </nav>
 
             <article class="doc-content">
-                <a href="index.html" class="back-link">&larr; All guides</a>
-                <h1>How to add a book</h1>
-<p>Go to "My Library" and tap the "+" button. You can scan a barcode or search by title/ISBN.</p>
-<p><img loading="lazy" alt="Your library" src="images/add-book/library-view.png" /></p>
-<h2 id="scan-a-barcode">Scan a barcode</h2>
-<p>Open the app and tap the "+" button at the bottom right, then choose "Scan".</p>
-<p>Point your camera at the book's barcode. BiblioGenius recognizes it automatically and fetches all metadata (title, author, cover, etc.).</p>
-<h2 id="search-by-title-or-isbn">Search by title or ISBN</h2>
-<p>You can also search for a book by its title or ISBN number:</p>
-<ol>
-<li>Tap "+" then "Search"</li>
-<li>Enter the title, author or ISBN</li>
-<li>Select the right result from the list</li>
-<li>The book is added with all its information</li>
-</ol>
-<h2 id="manual-entry">Manual entry</h2>
-<p>If the book is not found in the catalogs, you can create it manually by filling in the title, author, and other fields.</p>
-<p><img loading="lazy" alt="Add book form" src="images/add-book/add-book-form.png" /></p>
+                <a href="index.html" class="back-link">&larr; Tous les guides</a>
+                <h1>Notifications</h1>
+<p>L'ecran Notifications centralise tous les evenements lies a votre reseau : demandes de connexion, emprunts, retours de livres et correspondances avec votre liste de souhaits.</p>
+<h2 id="types-de-notifications">Types de notifications</h2>
+<ul>
+<li><strong>Demande de connexion</strong> : un lecteur souhaite se connecter a votre bibliotheque</li>
+<li><strong>Connexion acceptee</strong> : votre demande de connexion a ete acceptee</li>
+<li><strong>Demande d'emprunt</strong> : quelqu'un souhaite emprunter un de vos livres</li>
+<li><strong>Emprunt accepte</strong> : votre demande d'emprunt a ete acceptee</li>
+<li><strong>Livre retourne</strong> : un emprunteur a rendu votre livre</li>
+<li><strong>Correspondance souhait</strong> : un livre de votre liste de souhaits a ete trouve dans la bibliotheque d'un contact</li>
+</ul>
+<h2 id="filtrer-les-notifications">Filtrer les notifications</h2>
+<p>En haut de l'ecran, des filtres permettent d'afficher uniquement certaines categories :</p>
+<ul>
+<li><strong>Tout</strong> : toutes les notifications</li>
+<li><strong>Connexions</strong> : demandes et acceptations de connexion</li>
+<li><strong>Emprunts</strong> : demandes, acceptations et retours de livres</li>
+<li><strong>Decouvertes</strong> : correspondances avec votre liste de souhaits</li>
+</ul>
+<h2 id="actions">Actions</h2>
+<ul>
+<li><strong>Appuyer sur une notification</strong> : ouvre l'ecran correspondant (reseau, demandes, bibliotheque du contact)</li>
+<li><strong>Glisser vers la gauche</strong> : supprime la notification</li>
+<li><strong>Tout marquer comme lu</strong> : via le bouton dans la barre d'actions</li>
+<li><strong>Tout supprimer</strong> : via le bouton dans la barre d'actions (avec confirmation)</li>
+</ul>
             </article>
         </div>
     </main>

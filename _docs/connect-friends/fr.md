@@ -1,21 +1,32 @@
 ---
 title: Comment se connecter avec des amis
-description: Partagez votre bibliotheque et connectez-vous avec d'autres lecteurs
+description: Partagez votre bibliothèque et connectez-vous avec d'autres lecteurs via QR code ou lien d'invitation
 order: 5
 group: social
 ---
 
-Allez dans "Connecter une bibliotheque" pour partager votre QR code ou scanner celui d'un ami.
+Vous pouvez vous connecter avec d'autres lecteurs de deux manières : en scannant un QR code ou en partageant un lien d'invitation.
 
-![Ecran des contacts](images/contacts-list.png)
+## Par QR code (en personne)
 
-## Comment ca marche
+1. Ouvrez la section Réseau
+2. Appuyez sur "Connecter une bibliothèque"
+3. Montrez votre QR code à votre ami, ou scannez le sien
+4. Une fois connectés, vous pouvez consulter vos catalogues respectifs
 
-1. Ouvrez la section "Connecter une bibliotheque"
-2. Montrez votre QR code a votre ami, ou scannez le sien
-3. Une fois connectes, vous pouvez consulter vos catalogues respectifs
-4. Vous pouvez aussi faire des demandes d'emprunt
+C'est la méthode la plus simple quand vous êtes au même endroit.
 
-## Connexion securisee
+## Par lien d'invitation (à distance)
 
-La connexion entre bibliotheques est chiffree de bout en bout. Seuls les livres que vous choisissez de partager sont visibles par vos contacts.
+Vous pouvez aussi envoyer un lien d'invitation par messagerie, email ou tout autre moyen :
+
+1. Ouvrez la section Réseau
+2. Appuyez sur "Partager un lien d'invitation"
+3. Envoyez le lien à votre ami via votre app de messagerie préférée
+4. Quand votre ami ouvre le lien, BiblioGenius s'ouvre et lui propose d'accepter la connexion
+
+Le lien contient les informations nécessaires pour établir la connexion, y compris les clés de chiffrement.
+
+## Connexion sécurisée
+
+La connexion entre bibliothèques est chiffrée de bout en bout, quelle que soit la méthode utilisée. Seuls les livres que vous choisissez de partager sont visibles par vos contacts.

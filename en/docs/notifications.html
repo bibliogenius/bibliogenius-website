@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to add a book - Documentation - BiblioGenius</title>
-    <meta name="description" content="Guide to adding books by scanning, searching or manual entry">
+    <title>Notifications - Documentation - BiblioGenius</title>
+    <meta name="description" content="Track connection requests, loans, and wishlist matches">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="How to add a book - Documentation - BiblioGenius">
-    <meta property="og:description" content="Guide to adding books by scanning, searching or manual entry">
-    <meta property="og:url" content="https://bibliogenius.org/en/docs/add-book.html">
+    <meta property="og:title" content="Notifications - Documentation - BiblioGenius">
+    <meta property="og:description" content="Track connection requests, loans, and wishlist matches">
+    <meta property="og:url" content="https://bibliogenius.org/en/docs/notifications.html">
     <meta property="og:site_name" content="BiblioGenius">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="How to add a book - Documentation - BiblioGenius">
-    <meta name="twitter:description" content="Guide to adding books by scanning, searching or manual entry">
+    <meta name="twitter:title" content="Notifications - Documentation - BiblioGenius">
+    <meta name="twitter:description" content="Track connection requests, loans, and wishlist matches">
 
-    <link rel="canonical" href="https://bibliogenius.org/en/docs/add-book.html">
-    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/add-book.html">
-    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/add-book.html">
-    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/add-book.html">
+    <link rel="canonical" href="https://bibliogenius.org/en/docs/notifications.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/notifications.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/notifications.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/notifications.html">
 
     <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../../favicon-192x192.png">
@@ -233,7 +233,7 @@
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "BiblioGenius", "item": "https://bibliogenius.org/en/"},
             {"@type": "ListItem", "position": 2, "name": "Documentation", "item": "https://bibliogenius.org/en/docs/"},
-            {"@type": "ListItem", "position": 3, "name": "How to add a book"}
+            {"@type": "ListItem", "position": 3, "name": "Notifications"}
         ]
     }
     </script>
@@ -258,8 +258,8 @@
                 <a href="../blog/" class="site-nav-link">Blog</a>
                 <a href="../changelog.html" class="site-nav-link">Changelog</a>
                 <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Language">
-            <option value="add-book.html" selected>English</option>
-            <option value="../../docs/add-book.html">Francais</option>
+            <option value="notifications.html" selected>English</option>
+            <option value="../../docs/notifications.html">Francais</option>
                 </select>
             </div>
         </nav>
@@ -279,7 +279,7 @@
                 <h2>Guide</h2>
                 <div class="sidebar-group">
                     <div class="sidebar-group-label">Library</div>
-                    <a href="add-book.html" class="sidebar-link active" aria-current="page">How to add a book</a>
+                    <a href="add-book.html" class="sidebar-link">How to add a book</a>
                     <a href="organize-shelves.html" class="sidebar-link">How to organize my shelves</a>
                     <a href="reading-progress.html" class="sidebar-link">How to track reading progress</a>
                 </div>
@@ -294,7 +294,7 @@
                     <a href="contacts.html" class="sidebar-link">How to manage contacts</a>
                     <a href="network.html" class="sidebar-link">How to explore the network</a>
                     <a href="lending.html" class="sidebar-link">How to lend a book</a>
-                    <a href="notifications.html" class="sidebar-link">Notifications</a>
+                    <a href="notifications.html" class="sidebar-link active" aria-current="page">Notifications</a>
                     <a href="requests.html" class="sidebar-link">How to manage requests</a>
                 </div>
                 <div class="sidebar-group">
@@ -311,23 +311,32 @@
 
             <article class="doc-content">
                 <a href="index.html" class="back-link">&larr; All guides</a>
-                <h1>How to add a book</h1>
-<p>Go to "My Library" and tap the "+" button. You can scan a barcode or search by title/ISBN.</p>
-<p><img loading="lazy" alt="Your library" src="images/add-book/library-view.png" /></p>
-<h2 id="scan-a-barcode">Scan a barcode</h2>
-<p>Open the app and tap the "+" button at the bottom right, then choose "Scan".</p>
-<p>Point your camera at the book's barcode. BiblioGenius recognizes it automatically and fetches all metadata (title, author, cover, etc.).</p>
-<h2 id="search-by-title-or-isbn">Search by title or ISBN</h2>
-<p>You can also search for a book by its title or ISBN number:</p>
-<ol>
-<li>Tap "+" then "Search"</li>
-<li>Enter the title, author or ISBN</li>
-<li>Select the right result from the list</li>
-<li>The book is added with all its information</li>
-</ol>
-<h2 id="manual-entry">Manual entry</h2>
-<p>If the book is not found in the catalogs, you can create it manually by filling in the title, author, and other fields.</p>
-<p><img loading="lazy" alt="Add book form" src="images/add-book/add-book-form.png" /></p>
+                <h1>Notifications</h1>
+<p>The Notifications screen centralizes all events related to your network: connection requests, loans, book returns, and wishlist matches.</p>
+<h2 id="notification-types">Notification types</h2>
+<ul>
+<li><strong>Connection request</strong>: a reader wants to connect to your library</li>
+<li><strong>Connection accepted</strong>: your connection request was accepted</li>
+<li><strong>Borrow request</strong>: someone wants to borrow one of your books</li>
+<li><strong>Borrow accepted</strong>: your borrow request was accepted</li>
+<li><strong>Book returned</strong>: a borrower has returned your book</li>
+<li><strong>Wishlist match</strong>: a book from your wishlist was found in a contact's library</li>
+</ul>
+<h2 id="filtering-notifications">Filtering notifications</h2>
+<p>At the top of the screen, filter chips let you display only certain categories:</p>
+<ul>
+<li><strong>All</strong>: all notifications</li>
+<li><strong>Connections</strong>: connection requests and acceptances</li>
+<li><strong>Loans</strong>: borrow requests, acceptances, and returns</li>
+<li><strong>Discoveries</strong>: wishlist matches</li>
+</ul>
+<h2 id="actions">Actions</h2>
+<ul>
+<li><strong>Tap a notification</strong>: opens the relevant screen (network, requests, contact's library)</li>
+<li><strong>Swipe left</strong>: dismisses the notification</li>
+<li><strong>Mark all as read</strong>: via the button in the action bar</li>
+<li><strong>Clear all</strong>: via the button in the action bar (with confirmation)</li>
+</ul>
             </article>
         </div>
     </main>
