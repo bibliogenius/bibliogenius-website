@@ -56,7 +56,7 @@ tag_centers: Dokumentationszentren
 test_title: Testen Sie die App
 test_desc: BiblioGenius ist als Beta verfügbar. Werden Sie einer der ersten Tester!
 btn_testflight: Auf iOS testen (TestFlight)
-android_note: Android auf Anfrage verfügbar
+btn_android: Auf Android testen (Google Play)
 
 # -- Bibliothek befreien (auskommentiert) --
 free_library_title: Befreien Sie Ihre Bibliothek
