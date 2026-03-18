@@ -1,8 +1,8 @@
 +++
 title = "BiblioGenius cherche ses premiers testeurs"
-description = "Scannez vos livres, explorez les bibliothèques de vos proches, empruntez en un tap. Sans cloud, sans compte. On cherche des testeurs pour façonner l'app avec nous."
-date = 2026-03-19
-updated = 2026-03-19
+description = "Scannez vos livres, explorez les bibliothèques de vos proches, empruntez en un tap. Vos données restent sur votre téléphone. On cherche des testeurs pour façonner l'app avec nous."
+date = 2026-03-24
+updated = 2026-03-24
 template = "blog/page.html"
 
 [extra]
@@ -17,15 +17,25 @@ On achète des livres qu'on a déjà autour de nous. On cherche des recommandati
 
 ## Comment ça marche
 
-Tu scannes le code-barres d'un livre : couverture, résumé, tout apparaît. En quelques minutes, ta bibliothèque prend forme. Collections, étagères, suivi de lecture. Et tout reste sur ton téléphone. Pas de cloud, pas de compte, pas de traçage.
+Tu scannes le code-barres d'un livre : couverture, résumé, tout apparaît depuis la BNF, Inventaire, OpenLibrary. En quelques minutes, ta bibliothèque prend forme. Sélections, étagères, suivi de lecture. Et tout reste sur ton téléphone - tes données ne transitent par aucun serveur.
 
-Ton amie a aussi BiblioGenius ? Tu scannes son QR code et sa bibliothèque apparaît sur ton écran. Le roman que tu cherchais depuis des mois ? Il était à dix mètres de chez toi. Tu le demandes en prêt, elle accepte. Tout est chiffré de bout en bout.
+Ton amie a aussi BiblioGenius ? Tu scannes son QR code et sa bibliothèque apparaît sur ton écran. Le roman que tu cherchais depuis des mois ? Il était à dix mètres de chez toi. Tu le demandes en prêt, elle accepte. Tout est chiffré de bout en bout - même le serveur relais ne peut pas lire vos échanges.
+
+## Ce qu'il y a dedans
+
+- **Scan intelligent** : code-barres, scan en masse, enrichissement automatique depuis 5 sources (BNF, SUDOC, Inventaire, OpenLibrary, Google Books)
+- **Partage chiffré** : sur le même WiFi ou à distance via le hub relais, tout est chiffré de bout en bout
+- **Audiolivres** : recherche et écoute depuis LibriVox, Archive.org et LittératureAudio
+- **Gamification** : badges, streaks, objectifs de lecture, classement entre amis
+- **Mini-jeux** : puzzle et memory avec les couvertures de ta bibliothèque
+- **Import** : Goodreads, Babelio, LibraryThing, Gleeph, liste d'ISBN
+- **5 plateformes** : Android, iOS, macOS, Windows, Linux
 
 ## Pourquoi tester maintenant ?
 
 L'application est en bêta. Chaque retour compte : un bug repéré, une idée, une friction dans l'interface. En testant maintenant, tu façonnes le projet dès ses débuts.
 
-C'est gratuit, open source, et conçu par des passionnés.
+C'est gratuit, open source (AGPL-3.0), et développé par un dev indépendant. Le code est auditable par tous.
 
 ## Rejoindre la bêta
 
@@ -34,6 +44,10 @@ C'est gratuit, open source, et conçu par des passionnés.
 **Android** : rejoins le test sur [Google Play](https://play.google.com/apps/testing/com.bibliogenius.app).
 
 **Mac / Windows / Linux** : télécharge la dernière version sur la [page Contribuer](https://bibliogenius.org/contribute.html).
+
+## Faire un retour
+
+Un bug ? Une idée ? Une friction ? Ouvre un ticket sur [GitHub](https://github.com/bibliogenius/bibliogenius-app/issues) ou écris directement à [contact@bibliogenius.org](mailto:contact@bibliogenius.org).
 
 <div class="video-facade" style="max-width:560px;margin:2rem auto;">
 <a href="https://www.youtube.com/watch?v=h8jYyvVPeDg" target="_blank" rel="noopener" style="display:block;position:relative;padding-bottom:56.25%;background:#000;border-radius:0.5rem;overflow:hidden;text-decoration:none;">

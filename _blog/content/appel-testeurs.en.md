@@ -1,8 +1,8 @@
 +++
 title = "BiblioGenius is looking for its first testers"
-description = "Scan your books, explore your friends' libraries, borrow with a tap. No cloud, no account. We're looking for testers to shape the app with us."
-date = 2026-03-19
-updated = 2026-03-19
+description = "Scan your books, explore your friends' libraries, borrow with a tap. Your data stays on your phone. We're looking for testers to shape the app with us."
+date = 2026-03-24
+updated = 2026-03-24
 template = "blog/page.html"
 
 [extra]
@@ -17,15 +17,25 @@ We buy books that are already sitting around us. We look for recommendations on 
 
 ## How it works
 
-Scan a barcode: cover, summary, everything appears. In a few minutes, your library takes shape. Collections, shelves, reading tracker. And everything stays on your phone. No cloud, no account, no tracking.
+Scan a barcode: cover, summary, everything appears from BNF, Inventaire, OpenLibrary. In a few minutes, your library takes shape. Selections, shelves, reading tracker. And everything stays on your phone - your data never passes through any server.
 
-Your friend also has BiblioGenius? Scan her QR code and her library appears on your screen. That novel you've been looking for? It was ten meters away. You request a loan, she accepts. Everything is end-to-end encrypted.
+Your friend also has BiblioGenius? Scan her QR code and her library appears on your screen. That novel you've been looking for? It was ten meters away. You request a loan, she accepts. Everything is end-to-end encrypted - even the relay server can't read your exchanges.
+
+## What's inside
+
+- **Smart scanning**: barcode, mass scan, automatic enrichment from 5 sources (BNF, SUDOC, Inventaire, OpenLibrary, Google Books)
+- **Encrypted sharing**: on the same WiFi or remotely via the relay hub, everything is end-to-end encrypted
+- **Audiobooks**: search and listen from LibriVox, Archive.org and LittératureAudio
+- **Gamification**: badges, streaks, reading goals, leaderboard with friends
+- **Mini-games**: puzzle and memory using your library's book covers
+- **Import**: Goodreads, Babelio, LibraryThing, Gleeph, ISBN list
+- **5 platforms**: Android, iOS, macOS, Windows, Linux
 
 ## Why test now?
 
 The app is in beta. Every piece of feedback matters: a bug spotted, an idea, a friction in the interface. By testing now, you shape the project from the start.
 
-It's free, open source, and built by passionate people.
+It's free, open source (AGPL-3.0), and built by an independent developer. The code is auditable by anyone.
 
 ## Join the beta
 
@@ -34,6 +44,10 @@ It's free, open source, and built by passionate people.
 **Android**: join the test on [Google Play](https://play.google.com/apps/testing/com.bibliogenius.app).
 
 **Mac / Windows / Linux**: download the latest version from the [Contribute page](https://bibliogenius.org/en/contribute.html).
+
+## Send feedback
+
+Found a bug? Have an idea? Noticed some friction? Open a ticket on [GitHub](https://github.com/bibliogenius/bibliogenius-app/issues) or write directly to [contact@bibliogenius.org](mailto:contact@bibliogenius.org).
 
 <div class="video-facade" style="max-width:560px;margin:2rem auto;">
 <a href="https://www.youtube.com/watch?v=YOFUxx9w-4I" target="_blank" rel="noopener" style="display:block;position:relative;padding-bottom:56.25%;background:#000;border-radius:0.5rem;overflow:hidden;text-decoration:none;">

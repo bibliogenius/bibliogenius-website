@@ -1,8 +1,8 @@
 +++
 title = "BiblioGenius busca sus primeros testers"
-description = "Escanea tus libros, explora las bibliotecas de tus amigos, pide prestado con un toque. Sin nube, sin cuenta. Buscamos testers para construir la app juntos."
-date = 2026-03-19
-updated = 2026-03-19
+description = "Escanea tus libros, explora las bibliotecas de tus amigos, pide prestado con un toque. Tus datos se quedan en tu teléfono. Buscamos testers para construir la app juntos."
+date = 2026-03-24
+updated = 2026-03-24
 template = "blog/page.html"
 
 [extra]
@@ -17,15 +17,25 @@ Compramos libros que ya están a nuestro alrededor. Buscamos recomendaciones en 
 
 ## Cómo funciona
 
-Escaneas un código de barras: portada, resumen, todo aparece. En pocos minutos, tu biblioteca toma forma. Colecciones, estanterías, seguimiento de lectura. Y todo se queda en tu teléfono. Sin nube, sin cuenta, sin rastreo.
+Escaneas un código de barras: portada, resumen, todo aparece desde la BNF, Inventaire, OpenLibrary. En pocos minutos, tu biblioteca toma forma. Selecciones, estanterías, seguimiento de lectura. Y todo se queda en tu teléfono - tus datos no pasan por ningún servidor.
 
-¿Tu amiga también tiene BiblioGenius? Escaneas su código QR y su biblioteca aparece en tu pantalla. La novela que llevas meses buscando estaba a diez metros de ti. La pides prestada, ella acepta. Todo cifrado de extremo a extremo.
+¿Tu amiga también tiene BiblioGenius? Escaneas su código QR y su biblioteca aparece en tu pantalla. La novela que llevas meses buscando estaba a diez metros de ti. La pides prestada, ella acepta. Todo cifrado de extremo a extremo - ni siquiera el servidor de retransmisión puede leer sus intercambios.
+
+## Qué incluye
+
+- **Escaneo inteligente**: código de barras, escaneo masivo, enriquecimiento automático desde 5 fuentes (BNF, SUDOC, Inventaire, OpenLibrary, Google Books)
+- **Compartir cifrado**: en la misma WiFi o a distancia a través del hub de retransmisión, todo cifrado de extremo a extremo
+- **Audiolibros**: búsqueda y escucha desde LibriVox, Archive.org y LittératureAudio
+- **Gamificación**: insignias, rachas, objetivos de lectura, clasificación entre amigos
+- **Minijuegos**: puzzle y memory con las portadas de tu biblioteca
+- **Importación**: Goodreads, Babelio, LibraryThing, Gleeph, lista de ISBN
+- **5 plataformas**: Android, iOS, macOS, Windows, Linux
 
 ## ¿Por qué probar ahora?
 
 La aplicación está en beta. Cada comentario cuenta: un bug detectado, una idea, una fricción en la interfaz. Al probar ahora, das forma al proyecto desde el principio.
 
-Es gratis, open source, y creada por apasionados.
+Es gratis, open source (AGPL-3.0), y desarrollada por un desarrollador independiente. El código es auditable por cualquiera.
 
 ## Unirse a la beta
 
@@ -34,6 +44,10 @@ Es gratis, open source, y creada por apasionados.
 **Android**: únete al test en [Google Play](https://play.google.com/apps/testing/com.bibliogenius.app).
 
 **Mac / Windows / Linux**: descarga la última versión en la [página Contribuir](https://bibliogenius.org/es/contribute.html).
+
+## Enviar comentarios
+
+¿Un bug? ¿Una idea? ¿Una fricción? Abre un ticket en [GitHub](https://github.com/bibliogenius/bibliogenius-app/issues) o escribe directamente a [contact@bibliogenius.org](mailto:contact@bibliogenius.org).
 
 <div class="video-facade" style="max-width:560px;margin:2rem auto;">
 <a href="https://www.youtube.com/watch?v=v4kC26ajOuM" target="_blank" rel="noopener" style="display:block;position:relative;padding-bottom:56.25%;background:#000;border-radius:0.5rem;overflow:hidden;text-decoration:none;">
