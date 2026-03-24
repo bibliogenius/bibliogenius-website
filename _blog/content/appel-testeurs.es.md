@@ -1,5 +1,6 @@
 +++
 title = "BiblioGenius busca sus primeros testers"
+slug = "busca-testers"
 description = "Escanea tus libros, explora las bibliotecas de tus amigos, pide prestado con un toque. Tus datos se quedan en tu teléfono. Buscamos testers para construir la app juntos."
 date = 2026-03-24
 updated = 2026-03-24
