@@ -270,6 +270,13 @@
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             border-bottom: 1px solid rgba(255,255,255,0.06);
+            overflow: hidden;
+        }
+
+        @media (max-width: 767px) {
+            .site-nav-menu:not(.open) {
+                display: none;
+            }
         }
 
         .colophon {
@@ -321,7 +328,7 @@
         <a href="index.html" class="site-nav-link">Inicio</a>
         <a href="story.html" class="site-nav-link">Nuestra historia</a>
         <a href="docs/index.html" class="site-nav-link">Documentacion</a>
-        <a href="contribute.html" class="site-nav-link">Contribuir</a>
+        <a href="../contribute.html" class="site-nav-link">Contribuir</a>
         <a href="blog/" class="site-nav-link">Blog</a>
         <a href="../changelog.html" class="site-nav-link">Changelog</a>
         <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Idioma">
