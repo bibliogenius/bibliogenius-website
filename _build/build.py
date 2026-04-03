@@ -23,6 +23,7 @@ import os
 import re
 import shutil
 import sys
+from datetime import datetime
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SITE_DIR = os.path.dirname(SCRIPT_DIR)
@@ -44,6 +45,20 @@ OG_LOCALES = {
     'en': 'en_US',
     'de': 'de_DE',
     'es': 'es_ES',
+}
+
+BLOG_CONTENT_DIR = os.path.join(SITE_DIR, '_blog', 'content')
+
+# Month names per language (for blog post date formatting)
+MONTH_NAMES = {
+    'fr': ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+           'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+    'en': ['January', 'February', 'March', 'April', 'May', 'June',
+           'July', 'August', 'September', 'October', 'November', 'December'],
+    'es': ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+           'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+    'de': ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+           'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
 }
 
 # Language redirect script (injected only in default-lang pages)
@@ -670,6 +685,106 @@ def build_changelog():
     return total
 
 
+def parse_toml_frontmatter(text):
+    """Parse Zola-style TOML frontmatter (between +++ markers)."""
+    if not text.startswith('+++'):
+        return {}, text
+    end = text.find('+++', 3)
+    if end == -1:
+        return {}, text
+    fm_text = text[3:end].strip()
+    body = text[end + 3:].strip()
+    meta = {}
+    for line in fm_text.split('\n'):
+        line = line.strip()
+        if not line or line.startswith('#') or line.startswith('['):
+            continue
+        idx = line.find(' = ')
+        if idx == -1:
+            continue
+        key = line[:idx].strip()
+        value = line[idx + 3:].strip()
+        if len(value) >= 2 and value[0] == '"' and value[-1] == '"':
+            value = value[1:-1]
+        meta[key] = value
+    return meta, body
+
+
+def format_blog_date(date_str, lang):
+    """Format a YYYY-MM-DD date string for the given language."""
+    dt = datetime.strptime(date_str, '%Y-%m-%d')
+    months = MONTH_NAMES.get(lang, MONTH_NAMES['fr'])
+    month = months[dt.month - 1]
+    if lang == 'en':
+        return f'{month} {dt.day}, {dt.year}'
+    if lang == 'de':
+        return f'{dt.day}. {month} {dt.year}'
+    return f'{dt.day} {month} {dt.year}'
+
+
+def get_latest_blog_post(lang):
+    """Get the latest blog post metadata for a given language.
+
+    Falls back to the default language if no post exists for the requested lang.
+    Returns a dict with title, description, date, slug, blog_lang or None.
+    """
+    if not os.path.isdir(BLOG_CONTENT_DIR):
+        return None
+
+    def _scan_posts(target_lang):
+        posts = []
+        for fname in os.listdir(BLOG_CONTENT_DIR):
+            if fname.startswith('_'):
+                continue
+            if target_lang == DEFAULT_LANG:
+                # Default-lang files have no language suffix: slug.md
+                if not fname.endswith('.md'):
+                    continue
+                base = fname[:-3]
+                if '.' in base:
+                    continue  # Skip language-specific files like slug.en.md
+            else:
+                suffix = f'.{target_lang}.md'
+                if not fname.endswith(suffix):
+                    continue
+                base = fname[:-len(suffix)]
+
+            filepath = os.path.join(BLOG_CONTENT_DIR, fname)
+            with open(filepath, encoding='utf-8') as f:
+                raw = f.read()
+            meta, _ = parse_toml_frontmatter(raw)
+            if 'date' not in meta or 'title' not in meta:
+                continue
+            slug = meta.get('slug', base)
+            posts.append({
+                'title': meta['title'],
+                'description': meta.get('description', ''),
+                'date': meta['date'],
+                'slug': slug,
+                'blog_lang': target_lang,
+            })
+        posts.sort(key=lambda p: p['date'], reverse=True)
+        return posts[0] if posts else None
+
+    post = _scan_posts(lang)
+    if post is None and lang != DEFAULT_LANG:
+        post = _scan_posts(DEFAULT_LANG)
+    return post
+
+
+def blog_post_relative_url(post, current_lang):
+    """Compute relative blog post URL from the homepage of current_lang."""
+    blog_lang = post['blog_lang']
+    slug = post['slug']
+    if blog_lang == DEFAULT_LANG:
+        blog_path = f'blog/{slug}/'
+    else:
+        blog_path = f'blog/{blog_lang}/{slug}/'
+    if current_lang == DEFAULT_LANG:
+        return blog_path
+    return f'../{blog_path}'
+
+
 def load_app_version():
     """Load app version from version.txt."""
     if os.path.isfile(VERSION_FILE):
@@ -735,6 +850,15 @@ def build():
                 return f'../{target}.html' if target != 'index' else '../index.html'
 
             html = re.sub(r'\{\{url:([\w-]+)\}\}', resolve_url, html)
+
+            # Inject latest blog post data for the index page
+            if page_name == 'index':
+                post = get_latest_blog_post(lang)
+                if post:
+                    html = html.replace('{{blog_post_title}}', post['title'])
+                    html = html.replace('{{blog_post_description}}', post['description'])
+                    html = html.replace('{{blog_post_date}}', format_blog_date(post['date'], lang))
+                    html = html.replace('{{blog_post_url}}', blog_post_relative_url(post, lang))
 
             # Replace all remaining {{key}} placeholders
             missing = []

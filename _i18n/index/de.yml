@@ -52,6 +52,10 @@ tag_boxes: Vernetzte Bücherboxen
 tag_assoc: Vereinsbibliotheken
 tag_centers: Dokumentationszentren
 
+# -- Neuester Blogartikel --
+blog_section_title: Neueste Nachrichten
+blog_read_more: Artikel lesen
+
 # -- App testen --
 test_title: Testen Sie die App
 test_desc: BiblioGenius ist als Beta verfügbar. Werden Sie einer der ersten Tester!

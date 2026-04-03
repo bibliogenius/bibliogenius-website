@@ -52,6 +52,10 @@ tag_boxes: Cajas de libros conectadas
 tag_assoc: Bibliotecas asociativas
 tag_centers: Centros de documentación
 
+# -- Último artículo del blog --
+blog_section_title: Últimas noticias
+blog_read_more: Leer el artículo
+
 # -- Probar la aplicación --
 test_title: Prueba la aplicación
 test_desc: "BiblioGenius está disponible en beta. ¡Únete a los primeros testers!"

@@ -52,6 +52,10 @@ tag_boxes: Connected Book Boxes
 tag_assoc: Community Libraries
 tag_centers: Documentation Centers
 
+# -- Latest Blog Post --
+blog_section_title: Latest News
+blog_read_more: Read the article
+
 # -- Test the App --
 test_title: Test the App
 test_desc: BiblioGenius is available in beta. Join the first testers!

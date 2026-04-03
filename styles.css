@@ -407,6 +407,61 @@ a {
     flex-shrink: 0;
 }
 
+/* Latest Blog Post Section */
+.latest-post {
+    padding: 4rem 1.5rem;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.latest-post h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.latest-post-card {
+    display: block;
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    color: inherit;
+    text-align: left;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.latest-post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.latest-post-card time {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+.latest-post-card h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.latest-post-card p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.latest-post-cta {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
 /* Test App Section */
 .test-app {
     padding: 4rem 1.5rem;
