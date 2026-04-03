@@ -14,6 +14,25 @@ lang_name: Français
 footer_text: "BiblioGenius &mdash; Open Source, local, chiffré."
 ---
 
+## 0.8.9 <small>2 avril 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.8" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.8" class="changelog-link">release</a>
+
+- **Nombre de pages** : champ nombre de pages dans les fiches, formulaires d'ajout/modification et recherche
+- **Durée de prêt configurable** : personnalisation de la durée de prêt dans les paramètres
+- **Formulaires livre** : refonte UX des formulaires d'ajout et de modification
+- **Sync multi-appareils** : correction de la synchronisation des auteurs, notes, copies et métadonnées entre appareils liés
+- **Recherche** : fiabilité améliorée des sources externes, scoring de pertinence, protection contre les recherches concurrentes
+- **Stabilité** : correction de la désérialisation Inventaire, correction du nom de bibliothèque par défaut localisé
+
+## 0.8.8 <small>23 mars 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.7-beta.3...v0.8.8-beta.6" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.8-beta.6" class="changelog-link">release</a>
+
+- **Sync multi-appareils (E2EE)** : synchronisation chiffrée de bout en bout entre appareils liés, appairage bidirectionnel, backfill et déduplication
+- **Notes de lecture** : ajout de notes sur les livres avec dictée vocale
+- **Livres privés** : possibilité de masquer des livres aux pairs du réseau
+- **Descriptions de livres** : récupération automatique depuis OpenLibrary et SUDOC
+- **Jeu du pendu** : nouveau mini-jeu ajouté au hub de jeux
+- **Onboarding** : messages flash séquencés et refonte du design d'accueil
+- **Stabilité** : correction de crashs au premier lancement et au premier scan, récupération du Keystore Android
+
 ## 0.8.7 <small>17 mars 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.6-alpha.6...v0.8.7-beta.3" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.7-beta.3" class="changelog-link">release</a>
 
 - **macOS DMG** : distribution via DMG avec runtime sécurisé et repli Keychain résilient

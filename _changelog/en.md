@@ -14,6 +14,25 @@ lang_name: English
 footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
 ---
 
+## 0.8.9 <small>April 2, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.8" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.8" class="changelog-link">release</a>
+
+- **Page count**: page count field on book details, add/edit forms and search
+- **Configurable loan duration**: customize loan duration in settings
+- **Book forms**: redesigned add/edit book forms for better UX
+- **Multi-device sync**: fixed synchronization of authors, notes, copies and metadata between linked devices
+- **Search**: improved external source reliability, relevance scoring, protection against concurrent searches
+- **Stability**: Inventaire deserialization fix, localized default library name fix
+
+## 0.8.8 <small>March 23, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.7-beta.3...v0.8.8-beta.6" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.8-beta.6" class="changelog-link">release</a>
+
+- **Multi-device sync (E2EE)**: end-to-end encrypted synchronization between linked devices, bidirectional pairing, backfill and deduplication
+- **Book notes**: add notes to books with voice dictation support
+- **Private books**: hide books from network peers
+- **Book descriptions**: automatic retrieval from OpenLibrary and SUDOC
+- **Hangman game**: new mini-game added to the games hub
+- **Onboarding**: sequenced flash messages and welcome design overhaul
+- **Stability**: fixed crashes on first launch and first scan, Android Keystore recovery
+
 ## 0.8.7 <small>March 17, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.6-alpha.6...v0.8.7-beta.3" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.7-beta.3" class="changelog-link">release</a>
 
 - **macOS DMG**: distribution via DMG with hardened runtime and resilient Keychain fallback
