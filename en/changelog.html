@@ -227,6 +227,7 @@
 
             <nav class="changelog-nav" id="changelog-nav" aria-label="Versions">
                 <h2>Versions</h2>
+                <a href="#0-9-0">0.9.0</a>
                 <a href="#0-8-9">0.8.9</a>
                 <a href="#0-8-8">0.8.8</a>
                 <a href="#0-8-7">0.8.7</a>
@@ -244,17 +245,29 @@
             </nav>
 
             <article class="changelog-content">
-<h2 id="0-8-9">0.8.9 <small>April 8, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.12" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.12" class="changelog-link">release</a></h2>
+<h2 id="0-9-0">0.9.0 <small>April 14, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.9-beta.17...v0.9.0-alpha.1" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.9.0-alpha.1" class="changelog-link">release</a></h2>
 <ul>
+<li><strong>Peer delta sync (ADR-028 / ADR-029)</strong>: peer catalog refreshes now use incremental deltas (adds, updates, deletes) instead of full pulls, dramatically reducing bandwidth and speeding up discovery of peer changes</li>
+<li><strong>Transparent fallback</strong>: automatic fallback to the legacy full pull when the peer does not yet support the delta protocol</li>
+<li><strong>Local state preserved</strong>: <code>firstSeenAt</code> and the online state are kept during delta refreshes (the "new" badge stays consistent)</li>
+</ul>
+<h2 id="0-8-9">0.8.9 <small>April 13, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.17" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.17" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>Public hub directory</strong>: public directory enabled with UX guardrails and direct borrow requests from followed libraries</li>
+<li><strong>Real-time leaderboard (ADR-023)</strong>: live leaderboard push, cache-first display, pre-warm on startup, reset scores button, skip direct on cellular</li>
+<li><strong>Loan reminders</strong>: due-date reminder notifications, fixed deep-link targets for lent/returned events</li>
+<li><strong>Enriched book detail</strong>: active loan status (borrower, due date, overdue badge), contact notes, copies stepper, borrow button disabled when book is already lent or borrowed</li>
+<li><strong>Live peer catalog</strong>: subscribe to peer changes to refresh the library without manual action, re-check peer connectivity before sync to avoid stale offline paths</li>
+<li><strong>Controlled covers</strong>: cap at 300×450, JPEG re-encode on upload, ETag cache, evict on 404, hub proxy for peer covers, propagation of custom covers to the hub</li>
 <li><strong>Page count</strong>: page count field on book details, add/edit forms and search</li>
-<li><strong>Configurable loan duration</strong>: customize loan duration in settings</li>
+<li><strong>Configurable loan duration</strong>: customize loan duration in settings, pick borrowing peer from loan dialog</li>
 <li><strong>Book forms</strong>: redesigned add/edit book forms for better UX</li>
-<li><strong>Network peers</strong>: peer avatars (LAN and relay via hub), tap peer card to open library directly, peer list polish (status dot, skeleton, full-screen QR) and network screen UX</li>
-<li><strong>Relay robustness (5G/4G)</strong>: reliable credential republish on reconnect, offline fallback, 502 circuit breaker, nodeId refresh, sync timeout</li>
-<li><strong>Hub profile</strong>: profile recovery code, hardened Keychain backup, registration 401 back-off</li>
-<li><strong>Multi-device sync</strong>: fixed synchronization of authors, notes, copies and metadata between linked devices</li>
+<li><strong>Network peers</strong>: peer avatars (LAN and relay via hub), tap peer card to open library directly, peer list polish (status dot, skeleton, full-screen QR), share invite button in add-connection sheet</li>
+<li><strong>Relay robustness (5G/4G)</strong>: reliable credential republish on reconnect, non-blocking sync, offline fallback, 502 circuit breaker, nodeId refresh, sync timeout</li>
+<li><strong>Hub profile</strong>: profile recovery code, automatic recovery on 401 (retry with recovery code before purge), hardened Keychain backup, registration 401 back-off, Hub URL hidden in release, safeguards against permanent profile lockout</li>
+<li><strong>Multi-device sync</strong>: fixed synchronization of authors, notes, copies and metadata between linked devices, library rename propagated to the hub</li>
 <li><strong>Search</strong>: improved external source reliability, relevance scoring, protection against concurrent searches</li>
-<li><strong>i18n</strong>: completed ES/DE translations (cover, loans, notes, recovery)</li>
+<li><strong>i18n</strong>: completed ES/DE translations (cover, loans, notes, recovery), "Copies" renamed to "Exemplaires" (fr)</li>
 <li><strong>Security &amp; stability</strong>: sensitive logs gated in debug and identifiers redacted, Inventaire deserialization fix, localized default library name fix</li>
 </ul>
 <h2 id="0-8-8">0.8.8 <small>March 23, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.7-beta.3...v0.8.8-beta.6" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.8-beta.6" class="changelog-link">release</a></h2>
