@@ -245,11 +245,16 @@
             </nav>
 
             <article class="changelog-content">
-<h2 id="0-9-0">0.9.0 <small>April 14, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.9-beta.17...v0.9.0-alpha.1" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.9.0-alpha.1" class="changelog-link">release</a></h2>
+<h2 id="0-9-0">0.9.0 <small>April 15, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.9-beta.17...v0.9.0-beta.1" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.9.0-beta.1" class="changelog-link">release</a></h2>
 <ul>
 <li><strong>Peer delta sync (ADR-028 / ADR-029)</strong>: peer catalog refreshes now use incremental deltas (adds, updates, deletes) instead of full pulls, dramatically reducing bandwidth and speeding up discovery of peer changes</li>
 <li><strong>Transparent fallback</strong>: automatic fallback to the legacy full pull when the peer does not yet support the delta protocol</li>
 <li><strong>Local state preserved</strong>: <code>firstSeenAt</code> and the online state are kept during delta refreshes (the "new" badge stays consistent)</li>
+<li><strong>Cross-device avatar sync (ADR-025)</strong>: profile avatars now propagate across linked devices via <code>profile_changed</code></li>
+<li><strong>Peer library self-heal (ADR-030)</strong>: library UUID recovery via E2EE manifest, delta cursor preserved after a reset-recovery</li>
+<li><strong>Peer library UI</strong>: cover grid by default with bounded RAM, restored color variety on book placeholders, "new" badge now driven by owner-supplied <code>added_at</code></li>
+<li><strong>Hub directory</strong>: clients now report their app version to the hub on register</li>
+<li><strong>Book cover</strong>: avoid the OpenLibrary grey placeholder for unknown ISBNs</li>
 </ul>
 <h2 id="0-8-9">0.8.9 <small>April 13, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.17" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.17" class="changelog-link">release</a></h2>
 <ul>
@@ -258,7 +263,7 @@
 <li><strong>Loan reminders</strong>: due-date reminder notifications, fixed deep-link targets for lent/returned events</li>
 <li><strong>Enriched book detail</strong>: active loan status (borrower, due date, overdue badge), contact notes, copies stepper, borrow button disabled when book is already lent or borrowed</li>
 <li><strong>Live peer catalog</strong>: subscribe to peer changes to refresh the library without manual action, re-check peer connectivity before sync to avoid stale offline paths</li>
-<li><strong>Controlled covers</strong>: cap at 300×450, JPEG re-encode on upload, ETag cache, evict on 404, hub proxy for peer covers, propagation of custom covers to the hub</li>
+<li><strong>Controlled covers</strong>: cap at 300&times;450, JPEG re-encode on upload, ETag cache, evict on 404, hub proxy for peer covers, propagation of custom covers to the hub</li>
 <li><strong>Page count</strong>: page count field on book details, add/edit forms and search</li>
 <li><strong>Configurable loan duration</strong>: customize loan duration in settings, pick borrowing peer from loan dialog</li>
 <li><strong>Book forms</strong>: redesigned add/edit book forms for better UX</li>

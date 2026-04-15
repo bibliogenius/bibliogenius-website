@@ -14,17 +14,34 @@ lang_name: English
 footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
 ---
 
-## 0.8.9 <small>April 8, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.12" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.12" class="changelog-link">release</a>
+## 0.9.0 <small>April 15, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.9-beta.17...v0.9.0-beta.1" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.9.0-beta.1" class="changelog-link">release</a>
 
+- **Peer delta sync (ADR-028 / ADR-029)**: peer catalog refreshes now use incremental deltas (adds, updates, deletes) instead of full pulls, dramatically reducing bandwidth and speeding up discovery of peer changes
+- **Transparent fallback**: automatic fallback to the legacy full pull when the peer does not yet support the delta protocol
+- **Local state preserved**: `firstSeenAt` and the online state are kept during delta refreshes (the "new" badge stays consistent)
+- **Cross-device avatar sync (ADR-025)**: profile avatars now propagate across linked devices via `profile_changed`
+- **Peer library self-heal (ADR-030)**: library UUID recovery via E2EE manifest, delta cursor preserved after a reset-recovery
+- **Peer library UI**: cover grid by default with bounded RAM, restored color variety on book placeholders, "new" badge now driven by owner-supplied `added_at`
+- **Hub directory**: clients now report their app version to the hub on register
+- **Book cover**: avoid the OpenLibrary grey placeholder for unknown ISBNs
+
+## 0.8.9 <small>April 13, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.17" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.17" class="changelog-link">release</a>
+
+- **Public hub directory**: public directory enabled with UX guardrails and direct borrow requests from followed libraries
+- **Real-time leaderboard (ADR-023)**: live leaderboard push, cache-first display, pre-warm on startup, reset scores button, skip direct on cellular
+- **Loan reminders**: due-date reminder notifications, fixed deep-link targets for lent/returned events
+- **Enriched book detail**: active loan status (borrower, due date, overdue badge), contact notes, copies stepper, borrow button disabled when book is already lent or borrowed
+- **Live peer catalog**: subscribe to peer changes to refresh the library without manual action, re-check peer connectivity before sync to avoid stale offline paths
+- **Controlled covers**: cap at 300&times;450, JPEG re-encode on upload, ETag cache, evict on 404, hub proxy for peer covers, propagation of custom covers to the hub
 - **Page count**: page count field on book details, add/edit forms and search
-- **Configurable loan duration**: customize loan duration in settings
+- **Configurable loan duration**: customize loan duration in settings, pick borrowing peer from loan dialog
 - **Book forms**: redesigned add/edit book forms for better UX
-- **Network peers**: peer avatars (LAN and relay via hub), tap peer card to open library directly, peer list polish (status dot, skeleton, full-screen QR) and network screen UX
-- **Relay robustness (5G/4G)**: reliable credential republish on reconnect, offline fallback, 502 circuit breaker, nodeId refresh, sync timeout
-- **Hub profile**: profile recovery code, hardened Keychain backup, registration 401 back-off
-- **Multi-device sync**: fixed synchronization of authors, notes, copies and metadata between linked devices
+- **Network peers**: peer avatars (LAN and relay via hub), tap peer card to open library directly, peer list polish (status dot, skeleton, full-screen QR), share invite button in add-connection sheet
+- **Relay robustness (5G/4G)**: reliable credential republish on reconnect, non-blocking sync, offline fallback, 502 circuit breaker, nodeId refresh, sync timeout
+- **Hub profile**: profile recovery code, automatic recovery on 401 (retry with recovery code before purge), hardened Keychain backup, registration 401 back-off, Hub URL hidden in release, safeguards against permanent profile lockout
+- **Multi-device sync**: fixed synchronization of authors, notes, copies and metadata between linked devices, library rename propagated to the hub
 - **Search**: improved external source reliability, relevance scoring, protection against concurrent searches
-- **i18n**: completed ES/DE translations (cover, loans, notes, recovery)
+- **i18n**: completed ES/DE translations (cover, loans, notes, recovery), "Copies" renamed to "Exemplaires" (fr)
 - **Security & stability**: sensitive logs gated in debug and identifiers redacted, Inventaire deserialization fix, localized default library name fix
 
 ## 0.8.8 <small>March 23, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.7-beta.3...v0.8.8-beta.6" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.8-beta.6" class="changelog-link">release</a>

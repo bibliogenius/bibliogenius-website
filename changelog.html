@@ -255,11 +255,16 @@
             </nav>
 
             <article class="changelog-content">
-<h2 id="0-9-0">0.9.0 <small>14 avril 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.9-beta.17...v0.9.0-alpha.1" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.9.0-alpha.1" class="changelog-link">release</a></h2>
+<h2 id="0-9-0">0.9.0 <small>15 avril 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.9-beta.17...v0.9.0-beta.1" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.9.0-beta.1" class="changelog-link">release</a></h2>
 <ul>
 <li><strong>Synchronisation delta des pairs (ADR-028 / ADR-029)</strong> : les rafraîchissements de catalogue pair se font désormais par deltas (ajouts, modifications, suppressions) au lieu d'un pull complet, ce qui réduit drastiquement la bande passante et accélère la découverte des nouveautés chez les pairs</li>
 <li><strong>Fallback transparent</strong> : repli automatique sur le pull complet legacy si le pair ne supporte pas encore le protocole delta</li>
 <li><strong>État local préservé</strong> : <code>firstSeenAt</code> et l'état "en ligne" sont conservés lors d'un refresh delta (le badge "nouveau" reste cohérent)</li>
+<li><strong>Sync avatar multi-appareils (ADR-025)</strong> : les avatars de profil se propagent désormais aux appareils liés via <code>profile_changed</code></li>
+<li><strong>Auto-réparation bibliothèque pair (ADR-030)</strong> : récupération du UUID de bibliothèque via manifeste E2EE, curseur delta préservé après une reset-recovery</li>
+<li><strong>UI bibliothèque pair</strong> : grille de couvertures par défaut avec RAM bornée, variété de couleurs restaurée sur les placeholders de livres, badge "nouveau" piloté par <code>added_at</code> fourni par le propriétaire</li>
+<li><strong>Annuaire hub</strong> : les clients remontent désormais leur version d'app au hub à l'enregistrement</li>
+<li><strong>Couverture de livre</strong> : évitement du placeholder gris d'OpenLibrary pour les ISBN inconnus</li>
 </ul>
 <h2 id="0-8-9">0.8.9 <small>13 avril 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.17" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.17" class="changelog-link">release</a></h2>
 <ul>
@@ -268,7 +273,7 @@
 <li><strong>Rappels de prêt</strong> : notifications de rappel d'échéance, deep-links corrigés pour les évènements prêt/retour</li>
 <li><strong>Fiche livre enrichie</strong> : statut de prêt actif (emprunteur, date d'échéance, badge retard), notes de contact, stepper exemplaires, bouton emprunter désactivé si livre déjà prêté</li>
 <li><strong>Catalogue pair en direct</strong> : abonnement aux changements des pairs pour rafraîchir la bibliothèque sans action manuelle, re-vérification de connectivité avant sync</li>
-<li><strong>Couvertures maîtrisées</strong> : plafonnement 300×450, ré-encodage JPEG à l'upload, cache ETag, éviction sur 404, proxy hub pour les couvertures des pairs, propagation des couvertures personnalisées au hub</li>
+<li><strong>Couvertures maîtrisées</strong> : plafonnement 300&times;450, ré-encodage JPEG à l'upload, cache ETag, éviction sur 404, proxy hub pour les couvertures des pairs, propagation des couvertures personnalisées au hub</li>
 <li><strong>Nombre de pages</strong> : champ nombre de pages dans les fiches, formulaires d'ajout/modification et recherche</li>
 <li><strong>Durée de prêt configurable</strong> : personnalisation de la durée de prêt dans les paramètres, sélection du pair emprunteur dans la boîte de dialogue</li>
 <li><strong>Formulaires livre</strong> : refonte UX des formulaires d'ajout et de modification</li>

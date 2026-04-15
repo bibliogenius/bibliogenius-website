@@ -14,17 +14,34 @@ lang_name: Français
 footer_text: "BiblioGenius &mdash; Open Source, local, chiffré."
 ---
 
-## 0.8.9 <small>8 avril 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.12" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.12" class="changelog-link">release</a>
+## 0.9.0 <small>15 avril 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.9-beta.17...v0.9.0-beta.1" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.9.0-beta.1" class="changelog-link">release</a>
 
+- **Synchronisation delta des pairs (ADR-028 / ADR-029)** : les rafraîchissements de catalogue pair se font désormais par deltas (ajouts, modifications, suppressions) au lieu d'un pull complet, ce qui réduit drastiquement la bande passante et accélère la découverte des nouveautés chez les pairs
+- **Fallback transparent** : repli automatique sur le pull complet legacy si le pair ne supporte pas encore le protocole delta
+- **État local préservé** : `firstSeenAt` et l'état "en ligne" sont conservés lors d'un refresh delta (le badge "nouveau" reste cohérent)
+- **Sync avatar multi-appareils (ADR-025)** : les avatars de profil se propagent désormais aux appareils liés via `profile_changed`
+- **Auto-réparation bibliothèque pair (ADR-030)** : récupération du UUID de bibliothèque via manifeste E2EE, curseur delta préservé après une reset-recovery
+- **UI bibliothèque pair** : grille de couvertures par défaut avec RAM bornée, variété de couleurs restaurée sur les placeholders de livres, badge "nouveau" piloté par `added_at` fourni par le propriétaire
+- **Annuaire hub** : les clients remontent désormais leur version d'app au hub à l'enregistrement
+- **Couverture de livre** : évitement du placeholder gris d'OpenLibrary pour les ISBN inconnus
+
+## 0.8.9 <small>13 avril 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.17" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.17" class="changelog-link">release</a>
+
+- **Annuaire hub public** : activation de l'annuaire public avec garde-fous UX et demandes d'emprunt directes depuis les bibliothèques suivies
+- **Classement en temps réel (ADR-023)** : push live du leaderboard, affichage cache-first, pré-chauffage au démarrage, bouton de réinitialisation des scores, saut du direct en cellulaire
+- **Rappels de prêt** : notifications de rappel d'échéance, deep-links corrigés pour les évènements prêt/retour
+- **Fiche livre enrichie** : statut de prêt actif (emprunteur, date d'échéance, badge retard), notes de contact, stepper exemplaires, bouton emprunter désactivé si livre déjà prêté
+- **Catalogue pair en direct** : abonnement aux changements des pairs pour rafraîchir la bibliothèque sans action manuelle, re-vérification de connectivité avant sync
+- **Couvertures maîtrisées** : plafonnement 300&times;450, ré-encodage JPEG à l'upload, cache ETag, éviction sur 404, proxy hub pour les couvertures des pairs, propagation des couvertures personnalisées au hub
 - **Nombre de pages** : champ nombre de pages dans les fiches, formulaires d'ajout/modification et recherche
-- **Durée de prêt configurable** : personnalisation de la durée de prêt dans les paramètres
+- **Durée de prêt configurable** : personnalisation de la durée de prêt dans les paramètres, sélection du pair emprunteur dans la boîte de dialogue
 - **Formulaires livre** : refonte UX des formulaires d'ajout et de modification
-- **Pairs réseau** : avatars des pairs (LAN et relais via hub), ouverture directe de la bibliothèque au tap, polish liste pairs (statut, skeleton, QR plein écran) et écran réseau
-- **Robustesse relais (5G/4G)** : republication fiable des credentials à la reconnexion, fallback hors-ligne, circuit breaker sur 502, refresh nodeId, timeout de sync
-- **Profil hub** : code de récupération de profil, sauvegarde Keychain fiabilisée, back-off sur 401 d'enregistrement
-- **Sync multi-appareils** : correction de la synchronisation des auteurs, notes, copies et métadonnées entre appareils liés
+- **Pairs réseau** : avatars des pairs (LAN et relais via hub), ouverture directe de la bibliothèque au tap, polish liste pairs (statut, skeleton, QR plein écran), bouton de partage d'invitation dans la feuille "ajouter une connexion"
+- **Robustesse relais (5G/4G)** : republication fiable des credentials à la reconnexion, sync non bloquante, fallback hors-ligne, circuit breaker sur 502, refresh nodeId, timeout de sync
+- **Profil hub** : code de récupération de profil, récupération automatique sur 401 (retry avec recovery code avant purge), sauvegarde Keychain renforcée, back-off sur 401 d'enregistrement, URL du hub masquée en release, garde-fous contre le verrouillage permanent du profil
+- **Sync multi-appareils** : correction de la synchronisation des auteurs, notes, copies et métadonnées entre appareils liés, propagation du renommage de bibliothèque vers le hub
 - **Recherche** : fiabilité améliorée des sources externes, scoring de pertinence, protection contre les recherches concurrentes
-- **i18n** : traductions ES/DE complétées (couverture, prêts, notes, récupération)
+- **i18n** : traductions ES/DE complétées (couverture, prêts, notes, récupération), renommage "Copies" en "Exemplaires" (fr)
 - **Sécurité & stabilité** : logs sensibles gated en mode debug et identifiants redactés, désérialisation Inventaire, nom de bibliothèque par défaut localisé
 
 ## 0.8.8 <small>23 mars 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.7-beta.3...v0.8.8-beta.6" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.8-beta.6" class="changelog-link">release</a>
