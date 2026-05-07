@@ -1,0 +1,19 @@
+.git/
+.gitignore
+.claude/
+.DS_Store
+.deployignore
+Makefile
+README.md
+LICENSE
+requirements.txt
+
+# GitHub Pages markers (unused on Caddy)
+.nojekyll
+CNAME
+
+_blog/
+_build/
+_changelog/
+_docs/
+_i18n/

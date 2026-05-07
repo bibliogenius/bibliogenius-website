@@ -6,8 +6,13 @@
 #   make new LANG=pt    Create a new translation file from the French reference
 #   make serve          Start a local dev server on port 8000
 #   make clean          Remove generated language subdirectories
+#   make deploy         Build + rsync to VPS (vitrine + blog)
 
-.PHONY: build site blog clean serve new
+DEPLOY_HOST ?= root@hub.bibliogenius.org
+DEPLOY_PATH ?= /var/www/bibliogenius.org/
+SSH_KEY     ?= ~/.ssh/hub-vps-deploy
+
+.PHONY: build site blog clean serve new deploy
 
 build: site blog
 
@@ -40,3 +45,11 @@ clean:
 serve:
 	@echo "http://localhost:8000/story.html"
 	python3 -m http.server 8000
+
+deploy: build
+	@echo "Deploying to $(DEPLOY_HOST):$(DEPLOY_PATH)"
+	rsync -avz --delete \
+		--exclude-from=.deployignore \
+		-e "ssh -i $(SSH_KEY)" \
+		./ $(DEPLOY_HOST):$(DEPLOY_PATH)
+	@echo "Done → https://bibliogenius.org"
