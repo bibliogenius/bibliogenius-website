@@ -106,8 +106,8 @@ make clean    # Remove generated language subdirectories (keeps French root file
 
 ## Related repositories
 
-- [bibliogenius](https://github.com/bibliogenius/bibliogenius) - Rust backend
-- [bibliogenius-app](https://github.com/bibliogenius/bibliogenius-app) - Flutter frontend
+- [bibliogenius](https://codeberg.org/bibliogenius/bibliogenius) - Rust backend
+- [bibliogenius-app](https://codeberg.org/bibliogenius/bibliogenius-app) - Flutter frontend
 
 ## License
 

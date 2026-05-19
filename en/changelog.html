@@ -227,6 +227,7 @@
 
             <nav class="changelog-nav" id="changelog-nav" aria-label="Versions">
                 <h2>Versions</h2>
+                <a href="#0-9-1">0.9.1</a>
                 <a href="#0-9-0">0.9.0</a>
                 <a href="#0-8-9">0.8.9</a>
                 <a href="#0-8-8">0.8.8</a>
@@ -245,18 +246,41 @@
             </nav>
 
             <article class="changelog-content">
-<h2 id="0-9-0">0.9.0 <small>April 15, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.9-beta.17...v0.9.0-beta.1" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.9.0-beta.1" class="changelog-link">release</a></h2>
+<h2 id="0-9-1">0.9.1 <small>April 25, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.9.0-beta.6...v0.9.1-beta.4" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v0.9.1-beta.4" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>International discovery v1.0</strong>: full overhaul of curated lists in preparation for the international rollout</li>
+<li><strong>"Activity" carousel</strong>: rebranded from "recently added", reading-first sort, "new" badge hidden when a status badge is already shown, ES/DE propagation</li>
+<li><strong>Library</strong>: persistent sort control collapsed into a single pill with popup (empty-author entries at the bottom), collection grouping driven from settings, fixed progress bar</li>
+<li><strong>Peer book sheet</strong>: draggable sheet with pinned header and persistent borrow CTA</li>
+<li><strong>Covers</strong>: isolated peer cover cache with a user-controlled cap, warning badge when hub upload is pending retry, unified URL resolution via <code>CoverUrlResolver</code></li>
+<li><strong>Loans (ADR-034)</strong>: typed loan metadata, reader-extraction helper, fixed reading of the <code>/api/copies/borrowed</code> payload</li>
+<li><strong>Statistics</strong>: count books marked read without a finished date, fix loan and pages-read cards stuck at 0</li>
+<li><strong>Book detail</strong>: block deletion on active loans, preserve <code>addedAt</code> / <code>hubCoverUploadFailedAt</code>, coerce <code>DateTime</code> &rarr; ISO string in FFI updates</li>
+<li><strong>Network</strong>: stale-connection badge on peer cards (ADR-032)</li>
+<li><strong>Collections</strong>: option to also delete associated books when removing a collection</li>
+<li><strong>i18n</strong>: "Gamification" renamed to "Accomplissements" (FR), Activity carousel strings and new badges propagated to ES and DE</li>
+<li><strong>Stability</strong>: tap-to-mark-read in the notifications popover, localized shelf-deletion confirmation, library-rename replay when config is not yet hydrated</li>
+</ul>
+<h2 id="0-9-0">0.9.0 <small>April 17, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.8.9-beta.17...v0.9.0-beta.6" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v0.9.0-beta.6" class="changelog-link">release</a></h2>
 <ul>
 <li><strong>Peer delta sync (ADR-028 / ADR-029)</strong>: peer catalog refreshes now use incremental deltas (adds, updates, deletes) instead of full pulls, dramatically reducing bandwidth and speeding up discovery of peer changes</li>
 <li><strong>Transparent fallback</strong>: automatic fallback to the legacy full pull when the peer does not yet support the delta protocol</li>
 <li><strong>Local state preserved</strong>: <code>firstSeenAt</code> and the online state are kept during delta refreshes (the "new" badge stays consistent)</li>
 <li><strong>Cross-device avatar sync (ADR-025)</strong>: profile avatars now propagate across linked devices via <code>profile_changed</code></li>
 <li><strong>Peer library self-heal (ADR-030)</strong>: library UUID recovery via E2EE manifest, delta cursor preserved after a reset-recovery</li>
+<li><strong>Recently-added carousel</strong>: new carousel of latest additions on own and peer libraries, collapsible variant driven by scroll, auto-hidden on small libraries</li>
+<li><strong>Sticky header</strong>: collapsing header with sticky tabs on Library and Loans</li>
+<li><strong>Discover directory</strong>: ungated entry with in-tab publish CTA, cover-grid catalog view, reliable "new" badge, incoming follow requests surfaced on the Discover card, explicit confirmation snackbars, approval and borrowing toggles unlocked with privacy-first defaults</li>
+<li><strong>Accessibility</strong>: tooltips on 13 IconButtons, semantic labels for screen readers, <code>Semantics</code> headers on book detail</li>
+<li><strong>Settings</strong>: visual grouping of module toggles into 4 sections, neutralized jargon, explicit confirmation on destructive network actions</li>
+<li><strong>Leaderboard</strong>: startup module sync and UI harmonization, client-side refresh timeout with user feedback</li>
+<li><strong>Games hub</strong>: hangman link added on the dashboard</li>
 <li><strong>Peer library UI</strong>: cover grid by default with bounded RAM, restored color variety on book placeholders, "new" badge now driven by owner-supplied <code>added_at</code></li>
 <li><strong>Hub directory</strong>: clients now report their app version to the hub on register</li>
 <li><strong>Book cover</strong>: avoid the OpenLibrary grey placeholder for unknown ISBNs</li>
+<li><strong>i18n</strong>: 24 missing strings translated in Spanish and German</li>
 </ul>
-<h2 id="0-8-9">0.8.9 <small>April 13, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.17" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.17" class="changelog-link">release</a></h2>
+<h2 id="0-8-9">0.8.9 <small>April 13, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.8.8-beta.6...v0.8.9-beta.17" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v0.8.9-beta.17" class="changelog-link">release</a></h2>
 <ul>
 <li><strong>Public hub directory</strong>: public directory enabled with UX guardrails and direct borrow requests from followed libraries</li>
 <li><strong>Real-time leaderboard (ADR-023)</strong>: live leaderboard push, cache-first display, pre-warm on startup, reset scores button, skip direct on cellular</li>
@@ -275,7 +299,7 @@
 <li><strong>i18n</strong>: completed ES/DE translations (cover, loans, notes, recovery), "Copies" renamed to "Exemplaires" (fr)</li>
 <li><strong>Security &amp; stability</strong>: sensitive logs gated in debug and identifiers redacted, Inventaire deserialization fix, localized default library name fix</li>
 </ul>
-<h2 id="0-8-8">0.8.8 <small>March 23, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.7-beta.3...v0.8.8-beta.6" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.8-beta.6" class="changelog-link">release</a></h2>
+<h2 id="0-8-8">0.8.8 <small>March 23, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.8.7-beta.3...v0.8.8-beta.6" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v0.8.8-beta.6" class="changelog-link">release</a></h2>
 <ul>
 <li><strong>Multi-device sync (E2EE)</strong>: end-to-end encrypted synchronization between linked devices, bidirectional pairing, backfill and deduplication</li>
 <li><strong>Book notes</strong>: add notes to books with voice dictation support</li>
@@ -285,7 +309,7 @@
 <li><strong>Onboarding</strong>: sequenced flash messages and welcome design overhaul</li>
 <li><strong>Stability</strong>: fixed crashes on first launch and first scan, Android Keystore recovery</li>
 </ul>
-<h2 id="0-8-7">0.8.7 <small>March 17, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.6-alpha.6...v0.8.7-beta.3" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.7-beta.3" class="changelog-link">release</a></h2>
+<h2 id="0-8-7">0.8.7 <small>March 17, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.8.6-alpha.6...v0.8.7-beta.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v0.8.7-beta.3" class="changelog-link">release</a></h2>
 <ul>
 <li><strong>macOS DMG</strong>: distribution via DMG with hardened runtime and resilient Keychain fallback</li>
 <li><strong>Device fingerprint</strong>: register device model and fingerprint on the hub</li>
@@ -293,7 +317,7 @@
 <li><strong>Notifications</strong>: complete UX overhaul, borrowed filter, peer name fix</li>
 <li><strong>Compatibility</strong>: <code>ClipRect</code> fix for Flutter 3.38</li>
 </ul>
-<h2 id="0-8-6">0.8.6 <small>March 13, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.5-beta.6...v0.8.6-alpha.6" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/releases/tag/v0.8.6-alpha.3" class="changelog-link">release</a></h2>
+<h2 id="0-8-6">0.8.6 <small>March 13, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.8.5-beta.6...v0.8.6-alpha.6" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v0.8.6-alpha.3" class="changelog-link">release</a></h2>
 <ul>
 <li><strong>Unified hub catalog</strong>: consistent rendering and faster peer library loading</li>
 <li><strong>Mass scan</strong>: batch scanning feature with redirect to scanned shelf</li>
@@ -301,14 +325,14 @@
 <li><strong>Localization</strong>: added Italian, Turkish fixes, i18n cleanup</li>
 <li><strong>UI</strong>: logo, search toggle, bottom nav border, operation log dates</li>
 </ul>
-<h2 id="0-8-5">0.8.5 <small>March 7, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.4-alpha.4...v0.8.5-beta.6" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.8.5-beta.6" class="changelog-link">tag</a></h2>
+<h2 id="0-8-5">0.8.5 <small>March 7, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.8.4-alpha.4...v0.8.5-beta.6" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/tree/v0.8.5-beta.6" class="changelog-link">tag</a></h2>
 <ul>
 <li><strong>Activity feed</strong>: new activity stream with "new" badges</li>
 <li><strong>Borrow management</strong>: borrow requests, notification UX, tap-to-edit reading status badge</li>
 <li><strong>Network discovery</strong>: cross-reference mDNS names with saved peers, 5G sync fallback</li>
 <li><strong>UI</strong>: bottom navigation bar option, instant cover refresh, share quick action</li>
 </ul>
-<h2 id="0-8-4">0.8.4 <small>March 4, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.2-alpha.3...v0.8.4-alpha.4" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.8.4-alpha.4" class="changelog-link">tag</a></h2>
+<h2 id="0-8-4">0.8.4 <small>March 4, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.8.2-alpha.3...v0.8.4-alpha.4" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/tree/v0.8.4-alpha.4" class="changelog-link">tag</a></h2>
 <ul>
 <li><strong>Hub directory</strong>: Explore screen, library follow/unfollow, incoming requests</li>
 <li><strong>Collections</strong>: refactored to FFI direct, grouped in library view</li>
@@ -316,20 +340,20 @@
 <li><strong>Device sync</strong>: sync safety module with review screen</li>
 <li><strong>Covers</strong>: capture covers with device camera</li>
 </ul>
-<h2 id="0-8-2">0.8.2 <small>February 26, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.1-alpha.2...v0.8.2-alpha.3" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.8.2-alpha.3" class="changelog-link">tag</a></h2>
+<h2 id="0-8-2">0.8.2 <small>February 26, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.8.1-alpha.2...v0.8.2-alpha.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/tree/v0.8.2-alpha.3" class="changelog-link">tag</a></h2>
 <ul>
 <li><strong>Short invite links</strong>: simplified profile sharing with short URL via the hub</li>
 <li><strong>Share button</strong>: new profile share button</li>
 <li><strong>Accessibility</strong>: accessibility prerequisites added (work in progress)</li>
 </ul>
-<h2 id="0-8-1">0.8.1 <small>February 25, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.8.0-alpha.2...v0.8.1-alpha.2" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.8.1-alpha.2" class="changelog-link">tag</a></h2>
+<h2 id="0-8-1">0.8.1 <small>February 25, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.8.0-alpha.2...v0.8.1-alpha.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/tree/v0.8.1-alpha.2" class="changelog-link">tag</a></h2>
 <ul>
 <li><strong>Memory game</strong>: new mini-game using your library covers, with leaderboard and animations</li>
 <li><strong>Sliding puzzle</strong>: cover-based puzzle game with dedicated screen and games hub</li>
 <li><strong>Help</strong>: enriched help section</li>
 <li><strong>Translations</strong>: added Portuguese and Turkish</li>
 </ul>
-<h2 id="0-8-0">0.8.0 <small>February 20, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.7.2-alpha.2...v0.8.0-alpha.2" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.8.0-alpha.2" class="changelog-link">tag</a></h2>
+<h2 id="0-8-0">0.8.0 <small>February 20, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.7.2-alpha.2...v0.8.0-alpha.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/tree/v0.8.0-alpha.2" class="changelog-link">tag</a></h2>
 <ul>
 <li><strong>End-to-end encryption (E2EE)</strong>: QR code v2 key exchange, E2EE indicator in UI, encrypted loan requests</li>
 <li><strong>Relay hub</strong>: relay hub settings UI and API integration</li>
@@ -338,25 +362,25 @@
 <li><strong>Languages</strong>: added Bulgarian, regional variant support (pt-BR, zh-TW...)</li>
 <li><strong>Loans</strong>: configurable auto-approve, pending request counter</li>
 </ul>
-<h2 id="0-7-2">0.7.2 <small>February 13, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.7.1-alpha.7...v0.7.2-alpha.2" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.7.2-alpha.2" class="changelog-link">tag</a></h2>
+<h2 id="0-7-2">0.7.2 <small>February 13, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.7.1-alpha.7...v0.7.2-alpha.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/tree/v0.7.2-alpha.2" class="changelog-link">tag</a></h2>
 <ul>
 <li><strong>Internationalization</strong>: translations migrated to .po files, multi-language search</li>
 <li><strong>Theme</strong>: theme customization in settings, default theme optimization</li>
 <li><strong>UX audit</strong>: persona-based fixes, search deduplication, 4 major friction points resolved</li>
 <li><strong>Leaderboard</strong>: fixed leaderboard display on profile and between peers</li>
 </ul>
-<h2 id="0-7-1">0.7.1 <small>February 10, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.7.0-alpha.1...v0.7.1-alpha.7" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.7.1-alpha.7" class="changelog-link">tag</a></h2>
+<h2 id="0-7-1">0.7.1 <small>February 10, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.7.0-alpha.1...v0.7.1-alpha.7" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/tree/v0.7.1-alpha.7" class="changelog-link">tag</a></h2>
 <ul>
 <li><strong>Leaderboard module</strong>: gamification leaderboard across connected libraries</li>
 </ul>
-<h2 id="0-7-0">0.7.0 <small>February 6, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.6.6-alpha.4...v0.7.0-alpha.1" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.7.0-alpha.1" class="changelog-link">tag</a></h2>
+<h2 id="0-7-0">0.7.0 <small>February 6, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.6.6-alpha.4...v0.7.0-alpha.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/tree/v0.7.0-alpha.1" class="changelog-link">tag</a></h2>
 <ul>
 <li><strong>P2P discovery</strong>: mDNS hostname.local fallback, removed 127.0.0.1 fallback</li>
 <li><strong>Clean architecture</strong>: migrated Flutter screens to Repository pattern</li>
 <li><strong>Database path</strong>: installation folder migration</li>
 <li><strong>Optimizations</strong>: reading status, online search, import, peer caching</li>
 </ul>
-<h2 id="0-6-6">0.6.6 <small>January 25, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/compare/v0.6.5-alpha.21...v0.6.6-alpha.4" class="changelog-link">diff</a> · <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.6.6-alpha.4" class="changelog-link">tag</a></h2>
+<h2 id="0-6-6">0.6.6 <small>January 25, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.6.5-alpha.21...v0.6.6-alpha.4" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/tree/v0.6.6-alpha.4" class="changelog-link">tag</a></h2>
 <ul>
 <li><strong>Borrowing and loans</strong>: fixes and improvements to the borrowing feature</li>
 <li><strong>UX/UI</strong>: improved empty states, avatar visibility management, search enhancement</li>
@@ -364,7 +388,7 @@
 <li><strong>Quick actions</strong>: new quick actions button in the top banner</li>
 <li><strong>Simplified install</strong>: removed setup wizard, auto-initialization, ES/DE support</li>
 </ul>
-<h2 id="0-6-5">0.6.5 <small>January 12, 2026</small> &nbsp; <a href="https://github.com/bibliogenius/bibliogenius-app/tree/v0.6.5-alpha.21" class="changelog-link">tag</a></h2>
+<h2 id="0-6-5">0.6.5 <small>January 12, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/tree/v0.6.5-alpha.21" class="changelog-link">tag</a></h2>
 <ul>
 <li><strong>Initial alpha release</strong>: personal library management, book add/scan, online search</li>
 <li><strong>Local network</strong>: peer discovery via mDNS, neighbor library browsing</li>
