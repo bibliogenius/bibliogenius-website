@@ -14,6 +14,31 @@ lang_name: English
 footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
 ---
 
+## 1.0.0 <small>May 4, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.9.2-beta.3...v1.0.0-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.0-beta.1" class="changelog-link">release</a>
+
+- **Local backup (ADR-037)**: new encrypted `.bgbackup` format, restore wizard with rollback card, auto-backup scheduler with status card, guardrails blocking every escape route after a successful restore, full-backup teaser, FR/EN/DE/ES translations
+- **Settings**: backup promoted to top-level, flattened Content section, removed System accordion, directory folded into the proper section
+- **Network**: incoming follow requests are shown even when the directory is disabled
+- **Robustness**: sober production error fallback in place of the dev red screen
+- **iOS permissions**: corrected microphone usage description, localized permission strings, clarified scope for `NSPhotoLibraryUsageDescription`
+- **Android permissions**: declared `RECORD_AUDIO` and the `RecognitionService` query for voice dictation
+
+## 0.9.2 <small>April 29, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.9.1-beta.4...v0.9.2-beta.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v0.9.2-beta.3" class="changelog-link">release</a>
+
+- **City sharing (ADR-035 phase 1+2)**: city picker, sync, display, directory filter via chip/button, share-city state hydration at startup, accessibility semantics on tap-to-filter chips
+- **Hardened CityRepository**: validation, isolate, LRU cache, consumption of enriched records (admin1 + admin2) from ADR-036
+- **Directory V1**: highlight banner for same-city libraries
+- **Loans**: module split into two independent toggles (lend / borrow), Received/Sent sub-tabs gated independently per module, lending disabled by default on the bookseller preset
+- **E2EE identity recovery**: recovery dialog instead of silently breaking peers, list of peers and devices to re-pair after a wipe
+- **Activity carousel**: cap raised to 20 items, padded with latest added books
+- **Search**: persistent Google Books toggle, UX guards when no API key is set, new generic `search` i18n key
+- **Hub directory**: auto-setup of the relay and negative cache on 404
+- **Profile**: removed `profileType` and `simplifiedMode` in favor of mode-driven behavior
+- **Collections**: null-safe navigation from the book detail, auto-refresh of the list
+- **Stability**: copy badge refreshed on book detail when returning from the copy manager, IME composition committed before reading the author controller in book forms
+- **i18n**: 22 missing strings translated in Spanish and German, deduplication of the `badge_new` key across fr/en/es/de
+- **Hub**: automatic push of the location country on settings change
+
 ## 0.9.1 <small>April 25, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.9.0-beta.6...v0.9.1-beta.4" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v0.9.1-beta.4" class="changelog-link">release</a>
 
 - **International discovery v1.0**: full overhaul of curated lists in preparation for the international rollout

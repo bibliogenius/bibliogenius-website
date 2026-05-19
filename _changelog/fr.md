@@ -14,6 +14,31 @@ lang_name: Français
 footer_text: "BiblioGenius &mdash; Open Source, local, chiffré."
 ---
 
+## 1.0.0 <small>4 mai 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.9.2-beta.3...v1.0.0-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.0-beta.1" class="changelog-link">release</a>
+
+- **Sauvegarde locale (ADR-037)** : nouveau format `.bgbackup` chiffré, assistant de restauration avec carte de rollback, planificateur de sauvegarde automatique avec carte d'état, garde-fous bloquant toutes les sorties après une restauration réussie, teaser de sauvegarde complète, traductions FR/EN/DE/ES
+- **Réglages** : sauvegarde promue au niveau racine, aplatissement de la section Contenu, suppression de l'accordéon Système, intégration de l'annuaire dans la section appropriée
+- **Réseau** : les demandes d'abonnement entrantes s'affichent même quand l'annuaire est désactivé
+- **Robustesse** : écran d'erreur de production sobre en remplacement du red screen de dev
+- **Permissions iOS** : description d'utilisation du micro corrigée, chaînes de permissions localisées, périmètre clarifié pour `NSPhotoLibraryUsageDescription`
+- **Permissions Android** : déclaration de `RECORD_AUDIO` et de la requête `RecognitionService` pour la dictée vocale
+
+## 0.9.2 <small>29 avril 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.9.1-beta.4...v0.9.2-beta.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v0.9.2-beta.3" class="changelog-link">release</a>
+
+- **Partage de ville (ADR-035 Phase 1+2)** : sélecteur de ville, synchronisation, affichage et filtre annuaire par puce/bouton, hydratation au démarrage, sémantique d'accessibilité sur les puces tap-to-filter
+- **CityRepository durci** : validation, isolate, cache LRU, consommation des enregistrements enrichis (admin1 + admin2) issus de l'ADR-036
+- **Annuaire V1** : bannière de mise en avant des bibliothèques de la même ville
+- **Prêts** : module scindé en deux bascules indépendantes (prêter / emprunter), sous-onglets Reçues/Envoyées indépendants par module, prêt désactivé par défaut sur le preset libraire
+- **Récupération d'identité E2EE** : dialog de récupération au lieu d'une rupture silencieuse avec les pairs, liste des pairs et appareils à re-appairer après un wipe
+- **Carrousel d'activité** : plafond relevé à 20 items, complétés par les derniers livres ajoutés
+- **Recherche** : bascule Google Books persistante, garde-fous UX en l'absence de clé API, clé i18n générique `search` ajoutée
+- **Annuaire hub** : auto-configuration du relais et cache négatif sur 404
+- **Profil** : suppression de `profileType` et `simplifiedMode` au profit d'un pilotage par mode
+- **Collections** : navigation null-safe depuis la fiche livre, rafraîchissement automatique de la liste
+- **Stabilité** : badge d'exemplaire rafraîchi sur la fiche livre au retour de la gestion d'exemplaires, validation de la composition IME avant lecture du contrôleur auteur dans les formulaires
+- **i18n** : 22 chaînes manquantes traduites en espagnol et allemand, déduplication de la clé `badge_new` sur fr/en/es/de
+- **Hub** : push automatique du pays de localisation lors du changement dans les réglages
+
 ## 0.9.1 <small>25 avril 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.9.0-beta.6...v0.9.1-beta.4" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v0.9.1-beta.4" class="changelog-link">release</a>
 
 - **Découverte internationale v1.0** : refonte complète des listes curées en préparation de l'international
