@@ -47,7 +47,7 @@ C'est gratuit, open source (AGPL-3.0), et développé par un dev indépendant. L
 
 ## Faire un retour
 
-Un bug ? Une idée ? Une friction ? Ouvre un ticket sur [GitHub](https://codeberg.org/bibliogenius/bibliogenius-app/issues) ou écris directement à [contact@bibliogenius.org](mailto:contact@bibliogenius.org).
+Un bug ? Une idée ? Une friction ? Ouvre un ticket sur [Codeberg](https://codeberg.org/bibliogenius/bibliogenius-app/issues) ou écris directement à [contact@bibliogenius.org](mailto:contact@bibliogenius.org).
 
 <div class="video-facade" style="max-width:560px;margin:2rem auto;">
 <a href="https://www.youtube.com/watch?v=h8jYyvVPeDg" target="_blank" rel="noopener" style="display:block;position:relative;padding-bottom:56.25%;background:#000;border-radius:0.5rem;overflow:hidden;text-decoration:none;">

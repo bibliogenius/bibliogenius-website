@@ -43,13 +43,13 @@ android_desc: Test fermé Google Play
 bug_title: Un bug ?
 bug_desc: "Signalez-le simplement :"
 btn_email: Par Email
-btn_github: Sur GitHub
+btn_github: Sur Codeberg
 
 # -- Developer Card --
 dev_title: Espace Contributeurs
 dev_desc: Le code est 100% Open Source.
 stack_app_label: "Application :"
-btn_explore_github: Explorer l'Organisation GitHub
+btn_explore_github: Explorer l'Organisation Codeberg
 where_to_start: Où commencer ?
 where_to_start_desc: "Consultez nos issues \"Good First Issue\" — des tâches accessibles pour bien démarrer :"
 
