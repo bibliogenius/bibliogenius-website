@@ -7,7 +7,52 @@
       <generator>Zola</generator>
       <language>fr</language>
       <atom:link href="https://bibliogenius.org/blog/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>BiblioGenius quitte GitHub pour Codeberg</title>
+          <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://bibliogenius.org/blog/migration-codeberg/</link>
+          <guid>https://bibliogenius.org/blog/migration-codeberg/</guid>
+          <description xml:base="https://bibliogenius.org/blog/migration-codeberg/">&lt;p&gt;BiblioGenius répète une idée simple depuis le premier jour : tes livres t&#x27;appartiennent, tes données restent chez toi. Le 4 mai, on a reçu un rappel très concret de la raison pour laquelle ce principe compte.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;l-essentiel-d-abord-ton-application-ne-bouge-pas&quot;&gt;L&#x27;essentiel d&#x27;abord : ton application ne bouge pas&lt;&#x2F;h2&gt;
+&lt;p&gt;Si tu utilises BiblioGenius pour gérer ta bibliothèque, &lt;strong&gt;tout va bien, tu peux t&#x27;arrêter là&lt;&#x2F;strong&gt;. Cette histoire concerne uniquement l&#x27;endroit où est rangé le &lt;em&gt;code source&lt;&#x2F;em&gt; du projet : la « recette » de l&#x27;application, celle que les développeurs lisent et améliorent. L&#x27;application, tes livres, tes prêts, tes données : rien n&#x27;est touché, rien n&#x27;est perdu, tu n&#x27;as rien à faire.&lt;&#x2F;p&gt;
+&lt;p&gt;La suite intéressera surtout les curieux, et les personnes qui contribuent au projet.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ce-qui-s-est-passe&quot;&gt;Ce qui s&#x27;est passé&lt;&#x2F;h2&gt;
+&lt;p&gt;Jusqu&#x27;ici, le code de BiblioGenius était hébergé sur &lt;strong&gt;GitHub&lt;&#x2F;strong&gt;, la plateforme la plus connue au monde pour stocker du code et collaborer dessus. Un service gratuit, pratique, utilisé par des millions de développeurs.&lt;&#x2F;p&gt;
+&lt;p&gt;Le 4 mai, &lt;strong&gt;notre compte GitHub a été suspendu&lt;&#x2F;strong&gt;. Sans préavis, sans explication, sans e-mail d&#x27;avertissement. Du jour au lendemain, tout le code du projet et son historique sont devenus inaccessibles, pour nous comme pour les contributeurs.&lt;&#x2F;p&gt;
+&lt;p&gt;La cause la plus probable tient à une ligne des conditions d&#x27;utilisation : GitHub n&#x27;autorise &lt;strong&gt;qu&#x27;un seul compte gratuit par personne&lt;&#x2F;strong&gt;. Pas de mise en garde, pas de délai pour régulariser : juste un interrupteur coupé.&lt;&#x2F;p&gt;
+&lt;p&gt;Conséquence : les &lt;strong&gt;tickets&lt;&#x2F;strong&gt; (la liste des bugs connus et des tâches à faire) ont disparu avec le compte. C&#x27;était avant tout une liste de travail interne ; elle est en cours de reconstitution sur la nouvelle plateforme.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;la-lecon&quot;&gt;La leçon&lt;&#x2F;h2&gt;
+&lt;p&gt;Il y a une petite ironie, là-dedans. BiblioGenius est un projet qui défend la souveraineté numérique : ne pas dépendre d&#x27;une plateforme unique, capable de changer ses règles, de t&#x27;enfermer ou de te couper l&#x27;accès sans rendre de comptes. Et on vient d&#x27;en faire l&#x27;expérience, pour de vrai, sur notre propre code.&lt;&#x2F;p&gt;
+&lt;p&gt;Une seule porte d&#x27;entrée, contrôlée par une seule entreprise, c&#x27;est un point de fragilité. La bonne réponse n&#x27;est pas de râler : c&#x27;est de choisir un hébergement cohérent avec les valeurs du projet.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;le-nouveau-foyer-codeberg&quot;&gt;Le nouveau foyer : Codeberg&lt;&#x2F;h2&gt;
+&lt;p&gt;BiblioGenius vit désormais sur &lt;strong&gt;Codeberg&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Codeberg, c&#x27;est l&#x27;équivalent de GitHub (un endroit pour héberger du code et collaborer), mais avec une différence de fond : c&#x27;est géré par une &lt;strong&gt;association à but non lucratif&lt;&#x2F;strong&gt;, basée en Allemagne, et non par une multinationale. Le logiciel qui fait tourner Codeberg, &lt;em&gt;Forgejo&lt;&#x2F;em&gt;, est lui-même open source : on peut l&#x27;inspecter, le copier, l&#x27;installer ailleurs.&lt;&#x2F;p&gt;
+&lt;p&gt;Autrement dit : BiblioGenius est open source, et la plateforme qui héberge désormais son code l&#x27;est aussi. C&#x27;est plus cohérent, et c&#x27;est même ce qu&#x27;on aurait dû faire plus tôt.&lt;&#x2F;p&gt;
+&lt;p&gt;Le projet est ici :&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Organisation&lt;&#x2F;strong&gt; : &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&quot;&gt;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Serveur&lt;&#x2F;strong&gt; (Rust) : &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius&quot;&gt;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Application&lt;&#x2F;strong&gt; (Flutter) : &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-app&quot;&gt;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-app&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Hub&lt;&#x2F;strong&gt; : &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-hub&quot;&gt;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-hub&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Environnement de dev&lt;&#x2F;strong&gt; : &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-env&quot;&gt;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-env&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;tu-contribues-au-projet-partie-technique&quot;&gt;Tu contribues au projet ? (partie technique)&lt;&#x2F;h2&gt;
+&lt;p&gt;Si tu as un clone local d&#x27;un dépôt, il suffit de le faire pointer vers la nouvelle adresse. Depuis le dossier du dépôt :&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;git remote set-url origin https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;&amp;lt;dépôt&amp;gt;.git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Par exemple, pour l&#x27;application :&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;git remote set-url origin https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-app.git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Pour ouvrir un ticket ou une &lt;em&gt;pull request&lt;&#x2F;em&gt;, il te faudra un &lt;strong&gt;compte Codeberg&lt;&#x2F;strong&gt; (gratuit), et rien de plus. Pas besoin d&#x27;être ajouté à l&#x27;organisation : tu forkes le dépôt, tu pousses sur ton fork, tu ouvres une pull request. Le déroulé open source classique.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tu-as-contribue-et-on-s-est-perdus-de-vue&quot;&gt;Tu as contribué, et on s&#x27;est perdus de vue ?&lt;&#x2F;h2&gt;
+&lt;p&gt;C&#x27;est le point le plus délicat de cette migration. Comme le compte GitHub a sauté sans prévenir, &lt;strong&gt;on a perdu le moyen de recontacter certaines personnes&lt;&#x2F;strong&gt;, des traducteurs surtout.&lt;&#x2F;p&gt;
+&lt;p&gt;Si tu nous as un jour envoyé une traduction, signalé un bug, proposé un correctif ou une idée, et que tu lis ces lignes : &lt;strong&gt;écris-nous&lt;&#x2F;strong&gt;. On aimerait sincèrement renouer le contact, et s&#x27;assurer que ta contribution n&#x27;a pas été oubliée dans le déménagement.&lt;&#x2F;p&gt;
+&lt;p&gt;Un seul point de contact : &lt;a href=&quot;mailto:contact@bibliogenius.org&quot;&gt;contact@bibliogenius.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;et-les-telechargements&quot;&gt;Et les téléchargements ?&lt;&#x2F;h2&gt;
+&lt;p&gt;Les versions à installer pour &lt;strong&gt;Linux et Windows&lt;&#x2F;strong&gt; étaient distribuées via GitHub. Elles sont donc momentanément indisponibles, le temps de remettre en place un canal de téléchargement. Les applications iOS, Android et macOS, elles, passent par l&#x27;App Store et le Play Store, et ne sont pas concernées. Besoin d&#x27;une version en attendant ? Écris-nous, on te dépanne.&lt;&#x2F;p&gt;
+&lt;p&gt;La migration est terminée : BiblioGenius tourne désormais entièrement sur Codeberg. C&#x27;est là que le développement continue, et que tu peux suivre le projet.&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>BiblioGenius cherche ses premiers testeurs</title>
           <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>

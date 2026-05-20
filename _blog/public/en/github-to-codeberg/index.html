@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioGenius is moving from GitHub to Codeberg — BiblioGenius Blog</title>
+    <meta name="description" content="Our GitHub account was suspended overnight, without warning. The project&#x27;s code now lives on Codeberg, a non-profit, open-source platform. Here is what happened, and what it changes (or not) for you.">
+
+    <link rel="canonical" href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;en&#x2F;github-to-codeberg&#x2F;">
+
+    <link rel="alternate" hreflang="en" href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;en&#x2F;github-to-codeberg&#x2F;">
+    <link rel="alternate" hreflang="en" href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;en&#x2F;github-to-codeberg&#x2F;">
+    <link rel="alternate" hreflang="es" href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;es&#x2F;de-github-a-codeberg&#x2F;">
+    <link rel="alternate" hreflang="fr" href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;migration-codeberg&#x2F;">
+    <link rel="alternate" hreflang="x-default" href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;migration-codeberg&#x2F;">
+
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;en&#x2F;github-to-codeberg&#x2F;">
+    <meta property="og:title" content="BiblioGenius is moving from GitHub to Codeberg — BiblioGenius Blog">
+    <meta property="og:description" content="Our GitHub account was suspended overnight, without warning. The project&#x27;s code now lives on Codeberg, a non-profit, open-source platform. Here is what happened, and what it changes (or not) for you.">
+    <meta property="og:site_name" content="BiblioGenius">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BiblioGenius is moving from GitHub to Codeberg — BiblioGenius Blog">
+    <meta name="twitter:description" content="Our GitHub account was suspended overnight, without warning. The project&#x27;s code now lives on Codeberg, a non-profit, open-source platform. Here is what happened, and what it changes (or not) for you.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https:&#x2F;&#x2F;bibliogenius.org/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https:&#x2F;&#x2F;bibliogenius.org/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https:&#x2F;&#x2F;bibliogenius.org/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https:&#x2F;&#x2F;bibliogenius.org/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="BiblioGenius Blog" href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog/rss.xml">
+
+    <style>
+        .article-container { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .article-header { margin-bottom: 2.5rem; }
+        .article-header h1 { font-size: 2.25rem; line-height: 1.25; margin-bottom: 1rem; }
+        .article-meta { font-size: 0.875rem; color: #6b7280; display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .article-tag { background: #eff6ff; color: var(--primary-color); padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; text-decoration: none; }
+        .article-body { line-height: 1.8; font-size: 1.0625rem; }
+        .article-body h2 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 0.75rem; padding-bottom: 0.25rem; border-bottom: 1px solid #e5e7eb; }
+        .article-body h3 { font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+        .article-body p { margin-bottom: 1.25rem; }
+        .article-body img { max-width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1.5rem 0; }
+        .article-body blockquote { border-left: 3px solid var(--primary-color); margin: 1.5rem 0; padding: 1rem 1.5rem; background: rgba(37,99,235,0.04); border-radius: 0 6px 6px 0; font-style: italic; color: var(--heading-color); }
+        .article-body code { background: #f3f4f6; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .article-body pre { background: #1f2937; color: #e5e7eb; padding: 1rem 1.25rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.25rem; }
+        .article-body pre code { background: none; padding: 0; color: inherit; }
+        .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.4rem; }
+        .article-body a { color: var(--primary-color); }
+        .article-footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb; }
+        .back-link { color: var(--primary-color); font-weight: 600; text-decoration: none; }
+        .share-section { margin-top: 1.5rem; }
+        .share-section p { font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem; }
+        .share-links { display: flex; gap: 0.75rem; }
+        .share-link { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.75rem; border: 1px solid #d1d5db; border-radius: 0.375rem; font-size: 0.8rem; color: var(--text-color); text-decoration: none; transition: border-color 0.2s; }
+        .share-link:hover { border-color: var(--primary-color); color: var(--primary-color); }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "BiblioGenius is moving from GitHub to Codeberg",
+        "description": "Our GitHub account was suspended overnight, without warning. The project&#x27;s code now lives on Codeberg, a non-profit, open-source platform. Here is what happened, and what it changes (or not) for you.",
+        "url": "https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;en&#x2F;github-to-codeberg&#x2F;",
+        "datePublished": "2026-05-20",
+        "dateModified": "2026-05-20",
+        "author": {
+            "@type": "Organization",
+            "name": "BiblioGenius"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "BiblioGenius",
+            "url": "https://bibliogenius.org"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <header class="hero" role="banner" style="padding: 2.5rem 1.5rem;">
+        
+<nav class="site-nav" aria-label="Navigation">
+    <a href="https:&#x2F;&#x2F;bibliogenius.org/" class="site-nav-logo">BiblioGenius</a>
+    <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    <div class="site-nav-menu" id="site-nav-menu">
+        <a href="https:&#x2F;&#x2F;bibliogenius.org/" class="site-nav-link">Home</a>
+        <a href="https:&#x2F;&#x2F;bibliogenius.org/story.html" class="site-nav-link">Our Story</a>
+        <a href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog/" class="site-nav-link" style="color:#fff;">Blog</a>
+        <a href="https:&#x2F;&#x2F;bibliogenius.org/docs/" class="site-nav-link">Documentation</a>
+        
+
+<select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Langue">
+    <option value="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;en&#x2F;github-to-codeberg&#x2F;" selected>English</option>
+    <option value="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;en&#x2F;github-to-codeberg&#x2F;">English</option>
+    <option value="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;es&#x2F;de-github-a-codeberg&#x2F;">Español</option>
+    <option value="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;migration-codeberg&#x2F;">Français</option>
+</select>
+
+
+    </div>
+</nav>
+
+        <div class="hero-content">
+            <p style="margin:0;"><a href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog/" style="color:var(--accent-light); text-decoration:none;">Blog</a></p>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <header class="article-header">
+                <h1>BiblioGenius is moving from GitHub to Codeberg</h1>
+                <div class="article-meta">
+                    <time datetime="2026-05-20">20&#x2F;05&#x2F;2026</time>
+                    
+                    <span>&#128337; 4 min</span>
+                    
+                    
+                    
+                    <span class="article-tag">announcement</span>
+                    
+                    
+                </div>
+            </header>
+
+            <div class="article-body">
+                <p>BiblioGenius has repeated one simple idea since day one: your books belong to you, your data stays with you. On 4 May, we got a very concrete reminder of why that principle matters.</p>
+<h2 id="first-things-first-your-app-does-not-move">First things first: your app does not move</h2>
+<p>If you use BiblioGenius to manage your library, <strong>everything is fine, you can stop reading here</strong>. This story is only about where the project's <em>source code</em> is stored: the "recipe" of the application, the one developers read and improve. The app, your books, your loans, your data: nothing is touched, nothing is lost, you have nothing to do.</p>
+<p>The rest will mostly interest the curious, and the people who contribute to the project.</p>
+<h2 id="what-happened">What happened</h2>
+<p>Until now, the BiblioGenius code was hosted on <strong>GitHub</strong>, the world's best-known platform for storing code and collaborating on it. A free, convenient service, used by millions of developers.</p>
+<p>On 4 May, <strong>our GitHub account was suspended</strong>. No notice, no explanation, no warning email. Overnight, all of the project's code and its history became inaccessible, for us and for contributors alike.</p>
+<p>The most likely cause comes down to one line in the terms of service: GitHub allows <strong>only one free account per person</strong>. No warning, no grace period to fix it: just a switch flipped off.</p>
+<p>As a result, the <strong>issues</strong> (the list of known bugs and pending tasks) disappeared along with the account. It was above all an internal to-do list, and it is being rebuilt on the new platform.</p>
+<h2 id="the-lesson">The lesson</h2>
+<p>There is a small irony here. BiblioGenius is a project that stands for digital sovereignty: not depending on a single platform that can change its rules, lock you in, or cut off your access without being accountable. And we just went through exactly that, for real, on our own code.</p>
+<p>A single entry point, controlled by a single company, is a point of fragility. The right answer is not to complain: it is to choose hosting that is consistent with the project's values.</p>
+<h2 id="the-new-home-codeberg">The new home: Codeberg</h2>
+<p>BiblioGenius now lives on <strong>Codeberg</strong>.</p>
+<p>Codeberg is the equivalent of GitHub (a place to host code and collaborate), but with a fundamental difference: it is run by a <strong>non-profit association</strong>, based in Germany, not by a multinational. The software that powers Codeberg, <em>Forgejo</em>, is itself open source: it can be inspected, copied, and installed elsewhere.</p>
+<p>In other words: BiblioGenius is open source, and so is the platform that now hosts its code. That is more consistent, and it is even what we should have done sooner.</p>
+<p>The project is here:</p>
+<ul>
+<li><strong>Organization</strong>: <a rel="external" href="https://codeberg.org/bibliogenius">https://codeberg.org/bibliogenius</a></li>
+<li><strong>Server</strong> (Rust): <a rel="external" href="https://codeberg.org/bibliogenius/bibliogenius">https://codeberg.org/bibliogenius/bibliogenius</a></li>
+<li><strong>App</strong> (Flutter): <a rel="external" href="https://codeberg.org/bibliogenius/bibliogenius-app">https://codeberg.org/bibliogenius/bibliogenius-app</a></li>
+<li><strong>Hub</strong>: <a rel="external" href="https://codeberg.org/bibliogenius/bibliogenius-hub">https://codeberg.org/bibliogenius/bibliogenius-hub</a></li>
+<li><strong>Dev environment</strong>: <a rel="external" href="https://codeberg.org/bibliogenius/bibliogenius-env">https://codeberg.org/bibliogenius/bibliogenius-env</a></li>
+</ul>
+<h2 id="do-you-contribute-to-the-project-technical-part">Do you contribute to the project? (technical part)</h2>
+<p>If you have a local clone of a repository, just point it at the new address. From inside the repository:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="plain"><span class="giallo-l"><span>git remote set-url origin https://codeberg.org/bibliogenius/&lt;repo&gt;.git</span></span></code></pre>
+<p>For example, for the app:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="plain"><span class="giallo-l"><span>git remote set-url origin https://codeberg.org/bibliogenius/bibliogenius-app.git</span></span></code></pre>
+<p>To open an issue or a <em>pull request</em>, you will need a <strong>Codeberg account</strong> (free), and nothing more. No need to be added to the organization: you fork the repository, push to your fork, open a pull request. The classic open-source flow.</p>
+<h2 id="did-you-contribute-and-did-we-lose-touch">Did you contribute, and did we lose touch?</h2>
+<p>This is the most delicate part of the migration. Because the GitHub account went down without warning, <strong>we lost the way to reach some people again</strong>, translators above all.</p>
+<p>If you once sent us a translation, reported a bug, proposed a fix or an idea, and you are reading these lines: <strong>write to us</strong>. We would sincerely like to reconnect, and make sure your contribution was not forgotten in the move.</p>
+<p>One single point of contact: <a href="mailto:contact@bibliogenius.org">contact@bibliogenius.org</a>.</p>
+<h2 id="what-about-downloads">What about downloads?</h2>
+<p>The installable versions for <strong>Linux and Windows</strong> were distributed through GitHub. They are therefore temporarily unavailable, while a new download channel is set up. The iOS, Android and macOS apps go through the App Store and Google Play, and are not affected. Need a build in the meantime? Write to us, we will sort you out.</p>
+<p>The migration is complete: BiblioGenius now runs entirely on Codeberg. That is where development continues, and where you can follow the project.</p>
+
+            </div>
+
+            <footer class="article-footer">
+                <a href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog/" class="back-link">&larr; All posts</a>
+
+                <div class="share-section">
+                    <p>Share this post</p>
+                    <div class="share-links">
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;en&#x2F;github-to-codeberg&#x2F;" target="_blank" rel="noopener" class="share-link">LinkedIn</a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;en&#x2F;github-to-codeberg&#x2F;" target="_blank" rel="noopener" class="share-link">Facebook</a>
+                    </div>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <p>BiblioGenius — Open Source, local-first.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2025-2026 BiblioGenius — <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a></p>
+        </div>
+    </div>
+</footer>
+
+    
+<script>
+(function() {
+    var toggle = document.querySelector('.site-nav-toggle');
+    var menu = document.getElementById('site-nav-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+    menu.querySelectorAll('.site-nav-link').forEach(function(a) {
+        a.addEventListener('click', function() {
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+</script>
+
+</body>
+</html>

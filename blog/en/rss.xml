@@ -7,7 +7,52 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://bibliogenius.org/blog/en/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>BiblioGenius is moving from GitHub to Codeberg</title>
+          <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://bibliogenius.org/blog/en/github-to-codeberg/</link>
+          <guid>https://bibliogenius.org/blog/en/github-to-codeberg/</guid>
+          <description xml:base="https://bibliogenius.org/blog/en/github-to-codeberg/">&lt;p&gt;BiblioGenius has repeated one simple idea since day one: your books belong to you, your data stays with you. On 4 May, we got a very concrete reminder of why that principle matters.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;first-things-first-your-app-does-not-move&quot;&gt;First things first: your app does not move&lt;&#x2F;h2&gt;
+&lt;p&gt;If you use BiblioGenius to manage your library, &lt;strong&gt;everything is fine, you can stop reading here&lt;&#x2F;strong&gt;. This story is only about where the project&#x27;s &lt;em&gt;source code&lt;&#x2F;em&gt; is stored: the &quot;recipe&quot; of the application, the one developers read and improve. The app, your books, your loans, your data: nothing is touched, nothing is lost, you have nothing to do.&lt;&#x2F;p&gt;
+&lt;p&gt;The rest will mostly interest the curious, and the people who contribute to the project.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-happened&quot;&gt;What happened&lt;&#x2F;h2&gt;
+&lt;p&gt;Until now, the BiblioGenius code was hosted on &lt;strong&gt;GitHub&lt;&#x2F;strong&gt;, the world&#x27;s best-known platform for storing code and collaborating on it. A free, convenient service, used by millions of developers.&lt;&#x2F;p&gt;
+&lt;p&gt;On 4 May, &lt;strong&gt;our GitHub account was suspended&lt;&#x2F;strong&gt;. No notice, no explanation, no warning email. Overnight, all of the project&#x27;s code and its history became inaccessible, for us and for contributors alike.&lt;&#x2F;p&gt;
+&lt;p&gt;The most likely cause comes down to one line in the terms of service: GitHub allows &lt;strong&gt;only one free account per person&lt;&#x2F;strong&gt;. No warning, no grace period to fix it: just a switch flipped off.&lt;&#x2F;p&gt;
+&lt;p&gt;As a result, the &lt;strong&gt;issues&lt;&#x2F;strong&gt; (the list of known bugs and pending tasks) disappeared along with the account. It was above all an internal to-do list, and it is being rebuilt on the new platform.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-lesson&quot;&gt;The lesson&lt;&#x2F;h2&gt;
+&lt;p&gt;There is a small irony here. BiblioGenius is a project that stands for digital sovereignty: not depending on a single platform that can change its rules, lock you in, or cut off your access without being accountable. And we just went through exactly that, for real, on our own code.&lt;&#x2F;p&gt;
+&lt;p&gt;A single entry point, controlled by a single company, is a point of fragility. The right answer is not to complain: it is to choose hosting that is consistent with the project&#x27;s values.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-new-home-codeberg&quot;&gt;The new home: Codeberg&lt;&#x2F;h2&gt;
+&lt;p&gt;BiblioGenius now lives on &lt;strong&gt;Codeberg&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Codeberg is the equivalent of GitHub (a place to host code and collaborate), but with a fundamental difference: it is run by a &lt;strong&gt;non-profit association&lt;&#x2F;strong&gt;, based in Germany, not by a multinational. The software that powers Codeberg, &lt;em&gt;Forgejo&lt;&#x2F;em&gt;, is itself open source: it can be inspected, copied, and installed elsewhere.&lt;&#x2F;p&gt;
+&lt;p&gt;In other words: BiblioGenius is open source, and so is the platform that now hosts its code. That is more consistent, and it is even what we should have done sooner.&lt;&#x2F;p&gt;
+&lt;p&gt;The project is here:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Organization&lt;&#x2F;strong&gt;: &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&quot;&gt;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Server&lt;&#x2F;strong&gt; (Rust): &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius&quot;&gt;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;App&lt;&#x2F;strong&gt; (Flutter): &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-app&quot;&gt;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-app&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Hub&lt;&#x2F;strong&gt;: &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-hub&quot;&gt;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-hub&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Dev environment&lt;&#x2F;strong&gt;: &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-env&quot;&gt;https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-env&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;do-you-contribute-to-the-project-technical-part&quot;&gt;Do you contribute to the project? (technical part)&lt;&#x2F;h2&gt;
+&lt;p&gt;If you have a local clone of a repository, just point it at the new address. From inside the repository:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;git remote set-url origin https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;&amp;lt;repo&amp;gt;.git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;For example, for the app:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;git remote set-url origin https:&#x2F;&#x2F;codeberg.org&#x2F;bibliogenius&#x2F;bibliogenius-app.git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To open an issue or a &lt;em&gt;pull request&lt;&#x2F;em&gt;, you will need a &lt;strong&gt;Codeberg account&lt;&#x2F;strong&gt; (free), and nothing more. No need to be added to the organization: you fork the repository, push to your fork, open a pull request. The classic open-source flow.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;did-you-contribute-and-did-we-lose-touch&quot;&gt;Did you contribute, and did we lose touch?&lt;&#x2F;h2&gt;
+&lt;p&gt;This is the most delicate part of the migration. Because the GitHub account went down without warning, &lt;strong&gt;we lost the way to reach some people again&lt;&#x2F;strong&gt;, translators above all.&lt;&#x2F;p&gt;
+&lt;p&gt;If you once sent us a translation, reported a bug, proposed a fix or an idea, and you are reading these lines: &lt;strong&gt;write to us&lt;&#x2F;strong&gt;. We would sincerely like to reconnect, and make sure your contribution was not forgotten in the move.&lt;&#x2F;p&gt;
+&lt;p&gt;One single point of contact: &lt;a href=&quot;mailto:contact@bibliogenius.org&quot;&gt;contact@bibliogenius.org&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-about-downloads&quot;&gt;What about downloads?&lt;&#x2F;h2&gt;
+&lt;p&gt;The installable versions for &lt;strong&gt;Linux and Windows&lt;&#x2F;strong&gt; were distributed through GitHub. They are therefore temporarily unavailable, while a new download channel is set up. The iOS, Android and macOS apps go through the App Store and Google Play, and are not affected. Need a build in the meantime? Write to us, we will sort you out.&lt;&#x2F;p&gt;
+&lt;p&gt;The migration is complete: BiblioGenius now runs entirely on Codeberg. That is where development continues, and where you can follow the project.&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>BiblioGenius is looking for its first testers</title>
           <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
