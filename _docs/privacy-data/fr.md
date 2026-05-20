@@ -1,26 +1,26 @@
 ---
-title: Ou sont stockees mes donnees
-description: Tout savoir sur le stockage local et la confidentialite de vos donnees
+title: Où sont stockées mes données
+description: Tout savoir sur le stockage local et la confidentialité de vos données
 order: 12
 group: data
 ---
 
-Les donnees de votre bibliotheque sont stockees localement sur votre appareil. Quand vous vous connectez avec des amis, seuls les livres que vous choisissez de partager leur sont visibles. Vous pouvez exporter une sauvegarde a tout moment depuis votre Profil.
+Les données de votre bibliothèque sont stockées localement sur votre appareil. Quand vous vous connectez avec des amis, seuls les livres que vous choisissez de partager leur sont visibles. Vous pouvez exporter une sauvegarde à tout moment depuis votre Profil.
 
 ## Stockage local
 
-Toutes vos donnees (livres, etageres, prets, contacts) sont stockees dans une base de donnees locale sur votre appareil. Rien n'est envoye sur un serveur distant.
+Toutes vos données (livres, étagères, prêts, contacts) sont stockées dans une base de données locale sur votre appareil. Rien n'est envoyé sur un serveur distant.
 
-## Partage controle
+## Partage contrôlé
 
-Quand vous vous connectez avec d'autres bibliotheques, vous gardez le controle total sur ce qui est partage. Seuls les livres que vous choisissez de rendre visibles le sont.
+Quand vous vous connectez avec d'autres bibliothèques, vous gardez le contrôle total sur ce qui est partagé. Seuls les livres que vous choisissez de rendre visibles le sont.
 
 ## Sauvegardes
 
-Exportez une sauvegarde de toutes vos donnees a tout moment depuis la section Profil. Vous pouvez aussi les reimporter en cas de changement d'appareil.
+Exportez une sauvegarde de toutes vos données à tout moment depuis la section Profil. Vous pouvez aussi les réimporter en cas de changement d'appareil.
 
-![Ecran du profil](images/profile-view.png)
+![Écran du profil](images/profile-view.png)
 
 ## Chiffrement
 
-Les communications entre bibliotheques sont chiffrees de bout en bout (E2EE). Vos donnees restent privees.
+Les communications entre bibliothèques sont chiffrées de bout en bout (E2EE). Vos données restent privées.
