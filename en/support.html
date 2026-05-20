@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support and Help - BiblioGenius</title>
+    <meta name="description" content="Need help with BiblioGenius? Contact our support, browse the documentation or report a bug. We are here to help.">
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://bibliogenius.org/en/support.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/support.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/support.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/support.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bibliogenius.org/en/support.html">
+    <meta property="og:title" content="Support and Help - BiblioGenius">
+    <meta property="og:description" content="Contact BiblioGenius support, browse the documentation or report a bug.">
+    <meta property="og:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Support and Help - BiblioGenius">
+    <meta name="twitter:description" content="Contact BiblioGenius support, browse the documentation or report a bug.">
+    <meta name="twitter:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+    <link rel="author" type="text/markdown" href="../llms.txt">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .split-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .split-card {
+            flex: 1;
+            min-width: 280px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            align-self: flex-start;
+        }
+
+        .split-card h2 {
+            margin-top: 0;
+            color: var(--accent-light);
+            font-size: 1.4rem;
+        }
+
+        .split-card p {
+            line-height: 1.6;
+        }
+
+        .support-email {
+            font-size: 1.1rem;
+            margin: 1rem 0 0;
+        }
+
+        .support-btn-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1.25rem;
+        }
+
+        .faq-section {
+            margin-top: 3.5rem;
+        }
+
+        .faq-section h2 {
+            color: var(--accent-light);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item h3 {
+            margin: 0 0 0.5rem;
+            color: #f3f4f6;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            margin: 0;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        .faq-item a,
+        .split-card a:not(.btn) {
+            color: var(--accent-light);
+        }
+
+        /* Override body for Dark Mode on this page */
+        body {
+            background-color: #0f172a;
+            color: #f3f4f6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="hero" role="banner" style="min-height: 36vh; padding-bottom: 2rem;">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html" class="site-nav-logo">BiblioGenius</a>
+            <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="site-nav-menu" id="site-nav-menu">
+                <a href="index.html" class="site-nav-link">Home</a>
+                <a href="../story.html" class="site-nav-link">Our Story</a>
+                <a href="docs/index.html" class="site-nav-link">Documentation</a>
+                <a href="../contribute.html" class="site-nav-link">Contribute</a>
+                <a href="blog/" class="site-nav-link">Blog</a>
+                <a href="changelog.html" class="site-nav-link">Changelog</a>
+                <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Language">
+            <option value="support.html" selected>English</option>
+            <option value="../support.html">Francais</option>
+                </select>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Support and Help</h1>
+            <p>Have a question or a problem? We are here to help.</p>
+        </div>
+    </header>
+
+    <main id="main-content">
+    <section class="container" style="padding: 4rem 1rem;" aria-label="Support and help">
+
+        <div class="split-container">
+            <div class="split-card">
+                <h2><span aria-hidden="true">&#9993;</span> Contact us</h2>
+                <p>For any question, problem or help request about the app, email us. This is the most direct way to get help.</p>
+                <p class="support-email"><strong>contact@bibliogenius.org</strong></p>
+                <p>We reply in English and French, usually within a few business days.</p>
+                <div class="support-btn-row">
+                    <a href="mailto:contact@bibliogenius.org" class="btn btn-primary">Send us an email</a>
+                </div>
+            </div>
+
+            <div class="split-card">
+                <h2><span aria-hidden="true">&#128214;</span> Documentation</h2>
+                <p>Our guides explain how to add books, organize your shelves, lend a book, connect with other libraries and protect your data.</p>
+                <div class="support-btn-row">
+                    <a href="docs/index.html" class="btn btn-secondary">Browse the guides</a>
+                </div>
+            </div>
+
+            <div class="split-card">
+                <h2><span aria-hidden="true">&#128027;</span> Report a bug</h2>
+                <p>BiblioGenius is free and open-source software. You can report a bug or suggest an improvement on our open Codeberg forge.</p>
+                <div class="support-btn-row">
+                    <a href="https://codeberg.org/bibliogenius/bibliogenius-app/issues/new" class="btn btn-secondary" target="_blank" rel="noopener">Open an issue on Codeberg</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Frequently asked questions</h2>
+            <div class="faq-item">
+                <h3>Is BiblioGenius free?</h3>
+                <p>Yes. The app is completely free and open source, released under the AGPL-3.0 license.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Where is my data stored?</h3>
+                <p>Your data stays stored locally on your device. Nothing is sent to a server without an action from you. See the <a href='docs/privacy-data.html'>Data privacy</a> guide.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Which platforms does BiblioGenius support?</h3>
+                <p>BiblioGenius is available on iOS, Android, macOS, Windows and Linux.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I connect to another reader's library?</h3>
+                <p>You can connect via a QR code or an invitation link. See the <a href='docs/connect-friends.html'>Connect with friends</a> guide.</p>
+            </div>
+        </div>
+
+    </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container" style="text-align: center;">
+            <p>© 2025-2026 BiblioGenius - <a href='https://www.gnu.org/licenses/agpl-3.0.html' style='color:var(--accent-light);'>AGPL-3.0</a> | <a href="../index.html" style="color:white;">Back to home</a></p>
+            <a href="https://bff.ecoindex.fr/redirect/?url=https://bibliogenius.org/support.html" target="_blank" rel="noopener" style="display:inline-block;margin-top:1rem;">
+                <img src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://bibliogenius.org/support.html" alt="Website EcoIndex score" loading="lazy">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        var toggle = document.querySelector('.site-nav-toggle');
+        var menu = document.getElementById('site-nav-menu');
+        if (!toggle || !menu) return;
+        toggle.addEventListener('click', function() {
+            var isOpen = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+        menu.querySelectorAll('.site-nav-link').forEach(function(a) {
+            a.addEventListener('click', function() {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
+</body>
+
+</html>

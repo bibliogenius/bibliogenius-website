@@ -1,0 +1,61 @@
+# BiblioGenius Support Page - English
+# Reference values come from fr.yml. Keep HTML tags (<a>, <strong>) as-is.
+# Do NOT use double quotes (") in values: for HTML attributes use single quotes (').
+
+# -- Metadata --
+lang_name: English
+title: Support and Help - BiblioGenius
+meta_description: Need help with BiblioGenius? Contact our support, browse the documentation or report a bug. We are here to help.
+og_title: Support and Help - BiblioGenius
+og_description: Contact BiblioGenius support, browse the documentation or report a bug.
+og_locale: en_US
+
+# -- Navigation --
+skip_link: Skip to content
+nav_site_label: Main navigation
+nav_home: Home
+nav_story: Our Story
+nav_docs: Documentation
+nav_contribute: Contribute
+nav_blog: Blog
+nav_changelog: Changelog
+lang_label: Language
+
+# -- Hero --
+hero_title: Support and Help
+hero_subtitle: Have a question or a problem? We are here to help.
+
+# -- Section (accessibility label) --
+section_support: Support and help
+
+# -- Contact card --
+contact_title: Contact us
+contact_desc: For any question, problem or help request about the app, email us. This is the most direct way to get help.
+contact_note: We reply in English and French, usually within a few business days.
+btn_email: Send us an email
+
+# -- Documentation card --
+docs_title: Documentation
+docs_desc: Our guides explain how to add books, organize your shelves, lend a book, connect with other libraries and protect your data.
+btn_docs: Browse the guides
+
+# -- Bug card --
+bug_title: Report a bug
+bug_desc: BiblioGenius is free and open-source software. You can report a bug or suggest an improvement on our open Codeberg forge.
+btn_bug: Open an issue on Codeberg
+
+# -- FAQ --
+faq_title: Frequently asked questions
+faq_q1: Is BiblioGenius free?
+faq_a1: Yes. The app is completely free and open source, released under the AGPL-3.0 license.
+faq_q2: Where is my data stored?
+faq_a2: Your data stays stored locally on your device. Nothing is sent to a server without an action from you. See the <a href='docs/privacy-data.html'>Data privacy</a> guide.
+faq_q3: Which platforms does BiblioGenius support?
+faq_a3: BiblioGenius is available on iOS, Android, macOS, Windows and Linux.
+faq_q4: How do I connect to another reader's library?
+faq_a4: You can connect via a QR code or an invitation link. See the <a href='docs/connect-friends.html'>Connect with friends</a> guide.
+
+# -- Footer --
+footer_copyright: © 2025-2026 BiblioGenius - <a href='https://www.gnu.org/licenses/agpl-3.0.html' style='color:var(--accent-light);'>AGPL-3.0</a>
+footer_back: Back to home
+ecoindex_alt: Website EcoIndex score

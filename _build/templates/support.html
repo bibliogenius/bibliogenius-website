@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="description" content="{{meta_description}}">
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="{{canonical_url}}">
+{{hreflang}}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{og_url}}">
+    <meta property="og:title" content="{{og_title}}">
+    <meta property="og:description" content="{{og_description}}">
+    <meta property="og:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
+    <meta property="og:locale" content="{{og_locale}}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{og_title}}">
+    <meta name="twitter:description" content="{{og_description}}">
+    <meta name="twitter:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{root}}favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{root}}favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{root}}apple-touch-icon.png">
+
+    <link rel="author" type="text/markdown" href="{{root}}llms.txt">
+    <link rel="stylesheet" href="{{root}}styles.css">
+    <style>
+        .split-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .split-card {
+            flex: 1;
+            min-width: 280px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            align-self: flex-start;
+        }
+
+        .split-card h2 {
+            margin-top: 0;
+            color: var(--accent-light);
+            font-size: 1.4rem;
+        }
+
+        .split-card p {
+            line-height: 1.6;
+        }
+
+        .support-email {
+            font-size: 1.1rem;
+            margin: 1rem 0 0;
+        }
+
+        .support-btn-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1.25rem;
+        }
+
+        .faq-section {
+            margin-top: 3.5rem;
+        }
+
+        .faq-section h2 {
+            color: var(--accent-light);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item h3 {
+            margin: 0 0 0.5rem;
+            color: #f3f4f6;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            margin: 0;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        .faq-item a,
+        .split-card a:not(.btn) {
+            color: var(--accent-light);
+        }
+
+        /* Override body for Dark Mode on this page */
+        body {
+            background-color: #0f172a;
+            color: #f3f4f6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">{{skip_link}}</a>
+
+    <header class="hero" role="banner" style="min-height: 36vh; padding-bottom: 2rem;">
+        <nav class="site-nav" aria-label="{{nav_site_label}}">
+            <a href="index.html" class="site-nav-logo">BiblioGenius</a>
+            <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="site-nav-menu" id="site-nav-menu">
+                <a href="index.html" class="site-nav-link">{{nav_home}}</a>
+                <a href="{{url:story}}" class="site-nav-link">{{nav_story}}</a>
+                <a href="docs/index.html" class="site-nav-link">{{nav_docs}}</a>
+                <a href="{{url:contribute}}" class="site-nav-link">{{nav_contribute}}</a>
+                <a href="blog/" class="site-nav-link">{{nav_blog}}</a>
+                <a href="{{url:changelog}}" class="site-nav-link">{{nav_changelog}}</a>
+                <select onchange="location.href=this.value" class="lang-select" aria-label="{{lang_label}}">
+{{lang_switcher}}
+                </select>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>{{hero_title}}</h1>
+            <p>{{hero_subtitle}}</p>
+        </div>
+    </header>
+
+    <main id="main-content">
+    <section class="container" style="padding: 4rem 1rem;" aria-label="{{section_support}}">
+
+        <div class="split-container">
+            <div class="split-card">
+                <h2><span aria-hidden="true">&#9993;</span> {{contact_title}}</h2>
+                <p>{{contact_desc}}</p>
+                <p class="support-email"><strong>contact@bibliogenius.org</strong></p>
+                <p>{{contact_note}}</p>
+                <div class="support-btn-row">
+                    <a href="mailto:contact@bibliogenius.org" class="btn btn-primary">{{btn_email}}</a>
+                </div>
+            </div>
+
+            <div class="split-card">
+                <h2><span aria-hidden="true">&#128214;</span> {{docs_title}}</h2>
+                <p>{{docs_desc}}</p>
+                <div class="support-btn-row">
+                    <a href="docs/index.html" class="btn btn-secondary">{{btn_docs}}</a>
+                </div>
+            </div>
+
+            <div class="split-card">
+                <h2><span aria-hidden="true">&#128027;</span> {{bug_title}}</h2>
+                <p>{{bug_desc}}</p>
+                <div class="support-btn-row">
+                    <a href="https://codeberg.org/bibliogenius/bibliogenius-app/issues/new" class="btn btn-secondary" target="_blank" rel="noopener">{{btn_bug}}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>{{faq_title}}</h2>
+            <div class="faq-item">
+                <h3>{{faq_q1}}</h3>
+                <p>{{faq_a1}}</p>
+            </div>
+            <div class="faq-item">
+                <h3>{{faq_q2}}</h3>
+                <p>{{faq_a2}}</p>
+            </div>
+            <div class="faq-item">
+                <h3>{{faq_q3}}</h3>
+                <p>{{faq_a3}}</p>
+            </div>
+            <div class="faq-item">
+                <h3>{{faq_q4}}</h3>
+                <p>{{faq_a4}}</p>
+            </div>
+        </div>
+
+    </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container" style="text-align: center;">
+            <p>{{footer_copyright}} | <a href="{{url:index}}" style="color:white;">{{footer_back}}</a></p>
+            <a href="https://bff.ecoindex.fr/redirect/?url=https://bibliogenius.org/support.html" target="_blank" rel="noopener" style="display:inline-block;margin-top:1rem;">
+                <img src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://bibliogenius.org/support.html" alt="{{ecoindex_alt}}" loading="lazy">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        var toggle = document.querySelector('.site-nav-toggle');
+        var menu = document.getElementById('site-nav-menu');
+        if (!toggle || !menu) return;
+        toggle.addEventListener('click', function() {
+            var isOpen = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+        menu.querySelectorAll('.site-nav-link').forEach(function(a) {
+            a.addEventListener('click', function() {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
+</body>
+
+</html>
