@@ -47,29 +47,41 @@
             padding: 2rem;
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
         }
 
         .split-card h2 {
-            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin: 0 0 0.75rem;
             color: var(--accent-light);
             font-size: 1.4rem;
         }
 
-        .split-card p {
-            line-height: 1.6;
+        .card-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+            flex-shrink: 0;
         }
 
-        .support-email {
-            font-size: 1.1rem;
-            margin: 1rem 0 0;
+        .split-card p {
+            margin: 0 0 0.85rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .support-btn-row {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 1.25rem;
+            margin-top: auto;
+            padding-top: 0.75rem;
+        }
+
+        .support-btn-row .btn {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
         }
 
         .faq-section {
@@ -150,9 +162,9 @@
 
         <div class="split-container">
             <div class="split-card">
-                <h2><span aria-hidden="true">&#9993;</span> {{contact_title}}</h2>
+                <h2><span class="card-icon" aria-hidden="true">&#128231;</span>{{contact_title}}</h2>
                 <p>{{contact_desc}}</p>
-                <p class="support-email"><strong>contact@bibliogenius.org</strong></p>
+                <p><strong>contact@bibliogenius.org</strong></p>
                 <p>{{contact_note}}</p>
                 <div class="support-btn-row">
                     <a href="mailto:contact@bibliogenius.org" class="btn btn-primary">{{btn_email}}</a>
@@ -160,7 +172,7 @@
             </div>
 
             <div class="split-card">
-                <h2><span aria-hidden="true">&#128214;</span> {{docs_title}}</h2>
+                <h2><span class="card-icon" aria-hidden="true">&#128214;</span>{{docs_title}}</h2>
                 <p>{{docs_desc}}</p>
                 <div class="support-btn-row">
                     <a href="docs/index.html" class="btn btn-secondary">{{btn_docs}}</a>
@@ -168,10 +180,10 @@
             </div>
 
             <div class="split-card">
-                <h2><span aria-hidden="true">&#128027;</span> {{bug_title}}</h2>
+                <h2><span class="card-icon" aria-hidden="true">&#128027;</span>{{bug_title}}</h2>
                 <p>{{bug_desc}}</p>
                 <div class="support-btn-row">
-                    <a href="https://codeberg.org/bibliogenius/bibliogenius-app/issues/new" class="btn btn-secondary" target="_blank" rel="noopener">{{btn_bug}}</a>
+                    <a href="https://codeberg.org/bibliogenius/bibliogenius-app/issues" class="btn btn-secondary" target="_blank" rel="noopener">{{btn_bug}}</a>
                 </div>
             </div>
         </div>

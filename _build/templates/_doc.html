@@ -223,6 +223,27 @@
                 display: block;
             }
         }
+
+        .doc-help {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 0.75rem;
+        }
+
+        .doc-help h2 {
+            font-size: 1.15rem;
+            margin: 0 0 0.4rem;
+            padding: 0;
+            border: none;
+        }
+
+        .doc-help p {
+            margin: 0 0 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -280,6 +301,11 @@
             <article class="doc-content">
                 <a href="{{doc_index_url}}" class="back-link">&larr; {{index_title}}</a>
 {{content}}
+                <aside class="doc-help">
+                    <h2>{{help_title}}</h2>
+                    <p>{{help_desc}}</p>
+                    <a href="../support.html" class="btn btn-primary">{{help_cta}}</a>
+                </aside>
             </article>
         </div>
     </main>

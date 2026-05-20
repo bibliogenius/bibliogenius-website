@@ -225,6 +225,27 @@
                 display: block;
             }
         }
+
+        .doc-help {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 0.75rem;
+        }
+
+        .doc-help h2 {
+            font-size: 1.15rem;
+            margin: 0 0 0.4rem;
+            padding: 0;
+            border: none;
+        }
+
+        .doc-help p {
+            margin: 0 0 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -259,7 +280,7 @@
                 <a href="../changelog.html" class="site-nav-link">Changelog</a>
                 <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Language">
             <option value="sliding-puzzle.html" selected>English</option>
-            <option value="../../docs/sliding-puzzle.html">Francais</option>
+            <option value="../../docs/sliding-puzzle.html">Français</option>
                 </select>
             </div>
         </nav>
@@ -353,6 +374,11 @@
 <p>Your score is based on the number of moves and the time taken. Fewer moves and faster completion give a higher score.</p>
 <h2 id="leaderboard">Leaderboard</h2>
 <p>Your best scores are recorded for each level. Try to beat your own records!</p>
+                <aside class="doc-help">
+                    <h2>Need help?</h2>
+                    <p>Can't find the answer to your question in the guides? Our team can help.</p>
+                    <a href="../support.html" class="btn btn-primary">Contact support</a>
+                </aside>
             </article>
         </div>
     </main>

@@ -470,6 +470,9 @@ def build_docs():
             html = html.replace('{{nav_blog}}', ui.get('nav_blog', 'Blog'))
             html = html.replace('{{nav_changelog}}', ui.get('nav_changelog', 'Changelog'))
             html = html.replace('{{lang_label}}', ui.get('lang_label', 'Language'))
+            html = html.replace('{{help_title}}', ui.get('help_title', ''))
+            html = html.replace('{{help_desc}}', ui.get('help_desc', ''))
+            html = html.replace('{{help_cta}}', ui.get('help_cta', ''))
 
             # Inject language redirect script for default-lang doc pages
             if lang == DEFAULT_LANG and 'en' in all_ui:
@@ -525,6 +528,9 @@ def build_docs():
         html = html.replace('{{nav_blog}}', ui.get('nav_blog', 'Blog'))
         html = html.replace('{{nav_changelog}}', ui.get('nav_changelog', 'Changelog'))
         html = html.replace('{{lang_label}}', ui.get('lang_label', 'Language'))
+        html = html.replace('{{help_title}}', ui.get('help_title', ''))
+        html = html.replace('{{help_desc}}', ui.get('help_desc', ''))
+        html = html.replace('{{help_cta}}', ui.get('help_cta', ''))
 
         # Inject language redirect script for default-lang doc index
         if lang == DEFAULT_LANG and 'en' in all_ui:

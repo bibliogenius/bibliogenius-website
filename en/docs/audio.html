@@ -225,6 +225,27 @@
                 display: block;
             }
         }
+
+        .doc-help {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 0.75rem;
+        }
+
+        .doc-help h2 {
+            font-size: 1.15rem;
+            margin: 0 0 0.4rem;
+            padding: 0;
+            border: none;
+        }
+
+        .doc-help p {
+            margin: 0 0 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -259,7 +280,7 @@
                 <a href="../changelog.html" class="site-nav-link">Changelog</a>
                 <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Language">
             <option value="audio.html" selected>English</option>
-            <option value="../../docs/audio.html">Francais</option>
+            <option value="../../docs/audio.html">Français</option>
                 </select>
             </div>
         </nav>
@@ -328,6 +349,11 @@
 </ul>
 <h2 id="listen-to-an-audiobook">Listen to an audiobook</h2>
 <p>When a free audiobook is available for a book in your library, BiblioGenius detects it automatically. You can then listen directly from the book details page, chapter by chapter.</p>
+                <aside class="doc-help">
+                    <h2>Need help?</h2>
+                    <p>Can't find the answer to your question in the guides? Our team can help.</p>
+                    <a href="../support.html" class="btn btn-primary">Contact support</a>
+                </aside>
             </article>
         </div>
     </main>

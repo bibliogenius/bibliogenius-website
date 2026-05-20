@@ -99,6 +99,27 @@
             line-height: 1.5;
             margin: 0;
         }
+
+        .doc-help {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 0.75rem;
+        }
+
+        .doc-help h2 {
+            font-size: 1.15rem;
+            margin: 0 0 0.4rem;
+            padding: 0;
+            border: none;
+        }
+
+        .doc-help p {
+            margin: 0 0 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -132,24 +153,24 @@
                 <a href="../changelog.html" class="site-nav-link">Changelog</a>
                 <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Langue">
             <option value="../en/docs/index.html">English</option>
-            <option value="index.html" selected>Francais</option>
+            <option value="index.html" selected>Français</option>
                 </select>
             </div>
         </nav>
         <div class="hero-content">
             <h1>Documentation</h1>
-            <p>Guides et tutoriels pour maitriser BiblioGenius</p>
+            <p>Guides et tutoriels pour maîtriser BiblioGenius</p>
         </div>
     </header>
 
     <main id="main-content" class="docs-container">
-        <a href="../index.html" class="back-link">&larr; Retour a l'accueil</a>
+        <a href="../index.html" class="back-link">&larr; Retour à l'accueil</a>
 
         <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Tous les guides</h2>
         <p style="color: #6b7280; margin-bottom: 2rem;">Choisissez un sujet pour commencer</p>
 
         <div class="doc-group">
-            <h3 class="doc-group-title">Bibliotheque</h3>
+            <h3 class="doc-group-title">Bibliothèque</h3>
             <div class="doc-cards">
                 <a href="add-book.html" class="doc-card">
                     <h4>Comment ajouter un livre</h4>
@@ -179,7 +200,7 @@
             </div>
         </div>
         <div class="doc-group">
-            <h3 class="doc-group-title">Reseau</h3>
+            <h3 class="doc-group-title">Réseau</h3>
             <div class="doc-cards">
                 <a href="connect-friends.html" class="doc-card">
                     <h4>Comment se connecter avec des amis</h4>
@@ -208,7 +229,7 @@
             </div>
         </div>
         <div class="doc-group">
-            <h3 class="doc-group-title">Avance</h3>
+            <h3 class="doc-group-title">Avancé</h3>
             <div class="doc-cards">
                 <a href="collections.html" class="doc-card">
                     <h4>Comment utiliser les Collections</h4>
@@ -221,11 +242,11 @@
             </div>
         </div>
         <div class="doc-group">
-            <h3 class="doc-group-title">Donnees</h3>
+            <h3 class="doc-group-title">Données</h3>
             <div class="doc-cards">
                 <a href="privacy-data.html" class="doc-card">
-                    <h4>Ou sont stockees mes donnees</h4>
-                    <p>Tout savoir sur le stockage local et la confidentialite de vos donnees</p>
+                    <h4>Où sont stockées mes données</h4>
+                    <p>Tout savoir sur le stockage local et la confidentialité de vos données</p>
                 </a>
                 <a href="profile.html" class="doc-card">
                     <h4>Mon profil</h4>
@@ -233,6 +254,12 @@
                 </a>
             </div>
         </div>
+
+        <aside class="doc-help">
+            <h2>Besoin d'aide ?</h2>
+            <p>Vous ne trouvez pas la réponse à votre question dans les guides ? Notre équipe peut vous aider.</p>
+            <a href="../support.html" class="btn btn-primary">Contacter le support</a>
+        </aside>
     </main>
 
     <footer class="footer">

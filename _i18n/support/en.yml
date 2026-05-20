@@ -42,7 +42,7 @@ btn_docs: Browse the guides
 # -- Bug card --
 bug_title: Report a bug
 bug_desc: BiblioGenius is free and open-source software. You can report a bug or suggest an improvement on our open Codeberg forge.
-btn_bug: Open an issue on Codeberg
+btn_bug: Report a bug on Codeberg
 
 # -- FAQ --
 faq_title: Frequently asked questions

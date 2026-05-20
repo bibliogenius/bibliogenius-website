@@ -225,6 +225,27 @@
                 display: block;
             }
         }
+
+        .doc-help {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 0.75rem;
+        }
+
+        .doc-help h2 {
+            font-size: 1.15rem;
+            margin: 0 0 0.4rem;
+            padding: 0;
+            border: none;
+        }
+
+        .doc-help p {
+            margin: 0 0 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -259,7 +280,7 @@
                 <a href="../changelog.html" class="site-nav-link">Changelog</a>
                 <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Language">
             <option value="privacy-data.html" selected>English</option>
-            <option value="../../docs/privacy-data.html">Francais</option>
+            <option value="../../docs/privacy-data.html">Français</option>
                 </select>
             </div>
         </nav>
@@ -322,6 +343,11 @@
 <p><img loading="lazy" alt="Profile screen" src="images/privacy-data/profile-view.png" /></p>
 <h2 id="encryption">Encryption</h2>
 <p>Communications between libraries are end-to-end encrypted (E2EE). Your data stays private.</p>
+                <aside class="doc-help">
+                    <h2>Need help?</h2>
+                    <p>Can't find the answer to your question in the guides? Our team can help.</p>
+                    <a href="../support.html" class="btn btn-primary">Contact support</a>
+                </aside>
             </article>
         </div>
     </main>

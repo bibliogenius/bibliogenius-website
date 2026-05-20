@@ -1,13 +1,13 @@
-# BiblioGenius Support Page - Francais
-# Fichier de reference pour les traducteurs.
+# BiblioGenius Support Page - Français
+# Fichier de référence pour les traducteurs.
 # Traduisez toutes les valeurs. Conservez les balises HTML (<a>, <strong>) telles quelles.
 # N'utilisez PAS de guillemets doubles (") dans les valeurs : pour les attributs HTML,
 # utilisez des guillemets simples (').
 
-# -- Metadonnees --
-lang_name: Francais
+# -- Métadonnées --
+lang_name: Français
 title: Support et aide - BiblioGenius
-meta_description: Besoin d'aide avec BiblioGenius ? Contactez notre support, consultez la documentation ou signalez un bug. Nous sommes la pour vous aider.
+meta_description: Besoin d'aide avec BiblioGenius ? Contactez notre support, consultez la documentation ou signalez un bug. Nous sommes là pour vous aider.
 og_title: Support et aide - BiblioGenius
 og_description: Contactez le support BiblioGenius, consultez la documentation ou signalez un bug.
 og_locale: fr_FR
@@ -25,39 +25,39 @@ lang_label: Langue
 
 # -- Hero --
 hero_title: Support et aide
-hero_subtitle: Une question, un souci ? Nous sommes la pour vous aider.
+hero_subtitle: Une question, un souci ? Nous sommes là pour vous aider.
 
-# -- Section (libelle accessibilite) --
+# -- Section (libellé accessibilité) --
 section_support: Support et aide
 
 # -- Carte Contact --
 contact_title: Nous contacter
-contact_desc: Pour toute question, tout probleme ou toute demande d'aide concernant l'application, ecrivez-nous par email. C'est le moyen le plus direct d'obtenir de l'aide.
-contact_note: Nous repondons en francais et en anglais, generalement sous quelques jours ouvres.
-btn_email: Nous ecrire un email
+contact_desc: Pour toute question, tout problème ou toute demande d'aide concernant l'application, écrivez-nous par email. C'est le moyen le plus direct d'obtenir de l'aide.
+contact_note: Nous répondons en français et en anglais, généralement sous quelques jours ouvrés.
+btn_email: Nous écrire un email
 
 # -- Carte Documentation --
 docs_title: Documentation
-docs_desc: Nos guides expliquent comment ajouter des livres, organiser vos etageres, preter un livre, vous connecter a d'autres bibliotheques et proteger vos donnees.
+docs_desc: Nos guides expliquent comment ajouter des livres, organiser vos étagères, prêter un livre, vous connecter à d'autres bibliothèques et protéger vos données.
 btn_docs: Consulter les guides
 
 # -- Carte Bug --
 bug_title: Signaler un bug
-bug_desc: BiblioGenius est un logiciel libre. Vous pouvez signaler un bug ou proposer une amelioration sur notre forge ouverte Codeberg.
-btn_bug: Ouvrir un ticket sur Codeberg
+bug_desc: BiblioGenius est un logiciel libre. Vous pouvez signaler un bug ou proposer une amélioration sur notre forge ouverte Codeberg.
+btn_bug: Signaler un bug sur Codeberg
 
 # -- FAQ --
-faq_title: Questions frequentes
+faq_title: Questions fréquentes
 faq_q1: BiblioGenius est-il gratuit ?
-faq_a1: Oui. L'application est entierement gratuite et open source, publiee sous licence AGPL-3.0.
-faq_q2: Ou sont stockees mes donnees ?
-faq_a2: Vos donnees restent stockees localement sur votre appareil. Rien n'est envoye a un serveur sans une action de votre part. Voir le guide <a href='docs/privacy-data.html'>Confidentialite des donnees</a>.
+faq_a1: Oui. L'application est entièrement gratuite et open source, publiée sous licence AGPL-3.0.
+faq_q2: Où sont stockées mes données ?
+faq_a2: Vos données restent stockées localement sur votre appareil. Rien n'est envoyé à un serveur sans une action de votre part. Voir le guide <a href='docs/privacy-data.html'>Confidentialité des données</a>.
 faq_q3: Sur quelles plateformes BiblioGenius fonctionne-t-il ?
 faq_a3: BiblioGenius est disponible sur iOS, Android, macOS, Windows et Linux.
-faq_q4: Comment me connecter a la bibliotheque d'un autre lecteur ?
+faq_q4: Comment me connecter à la bibliothèque d'un autre lecteur ?
 faq_a4: Vous pouvez vous connecter via un QR code ou un lien d'invitation. Voir le guide <a href='docs/connect-friends.html'>Se connecter avec des amis</a>.
 
 # -- Footer --
 footer_copyright: © 2025-2026 BiblioGenius - <a href='https://www.gnu.org/licenses/agpl-3.0.html' style='color:var(--accent-light);'>AGPL-3.0</a>
-footer_back: Retour a l'accueil
+footer_back: Retour à l'accueil
 ecoindex_alt: Score EcoIndex du site
