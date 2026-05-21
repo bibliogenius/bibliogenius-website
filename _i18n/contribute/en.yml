@@ -4,10 +4,10 @@
 
 # -- Metadata --
 lang_name: English
-title: Contribute to BiblioGenius - Alpha Tester & Open Source Development
-meta_description: Become an Alpha tester or contribute to BiblioGenius development, an Open Source library management app. Rust, Flutter, Symfony.
-og_title: Contribute to BiblioGenius - Alpha Tester & Open Source
-og_description: Become an Alpha tester or contribute to BiblioGenius development. Rust backend, Flutter app, Symfony hub.
+title: Contribute to BiblioGenius - Tester & Open Source Development
+meta_description: Become a tester or contribute to BiblioGenius development, an Open Source library management app. Rust, Flutter, Symfony.
+og_title: Contribute to BiblioGenius - Tester & Open Source
+og_description: Become a tester or contribute to BiblioGenius development. Rust backend, Flutter app, Symfony hub.
 og_locale: en_US
 
 # -- Navigation --
@@ -24,13 +24,13 @@ nav_blog: Blog
 nav_changelog: Changelog
 # -- Hero --
 hero_title: Contribute to the Project
-hero_subtitle: Become an Alpha tester or join the development effort.
+hero_subtitle: Become a tester or join the development effort.
 
 # -- Section --
 section_contribution: Contribution
 
 # -- Tester Card --
-tester_title: Become an Alpha Tester
+tester_title: Become a Tester
 tester_desc: Install the latest version and help us find bugs.
 latest_version_label: "Latest version:"
 downloads_aria: Downloads
