@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppression des données — BiblioGenius</title>
+    <meta name="description" content="Comment demander la suppression de vos données BiblioGenius (profil hub, catalogue, messages).">
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://bibliogenius.org/data-deletion.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/data-deletion.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/data-deletion.html">
+    <link rel="alternate" hreflang="es" href="https://bibliogenius.org/es/data-deletion.html">
+    <link rel="alternate" hreflang="de" href="https://bibliogenius.org/de/data-deletion.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/data-deletion.html">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; margin-top: 2em; }
+        h3 { color: #34495e; margin-top: 1.5em; }
+        code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; font-size: 0.95em; }
+        ul { padding-left: 1.4em; }
+        .contact { background: #f4f8fb; padding: 14px 18px; border-left: 4px solid #2c3e50; margin: 1em 0; }
+        .lang-switch { font-size: 0.9em; color: #666; margin-bottom: 1em; }
+        .lang-switch a { color: #2c3e50; margin-right: 8px; }
+    </style>
+</head>
+
+<body>
+
+<p class="lang-switch">
+    <strong>FR</strong> ·
+    <a href="/en/data-deletion.html">EN</a> ·
+    <a href="/es/data-deletion.html">ES</a> ·
+    <a href="/de/data-deletion.html">DE</a>
+</p>
+
+<h1>Suppression des données — BiblioGenius</h1>
+<p><em>Dernière mise à jour : 27 mai 2026</em></p>
+
+<p>
+    BiblioGenius est une application de gestion de bibliothèque personnelle développée par Federico CALO.
+    Cette page explique comment demander la suppression des données associées à votre installation et à votre profil
+    sur le serveur d'annuaire optionnel <code>hub.bibliogenius.org</code>.
+</p>
+
+<h2>1. Données stockées localement sur votre appareil</h2>
+<p>
+    Toutes les données de votre bibliothèque (livres, prêts, contacts, préférences, identité cryptographique)
+    sont stockées localement sur votre appareil, dans des espaces protégés (SQLite, Keychain/Keystore).
+</p>
+<p><strong>Procédure :</strong> désinstaller l'application BiblioGenius depuis votre appareil supprime
+    immédiatement et définitivement toutes ces données locales. Aucune action de notre part n'est requise.
+</p>
+
+<h2>2. Données stockées sur le serveur d'annuaire (hub)</h2>
+<p>
+    Si vous avez utilisé une fonctionnalité réseau (annuaire public, suivi d'autres bibliothèques,
+    envoi/réception de demandes de prêt), un profil a été créé sur notre serveur d'annuaire.
+    Ce profil contient :
+</p>
+<ul>
+    <li>un identifiant pseudonyme cryptographique (clé publique, ne révèle pas votre identité) ;</li>
+    <li>le nom que vous avez donné à votre bibliothèque ;</li>
+    <li>optionnellement votre pays et votre ville (si vous avez choisi de les partager) ;</li>
+    <li>la liste des ISBN/titres de votre catalogue (uniquement si votre bibliothèque est listée publiquement) ;</li>
+    <li>des messages chiffrés de bout-en-bout en transit dans votre boîte de réception (le serveur ne peut pas les lire) ;</li>
+    <li>un identifiant matériel haché (modèle de l'appareil, empreinte hashée de l'identifiant Android) utilisé uniquement pour éviter les profils en double après réinstallation.</li>
+</ul>
+
+<h2>3. Comment demander la suppression de votre profil hub</h2>
+
+<div class="contact">
+    Envoyez un email à <strong><a href="mailto:contact@bibliogenius.org">contact@bibliogenius.org</a></strong>
+    avec pour objet <em>« Suppression de mes données BiblioGenius »</em>.
+</div>
+
+<p>
+    Pour nous permettre d'identifier votre profil, indiquez dans le message :
+</p>
+<ul>
+    <li>le nom de votre bibliothèque tel qu'affiché dans l'application, ou</li>
+    <li>l'identifiant public de votre profil (8 premiers caractères du <em>node ID</em>, visible dans
+        l'écran « Profil » de l'application si la fonction réseau est activée).</li>
+</ul>
+
+<p>
+    <strong>Délai de traitement :</strong> votre demande sera traitée dans un délai maximum
+    de <strong>30 jours</strong> à compter de la réception du message. Vous recevrez une confirmation
+    par email une fois la suppression effective.
+</p>
+
+<h2>4. Données supprimées vs conservées</h2>
+
+<h3>Supprimées immédiatement</h3>
+<ul>
+    <li>Profil hub (ligne <code>library_profiles</code>) — nom, identifiants, pays, ville, etc. ;</li>
+    <li>Catalogue ISBN éventuellement publié ;</li>
+    <li>Boîte de réception et messages chiffrés associés ;</li>
+    <li>Relations de suivi (followers / suivis) ;</li>
+    <li>Demandes de prêt en cours impliquant votre profil.</li>
+</ul>
+
+<h3>Conservées temporairement après suppression</h3>
+<ul>
+    <li><strong>Journaux d'événements anonymisés</strong> (<code>hub_events</code>) liés à la maintenance
+        et à la sécurité — supprimés automatiquement après <strong>30 jours</strong>.</li>
+    <li><strong>Journaux de tentatives d'inscription</strong> (<code>registration_failures</code>)
+        utilisés pour la détection d'abus — supprimés automatiquement après <strong>90 jours</strong>.</li>
+    <li>Aucune de ces données ne permet de remonter à votre identité.</li>
+</ul>
+
+<h3>Données qui n'ont jamais quitté votre appareil</h3>
+<p>
+    Les sauvegardes locales de votre bibliothèque, votre clé privée cryptographique, vos prêts personnels,
+    vos contacts et vos préférences ne sont stockés que sur votre appareil. Pour les effacer,
+    désinstallez l'application (voir section 1).
+</p>
+
+<h2>5. Suppression automatique en cas d'inactivité</h2>
+<p>
+    Les profils dormants depuis plus de 7 jours, sans aucun livre publié, sans boîte de réception
+    et sans relation de suivi, sont automatiquement éligibles à la purge périodique par notre équipe.
+    Cette purge ne s'applique pas aux profils actifs.
+</p>
+
+<h2>6. Contact</h2>
+<p>
+    Pour toute question concernant cette procédure, contactez Federico CALO :
+    <a href="mailto:contact@bibliogenius.org">contact@bibliogenius.org</a>.
+</p>
+
+</body>
+</html>

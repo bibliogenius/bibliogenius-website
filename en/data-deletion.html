@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data deletion — BiblioGenius</title>
+    <meta name="description" content="How to request deletion of your BiblioGenius data (hub profile, catalog, messages).">
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://bibliogenius.org/en/data-deletion.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/data-deletion.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/data-deletion.html">
+    <link rel="alternate" hreflang="es" href="https://bibliogenius.org/es/data-deletion.html">
+    <link rel="alternate" hreflang="de" href="https://bibliogenius.org/de/data-deletion.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/data-deletion.html">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; margin-top: 2em; }
+        h3 { color: #34495e; margin-top: 1.5em; }
+        code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; font-size: 0.95em; }
+        ul { padding-left: 1.4em; }
+        .contact { background: #f4f8fb; padding: 14px 18px; border-left: 4px solid #2c3e50; margin: 1em 0; }
+        .lang-switch { font-size: 0.9em; color: #666; margin-bottom: 1em; }
+        .lang-switch a { color: #2c3e50; margin-right: 8px; }
+    </style>
+</head>
+
+<body>
+
+<p class="lang-switch">
+    <a href="/data-deletion.html">FR</a> ·
+    <strong>EN</strong> ·
+    <a href="/es/data-deletion.html">ES</a> ·
+    <a href="/de/data-deletion.html">DE</a>
+</p>
+
+<h1>Data deletion — BiblioGenius</h1>
+<p><em>Last updated: 27 May 2026</em></p>
+
+<p>
+    BiblioGenius is a personal library management app developed by Federico CALO. This page explains how
+    to request the deletion of data associated with your installation and with your profile on the optional
+    directory server <code>hub.bibliogenius.org</code>.
+</p>
+
+<h2>1. Data stored locally on your device</h2>
+<p>
+    All your library data (books, loans, contacts, preferences, cryptographic identity) is stored locally
+    on your device in protected storage (SQLite, Keychain/Keystore).
+</p>
+<p><strong>Procedure:</strong> uninstalling BiblioGenius from your device immediately and permanently
+    removes all of this local data. No action is required from us.
+</p>
+
+<h2>2. Data stored on the directory server (hub)</h2>
+<p>
+    If you used any network feature (public directory, following other libraries, sending/receiving
+    borrow requests), a profile was created on our directory server. This profile contains:
+</p>
+<ul>
+    <li>a pseudonymous cryptographic identifier (public key, does not reveal your identity);</li>
+    <li>the name you gave to your library;</li>
+    <li>optionally your country and city (if you opted in to share them);</li>
+    <li>the list of ISBN/titles in your catalog (only if your library is publicly listed);</li>
+    <li>end-to-end encrypted messages in transit through your inbox (the server cannot read them);</li>
+    <li>a hashed hardware identifier (device model, hashed Android device ID) used solely to deduplicate
+        profiles after reinstall.</li>
+</ul>
+
+<h2>3. How to request deletion of your hub profile</h2>
+
+<div class="contact">
+    Send an email to <strong><a href="mailto:contact@bibliogenius.org">contact@bibliogenius.org</a></strong>
+    with the subject <em>"BiblioGenius data deletion request"</em>.
+</div>
+
+<p>To let us identify your profile, please include in the message:</p>
+<ul>
+    <li>the name of your library as displayed in the app, or</li>
+    <li>your profile's public identifier (the first 8 characters of the <em>node ID</em>,
+        visible in the "Profile" screen of the app if network features are enabled).</li>
+</ul>
+
+<p>
+    <strong>Processing time:</strong> your request will be processed within a maximum of
+    <strong>30 days</strong> from the receipt of your message. You will receive an email
+    confirmation once the deletion is effective.
+</p>
+
+<h2>4. Data deleted vs retained</h2>
+
+<h3>Deleted immediately</h3>
+<ul>
+    <li>Hub profile (<code>library_profiles</code> row) — name, identifiers, country, city, etc.;</li>
+    <li>Any published ISBN catalog;</li>
+    <li>Inbox and associated encrypted messages;</li>
+    <li>Follow relationships (followers / following);</li>
+    <li>Pending borrow requests involving your profile.</li>
+</ul>
+
+<h3>Retained temporarily after deletion</h3>
+<ul>
+    <li><strong>Anonymized event logs</strong> (<code>hub_events</code>) used for maintenance and security
+        — automatically deleted after <strong>30 days</strong>.</li>
+    <li><strong>Registration failure logs</strong> (<code>registration_failures</code>) used for abuse
+        detection — automatically deleted after <strong>90 days</strong>.</li>
+    <li>None of this data can be traced back to your identity.</li>
+</ul>
+
+<h3>Data that never left your device</h3>
+<p>
+    Local backups of your library, your private cryptographic key, your personal loans, contacts and
+    preferences are stored only on your device. To erase them, uninstall the app (see section 1).
+</p>
+
+<h2>5. Automatic deletion for inactive profiles</h2>
+<p>
+    Profiles dormant for more than 7 days, with no published books, no inbox and no follow relationships,
+    are automatically eligible for periodic purge by our team. This purge does not apply to active profiles.
+</p>
+
+<h2>6. Contact</h2>
+<p>
+    For any question about this procedure, contact Federico CALO:
+    <a href="mailto:contact@bibliogenius.org">contact@bibliogenius.org</a>.
+</p>
+
+</body>
+</html>
