@@ -8,9 +8,8 @@
 #   make clean          Remove generated language subdirectories
 #   make deploy         Build + rsync to VPS (vitrine + blog)
 
-DEPLOY_HOST ?= root@hub.bibliogenius.org
+DEPLOY_HOST ?= hub-vps
 DEPLOY_PATH ?= /var/www/bibliogenius.org/
-SSH_KEY     ?= ~/.ssh/hub-vps-deploy
 
 .PHONY: build site blog clean serve new deploy
 
@@ -50,6 +49,5 @@ deploy: build
 	@echo "Deploying to $(DEPLOY_HOST):$(DEPLOY_PATH)"
 	rsync -avz --delete \
 		--exclude-from=.deployignore \
-		-e "ssh -i $(SSH_KEY)" \
 		./ $(DEPLOY_HOST):$(DEPLOY_PATH)
 	@echo "Done → https://bibliogenius.org"
