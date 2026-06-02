@@ -37,7 +37,7 @@ downloads_aria: Downloads
 macos_desc: Apple-Chip (M1/M2) & Intel
 windows_desc: Portables Zip
 linux_desc: Tarball (Ubuntu/Debian)
-android_desc: Geschlossener Test auf Google Play
+android_desc: Offener Test auf Google Play
 
 # -- Fehlermeldung --
 bug_title: Einen Fehler gefunden?
@@ -49,7 +49,7 @@ btn_github: Auf Codeberg
 dev_title: Mitwirkende
 dev_desc: Der Code ist 100% Open Source.
 stack_app_label: "Anwendung:"
-btn_explore_github: Codeberg-Organisation erkunden
+btn_explore_github: Code erkunden
 where_to_start: Wo anfangen?
 where_to_start_desc: "Schauen Sie sich unsere \"Good First Issue\"-Issues an — zugängliche Aufgaben für den Einstieg:"
 
