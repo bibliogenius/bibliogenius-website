@@ -25,7 +25,7 @@ nav_blog: Blog
 nav_changelog: Changelog
 # -- Hero --
 hero_title: La biblioteca del mañana,<br><span>en casa.</span>
-hero_subtitle: Organiza tus libros, comparte con tu comunidad.<br><span class="hero-tagline">Sin cloud, sin cuenta. Open Source.</span>
+hero_subtitle: Organiza tus libros, comparte con tu comunidad.<br><span class="hero-tagline">Almacenamiento local. Sin cuenta. Open Source.</span>
 btn_github: Ver Código (Codeberg)
 btn_tester: Ser Tester
 btn_story: Descubre la historia
@@ -36,7 +36,7 @@ showcase_alt: Captura de pantalla de BiblioGenius mostrando la vista de bibliote
 # -- Características --
 features_title: Características
 feature_local_title: Local-First
-feature_local_desc: Tus datos te pertenecen. Funciona sin conexión, sin nube.
+feature_local_desc: Tus datos te pertenecen. Todo permanece en tu dispositivo por defecto.
 feature_p2p_title: Compartir en Red
 feature_p2p_desc: Presta tus libros a amigos o vecinos de confianza. Crea una red de lectura local y descentralizada.
 feature_e2ee_title: Cifrado y Privado
