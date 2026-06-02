@@ -26,7 +26,7 @@ nav_changelog: Changelog
 # -- Hero --
 hero_title: La bibliothèque de demain,<br><span>chez vous.</span>
 hero_subtitle: Organisez vos livres, partagez avec votre communauté.<br><span class="hero-tagline">Stockage local. Sans compte. Open Source.</span>
-btn_github: Voir le Code (Codeberg)
+btn_github: Voir le Code
 btn_tester: Devenir Testeur
 btn_story: Découvrir l'histoire
 
@@ -76,6 +76,6 @@ footer_copyright: © 2025-2026 BiblioGenius — Open Source (<a href="https://ww
 ecoindex_alt: Score EcoIndex du site
 
 # -- Bandeau migration --
-migration_banner_text: BiblioGenius a migré de GitHub vers Codeberg.
+migration_banner_text: Sortie publique imminente.
 migration_banner_cta: En savoir plus
-migration_banner_link: /blog/migration-codeberg/
+migration_banner_link: /blog/validation-google-apple/
