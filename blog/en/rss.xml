@@ -7,7 +7,26 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://bibliogenius.org/blog/en/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Sat, 30 May 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>BiblioGenius approved by Google and Apple</title>
+          <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://bibliogenius.org/blog/en/validation-google-apple/</link>
+          <guid>https://bibliogenius.org/blog/en/validation-google-apple/</guid>
+          <description xml:base="https://bibliogenius.org/blog/en/validation-google-apple/">&lt;p&gt;Two great pieces of news in one shot: BiblioGenius has just been approved by both Google and Apple (ready to publish). We&#x27;re now entering the final stretch before the public release on both platforms.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;on-android&quot;&gt;On Android&lt;&#x2F;h2&gt;
+&lt;p&gt;The app can now be installed by anyone in France, with no prior enrollment in the testing programme. If you haven&#x27;t updated yet, do it now:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id=com.bibliogenius.app&quot;&gt;https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id=com.bibliogenius.app&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;on-iphone&quot;&gt;On iPhone&lt;&#x2F;h2&gt;
+&lt;p&gt;While we wait for the App Store to go public, you still need to go through the TestFlight companion app to access BiblioGenius:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;testflight.apple.com&#x2F;v1&#x2F;app&#x2F;6757465461&quot;&gt;https:&#x2F;&#x2F;testflight.apple.com&#x2F;v1&#x2F;app&#x2F;6757465461&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;share-freely&quot;&gt;Share freely&lt;&#x2F;h2&gt;
+&lt;p&gt;If you know people who might enjoy the app, you can now send them these links directly, with no need to enrol them in a testing programme.&lt;&#x2F;p&gt;
+&lt;p&gt;Until the public release, feel free to send any improvement ideas or bugs you come across, even the smallest ones, to &lt;a href=&quot;mailto:contact@bibliogenius.org&quot;&gt;contact@bibliogenius.org&lt;&#x2F;a&gt;. Every piece of feedback helps wrap up this final stage.&lt;&#x2F;p&gt;
+&lt;p&gt;Thanks to each and every one of you for being part of the BiblioGenius journey. See you very soon!&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>BiblioGenius is moving from GitHub to Codeberg</title>
           <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>

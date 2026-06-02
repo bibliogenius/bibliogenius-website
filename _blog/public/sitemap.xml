@@ -22,6 +22,10 @@
         <loc>https://bibliogenius.org/blog/en/page/1/</loc>
     </url>
     <url>
+        <loc>https://bibliogenius.org/blog/en/validation-google-apple/</loc>
+        <lastmod>2026-05-30</lastmod>
+    </url>
+    <url>
         <loc>https://bibliogenius.org/blog/es/</loc>
     </url>
     <url>
@@ -36,10 +40,18 @@
         <loc>https://bibliogenius.org/blog/es/page/1/</loc>
     </url>
     <url>
+        <loc>https://bibliogenius.org/blog/es/validation-google-apple/</loc>
+        <lastmod>2026-05-30</lastmod>
+    </url>
+    <url>
         <loc>https://bibliogenius.org/blog/migration-codeberg/</loc>
         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
         <loc>https://bibliogenius.org/blog/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://bibliogenius.org/blog/validation-google-apple/</loc>
+        <lastmod>2026-05-30</lastmod>
     </url>
 </urlset>

@@ -7,7 +7,26 @@
       <generator>Zola</generator>
       <language>fr</language>
       <atom:link href="https://bibliogenius.org/blog/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Sat, 30 May 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>BiblioGenius validée par Google et Apple</title>
+          <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://bibliogenius.org/blog/validation-google-apple/</link>
+          <guid>https://bibliogenius.org/blog/validation-google-apple/</guid>
+          <description xml:base="https://bibliogenius.org/blog/validation-google-apple/">&lt;p&gt;Deux excellentes nouvelles d&#x27;un coup : BiblioGenius vient d&#x27;être validée à la fois par Google et par Apple (prête à publier). On entre donc dans la dernière ligne droite avant la sortie publique sur les deux plateformes.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;cote-android&quot;&gt;Côté Android&lt;&#x2F;h2&gt;
+&lt;p&gt;L&#x27;app peut maintenant être installée par n&#x27;importe qui en France, sans inscription préalable au programme. Si tu n&#x27;as pas encore mis à jour, fais-le maintenant :&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id=com.bibliogenius.app&quot;&gt;https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id=com.bibliogenius.app&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;cote-iphone&quot;&gt;Côté iPhone&lt;&#x2F;h2&gt;
+&lt;p&gt;En attendant la mise en ligne publique sur l&#x27;App Store, il faut continuer de passer par l&#x27;application intermédiaire TestFlight pour accéder à l&#x27;app :&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;testflight.apple.com&#x2F;v1&#x2F;app&#x2F;6757465461&quot;&gt;https:&#x2F;&#x2F;testflight.apple.com&#x2F;v1&#x2F;app&#x2F;6757465461&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;partage-libre&quot;&gt;Partage libre&lt;&#x2F;h2&gt;
+&lt;p&gt;Si tu connais des personnes susceptibles d&#x27;aimer l&#x27;app, tu peux maintenant leur envoyer ces liens directement, plus besoin de les inscrire au programme de test.&lt;&#x2F;p&gt;
+&lt;p&gt;D&#x27;ici à la sortie publique, n&#x27;hésite pas à remonter toute idée d&#x27;amélioration ou tout bug rencontré, même minime, à &lt;a href=&quot;mailto:contact@bibliogenius.org&quot;&gt;contact@bibliogenius.org&lt;&#x2F;a&gt;. Chaque retour compte pour finaliser cette dernière étape.&lt;&#x2F;p&gt;
+&lt;p&gt;Merci à chacune et chacun de votre participation à l&#x27;aventure BiblioGenius. À très bientôt !&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>BiblioGenius quitte GitHub pour Codeberg</title>
           <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
