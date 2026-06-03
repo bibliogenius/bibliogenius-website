@@ -21,7 +21,7 @@ The app can now be installed by anyone in France, with no prior enrollment in th
 
 While we wait for the App Store to go public, you still need to go through the TestFlight companion app to access BiblioGenius:
 
-<https://testflight.apple.com/v1/app/6757465461>
+<https://testflight.apple.com/join/Prh6Gtkg>
 
 ## Share freely
 

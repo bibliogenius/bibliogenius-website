@@ -39,7 +39,7 @@ C'est gratuit, open source (AGPL-3.0), et développé par un dev indépendant. L
 
 ## Rejoindre la bêta
 
-**iPhone / iPad** : installe via [TestFlight](https://testflight.apple.com/v1/app/6757465461), c'est immédiat.
+**iPhone / iPad** : installe via [TestFlight](https://testflight.apple.com/join/Prh6Gtkg), c'est immédiat.
 
 **Android** : rejoins le test sur [Google Play](https://play.google.com/apps/testing/com.bibliogenius.app).
 

@@ -21,7 +21,7 @@ L'app peut maintenant être installée par n'importe qui en France, sans inscrip
 
 En attendant la mise en ligne publique sur l'App Store, il faut continuer de passer par l'application intermédiaire TestFlight pour accéder à l'app :
 
-<https://testflight.apple.com/v1/app/6757465461>
+<https://testflight.apple.com/join/Prh6Gtkg>
 
 ## Partage libre
 

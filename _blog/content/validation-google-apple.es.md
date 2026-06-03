@@ -21,7 +21,7 @@ La app ya puede ser instalada por cualquier persona en Francia, sin necesidad de
 
 A la espera de la publicación oficial en la App Store, sigue siendo necesario pasar por la aplicación intermedia TestFlight para acceder a la app:
 
-<https://testflight.apple.com/v1/app/6757465461>
+<https://testflight.apple.com/join/Prh6Gtkg>
 
 ## Compartir libremente
 

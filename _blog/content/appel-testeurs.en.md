@@ -40,7 +40,7 @@ It's free, open source (AGPL-3.0), and built by an independent developer. The co
 
 ## Join the beta
 
-**iPhone / iPad**: install via [TestFlight](https://testflight.apple.com/v1/app/6757465461), it's instant.
+**iPhone / iPad**: install via [TestFlight](https://testflight.apple.com/join/Prh6Gtkg), it's instant.
 
 **Android**: join the test on [Google Play](https://play.google.com/apps/testing/com.bibliogenius.app).
 
