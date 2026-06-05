@@ -49,6 +49,26 @@ OG_LOCALES = {
 
 BLOG_CONTENT_DIR = os.path.join(SITE_DIR, '_blog', 'content')
 
+# sitemap.xml is generated at deploy time (see build_sitemap).
+SITEMAP_FILE = os.path.join(SITE_DIR, 'sitemap.xml')
+# Per-page <priority>; pages absent here default to 0.5. Pages in
+# SITEMAP_EXCLUDE are omitted entirely (e.g. the invite landing page).
+SITEMAP_PRIORITY = {
+    'index': '1.0',
+    'story': '0.9',
+    'contribute': '0.8',
+    'tutorials': '0.7',
+    'changelog': '0.6',
+    'free-your-library': '0.5',
+    'support': '0.4',
+    'privacy': '0.3',
+    'data-deletion': '0.3',
+}
+SITEMAP_EXCLUDE = {'invite'}
+DOC_PRIORITY = '0.6'
+DOC_INDEX_PRIORITY = '0.7'
+BLOG_PRIORITY = '0.6'
+
 # Month names per language (for blog post date formatting)
 MONTH_NAMES = {
     'fr': ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
@@ -799,6 +819,126 @@ def load_app_version():
     return ''
 
 
+def _mtime_date(*paths):
+    """Most recent mtime among existing paths as YYYY-MM-DD; today if none exist."""
+    stamps = []
+    for p in paths:
+        try:
+            stamps.append(os.path.getmtime(p))
+        except OSError:
+            continue
+    if not stamps:
+        return datetime.now().strftime('%Y-%m-%d')
+    return datetime.fromtimestamp(max(stamps)).strftime('%Y-%m-%d')
+
+
+def _sitemap_main_entries():
+    """(loc, lastmod, priority) for every translated top-level page."""
+    entries = []
+    pages = discover_pages()
+    for page in sorted(pages):
+        if page in SITEMAP_EXCLUDE:
+            continue
+        priority = SITEMAP_PRIORITY.get(page, '0.5')
+        for lang in sorted(pages[page]['langs']):
+            src = os.path.join(I18N_DIR, page, f'{lang}.yml')
+            entries.append((BASE_URL + page_url(page, lang), _mtime_date(src), priority))
+    return entries
+
+
+def _sitemap_doc_entries():
+    """(loc, lastmod, priority) for doc pages and per-language doc indexes."""
+    entries = []
+    ui_dir = os.path.join(DOCS_DIR, '_ui')
+    if not os.path.isdir(DOCS_DIR) or not os.path.isdir(ui_dir):
+        return entries
+    langs = sorted(f[:-4] for f in os.listdir(ui_dir) if f.endswith('.yml'))
+    sections = sorted(
+        e for e in os.listdir(DOCS_DIR)
+        if not e.startswith(('_', '.')) and os.path.isdir(os.path.join(DOCS_DIR, e))
+    )
+    for lang in langs:
+        index_sources = []
+        for slug in sections:
+            md = os.path.join(DOCS_DIR, slug, f'{lang}.md')
+            src = md if os.path.isfile(md) else os.path.join(DOCS_DIR, slug, f'{DEFAULT_LANG}.md')
+            if not os.path.isfile(src):
+                continue
+            entries.append((BASE_URL + doc_url(slug, lang), _mtime_date(src), DOC_PRIORITY))
+            index_sources.append(src)
+        if index_sources:
+            entries.append((BASE_URL + doc_index_url(lang), _mtime_date(*index_sources), DOC_INDEX_PRIORITY))
+    return entries
+
+
+def _sitemap_changelog_entries():
+    """(loc, lastmod, priority) for each translated changelog page."""
+    entries = []
+    if not os.path.isdir(CHANGELOG_DIR):
+        return entries
+    for fname in sorted(os.listdir(CHANGELOG_DIR)):
+        if not fname.endswith('.md'):
+            continue
+        lang = fname[:-3]
+        src = os.path.join(CHANGELOG_DIR, fname)
+        entries.append((BASE_URL + changelog_url(lang), _mtime_date(src), SITEMAP_PRIORITY.get('changelog', '0.6')))
+    return entries
+
+
+def _sitemap_blog_entries():
+    """(loc, lastmod, priority) for each published blog post, using frontmatter dates."""
+    entries = []
+    if not os.path.isdir(BLOG_CONTENT_DIR):
+        return entries
+    for fname in sorted(os.listdir(BLOG_CONTENT_DIR)):
+        if fname.startswith('_') or not fname.endswith('.md'):
+            continue
+        base = fname[:-3]
+        if '.' in base:
+            slug_part, lang = base.rsplit('.', 1)
+        else:
+            slug_part, lang = base, DEFAULT_LANG
+        with open(os.path.join(BLOG_CONTENT_DIR, fname), encoding='utf-8') as f:
+            meta, _ = parse_toml_frontmatter(f.read())
+        if meta.get('draft') == 'true' or 'date' not in meta:
+            continue
+        slug = meta.get('slug', slug_part)
+        if lang == DEFAULT_LANG:
+            loc = f'{BASE_URL}/blog/{slug}/'
+        else:
+            loc = f'{BASE_URL}/blog/{lang}/{slug}/'
+        entries.append((loc, meta.get('updated', meta['date']), BLOG_PRIORITY))
+    return entries
+
+
+def build_sitemap():
+    """Generate sitemap.xml covering pages, docs, changelog and blog posts."""
+    entries = (
+        _sitemap_main_entries()
+        + _sitemap_doc_entries()
+        + _sitemap_changelog_entries()
+        + _sitemap_blog_entries()
+    )
+
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for loc, lastmod, priority in entries:
+        lines.append('  <url>')
+        lines.append(f'    <loc>{loc}</loc>')
+        lines.append(f'    <lastmod>{lastmod}</lastmod>')
+        lines.append(f'    <priority>{priority}</priority>')
+        lines.append('  </url>')
+    lines.append('</urlset>')
+    lines.append('')
+
+    with open(SITEMAP_FILE, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(lines))
+    print(f'\n--- Sitemap ---\n  sitemap.xml ({len(entries)} URLs)')
+    return len(entries)
+
+
 def build():
     filter_pages = set(sys.argv[1:]) if len(sys.argv) > 1 else None
     pages = discover_pages(filter_pages)
@@ -902,6 +1042,10 @@ def build():
     # Build changelog
     changelog_count = build_changelog()
     total += changelog_count
+
+    # Regenerate sitemap.xml (always scans the full source tree, even on a
+    # filtered build, so it never drifts out of sync with published pages).
+    build_sitemap()
 
     print(f'\nDone! {total} pages generated.')
 
