@@ -6,13 +6,13 @@
 
 {% macro hreflang_tags(current_lang, permalink, translations) %}
     <link rel="alternate" hreflang="{{ current_lang }}" href="{{ permalink }}">
-{%- for trans in translations %}
+{%- for trans in translations | sort(attribute="lang") %}
     <link rel="alternate" hreflang="{{ trans.lang }}" href="{{ trans.permalink }}">
 {%- endfor %}
 {%- if current_lang == config.default_language %}
     <link rel="alternate" hreflang="x-default" href="{{ permalink }}">
 {%- else %}
-{%- for trans in translations %}{% if trans.lang == config.default_language %}
+{%- for trans in translations | sort(attribute="lang") %}{% if trans.lang == config.default_language %}{# default-lang only; sort kept for determinism #}
     <link rel="alternate" hreflang="x-default" href="{{ trans.permalink }}">
 {%- endif %}{% endfor %}
 {%- endif %}
@@ -23,7 +23,7 @@
 {% if translations | length > 0 %}
 <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="{{ label | default(value='Language') }}">
     <option value="{{ permalink }}" selected>{{ self::lang_label(code=current_lang) }}</option>
-{%- for trans in translations %}
+{%- for trans in translations | sort(attribute="lang") %}
     <option value="{{ trans.permalink }}">{{ self::lang_label(code=trans.lang) }}</option>
 {%- endfor %}
 </select>
@@ -50,7 +50,7 @@
 {%- if og_image %}
     <meta property="og:image" content="{{ og_image }}">
 {%- endif %}
-{%- for trans in translations %}
+{%- for trans in translations | sort(attribute="lang") %}
     <meta property="og:locale:alternate" content="{{ self::og_locale(lang=trans.lang) }}">
 {%- endfor %}
 
