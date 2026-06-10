@@ -79,3 +79,5 @@ ecoindex_alt: Score EcoIndex du site
 migration_banner_text: Sortie publique imminente.
 migration_banner_cta: En savoir plus
 migration_banner_link: /blog/validation-google-apple/
+btn_linux: Télécharger pour Linux (.tar.gz)
+test_version_label: "Version actuelle :"

@@ -79,3 +79,5 @@ ecoindex_alt: EcoIndex-Bewertung der Website
 migration_banner_text: Öffentlicher Launch steht bevor.
 migration_banner_cta: Mehr erfahren
 migration_banner_link: /blog/en/validation-google-apple/
+btn_linux: Für Linux herunterladen (.tar.gz)
+test_version_label: "Aktuelle Version:"

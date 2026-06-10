@@ -69,3 +69,4 @@ gfi_rust_aria: "Good First Issues — Servidor Rust: documentación, tests"
 footer_copyright: "© 2025-2026 BiblioGenius — <a href=\"https://www.gnu.org/licenses/agpl-3.0.html\" style=\"color:var(--accent-light);\">AGPL-3.0</a>"
 footer_back: Volver al inicio
 ecoindex_alt: Puntuación EcoIndex del sitio
+linux_desc: Paquete x64 (.tar.gz)

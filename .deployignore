@@ -8,6 +8,10 @@ README.md
 LICENSE
 requirements.txt
 
+# Self-hosted binaries (uploaded out-of-band by `make ship-linux`).
+# Excluded so the site's --delete rsync never wipes them.
+downloads/
+
 # GitHub Pages markers (unused on Caddy)
 .nojekyll
 CNAME
