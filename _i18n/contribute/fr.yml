@@ -35,8 +35,8 @@ tester_desc: Installez la dernière version et aidez-nous à trouver les bugs.
 latest_version_label: "Dernière version :"
 downloads_aria: Téléchargements
 macos_desc: Puce Apple (M1/M2) & Intel
-windows_desc: Zip portable
-linux_desc: AppImage (Ubuntu/Debian)
+windows_desc: Installeur .exe · bêta
+linux_desc: AppImage (Ubuntu/Debian) · bêta
 android_desc: Test ouvert Google Play
 
 # -- Bug Report --
@@ -69,4 +69,4 @@ gfi_rust_aria: "Good First Issues — Serveur Rust : documentation, tests"
 footer_copyright: "© 2025-2026 BiblioGenius — <a href=\"https://www.gnu.org/licenses/agpl-3.0.html\" style=\"color:var(--accent-light);\">AGPL-3.0</a>"
 footer_back: Retour à l'accueil
 ecoindex_alt: Score EcoIndex du site
-linux_desc: Bundle x64 (.AppImage)
+linux_desc: AppImage (Ubuntu/Debian) · bêta
