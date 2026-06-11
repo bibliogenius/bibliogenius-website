@@ -59,8 +59,8 @@ blog_read_more: Leer el artículo
 # -- Probar la aplicación --
 test_title: Prueba la aplicación
 test_desc: "BiblioGenius está disponible en beta. ¡Únete a los primeros testers!"
-btn_testflight: Probar en iOS (TestFlight)
-btn_android: Probar en Android (Google Play)
+btn_testflight: Probar en iOS / macOS
+btn_android: Probar en Android
 
 # -- Libera tu biblioteca (comentado) --
 free_library_title: Libera tu biblioteca
@@ -79,5 +79,5 @@ ecoindex_alt: Puntuación EcoIndex del sitio
 migration_banner_text: Lanzamiento público inminente.
 migration_banner_cta: Más información
 migration_banner_link: /blog/es/validation-google-apple/
-btn_linux: Descargar para Linux (.tar.gz)
+btn_linux: Descargar para Linux
 test_version_label: "Versión actual:"

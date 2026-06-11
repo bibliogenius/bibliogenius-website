@@ -59,8 +59,8 @@ blog_read_more: Read the article
 # -- Test the App --
 test_title: Test the App
 test_desc: BiblioGenius is available in beta. Join the first testers!
-btn_testflight: Test on iOS (TestFlight)
-btn_android: Test on Android (Google Play)
+btn_testflight: Test on iOS / macOS
+btn_android: Test on Android
 
 # -- Free Your Library (commented out) --
 free_library_title: Free your library
@@ -79,5 +79,5 @@ ecoindex_alt: EcoIndex site score
 migration_banner_text: Public launch imminent.
 migration_banner_cta: Learn more
 migration_banner_link: /blog/en/validation-google-apple/
-btn_linux: Download for Linux (.tar.gz)
+btn_linux: Download for Linux
 test_version_label: "Current version:"
