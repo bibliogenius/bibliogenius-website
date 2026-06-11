@@ -1,5 +1,7 @@
 # BiblioGenius Website
 
+> **Canonical repository: [Codeberg](https://codeberg.org/bibliogenius/bibliogenius-website).** The GitHub copy is a read-only mirror, automatically synced from Codeberg. Please open issues and pull requests on Codeberg.
+
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![Status](https://img.shields.io/badge/status-live-success)](https://bibliogenius.org)
 
