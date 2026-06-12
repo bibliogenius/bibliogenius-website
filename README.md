@@ -5,7 +5,9 @@
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![Status](https://img.shields.io/badge/status-live-success)](https://bibliogenius.org)
 
-Public website for [bibliogenius.org](https://bibliogenius.org) - app showcase, documentation, and project story.
+Public website for [bibliogenius.org](https://bibliogenius.org) - app showcase, documentation, blog, and project story.
+
+The site is built by two generators: a small **Python** builder for the vitrine pages (templates + YAML translations) and **Zola** for the blog. `make build` runs both.
 
 ## Prerequisites
 
@@ -34,8 +36,13 @@ _docs/
   {slug}/images/        # Screenshots for that guide
   _ui/{lang}.yml        # Shared UI strings for doc pages (sidebar, nav, footer)
 
+_blog/                  # Blog source (Zola): content/, templates/, zola.toml
+_changelog/
+  {lang}.md             # Changelog source (fr, en), rendered into changelog.html
+
 assets/                 # CSS, images, fonts
 docs/                   # Generated doc HTML (do not edit)
+blog/                   # Generated blog, Zola output (do not edit)
 {lang}/                 # Generated translated pages (do not edit)
 ```
 
@@ -44,7 +51,9 @@ French (`fr`) is the default language. French pages are generated at the site ro
 ## Quick start
 
 ```bash
-make build    # Generate all HTML from templates + translations
+make build    # Build everything: vitrine pages (Python) + blog (Zola)
+make site     # Vitrine pages only (Python)
+make blog     # Blog only (Zola)
 make serve    # Local dev server at http://localhost:8000
 ```
 
@@ -96,9 +105,15 @@ Cross-page links use `{{url:page_name}}` - the build script resolves them to cor
 
 ## Deployment
 
-Push to `main`. GitHub Pages serves the site automatically.
+The site is self-hosted on a VPS (Caddy). Deployment is a manual build + rsync, not GitHub Pages:
 
-Generated files (`docs/`, `{lang}/`, root HTML) are committed to the repo since GitHub Pages serves static files directly.
+```bash
+make deploy    # Build, then rsync the generated files to the VPS
+```
+
+`make deploy` reads `DEPLOY_HOST` / `DEPLOY_PATH` (defaults in the Makefile) and syncs with `--delete`, so anything not in the repo or excluded via `.deployignore` is removed on the server. Self-hosted download binaries under `downloads/` are excluded from the sync (uploaded out-of-band by `make ship-linux`).
+
+Generated files (`docs/`, `blog/`, `{lang}/`, root HTML) are committed to the repo so the build output stays reviewable and the rsync is a plain file copy.
 
 ## Cleanup
 
