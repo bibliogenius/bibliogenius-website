@@ -5,9 +5,9 @@
 # -- Metadatos --
 lang_name: Español
 title: BiblioGenius - Gestión de biblioteca Open Source, local y privada
-meta_description: "BiblioGenius: aplicación Open Source para gestionar tu biblioteca personal, sin conexión y cifrada. Comparte tus libros con tus vecinos. ¡Prueba la beta!"
+meta_description: "BiblioGenius: aplicación Open Source para gestionar tu biblioteca personal, con almacenamiento local y cifrada. Comparte tus libros con tus vecinos. ¡Prueba la beta!"
 og_title: BiblioGenius - Gestión de biblioteca Open Source, local y privada
-og_description: Aplicación Open Source para gestionar tu biblioteca personal, sin conexión y cifrada. Comparte tus libros con tus vecinos.
+og_description: Aplicación Open Source para gestionar tu biblioteca personal, con almacenamiento local y cifrada. Comparte tus libros con tus vecinos.
 og_locale: es_ES
 og_locale_alternates: <meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="de_DE">
 schema_description: Aplicación Open Source para gestionar tu biblioteca personal y compartir tus libros.
