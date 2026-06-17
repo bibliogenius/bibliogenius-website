@@ -7,7 +7,30 @@
       <generator>Zola</generator>
       <language>fr</language>
       <atom:link href="https://bibliogenius.org/blog/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Sat, 30 May 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 17 Jun 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Faites avancer BiblioGenius : votre avis en 2 minutes</title>
+          <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://bibliogenius.org/blog/sondage-faites-avancer/</link>
+          <guid>https://bibliogenius.org/blog/sondage-faites-avancer/</guid>
+          <description xml:base="https://bibliogenius.org/blog/sondage-faites-avancer/">&lt;p&gt;Pour décider la suite du projet BiblioGenius, j&#x27;aimerais votre avis : &lt;strong&gt;qu&#x27;est-ce qui compte le plus pour vous dans une app de bibliothèque personnelle ?&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;J&#x27;ai préparé un court formulaire pour mettre vos priorités au centre des prochaines décisions. Faut-il pousser le partage entre proches ? Le scan et l&#x27;enrichissement automatique ? Les audiolivres ? La gamification ? C&#x27;est vous qui le dites.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ce-que-vous-y-trouverez&quot;&gt;Ce que vous y trouverez&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2 minutes&lt;&#x2F;strong&gt; suffisent pour le remplir&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Anonyme&lt;&#x2F;strong&gt; : aucune donnée personnelle demandée&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Sans compte&lt;&#x2F;strong&gt; : pas d&#x27;inscription, pas d&#x27;e-mail&lt;&#x2F;li&gt;
+&lt;li&gt;Quelques questions simples sur ce qui compte pour vous, et un espace libre pour vos idées&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;participer-au-sondage&quot;&gt;Participer au sondage&lt;&#x2F;h2&gt;
+&lt;p&gt;👉 &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;framaforms.org&#x2F;faites-avancer-lapp-bibliogenius-1781672322&quot;&gt;Répondre au sondage&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Chaque réponse compte. Que vous utilisiez déjà l&#x27;app au quotidien ou que vous l&#x27;ayez à peine ouverte, votre regard aide à orienter ce qui sera construit ensuite.&lt;&#x2F;p&gt;
+&lt;p&gt;Merci de prendre ces deux minutes : c&#x27;est en grande partie grâce à vos retours que BiblioGenius avance dans la bonne direction.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Vos livres vous appartiennent. La suite du projet aussi vous appartient un peu.&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>BiblioGenius validée par Google et Apple</title>
           <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
