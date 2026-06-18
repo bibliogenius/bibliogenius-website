@@ -23,9 +23,7 @@ I've put together a short form to put your priorities at the heart of the next d
 
 ## Take the survey
 
-👉 [Answer the survey](https://framaforms.org/faites-avancer-lapp-bibliogenius-1781672322)
-
-(The form is in French.)
+👉 [Answer the survey](https://framaforms.org/move-bibliogenius-forward-1781766356)
 
 Every answer counts. Whether you already use the app every day or have barely opened it, your perspective helps steer what gets built next.
 
