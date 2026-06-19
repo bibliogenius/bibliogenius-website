@@ -32,7 +32,7 @@ hero_p4: Good question. Maybe you do. Somewhere. On a shelf. Or at someone's&nbs
 ch_problem: The issue
 problem_title: The problem
 problem_p1: Today, managing a personal library means a notebook at best, total oblivion at worst.
-problem_p2: And the existing apps? They centralise your data on their servers. Your reading habits, your tastes... everything is analysed, monetised, locked behind an account.
+problem_p2: And the existing apps? Your reading habits, your tastes, your data live on their servers, behind an account. Not at home with you.
 problem_p3: <strong>If the app shuts down tomorrow, your library vanishes with it.</strong>
 
 # -- Agitation --
@@ -80,10 +80,8 @@ vision_title: Why BiblioGenius exists
 vision_p1: Because we believe <strong>your books belong to you</strong>. Not to a company.
 vision_p2: Because real sharing is a direct gesture between two people, not a "recommend" button on a platform.
 vision_p3: Because a library should be a neighbourhood commons, not an exploited database.
-vision_coda: BiblioGenius is a citizen-led, open-source project, developed in Europe, supported by its community. Tomorrow, it will connect the book boxes on your street, your local reading club, and the library in your building.
-
 # -- CTA --
-cta_title: Your books deserve better<br>than an&nbsp;algorithm.
+cta_title: Your books,<br>simply&nbsp;yours.
 cta_p1: Download BiblioGenius. Scan your first book.
 cta_p2: And next time your neighbour rings the doorbell to ask <em>"Do you have a good book I could borrow?"</em>, you'll know exactly what to answer.
 btn_ios: Test on iOS

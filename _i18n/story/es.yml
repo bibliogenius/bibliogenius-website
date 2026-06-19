@@ -32,7 +32,7 @@ hero_p4: Buena pregunta. Quizás lo tienes. En algún lugar. En una estantería.
 ch_problem: La situación
 problem_title: El problema
 problem_p1: Hoy, gestionar tu biblioteca personal es, en el mejor de los casos, una libreta; en el peor, el olvido total.
-problem_p2: ¿Y las aplicaciones existentes? Centralizan tus datos en sus servidores. Tus lecturas, tus gustos, tus hábitos... todo es analizado, monetizado, encerrado tras una cuenta.
+problem_p2: ¿Y las aplicaciones existentes? Tus lecturas, tus gustos, tus hábitos viven en sus servidores, tras una cuenta. No en tu casa.
 problem_p3: <strong>Si la app cierra mañana, tu biblioteca desaparece con ella.</strong>
 
 # -- Agitación --
@@ -80,10 +80,8 @@ vision_title: Por qué existe BiblioGenius
 vision_p1: Porque creemos que <strong>tus libros te pertenecen</strong>. No a una empresa.
 vision_p2: Porque compartir de verdad es un gesto directo entre dos personas, no un botón «&nbsp;recomendar&nbsp;» en una plataforma.
 vision_p3: Porque una biblioteca debería ser un bien común del barrio, no una base de datos explotada.
-vision_coda: BiblioGenius es un proyecto ciudadano y open source, desarrollado en Europa, apoyado por su comunidad. Mañana, conectará las cajas de libros de tu calle, el club de lectura de tu biblioteca y la estantería de tu edificio.
-
 # -- CTA --
-cta_title: Tus libros merecen algo mejor<br>que un&nbsp;algoritmo.
+cta_title: Tus libros,<br>simplemente&nbsp;tuyos.
 cta_p1: Descarga BiblioGenius. Escanea tu primer libro.
 cta_p2: Y la próxima vez que tu vecina toque el timbre para preguntar <em>«&nbsp;¿Tienes un buen libro para prestarme?&nbsp;»</em>, sabrás exactamente qué responder.
 btn_ios: Probar en iOS

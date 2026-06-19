@@ -24,8 +24,8 @@ nav_contribute: Contribuir
 nav_blog: Blog
 nav_changelog: Changelog
 # -- Hero --
-hero_title: La biblioteca del mañana,<br><span>en casa.</span>
-hero_subtitle: Organiza tus libros, comparte con tu comunidad.<br><span class="hero-tagline">Almacenamiento local. Sin cuenta. Open Source.</span>
+hero_title: Tu biblioteca,<br><span>en casa.</span>
+hero_subtitle: Escanea, organiza, presta a los tuyos.<br><span class="hero-tagline">Tus libros se quedan en tu dispositivo.</span>
 btn_github: Ver Código
 btn_tester: Ser Tester
 btn_story: Descubre la historia
