@@ -14,6 +14,30 @@ lang_name: English
 footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
 ---
 
+## 1.0.2 <small>June 19, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.1-beta.3...v1.0.2-beta.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.2-beta.2" class="changelog-link">release</a>
+
+- **QR scanning on macOS**: fixed the scanner camera for both pairing and adding contacts
+- **macOS identity**: fixed a case where your library identity could get out of sync on Mac and break peer connections
+- **Search**: clearer message about the Google Books quota, and your preferred search sources are now kept
+- **Statistics**: more readable author leaderboard on mobile
+- **Dashboard**: connected contacts are now counted in the Contacts stat
+- **Settings**: clearer online-sharing screen, fixed contact field, removed a misleading detected-libraries count
+- **Network**: the contacts loading screen now scrolls correctly in landscape
+- **Activity**: section icon shown in the activity banner
+- **Theme**: brighter top bar in the brand colors
+
+## 1.0.1 <small>June 18, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.0-beta.9...v1.0.1-beta.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.1-beta.3" class="changelog-link">release</a>
+
+- **Complete my library**: a new screen and dashboard card to fill in your books' missing data all at once (summary, publisher, pages, cover)
+- **Settings**: clearer, task-oriented layout and settings that are easier to find through search
+- **Pairing**: clearer error messages, a check that the other device is reachable, the screen stays awake during the process, and QR-code pairing
+- **Network**: your contacts' catalogues stay more up to date and reliable, with honest sync feedback
+- **Linked devices**: clearer behavior in the interface
+- **Search**: summaries now take your reading languages into account
+- **Statistics**: more readable blocks, better suited to mobile
+- **Dashboard**: new "Go further" section
+- **Cleanup**: removed an old import screen that was no longer needed
+
 ## 1.0.0 <small>May 4, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.9.2-beta.3...v1.0.0-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.0-beta.1" class="changelog-link">release</a>
 
 - **Local backup (ADR-037)**: new encrypted `.bgbackup` format, restore wizard with rollback card, auto-backup scheduler with status card, guardrails blocking every escape route after a successful restore, full-backup teaser, FR/EN/DE/ES translations

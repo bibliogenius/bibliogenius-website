@@ -14,6 +14,30 @@ lang_name: Français
 footer_text: "BiblioGenius &mdash; Open Source, local, chiffré."
 ---
 
+## 1.0.2 <small>19 juin 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.1-beta.3...v1.0.2-beta.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.2-beta.2" class="changelog-link">release</a>
+
+- **Scan QR sur macOS** : caméra du scanner corrigée pour l'appairage et l'ajout de contacts
+- **Identité macOS** : correction d'un cas où l'identité de votre bibliothèque pouvait se désynchroniser sur Mac et rompre les connexions avec vos pairs
+- **Recherche** : message clair sur le quota Google Books, et vos sources de recherche préférées sont désormais conservées
+- **Statistiques** : classement des auteurs plus lisible sur mobile
+- **Tableau de bord** : les contacts connectés sont désormais comptés dans la statistique Contacts
+- **Réglages** : écran de partage en ligne plus clair, champ de contact corrigé, retrait d'un compteur de bibliothèques trompeur
+- **Réseau** : l'écran de chargement des contacts défile correctement en mode paysage
+- **Activité** : icône de la section affichée dans la bannière d'activité
+- **Thème** : barre supérieure aux couleurs de la marque, plus lumineuse
+
+## 1.0.1 <small>18 juin 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.0-beta.9...v1.0.1-beta.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.1-beta.3" class="changelog-link">release</a>
+
+- **Compléter ma bibliothèque** : nouvel écran et carte sur le tableau de bord pour remplir en une fois les données manquantes de vos livres (résumé, éditeur, pages, couverture)
+- **Réglages** : réorganisation plus claire et orientée usage, réglages plus faciles à trouver via la recherche
+- **Appairage** : messages d'erreur plus clairs, vérification que l'autre appareil est joignable, écran qui reste allumé pendant l'opération, appairage par QR code
+- **Réseau** : catalogues de vos contacts plus à jour et plus fiables, avec un retour de synchronisation honnête
+- **Appareils liés** : fonctionnement clarifié dans l'interface
+- **Recherche** : les résumés tiennent compte de vos langues de lecture
+- **Statistiques** : blocs plus lisibles et mieux adaptés au mobile
+- **Tableau de bord** : nouvelle section « Pour aller plus loin »
+- **Nettoyage** : retrait d'un ancien écran d'import devenu inutile
+
 ## 1.0.0 <small>4 mai 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v0.9.2-beta.3...v1.0.0-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.0-beta.1" class="changelog-link">release</a>
 
 - **Sauvegarde locale (ADR-037)** : nouveau format `.bgbackup` chiffré, assistant de restauration avec carte de rollback, planificateur de sauvegarde automatique avec carte d'état, garde-fous bloquant toutes les sorties après une restauration réussie, teaser de sauvegarde complète, traductions FR/EN/DE/ES
