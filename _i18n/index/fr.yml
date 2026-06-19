@@ -25,7 +25,7 @@ nav_blog: Blog
 nav_changelog: Changelog
 # -- Hero --
 hero_title: Votre bibliothèque,<br><span>chez vous.</span>
-hero_subtitle: Scannez, rangez, prêtez à vos proches.<br><span class="hero-tagline">Vos livres restent sur votre appareil.</span>
+hero_subtitle: Scannez, rangez, prêtez à vos proches.<br><span class="hero-tagline">Vos livres vivent sur votre appareil.</span>
 btn_github: Voir le Code
 btn_tester: Devenir Testeur
 btn_story: Découvrir l'histoire
