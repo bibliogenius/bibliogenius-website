@@ -76,8 +76,8 @@ footer_copyright: © 2025-2026 BiblioGenius · Open Source (<a href="https://www
 ecoindex_alt: Score EcoIndex du site
 
 # -- Bandeau migration --
-migration_banner_text: Sortie publique imminente.
-migration_banner_cta: En savoir plus
-migration_banner_link: /blog/validation-google-apple/
+migration_banner_text: Aidez à faire avancer BiblioGenius.
+migration_banner_cta: Répondre au sondage
+migration_banner_link: /blog/sondage-faites-avancer/
 btn_linux: Télécharger pour Linux
 test_version_label: "Version actuelle :"
