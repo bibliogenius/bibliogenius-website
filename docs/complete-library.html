@@ -14,23 +14,23 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Où sont stockées mes données - Documentation - BiblioGenius</title>
-    <meta name="description" content="Tout savoir sur le stockage local et la confidentialité de vos données">
+    <title>Mettre à jour les données de mes livres en masse - Documentation - BiblioGenius</title>
+    <meta name="description" content="Complétez automatiquement les données manquantes (résumé, éditeur, pages, couverture) de toute votre bibliothèque en une seule opération">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Où sont stockées mes données - Documentation - BiblioGenius">
-    <meta property="og:description" content="Tout savoir sur le stockage local et la confidentialité de vos données">
-    <meta property="og:url" content="https://bibliogenius.org/docs/privacy-data.html">
+    <meta property="og:title" content="Mettre à jour les données de mes livres en masse - Documentation - BiblioGenius">
+    <meta property="og:description" content="Complétez automatiquement les données manquantes (résumé, éditeur, pages, couverture) de toute votre bibliothèque en une seule opération">
+    <meta property="og:url" content="https://bibliogenius.org/docs/complete-library.html">
     <meta property="og:site_name" content="BiblioGenius">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Où sont stockées mes données - Documentation - BiblioGenius">
-    <meta name="twitter:description" content="Tout savoir sur le stockage local et la confidentialité de vos données">
+    <meta name="twitter:title" content="Mettre à jour les données de mes livres en masse - Documentation - BiblioGenius">
+    <meta name="twitter:description" content="Complétez automatiquement les données manquantes (résumé, éditeur, pages, couverture) de toute votre bibliothèque en une seule opération">
 
-    <link rel="canonical" href="https://bibliogenius.org/docs/privacy-data.html">
-    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/privacy-data.html">
-    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/privacy-data.html">
-    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/privacy-data.html">
+    <link rel="canonical" href="https://bibliogenius.org/docs/complete-library.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/complete-library.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/complete-library.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/complete-library.html">
 
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
@@ -264,7 +264,7 @@
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "BiblioGenius", "item": "https://bibliogenius.org/"},
             {"@type": "ListItem", "position": 2, "name": "Documentation", "item": "https://bibliogenius.org/docs/"},
-            {"@type": "ListItem", "position": 3, "name": "Où sont stockées mes données"}
+            {"@type": "ListItem", "position": 3, "name": "Mettre à jour les données de mes livres en masse"}
         ]
     }
     </script>
@@ -289,8 +289,8 @@
                 <a href="../blog/" class="site-nav-link">Blog</a>
                 <a href="../changelog.html" class="site-nav-link">Changelog</a>
                 <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Langue">
-            <option value="../en/docs/privacy-data.html">English</option>
-            <option value="privacy-data.html" selected>Français</option>
+            <option value="../en/docs/complete-library.html">English</option>
+            <option value="complete-library.html" selected>Français</option>
                 </select>
             </div>
         </nav>
@@ -313,7 +313,7 @@
                     <a href="add-book.html" class="sidebar-link">Comment ajouter un livre</a>
                     <a href="organize-shelves.html" class="sidebar-link">Comment organiser mes etageres</a>
                     <a href="reading-progress.html" class="sidebar-link">Comment suivre ma progression de lecture</a>
-                    <a href="complete-library.html" class="sidebar-link">Mettre à jour les données de mes livres en masse</a>
+                    <a href="complete-library.html" class="sidebar-link active" aria-current="page">Mettre à jour les données de mes livres en masse</a>
                 </div>
                 <div class="sidebar-group">
                     <div class="sidebar-group-label">Recherche</div>
@@ -336,24 +336,36 @@
                 </div>
                 <div class="sidebar-group">
                     <div class="sidebar-group-label">Données</div>
-                    <a href="privacy-data.html" class="sidebar-link active" aria-current="page">Où sont stockées mes données</a>
+                    <a href="privacy-data.html" class="sidebar-link">Où sont stockées mes données</a>
                     <a href="profile.html" class="sidebar-link">Mon profil</a>
                 </div>
             </nav>
 
             <article class="doc-content">
                 <a href="index.html" class="back-link">&larr; Tous les guides</a>
-                <h1>Où sont stockées mes données</h1>
-<p>Les données de votre bibliothèque sont stockées localement sur votre appareil. Quand vous vous connectez avec des amis, seuls les livres que vous choisissez de partager leur sont visibles. Vous pouvez exporter une sauvegarde à tout moment depuis votre Profil.</p>
-<h2 id="stockage-local">Stockage local</h2>
-<p>Toutes vos données (livres, étagères, prêts, contacts) sont stockées dans une base de données locale sur votre appareil. Rien n'est envoyé sur un serveur distant.</p>
-<h2 id="partage-controle">Partage contrôlé</h2>
-<p>Quand vous vous connectez avec d'autres bibliothèques, vous gardez le contrôle total sur ce qui est partagé. Seuls les livres que vous choisissez de rendre visibles le sont.</p>
-<h2 id="sauvegardes">Sauvegardes</h2>
-<p>Exportez une sauvegarde de toutes vos données à tout moment depuis la section Profil. Vous pouvez aussi les réimporter en cas de changement d'appareil.</p>
-<p><img loading="lazy" alt="Écran du profil" src="images/privacy-data/profile-view.png" /></p>
-<h2 id="chiffrement">Chiffrement</h2>
-<p>Les communications entre bibliothèques sont chiffrées de bout en bout (E2EE). Vos données restent privées.</p>
+                <h1>Mettre à jour les données de mes livres en masse</h1>
+<p>BiblioGenius peut compléter automatiquement les données manquantes de vos livres, pour toute votre bibliothèque en une seule opération, sans avoir à les modifier un par un.</p>
+<h2 id="lancer-la-mise-a-jour-en-masse">Lancer la mise à jour en masse</h2>
+<ol>
+<li>Depuis le tableau de bord, repérez la carte <strong>Complétude de la bibliothèque</strong> (elle affiche le pourcentage de livres complets).</li>
+<li>Appuyez sur cette carte pour ouvrir l'écran <strong>Compléter ma bibliothèque</strong>.</li>
+<li>Appuyez sur <strong>Compléter les champs vides</strong>.</li>
+<li>BiblioGenius recherche les informations manquantes et remplit, pour chaque livre concerné : le résumé, l'éditeur, le nombre de pages, l'année de publication et l'image de couverture.</li>
+<li>La progression s'affiche sous la forme « X sur Y livres ». Vous pouvez <strong>Reprendre</strong> une recherche interrompue, la <strong>Relancer</strong> ou l'<strong>Abandonner</strong>.</li>
+</ol>
+<h2 id="suivre-et-filtrer">Suivre et filtrer</h2>
+<ul>
+<li>L'onglet <strong>À compléter</strong> liste les livres auxquels il manque des données ; l'onglet <strong>Récents</strong> montre ceux qui viennent d'être complétés.</li>
+<li>Les filtres permettent de cibler un champ manquant précis, ou d'isoler les livres <strong>Sans ISBN</strong>.</li>
+</ul>
+<h2 id="annuler-une-modification">Annuler une modification</h2>
+<p>Après coup, vous pouvez annuler le remplissage livre par livre, ou champ par champ. Les valeurs que vous avez saisies vous-même sont protégées : elles ne sont jamais écrasées ni annulées par erreur.</p>
+<h2 id="a-savoir">À savoir</h2>
+<ul>
+<li>La mise à jour ne concerne que les livres que vous <strong>possédez</strong>.</li>
+<li>Un <strong>ISBN</strong> est nécessaire pour retrouver les données : les livres sans ISBN sont signalés et ignorés. Ajoutez-leur un ISBN depuis leur fiche pour les rendre éligibles.</li>
+<li>Si aucune source ne fournit l'information, le champ reste vide ; vous pouvez alors le compléter manuellement depuis la fiche du livre.</li>
+</ul>
                 <aside class="doc-help">
                     <h2>Besoin d'aide ?</h2>
                     <p>Vous ne trouvez pas la réponse à votre question dans les guides ? Notre équipe peut vous aider.</p>
