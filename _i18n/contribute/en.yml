@@ -70,3 +70,14 @@ footer_copyright: "© 2025-2026 BiblioGenius — <a href=\"https://www.gnu.org/l
 footer_back: Back to home
 ecoindex_alt: EcoIndex site score
 linux_desc: AppImage (Ubuntu/Debian) · beta
+
+# -- Acknowledgements / Remerciements --
+thanks_title: "Acknowledgements"
+thanks_intro: "BiblioGenius moves forward thanks to those who give their time and their ideas."
+thanks_contributors_aria: "Contributors"
+thanks_federico_role: "Project lead: design and development."
+thanks_federico_aria: "Federico Calo, personal website"
+thanks_sebastien_role: "For his valuable help in shaping the project."
+thanks_sebastien_aria: "Sébastien Godet, LinkedIn profile"
+thanks_translators: "Thanks too to the app's translators, as well as to its contributors."
+thanks_family: "Thanks also to my loved ones, the app's first patient testers."
