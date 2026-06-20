@@ -119,7 +119,11 @@ def load_yaml(path):
             key = stripped[:idx]
             value = stripped[idx + 2:]
             if len(value) >= 2 and value[0] == '"' and value[-1] == '"':
+                # Double-quoted scalar: strip the wrapping quotes and unescape
+                # the YAML sequences used in these files (\\ and \"). The NUL
+                # placeholder keeps the two passes from interfering.
                 value = value[1:-1]
+                value = value.replace('\\\\', '\x00').replace('\\"', '"').replace('\x00', '\\')
             data[key] = value
     return data
 

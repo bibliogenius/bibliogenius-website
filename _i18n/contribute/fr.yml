@@ -51,7 +51,7 @@ dev_desc: Le code est 100% Open Source.
 stack_app_label: "Application :"
 btn_explore_github: Explorer le code
 where_to_start: Où commencer ?
-where_to_start_desc: "Consultez nos issues \"Good First Issue\" — des tâches accessibles pour bien démarrer :"
+where_to_start_desc: "Consultez nos issues "Good First Issue" — des tâches accessibles pour bien démarrer :"
 
 # -- Good First Issues --
 gfi_aria: Good First Issues par projet
@@ -66,7 +66,7 @@ gfi_rust_desc: Documentation, tests
 gfi_rust_aria: "Good First Issues — Serveur Rust : documentation, tests"
 
 # -- Footer --
-footer_copyright: "© 2025-2026 BiblioGenius · <a href=\"https://www.gnu.org/licenses/agpl-3.0.html\" style=\"color:var(--accent-light);\">AGPL-3.0</a>"
+footer_copyright: "© 2025-2026 BiblioGenius · <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-light);">AGPL-3.0</a>"
 footer_back: Retour à l'accueil
 ecoindex_alt: Score EcoIndex du site
 linux_desc: AppImage (Ubuntu/Debian) · bêta
