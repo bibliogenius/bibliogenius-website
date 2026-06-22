@@ -11,9 +11,14 @@ BiblioGenius can automatically fill in the missing data for your books, across y
 
 1. On the dashboard, find the **Library completeness** card (it shows the percentage of complete books).
 2. Tap the card to open the **Complete my library** screen.
-3. Tap **Complete the empty fields**.
-4. BiblioGenius searches for the missing information and fills in, for each affected book: the summary, publisher, page count, publication year and cover image.
-5. Progress is shown as "X of Y books". You can **Resume** an interrupted search, **Run it again**, or **Discard** it.
+3. Choose the batch size with the **In batches of:** selector. You can process **10**, **20** (the default) or **30** books at a time, or pick **All** to go through the whole library at once.
+4. Tap **Complete** (the button shows the number of books in the batch, for example "Complete 20 books").
+5. BiblioGenius searches for the missing information and fills in, for each affected book: the summary, publisher, page count, publication year and cover image.
+6. Progress is shown as "X of Y books". At the end of a batch the run pauses: tap **Resume** to move on to the next batch, or **Run it again** or **Discard** the search.
+
+## Why process in batches
+
+Completing a large library all at once can take a while. By working in batches of 10, 20 or 30 books, you see results sooner, you stay in control, and you can stop whenever you want and resume later right where you left off. The **All** option is still there if you would rather run everything in one go.
 
 ## Track and filter
 

@@ -11,9 +11,14 @@ BiblioGenius peut compléter automatiquement les données manquantes de vos livr
 
 1. Depuis le tableau de bord, repérez la carte **Complétude de la bibliothèque** (elle affiche le pourcentage de livres complets).
 2. Appuyez sur cette carte pour ouvrir l'écran **Compléter ma bibliothèque**.
-3. Appuyez sur **Compléter les champs vides**.
-4. BiblioGenius recherche les informations manquantes et remplit, pour chaque livre concerné : le résumé, l'éditeur, le nombre de pages, l'année de publication et l'image de couverture.
-5. La progression s'affiche sous la forme « X sur Y livres ». Vous pouvez **Reprendre** une recherche interrompue, la **Relancer** ou l'**Abandonner**.
+3. Choisissez la taille du lot avec le sélecteur **Par lot de :**. Vous pouvez traiter **10**, **20** (valeur par défaut) ou **30** livres à la fois, ou choisir **Tout** pour parcourir toute la bibliothèque d'un coup.
+4. Appuyez sur **Compléter** (le bouton indique le nombre de livres du lot, par exemple « Compléter 20 livres »).
+5. BiblioGenius recherche les informations manquantes et remplit, pour chaque livre concerné : le résumé, l'éditeur, le nombre de pages, l'année de publication et l'image de couverture.
+6. La progression s'affiche sous la forme « X sur Y livres ». À la fin d'un lot, le traitement se met en pause : appuyez sur **Reprendre** pour enchaîner le lot suivant, ou bien **Relancez** ou **Abandonnez** la recherche.
+
+## Pourquoi traiter par lots
+
+Compléter toute une grande bibliothèque d'un seul coup peut être long. En traitant par lots de 10, 20 ou 30 livres, vous voyez les résultats arriver plus vite, vous gardez la main et vous pouvez vous arrêter quand vous le souhaitez, puis reprendre plus tard là où vous en étiez. L'option **Tout** reste disponible si vous préférez tout lancer en une fois.
 
 ## Suivre et filtrer
 
