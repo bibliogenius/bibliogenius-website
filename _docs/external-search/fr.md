@@ -5,7 +5,7 @@ order: 4
 group: discovery
 ---
 
-Utilisez l'icone de recherche pour trouver des livres dans les catalogues externes comme la BNF, OpenLibrary et Inventaire. Quand vous trouvez un livre, appuyez dessus pour l'ajouter a votre bibliotheque avec toutes ses metadonnees.
+Utilisez l'icône de recherche pour trouver des livres dans les catalogues externes comme la BNF, OpenLibrary et Inventaire. Quand vous trouvez un livre, appuyez dessus pour l'ajouter à votre bibliothèque avec toutes ses métadonnées.
 
 ![Recherche dans les catalogues externes](images/external-search.png)
 
@@ -13,11 +13,11 @@ Utilisez l'icone de recherche pour trouver des livres dans les catalogues extern
 
 BiblioGenius interroge plusieurs catalogues :
 
-- **BNF** (Bibliotheque nationale de France) : catalogue de reference pour les livres en francais
+- **BNF** (Bibliothèque nationale de France) : catalogue de référence pour les livres en français
 - **OpenLibrary** : catalogue ouvert et collaboratif
-- **Inventaire** : base de donnees basee sur Wikidata
+- **Inventaire** : base de données basée sur Wikidata
 - **Google Books** : source optionnelle (activable dans le profil)
 
 ## Filtrer par source
 
-Vous pouvez choisir quelles sources interroger dans les parametres de recherche, pour obtenir des resultats plus precis.
+Vous pouvez choisir quelles sources interroger dans les paramètres de recherche, pour obtenir des résultats plus précis.

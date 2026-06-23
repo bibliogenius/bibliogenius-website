@@ -1,15 +1,15 @@
 ---
 title: Comment jouer au Memory
-description: Testez votre memoire avec les couvertures de vos livres
+description: Testez votre mémoire avec les couvertures de vos livres
 order: 15
 group: games
 ---
 
-Le jeu de Memory utilise les couvertures de vos propres livres pour creer un jeu de paires. Retournez les cartes et retrouvez les paires le plus rapidement possible.
+Le jeu de Memory utilise les couvertures de vos propres livres pour créer un jeu de paires. Retournez les cartes et retrouvez les paires le plus rapidement possible.
 
 ![Vue du jeu de Memory](images/memory-game-view.png)
 
-## 5 niveaux de difficulte
+## 5 niveaux de difficulté
 
 | Niveau | Grille | Paires |
 |--------|--------|--------|
@@ -17,21 +17,21 @@ Le jeu de Memory utilise les couvertures de vos propres livres pour creer un jeu
 | Moyen | 4x3 | 6 |
 | Difficile | 4x4 | 8 |
 | Expert | 5x4 | 10 |
-| Maitre | 6x5 | 15 |
+| Maître | 6x5 | 15 |
 
 ## Comment jouer
 
-1. Choisissez un niveau de difficulte
-2. Les cartes sont melangees et placees face cachee
-3. Retournez deux cartes a la suite
+1. Choisissez un niveau de difficulté
+2. Les cartes sont mélangées et placées face cachée
+3. Retournez deux cartes à la suite
 4. Si elles forment une paire, elles restent visibles
-5. Sinon, elles se retournent apres un court delai
+5. Sinon, elles se retournent après un court délai
 6. Trouvez toutes les paires pour terminer la partie
 
 ## Animation 3D
 
-Chaque carte se retourne avec une animation 3D fluide, rendant l'experience de jeu plus immersive.
+Chaque carte se retourne avec une animation 3D fluide, rendant l'expérience de jeu plus immersive.
 
 ## Classement
 
-Vos meilleurs scores sont enregistres pour chaque niveau. Comparez-vous avec vos contacts connectes et tentez de battre leurs records.
+Vos meilleurs scores sont enregistrés pour chaque niveau. Comparez-vous avec vos contacts connectés et tentez de battre leurs records.

@@ -1,18 +1,18 @@
 ---
-title: Comment gerer mes contacts
-description: Ajoutez des amis et des bibliotheques a votre reseau
+title: Comment gérer mes contacts
+description: Ajoutez des amis et des bibliothèques à votre réseau
 order: 6
 group: social
 ---
 
-Allez dans "Reseau" pour ajouter des amis ou bibliotheques. Vous pouvez ajouter des emprunteurs (qui peuvent emprunter vos livres) ou des bibliotheques (dont vous pouvez consulter le catalogue).
+Allez dans "Réseau" pour ajouter des amis ou bibliothèques. Vous pouvez ajouter des emprunteurs (qui peuvent emprunter vos livres) ou des bibliothèques (dont vous pouvez consulter le catalogue).
 
 ![Liste des contacts](images/contacts-list.png)
 
 ## Types de contacts
 
-- **Emprunteurs** : des personnes a qui vous pretez des livres
-- **Bibliotheques** : des catalogues que vous consultez et auxquels vous pouvez demander des emprunts
+- **Emprunteurs** : des personnes à qui vous prêtez des livres
+- **Bibliothèques** : des catalogues que vous consultez et auxquels vous pouvez demander des emprunts
 
 ## Ajouter un contact
 

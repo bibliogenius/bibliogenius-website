@@ -1,26 +1,26 @@
 ---
-title: Comment organiser mes etageres
-description: Creez des etageres thematiques et organisez vos livres a votre facon
+title: Comment organiser mes étagères
+description: Créez des étagères thématiques et organisez vos livres à votre façon
 order: 2
 group: library
 ---
 
-Les etageres vous permettent de classer vos livres par theme, genre ou tout autre critere.
+Les étagères vous permettent de classer vos livres par thème, genre ou tout autre critère.
 
-![Vue des etageres](images/shelves-view.png)
+![Vue des étagères](images/shelves-view.png)
 
-## Creer et gerer des etageres
+## Créer et gérer des étagères
 
-1. Creez des etageres thematiques pour vos livres (ex : "SF", "Favoris").
-2. Dans votre Bibliotheque, appuyez sur une etagere pour filtrer.
-3. Appuyez sur l'icone de tri pour entrer en mode reorganisation.
-4. Faites glisser les livres dans l'ordre souhaite, ou appuyez sur A-Z pour un tri automatique par auteur.
+1. Créez des étagères thématiques pour vos livres (ex : "SF", "Favoris").
+2. Dans votre Bibliothèque, appuyez sur une étagère pour filtrer.
+3. Appuyez sur l'icône de tri pour entrer en mode réorganisation.
+4. Faites glisser les livres dans l'ordre souhaité, ou appuyez sur A-Z pour un tri automatique par auteur.
 5. Appuyez sur le bouton de validation pour sauvegarder !
 
-## Attribuer des livres aux etageres
+## Attribuer des livres aux étagères
 
-Depuis la fiche d'un livre, vous pouvez l'assigner a une ou plusieurs etageres. Un meme livre peut apparaitre sur plusieurs etageres.
+Depuis la fiche d'un livre, vous pouvez l'assigner à une ou plusieurs étagères. Un même livre peut apparaître sur plusieurs étagères.
 
-## Reorganiser l'ordre
+## Réorganiser l'ordre
 
-Passez en mode reorganisation pour changer l'ordre des livres par glisser-deposer, ou utilisez le tri automatique (par auteur, titre, date d'ajout).
+Passez en mode réorganisation pour changer l'ordre des livres par glisser-déposer, ou utilisez le tri automatique (par auteur, titre, date d'ajout).
