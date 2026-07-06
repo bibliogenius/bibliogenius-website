@@ -1,40 +1,37 @@
 +++
-title = "Ta bibliothèque, partout et tout le temps"
-description = "Hébergée chez toi, ta bibliothèque apprend maintenant à te suivre : copie de secours chiffrée, bientôt tous tes appareils, et demain toute la maison. Encore quelques jours de test avant la publication sur l'App Store et la candidature au Play Store."
+title = "Votre bibliothèque, partout et tout le temps"
+description = "Une copie de secours chiffrée aujourd'hui, tous vos appareils avec la mise à jour qui part aux stores, toute la maison demain. La sortie publique approche."
 date = 2026-07-06
 updated = 2026-07-06
 template = "blog/page.html"
 
 [extra]
+og_image = "https://bibliogenius.org/blog/images/sync-devices-fr.png"
 tags = ["annonce", "beta"]
 +++
 
-Toi qui testes BiblioGenius depuis les débuts, la dernière mise à jour est importante : elle ouvre le chapitre le plus attendu, ta bibliothèque accessible partout et tout le temps, et elle marque la dernière ligne droite avant la sortie publique.
+La sortie publique approche. Avant ça, la dernière mise à jour donne à votre bibliothèque ce qui lui manquait : une existence au-delà de votre appareil.
 
-## Chez toi, et pourtant partout
+![La carte « Lire sur mes autres appareils » dans l'application](/blog/images/sync-read-anywhere-fr.png)
 
-Ta bibliothèque vit sur ton appareil, chez toi. C'est sa force, et ça ne change pas. La nouveauté, c'est qu'elle apprend à te suivre : en créant un compte, une copie chiffrée t'accompagne partout, tout le temps.
+## Une copie de secours, d'abord
 
-Téléphone perdu, changé ou réinitialisé ? La phrase secrète générée depuis les paramètres de l'application suffit à tout retrouver : livres, étagères, contacts, prêts. Et comme cette copie est chiffrée de ton côté, personne d'autre que toi ne peut la lire.
+Créez votre compte : une copie chiffrée de votre bibliothèque vous suit. Téléphone perdu, changé, réinitialisé ? La phrase secrète générée depuis les paramètres de l'application suffit à tout retrouver : livres, étagères, contacts, prêts. Personne d'autre que vous ne peut lire cette copie.
 
-Au passage, le mot de passe local de l'application disparaît : il faisait double emploi. Une seule clé à retenir, ta phrase secrète.
+![La section Sauvegarde et récupération dans les réglages](/blog/images/sync-backup-settings-fr.png)
 
-## Brancher tous tes appareils
+## Tous vos appareils, ensuite
 
-La suite logique est déjà dans les fondations de cette mise à jour : brancher sur le même compte tous tes supports de lecture et de navigation. Le téléphone pour scanner, la tablette du salon pour feuilleter, l'ordinateur pour les grandes sessions de rangement : la même bibliothèque sur chacun, fusionnée automatiquement, toujours chiffrée et lisible par toi seul.
+La même bibliothèque sur votre téléphone, votre tablette, votre ordinateur, fusionnée automatiquement. C'est prêt, et ça s'active avec la dernière mise à jour.
 
-Les fondations sont posées, et l'activation part avec la mise à jour soumise aux stores, dans quelques jours.
+![L'écran du compte : appareils autorisés, synchronisation et ajout d'appareil](/blog/images/sync-devices-fr.png)
 
-## Et pourquoi pas toute la maison
+## Toute la maison, demain
 
-Brancher plusieurs appareils d'une même personne, c'est aussi la porte ouverte à brancher plusieurs personnes d'un même foyer : une bibliothèque commune à la maison, que chacun retrouve sur son propre appareil.
+Une bibliothèque commune au foyer, où chacun retrouve les livres sur son propre appareil et voit qui a publié quoi. C'est la direction.
 
-Et à terme, une piste d'évolution nous tient à cœur : donner davantage d'informations sur qui a publié quoi, pour savoir d'un coup d'œil qui a ajouté ce roman, qui a rangé cette étagère, qui a prêté ce livre.
+## À vous de jouer
 
-## Et maintenant : la sortie publique
-
-C'est l'autre grande nouvelle : encore quelques jours de test, puis l'app sera publiée sur l'App Store d'Apple et candidatera à son entrée sur le Play Store de Google. Et c'est cette mise à jour-là qui allume la copie de secours et la connexion de tes appareils pour tout le monde.
-
-Ton rôle est donc plus précieux que jamais. Mets à jour l'application à chaque nouvelle version : chacune embarque les derniers correctifs, et la prochaine apporte la synchronisation. Crée ton compte dès maintenant pour être prêt, éprouve la copie de secours, et écris-nous à [contact@bibliogenius.org](mailto:contact@bibliogenius.org) au moindre accroc, même minime. Chaque retour compte dans cette dernière ligne droite.
+Encore quelques jours de test, puis publication sur l'App Store d'Apple et candidature au Play Store de Google. Mettez à jour l'application (chaque version embarque les derniers correctifs), créez votre compte, et racontez-nous le moindre accroc à [contact@bibliogenius.org](mailto:contact@bibliogenius.org). Chaque retour compte dans cette dernière ligne droite.
 
 Merci de faire partie de l'aventure. À très vite !

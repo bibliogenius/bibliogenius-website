@@ -14,20 +14,18 @@
           <author>Unknown</author>
           <link>https://bibliogenius.org/blog/en/library-anywhere/</link>
           <guid>https://bibliogenius.org/blog/en/library-anywhere/</guid>
-          <description xml:base="https://bibliogenius.org/blog/en/library-anywhere/">&lt;p&gt;If you have been testing BiblioGenius from the early days, the latest update matters: it opens the most awaited chapter, your library accessible anywhere and at any time, and it marks the final stretch before the public release.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;at-your-place-and-yet-everywhere&quot;&gt;At your place, and yet everywhere&lt;&#x2F;h2&gt;
-&lt;p&gt;Your library lives on your device, at your place. That is its strength, and it does not change. What&#x27;s new is that it learns to follow you: by creating an account, an encrypted copy goes with you, anywhere, at any time.&lt;&#x2F;p&gt;
-&lt;p&gt;Phone lost, replaced or reset? The secret phrase generated from the app&#x27;s settings is all you need to get everything back: books, shelves, contacts, loans. And since that copy is encrypted on your side, nobody but you can read it.&lt;&#x2F;p&gt;
-&lt;p&gt;Along the way, the app&#x27;s local password is gone: it was redundant. One single key to remember, your secret phrase.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;plugging-in-all-your-devices&quot;&gt;Plugging in all your devices&lt;&#x2F;h2&gt;
-&lt;p&gt;The logical next step is already in the foundations of this update: plugging all your reading and browsing devices into the same account. The phone to scan, the living-room tablet to browse, the computer for the big tidying sessions: the same library on each of them, merged automatically, always encrypted and readable by you alone.&lt;&#x2F;p&gt;
-&lt;p&gt;The foundations are laid, and activation ships with the update submitted to the stores, in a few days.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;and-why-not-the-whole-household&quot;&gt;And why not the whole household&lt;&#x2F;h2&gt;
-&lt;p&gt;Plugging in several devices of one person also opens the door to plugging in several people of one household: a shared library at home, that everyone finds on their own device.&lt;&#x2F;p&gt;
-&lt;p&gt;And down the road, one evolution track is dear to us: giving more information about who published what, to see at a glance who added this novel, who tidied that shelf, who lent this book.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;and-now-the-public-release&quot;&gt;And now: the public release&lt;&#x2F;h2&gt;
-&lt;p&gt;That is the other big news: a few more days of testing, then the app will be published on Apple&#x27;s App Store and will apply for entry on Google&#x27;s Play Store. And that very update is the one that switches on the safety copy and the connection of your devices for everyone.&lt;&#x2F;p&gt;
-&lt;p&gt;Your role is therefore more precious than ever. Update the app with every new version: each one carries the latest fixes, and the next one brings synchronization. Create your account now to be ready, put the safety copy to the test, and write to us at &lt;a href=&quot;mailto:contact@bibliogenius.org&quot;&gt;contact@bibliogenius.org&lt;&#x2F;a&gt; about the slightest hiccup, however small. Every report counts in this final stretch.&lt;&#x2F;p&gt;
+          <description xml:base="https://bibliogenius.org/blog/en/library-anywhere/">&lt;p&gt;The public release is near. Before that, the latest update gives your library what it was missing: a life beyond your device.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;images&#x2F;sync-read-anywhere.png&quot; alt=&quot;The &amp;quot;Read on my other devices&amp;quot; card in the app&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-safety-copy-first&quot;&gt;A safety copy, first&lt;&#x2F;h2&gt;
+&lt;p&gt;Create your account: an encrypted copy of your library follows you. Phone lost, replaced, reset? The secret phrase generated from the app&#x27;s settings is all you need to get everything back: books, shelves, contacts, loans. Nobody but you can read that copy.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;images&#x2F;sync-backup-settings.png&quot; alt=&quot;The Backup and recovery section in the settings&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;all-your-devices-next&quot;&gt;All your devices, next&lt;&#x2F;h2&gt;
+&lt;p&gt;The same library on your phone, your tablet, your computer, merged automatically. It is ready, and it switches on with the latest update.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;images&#x2F;sync-devices.png&quot; alt=&quot;The account screen: authorized devices, sync and add-device actions&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-whole-household-tomorrow&quot;&gt;The whole household, tomorrow&lt;&#x2F;h2&gt;
+&lt;p&gt;One shared library at home, where everyone finds the books on their own device and sees who published what. That is the direction.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;your-move&quot;&gt;Your move&lt;&#x2F;h2&gt;
+&lt;p&gt;A few more days of testing, then publication on Apple&#x27;s App Store and the application to Google&#x27;s Play Store. Update the app (every version carries the latest fixes), create your account, and tell us about the slightest hiccup at &lt;a href=&quot;mailto:contact@bibliogenius.org&quot;&gt;contact@bibliogenius.org&lt;&#x2F;a&gt;. Every report counts in this final stretch.&lt;&#x2F;p&gt;
 &lt;p&gt;Thank you for being part of the adventure. See you very soon!&lt;&#x2F;p&gt;
 </description>
       </item>

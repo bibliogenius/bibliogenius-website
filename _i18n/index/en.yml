@@ -75,9 +75,9 @@ footer_tutorials: "➜ Video Tutorials"
 footer_copyright: © 2025-2026 BiblioGenius · Open Source (<a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a>)
 ecoindex_alt: EcoIndex site score
 
-# -- Migration banner --
-migration_banner_text: Help shape BiblioGenius.
-migration_banner_cta: Take the survey
-migration_banner_link: /blog/en/shape-bibliogenius-survey/
+# -- Announcement banner (current blog post) --
+migration_banner_text: Your library, anywhere and at any time.
+migration_banner_cta: Read the post
+migration_banner_link: /blog/en/library-anywhere/
 btn_linux: Download for Linux
 test_version_label: "Current version:"

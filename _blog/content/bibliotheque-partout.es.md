@@ -1,41 +1,38 @@
 +++
 title = "Tu biblioteca, en todas partes y a cualquier hora"
 slug = "biblioteca-en-todas-partes"
-description = "Alojada en tu casa, tu biblioteca aprende ahora a seguirte: una copia de seguridad cifrada, pronto todos tus dispositivos y mañana todo el hogar. Unos días más de pruebas antes de la publicación en el App Store y la candidatura al Play Store."
+description = "Una copia de seguridad cifrada hoy, todos tus dispositivos con la actualización que va a las tiendas, todo el hogar mañana. El lanzamiento público está cerca."
 date = 2026-07-06
 updated = 2026-07-06
 template = "blog/page.html"
 
 [extra]
+og_image = "https://bibliogenius.org/blog/images/sync-devices.png"
 tags = ["anuncio", "beta"]
 +++
 
-Si llevas probando BiblioGenius desde los inicios, la última actualización es importante: abre el capítulo más esperado, tu biblioteca accesible en todas partes y a cualquier hora, y marca la recta final antes del lanzamiento público.
+El lanzamiento público está cerca. Antes, la última actualización le da a tu biblioteca lo que le faltaba: una vida más allá de tu dispositivo.
 
-## En tu casa, y sin embargo en todas partes
+![La tarjeta «Leer en mis otros dispositivos» en la aplicación](/blog/images/sync-read-anywhere.png)
 
-Tu biblioteca vive en tu dispositivo, en tu casa. Esa es su fuerza, y eso no cambia. La novedad es que aprende a seguirte: al crear una cuenta, una copia cifrada te acompaña en todas partes, a cualquier hora.
+## Una copia de seguridad, primero
 
-¿Teléfono perdido, cambiado o reiniciado? La frase secreta generada desde los ajustes de la aplicación basta para recuperarlo todo: libros, estanterías, contactos, préstamos. Y como esa copia se cifra en tu dispositivo, nadie más que tú puede leerla.
+Crea tu cuenta: una copia cifrada de tu biblioteca te acompaña. ¿Teléfono perdido, cambiado, reiniciado? La frase secreta generada desde los ajustes de la aplicación basta para recuperarlo todo: libros, estanterías, contactos, préstamos. Nadie más que tú puede leer esa copia.
 
-De paso, la contraseña local de la aplicación desaparece: era redundante. Una sola llave que recordar, tu frase secreta.
+![La sección Copia de seguridad y recuperación en los ajustes](/blog/images/sync-backup-settings.png)
 
-## Conectar todos tus dispositivos
+## Todos tus dispositivos, después
 
-El siguiente paso lógico ya está en los cimientos de esta actualización: conectar a la misma cuenta todos tus dispositivos de lectura y de consulta. El teléfono para escanear, la tableta del salón para hojear, el ordenador para las grandes sesiones de ordenación: la misma biblioteca en cada uno, fusionada automáticamente, siempre cifrada y legible solo por ti.
+La misma biblioteca en tu teléfono, tu tableta, tu ordenador, fusionada automáticamente. Está lista, y se enciende con la última actualización.
 
-Los cimientos están puestos, y la activación sale con la actualización enviada a las tiendas, en unos días.
+![La pantalla de la cuenta: dispositivos autorizados, sincronización y añadir dispositivo](/blog/images/sync-devices.png)
 
-## Y por qué no todo el hogar
+## Todo el hogar, mañana
 
-Conectar varios dispositivos de una misma persona abre también la puerta a conectar a varias personas de un mismo hogar: una biblioteca común en casa, que cada uno encuentra en su propio dispositivo.
+Una biblioteca común en casa, donde cada uno encuentra los libros en su propio dispositivo y ve quién ha publicado qué. Esa es la dirección.
 
-Y a más largo plazo, una línea de evolución nos importa especialmente: dar más información sobre quién ha publicado qué, para ver de un vistazo quién añadió esta novela, quién ordenó aquella estantería, quién prestó este libro.
+## Te toca
 
-## Y ahora: el lanzamiento público
-
-Es la otra gran noticia: unos días más de pruebas y la app se publicará en el App Store de Apple y presentará su candidatura para entrar en el Play Store de Google. Y es precisamente esa actualización la que enciende la copia de seguridad y la conexión de tus dispositivos para todo el mundo.
-
-Tu papel es por tanto más valioso que nunca. Actualiza la aplicación con cada nueva versión: cada una incluye las últimas correcciones, y la próxima trae la sincronización. Crea tu cuenta ya para estar listo, pon a prueba la copia de seguridad y escríbenos a [contact@bibliogenius.org](mailto:contact@bibliogenius.org) ante el menor tropiezo, por pequeño que sea. Cada aporte cuenta en esta recta final.
+Unos días más de pruebas y llega la publicación en el App Store de Apple y la candidatura al Play Store de Google. Actualiza la aplicación (cada versión incluye las últimas correcciones), crea tu cuenta y cuéntanos el menor tropiezo en [contact@bibliogenius.org](mailto:contact@bibliogenius.org). Cada aporte cuenta en esta recta final.
 
 Gracias por formar parte de la aventura. ¡Hasta muy pronto!
