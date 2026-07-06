@@ -14,7 +14,24 @@ lang_name: Français
 footer_text: "BiblioGenius &mdash; Open Source, local, chiffré."
 ---
 
-## 1.0.2 <small>19 juin 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.1-beta.3...v1.0.2-beta.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.2-beta.2" class="changelog-link">release</a>
+## 1.1.1 <small>3 juillet 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.0...v1.1.1-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.1-beta.1" class="changelog-link">release</a>
+
+- **Réseau** : le catalogue en cache d'un contact en ligne n'est plus perdu lors du rafraîchissement de l'annuaire
+
+## 1.1.0 <small>3 juillet 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.2...v1.1.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.0" class="changelog-link">release</a>
+
+- **Compte chiffré** : le compte devient le pilier sauvegarde et récupération de votre bibliothèque, avec une section Compte repensée dans les réglages, des explications guidées et un partage d'invitation
+- **Multi-appareils (fondations)** : moteur de synchronisation de la bibliothèque entre les appareils d'un même compte (fusion cr-sqlite, registre d'appareils signé, enrôlement par QR code, retrait d'un appareil, déclenchement automatique, transport chiffré des couvertures personnalisées, ADR-046) ; livré désactivé dans cette version, activation prévue prochainement
+- **Identifiants pérennes** : les livres, contacts, étagères, exemplaires et prêts passent sur des identifiants universels (UUID), avec une migration validée sur des copies de bibliothèques réelles et des garde-fous d'intégrité
+- **Restauration** : choix explicite de l'identité de bibliothèque lors d'une restauration sur un autre appareil
+- **Réseau** : reconnexion plus rapide des contacts en local après une coupure, catalogues des contacts lisibles entre versions différentes de l'app, rafraîchissement du catalogue en ligne calé sur la forme canonique ISBN-13
+- **Exemplaires** : auto-réparation d'un identifiant de bibliothèque périmé qui pouvait faire échouer la création d'exemplaires
+- **Réglages** : retrait du mot de passe local de l'application, redondant avec la phrase secrète du compte chiffré
+- **Jeux** : sélecteur de difficulté du memory repensé avec des cartes colorées dépliables
+- **Interface** : marges latérales harmonisées sur grand écran, en-tête et fiche livre affinés
+- **Langues** : catalogues chinois, japonais et coréen complétés à 100 %
+
+## 1.0.2 <small>24 juin 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.1-beta.3...v1.0.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.2" class="changelog-link">release</a>
 
 - **Scan QR sur macOS** : caméra du scanner corrigée pour l'appairage et l'ajout de contacts
 - **Identité macOS** : correction d'un cas où l'identité de votre bibliothèque pouvait se désynchroniser sur Mac et rompre les connexions avec vos pairs
@@ -25,6 +42,11 @@ footer_text: "BiblioGenius &mdash; Open Source, local, chiffré."
 - **Réseau** : l'écran de chargement des contacts défile correctement en mode paysage
 - **Activité** : icône de la section affichée dans la bannière d'activité
 - **Thème** : barre supérieure aux couleurs de la marque, plus lumineuse
+- **Couvertures iOS** : les photos de couverture ajoutées manuellement ne disparaissent plus après une mise à jour de l'app
+- **Compléter ma bibliothèque** : sélection par lots, avec pourcentage en direct et progression par lot
+- **Sauvegarde** : redémarrage systématique de l'app après une restauration avec retour arrière
+- **Appareils liés** : retrait de l'ancien appairage direct entre appareils, remplacé à terme par la synchronisation par compte
+- **Réglages** : tuiles d'accès rapide en pleine largeur sur mobile
 
 ## 1.0.1 <small>18 juin 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.0-beta.9...v1.0.1-beta.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.1-beta.3" class="changelog-link">release</a>
 

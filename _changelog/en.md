@@ -14,7 +14,24 @@ lang_name: English
 footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
 ---
 
-## 1.0.2 <small>June 19, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.1-beta.3...v1.0.2-beta.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.2-beta.2" class="changelog-link">release</a>
+## 1.1.1 <small>July 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.0...v1.1.1-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.1-beta.1" class="changelog-link">release</a>
+
+- **Network**: the cached catalog of an online contact is no longer lost when the directory refreshes
+
+## 1.1.0 <small>July 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.2...v1.1.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.0" class="changelog-link">release</a>
+
+- **Encrypted account**: the account becomes the backup and recovery pillar of your library, with a redesigned Account section in the settings, guided explanations and invitation sharing
+- **Multi-device (foundations)**: library synchronization engine between the devices of one account (cr-sqlite merge, signed device registry, QR-code enrollment, device removal, automatic triggers, encrypted transport of custom covers, ADR-046); shipped disabled in this version, activation coming soon
+- **Durable identifiers**: books, contacts, shelves, copies and loans move to universal identifiers (UUID), with a migration validated on copies of real libraries and integrity safeguards
+- **Restore**: explicit library-identity choice when restoring on a different device
+- **Network**: faster local reconnection of contacts after an outage, contact catalogs readable across different app versions, online catalog refresh keyed on the canonical ISBN-13 form
+- **Copies**: self-healing of a stale library identifier that could make copy creation fail
+- **Settings**: removal of the local app password, redundant with the encrypted account passphrase
+- **Games**: redesigned memory difficulty picker with colored expandable cards
+- **Interface**: harmonized side margins on large screens, refined header and book page
+- **Languages**: Chinese, Japanese and Korean catalogs completed to 100%
+
+## 1.0.2 <small>June 24, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.1-beta.3...v1.0.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.2" class="changelog-link">release</a>
 
 - **QR scanning on macOS**: fixed the scanner camera for both pairing and adding contacts
 - **macOS identity**: fixed a case where your library identity could get out of sync on Mac and break peer connections
@@ -25,6 +42,11 @@ footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
 - **Network**: the contacts loading screen now scrolls correctly in landscape
 - **Activity**: section icon shown in the activity banner
 - **Theme**: brighter top bar in the brand colors
+- **iOS covers**: manually added cover photos no longer disappear after an app update
+- **Complete my library**: batch selection, with a live percentage and per-batch progress
+- **Backup**: the app now always restarts after a rollback restore
+- **Linked devices**: removal of the old direct device-to-device pairing, eventually replaced by account-based synchronization
+- **Settings**: full-width quick-access tiles on mobile
 
 ## 1.0.1 <small>June 18, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.0.0-beta.9...v1.0.1-beta.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.0.1-beta.3" class="changelog-link">release</a>
 
