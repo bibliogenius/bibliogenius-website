@@ -1,10 +1,15 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.bibliogenius.app",
-      "sha256_cert_fingerprints": ["TODO_REPLACE_WITH_SHA256_FROM_PLAY_CONSOLE"]
+      "sha256_cert_fingerprints": [
+        "F2:31:0C:31:ED:D3:D6:17:70:EF:C9:4A:29:93:2D:63:B6:7C:3A:06:BD:E1:CB:4D:26:8D:F2:EF:E0:CC:C5:E1"
+      ]
     }
   }
 ]
