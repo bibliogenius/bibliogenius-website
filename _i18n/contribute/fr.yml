@@ -51,7 +51,7 @@ dev_desc: Le code est 100% Open Source.
 stack_app_label: "Application :"
 btn_explore_github: Explorer le code
 where_to_start: Où commencer ?
-where_to_start_desc: "Consultez nos issues "Good First Issue" — des tâches accessibles pour bien démarrer :"
+where_to_start_desc: "Consultez nos issues "Good First Issue", des tâches accessibles pour bien démarrer :"
 
 # -- Good First Issues --
 gfi_aria: Good First Issues par projet
@@ -77,7 +77,7 @@ thanks_intro: "BiblioGenius avance grâce à celles et ceux qui donnent de leur 
 thanks_contributors_aria: "Contributeurs"
 thanks_federico_role: "Porteur du projet : conception et développement."
 thanks_federico_aria: "Federico Calo, site personnel"
-thanks_sebastien_role: "Pour son aide précieuse au cadrage du projet."
+thanks_sebastien_role: "Accompagnement dans le cadrage du projet"
 thanks_sebastien_aria: "Sébastien Godet, profil LinkedIn"
 thanks_translators: "Merci également aux traductrices et traducteurs de l'application, ainsi qu'aux contributeurs."
 thanks_family: "Merci aussi à mes proches, premiers testeurs patients de l'application."
