@@ -42,22 +42,22 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/de/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/en/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/es/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -302,12 +302,12 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/en/changelog.html</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/changelog.html</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -338,6 +338,21 @@
   <url>
     <loc>https://bibliogenius.org/blog/bibliotheque-partout/</loc>
     <lastmod>2026-07-06</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/blog/en/shelves-and-series/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/blog/es/estanterias-y-series/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/blog/etageres-series/</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>0.6</priority>
   </url>
   <url>

@@ -6,9 +6,9 @@
 
 {% macro hreflang_tags(current_lang, permalink, translations) %}
     <link rel="alternate" hreflang="{{ current_lang }}" href="{{ permalink }}">
-{%- for trans in translations | sort(attribute="lang") %}
+{%- for trans in translations | sort(attribute="lang") %}{% if trans.lang != current_lang %}{# translations includes the current language since Zola 0.19 #}
     <link rel="alternate" hreflang="{{ trans.lang }}" href="{{ trans.permalink }}">
-{%- endfor %}
+{%- endif %}{% endfor %}
 {%- if current_lang == config.default_language %}
     <link rel="alternate" hreflang="x-default" href="{{ permalink }}">
 {%- else %}
@@ -20,12 +20,12 @@
 
 
 {% macro lang_switcher(current_lang, permalink, translations, label) %}
-{% if translations | length > 0 %}
+{% if translations | length > 1 %}
 <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="{{ label | default(value='Language') }}">
     <option value="{{ permalink }}" selected>{{ self::lang_label(code=current_lang) }}</option>
-{%- for trans in translations | sort(attribute="lang") %}
+{%- for trans in translations | sort(attribute="lang") %}{% if trans.lang != current_lang %}
     <option value="{{ trans.permalink }}">{{ self::lang_label(code=trans.lang) }}</option>
-{%- endfor %}
+{%- endif %}{% endfor %}
 </select>
 {% endif %}
 {% endmacro %}
@@ -94,7 +94,7 @@
 {% macro footer(lang) %}
 <footer class="footer" role="contentinfo">
     <div class="container">
-        <p>BiblioGenius — Open Source, local-first.</p>
+        <p>BiblioGenius · Open Source, local-first.</p>
         <div class="footer-bottom">
             <p>&copy; 2025-2026 BiblioGenius — <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a></p>
         </div>

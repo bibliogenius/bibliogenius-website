@@ -7,7 +7,27 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://bibliogenius.org/blog/en/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Fri, 24 Jul 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Ready-made shelves, series in order</title>
+          <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://bibliogenius.org/blog/en/shelves-and-series/</link>
+          <guid>https://bibliogenius.org/blog/en/shelves-and-series/</guid>
+          <description xml:base="https://bibliogenius.org/blog/en/shelves-and-series/">&lt;p&gt;Sorting books is the quiet pleasure of every librarian, professional or amateur. The latest update makes cataloguing simpler, with two new features: ready-made shelves, and series that keep your volumes in order.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;pick-a-genre-the-shelf-is-already-there&quot;&gt;Pick a genre, the shelf is already there&lt;&#x2F;h2&gt;
+&lt;p&gt;On a book&#x27;s page, a list of predefined genres awaits: Fiction, Crime &amp;amp; thriller, Science fiction, Fantasy, Comics &amp;amp; manga, Children &amp;amp; teens, History, Biography... Select one, and the book lands on the matching shelf. Nothing to create, nothing to configure.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;images&#x2F;shelves-genres-fr.png&quot; alt=&quot;The suggested genres on a book&amp;#39;s page&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Your own shelves aren&#x27;t going anywhere: you can still create them your way (&quot;Living room&quot;, &quot;Fiction &amp;gt; SF&quot;...) and combine both.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-collection-becomes-a-series-in-one-tap&quot;&gt;A collection becomes a series, in one tap&lt;&#x2F;h2&gt;
+&lt;p&gt;Some collections are actually series: a trilogy, a saga, the adventures of a recurring character. On the collection page, a simple &quot;Series&quot; switch now treats them as such: each book becomes a numbered volume, which you can reorder with a fingertip.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;blog&#x2F;images&#x2F;series-toggle-fr.png&quot; alt=&quot;A collection turned into a series, with its numbered volumes&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;At a glance, you see which volumes are in your library and which ones are still missing.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;your-turn&quot;&gt;Your turn&lt;&#x2F;h2&gt;
+&lt;p&gt;Both features ship with the latest update of the app, available now. Update, sort away, and tell us what you think at &lt;a href=&quot;mailto:contact@bibliogenius.org&quot;&gt;contact@bibliogenius.org&lt;&#x2F;a&gt;: every bit of feedback counts.&lt;&#x2F;p&gt;
+&lt;p&gt;Happy reading, and see you soon!&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>Your library, anywhere and at any time</title>
           <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
