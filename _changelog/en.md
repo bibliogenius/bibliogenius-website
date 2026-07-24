@@ -14,6 +14,23 @@ lang_name: English
 footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
 ---
 
+## 1.1.2 <small>July 21, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.1-beta.1...v1.1.2-beta.5" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.2-beta.5" class="changelog-link">release</a>
+
+- **Series**: reading frieze on the book page, where the volumes of a series appear in order, unread ones dimmed and the ones you do not own marked; the order is set by drag and drop or by typing the volume number, from the book page as well as from the collection
+- **Genres**: a closed list of genres offered when entering a book, filed as shelves under a "Genre" parent, with the same filtering, renaming and syncing as your other shelves
+- **Library**: books read but not owned, kept after a loan ended, are back in the filters with a dedicated badge, and removing one is offered after a return instead of happening silently
+- **Loans**: loan state is no longer confused with reading status (two separate pills), a borrow request that could not be delivered shows a send failure instead of staying pending forever, and a return the lender never received raises a warning instead of a false success
+- **Borrowing from a contact**: those loans now appear in the borrowed list and in its counter, with the lender identity recorded durably
+- **Network**: paired contacts follow each other automatically so their catalog stays readable while they are offline, a contact screen explains why a catalog is unavailable (approval required, expired cache) instead of showing an empty list, and displayed books no longer vanish a second after loading
+- **Known libraries**: contacts paired from another device of your account are now listed separately, with guidance on how to pair them again on this device
+- **AI assistants (MCP)**: new read-only tool contract over your library, served by the running app, protected by a token and limited to your owner view
+- **Security**: the owner API is no longer reachable from the local network, unencrypted loan exchanges authenticate the sender, and shared catalogs no longer leak the books you do not own
+- **Collections**: the tab no longer breaks on an invalid added-on date coming from a contact or an old backup
+- **Encrypted account**: automatic reconnection when the hub expires the session
+- **Local network**: a startup warning when the app's usual port is already taken, since your contacts could then reach another service instead
+- **Desktop**: the Windows packages and the Linux AppImage now bundle the sync engine, as on macOS
+- **Interface**: fixed header icon spacing on desktop and a more readable search field
+
 ## 1.1.1 <small>July 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.0...v1.1.1-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.1-beta.1" class="changelog-link">release</a>
 
 - **Network**: the cached catalog of an online contact is no longer lost when the directory refreshes

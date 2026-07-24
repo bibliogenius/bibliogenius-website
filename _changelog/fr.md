@@ -14,6 +14,23 @@ lang_name: Français
 footer_text: "BiblioGenius &mdash; Open Source, local, chiffré."
 ---
 
+## 1.1.2 <small>21 juillet 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.1-beta.1...v1.1.2-beta.5" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.2-beta.5" class="changelog-link">release</a>
+
+- **Séries** : frise de lecture sur la fiche livre, où les tomes d'une série s'affichent dans l'ordre, les volumes non lus estompés et ceux que vous ne possédez pas signalés ; l'ordre se règle par glisser-déposer ou en saisissant le numéro de tome, depuis la fiche livre comme depuis la collection
+- **Genres** : liste fermée de genres proposée à la saisie d'un livre, rangés comme des étagères sous un parent « Genre », avec le même filtrage, le même renommage et la même synchronisation que vos autres étagères
+- **Bibliothèque** : les livres lus mais non possédés, gardés après un prêt terminé, réapparaissent dans les filtres avec un badge dédié, et leur suppression est proposée après un retour au lieu d'être silencieuse
+- **Prêts** : l'état de prêt ne se confond plus avec le statut de lecture (deux pastilles distinctes), une demande d'emprunt qui n'a pas pu partir affiche un échec d'envoi au lieu de rester en attente indéfiniment, et un retour que le prêteur n'a jamais reçu déclenche un avertissement au lieu d'un faux succès
+- **Emprunts à un contact** : ils apparaissent désormais dans la liste des livres empruntés et dans son compteur, avec l'identité du prêteur enregistrée durablement
+- **Réseau** : les contacts appairés se suivent automatiquement pour que leur catalogue reste consultable quand ils sont hors ligne, l'écran d'un contact explique pourquoi un catalogue est indisponible (approbation requise, cache expiré) au lieu d'afficher une liste vide, et les livres affichés ne s'effacent plus une seconde après le chargement
+- **Bibliothèques connues** : les contacts appairés depuis un autre appareil de votre compte sont désormais listés à part, avec la marche à suivre pour les réappairer sur cet appareil
+- **Assistants IA (MCP)** : nouveau contrat d'outils en lecture seule sur votre bibliothèque, servi par l'application en cours d'exécution, protégé par un jeton et limité à votre vue de propriétaire
+- **Sécurité** : l'API propriétaire n'est plus joignable depuis le réseau local, les échanges de prêt non chiffrés authentifient l'expéditeur, et les catalogues partagés ne laissent plus fuiter les livres que vous ne possédez pas
+- **Collections** : l'onglet ne se bloque plus sur une date d'ajout invalide venue d'un contact ou d'une ancienne sauvegarde
+- **Compte chiffré** : reconnexion automatique quand le hub expire la session
+- **Réseau local** : avertissement au démarrage quand le port habituel de l'application est déjà occupé, vos contacts pouvant alors joindre un autre service à sa place
+- **Bureau** : les paquets Windows et l'AppImage Linux embarquent désormais le moteur de synchronisation, comme sur macOS
+- **Interface** : espacement des icônes de l'en-tête corrigé sur ordinateur et champ de recherche plus lisible
+
 ## 1.1.1 <small>3 juillet 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.0...v1.1.1-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.1-beta.1" class="changelog-link">release</a>
 
 - **Réseau** : le catalogue en cache d'un contact en ligne n'est plus perdu lors du rafraîchissement de l'annuaire
