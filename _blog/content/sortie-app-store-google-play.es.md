@@ -24,7 +24,7 @@ Una sola ficha para todos tus dispositivos Apple, tanto iOS como macOS:
 
 ## Si fuiste tester
 
-Gracias. De verdad. Cada bug reportado, cada idea enviada, cada biblioteca escaneada durante la beta ha contado para llegar hasta aquí. Ya puedes instalar la versión de la tienda encima de la de TestFlight: tu biblioteca se queda donde está, y TestFlight ya no te hará falta.
+Gracias. De verdad. Cada bug reportado, cada idea enviada, cada biblioteca escaneada durante la beta ha contado para llegar hasta aquí. Ya puedes instalar la versión de la tienda encima de la de TestFlight: tu biblioteca se queda donde está. Y si te gusta probar las novedades antes que nadie, [quédate con TestFlight](https://testflight.apple.com/join/Prh6Gtkg): el programa de pruebas sigue abierto para las próximas versiones.
 
 ## En el ordenador
 

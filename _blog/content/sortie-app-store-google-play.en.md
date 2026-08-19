@@ -24,7 +24,7 @@ One listing for all your Apple devices, iOS and macOS alike:
 
 ## If you were one of our testers
 
-Thank you. Truly. Every bug you reported, every idea you sent, every library you scanned during the beta helped us get here. You can now install the store version over the TestFlight one: your library stays right where it is, and you won't need TestFlight anymore.
+Thank you. Truly. Every bug you reported, every idea you sent, every library you scanned during the beta helped us get here. You can now install the store version over the TestFlight one: your library stays right where it is. And if you like trying what's new before everyone else, [keep TestFlight](https://testflight.apple.com/join/Prh6Gtkg): the test program stays open for upcoming versions.
 
 ## On desktop
 
