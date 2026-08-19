@@ -14,6 +14,14 @@ lang_name: English
 footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
 ---
 
+## 1.1.3 <small>August 19, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.2-beta.5...v1.1.3-beta.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.3-beta.2" class="changelog-link">release</a>
+
+- **Wishlist**: the books you are looking for are spotted in the catalogs of connected libraries, with a borrow request available right from the book page, and your own books discreetly show who is looking for them
+- **Covers**: end of the periodic re-download that made covers vanish every three hours, and recovery of the cache space that was leaking
+- **Loans**: the lent and borrowed lists show newest first, and a loan offer initiated by the lender is now notified as an offer, not as a request
+- **Interface**: wishlist cards, badges and reading milestones hidden by a silent startup hang show up again, fixed the library scrollbar on desktop, and the generated avatar is back on library cards
+- **Data**: automatic cleanup of the cached contact catalogs (remote identifiers fixed, inherited duplicates removed)
+
 ## 1.1.2 <small>July 21, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.1-beta.1...v1.1.2-beta.5" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.2-beta.5" class="changelog-link">release</a>
 
 - **Series**: reading frieze on the book page, where the volumes of a series appear in order, unread ones dimmed and the ones you do not own marked; the order is set by drag and drop or by typing the volume number, from the book page as well as from the collection

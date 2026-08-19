@@ -37,7 +37,7 @@ downloads_aria: Descargas
 macos_desc: Chip Apple (M1/M2) e Intel
 windows_desc: Instalador .exe · beta
 linux_desc: AppImage (Ubuntu/Debian) · beta
-android_desc: Test abierto en Google Play
+android_desc: Google Play
 
 # -- Reporte de Errores --
 bug_title: ¿Un error?

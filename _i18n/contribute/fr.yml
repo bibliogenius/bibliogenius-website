@@ -37,7 +37,7 @@ downloads_aria: Téléchargements
 macos_desc: Puce Apple (M1/M2) & Intel
 windows_desc: Installeur .exe · bêta
 linux_desc: AppImage (Ubuntu/Debian) · bêta
-android_desc: Test ouvert Google Play
+android_desc: Google Play
 
 # -- Bug Report --
 bug_title: Un bug ?

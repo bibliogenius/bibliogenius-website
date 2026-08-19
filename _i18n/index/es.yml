@@ -57,10 +57,10 @@ blog_section_title: Últimas noticias
 blog_read_more: Leer el artículo
 
 # -- Probar la aplicación --
-test_title: Prueba la aplicación
-test_desc: "BiblioGenius está disponible en beta. ¡Únete a los primeros testers!"
-btn_testflight: Probar en iOS / macOS
-btn_android: Probar en Android
+test_title: Descarga la aplicación
+test_desc: "BiblioGenius está disponible en el App Store y Google Play."
+btn_appstore: Descargar en iOS / macOS
+btn_android: Descargar en Android
 
 # -- Libera tu biblioteca (comentado) --
 free_library_title: Libera tu biblioteca

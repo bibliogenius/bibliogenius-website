@@ -14,6 +14,14 @@ lang_name: Français
 footer_text: "BiblioGenius &mdash; Open Source, local, chiffré."
 ---
 
+## 1.1.3 <small>19 août 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.2-beta.5...v1.1.3-beta.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.3-beta.2" class="changelog-link">release</a>
+
+- **Liste d'envies** : les livres que vous recherchez sont repérés dans les catalogues des bibliothèques connectées, avec une demande d'emprunt directe depuis la fiche du livre, et vos propres livres signalent discrètement qui les recherche
+- **Couvertures** : fin du re-téléchargement périodique qui faisait disparaître les couvertures toutes les trois heures, et récupération de l'espace de cache qui fuyait
+- **Prêts** : les listes de prêts et d'emprunts s'affichent du plus récent au plus ancien, et une proposition de prêt émise par le prêteur est désormais notifiée comme une proposition, et non comme une demande
+- **Interface** : des cartes de la liste d'envies, badges et jalons de lecture masqués par un blocage silencieux au démarrage s'affichent de nouveau, correction de la barre de défilement de la bibliothèque sur ordinateur, et retour de l'avatar généré sur les cartes des bibliothèques
+- **Données** : assainissement automatique des catalogues des contacts en cache (identifiants distants corrigés, doublons hérités supprimés)
+
 ## 1.1.2 <small>21 juillet 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.1-beta.1...v1.1.2-beta.5" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.2-beta.5" class="changelog-link">release</a>
 
 - **Séries** : frise de lecture sur la fiche livre, où les tomes d'une série s'affichent dans l'ordre, les volumes non lus estompés et ceux que vous ne possédez pas signalés ; l'ordre se règle par glisser-déposer ou en saisissant le numéro de tome, depuis la fiche livre comme depuis la collection

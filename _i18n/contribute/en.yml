@@ -37,7 +37,7 @@ downloads_aria: Downloads
 macos_desc: Apple Silicon (M1/M2) & Intel
 windows_desc: Installer .exe · beta
 linux_desc: AppImage (Ubuntu/Debian) · beta
-android_desc: Open test on Google Play
+android_desc: Google Play
 
 # -- Bug Report --
 bug_title: Found a bug?

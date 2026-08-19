@@ -57,10 +57,10 @@ blog_section_title: Neueste Nachrichten
 blog_read_more: Artikel lesen
 
 # -- App testen --
-test_title: Testen Sie die App
-test_desc: BiblioGenius ist als Beta verfügbar. Werden Sie einer der ersten Tester!
-btn_testflight: Auf iOS / macOS testen
-btn_android: Auf Android testen
+test_title: Laden Sie die App herunter
+test_desc: BiblioGenius ist im App Store und bei Google Play verfügbar.
+btn_appstore: Für iOS / macOS herunterladen
+btn_android: Für Android herunterladen
 
 # -- Bibliothek befreien (auskommentiert) --
 free_library_title: Befreien Sie Ihre Bibliothek
