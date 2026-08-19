@@ -7,7 +7,29 @@
       <generator>Zola</generator>
       <language>fr</language>
       <atom:link href="https://bibliogenius.org/blog/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Fri, 24 Jul 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 19 Aug 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>BiblioGenius est sur l&#x27;App Store et Google Play</title>
+          <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://bibliogenius.org/blog/sortie-app-store-google-play/</link>
+          <guid>https://bibliogenius.org/blog/sortie-app-store-google-play/</guid>
+          <description xml:base="https://bibliogenius.org/blog/sortie-app-store-google-play/">&lt;p&gt;Ça y est. BiblioGenius est publiée sur l&#x27;App Store et sur Google Play. Plus de programme de test, plus d&#x27;inscription préalable, plus d&#x27;application intermédiaire : vous cherchez « BiblioGenius », vous installez, vous scannez votre premier livre.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sur-iphone-ipad-et-mac&quot;&gt;Sur iPhone, iPad et Mac&lt;&#x2F;h2&gt;
+&lt;p&gt;Une seule fiche pour tous vos appareils Apple, iOS comme macOS :&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;apps.apple.com&#x2F;app&#x2F;bibliogenius&#x2F;id6757465461&quot;&gt;https:&#x2F;&#x2F;apps.apple.com&#x2F;app&#x2F;bibliogenius&#x2F;id6757465461&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sur-android&quot;&gt;Sur Android&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id=com.bibliogenius.app&quot;&gt;https:&#x2F;&#x2F;play.google.com&#x2F;store&#x2F;apps&#x2F;details?id=com.bibliogenius.app&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;si-vous-etiez-parmi-les-testeurs&quot;&gt;Si vous étiez parmi les testeurs&lt;&#x2F;h2&gt;
+&lt;p&gt;Merci. Vraiment. Chaque bug remonté, chaque idée envoyée, chaque bibliothèque scannée pendant la bêta a compté pour arriver jusqu&#x27;ici. Vous pouvez maintenant installer la version du store par-dessus celle de TestFlight : votre bibliothèque reste en place, et TestFlight ne vous servira plus.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;sur-ordinateur&quot;&gt;Sur ordinateur&lt;&#x2F;h2&gt;
+&lt;p&gt;Les versions Windows et Linux restent disponibles en &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;bibliogenius.org&#x2F;contribute.html&quot;&gt;téléchargement direct&lt;&#x2F;a&gt;, et la version Mac est sur l&#x27;App Store avec les autres.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;et-maintenant&quot;&gt;Et maintenant ?&lt;&#x2F;h2&gt;
+&lt;p&gt;L&#x27;application continue d&#x27;avancer. La dernière version relie par exemple votre liste d&#x27;envies aux bibliothèques de vos proches : quand un livre que vous cherchez se trouve chez quelqu&#x27;un que vous connaissez, BiblioGenius vous le montre, et l&#x27;emprunt se demande en un geste.&lt;&#x2F;p&gt;
+&lt;p&gt;Si l&#x27;application vous plaît, deux gestes nous aident énormément : laisser une note sur le store, et envoyer les liens ci-dessus à une personne qui aime les livres. Et si quelque chose vous chagrine, écrivez-nous à &lt;a href=&quot;mailto:contact@bibliogenius.org&quot;&gt;contact@bibliogenius.org&lt;&#x2F;a&gt;, chaque retour compte.&lt;&#x2F;p&gt;
+&lt;p&gt;Votre bibliothèque, chez vous. Bonne lecture !&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>Des étagères toutes prêtes, des séries dans l&#x27;ordre</title>
           <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>

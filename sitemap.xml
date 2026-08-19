@@ -386,6 +386,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bibliogenius.org/blog/en/sortie-app-store-google-play/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/blog/es/sortie-app-store-google-play/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/blog/sortie-app-store-google-play/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bibliogenius.org/blog/en/validation-google-apple/</loc>
     <lastmod>2026-05-30</lastmod>
     <priority>0.6</priority>
