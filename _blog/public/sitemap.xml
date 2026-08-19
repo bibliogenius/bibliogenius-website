@@ -15,6 +15,10 @@
         <loc>https://bibliogenius.org/blog/en/</loc>
     </url>
     <url>
+        <loc>https://bibliogenius.org/blog/en/app-store-and-google-play/</loc>
+        <lastmod>2026-08-19</lastmod>
+    </url>
+    <url>
         <loc>https://bibliogenius.org/blog/en/call-for-testers/</loc>
         <lastmod>2026-03-24</lastmod>
     </url>
@@ -38,15 +42,15 @@
         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
-        <loc>https://bibliogenius.org/blog/en/sortie-app-store-google-play/</loc>
-        <lastmod>2026-08-19</lastmod>
-    </url>
-    <url>
         <loc>https://bibliogenius.org/blog/en/validation-google-apple/</loc>
         <lastmod>2026-05-30</lastmod>
     </url>
     <url>
         <loc>https://bibliogenius.org/blog/es/</loc>
+    </url>
+    <url>
+        <loc>https://bibliogenius.org/blog/es/app-store-y-google-play/</loc>
+        <lastmod>2026-08-19</lastmod>
     </url>
     <url>
         <loc>https://bibliogenius.org/blog/es/biblioteca-en-todas-partes/</loc>
@@ -70,10 +74,6 @@
     </url>
     <url>
         <loc>https://bibliogenius.org/blog/es/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://bibliogenius.org/blog/es/sortie-app-store-google-play/</loc>
-        <lastmod>2026-08-19</lastmod>
     </url>
     <url>
         <loc>https://bibliogenius.org/blog/es/validation-google-apple/</loc>

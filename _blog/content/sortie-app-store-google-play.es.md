@@ -1,12 +1,13 @@
 +++
 title = "BiblioGenius ya está en el App Store y Google Play"
+slug = "app-store-y-google-play"
 description = "La aplicación ya está publicada en las dos tiendas. Se acabó el programa de pruebas: busca BiblioGenius, instálala y escanea tu primer libro."
 date = 2026-08-19
 updated = 2026-08-19
 template = "blog/page.html"
 
 [extra]
-tags = ["annonce"]
+tags = ["anuncio"]
 +++
 
 Ya está. BiblioGenius está publicada en el App Store y en Google Play. Se acabó el programa de pruebas, las inscripciones previas y la aplicación intermedia: busca «BiblioGenius», instálala y escanea tu primer libro.

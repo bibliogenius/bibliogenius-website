@@ -1,12 +1,13 @@
 +++
 title = "BiblioGenius is on the App Store and Google Play"
+slug = "app-store-and-google-play"
 description = "The app is now published on both stores. No more test program: search for BiblioGenius, install it, scan your first book."
 date = 2026-08-19
 updated = 2026-08-19
 template = "blog/page.html"
 
 [extra]
-tags = ["annonce"]
+tags = ["announcement"]
 +++
 
 This is it. BiblioGenius is published on the App Store and on Google Play. No more test program, no more sign-up, no more companion app: search for "BiblioGenius", install it, scan your first book.

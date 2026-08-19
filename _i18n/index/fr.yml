@@ -76,8 +76,8 @@ footer_copyright: © 2025-2026 BiblioGenius · Open Source (<a href="https://www
 ecoindex_alt: Score EcoIndex du site
 
 # -- Bandeau annonce (billet de blog du moment) --
-migration_banner_text: Des étagères toutes prêtes, des séries dans l'ordre.
+migration_banner_text: BiblioGenius est sur l'App Store et Google Play.
 migration_banner_cta: Lire l'article
-migration_banner_link: /blog/etageres-series/
+migration_banner_link: /blog/sortie-app-store-google-play/
 btn_linux: Télécharger pour Linux
 test_version_label: "Version actuelle :"

@@ -76,8 +76,8 @@ footer_copyright: © 2025-2026 BiblioGenius · Open Source (<a href="https://www
 ecoindex_alt: EcoIndex site score
 
 # -- Announcement banner (current blog post) --
-migration_banner_text: Ready-made shelves, series in order.
+migration_banner_text: BiblioGenius is on the App Store and Google Play.
 migration_banner_cta: Read the post
-migration_banner_link: /blog/en/shelves-and-series/
+migration_banner_link: /blog/en/app-store-and-google-play/
 btn_linux: Download for Linux
 test_version_label: "Current version:"

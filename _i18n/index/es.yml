@@ -76,8 +76,8 @@ footer_copyright: © 2025-2026 BiblioGenius · Open Source (<a href="https://www
 ecoindex_alt: Puntuación EcoIndex del sitio
 
 # -- Banner de anuncio (artículo de blog actual) --
-migration_banner_text: Estanterías listas para usar, series en orden.
+migration_banner_text: BiblioGenius ya está en el App Store y Google Play.
 migration_banner_cta: Leer el artículo
-migration_banner_link: /blog/es/estanterias-y-series/
+migration_banner_link: /blog/es/app-store-y-google-play/
 btn_linux: Descargar para Linux
 test_version_label: "Versión actual:"
