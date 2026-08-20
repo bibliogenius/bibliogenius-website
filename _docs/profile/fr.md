@@ -1,7 +1,7 @@
 ---
 title: Mon profil
 description: Statistiques de lecture, badges, objectifs et classement
-order: 14
+order: 16
 group: data
 ---
 

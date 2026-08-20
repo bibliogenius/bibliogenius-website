@@ -1,26 +1,40 @@
 ---
 title: Où sont stockées mes données
-description: Tout savoir sur le stockage local et la confidentialité de vos données
+description: Ce qui reste sur votre appareil, ce qui en sort, et comment vous gardez la main
 order: 12
 group: data
 ---
 
-Les données de votre bibliothèque sont stockées localement sur votre appareil. Quand vous vous connectez avec des amis, seuls les livres que vous choisissez de partager leur sont visibles. Vous pouvez exporter une sauvegarde à tout moment depuis votre Profil.
+BiblioGenius est local d'abord : votre bibliothèque vit dans une base de données sur votre appareil, et l'application fonctionne sans compte et sans connexion. Ce qui sort de l'appareil ne sort que parce que vous l'avez demandé, et cette page dit exactement quoi, quand et vers où.
 
-## Stockage local
+## Sur votre appareil
 
-Toutes vos données (livres, étagères, prêts, contacts) sont stockées dans une base de données locale sur votre appareil. Rien n'est envoyé sur un serveur distant.
+Vos livres, étagères, collections, étiquettes, exemplaires, prêts et contacts sont stockés localement. Vous pouvez utiliser l'application entière hors ligne : ajouter des livres à la main, les organiser, suivre vos lectures.
 
-## Partage contrôlé
+## Ce qui quitte l'appareil, et quand
 
-Quand vous vous connectez avec d'autres bibliothèques, vous gardez le contrôle total sur ce qui est partagé. Seuls les livres que vous choisissez de rendre visibles le sont.
+- **Les recherches dans les catalogues externes.** Quand vous scannez un ISBN ou cherchez un titre, la requête part vers les sources activées (BnF, OpenLibrary, Inventaire et d'autres). Ces sources voient donc ce que vous cherchez. Vous choisissez lesquelles interroger dans Paramètres > Sources de recherche.
+- **Les couvertures et métadonnées** sont téléchargées depuis ces mêmes sources, puis conservées sur votre appareil.
+- **Le partage avec vos contacts.** Quand une bibliothèque connectée consulte votre catalogue, votre appareil lui répond directement, chiffré de bout en bout. En Wi-Fi local, l'échange ne sort pas du réseau. À distance, il passe par un relais qui ne voit que des données chiffrées.
+- **L'annuaire en ligne**, si vous l'activez avec « Me rendre visible auprès des autres bibliothèques ». Vous pouvez exiger votre approbation avant qu'un nouvel abonné accède à vos livres partagés. Votre ville reste une préférence locale tant que vous ne choisissez pas de la partager.
+- **Le compte chiffré**, si vous en créez un. Le serveur ne stocke alors que des blocs chiffrés, illisibles pour lui. Voir [Compte chiffré et plusieurs appareils](account-sync.html).
+
+Rien de tout cela n'est activé à votre place.
+
+## Choisir ce que les autres voient
+
+Activez « Livres privés » dans les Paramètres pour débloquer l'option Privé sur chaque livre : un livre privé reste dans votre bibliothèque mais n'apparaît jamais aux autres, ni sur votre profil public, ni dans les recherches du réseau.
+
+Pour vérifier plutôt que croire, ouvrez **« Ce que voient les autres bibliothèques »** : cette liste est la réponse exacte que votre appareil envoie à une bibliothèque qui consulte votre catalogue, produite par le même code, sans recalcul de façade.
 
 ## Sauvegardes
 
-Exportez une sauvegarde de toutes vos données à tout moment depuis la section Profil. Vous pouvez aussi les réimporter en cas de changement d'appareil.
-
-![Écran du profil](images/profile-view.png)
+Vous pouvez sortir vos données à tout moment depuis **Paramètres > Sauvegarde et récupération** : export portable, export CSV lisible dans un tableur, ou archive chiffrée restaurable. Voir [Exporter et sauvegarder](export-backup.html).
 
 ## Chiffrement
 
-Les communications entre bibliothèques sont chiffrées de bout en bout (E2EE). Vos données restent privées.
+Les échanges entre bibliothèques sont chiffrés de bout en bout. Le compte chiffré et les sauvegardes complètes le sont également, avec une clé dérivée de votre phrase secrète : nous n'avons aucun moyen technique de lire vos données.
+
+## Effacer mes données
+
+Sur l'appareil, les Paramètres permettent d'effacer vos livres ou de repartir de zéro. Pour la suppression d'un compte en ligne, suivez la procédure décrite sur la page [Suppression des données](../data-deletion.html).

@@ -15,17 +15,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Où sont stockées mes données - Documentation - BiblioGenius</title>
-    <meta name="description" content="Tout savoir sur le stockage local et la confidentialité de vos données">
+    <meta name="description" content="Ce qui reste sur votre appareil, ce qui en sort, et comment vous gardez la main">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="Où sont stockées mes données - Documentation - BiblioGenius">
-    <meta property="og:description" content="Tout savoir sur le stockage local et la confidentialité de vos données">
+    <meta property="og:description" content="Ce qui reste sur votre appareil, ce qui en sort, et comment vous gardez la main">
     <meta property="og:url" content="https://bibliogenius.org/docs/privacy-data.html">
     <meta property="og:site_name" content="BiblioGenius">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Où sont stockées mes données - Documentation - BiblioGenius">
-    <meta name="twitter:description" content="Tout savoir sur le stockage local et la confidentialité de vos données">
+    <meta name="twitter:description" content="Ce qui reste sur votre appareil, ce qui en sort, et comment vous gardez la main">
 
     <link rel="canonical" href="https://bibliogenius.org/docs/privacy-data.html">
     <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/privacy-data.html">
@@ -314,10 +314,14 @@
                     <a href="organize-shelves.html" class="sidebar-link">Comment organiser mes étagères</a>
                     <a href="reading-progress.html" class="sidebar-link">Comment suivre ma progression de lecture</a>
                     <a href="complete-library.html" class="sidebar-link">Mettre à jour les données de mes livres en masse</a>
+                    <a href="wishlist.html" class="sidebar-link">Ma liste de souhaits</a>
+                    <a href="series.html" class="sidebar-link">Suivre une série</a>
                 </div>
                 <div class="sidebar-group">
                     <div class="sidebar-group-label">Recherche</div>
                     <a href="external-search.html" class="sidebar-link">Comment chercher dans les catalogues externes</a>
+                    <a href="recommendations.html" class="sidebar-link">Les suggestions de lecture</a>
+                    <a href="curated-lists.html" class="sidebar-link">Les sélections toutes prêtes</a>
                     <a href="import-books.html" class="sidebar-link">Importer des livres</a>
                 </div>
                 <div class="sidebar-group">
@@ -328,6 +332,7 @@
                     <a href="lending.html" class="sidebar-link">Comment prêter un livre</a>
                     <a href="notifications.html" class="sidebar-link">Notifications</a>
                     <a href="requests.html" class="sidebar-link">Gérer les demandes</a>
+                    <a href="directory.html" class="sidebar-link">L'annuaire des bibliothèques</a>
                 </div>
                 <div class="sidebar-group">
                     <div class="sidebar-group-label">Avancé</div>
@@ -335,8 +340,16 @@
                     <a href="audio.html" class="sidebar-link">Comment utiliser les fonctionnalités audio</a>
                 </div>
                 <div class="sidebar-group">
+                    <div class="sidebar-group-label">Jeux</div>
+                    <a href="memory-game.html" class="sidebar-link">Comment jouer au Memory</a>
+                    <a href="sliding-puzzle.html" class="sidebar-link">Comment jouer au Taquin</a>
+                    <a href="hangman.html" class="sidebar-link">Comment jouer au Pendu</a>
+                </div>
+                <div class="sidebar-group">
                     <div class="sidebar-group-label">Données</div>
                     <a href="privacy-data.html" class="sidebar-link active" aria-current="page">Où sont stockées mes données</a>
+                    <a href="export-backup.html" class="sidebar-link">Exporter et sauvegarder ma bibliothèque</a>
+                    <a href="account-sync.html" class="sidebar-link">Compte chiffré et plusieurs appareils</a>
                     <a href="profile.html" class="sidebar-link">Mon profil</a>
                 </div>
             </nav>
@@ -344,16 +357,27 @@
             <article class="doc-content">
                 <a href="index.html" class="back-link">&larr; Tous les guides</a>
                 <h1>Où sont stockées mes données</h1>
-<p>Les données de votre bibliothèque sont stockées localement sur votre appareil. Quand vous vous connectez avec des amis, seuls les livres que vous choisissez de partager leur sont visibles. Vous pouvez exporter une sauvegarde à tout moment depuis votre Profil.</p>
-<h2 id="stockage-local">Stockage local</h2>
-<p>Toutes vos données (livres, étagères, prêts, contacts) sont stockées dans une base de données locale sur votre appareil. Rien n'est envoyé sur un serveur distant.</p>
-<h2 id="partage-controle">Partage contrôlé</h2>
-<p>Quand vous vous connectez avec d'autres bibliothèques, vous gardez le contrôle total sur ce qui est partagé. Seuls les livres que vous choisissez de rendre visibles le sont.</p>
+<p>BiblioGenius est local d'abord : votre bibliothèque vit dans une base de données sur votre appareil, et l'application fonctionne sans compte et sans connexion. Ce qui sort de l'appareil ne sort que parce que vous l'avez demandé, et cette page dit exactement quoi, quand et vers où.</p>
+<h2 id="sur-votre-appareil">Sur votre appareil</h2>
+<p>Vos livres, étagères, collections, étiquettes, exemplaires, prêts et contacts sont stockés localement. Vous pouvez utiliser l'application entière hors ligne : ajouter des livres à la main, les organiser, suivre vos lectures.</p>
+<h2 id="ce-qui-quitte-lappareil-et-quand">Ce qui quitte l'appareil, et quand</h2>
+<ul>
+<li><strong>Les recherches dans les catalogues externes.</strong> Quand vous scannez un ISBN ou cherchez un titre, la requête part vers les sources activées (BnF, OpenLibrary, Inventaire et d'autres). Ces sources voient donc ce que vous cherchez. Vous choisissez lesquelles interroger dans Paramètres &gt; Sources de recherche.</li>
+<li><strong>Les couvertures et métadonnées</strong> sont téléchargées depuis ces mêmes sources, puis conservées sur votre appareil.</li>
+<li><strong>Le partage avec vos contacts.</strong> Quand une bibliothèque connectée consulte votre catalogue, votre appareil lui répond directement, chiffré de bout en bout. En Wi-Fi local, l'échange ne sort pas du réseau. À distance, il passe par un relais qui ne voit que des données chiffrées.</li>
+<li><strong>L'annuaire en ligne</strong>, si vous l'activez avec « Me rendre visible auprès des autres bibliothèques ». Vous pouvez exiger votre approbation avant qu'un nouvel abonné accède à vos livres partagés. Votre ville reste une préférence locale tant que vous ne choisissez pas de la partager.</li>
+<li><strong>Le compte chiffré</strong>, si vous en créez un. Le serveur ne stocke alors que des blocs chiffrés, illisibles pour lui. Voir <a href="account-sync.html">Compte chiffré et plusieurs appareils</a>.</li>
+</ul>
+<p>Rien de tout cela n'est activé à votre place.</p>
+<h2 id="choisir-ce-que-les-autres-voient">Choisir ce que les autres voient</h2>
+<p>Activez « Livres privés » dans les Paramètres pour débloquer l'option Privé sur chaque livre : un livre privé reste dans votre bibliothèque mais n'apparaît jamais aux autres, ni sur votre profil public, ni dans les recherches du réseau.</p>
+<p>Pour vérifier plutôt que croire, ouvrez <strong>« Ce que voient les autres bibliothèques »</strong> : cette liste est la réponse exacte que votre appareil envoie à une bibliothèque qui consulte votre catalogue, produite par le même code, sans recalcul de façade.</p>
 <h2 id="sauvegardes">Sauvegardes</h2>
-<p>Exportez une sauvegarde de toutes vos données à tout moment depuis la section Profil. Vous pouvez aussi les réimporter en cas de changement d'appareil.</p>
-<p><img loading="lazy" alt="Écran du profil" src="images/privacy-data/profile-view.png" /></p>
+<p>Vous pouvez sortir vos données à tout moment depuis <strong>Paramètres &gt; Sauvegarde et récupération</strong> : export portable, export CSV lisible dans un tableur, ou archive chiffrée restaurable. Voir <a href="export-backup.html">Exporter et sauvegarder</a>.</p>
 <h2 id="chiffrement">Chiffrement</h2>
-<p>Les communications entre bibliothèques sont chiffrées de bout en bout (E2EE). Vos données restent privées.</p>
+<p>Les échanges entre bibliothèques sont chiffrés de bout en bout. Le compte chiffré et les sauvegardes complètes le sont également, avec une clé dérivée de votre phrase secrète : nous n'avons aucun moyen technique de lire vos données.</p>
+<h2 id="effacer-mes-donnees">Effacer mes données</h2>
+<p>Sur l'appareil, les Paramètres permettent d'effacer vos livres ou de repartir de zéro. Pour la suppression d'un compte en ligne, suivez la procédure décrite sur la page <a href="../data-deletion.html">Suppression des données</a>.</p>
                 <aside class="doc-help">
                     <h2>Besoin d'aide ?</h2>
                     <p>Vous ne trouvez pas la réponse à votre question dans les guides ? Notre équipe peut vous aider.</p>

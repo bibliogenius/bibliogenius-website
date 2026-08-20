@@ -1,7 +1,7 @@
 ---
 title: My Profile
 description: Reading statistics, badges, goals and leaderboard
-order: 14
+order: 16
 group: data
 ---
 

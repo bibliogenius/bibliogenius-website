@@ -111,6 +111,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bibliogenius.org/en/docs/account-sync.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bibliogenius.org/en/docs/add-book.html</loc>
     <lastmod>2026-05-19</lastmod>
     <priority>0.6</priority>
@@ -141,13 +146,33 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bibliogenius.org/en/docs/curated-lists.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/en/docs/directory.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/en/docs/export-backup.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bibliogenius.org/en/docs/external-search.html</loc>
     <lastmod>2026-05-19</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bibliogenius.org/en/docs/hangman.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bibliogenius.org/en/docs/import-books.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -172,17 +197,17 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/en/docs/organize-shelves.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/en/docs/privacy-data.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/en/docs/profile.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -191,8 +216,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bibliogenius.org/en/docs/recommendations.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bibliogenius.org/en/docs/requests.html</loc>
     <lastmod>2026-05-19</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/en/docs/series.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -201,9 +236,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bibliogenius.org/en/docs/wishlist.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bibliogenius.org/en/docs/</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/docs/account-sync.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/docs/add-book.html</loc>
@@ -236,13 +281,33 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bibliogenius.org/docs/curated-lists.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/docs/directory.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/docs/export-backup.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bibliogenius.org/docs/external-search.html</loc>
     <lastmod>2026-06-22</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bibliogenius.org/docs/hangman.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bibliogenius.org/docs/import-books.html</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -267,17 +332,17 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/docs/organize-shelves.html</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/docs/privacy-data.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/docs/profile.html</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -286,8 +351,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bibliogenius.org/docs/recommendations.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bibliogenius.org/docs/requests.html</loc>
     <lastmod>2026-06-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/docs/series.html</loc>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -296,8 +371,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bibliogenius.org/docs/wishlist.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bibliogenius.org/docs/</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>

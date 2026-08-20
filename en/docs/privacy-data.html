@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Where is my data stored - Documentation - BiblioGenius</title>
-    <meta name="description" content="Everything about local storage and data privacy">
+    <meta name="description" content="What stays on your device, what leaves it, and how you keep control">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="Where is my data stored - Documentation - BiblioGenius">
-    <meta property="og:description" content="Everything about local storage and data privacy">
+    <meta property="og:description" content="What stays on your device, what leaves it, and how you keep control">
     <meta property="og:url" content="https://bibliogenius.org/en/docs/privacy-data.html">
     <meta property="og:site_name" content="BiblioGenius">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Where is my data stored - Documentation - BiblioGenius">
-    <meta name="twitter:description" content="Everything about local storage and data privacy">
+    <meta name="twitter:description" content="What stays on your device, what leaves it, and how you keep control">
 
     <link rel="canonical" href="https://bibliogenius.org/en/docs/privacy-data.html">
     <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/privacy-data.html">
@@ -304,10 +304,14 @@
                     <a href="organize-shelves.html" class="sidebar-link">How to organize my shelves</a>
                     <a href="reading-progress.html" class="sidebar-link">How to track reading progress</a>
                     <a href="complete-library.html" class="sidebar-link">Bulk-update your book data</a>
+                    <a href="wishlist.html" class="sidebar-link">My wishlist</a>
+                    <a href="series.html" class="sidebar-link">Following a series</a>
                 </div>
                 <div class="sidebar-group">
                     <div class="sidebar-group-label">Search</div>
                     <a href="external-search.html" class="sidebar-link">How to search external catalogs</a>
+                    <a href="recommendations.html" class="sidebar-link">Reading suggestions</a>
+                    <a href="curated-lists.html" class="sidebar-link">Ready-made lists</a>
                     <a href="import-books.html" class="sidebar-link">Importing Books</a>
                 </div>
                 <div class="sidebar-group">
@@ -318,6 +322,7 @@
                     <a href="lending.html" class="sidebar-link">How to lend a book</a>
                     <a href="notifications.html" class="sidebar-link">Notifications</a>
                     <a href="requests.html" class="sidebar-link">How to manage requests</a>
+                    <a href="directory.html" class="sidebar-link">The library directory</a>
                 </div>
                 <div class="sidebar-group">
                     <div class="sidebar-group-label">Advanced</div>
@@ -325,8 +330,16 @@
                     <a href="audio.html" class="sidebar-link">How to use audio features</a>
                 </div>
                 <div class="sidebar-group">
+                    <div class="sidebar-group-label">Games</div>
+                    <a href="memory-game.html" class="sidebar-link">How to play Memory</a>
+                    <a href="sliding-puzzle.html" class="sidebar-link">How to play Sliding Puzzle</a>
+                    <a href="hangman.html" class="sidebar-link">How to play Hangman</a>
+                </div>
+                <div class="sidebar-group">
                     <div class="sidebar-group-label">Data</div>
                     <a href="privacy-data.html" class="sidebar-link active" aria-current="page">Where is my data stored</a>
+                    <a href="export-backup.html" class="sidebar-link">Exporting and backing up my library</a>
+                    <a href="account-sync.html" class="sidebar-link">Encrypted account and multiple devices</a>
                     <a href="profile.html" class="sidebar-link">My Profile</a>
                 </div>
             </nav>
@@ -334,16 +347,27 @@
             <article class="doc-content">
                 <a href="index.html" class="back-link">&larr; All guides</a>
                 <h1>Where is my data stored</h1>
-<p>Your library data is stored locally on your device. When you connect with friends, only the books you choose to share are visible to them. You can export a backup anytime from your Profile.</p>
-<h2 id="local-storage">Local storage</h2>
-<p>All your data (books, shelves, loans, contacts) is stored in a local database on your device. Nothing is sent to a remote server.</p>
-<h2 id="controlled-sharing">Controlled sharing</h2>
-<p>When you connect with other libraries, you maintain full control over what is shared. Only the books you choose to make visible are visible.</p>
+<p>BiblioGenius is local-first: your library lives in a database on your device, and the app works with no account and no connection. Whatever leaves the device only leaves because you asked for it, and this page says exactly what, when and where to.</p>
+<h2 id="on-your-device">On your device</h2>
+<p>Your books, shelves, collections, tags, copies, loans and contacts are stored locally. You can use the whole app offline: add books by hand, organize them, track your reading.</p>
+<h2 id="what-leaves-the-device-and-when">What leaves the device, and when</h2>
+<ul>
+<li><strong>Searches in external catalogues.</strong> When you scan an ISBN or search for a title, the query goes out to the enabled sources (BnF, OpenLibrary, Inventaire and others). Those sources therefore see what you are looking for. You choose which ones to query in Settings &gt; Search sources.</li>
+<li><strong>Covers and metadata</strong> are downloaded from those same sources, then kept on your device.</li>
+<li><strong>Sharing with your contacts.</strong> When a connected library browses your catalogue, your device answers it directly, end-to-end encrypted. On a local Wi-Fi network the exchange never leaves that network. Remotely, it goes through a relay that only ever sees encrypted data.</li>
+<li><strong>The online directory</strong>, if you enable "Make me visible to other libraries". You can require your approval before a new follower reaches your shared books. Your city stays a local preference until you choose to share it.</li>
+<li><strong>The encrypted account</strong>, if you create one. The server then only stores encrypted blocks, unreadable to it. See <a href="account-sync.html">Encrypted account and multiple devices</a>.</li>
+</ul>
+<p>None of this is turned on for you.</p>
+<h2 id="choosing-what-others-see">Choosing what others see</h2>
+<p>Enable "Private books" in the settings to unlock the Private option on each book: a private book stays in your library but never shows up to others, neither on your public profile nor in network searches.</p>
+<p>To check rather than trust, open <strong>"What other libraries see"</strong>: this list is the exact answer your device sends to a library browsing your catalogue, produced by the same code, with no cosmetic recomputation.</p>
 <h2 id="backups">Backups</h2>
-<p>Export a backup of all your data at any time from the Profile section. You can also re-import them when switching devices.</p>
-<p><img loading="lazy" alt="Profile screen" src="images/privacy-data/profile-view.png" /></p>
+<p>You can take your data out at any time from <strong>Settings &gt; Backup and recovery</strong>: portable export, CSV export readable in a spreadsheet, or a restorable encrypted archive. See <a href="export-backup.html">Exporting and backing up</a>.</p>
 <h2 id="encryption">Encryption</h2>
-<p>Communications between libraries are end-to-end encrypted (E2EE). Your data stays private.</p>
+<p>Exchanges between libraries are end-to-end encrypted. So are the encrypted account and full backups, with a key derived from your passphrase: we have no technical means of reading your data.</p>
+<h2 id="deleting-my-data">Deleting my data</h2>
+<p>On the device, the settings let you erase your books or start over. To delete an online account, follow the procedure on the <a href="../data-deletion.html">Data deletion</a> page.</p>
                 <aside class="doc-help">
                     <h2>Need help?</h2>
                     <p>Can't find the answer to your question in the guides? Our team can help.</p>

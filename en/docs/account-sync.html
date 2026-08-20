@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypted account and multiple devices - Documentation - BiblioGenius</title>
+    <meta name="description" content="Back up your library encrypted, recover it after a loss and use it on several devices">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Encrypted account and multiple devices - Documentation - BiblioGenius">
+    <meta property="og:description" content="Back up your library encrypted, recover it after a loss and use it on several devices">
+    <meta property="og:url" content="https://bibliogenius.org/en/docs/account-sync.html">
+    <meta property="og:site_name" content="BiblioGenius">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Encrypted account and multiple devices - Documentation - BiblioGenius">
+    <meta name="twitter:description" content="Back up your library encrypted, recover it after a loss and use it on several devices">
+
+    <link rel="canonical" href="https://bibliogenius.org/en/docs/account-sync.html">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/account-sync.html">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/account-sync.html">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/account-sync.html">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .doc-layout {
+            display: flex;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            gap: 2.5rem;
+        }
+
+        /* Sidebar */
+        .doc-sidebar {
+            width: 240px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 1.5rem;
+            align-self: flex-start;
+            max-height: calc(100vh - 3rem);
+            overflow-y: auto;
+        }
+
+        .doc-sidebar h2 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #6b7280;
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .sidebar-group-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #9ca3af;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            padding-left: 0.75rem;
+        }
+
+        .sidebar-link {
+            display: block;
+            padding: 0.35rem 0.75rem;
+            color: #374151;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 0.375rem;
+            border-left: 2px solid transparent;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .sidebar-link:hover {
+            background: #f3f4f6;
+            color: var(--primary-color);
+        }
+
+        .sidebar-link.active {
+            background: #eff6ff;
+            color: var(--primary-color);
+            font-weight: 600;
+            border-left-color: var(--primary-color);
+        }
+
+        /* Content */
+        .doc-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .doc-content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .doc-content h2 {
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .doc-content h3 {
+            font-size: 1.15rem;
+            margin-top: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .doc-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .doc-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+        }
+
+        .doc-content ul,
+        .doc-content ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .doc-content li {
+            margin-bottom: 0.35rem;
+            line-height: 1.6;
+        }
+
+        .doc-content code {
+            background: #f3f4f6;
+            padding: 0.15rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.9em;
+        }
+
+        .doc-content pre {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 1rem 1.25rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+
+        .doc-content pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        .doc-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        .doc-content th,
+        .doc-content td {
+            border: 1px solid #e5e7eb;
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+        }
+
+        .doc-content th {
+            background: #f9fafb;
+            font-weight: 600;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Mobile sidebar toggle */
+        .sidebar-toggle {
+            display: none;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            font-family: inherit;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .doc-layout {
+                flex-direction: column;
+                padding: 1.5rem 1rem;
+            }
+
+            .doc-sidebar {
+                width: 100%;
+                position: static;
+                max-height: none;
+                display: none;
+            }
+
+            .doc-sidebar.open {
+                display: block;
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+        }
+
+        .doc-help {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 0.75rem;
+        }
+
+        .doc-help h2 {
+            font-size: 1.15rem;
+            margin: 0 0 0.4rem;
+            padding: 0;
+            border: none;
+        }
+
+        .doc-help p {
+            margin: 0 0 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "BiblioGenius", "item": "https://bibliogenius.org/en/"},
+            {"@type": "ListItem", "position": 2, "name": "Documentation", "item": "https://bibliogenius.org/en/docs/"},
+            {"@type": "ListItem", "position": 3, "name": "Encrypted account and multiple devices"}
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="hero" style="padding: 2.5rem 1.5rem;">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="../index.html" class="site-nav-logo">BiblioGenius</a>
+            <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="site-nav-menu" id="site-nav-menu">
+                <a href="../index.html" class="site-nav-link">Home</a>
+                <a href="../story.html" class="site-nav-link">Our Story</a>
+                <a href="index.html" class="site-nav-link">Documentation</a>
+                <a href="../contribute.html" class="site-nav-link">Contribute</a>
+                <a href="../blog/" class="site-nav-link">Blog</a>
+                <a href="../changelog.html" class="site-nav-link">Changelog</a>
+                <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Language">
+            <option value="account-sync.html" selected>English</option>
+            <option value="../../docs/account-sync.html">Français</option>
+                </select>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Documentation</h1>
+            <p>Guides and tutorials to master BiblioGenius</p>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="doc-layout">
+            <button class="sidebar-toggle" aria-expanded="false" aria-controls="doc-sidebar" aria-label="Menu">
+                &#9776; Guide
+            </button>
+
+            <nav class="doc-sidebar" id="doc-sidebar" aria-label="Guide">
+                <h2>Guide</h2>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-label">Library</div>
+                    <a href="add-book.html" class="sidebar-link">How to add a book</a>
+                    <a href="organize-shelves.html" class="sidebar-link">How to organize my shelves</a>
+                    <a href="reading-progress.html" class="sidebar-link">How to track reading progress</a>
+                    <a href="complete-library.html" class="sidebar-link">Bulk-update your book data</a>
+                    <a href="wishlist.html" class="sidebar-link">My wishlist</a>
+                    <a href="series.html" class="sidebar-link">Following a series</a>
+                </div>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-label">Search</div>
+                    <a href="external-search.html" class="sidebar-link">How to search external catalogs</a>
+                    <a href="recommendations.html" class="sidebar-link">Reading suggestions</a>
+                    <a href="curated-lists.html" class="sidebar-link">Ready-made lists</a>
+                    <a href="import-books.html" class="sidebar-link">Importing Books</a>
+                </div>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-label">Network</div>
+                    <a href="connect-friends.html" class="sidebar-link">How to connect with friends</a>
+                    <a href="contacts.html" class="sidebar-link">How to manage contacts</a>
+                    <a href="network.html" class="sidebar-link">How to explore the network</a>
+                    <a href="lending.html" class="sidebar-link">How to lend a book</a>
+                    <a href="notifications.html" class="sidebar-link">Notifications</a>
+                    <a href="requests.html" class="sidebar-link">How to manage requests</a>
+                    <a href="directory.html" class="sidebar-link">The library directory</a>
+                </div>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-label">Advanced</div>
+                    <a href="collections.html" class="sidebar-link">How to use Collections</a>
+                    <a href="audio.html" class="sidebar-link">How to use audio features</a>
+                </div>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-label">Games</div>
+                    <a href="memory-game.html" class="sidebar-link">How to play Memory</a>
+                    <a href="sliding-puzzle.html" class="sidebar-link">How to play Sliding Puzzle</a>
+                    <a href="hangman.html" class="sidebar-link">How to play Hangman</a>
+                </div>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-label">Data</div>
+                    <a href="privacy-data.html" class="sidebar-link">Where is my data stored</a>
+                    <a href="export-backup.html" class="sidebar-link">Exporting and backing up my library</a>
+                    <a href="account-sync.html" class="sidebar-link active" aria-current="page">Encrypted account and multiple devices</a>
+                    <a href="profile.html" class="sidebar-link">My Profile</a>
+                </div>
+            </nav>
+
+            <article class="doc-content">
+                <a href="index.html" class="back-link">&larr; All guides</a>
+                <h1>Encrypted account and multiple devices</h1>
+<p>BiblioGenius runs on your device first, with no account. The encrypted account is optional: it keeps an encrypted copy of your library that only you can read. It serves three purposes: losing nothing, finding your library again on a new device, and using it with several people.</p>
+<p>You will find it in <strong>Settings &gt; Backup and recovery &gt; Encrypted account</strong>.</p>
+<h2 id="what-the-server-sees">What the server sees</h2>
+<p>Nothing readable. Your books are encrypted on your device before they are sent, with a key derived from your passphrase. The server only stores encrypted blocks: neither we, nor a hosting provider, nor anyone who got hold of the database can read your titles, your notes or your contacts.</p>
+<p>The trade-off is straightforward: nobody can give you back access to your data if you lose your secrets.</p>
+<h2 id="creating-an-account">Creating an account</h2>
+<p>You need an email address, a passphrase, and a name for this device.</p>
+<p><strong>Your passphrase cannot be reset.</strong> When the account is created, the app shows a <strong>24-word recovery phrase</strong>: it is the only way to recover the account if you forget the passphrase. It is displayed once and never stored. Write it down in order, on paper or in a password manager.</p>
+<p>That same recovery phrase can be used as the secret for your full backups, see <a href="export-backup.html">Exporting and backing up</a>.</p>
+<h2 id="what-syncs-and-what-does-not">What syncs, and what does not</h2>
+<p>Syncs: your books, authors, tags, collections, copies, loans, contacts and custom covers.</p>
+<p>Does not sync: device-specific settings, and the <strong>encrypted pairings with your contacts</strong>. Pairing is done device by device, by design: the key that links you to another library never leaves the device that created it.</p>
+<p>That is why, on a new device, your contacts may show up in a "Known libraries" section marked "Not paired on this device". To connect to them from that new device, pair again: share your invitation link or accept theirs.</p>
+<h2 id="adding-a-device">Adding a device</h2>
+<ol>
+<li>On the new device, choose "Add this device from another device": it displays a QR code.</li>
+<li>On a device that is already signed in, open <strong>Encrypted account &gt; Add a device</strong> and scan that code.</li>
+<li>The existing device then displays an authorization code, which the new device scans in turn.</li>
+</ol>
+<p>Only scan these codes in person, directly between your two devices. Never send them by message or as a photo.</p>
+<p>If your two devices are not side by side, "Join an existing account" does the same thing with your email and your passphrase.</p>
+<h2 id="syncing">Syncing</h2>
+<p>Syncing happens on its own, periodically and when you come back to the app. The <strong>Sync now</strong> button forces an immediate cycle.</p>
+<p>If the message reports a partial sync, some items could not be applied on this device, usually because one of your devices runs an older version. Update them, then sync again.</p>
+<h2 id="sharing-access-with-other-people">Sharing access with other people</h2>
+<p>From the same screen, "Share access to my library" lets another person join the account from their device, with your email and your passphrase. They then appear as an authorized device.</p>
+<p>Be clear about what this means: <strong>anyone sharing this account has full access to it</strong>, and permanently revoking an access is not possible yet. This is a trust-based feature, designed for a household.</p>
+<h2 id="removing-a-device-signing-out">Removing a device, signing out</h2>
+<p>Removing a device stops it from syncing, but it keeps the data it already downloaded: this is not a security lock. You can add it back later.</p>
+<p>Signing out on a device stops its syncing without touching the account or your other devices. You reconnect it later with your passphrase.</p>
+<h2 id="if-you-lose-everything">If you lose everything</h2>
+<p>With the recovery phrase, you get the account back. Without the passphrase and without the recovery phrase, the account data is permanently unreadable, including for us. That is the price of end-to-end encryption, and it is also why a local full backup remains a good idea.</p>
+                <aside class="doc-help">
+                    <h2>Need help?</h2>
+                    <p>Can't find the answer to your question in the guides? Our team can help.</p>
+                    <a href="../support.html" class="btn btn-primary">Contact support</a>
+                </aside>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>BiblioGenius - Open-source, local-first.</p>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        var navToggle = document.querySelector('.site-nav-toggle');
+        var navMenu = document.getElementById('site-nav-menu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function() {
+                var isOpen = navMenu.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', isOpen);
+            });
+            navMenu.querySelectorAll('.site-nav-link').forEach(function(a) {
+                a.addEventListener('click', function() {
+                    navMenu.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+    })();
+    </script>
+    <script>
+    (function() {
+        var sidebar = document.getElementById('doc-sidebar');
+        var toggle = document.querySelector('.sidebar-toggle');
+
+        // Toggle sidebar with aria-expanded
+        toggle.addEventListener('click', function() {
+            var isOpen = sidebar.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close sidebar on link click (mobile)
+        document.querySelectorAll('.sidebar-link').forEach(function(a) {
+            a.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
+</body>
+
+</html>

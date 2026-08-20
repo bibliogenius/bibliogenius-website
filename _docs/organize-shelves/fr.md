@@ -24,3 +24,9 @@ Depuis la fiche d'un livre, vous pouvez l'assigner à une ou plusieurs étagère
 ## Réorganiser l'ordre
 
 Passez en mode réorganisation pour changer l'ordre des livres par glisser-déposer, ou utilisez le tri automatique (par auteur, titre, date d'ajout).
+
+## Les genres suggérés
+
+À l'ajout comme à la modification d'un livre, BiblioGenius propose une liste fermée de genres (roman policier, science-fiction, biographie, bande dessinée...), avec un second niveau pour préciser. Choisir un genre range le livre sur l'étagère correspondante.
+
+C'est un raccourci, pas une obligation : l'étagère n'est créée qu'au moment où vous choisissez le genre, et vos propres étagères ne sont jamais modifiées. Vous pouvez ignorer les suggestions et continuer à classer entièrement à la main.

@@ -24,3 +24,9 @@ From a book's detail page, you can assign it to one or more shelves. A single bo
 ## Reorder books
 
 Switch to reorder mode to change the order of books by drag-and-drop, or use auto-sort (by author, title, date added).
+
+## Suggested genres
+
+When adding or editing a book, BiblioGenius offers a closed list of genres (crime, science fiction, biography, comics and so on), with a second level to refine. Picking a genre files the book on the matching shelf.
+
+It is a shortcut, not an obligation: the shelf is only created when you pick the genre, and your own shelves are never touched. You can ignore the suggestions and keep filing everything by hand.

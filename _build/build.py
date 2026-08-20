@@ -37,7 +37,7 @@ CHANGELOG_DIR = os.path.join(SITE_DIR, '_changelog')
 VERSION_FILE = os.path.join(SCRIPT_DIR, 'version.txt')
 
 # Sidebar group ordering
-DOC_GROUPS = ['library', 'discovery', 'social', 'advanced', 'data']
+DOC_GROUPS = ['library', 'discovery', 'social', 'advanced', 'games', 'data']
 
 # Map language code to OG locale
 OG_LOCALES = {
