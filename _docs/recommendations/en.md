@@ -5,7 +5,7 @@ order: 5
 group: discovery
 ---
 
-BiblioGenius suggests books to read from what your library already holds. The feature keeps growing: coming versions will widen the suggestions beyond your own shelves.
+BiblioGenius suggests books to read from what your library already holds, and can now also point at the missing volume of a series you own. The scoring itself stays on this device; finding a missing volume sends one anonymous search, never your reading profile.
 
 ## Where to find them
 
@@ -31,6 +31,10 @@ The **"Not interested"** button hides a card everywhere it appears. A message of
 
 That choice is kept on this device and survives an app restart. If you dismissed everything, the full list simply shows "No suggestions right now".
 
-## What will widen
+## Completing a series
 
-Today the suggestions only look at your own shelves. They will open up to titles you do not own, under the same rule as today: every suggestion says where it comes from and why it is being made.
+When a collection is marked as a **series**, BiblioGenius can suggest the next volume missing from it. These cards wear a **"To discover"** badge: the book is not in your library yet. One card per series, the lowest missing volume first, and never at the expense of the suggestions drawn from your own shelves.
+
+Tapping such a card opens a preview: if a library in your network holds the book, it says so, and one tap adds the book to your **wishlist**. "Not interested" works on these cards exactly as on the others.
+
+The rule stays the same as everywhere else: every suggestion says where it comes from and why it is being made. The search that finds a missing volume is anonymous - it carries a couple of ISBNs and a series name, never who you are or what you like.
