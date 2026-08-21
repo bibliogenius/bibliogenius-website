@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentation - BiblioGenius</title>
+    <meta name="description" content="Dokumentation und Anleitungen für BiblioGenius">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dokumentation - BiblioGenius">
+    <meta property="og:description" content="Dokumentation und Anleitungen für BiblioGenius">
+    <meta property="og:url" content="https://bibliogenius.org/de/docs/">
+    <meta property="og:site_name" content="BiblioGenius">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dokumentation - BiblioGenius">
+    <meta name="twitter:description" content="Dokumentation und Anleitungen für BiblioGenius">
+
+    <link rel="canonical" href="https://bibliogenius.org/de/docs/">
+    <link rel="alternate" hreflang="de" href="https://bibliogenius.org/de/docs/">
+    <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/">
+    <link rel="alternate" hreflang="es" href="https://bibliogenius.org/es/docs/">
+    <link rel="alternate" hreflang="fr" href="https://bibliogenius.org/docs/">
+    <link rel="alternate" hreflang="x-default" href="https://bibliogenius.org/docs/">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .docs-container {
+            padding: 3rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .doc-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .doc-group-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6b7280;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .doc-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .doc-card {
+            background: var(--white);
+            border-radius: 0.75rem;
+            padding: 1.25rem 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.15s, box-shadow 0.15s;
+            display: block;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .doc-card h4 {
+            font-size: 1.05rem;
+            margin-bottom: 0.35rem;
+            color: var(--heading-color);
+        }
+
+        .doc-card p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .doc-help {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 0.75rem;
+        }
+
+        .doc-help h2 {
+            font-size: 1.15rem;
+            margin: 0 0 0.4rem;
+            padding: 0;
+            border: none;
+        }
+
+        .doc-help p {
+            margin: 0 0 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "BiblioGenius", "item": "https://bibliogenius.org/de/"},
+            {"@type": "ListItem", "position": 2, "name": "Dokumentation"}
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="hero" style="padding: 2.5rem 1.5rem;">
+        <nav class="site-nav" aria-label="Hauptnavigation">
+            <a href="../index.html" class="site-nav-logo">BiblioGenius</a>
+            <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="site-nav-menu" id="site-nav-menu">
+                <a href="../index.html" class="site-nav-link">Startseite</a>
+                <a href="../story.html" class="site-nav-link">Unsere Geschichte</a>
+                <a href="index.html" class="site-nav-link">Dokumentation</a>
+                <a href="../contribute.html" class="site-nav-link">Mitmachen</a>
+                <a href="../blog/" class="site-nav-link">Blog</a>
+                <a href="../../changelog.html" class="site-nav-link">Changelog</a>
+                <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Sprache wählen">
+            <option value="index.html" selected>Deutsch</option>
+            <option value="../../en/docs/index.html">English</option>
+            <option value="../../es/docs/index.html">Español</option>
+            <option value="../../docs/index.html">Français</option>
+                </select>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Dokumentation</h1>
+            <p>Anleitungen und Tutorials, um BiblioGenius zu meistern</p>
+        </div>
+    </header>
+
+    <main id="main-content" class="docs-container">
+        <a href="../../index.html" class="back-link">&larr; Zurück zur Startseite</a>
+
+        <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Alle Anleitungen</h2>
+        <p style="color: #6b7280; margin-bottom: 2rem;">Wählen Sie ein Thema, um zu beginnen</p>
+
+        <div class="doc-group">
+            <h3 class="doc-group-title">Bibliothek</h3>
+            <div class="doc-cards">
+                <a href="add-book.html" class="doc-card">
+                    <h4>Wie füge ich ein Buch hinzu</h4>
+                    <p>Anleitung zum Hinzufügen von Büchern per Scan, Suche oder von Hand</p>
+                </a>
+                <a href="organize-shelves.html" class="doc-card">
+                    <h4>Wie ordne ich meine Regale</h4>
+                    <p>Legen Sie thematische Regale an und ordnen Sie Ihre Bücher nach Ihrem Geschmack</p>
+                </a>
+                <a href="reading-progress.html" class="doc-card">
+                    <h4>Wie verfolge ich meinen Lesefortschritt</h4>
+                    <p>Verfolgen Sie Ihren Fortschritt in jedem Buch und sammeln Sie Erfahrungspunkte</p>
+                </a>
+            </div>
+        </div>
+        <div class="doc-group">
+            <h3 class="doc-group-title">Netzwerk</h3>
+            <div class="doc-cards">
+                <a href="connect-friends.html" class="doc-card">
+                    <h4>Wie verbinde ich mich mit Freunden</h4>
+                    <p>Teilen Sie Ihre Bibliothek und verbinden Sie sich mit anderen Lesenden per QR-Code oder Einladungslink</p>
+                </a>
+                <a href="lending.html" class="doc-card">
+                    <h4>Wie verleihe ich ein Buch</h4>
+                    <p>Verwalten Sie die Ausleihen Ihrer Bücher an Ihre Kontakte</p>
+                </a>
+            </div>
+        </div>
+        <div class="doc-group">
+            <h3 class="doc-group-title">Daten</h3>
+            <div class="doc-cards">
+                <a href="privacy-data.html" class="doc-card">
+                    <h4>Wo meine Daten gespeichert sind</h4>
+                    <p>Was auf Ihrem Gerät bleibt, was es verlässt und wie Sie die Kontrolle behalten</p>
+                </a>
+            </div>
+        </div>
+
+        <aside class="doc-help">
+            <h2>Brauchen Sie Hilfe?</h2>
+            <p>Finden Sie die Antwort auf Ihre Frage nicht in den Anleitungen? Unser Team hilft Ihnen weiter.</p>
+            <a href="../../support.html" class="btn btn-primary">Support kontaktieren</a>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>BiblioGenius - Open Source, local-first.</p>
+        </div>
+    </footer>
+    <script>
+    (function() {
+        var toggle = document.querySelector('.site-nav-toggle');
+        var menu = document.getElementById('site-nav-menu');
+        if (!toggle || !menu) return;
+        toggle.addEventListener('click', function() {
+            var isOpen = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+        menu.querySelectorAll('.site-nav-link').forEach(function(a) {
+            a.addEventListener('click', function() {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
+</body>
+
+</html>

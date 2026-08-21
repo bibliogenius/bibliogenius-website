@@ -57,7 +57,6 @@ SITEMAP_PRIORITY = {
     'index': '1.0',
     'story': '0.9',
     'contribute': '0.8',
-    'tutorials': '0.7',
     'changelog': '0.6',
     'free-your-library': '0.5',
     'support': '0.4',
@@ -257,6 +256,33 @@ def doc_index_url(lang):
     return f'/{lang}/docs/'
 
 
+def sibling_page_url(page, lang, root_path, exists):
+    """Relative URL to a top-level page from inside a /docs/ directory.
+
+    `changelog` and `support` are not translated into every language the docs
+    are. When the page is missing for `lang`, fall back to the default-language
+    one at the site root instead of linking to a 404.
+    """
+    if lang == DEFAULT_LANG or lang in exists:
+        return f'../{page}.html'
+    return f'{root_path}{page}.html'
+
+
+def doc_langs(slug, langs):
+    """Languages that actually carry a translation of `slug`.
+
+    A guide is published in a language only when `_docs/{slug}/{lang}.md`
+    exists. No fallback to the default language: serving French text under a
+    Spanish URL is worse than not serving the page at all, and it would tell
+    search engines the translation exists. This is what lets a language be
+    translated guide by guide instead of all at once.
+    """
+    return [
+        lang for lang in sorted(langs)
+        if os.path.isfile(os.path.join(DOCS_DIR, slug, f'{lang}.md'))
+    ]
+
+
 def build_doc_sidebar(docs, current_slug, lang, ui):
     """Generate sidebar HTML grouped by category. Uses relative links (same dir)."""
     lines = []
@@ -392,6 +418,16 @@ def build_docs():
     with open(index_tpl_path, encoding='utf-8') as f:
         index_template = f.read()
 
+    # Languages that actually have a changelog / support page, so the doc
+    # nav can fall back instead of pointing at a page that was never built.
+    changelog_langs = {
+        f[:-3] for f in os.listdir(CHANGELOG_DIR) if f.endswith('.md')
+    } if os.path.isdir(CHANGELOG_DIR) else set()
+    support_dir = os.path.join(I18N_DIR, 'support')
+    support_langs = {
+        f[:-4] for f in os.listdir(support_dir) if f.endswith('.yml')
+    } if os.path.isdir(support_dir) else set()
+
     # Discover doc sections (directories in _docs/ that are not _ui)
     sections = []
     for entry in sorted(os.listdir(DOCS_DIR)):
@@ -420,10 +456,9 @@ def build_docs():
         for slug in sections:
             md_path = os.path.join(DOCS_DIR, slug, f'{lang}.md')
             if not os.path.isfile(md_path):
-                # Fall back to default lang
-                md_path = os.path.join(DOCS_DIR, slug, f'{DEFAULT_LANG}.md')
-                if not os.path.isfile(md_path):
-                    continue
+                # Not translated in this language yet: skip it entirely
+                # (see doc_langs), never publish the default-language body.
+                continue
             with open(md_path, encoding='utf-8') as f:
                 raw = f.read()
             meta, body = parse_frontmatter(raw)
@@ -461,8 +496,11 @@ def build_docs():
             content_html = content_html.replace('<img ', '<img loading="lazy" ')
 
             sidebar = build_doc_sidebar(docs, slug, lang, ui)
-            hreflang = build_doc_hreflang(slug, all_langs)
-            switcher = build_doc_switcher(slug, all_ui, lang, root_path)
+            translated = doc_langs(slug, all_langs)
+            hreflang = build_doc_hreflang(slug, translated)
+            switcher = build_doc_switcher(
+                slug, {l: all_ui[l] for l in translated}, lang, root_path
+            )
 
             html = doc_template
             html = html.replace('{{root}}', root_path)
@@ -497,6 +535,14 @@ def build_docs():
             html = html.replace('{{help_title}}', ui.get('help_title', ''))
             html = html.replace('{{help_desc}}', ui.get('help_desc', ''))
             html = html.replace('{{help_cta}}', ui.get('help_cta', ''))
+            html = html.replace(
+                '{{changelog_url}}',
+                sibling_page_url('changelog', lang, root_path, changelog_langs),
+            )
+            html = html.replace(
+                '{{support_url}}',
+                sibling_page_url('support', lang, root_path, support_langs),
+            )
 
             # Inject language redirect script for default-lang doc pages
             if lang == DEFAULT_LANG and 'en' in all_ui:
@@ -555,6 +601,14 @@ def build_docs():
         html = html.replace('{{help_title}}', ui.get('help_title', ''))
         html = html.replace('{{help_desc}}', ui.get('help_desc', ''))
         html = html.replace('{{help_cta}}', ui.get('help_cta', ''))
+        html = html.replace(
+            '{{changelog_url}}',
+            sibling_page_url('changelog', lang, root_path, changelog_langs),
+        )
+        html = html.replace(
+            '{{support_url}}',
+            sibling_page_url('support', lang, root_path, support_langs),
+        )
 
         # Inject language redirect script for default-lang doc index
         if lang == DEFAULT_LANG and 'en' in all_ui:
@@ -864,8 +918,7 @@ def _sitemap_doc_entries():
     for lang in langs:
         index_sources = []
         for slug in sections:
-            md = os.path.join(DOCS_DIR, slug, f'{lang}.md')
-            src = md if os.path.isfile(md) else os.path.join(DOCS_DIR, slug, f'{DEFAULT_LANG}.md')
+            src = os.path.join(DOCS_DIR, slug, f'{lang}.md')
             if not os.path.isfile(src):
                 continue
             entries.append((BASE_URL + doc_url(slug, lang), _mtime_date(src), DOC_PRIORITY))
