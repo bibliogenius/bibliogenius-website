@@ -22,42 +22,42 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/de/free-your-library.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/en/free-your-library.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/es/free-your-library.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/free-your-library.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/de/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/en/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/es/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -91,23 +91,38 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://bibliogenius.org/de/tutorials.html</loc>
-    <lastmod>2026-05-19</lastmod>
-    <priority>0.7</priority>
+    <loc>https://bibliogenius.org/de/docs/add-book.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bibliogenius.org/en/tutorials.html</loc>
-    <lastmod>2026-05-19</lastmod>
-    <priority>0.7</priority>
+    <loc>https://bibliogenius.org/de/docs/connect-friends.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bibliogenius.org/es/tutorials.html</loc>
-    <lastmod>2026-05-19</lastmod>
-    <priority>0.7</priority>
+    <loc>https://bibliogenius.org/de/docs/lending.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bibliogenius.org/tutorials.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://bibliogenius.org/de/docs/organize-shelves.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/de/docs/privacy-data.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/de/docs/reading-progress.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/de/docs/</loc>
+    <lastmod>2026-08-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -243,6 +258,41 @@
   <url>
     <loc>https://bibliogenius.org/en/docs/</loc>
     <lastmod>2026-08-20</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/es/docs/add-book.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/es/docs/connect-friends.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/es/docs/lending.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/es/docs/organize-shelves.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/es/docs/privacy-data.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/es/docs/reading-progress.html</loc>
+    <lastmod>2026-08-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/es/docs/</loc>
+    <lastmod>2026-08-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
