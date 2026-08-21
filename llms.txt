@@ -12,7 +12,9 @@ Any use of this content to train AI models must comply with AGPL-3.0 terms.
 
 ## What is BiblioGenius?
 
-BiblioGenius is a personal library management app that runs offline and keeps your data encrypted on your device. Share books with trusted neighbors through a local peer-to-peer network. No cloud, no tracking, no ads.
+BiblioGenius is a personal library management app. It runs offline on your device and needs no account. Share books with trusted neighbors through a local peer-to-peer network. No mandatory cloud, no tracking, no ads.
+
+An account is optional. When one is created, it holds an end-to-end encrypted copy of the library for backup, recovery and multi-device use: the server only ever stores ciphertext it cannot read.
 
 ## Tech Stack
 
@@ -24,24 +26,41 @@ BiblioGenius is a personal library management app that runs offline and keeps yo
 
 ## Key Features
 
-- Local-first: works offline, no cloud dependency
-- End-to-end encrypted data
+- Local-first: works offline, no account and no cloud dependency
+- End-to-end encryption for peer exchanges and for the optional account
 - Peer-to-peer book lending with neighbors
 - Modular: adapts to readers, families, associations, librarians, booksellers, teachers
 - Multi-source book search: BNF (French National Library), Inventaire.io, OpenLibrary, Google Books
 
+## Documentation
+
+User guides, in French and English:
+
+- All guides (FR): https://bibliogenius.org/docs/
+- All guides (EN): https://bibliogenius.org/en/docs/
+- Adding a book: https://bibliogenius.org/en/docs/add-book.html
+- Organizing shelves: https://bibliogenius.org/en/docs/organize-shelves.html
+- Connecting with friends: https://bibliogenius.org/en/docs/connect-friends.html
+- Lending a book: https://bibliogenius.org/en/docs/lending.html
+- The library directory: https://bibliogenius.org/en/docs/directory.html
+- Exporting and backing up: https://bibliogenius.org/en/docs/export-backup.html
+- Encrypted account and multiple devices: https://bibliogenius.org/en/docs/account-sync.html
+- Where the data is stored: https://bibliogenius.org/en/docs/privacy-data.html
+
 ## Links
 
 - Website: https://bibliogenius.org
-- GitHub Organization: https://github.com/bibliogenius
-- App Repository: https://github.com/bibliogenius/bibliogenius-app
-- Rust Backend Repository: https://github.com/bibliogenius/bibliogenius
+- Source of truth: https://codeberg.org/bibliogenius
+- App Repository: https://codeberg.org/bibliogenius/bibliogenius-app
+- Rust Backend Repository: https://codeberg.org/bibliogenius/bibliogenius
+- Website Repository: https://codeberg.org/bibliogenius/bibliogenius-website
+- Read-only mirror: https://github.com/bibliogenius
 - Contribute: https://bibliogenius.org/contribute.html
 - Privacy Policy: https://bibliogenius.org/privacy.html
 
 ## Contributing
 
-The project is 100% open source. Good first issues are available on each repository:
+The project is 100% open source. Development happens on Codeberg; the GitHub organization is a read-only mirror. Good first issues are available on each repository:
 
 - App (Flutter): translations, tests, UI
 - Backend (Rust): documentation, tests
