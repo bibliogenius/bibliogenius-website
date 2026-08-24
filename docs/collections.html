@@ -15,17 +15,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comment utiliser les Collections - Documentation - BiblioGenius</title>
-    <meta name="description" content="Regroupez vos livres en listes personnalisées">
+    <meta name="description" content="Regrouper des livres en listes, marquer ses favoris, partager une liste et en recevoir">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="Comment utiliser les Collections - Documentation - BiblioGenius">
-    <meta property="og:description" content="Regroupez vos livres en listes personnalisées">
+    <meta property="og:description" content="Regrouper des livres en listes, marquer ses favoris, partager une liste et en recevoir">
     <meta property="og:url" content="https://bibliogenius.org/docs/collections.html">
     <meta property="og:site_name" content="BiblioGenius">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Comment utiliser les Collections - Documentation - BiblioGenius">
-    <meta name="twitter:description" content="Regroupez vos livres en listes personnalisées">
+    <meta name="twitter:description" content="Regrouper des livres en listes, marquer ses favoris, partager une liste et en recevoir">
 
     <link rel="canonical" href="https://bibliogenius.org/docs/collections.html">
     <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/collections.html">
@@ -357,21 +357,47 @@
             <article class="doc-content">
                 <a href="index.html" class="back-link">&larr; Tous les guides</a>
                 <h1>Comment utiliser les Collections</h1>
-<p>Les Collections vous permettent de regrouper des livres en listes personnalisées (sagas, thèmes, listes de lecture). Créez une collection depuis l'onglet Collections, puis ajoutez des livres de votre bibliothèque ou importez des listes existantes.</p>
+<p>Les Collections regroupent vos livres en listes personnalisées : une saga, un thème, un défi lecture, une liste à passer à quelqu'un. Elles se créent depuis l'onglet Collections, et se remplissent avec vos propres livres ou avec une liste importée.</p>
 <p><img loading="lazy" alt="Vue des collections" src="images/collections/collections-view.png" /></p>
 <h2 id="creer-une-collection">Créer une collection</h2>
 <ol>
-<li>Allez dans l'onglet "Collections"</li>
-<li>Appuyez sur "+" pour créer une nouvelle collection</li>
+<li>Allez dans l'onglet « Collections »</li>
+<li>Appuyez sur « + » pour créer une nouvelle collection</li>
 <li>Donnez-lui un nom et une description</li>
 <li>Ajoutez des livres depuis votre bibliothèque</li>
 </ol>
+<h2 id="les-favoris">Les favoris</h2>
+<p>Sur la fiche d'un livre, le marque-page étoile le range dans vos favoris. Il n'y a rien d'autre à faire : la collection <strong>« Favoris »</strong> existe d'elle-même, et l'étoile est son unique porte. Marquer un livre l'y ajoute, la retirer l'en sort.</p>
+<p>Un livre favori pèse double dans vos <a href="recommendations.html">suggestions de lecture</a> : c'est le signal le plus direct que vous puissiez donner à l'application sur vos goûts.</p>
+<p>Si vous teniez déjà une collection de ce genre à la main, BiblioGenius vous propose une fois de l'adopter comme collection Favoris. Ses livres deviennent alors des favoris. Vous pouvez refuser, la question ne revient pas.</p>
+<p>Tout reste sur votre appareil, comme le reste de vos collections.</p>
+<h2 id="les-collections-de-type-serie">Les collections de type série</h2>
+<p>Une collection peut être marquée comme <strong>série</strong>. Les tomes s'affichent alors dans l'ordre, et l'application peut vous signaler celui qui manque. Voir <a href="series.html">Suivre une série</a>.</p>
+<h2 id="partager-une-liste">Partager une liste</h2>
+<p>Depuis une collection, l'action <strong>« Partager »</strong> ouvre un récapitulatif de ce que vous êtes sur le point d'envoyer : le nom de la liste, le nombre de livres qu'elle contient, et les langues déclarées. Deux façons de la transmettre :</p>
+<ul>
+<li><strong>Copier</strong> met la liste dans le presse-papier, sous une forme que l'import sait relire ;</li>
+<li><strong>Envoyer le fichier</strong> produit un fichier <code>.bibliogenius.yml</code> que vous transmettez par le moyen de votre choix.</li>
+</ul>
+<p>Le fichier porte votre nom de bibliothèque comme contributeur, pour que votre correspondant puisse distinguer votre liste d'une autre du même nom.</p>
+<p>Rien n'entre dans la bibliothèque de votre correspondant avant qu'il ne confirme.</p>
+<h2 id="recevoir-une-liste">Recevoir une liste</h2>
+<p>L'action <strong>« Importer »</strong>, dans l'onglet Collections, accepte trois formes :</p>
+<ul>
+<li>un fichier <code>.bibliogenius.yml</code>, tel qu'envoyé par « Partager » ;</li>
+<li>un fichier <code>.yaml</code> ou <code>.yml</code> ;</li>
+<li>une liste collée depuis le presse-papier.</li>
+</ul>
+<p>L'import montre d'abord ce qu'il a compris : le titre, la description, le nombre de livres et le nom de l'expéditeur. Vous décidez ensuite du statut à donner aux livres, comme pour une <a href="curated-lists.html">sélection toute prête</a>. Une liste très longue vous est signalée avant de commencer, parce que l'import interroge une source de métadonnées pour chaque livre.</p>
+<p>Une liste reçue est une liste comme une autre : elle n'écrase rien, ne modifie aucun de vos livres existants, et ne peut rien déclencher toute seule.</p>
+<h2 id="les-selections-liees-a-votre-bibliotheque">Les sélections liées à votre bibliothèque</h2>
+<p>Sous vos collections, un bloc <strong>« Sélections liées à votre bibliothèque »</strong> propose des listes toutes prêtes qui recoupent ce que vous possédez déjà, avec la raison en clair : « 7 livres en commun ». Voir <a href="curated-lists.html">Les sélections toutes prêtes</a>.</p>
 <h2 id="exemples-dutilisation">Exemples d'utilisation</h2>
 <ul>
 <li>Regrouper les tomes d'une saga</li>
 <li>Créer une liste de lecture thématique</li>
 <li>Organiser un défi lecture</li>
-<li>Partager une sélection de livres recommandés</li>
+<li>Envoyer une sélection de livres recommandés à quelqu'un</li>
 </ul>
                 <aside class="doc-help">
                     <h2>Besoin d'aide ?</h2>

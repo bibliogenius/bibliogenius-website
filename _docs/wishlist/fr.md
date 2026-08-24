@@ -25,6 +25,26 @@ Sur la fiche d'un livre que vous possédez, une carte **« Recherché par »** l
 
 Prêter reste un geste libre et unilatéral : personne n'est notifié que vous avez vu sa recherche, et rien ne vous engage. Si vous cherchez vous-même un livre que cette personne possède, une mention discrète vous le signale, sans transformer l'échange en obligation.
 
+## Retrouver les livres que vous ne possédez pas
+
+Par défaut, votre bibliothèque montre ce que vous avez sous la main : vos livres, et ceux que vous avez prêtés. Les livres souhaités, eux, sont ailleurs sans être perdus.
+
+Le menu de filtres de la bibliothèque porte une section **« Possession »**, indépendante du statut de lecture :
+
+- **Ma bibliothèque**, la vue par défaut ;
+- **Non possédés**, vos souhaits et les livres lus sans les avoir ;
+- **Tout**, sans distinction.
+
+Comme les deux axes sont séparés, les combinaisons deviennent possibles : les livres lus que vous ne possédez pas, ou les livres en cours quel que soit leur statut de possession.
+
+**La recherche, elle, cherche partout.** Peu importe le filtre en cours : un titre souhaité ressort, et le résultat porte sa marque de possession. Il n'y a plus de cas où l'application vous propose un livre dans la liste déroulante puis annonce « Aucun livre trouvé » dans la grille.
+
+## Reconnaître un livre non possédé
+
+Un livre que vous n'avez pas garde sa couverture, en couleurs atténuées, avec un petit badge **« Non possédé »**. C'est le même repère partout : dans la grille, sur la frise d'une série, dans une collection.
+
+Un livre souhaité porte les deux : cette atténuation, et son cœur. Il reste reconnaissable au premier coup d'œil parmi les autres livres que vous ne possédez pas.
+
 ## Notifications
 
 Quand un livre de votre liste de souhaits devient disponible dans votre réseau, une notification vous prévient. À l'import d'une sélection, la notification est groupée : « 3 livres de « Prix Goncourt » disponibles dans votre réseau ».

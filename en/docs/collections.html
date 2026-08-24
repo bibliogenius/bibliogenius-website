@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to use Collections - Documentation - BiblioGenius</title>
-    <meta name="description" content="Group your books into custom lists">
+    <meta name="description" content="Group books into lists, mark your favorites, share a list and receive one">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="How to use Collections - Documentation - BiblioGenius">
-    <meta property="og:description" content="Group your books into custom lists">
+    <meta property="og:description" content="Group books into lists, mark your favorites, share a list and receive one">
     <meta property="og:url" content="https://bibliogenius.org/en/docs/collections.html">
     <meta property="og:site_name" content="BiblioGenius">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="How to use Collections - Documentation - BiblioGenius">
-    <meta name="twitter:description" content="Group your books into custom lists">
+    <meta name="twitter:description" content="Group books into lists, mark your favorites, share a list and receive one">
 
     <link rel="canonical" href="https://bibliogenius.org/en/docs/collections.html">
     <link rel="alternate" hreflang="en" href="https://bibliogenius.org/en/docs/collections.html">
@@ -347,21 +347,47 @@
             <article class="doc-content">
                 <a href="index.html" class="back-link">&larr; All guides</a>
                 <h1>How to use Collections</h1>
-<p>Collections let you group books into custom lists (sagas, themes, reading lists). Create a collection from the Collections tab, then add books from your library or import existing lists.</p>
+<p>Collections group your books into custom lists: a saga, a theme, a reading challenge, a list to hand to someone. You create them from the Collections tab, and fill them with your own books or with an imported list.</p>
 <p><img loading="lazy" alt="Collections view" src="images/collections/collections-view.png" /></p>
 <h2 id="create-a-collection">Create a collection</h2>
 <ol>
 <li>Go to the "Collections" tab</li>
 <li>Tap "+" to create a new collection</li>
-<li>Give it a name and description</li>
+<li>Give it a name and a description</li>
 <li>Add books from your library</li>
 </ol>
-<h2 id="example-uses">Example uses</h2>
+<h2 id="favorites">Favorites</h2>
+<p>On a book page, the star bookmark files it among your favorites. There is nothing else to do: the <strong>"Favorites"</strong> collection exists on its own, and the star is its only door. Marking a book adds it, unmarking takes it out.</p>
+<p>A favorite book weighs double in your <a href="recommendations.html">reading suggestions</a>: it is the most direct signal you can give the app about your taste.</p>
+<p>If you were already keeping such a collection by hand, BiblioGenius offers once to adopt it as your Favorites collection. Its books then become favorites. You can decline, and the question does not come back.</p>
+<p>Everything stays on your device, like the rest of your collections.</p>
+<h2 id="series-typed-collections">Series-typed collections</h2>
+<p>A collection can be marked as a <strong>series</strong>. Its volumes then appear in order, and the app can point at the one that is missing. See <a href="series.html">Following a series</a>.</p>
+<h2 id="sharing-a-list">Sharing a list</h2>
+<p>From a collection, the <strong>"Share"</strong> action opens a summary of what you are about to send: the list name, how many books it holds, and the declared languages. Two ways to pass it on:</p>
 <ul>
-<li>Group volumes of a saga together</li>
-<li>Create a themed reading list</li>
-<li>Organize a reading challenge</li>
-<li>Share a selection of recommended books</li>
+<li><strong>Copy</strong> puts the list on the clipboard, in a form the import can read back;</li>
+<li><strong>Send the file</strong> produces a <code>.bibliogenius.yml</code> file you hand over however you like.</li>
+</ul>
+<p>The file carries your library name as the contributor, so that your correspondent can tell your list apart from another one with the same name.</p>
+<p>Nothing enters your correspondent's library before they confirm.</p>
+<h2 id="receiving-a-list">Receiving a list</h2>
+<p>The <strong>"Import"</strong> action, in the Collections tab, accepts three forms:</p>
+<ul>
+<li>a <code>.bibliogenius.yml</code> file, as sent by "Share";</li>
+<li>a <code>.yaml</code> or <code>.yml</code> file;</li>
+<li>a list pasted from the clipboard.</li>
+</ul>
+<p>The import first shows what it understood: the title, the description, the book count and the sender's name. You then decide which status to give the books, as for a <a href="curated-lists.html">ready-made selection</a>. A very long list is flagged before it starts, because the import queries a metadata source for every book.</p>
+<p>A received list is a list like any other: it overwrites nothing, changes none of your existing books, and cannot trigger anything on its own.</p>
+<h2 id="selections-for-your-library">Selections for your library</h2>
+<p>Under your collections, a <strong>"Selections for your library"</strong> block offers ready-made lists that overlap what you already own, with the reason in plain words: "7 books in common". See <a href="curated-lists.html">Ready-made selections</a>.</p>
+<h2 id="ways-to-use-them">Ways to use them</h2>
+<ul>
+<li>Group the volumes of a saga</li>
+<li>Build a themed reading list</li>
+<li>Run a reading challenge</li>
+<li>Send someone a selection of recommended books</li>
 </ul>
                 <aside class="doc-help">
                     <h2>Need help?</h2>

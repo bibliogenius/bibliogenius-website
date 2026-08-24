@@ -14,6 +14,24 @@ lang_name: Français
 footer_text: "BiblioGenius &mdash; Open Source, local, chiffré."
 ---
 
+## 1.1.4 <small>24 août 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.3-beta.2...v1.1.4-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.4-beta.1" class="changelog-link">release</a>
+
+- **Suggestions de lecture** : un moteur local propose des livres à partir de ce que votre bibliothèque contient déjà, sur le tableau de bord, sur la fiche d'un livre, au moment où vous en terminez un, et dans un écran dédié ; chaque carte dit pourquoi elle est là, et « Ça ne m'intéresse pas » l'écarte partout d'un geste
+- **Onglet « À découvrir »** : en haut de la bibliothèque, un bandeau partage sa place entre votre activité récente et les suggestions, sans jamais basculer tout seul, et une action de la barre du haut ouvre la liste complète
+- **Compléter une série, compléter un auteur** : le tome manquant d'une série que vous possédez et les livres d'un auteur que vous lisez déjà sont retrouvés par une recherche anonyme, et proposés avec leur raison en clair
+- **Page d'un auteur** : le nom de l'auteur s'ouvre désormais sur ses livres présents dans votre bibliothèque, puis sur ceux qui n'y sont pas
+- **Emprunter plutôt qu'acheter** : dans l'aperçu d'un livre suggéré, les bibliothèques de votre réseau qui le possèdent sont listées, et la demande d'emprunt part de là
+- **Favoris** : un marque-page étoile sur la fiche du livre, une collection Favoris qui se remplit toute seule, et un poids double dans les suggestions ; une collection que vous teniez déjà à la main peut être adoptée telle quelle
+- **Possession** : un filtre « Possession » sépare enfin ce que vous avez de ce que vous cherchez, la recherche couvre tout le catalogue quel que soit le filtre en cours, les livres non possédés portent partout le même repère, et les compteurs d'étagères comme les statistiques s'accordent avec ce qu'ils affichent
+- **Partager une liste** : une collection s'envoie par fichier ou par copier-coller, avec un récapitulatif de ce qui part ; à la réception, un aperçu montre la liste et son expéditeur, et rien n'entre dans la bibliothèque avant confirmation
+- **Sélections toutes prêtes** : les listes relues qui recoupent votre bibliothèque vous sont proposées avec leurs livres en commun, une carte se déplie sur la liste complète avec ses notes, la catégorie « Rentrée des classes » couvre CM1-CM2, la 6e et la 5e, et le corpus a été relu (cinq ISBN corrigés, seize notes remises à l'endroit)
+- **Carte de contact** : e-mail, téléphone et précisions se saisissent dans un formulaire, ne partent chiffrés qu'aux bibliothèques que vous avez acceptées, et une action « Contacter » ouvre un message déjà écrit depuis un livre ou depuis la page d'une bibliothèque
+- **Export** : le catalogue s'exporte en CSV lisible dans un tableur, avec la date et la minute dans le nom du fichier
+- **Vie privée** : un aperçu montre votre bibliothèque telle qu'une autre bibliothèque la reçoit, et votre ville devient une préférence locale, publiée seulement si vous choisissez de la partager
+- **Annuaire** : le catalogue d'une bibliothèque reste consultable un an après la dernière connexion de son propriétaire, au lieu de disparaître au bout d'une semaine
+- **Import** : un livre déjà complet n'est plus renvoyé vers une recherche de métadonnées, et une valeur de notice qui contenait un séparateur n'est plus tronquée
+- **Interface** : les actions des messages de confirmation redeviennent lisibles sur leur propre fond, les cartes de livres similaires s'alignent, et l'espacement des icônes de l'en-tête est corrigé
+
 ## 1.1.3 <small>19 août 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.2-beta.5...v1.1.3-beta.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.3-beta.2" class="changelog-link">release</a>
 
 - **Liste d'envies** : les livres que vous recherchez sont repérés dans les catalogues des bibliothèques connectées, avec une demande d'emprunt directe depuis la fiche du livre, et vos propres livres signalent discrètement qui les recherche

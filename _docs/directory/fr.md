@@ -18,6 +18,18 @@ Deux garde-fous :
 
 Rien n'est publié tant que vous n'avez pas activé ce partage.
 
+## Vos coordonnées
+
+Un catalogue partagé ne suffit pas à convenir d'un prêt : il faut pouvoir se dire où, quand et pour combien de temps. C'est le rôle de votre carte de contact, dans **Paramètres > Partage en ligne** :
+
+- **E-mail**
+- **Téléphone**, au format international (+33...) pour que le message puisse partir par WhatsApp
+- **Précisions** (facultatif) : adresse, horaires, disponibilités
+
+Ces coordonnées ne sont pas publiées dans l'annuaire. Elles ne sont remises, chiffrées, qu'aux bibliothèques que vous avez acceptées comme abonnées. Une fois envoyées, on ne peut plus les retirer : ce qui a été reçu est reçu.
+
+Si des bibliothèques vous suivent et qu'aucun moyen de vous joindre n'a été donné, l'onglet des contacts vous le signale et propose de compléter la carte.
+
 ## Découvrir et suivre
 
 Dans **Réseau > Explorer**, parcourez les bibliothèques publiées, filtrez par lieu, puis suivez celles qui vous intéressent. Suivre donne accès à leur catalogue partagé et vous permet de leur demander un emprunt.

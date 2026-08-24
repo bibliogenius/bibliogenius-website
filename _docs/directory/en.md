@@ -18,6 +18,18 @@ Two safeguards:
 
 Nothing is published until you turn that sharing on.
 
+## Your contact details
+
+A shared catalog is not enough to arrange a loan: you have to be able to agree on where, when and for how long. That is what your contact card is for, in **Settings > Online sharing**:
+
+- **Email**
+- **Phone**, in international format (+33...) so a message can go out through WhatsApp
+- **Notes** (optional): address, opening hours, availability
+
+These details are not published in the directory. They are delivered, encrypted, only to the libraries you accepted as followers. Once sent, they cannot be taken back: what was received is received.
+
+If libraries follow you and no way to reach you was ever given, the contacts tab says so and offers to fill the card in.
+
 ## Discovering and following
 
 In **Network > Explore**, browse the published libraries, filter by location, then follow the ones you like. Following gives you access to their shared catalogue and lets you ask them for a loan.

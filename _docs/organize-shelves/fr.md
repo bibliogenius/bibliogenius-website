@@ -25,6 +25,12 @@ Depuis la fiche d'un livre, vous pouvez l'assigner à une ou plusieurs étagère
 
 Passez en mode réorganisation pour changer l'ordre des livres par glisser-déposer, ou utilisez le tri automatique (par auteur, titre, date d'ajout).
 
+## Une étagère qui paraît vide
+
+Le compte affiché sur une étagère correspond à ce que l'étagère montre une fois ouverte : les deux nombres ne se contredisent plus.
+
+Une étagère dont tous les livres sont hors de la vue par défaut reste listée, à zéro, et s'ouvre sur une explication : « Rien de cette étagère n'est dans votre bibliothèque », avec le nombre de livres concernés, souhaits ou livres prêtés, et un bouton **« Les afficher quand même »**. Voir [Ma liste de souhaits](wishlist.html).
+
 ## Les genres suggérés
 
 À l'ajout comme à la modification d'un livre, BiblioGenius propose une liste fermée de genres (roman policier, science-fiction, biographie, bande dessinée...), avec un second niveau pour préciser. Choisir un genre range le livre sur l'étagère correspondante.

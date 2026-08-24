@@ -14,6 +14,24 @@ lang_name: English
 footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
 ---
 
+## 1.1.4 <small>August 24, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.3-beta.2...v1.1.4-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.4-beta.1" class="changelog-link">release</a>
+
+- **Reading suggestions**: a local engine offers books drawn from what your library already holds, on the dashboard, on a book page, the moment you finish one, and in a screen of their own; every card says why it is there, and "Not interested" dismisses it everywhere at once
+- **"To discover" tab**: at the top of the library, one strip shares its spot between your recent activity and the suggestions, never switching on its own, and a top-bar action opens the full list
+- **Completing a series, completing an author**: the missing volume of a series you own and the books of an author you already read are found through an anonymous lookup, and offered with their reason in plain words
+- **Author page**: an author's name now opens on their books present in your library, then on the ones that are not
+- **Borrowing instead of buying**: in the preview of a suggested book, the libraries in your network that own it are listed, and the borrow request starts there
+- **Favorites**: a star bookmark on the book page, a Favorites collection that fills itself, and a double weight in the suggestions; a collection you were already keeping by hand can be adopted as is
+- **Ownership**: an "Ownership" filter finally separates what you have from what you are looking for, search covers the whole catalog whatever filter is on, books you do not own carry the same marker everywhere, and shelf counts and statistics agree with what they show
+- **Sharing a list**: a collection goes out as a file or through copy and paste, with a summary of what is leaving; on arrival a preview shows the list and its sender, and nothing enters the library before confirmation
+- **Ready-made selections**: reviewed lists that overlap your library are offered with the books they share, a card unfolds to the full list and its notes, the "Back to school" category covers CM1-CM2, 6e and 5e, and the corpus was proofread (five ISBNs fixed, sixteen notes put back the right way round)
+- **Contact card**: email, phone and notes are entered in a form, are delivered encrypted only to the libraries you accepted, and a "Contact" action opens a message already written, from a book or from a library's page
+- **Export**: the catalog exports to a spreadsheet-readable CSV, with the date and minute in the file name
+- **Privacy**: a preview shows your library exactly as another library receives it, and your city becomes a local preference, published only if you choose to share it
+- **Directory**: a library's catalog stays browsable a year after its owner last connected, instead of vanishing after a week
+- **Import**: a book that is already complete is no longer sent through a metadata lookup, and a record value containing a separator is no longer truncated
+- **Interface**: confirmation-message actions are legible against their own background again, similar-book cards line up, and header icon spacing is fixed
+
 ## 1.1.3 <small>August 19, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.2-beta.5...v1.1.3-beta.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.3-beta.2" class="changelog-link">release</a>
 
 - **Wishlist**: the books you are looking for are spotted in the catalogs of connected libraries, with a borrow request available right from the book page, and your own books discreetly show who is looking for them

@@ -25,6 +25,12 @@ From a book's detail page, you can assign it to one or more shelves. A single bo
 
 Switch to reorder mode to change the order of books by drag-and-drop, or use auto-sort (by author, title, date added).
 
+## A shelf that looks empty
+
+The count shown on a shelf matches what the shelf shows once opened: the two numbers no longer contradict each other.
+
+A shelf whose books all sit outside the default view stays listed, at zero, and opens on an explanation: "Nothing on this shelf is in your library", with how many books are concerned, wishlist books or books on loan, and a **"Show them anyway"** button. See [My wishlist](wishlist.html).
+
 ## Suggested genres
 
 When adding or editing a book, BiblioGenius offers a closed list of genres (crime, science fiction, biography, comics and so on), with a second level to refine. Picking a genre files the book on the matching shelf.
