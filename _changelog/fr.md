@@ -14,6 +14,17 @@ lang_name: Français
 footer_text: "BiblioGenius &mdash; Open Source, local, chiffré."
 ---
 
+## 1.1.5 <small>26 août 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.4-beta.2...v1.1.5-beta.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.5-beta.0" class="changelog-link">release</a>
+
+- **Couvertures** : un livre sans couverture peut en chercher une depuis sa fiche, avec le même moteur que la recherche d'ajout ; une couverture prise en photo ne se perd plus au redémarrage ; et l'envoi vers le compte chiffré ne signale plus un échec quand il n'y a simplement rien à envoyer
+- **Suggestions** : les sélections toutes prêtes s'ouvrent en éventail avec une ligne « voir tout », la liste se met à jour dès que votre bibliothèque change, et une source momentanément indisponible n'est plus réinterrogée à chaque écran
+- **Statut de lecture** : « Aucun statut » redevient un choix réel, alors qu'il était proposé partout mais refusé à l'enregistrement
+- **Dates de lecture** : une date saisie par erreur peut enfin être effacée depuis la fiche d'édition
+- **Année de publication** : l'année renvoyée par une recherche n'est plus déformée, quelle que soit la source interrogée
+- **Notes** : la note s'affiche avec le séparateur décimal de votre langue, son libellé est traduit, et l'étoile ne chevauche plus le nombre de pages sur les écrans étroits
+- **Bibliothèque** : la liste ne clignote plus après la modification d'un livre
+- **Interface** : sur la page d'édition d'un livre, le bouton de menu inactif laisse place à un retour, et les accents manquants des textes français sont rétablis
+
 ## 1.1.4 <small>24 août 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.3-beta.2...v1.1.4-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.4-beta.1" class="changelog-link">release</a>
 
 - **Suggestions de lecture** : un moteur local propose des livres à partir de ce que votre bibliothèque contient déjà, sur le tableau de bord, sur la fiche d'un livre, au moment où vous en terminez un, et dans un écran dédié ; chaque carte dit pourquoi elle est là, et « Ça ne m'intéresse pas » l'écarte partout d'un geste

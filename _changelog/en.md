@@ -14,6 +14,17 @@ lang_name: English
 footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
 ---
 
+## 1.1.5 <small>August 26, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.4-beta.2...v1.1.5-beta.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.5-beta.0" class="changelog-link">release</a>
+
+- **Covers**: a book without a cover can go looking for one from its own page, on the same engine as the add-a-book search; a cover taken with the camera is no longer lost on restart; and the upload to your encrypted account no longer reports a failure when there is simply nothing to send
+- **Suggestions**: ready-made selections open as a fan with a "see all" row, the list refreshes as soon as your library changes, and a source that is momentarily unavailable is no longer queried again on every screen
+- **Reading status**: "No status" becomes a real choice again, after being offered everywhere but refused on save
+- **Reading dates**: a date entered by mistake can finally be cleared from the edit page
+- **Publication year**: the year returned by a lookup is no longer mangled, whatever the source
+- **Ratings**: a rating shows with the decimal separator of your language, its label is translated, and the star no longer overlaps the page count on narrow screens
+- **Library**: the list no longer flickers after a book is edited
+- **Interface**: on a book's edit page, the inactive menu button gives way to a back button, and missing accents in the French texts are restored
+
 ## 1.1.4 <small>August 24, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.3-beta.2...v1.1.4-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.4-beta.1" class="changelog-link">release</a>
 
 - **Reading suggestions**: a local engine offers books drawn from what your library already holds, on the dashboard, on a book page, the moment you finish one, and in a screen of their own; every card says why it is there, and "Not interested" dismisses it everywhere at once
