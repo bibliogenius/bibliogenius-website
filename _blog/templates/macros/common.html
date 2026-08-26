@@ -34,6 +34,9 @@
 {% macro head(title, description, lang, permalink, translations, og_image) %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {# max-image-preview:large: lets Google use a full-size thumbnail rather
+       than a cropped one, in mobile search results and in Discover. #}
+    <meta name="robots" content="max-image-preview:large">
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}">
 

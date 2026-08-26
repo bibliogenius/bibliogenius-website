@@ -19,6 +19,7 @@ Adding a new page:
     3. Run: python3 _build/build.py
 """
 
+import json
 import os
 import re
 import shutil
@@ -80,19 +81,71 @@ MONTH_NAMES = {
            'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
 }
 
-# Language redirect script (injected only in default-lang pages)
-# Redirects non-French browsers to /en/ equivalent.
-# Respects manual language choice via sessionStorage.
-LANG_REDIRECT_SCRIPT = '''<script>
+# Robots directive, injected in every page.
+# max-image-preview:large lets Google use a full-size thumbnail in mobile
+# search results and makes the page eligible for Discover cards.
+ROBOTS_META = '    <meta name="robots" content="max-image-preview:large">'
+
+# Language suggestion banner (injected only in default-lang pages).
+# It replaces an earlier automatic location.replace() to /en/. Googlebot
+# renders JavaScript with an en-US locale, so that redirect fired on every
+# crawl of the French pages and contradicted their own canonical and
+# hreflang="fr". Google advises suggesting a translation instead of forcing
+# it. The banner is fixed to the bottom of the viewport so it costs no
+# layout shift, and the choice is remembered via sessionStorage.
+LANG_SUGGEST_SCRIPT = '''<script>
 (function(){
   if(sessionStorage.getItem('lang_chosen'))return;
   var l=navigator.language||navigator.userLanguage||'';
-  if(l.substring(0,2)!=='fr'){
-    var p=location.pathname;
-    location.replace(p.replace(/^\\/(?!en\\/|de\\/|es\\/)/, '/en/'));
+  if(l.substring(0,2)==='fr')return;
+  var target=location.pathname.replace(/^\\/(?!en\\/|de\\/|es\\/)/,'/en/');
+  if(target===location.pathname)return;
+  function remember(){try{sessionStorage.setItem('lang_chosen','1');}catch(e){}}
+  function show(){
+    var bar=document.createElement('div');
+    bar.setAttribute('role','complementary');
+    bar.setAttribute('aria-label','Language');
+    bar.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:1000;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;background:#1e40af;color:#fff;padding:0.7rem 1rem;font-size:0.95rem;line-height:1.4;';
+    var msg=document.createElement('span');
+    msg.textContent='This page is also available in English.';
+    var link=document.createElement('a');
+    link.href=target+location.search+location.hash;
+    link.textContent='Read in English';
+    link.style.cssText='color:#fff;font-weight:600;text-decoration:underline;';
+    link.addEventListener('click',remember);
+    var close=document.createElement('button');
+    close.type='button';
+    close.textContent='Dismiss';
+    close.style.cssText='background:none;border:1px solid rgba(255,255,255,0.5);color:#fff;border-radius:4px;padding:0.2rem 0.6rem;font-size:0.85rem;cursor:pointer;';
+    close.addEventListener('click',function(){remember();bar.parentNode.removeChild(bar);});
+    bar.appendChild(msg);bar.appendChild(link);bar.appendChild(close);
+    document.body.appendChild(bar);
   }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',show);}else{show();}
 })();
 </script>'''
+
+
+def finalize_html(html, lang, has_english, schema=''):
+    """Apply the injections every generated page shares.
+
+    Injects the robots directive and any JSON-LD right after <head>, the
+    language suggestion banner right before </body>, and the sessionStorage
+    flag on the language switcher. The banner goes at the end of the body so
+    <meta charset> stays within the first bytes of the document.
+    """
+    head_extras = ROBOTS_META
+    if schema:
+        head_extras += '\n' + schema
+    # Anchor on the charset meta so it stays the first element of the head.
+    charset = '<meta charset="UTF-8">'
+    if charset in html:
+        html = html.replace(charset, charset + '\n' + head_extras, 1)
+    else:
+        html = html.replace('<head>', '<head>\n' + head_extras, 1)
+    if lang == DEFAULT_LANG and has_english:
+        html = html.replace('</body>', LANG_SUGGEST_SCRIPT + '\n</body>', 1)
+    return inject_lang_chosen(html)
 
 
 def inject_lang_chosen(html):
@@ -101,6 +154,148 @@ def inject_lang_chosen(html):
         'onchange="location.href=this.value"',
         "onchange=\"sessionStorage.setItem('lang_chosen','1');location.href=this.value\""
     )
+
+
+# Publisher / author node reused by every JSON-LD block below.
+ORGANIZATION = {
+    '@type': 'Organization',
+    'name': 'BiblioGenius',
+    'url': BASE_URL + '/',
+    'logo': BASE_URL + '/favicon-192x192.png',
+    # sameAs consolidates the entity: the same profiles are declared on the
+    # homepage, so every page points answer engines at one identity.
+    'sameAs': [
+        'https://codeberg.org/bibliogenius',
+        'https://apps.apple.com/app/bibliogenius/id6757465461',
+        'https://play.google.com/store/apps/details?id=com.bibliogenius.app',
+    ],
+}
+
+WEBSITE = {
+    '@type': 'WebSite',
+    'name': 'BiblioGenius',
+    'url': BASE_URL + '/',
+}
+
+# Schema.org type per vitrine page. Pages absent here get no page-level
+# JSON-LD; index.html carries its own SoftwareApplication in the template.
+PAGE_SCHEMA_TYPES = {
+    'story': 'AboutPage',
+    'contribute': 'WebPage',
+    'free-your-library': 'WebPage',
+    'support': 'WebPage',
+}
+
+
+def _plain(value):
+    """Strip tags and collapse whitespace: JSON-LD values carry no markup."""
+    text = re.sub(r'<[^>]+>', '', value or '')
+    text = text.replace('&nbsp;', ' ').replace('&amp;', '&')
+    return ' '.join(text.split())
+
+
+def _short_title(t):
+    """Page title without the site-name suffix, for breadcrumbs and names."""
+    title = _plain(t.get('og_title') or t.get('title') or 'BiblioGenius')
+    for sep in (' - BiblioGenius', ' — BiblioGenius', ' | BiblioGenius'):
+        if title.endswith(sep):
+            return title[: -len(sep)]
+    return title
+
+
+def _schema_block(payload):
+    """Render one JSON-LD payload as an indented <script> block."""
+    body = json.dumps(payload, ensure_ascii=False, indent=4)
+    body = '\n'.join('    ' + line for line in body.split('\n'))
+    return '    <script type="application/ld+json">\n' + body + '\n    </script>'
+
+
+def build_faq_schema(t):
+    """FAQPage built from the faq_q{n}/faq_a{n} pairs of a translation file.
+
+    Answer engines quote question/answer pairs far more readily than prose,
+    and the support page already holds the four questions users actually ask.
+    """
+    entries = []
+    n = 1
+    while f'faq_q{n}' in t and f'faq_a{n}' in t:
+        entries.append({
+            '@type': 'Question',
+            'name': _plain(t[f'faq_q{n}']),
+            'acceptedAnswer': {
+                '@type': 'Answer',
+                'text': _plain(t[f'faq_a{n}']),
+            },
+        })
+        n += 1
+    if not entries:
+        return ''
+    return _schema_block({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': entries,
+    })
+
+
+def build_page_schema(page, lang, t):
+    """JSON-LD for a vitrine page: the page node, its breadcrumb, and any FAQ."""
+    schema_type = PAGE_SCHEMA_TYPES.get(page)
+    if not schema_type:
+        return ''
+    url = BASE_URL + page_url(page, lang)
+    home = BASE_URL + page_url('index', lang)
+    name = _short_title(t)
+    payload = {
+        '@context': 'https://schema.org',
+        '@type': schema_type,
+        'name': name,
+        'description': _plain(t.get('meta_description', '')),
+        'url': url,
+        'inLanguage': lang,
+        'isPartOf': WEBSITE,
+        'publisher': ORGANIZATION,
+        'breadcrumb': {
+            '@type': 'BreadcrumbList',
+            'itemListElement': [
+                {'@type': 'ListItem', 'position': 1,
+                 'name': 'BiblioGenius', 'item': home},
+                {'@type': 'ListItem', 'position': 2,
+                 'name': name, 'item': url},
+            ],
+        },
+    }
+    blocks = [_schema_block(payload)]
+    faq = build_faq_schema(t)
+    if faq:
+        blocks.append(faq)
+    return '\n'.join(blocks)
+
+
+def build_doc_schema(slug, lang, meta):
+    """TechArticle for a documentation guide.
+
+    Google retired the HowTo rich result in 2023, so the guides are typed as
+    TechArticle: still accurate, and still read by answer engines. The
+    template already carries the BreadcrumbList, so it is not repeated here.
+    """
+    url = BASE_URL + doc_url(slug, lang)
+    return _schema_block({
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': _plain(meta.get('title', slug)),
+        'description': _plain(meta.get('description', '')),
+        'url': url,
+        'mainEntityOfPage': {'@type': 'WebPage', '@id': url},
+        'inLanguage': lang,
+        'isPartOf': WEBSITE,
+        'about': {
+            '@type': 'SoftwareApplication',
+            'name': 'BiblioGenius',
+            'url': BASE_URL + '/',
+        },
+        'author': ORGANIZATION,
+        'publisher': ORGANIZATION,
+    })
 
 
 def load_yaml(path):
@@ -544,10 +739,8 @@ def build_docs():
                 sibling_page_url('support', lang, root_path, support_langs),
             )
 
-            # Inject language redirect script for default-lang doc pages
-            if lang == DEFAULT_LANG and 'en' in all_ui:
-                html = html.replace('<head>', '<head>\n' + LANG_REDIRECT_SCRIPT, 1)
-            html = inject_lang_chosen(html)
+            doc_schema = build_doc_schema(slug, lang, meta)
+            html = finalize_html(html, lang, 'en' in all_ui, doc_schema)
 
             out_file = os.path.join(out_dir, f'{slug}.html')
             with open(out_file, 'w', encoding='utf-8') as f:
@@ -610,10 +803,7 @@ def build_docs():
             sibling_page_url('support', lang, root_path, support_langs),
         )
 
-        # Inject language redirect script for default-lang doc index
-        if lang == DEFAULT_LANG and 'en' in all_ui:
-            html = html.replace('<head>', '<head>\n' + LANG_REDIRECT_SCRIPT, 1)
-        html = inject_lang_chosen(html)
+        html = finalize_html(html, lang, 'en' in all_ui)
 
         index_file = os.path.join(out_dir, 'index.html')
         with open(index_file, 'w', encoding='utf-8') as f:
@@ -755,10 +945,7 @@ def build_changelog():
         for key, value in meta.items():
             html = html.replace(f'{{{{{key}}}}}', value)
 
-        # Inject language redirect script for default-lang pages
-        if lang == DEFAULT_LANG and 'en' in all_meta:
-            html = html.replace('<head>', '<head>\n' + LANG_REDIRECT_SCRIPT, 1)
-        html = inject_lang_chosen(html)
+        html = finalize_html(html, lang, 'en' in all_meta)
 
         out_file = changelog_output_path(lang)
         with open(out_file, 'w', encoding='utf-8') as f:
@@ -1081,10 +1268,8 @@ def build():
             if missing:
                 print(f'  [{lang}] Fallback: {", ".join(missing)}')
 
-            # Inject language redirect script for default-lang pages
-            if lang == DEFAULT_LANG and 'en' in langs:
-                html = html.replace('<head>', '<head>\n' + LANG_REDIRECT_SCRIPT, 1)
-            html = inject_lang_chosen(html)
+            page_schema = build_page_schema(page_name, lang, t)
+            html = finalize_html(html, lang, 'en' in langs, page_schema)
 
             out = output_path(page_name, lang)
             with open(out, 'w', encoding='utf-8') as f:

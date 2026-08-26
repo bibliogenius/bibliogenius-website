@@ -18,6 +18,42 @@
         .post-excerpt { color: #4b5563; line-height: 1.6; font-size: 0.95rem; }
         .post-read-more { color: var(--primary-color); font-weight: 600; font-size: 0.875rem; margin-top: 0.75rem; display: inline-block; }
     </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": {{ config.title | json_encode | safe }},
+        "description": {{ config.description | json_encode | safe }},
+        "url": {{ section.permalink | json_encode | safe }},
+        "inLanguage": "{{ lang }}",
+        "publisher": {
+            "@type": "Organization",
+            "name": "BiblioGenius",
+            "url": "{{ config.extra.site_url | safe }}/",
+        "sameAs": [
+            "https://codeberg.org/bibliogenius",
+            "https://apps.apple.com/app/bibliogenius/id6757465461",
+            "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+        ],
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ config.extra.site_url | safe }}/favicon-192x192.png"
+            }
+        },
+        "blogPost": [
+        {%- for page in paginator.pages %}
+            {
+                "@type": "BlogPosting",
+                "headline": {{ page.title | json_encode | safe }},
+                "description": {{ page.description | default(value="") | json_encode | safe }},
+                "url": {{ page.permalink | json_encode | safe }},
+                "datePublished": "{{ page.date }}"
+            }{% if not loop.last %},{% endif %}
+        {%- endfor %}
+        ]
+    }
+    </script>
 </head>
 <body>
 

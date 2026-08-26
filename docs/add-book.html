@@ -2,17 +2,54 @@
 <html lang="fr">
 
 <head>
-<script>
-(function(){
-  if(sessionStorage.getItem('lang_chosen'))return;
-  var l=navigator.language||navigator.userLanguage||'';
-  if(l.substring(0,2)!=='fr'){
-    var p=location.pathname;
-    location.replace(p.replace(/^\/(?!en\/|de\/|es\/)/, '/en/'));
-  }
-})();
-</script>
     <meta charset="UTF-8">
+    <meta name="robots" content="max-image-preview:large">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Comment ajouter un livre",
+        "description": "Guide pour ajouter des livres par scan, recherche ou saisie manuelle",
+        "url": "https://bibliogenius.org/docs/add-book.html",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://bibliogenius.org/docs/add-book.html"
+        },
+        "inLanguage": "fr",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "BiblioGenius",
+            "url": "https://bibliogenius.org/"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "BiblioGenius",
+            "url": "https://bibliogenius.org/"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "BiblioGenius",
+            "url": "https://bibliogenius.org/",
+            "logo": "https://bibliogenius.org/favicon-192x192.png",
+            "sameAs": [
+                "https://codeberg.org/bibliogenius",
+                "https://apps.apple.com/app/bibliogenius/id6757465461",
+                "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+            ]
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "BiblioGenius",
+            "url": "https://bibliogenius.org/",
+            "logo": "https://bibliogenius.org/favicon-192x192.png",
+            "sameAs": [
+                "https://codeberg.org/bibliogenius",
+                "https://apps.apple.com/app/bibliogenius/id6757465461",
+                "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+            ]
+        }
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comment ajouter un livre - Documentation - BiblioGenius</title>
     <meta name="description" content="Guide pour ajouter des livres par scan, recherche ou saisie manuelle">
@@ -430,6 +467,37 @@
         });
     })();
     </script>
+<script>
+(function(){
+  if(sessionStorage.getItem('lang_chosen'))return;
+  var l=navigator.language||navigator.userLanguage||'';
+  if(l.substring(0,2)==='fr')return;
+  var target=location.pathname.replace(/^\/(?!en\/|de\/|es\/)/,'/en/');
+  if(target===location.pathname)return;
+  function remember(){try{sessionStorage.setItem('lang_chosen','1');}catch(e){}}
+  function show(){
+    var bar=document.createElement('div');
+    bar.setAttribute('role','complementary');
+    bar.setAttribute('aria-label','Language');
+    bar.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:1000;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;background:#1e40af;color:#fff;padding:0.7rem 1rem;font-size:0.95rem;line-height:1.4;';
+    var msg=document.createElement('span');
+    msg.textContent='This page is also available in English.';
+    var link=document.createElement('a');
+    link.href=target+location.search+location.hash;
+    link.textContent='Read in English';
+    link.style.cssText='color:#fff;font-weight:600;text-decoration:underline;';
+    link.addEventListener('click',remember);
+    var close=document.createElement('button');
+    close.type='button';
+    close.textContent='Dismiss';
+    close.style.cssText='background:none;border:1px solid rgba(255,255,255,0.5);color:#fff;border-radius:4px;padding:0.2rem 0.6rem;font-size:0.85rem;cursor:pointer;';
+    close.addEventListener('click',function(){remember();bar.parentNode.removeChild(bar);});
+    bar.appendChild(msg);bar.appendChild(link);bar.appendChild(close);
+    document.body.appendChild(bar);
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',show);}else{show();}
+})();
+</script>
 </body>
 
 </html>

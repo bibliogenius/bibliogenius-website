@@ -1,6 +1,6 @@
 # BiblioGenius
 
-> Open Source, local-first library management application.
+> Open Source, local-first personal library management application. Free, no account required, no tracking.
 
 ## License
 
@@ -16,40 +16,96 @@ BiblioGenius is a personal library management app. It runs offline on your devic
 
 An account is optional. When one is created, it holds an end-to-end encrypted copy of the library for backup, recovery and multi-device use: the server only ever stores ciphertext it cannot read.
 
-## Tech Stack
+## Who it is for
 
-- **Backend**: Rust (Axum, SeaORM, SQLite)
-- **Frontend**: Flutter (iOS, macOS, Windows, Linux, Android)
-- **Hub**: Symfony (PHP)
-- **Communication**: FFI (Flutter Foreign Function Interface)
-- **License**: AGPL-3.0
+Readers cataloguing a personal collection, families sharing shelves across a household, reading groups and associations, small libraries, booksellers, and teachers. The app is modular: features that do not apply to a given use can be left off.
 
-## Key Features
+## Price and availability
+
+- **Price**: free. No paid tier, no subscription, no in-app purchase.
+- **Platforms**: iOS, Android, macOS, Windows, Linux.
+- **App Store**: https://apps.apple.com/app/bibliogenius/id6757465461
+- **Google Play**: https://play.google.com/store/apps/details?id=com.bibliogenius.app
+- **Interface languages**: French, English, Spanish, German.
+
+## Key features
 
 - Local-first: works offline, no account and no cloud dependency
-- End-to-end encryption for peer exchanges and for the optional account
-- Peer-to-peer book lending with neighbors
-- Modular: adapts to readers, families, associations, librarians, booksellers, teachers
-- Multi-source book search: BNF (French National Library), Inventaire.io, OpenLibrary, Google Books
+- Barcode and ISBN scanning, with metadata from BNF (French National Library), Inventaire.io, OpenLibrary and Google Books
+- Shelves, collections, series tracking, reading progress, wishlist
+- Peer-to-peer book lending with neighbors, end-to-end encrypted
+- Optional encrypted account for backup, recovery and multi-device sync
+- Import from Gleeph, Babelio, Goodreads and inventaire.io
+- Export and backup of the whole library
+
+## Frequently asked questions
+
+**Is BiblioGenius free?**
+Yes. The application is entirely free and open source, published under the AGPL-3.0 license.
+
+**Where is my data stored?**
+Locally on your device. Nothing is sent to a server without an action on your part. If you create the optional account, the copy held on the server is end-to-end encrypted and unreadable by the server.
+
+**What platforms does BiblioGenius run on?**
+iOS, Android, macOS, Windows and Linux.
+
+**Does it need an account?**
+No. An account is optional and only adds backup, recovery and multi-device sync.
+
+**How do I connect to another reader's library?**
+Through a QR code or an invitation link. Exchanges between readers are end-to-end encrypted.
+
+**Can I move my library from another app?**
+Yes. Guides cover Gleeph, Babelio, Goodreads and inventaire.io: https://bibliogenius.org/free-your-library.html
 
 ## Documentation
 
-User guides, in French and English:
+User guides. Index per language:
 
-- All guides (FR): https://bibliogenius.org/docs/
-- All guides (EN): https://bibliogenius.org/en/docs/
-- Adding a book: https://bibliogenius.org/en/docs/add-book.html
+- French: https://bibliogenius.org/docs/
+- English: https://bibliogenius.org/en/docs/
+- Spanish: https://bibliogenius.org/es/docs/
+- German: https://bibliogenius.org/de/docs/
+
+English guides:
+
+- Getting started: https://bibliogenius.org/en/docs/add-book.html
+- Importing books: https://bibliogenius.org/en/docs/import-books.html
+- Bulk-updating book data: https://bibliogenius.org/en/docs/complete-library.html
+- Searching external catalogs: https://bibliogenius.org/en/docs/external-search.html
 - Organizing shelves: https://bibliogenius.org/en/docs/organize-shelves.html
+- Collections: https://bibliogenius.org/en/docs/collections.html
+- Following a series: https://bibliogenius.org/en/docs/series.html
+- Ready-made lists: https://bibliogenius.org/en/docs/curated-lists.html
+- Tracking reading progress: https://bibliogenius.org/en/docs/reading-progress.html
+- Reading suggestions: https://bibliogenius.org/en/docs/recommendations.html
+- Wishlist: https://bibliogenius.org/en/docs/wishlist.html
+- Audio features: https://bibliogenius.org/en/docs/audio.html
 - Connecting with friends: https://bibliogenius.org/en/docs/connect-friends.html
+- Managing contacts: https://bibliogenius.org/en/docs/contacts.html
 - Lending a book: https://bibliogenius.org/en/docs/lending.html
+- Managing requests: https://bibliogenius.org/en/docs/requests.html
+- Exploring the network: https://bibliogenius.org/en/docs/network.html
 - The library directory: https://bibliogenius.org/en/docs/directory.html
-- Exporting and backing up: https://bibliogenius.org/en/docs/export-backup.html
+- Notifications: https://bibliogenius.org/en/docs/notifications.html
+- My profile: https://bibliogenius.org/en/docs/profile.html
 - Encrypted account and multiple devices: https://bibliogenius.org/en/docs/account-sync.html
+- Exporting and backing up: https://bibliogenius.org/en/docs/export-backup.html
 - Where the data is stored: https://bibliogenius.org/en/docs/privacy-data.html
+
+## Blog
+
+- Blog (FR): https://bibliogenius.org/blog/
+- Blog (EN): https://bibliogenius.org/blog/en/
+- Blog (ES): https://bibliogenius.org/blog/es/
+- RSS: https://bibliogenius.org/blog/rss.xml
 
 ## Links
 
 - Website: https://bibliogenius.org
+- Changelog: https://bibliogenius.org/changelog.html
+- Support and FAQ: https://bibliogenius.org/support.html
+- Our story: https://bibliogenius.org/story.html
 - Source of truth: https://codeberg.org/bibliogenius
 - App Repository: https://codeberg.org/bibliogenius/bibliogenius-app
 - Rust Backend Repository: https://codeberg.org/bibliogenius/bibliogenius
@@ -57,6 +113,14 @@ User guides, in French and English:
 - Read-only mirror: https://github.com/bibliogenius
 - Contribute: https://bibliogenius.org/contribute.html
 - Privacy Policy: https://bibliogenius.org/privacy.html
+
+## Tech stack
+
+- **Backend**: Rust (Axum, SeaORM, SQLite)
+- **Frontend**: Flutter (iOS, Android, macOS, Windows, Linux)
+- **Hub**: Symfony (PHP)
+- **Communication**: FFI (Flutter Foreign Function Interface)
+- **License**: AGPL-3.0
 
 ## Contributing
 

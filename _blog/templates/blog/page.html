@@ -31,23 +31,55 @@
         .share-link:hover { border-color: var(--primary-color); color: var(--primary-color); }
     </style>
 
+    {# A <script> is a raw text element: HTML entities are NOT decoded inside
+       it, so the default Tera escaping used to leave "https:&#x2F;&#x2F;..."
+       and "l&#x27;app" in the payload. json_encode emits a correctly quoted
+       JSON string, including its own surrounding quotes. #}
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "{{ page.title }}",
-        "description": "{{ page.description | default(value='') }}",
-        "url": "{{ page.permalink }}",
+        "headline": {{ page.title | json_encode | safe }},
+        "description": {{ page.description | default(value="") | json_encode | safe }},
+        "url": {{ page.permalink | json_encode | safe }},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": {{ page.permalink | json_encode | safe }}},
+        "inLanguage": "{{ lang }}",
         "datePublished": "{{ page.date }}",
         {% if page.updated %}"dateModified": "{{ page.updated }}",{% endif %}
+        {%- if og_img %}
+        "image": [{{ og_img | json_encode | safe }}],
+        {%- endif %}
+        {%- if page.extra.tags %}
+        "keywords": {{ page.extra.tags | join(sep=", ") | json_encode | safe }},
+        {%- endif %}
+        "isPartOf": {
+            "@type": "Blog",
+            "name": {{ config.title | json_encode | safe }},
+            "url": "{{ config.base_url | safe }}/"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "BiblioGenius",
+            "url": "{{ config.extra.site_url | safe }}/"
+        },
         "author": {
             "@type": "Organization",
-            "name": "BiblioGenius"
+            "name": "BiblioGenius",
+            "url": "{{ config.extra.site_url | safe }}/"
         },
         "publisher": {
             "@type": "Organization",
             "name": "BiblioGenius",
-            "url": "https://bibliogenius.org"
+            "url": "{{ config.extra.site_url | safe }}/",
+        "sameAs": [
+            "https://codeberg.org/bibliogenius",
+            "https://apps.apple.com/app/bibliogenius/id6757465461",
+            "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+        ],
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ config.extra.site_url | safe }}/favicon-192x192.png"
+            }
         }
     }
     </script>
