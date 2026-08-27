@@ -4,9 +4,9 @@
 
 # -- Métadonnées --
 lang_name: Français
-title: BiblioGenius — Vos livres vous appartiennent
-meta_description: Découvrez BiblioGenius : l'application gratuite et open source pour gérer votre bibliothèque personnelle et partager vos livres directement avec vos proches.
-og_title: BiblioGenius — Vos livres vous appartiennent
+title: Notre histoire : pourquoi BiblioGenius existe
+meta_description: BiblioGenius est une application libre de gestion de bibliothèque personnelle. Née en 2020 d'un projet d'études, reconstruite depuis, publiée sur les stores depuis août 2026. Voici d'où elle vient.
+og_title: Notre histoire : pourquoi BiblioGenius existe
 og_description: Gérez votre bibliothèque, partagez vos livres, gardez le contrôle. Gratuit, open source, sans piège.
 
 # -- Navigation --
@@ -89,4 +89,31 @@ btn_android: Télécharger sur Android
 btn_source: Voir le code source
 
 # -- Footer --
-colophon: Projet open source <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; Aucune donnée collectée
+colophon: Projet open source <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; Sans publicité ni traceur
+
+# -- Origine et fiche factuelle --
+hero_lede: BiblioGenius est une application libre de gestion de bibliothèque personnelle. Elle fonctionne sur votre appareil, sans compte obligatoire, et vous permet de prêter vos livres directement à vos proches. Voici pourquoi elle existe.
+ch_origins: L'origine
+origins_title: D'où vient BiblioGenius
+origins_p1: L'idée date de 2020. Un projet de fin de cours, pendant la formation CS50 de Harvard suivie en ligne&nbsp;: ajouter, corriger et classer des livres à partir de leur ISBN, en interrogeant des catalogues ouverts.
+origins_p2: Elle a été reprise, abandonnée, reprise encore. Une application mobile sous Symfony, puis Drupal et NativeScript, avec le scan de code-barres. Chaque fois la même obsession, et une technique qui ne tenait pas la distance.
+origins_p3: La version que vous installez aujourd'hui date de <strong>novembre 2025</strong>&nbsp;: un coeur en Rust, une interface en Flutter, et le prêt entre lecteurs placé au centre plutôt qu'ajouté après coup. Sur les stores depuis août 2026.
+origins_p4: Six ans, trois générations de code. C'est aussi la réponse à la question que cette page pose plus haut&nbsp;: que devient votre bibliothèque si l'application disparaît&nbsp;? Ici le code est public, le format d'export est documenté, et vos livres sont déjà sur votre appareil. Même le pire scénario vous les laisse.
+ch_facts: Les faits
+facts_title: BiblioGenius en bref
+facts_k1: Ce que c'est
+facts_v1: Une application de gestion de bibliothèque personnelle&nbsp;: organiser ses livres, suivre ses lectures, et les prêter directement à ses proches.
+facts_k2: Depuis quand
+facts_v2: Novembre 2025 dans sa forme actuelle, après une première version en 2020. Publiée sur les stores depuis août 2026.
+facts_k3: Licence
+facts_v3: <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a>. Code source public sur <a href="https://codeberg.org/bibliogenius">Codeberg</a>.
+facts_k4: Plateformes
+facts_v4: iOS, Android, macOS, Windows, Linux. Interface en français, anglais, espagnol et allemand.
+facts_k5: Prix
+facts_v5: Gratuit. Pas d'abonnement, pas d'achat intégré, pas de publicité.
+facts_k6: Vos données
+facts_v6: Sur votre appareil. Aucun compte obligatoire&nbsp;; le compte optionnel ne stocke que du chiffré, illisible par le serveur. <a href="docs/privacy-data.html">Le détail</a>.
+facts_k7: Données des livres
+facts_v7: Des catalogues ouverts&nbsp;: <a href="https://catalogue.bnf.fr/">BnF</a>, <a href="https://inventaire.io/">Inventaire</a>, <a href="https://openlibrary.org/">OpenLibrary</a>. Google&nbsp;Books reste optionnel, à activer avec votre propre clé.
+facts_k8: Qui le fait
+facts_v8: Federico Calo, développeur indépendant, avec des contributrices et contributeurs bénévoles. <a href="{{url:contribute}}">Les remerciements</a>.

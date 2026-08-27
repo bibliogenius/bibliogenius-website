@@ -84,10 +84,14 @@
         <span class="hamburger-line"></span>
     </button>
     <div class="site-nav-menu" id="site-nav-menu">
-        <a href="{{ config.extra.site_url }}/" class="site-nav-link">{% if lang == "fr" %}Accueil{% else %}Home{% endif %}</a>
-        <a href="{{ config.extra.site_url }}/story.html" class="site-nav-link">{% if lang == "fr" %}Notre histoire{% else %}Our Story{% endif %}</a>
+        {# French lives at the root, every other language under /{lang}/. Without
+           this prefix the whole nav sent non-French readers to French pages. #}
+        {%- set root = config.extra.site_url ~ "/" %}
+        {%- if lang != "fr" %}{% set root = config.extra.site_url ~ "/" ~ lang ~ "/" %}{% endif %}
+        <a href="{{ root | safe }}" class="site-nav-link">{% if lang == "fr" %}Accueil{% elif lang == "es" %}Inicio{% else %}Home{% endif %}</a>
+        <a href="{{ root | safe }}story.html" class="site-nav-link">{% if lang == "fr" %}Notre histoire{% elif lang == "es" %}Nuestra historia{% else %}Our Story{% endif %}</a>
         <a href="{{ config.base_url }}/" class="site-nav-link" style="color:#fff;">Blog</a>
-        <a href="{{ config.extra.site_url }}/docs/" class="site-nav-link">Documentation</a>
+        <a href="{{ root | safe }}docs/" class="site-nav-link">Documentation</a>
         {{ self::lang_switcher(current_lang=lang, permalink=permalink, translations=translations, label="Langue") }}
     </div>
 </nav>
@@ -99,7 +103,14 @@
     <div class="container">
         <p>BiblioGenius · Open Source, local-first.</p>
         <div class="footer-bottom">
-            <p>&copy; 2025-2026 BiblioGenius — <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a></p>
+            <p>&copy; 2025-2026 BiblioGenius &middot; <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a></p>
+            {%- set froot = "/" %}{% if lang != "fr" %}{% set froot = "/" ~ lang ~ "/" %}{% endif %}
+            <nav class="legal-line" aria-label="{% if lang == "fr" %}Informations légales{% elif lang == "es" %}Información legal{% else %}Legal information{% endif %}">
+                <a href="/privacy.html">{% if lang == "fr" %}Confidentialité{% elif lang == "es" %}Privacidad{% else %}Privacy{% endif %}</a> &middot;
+                <a href="{{ froot | safe }}data-deletion.html">{% if lang == "fr" %}Suppression des données{% elif lang == "es" %}Eliminación de datos{% else %}Data deletion{% endif %}</a> &middot;
+                <a href="{{ froot | safe }}#contact">{% if lang == "fr" %}Contact{% elif lang == "es" %}Contacto{% else %}Contact{% endif %}</a> &middot;
+                <a href="https://codeberg.org/bibliogenius">{% if lang == "fr" %}Code source{% elif lang == "es" %}Código fuente{% else %}Source code{% endif %}</a>
+            </nav>
         </div>
     </div>
 </footer>
@@ -124,4 +135,72 @@
     });
 })();
 </script>
+{% endmacro %}
+
+
+{# The entity node, byte-for-byte the same identity the Python builder emits
+   for the vitrine pages. Blog and vitrine are two generators; without the
+   shared @id they would declare two unrelated organisations. #}
+{% macro entity_org(site_url, lang) %}{
+            "@type": "Organization",
+            "@id": "{{ site_url | safe }}/#organization",
+            "name": "BiblioGenius",
+            "url": "{{ site_url | safe }}/",
+            "email": "contact@bibliogenius.org",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "{{ site_url | safe }}/#logo",
+                "url": "{{ site_url | safe }}/favicon-192x192.png",
+                "contentUrl": "{{ site_url | safe }}/favicon-192x192.png",
+                "width": 192,
+                "height": 192,
+                "caption": "BiblioGenius"
+            },
+            "foundingDate": "2025-11",
+            "founder": {
+                "@type": "Person",
+                "@id": "{{ site_url | safe }}/#founder",
+                "name": "Federico Calo",
+                "url": "https://federico-calo.net/",
+                "sameAs": ["https://federico-calo.net/"]
+            },
+            "member": [
+                {
+                    "@type": "Person",
+                    "@id": "{{ site_url | safe }}/#contributor-godet",
+                    "name": "Sébastien Godet",
+                    "sameAs": ["https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"]
+                }
+            ],
+            "mainEntityOfPage": {"@id": "{{ site_url | safe }}/#webpage"},
+            "sameAs": [
+                "https://codeberg.org/bibliogenius",
+                "https://github.com/bibliogenius",
+                "https://apps.apple.com/app/bibliogenius/id6757465461",
+                "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+            ]
+        }{% endmacro %}
+
+{# Boilerplate closing every post. A reader arriving from social has no idea
+   what BiblioGenius is, and the blog otherwise reaches the story page only
+   through the nav, which carries far less weight than a contextual link. #}
+{% macro about_box(lang) %}
+{%- set aroot = "/" %}{% if lang != "fr" %}{% set aroot = "/" ~ lang ~ "/" %}{% endif %}
+<aside class="about-box">
+    <h2>{% if lang == "fr" %}À propos de BiblioGenius{% elif lang == "es" %}Acerca de BiblioGenius{% else %}About BiblioGenius{% endif %}</h2>
+    <p>
+    {%- if lang == "fr" %}
+        <strong>BiblioGenius</strong> est une application libre de gestion de bibliothèque personnelle : organisez vos livres, suivez vos lectures et prêtez-les directement à vos proches. Gratuite, open source, et vos données restent sur votre appareil.
+    {%- elif lang == "es" %}
+        <strong>BiblioGenius</strong> es una aplicación libre para gestionar tu biblioteca personal: organiza tus libros, sigue tus lecturas y préstalos directamente a los tuyos. Gratuita, open source, y tus datos se quedan en tu dispositivo.
+    {%- else %}
+        <strong>BiblioGenius</strong> is a free, open source personal library app: organise your books, track your reading and lend them directly to the people around you. Free, and your data stays on your device.
+    {%- endif %}
+    </p>
+    <p>
+        <a href="{{ aroot | safe }}story.html">{% if lang == "fr" %}D'où vient BiblioGenius et pourquoi{% elif lang == "es" %}De dónde viene BiblioGenius y por qué{% else %}Where BiblioGenius comes from, and why{% endif %}</a>
+        &middot;
+        <a href="{{ aroot | safe }}">{% if lang == "fr" %}Télécharger l'application{% elif lang == "es" %}Descargar la aplicación{% else %}Download the app{% endif %}</a>
+    </p>
+</aside>
 {% endmacro %}

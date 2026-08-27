@@ -11,7 +11,7 @@ nav_blog: Blog
 nav_changelog: Changelog
 lang_label: Language
 lang_name: English
-footer_text: "BiblioGenius &mdash; Open Source, local, encrypted."
+footer_text: "BiblioGenius - Open Source, local, encrypted."
 ---
 
 ## 1.1.5 <small>August 26, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.4-beta.2...v1.1.5-beta.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.5-beta.0" class="changelog-link">release</a>

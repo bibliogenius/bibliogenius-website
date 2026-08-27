@@ -68,6 +68,7 @@ SITEMAP_EXCLUDE = {'invite'}
 DOC_PRIORITY = '0.6'
 DOC_INDEX_PRIORITY = '0.7'
 BLOG_PRIORITY = '0.6'
+BLOG_INDEX_PRIORITY = '0.7'
 
 # Month names per language (for blog post date formatting)
 MONTH_NAMES = {
@@ -81,10 +82,62 @@ MONTH_NAMES = {
            'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
 }
 
+# Legal footer line, injected into every generated page. Kept here rather than
+# in the per-page translation files: it is site chrome, and five different
+# footer shapes across the site had drifted with none of them reaching the
+# privacy policy or the data-deletion procedure. Root-relative URLs so the
+# depth of the page never matters.
+LEGAL_LINKS = {
+    'fr': [('Confidentialité', '/privacy.html'),
+           ('Suppression des données', '{deletion}'),
+           ('Contact', '{home}#contact'),
+           ('Code source', 'https://codeberg.org/bibliogenius')],
+    'en': [('Privacy', '/privacy.html'),
+           ('Data deletion', '{deletion}'),
+           ('Contact', '{home}#contact'),
+           ('Source code', 'https://codeberg.org/bibliogenius')],
+    'es': [('Privacidad', '/privacy.html'),
+           ('Eliminación de datos', '{deletion}'),
+           ('Contacto', '{home}#contact'),
+           ('Código fuente', 'https://codeberg.org/bibliogenius')],
+    'de': [('Datenschutz', '/privacy.html'),
+           ('Datenlöschung', '{deletion}'),
+           ('Kontakt', '{home}#contact'),
+           ('Quellcode', 'https://codeberg.org/bibliogenius')],
+}
+LEGAL_ARIA = {
+    'fr': 'Informations légales',
+    'en': 'Legal information',
+    'es': 'Información legal',
+    'de': 'Rechtliche Hinweise',
+}
+
+
+def build_legal_line(lang):
+    """The legal links every footer carries, as one nav element."""
+    links = LEGAL_LINKS.get(lang, LEGAL_LINKS[DEFAULT_LANG])
+    home = '/' if lang == DEFAULT_LANG else f'/{lang}/'
+    deletion = '/data-deletion.html' if lang == DEFAULT_LANG else f'/{lang}/data-deletion.html'
+    parts = []
+    for label, href in links:
+        href = href.format(home=home, deletion=deletion)
+        parts.append(f'<a href="{href}">{label}</a>')
+    aria = LEGAL_ARIA.get(lang, LEGAL_ARIA[DEFAULT_LANG])
+    return ('\n<nav class="legal-line" aria-label="' + aria + '">'
+            + ' &middot; '.join(parts) + '</nav>\n')
+
+
 # Robots directive, injected in every page.
 # max-image-preview:large lets Google use a full-size thumbnail in mobile
 # search results and makes the page eligible for Discover cards.
 ROBOTS_META = '    <meta name="robots" content="max-image-preview:large">'
+
+# Pages that must not be indexed. invite.html is a deep-link landing that
+# renders the name of somebody's library from the URL: it is already kept out
+# of the sitemap, but nothing until now told a crawler to skip it. `follow` is
+# kept so the links it carries still pass through.
+NOINDEX_PAGES = {'invite'}
+NOINDEX_META = '    <meta name="robots" content="noindex, follow">'
 
 # Language suggestion banner (injected only in default-lang pages).
 # It replaces an earlier automatic location.replace() to /en/. Googlebot
@@ -126,7 +179,7 @@ LANG_SUGGEST_SCRIPT = '''<script>
 </script>'''
 
 
-def finalize_html(html, lang, has_english, schema=''):
+def finalize_html(html, lang, has_english, schema='', robots=ROBOTS_META):
     """Apply the injections every generated page shares.
 
     Injects the robots directive and any JSON-LD right after <head>, the
@@ -134,7 +187,7 @@ def finalize_html(html, lang, has_english, schema=''):
     flag on the language switcher. The banner goes at the end of the body so
     <meta charset> stays within the first bytes of the document.
     """
-    head_extras = ROBOTS_META
+    head_extras = robots
     if schema:
         head_extras += '\n' + schema
     # Anchor on the charset meta so it stays the first element of the head.
@@ -143,6 +196,8 @@ def finalize_html(html, lang, has_english, schema=''):
         html = html.replace(charset, charset + '\n' + head_extras, 1)
     else:
         html = html.replace('<head>', '<head>\n' + head_extras, 1)
+    if '</footer>' in html:
+        html = html.replace('</footer>', build_legal_line(lang) + '</footer>', 1)
     if lang == DEFAULT_LANG and has_english:
         html = html.replace('</body>', LANG_SUGGEST_SCRIPT + '\n</body>', 1)
     return inject_lang_chosen(html)
@@ -156,30 +211,192 @@ def inject_lang_chosen(html):
     )
 
 
-# Publisher / author node reused by every JSON-LD block below.
-ORGANIZATION = {
-    '@type': 'Organization',
-    'name': 'BiblioGenius',
-    'url': BASE_URL + '/',
-    'logo': BASE_URL + '/favicon-192x192.png',
-    # sameAs consolidates the entity: the same profiles are declared on the
-    # homepage, so every page points answer engines at one identity.
-    'sameAs': [
-        'https://codeberg.org/bibliogenius',
-        'https://apps.apple.com/app/bibliogenius/id6757465461',
-        'https://play.google.com/store/apps/details?id=com.bibliogenius.app',
-    ],
+# --- Entity graph -----------------------------------------------------------
+# Every page emits a single JSON-LD @graph whose nodes carry a stable @id.
+# Without those ids each page declared its own detached Organization object,
+# and nothing told an answer engine the four of them were the same entity.
+# The fragments below are the canonical, language-independent identity of the
+# project: /#organization IS the entity, and its mainEntityOfPage names the
+# page that acts as its Entity Home.
+ENTITY_HOME = BASE_URL + '/'
+ORG_ID = BASE_URL + '/#organization'
+WEBSITE_ID = BASE_URL + '/#website'
+SOFTWARE_ID = BASE_URL + '/#software'
+LOGO_ID = BASE_URL + '/#logo'
+# The homepage node, referenced by name because the Organization declares its
+# home before that page's own node is built.
+ENTITY_HOME_NODE_ID = BASE_URL + '/#webpage'
+
+CONTACT_EMAIL = 'contact@bibliogenius.org'
+
+# The project in its current shape: mobile-first app, Rust core, Flutter UI,
+# peer-to-peer lending. Earlier prototypes going back to 2020 explored the
+# same idea on other stacks, but they are ancestry, not this entity.
+FOUNDING_DATE = '2025-11'
+
+# Already published in human-readable form on the contribute page; stating it
+# in structured data adds no disclosure, only machine-readability.
+FOUNDER = {
+    '@type': 'Person',
+    '@id': BASE_URL + '/#founder',
+    'name': 'Federico Calo',
+    'url': 'https://federico-calo.net/',
+    'sameAs': ['https://federico-calo.net/'],
 }
 
-WEBSITE = {
-    '@type': 'WebSite',
-    'name': 'BiblioGenius',
-    'url': BASE_URL + '/',
+# Named contributors with an ongoing role. Listing them tells an answer engine
+# the project is not a single person, which is the first thing asked of a
+# local-first app that must still exist in five years. Contributors who have
+# not agreed to be named are thanked in prose on the contribute page instead.
+MEMBERS = [
+    {
+        '@type': 'Person',
+        '@id': BASE_URL + '/#contributor-godet',
+        'name': 'Sébastien Godet',
+        'sameAs': ['https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/'],
+    },
+]
+
+SITE_LANGS = ['fr', 'en', 'es', 'de']
+
+# Third-party profiles that corroborate the entity. Answer engines reconcile
+# an entity from independent sources, so this list is the strongest lever the
+# site has. Store pages are product listings rather than identity profiles, so
+# the forge accounts carry most of the weight until a Wikidata item exists.
+SAME_AS = [
+    'https://codeberg.org/bibliogenius',
+    'https://github.com/bibliogenius',
+    'https://apps.apple.com/app/bibliogenius/id6757465461',
+    'https://play.google.com/store/apps/details?id=com.bibliogenius.app',
+]
+
+# Description of the project as an entity, not of the app as a product: the
+# SoftwareApplication node already carries the product pitch.
+ORG_DESCRIPTION = {
+    'fr': "BiblioGenius est un projet libre qui édite une application de gestion "
+          "de bibliothèque personnelle, locale et sans compte obligatoire, publiée "
+          "sous licence AGPL-3.0 et disponible sur iOS, Android, macOS, Windows et Linux.",
+    'en': "BiblioGenius is a free software project publishing a personal library "
+          "management app that runs locally and needs no account, released under the "
+          "AGPL-3.0 license for iOS, Android, macOS, Windows and Linux.",
+    'es': "BiblioGenius es un proyecto libre que publica una aplicación de gestión "
+          "de biblioteca personal, local y sin cuenta obligatoria, con licencia "
+          "AGPL-3.0 y disponible en iOS, Android, macOS, Windows y Linux.",
+    'de': "BiblioGenius ist ein freies Projekt, das eine App zur Verwaltung der "
+          "persönlichen Bibliothek veröffentlicht: lokal, ohne Pflichtkonto, unter "
+          "der AGPL-3.0-Lizenz für iOS, Android, macOS, Windows und Linux.",
 }
+
+
+# Topics the entity is authoritative on. These anchor it in a subject area
+# instead of leaving it as a bare name.
+ORG_KNOWS_ABOUT = {
+    'fr': ['Bibliothèque personnelle', 'Catalogage de livres', 'Prêt de livres',
+           'Logiciel libre', 'Local-first', 'Chiffrement de bout en bout',
+           'Pair à pair', 'ISBN'],
+    'en': ['Personal library', 'Book cataloguing', 'Book lending',
+           'Free software', 'Local-first software', 'End-to-end encryption',
+           'Peer-to-peer', 'ISBN'],
+    'es': ['Biblioteca personal', 'Catalogación de libros', 'Préstamo de libros',
+           'Software libre', 'Local-first', 'Cifrado de extremo a extremo',
+           'Par a par', 'ISBN'],
+    'de': ['Persönliche Bibliothek', 'Buchkatalogisierung', 'Buchausleihe',
+           'Freie Software', 'Local-first', 'Ende-zu-Ende-Verschlüsselung',
+           'Peer-to-Peer', 'ISBN'],
+}
+
+
+def _lang_value(table, lang):
+    """Pick a per-language constant, falling back to the default language."""
+    return table.get(lang, table[DEFAULT_LANG])
+
+
+def build_organization_node(lang):
+    """The entity itself. Emitted on every page, always under the same @id."""
+    return {
+        '@type': 'Organization',
+        '@id': ORG_ID,
+        'name': 'BiblioGenius',
+        'url': ENTITY_HOME,
+        'description': _lang_value(ORG_DESCRIPTION, lang),
+        'logo': {
+            '@type': 'ImageObject',
+            '@id': LOGO_ID,
+            'url': BASE_URL + '/favicon-192x192.png',
+            'contentUrl': BASE_URL + '/favicon-192x192.png',
+            'width': 192,
+            'height': 192,
+            'caption': 'BiblioGenius',
+        },
+        'image': {'@id': LOGO_ID},
+        'email': CONTACT_EMAIL,
+        'contactPoint': {
+            '@type': 'ContactPoint',
+            'contactType': 'customer support',
+            'email': CONTACT_EMAIL,
+            'availableLanguage': SITE_LANGS,
+        },
+        'knowsAbout': _lang_value(ORG_KNOWS_ABOUT, lang),
+        'foundingDate': FOUNDING_DATE,
+        'founder': FOUNDER,
+        'member': MEMBERS,
+        # The page that answers "what is this entity": its Entity Home.
+        'mainEntityOfPage': {'@id': ENTITY_HOME_NODE_ID},
+        'sameAs': SAME_AS,
+    }
+
+
+def build_website_node(lang):
+    """The site as a work, published by the entity."""
+    return {
+        '@type': 'WebSite',
+        '@id': WEBSITE_ID,
+        'url': ENTITY_HOME,
+        'name': 'BiblioGenius',
+        'description': _lang_value(ORG_DESCRIPTION, lang),
+        'inLanguage': SITE_LANGS,
+        'publisher': {'@id': ORG_ID},
+    }
+
+
+def build_software_node(t):
+    """The product. Only the homepage carries it; the rest reference its @id."""
+    return {
+        '@type': 'SoftwareApplication',
+        '@id': SOFTWARE_ID,
+        'name': 'BiblioGenius',
+        'operatingSystem': 'iOS, Android, macOS, Windows, Linux',
+        'applicationCategory': 'UtilitiesApplication',
+        'applicationSubCategory': 'Personal library management',
+        'description': _plain(t.get('schema_description', '')),
+        'url': ENTITY_HOME,
+        'softwareVersion': t.get('app_version', ''),
+        'isAccessibleForFree': True,
+        'inLanguage': SITE_LANGS,
+        'license': 'https://www.gnu.org/licenses/agpl-3.0.html',
+        'installUrl': [
+            'https://apps.apple.com/app/bibliogenius/id6757465461',
+            'https://play.google.com/store/apps/details?id=com.bibliogenius.app',
+        ],
+        'author': {'@id': ORG_ID},
+        'publisher': {'@id': ORG_ID},
+        # isAccessibleForFree already states the app is free, but price-aware
+        # surfaces read offers instead, so both are declared. priceCurrency is
+        # not a choice: schema.org requires it whenever price is present, and
+        # an Offer has no way to say "free, no currency". EUR is the project's
+        # own currency; the price being 0 makes it inert everywhere else.
+        'offers': {
+            '@type': 'Offer',
+            'price': '0',
+            'priceCurrency': 'EUR',
+        },
+    }
+
 
 # Schema.org type per vitrine page. Pages absent here get no page-level
-# JSON-LD; index.html carries its own SoftwareApplication in the template.
+# JSON-LD.
 PAGE_SCHEMA_TYPES = {
+    'index': 'WebPage',
     'story': 'AboutPage',
     'contribute': 'WebPage',
     'free-your-library': 'WebPage',
@@ -210,11 +427,25 @@ def _schema_block(payload):
     return '    <script type="application/ld+json">\n' + body + '\n    </script>'
 
 
-def build_faq_schema(t):
-    """FAQPage built from the faq_q{n}/faq_a{n} pairs of a translation file.
+def build_entity_graph(lang, *nodes):
+    """One JSON-LD block: the entity, the site, then the page-specific nodes.
+
+    The entity and site nodes are restated on every page rather than
+    cross-referenced: a bare {"@id": ...} pointing at a node defined on
+    another URL is not reliably resolved by crawlers.
+    """
+    graph = [build_organization_node(lang), build_website_node(lang)]
+    graph.extend(n for n in nodes if n)
+    return _schema_block({'@context': 'https://schema.org', '@graph': graph})
+
+
+def build_faq_nodes(t, url):
+    """FAQPage node built from the faq_q{n}/faq_a{n} pairs of a translation file.
 
     Answer engines quote question/answer pairs far more readily than prose,
     and the support page already holds the four questions users actually ask.
+    Returns a graph node, not a script block: it joins the page graph so the
+    FAQ hangs off the same entity as everything else.
     """
     entries = []
     n = 1
@@ -229,73 +460,102 @@ def build_faq_schema(t):
         })
         n += 1
     if not entries:
-        return ''
-    return _schema_block({
-        '@context': 'https://schema.org',
+        return None
+    return {
         '@type': 'FAQPage',
+        '@id': url + '#faq',
         'mainEntity': entries,
-    })
+    }
 
 
-def build_page_schema(page, lang, t):
-    """JSON-LD for a vitrine page: the page node, its breadcrumb, and any FAQ."""
+def build_page_schema(page, lang, t, app_version=''):
+    """One JSON-LD @graph for a vitrine page.
+
+    The graph always restates the entity and the site under their canonical
+    @id, then adds the nodes specific to this page. Restating rather than
+    cross-referencing is deliberate: a bare {"@id": ...} pointing at a node
+    defined on another URL is not reliably resolved by crawlers.
+    """
     schema_type = PAGE_SCHEMA_TYPES.get(page)
     if not schema_type:
         return ''
     url = BASE_URL + page_url(page, lang)
     home = BASE_URL + page_url('index', lang)
     name = _short_title(t)
-    payload = {
-        '@context': 'https://schema.org',
+    is_home = page == 'index'
+    page_id = ENTITY_HOME_NODE_ID if (is_home and lang == DEFAULT_LANG) else url + '#webpage'
+
+    page_node = {
         '@type': schema_type,
+        '@id': page_id,
         'name': name,
         'description': _plain(t.get('meta_description', '')),
         'url': url,
         'inLanguage': lang,
-        'isPartOf': WEBSITE,
-        'publisher': ORGANIZATION,
-        'breadcrumb': {
+        'isPartOf': {'@id': WEBSITE_ID},
+        'about': {'@id': ORG_ID},
+        'publisher': {'@id': ORG_ID},
+        'breadcrumb': {'@id': url + '#breadcrumb'},
+    }
+    if is_home:
+        # The homepage is the product page: the entity is what it is about,
+        # the app is what it primarily presents.
+        page_node['mainEntity'] = {'@id': SOFTWARE_ID}
+    elif schema_type == 'AboutPage':
+        # The story page exists to describe the entity, so it says so. It
+        # corroborates the Entity Home rather than competing with it.
+        page_node['mainEntity'] = {'@id': ORG_ID}
+
+    # The homepage is the root of every trail, so it gets no breadcrumb of
+    # its own: a one-item BreadcrumbList carries no information.
+    breadcrumb_node = None
+    if is_home:
+        del page_node['breadcrumb']
+    else:
+        breadcrumb_node = {
             '@type': 'BreadcrumbList',
+            '@id': url + '#breadcrumb',
             'itemListElement': [
                 {'@type': 'ListItem', 'position': 1,
                  'name': 'BiblioGenius', 'item': home},
                 {'@type': 'ListItem', 'position': 2,
                  'name': name, 'item': url},
             ],
-        },
-    }
-    blocks = [_schema_block(payload)]
-    faq = build_faq_schema(t)
+        }
+
+    software = None
+    if is_home:
+        values = dict(t)
+        values['app_version'] = app_version
+        software = build_software_node(values)
+    faq = build_faq_nodes(t, url)
     if faq:
-        blocks.append(faq)
-    return '\n'.join(blocks)
+        page_node['mainEntity'] = {'@id': url + '#faq'}
+    return build_entity_graph(lang, software, page_node, breadcrumb_node, faq)
 
 
 def build_doc_schema(slug, lang, meta):
-    """TechArticle for a documentation guide.
+    """TechArticle graph for a documentation guide.
 
     Google retired the HowTo rich result in 2023, so the guides are typed as
     TechArticle: still accurate, and still read by answer engines. The
     template already carries the BreadcrumbList, so it is not repeated here.
     """
     url = BASE_URL + doc_url(slug, lang)
-    return _schema_block({
-        '@context': 'https://schema.org',
+    article = {
         '@type': 'TechArticle',
+        '@id': url + '#article',
         'headline': _plain(meta.get('title', slug)),
         'description': _plain(meta.get('description', '')),
         'url': url,
         'mainEntityOfPage': {'@type': 'WebPage', '@id': url},
         'inLanguage': lang,
-        'isPartOf': WEBSITE,
-        'about': {
-            '@type': 'SoftwareApplication',
-            'name': 'BiblioGenius',
-            'url': BASE_URL + '/',
-        },
-        'author': ORGANIZATION,
-        'publisher': ORGANIZATION,
-    })
+        'isPartOf': {'@id': WEBSITE_ID},
+        'about': {'@id': ORG_ID},
+        'author': {'@id': ORG_ID},
+        'publisher': {'@id': ORG_ID},
+    }
+    return build_entity_graph(lang, article)
 
 
 def load_yaml(path):
@@ -803,7 +1063,19 @@ def build_docs():
             sibling_page_url('support', lang, root_path, support_langs),
         )
 
-        html = finalize_html(html, lang, 'en' in all_ui)
+        index_url = BASE_URL + doc_index_url(lang)
+        index_schema = build_entity_graph(lang, {
+            '@type': 'CollectionPage',
+            '@id': index_url + '#webpage',
+            'name': ui.get('hero_title', 'Documentation'),
+            'description': _plain(ui.get('hero_subtitle', '')),
+            'url': index_url,
+            'inLanguage': lang,
+            'isPartOf': {'@id': WEBSITE_ID},
+            'about': {'@id': ORG_ID},
+            'publisher': {'@id': ORG_ID},
+        })
+        html = finalize_html(html, lang, 'en' in all_ui, index_schema)
 
         index_file = os.path.join(out_dir, 'index.html')
         with open(index_file, 'w', encoding='utf-8') as f:
@@ -945,7 +1217,19 @@ def build_changelog():
         for key, value in meta.items():
             html = html.replace(f'{{{{{key}}}}}', value)
 
-        html = finalize_html(html, lang, 'en' in all_meta)
+        log_url = BASE_URL + changelog_url(lang)
+        log_schema = build_entity_graph(lang, {
+            '@type': 'WebPage',
+            '@id': log_url + '#webpage',
+            'name': _plain(meta.get('title', 'Changelog')),
+            'description': _plain(meta.get('meta_description', '')),
+            'url': log_url,
+            'inLanguage': lang,
+            'isPartOf': {'@id': WEBSITE_ID},
+            'about': {'@id': SOFTWARE_ID},
+            'publisher': {'@id': ORG_ID},
+        })
+        html = finalize_html(html, lang, 'en' in all_meta, log_schema)
 
         out_file = changelog_output_path(lang)
         with open(out_file, 'w', encoding='utf-8') as f:
@@ -1155,13 +1439,152 @@ def _sitemap_blog_entries():
     return entries
 
 
+# Static legal pages: hand-written HTML outside the template system, because
+# their text is legal copy reviewed by the app stores and must not be
+# regenerated casually. They still need the shared chrome, so the build injects
+# it on every run, between markers so re-running never duplicates it.
+STATIC_PAGES = {
+    'privacy.html': ('en', 'Privacy Policy',
+                     'How BiblioGenius handles your data, and how to reach us about it.'),
+    'data-deletion.html': ('fr', 'Suppression des données', None),
+    'en/data-deletion.html': ('en', 'Data deletion', None),
+    'es/data-deletion.html': ('es', 'Eliminación de datos', None),
+    'de/data-deletion.html': ('de', 'Datenlöschung', None),
+}
+CHROME_OPEN = '<!-- build:chrome -->'
+CHROME_CLOSE = '<!-- /build:chrome -->'
+
+
+def _strip_chrome(html):
+    """Remove any chrome injected by a previous run.
+
+    The leading newline and indent are part of what was injected, so they go
+    too. Leaving them behind made the build add a blank line to every static
+    page on every run, which reads as a diff when nothing changed.
+    """
+    pattern = re.compile(
+        r'\n[ \t]*' + re.escape(CHROME_OPEN) + r'.*?' + re.escape(CHROME_CLOSE),
+        re.S,
+    )
+    return pattern.sub('', html)
+
+
+def build_static_footer(lang):
+    """Footer for the standalone legal pages.
+
+    They do not load styles.css, so the rules are inline rather than relying
+    on the .legal-line class the generated pages use.
+    """
+    line = build_legal_line(lang).strip()
+    line = line.replace(
+        '<nav class="legal-line"',
+        '<nav class="legal-line" style="font-size:0.85rem;line-height:1.9;"')
+    home = '/' if lang == DEFAULT_LANG else f'/{lang}/'
+    return (
+        '<footer style="margin-top:3rem;padding-top:1rem;'
+        'border-top:1px solid #e5e7eb;color:#6b7280;font-size:0.9rem;">'
+        f'<p><a href="{home}" style="color:#2563eb;">bibliogenius.org</a></p>'
+        f'{line}</footer>'
+    )
+
+
+def decorate_static_pages():
+    """Give the hand-written legal pages the same head and footer chrome."""
+    count = 0
+    for rel, (lang, name, description) in STATIC_PAGES.items():
+        path = os.path.join(SITE_DIR, rel)
+        if not os.path.isfile(path):
+            print(f'  [static] missing: {rel}')
+            continue
+        html = _strip_chrome(open(path, encoding='utf-8').read())
+        url = BASE_URL + '/' + rel
+        desc = description or _plain(
+            (re.search(r'<meta name="description" content="([^"]*)"', html) or [None, ''])[1]
+            if re.search(r'<meta name="description" content="([^"]*)"', html) else '')
+        head = [CHROME_OPEN, ROBOTS_META.strip()]
+        if 'rel="canonical"' not in html:
+            head.append(f'<link rel="canonical" href="{url}">')
+        if 'name="description"' not in html and description:
+            head.append(f'<meta name="description" content="{description}">')
+        head.append(build_entity_graph(lang, {
+            '@type': 'WebPage',
+            '@id': url + '#webpage',
+            'name': name,
+            'description': desc,
+            'url': url,
+            'inLanguage': lang,
+            'isPartOf': {'@id': WEBSITE_ID},
+            'about': {'@id': ORG_ID},
+            'publisher': {'@id': ORG_ID},
+        }).strip())
+        head.append(CHROME_CLOSE)
+        block = '\n    ' + '\n    '.join(head)
+
+        charset = re.search(r'<meta charset="[^"]*">', html)
+        if charset:
+            html = html[:charset.end()] + block + html[charset.end():]
+        else:
+            html = html.replace('<head>', '<head>' + block, 1)
+
+        footer = CHROME_OPEN + build_static_footer(lang) + CHROME_CLOSE
+        html = html.replace('</body>', footer + '\n</body>', 1)
+
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f'  {rel}')
+        count += 1
+    return count
+
+
+def _sitemap_static_entries():
+    """(loc, lastmod, priority) for the hand-written legal pages.
+
+    SITEMAP_PRIORITY has carried 'privacy' and 'data-deletion' entries all
+    along, but _sitemap_main_entries only walks _i18n/, so those two lines were
+    dead config and the pages never reached the sitemap.
+    """
+    entries = []
+    for rel in STATIC_PAGES:
+        path = os.path.join(SITE_DIR, rel)
+        if not os.path.isfile(path):
+            continue
+        page = os.path.basename(rel)[:-len('.html')]
+        priority = SITEMAP_PRIORITY.get(page, '0.3')
+        entries.append((BASE_URL + '/' + rel, _mtime_date(path), priority))
+    return entries
+
+
+def _sitemap_blog_index_entries():
+    """(loc, lastmod, priority) for the blog index of each language.
+
+    The 21 posts were listed but the sections that link to them were not.
+    """
+    entries = []
+    if not os.path.isdir(BLOG_CONTENT_DIR):
+        return entries
+    langs = {DEFAULT_LANG}
+    for fname in os.listdir(BLOG_CONTENT_DIR):
+        if not fname.endswith('.md'):
+            continue
+        base = fname[:-3]
+        if '.' in base:
+            langs.add(base.rsplit('.', 1)[1])
+    stamp = _mtime_date(BLOG_CONTENT_DIR)
+    for lang in sorted(langs):
+        loc = f'{BASE_URL}/blog/' if lang == DEFAULT_LANG else f'{BASE_URL}/blog/{lang}/'
+        entries.append((loc, stamp, BLOG_INDEX_PRIORITY))
+    return entries
+
+
 def build_sitemap():
     """Generate sitemap.xml covering pages, docs, changelog and blog posts."""
     entries = (
         _sitemap_main_entries()
         + _sitemap_doc_entries()
         + _sitemap_changelog_entries()
+        + _sitemap_blog_index_entries()
         + _sitemap_blog_entries()
+        + _sitemap_static_entries()
     )
 
     lines = [
@@ -1268,8 +1691,13 @@ def build():
             if missing:
                 print(f'  [{lang}] Fallback: {", ".join(missing)}')
 
-            page_schema = build_page_schema(page_name, lang, t)
-            html = finalize_html(html, lang, 'en' in langs, page_schema)
+            # Second pass: a translation value may itself carry a {{url:page}}
+            # link, and those only appear once the keys above are substituted.
+            html = re.sub(r'\{\{url:([\w-]+)\}\}', resolve_url, html)
+
+            page_schema = build_page_schema(page_name, lang, t, app_version)
+            robots = NOINDEX_META if page_name in NOINDEX_PAGES else ROBOTS_META
+            html = finalize_html(html, lang, 'en' in langs, page_schema, robots)
 
             out = output_path(page_name, lang)
             with open(out, 'w', encoding='utf-8') as f:
@@ -1287,6 +1715,9 @@ def build():
 
     # Regenerate sitemap.xml (always scans the full source tree, even on a
     # filtered build, so it never drifts out of sync with published pages).
+    print('\n--- Static legal pages ---')
+    decorate_static_pages()
+
     build_sitemap()
 
     print(f'\nDone! {total} pages generated.')

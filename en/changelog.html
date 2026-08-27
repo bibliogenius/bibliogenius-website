@@ -4,6 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="max-image-preview:large">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://bibliogenius.org/#organization",
+                "name": "BiblioGenius",
+                "url": "https://bibliogenius.org/",
+                "description": "BiblioGenius is a free software project publishing a personal library management app that runs locally and needs no account, released under the AGPL-3.0 license for iOS, Android, macOS, Windows and Linux.",
+                "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://bibliogenius.org/#logo",
+                    "url": "https://bibliogenius.org/favicon-192x192.png",
+                    "contentUrl": "https://bibliogenius.org/favicon-192x192.png",
+                    "width": 192,
+                    "height": 192,
+                    "caption": "BiblioGenius"
+                },
+                "image": {
+                    "@id": "https://bibliogenius.org/#logo"
+                },
+                "email": "contact@bibliogenius.org",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "email": "contact@bibliogenius.org",
+                    "availableLanguage": [
+                        "fr",
+                        "en",
+                        "es",
+                        "de"
+                    ]
+                },
+                "knowsAbout": [
+                    "Personal library",
+                    "Book cataloguing",
+                    "Book lending",
+                    "Free software",
+                    "Local-first software",
+                    "End-to-end encryption",
+                    "Peer-to-peer",
+                    "ISBN"
+                ],
+                "foundingDate": "2025-11",
+                "founder": {
+                    "@type": "Person",
+                    "@id": "https://bibliogenius.org/#founder",
+                    "name": "Federico Calo",
+                    "url": "https://federico-calo.net/",
+                    "sameAs": [
+                        "https://federico-calo.net/"
+                    ]
+                },
+                "member": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://bibliogenius.org/#contributor-godet",
+                        "name": "Sébastien Godet",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"
+                        ]
+                    }
+                ],
+                "mainEntityOfPage": {
+                    "@id": "https://bibliogenius.org/#webpage"
+                },
+                "sameAs": [
+                    "https://codeberg.org/bibliogenius",
+                    "https://github.com/bibliogenius",
+                    "https://apps.apple.com/app/bibliogenius/id6757465461",
+                    "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://bibliogenius.org/#website",
+                "url": "https://bibliogenius.org/",
+                "name": "BiblioGenius",
+                "description": "BiblioGenius is a free software project publishing a personal library management app that runs locally and needs no account, released under the AGPL-3.0 license for iOS, Android, macOS, Windows and Linux.",
+                "inLanguage": [
+                    "fr",
+                    "en",
+                    "es",
+                    "de"
+                ],
+                "publisher": {
+                    "@id": "https://bibliogenius.org/#organization"
+                }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://bibliogenius.org/en/changelog.html#webpage",
+                "name": "Changelog",
+                "description": "BiblioGenius version history: new features, fixes and improvements.",
+                "url": "https://bibliogenius.org/en/changelog.html",
+                "inLanguage": "en",
+                "isPartOf": {
+                    "@id": "https://bibliogenius.org/#website"
+                },
+                "about": {
+                    "@id": "https://bibliogenius.org/#software"
+                },
+                "publisher": {
+                    "@id": "https://bibliogenius.org/#organization"
+                }
+            }
+        ]
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Changelog - BiblioGenius</title>
     <meta name="description" content="BiblioGenius version history: new features, fixes and improvements.">
@@ -536,9 +646,11 @@
 
     <footer class="footer">
         <div class="container">
-            <p>BiblioGenius &mdash; Open Source, local, encrypted.</p>
+            <p>BiblioGenius - Open Source, local, encrypted.</p>
         </div>
-    </footer>
+    
+<nav class="legal-line" aria-label="Legal information"><a href="/privacy.html">Privacy</a> &middot; <a href="/en/data-deletion.html">Data deletion</a> &middot; <a href="/en/#contact">Contact</a> &middot; <a href="https://codeberg.org/bibliogenius">Source code</a></nav>
+</footer>
 
     <script>
     (function() {

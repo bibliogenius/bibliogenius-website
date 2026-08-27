@@ -27,20 +27,7 @@
         "description": {{ config.description | json_encode | safe }},
         "url": {{ section.permalink | json_encode | safe }},
         "inLanguage": "{{ lang }}",
-        "publisher": {
-            "@type": "Organization",
-            "name": "BiblioGenius",
-            "url": "{{ config.extra.site_url | safe }}/",
-        "sameAs": [
-            "https://codeberg.org/bibliogenius",
-            "https://apps.apple.com/app/bibliogenius/id6757465461",
-            "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
-        ],
-            "logo": {
-                "@type": "ImageObject",
-                "url": "{{ config.extra.site_url | safe }}/favicon-192x192.png"
-            }
-        },
+        "publisher": {{ macros::entity_org(site_url=config.extra.site_url, lang=lang) }},
         "blogPost": [
         {%- for page in paginator.pages %}
             {

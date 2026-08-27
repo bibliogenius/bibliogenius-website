@@ -4,9 +4,9 @@
 
 # -- Metadaten --
 lang_name: Deutsch
-title: BiblioGenius — Ihre Bücher gehören Ihnen
-meta_description: Entdecken Sie BiblioGenius: die kostenlose Open-Source-App zur Verwaltung Ihrer persönlichen Bibliothek und zum direkten Teilen von Büchern mit Ihrem Umfeld.
-og_title: BiblioGenius — Ihre Bücher gehören Ihnen
+title: Unsere Geschichte: warum es BiblioGenius gibt
+meta_description: BiblioGenius ist eine freie App für die persönliche Bibliothek. 2020 aus einem Studienprojekt entstanden, seither neu gebaut, seit August 2026 in den Stores.
+og_title: Unsere Geschichte: warum es BiblioGenius gibt
 og_description: Verwalten Sie Ihre Bibliothek, teilen Sie Ihre Bücher, behalten Sie die Kontrolle. Kostenlos, Open Source, ohne Haken.
 
 # -- Navigation --
@@ -89,4 +89,31 @@ btn_android: Für Android herunterladen
 btn_source: Quellcode ansehen
 
 # -- Footer --
-colophon: Open-Source-Projekt <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; Keine Daten erhoben
+colophon: Open-Source-Projekt <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; Keine Werbung, keine Tracker
+
+# -- Origine et fiche factuelle --
+hero_lede: BiblioGenius ist eine freie App für die Verwaltung Ihrer persönlichen Bibliothek. Sie läuft auf Ihrem Gerät, ohne Pflichtkonto, und Sie können Ihre Bücher direkt an Ihre Nächsten verleihen. Hier steht, warum es sie gibt.
+ch_origins: Der Ursprung
+origins_title: Woher BiblioGenius kommt
+origins_p1: Die Idee stammt aus dem Jahr 2020. Ein Abschlussprojekt im Online-Kurs CS50 von Harvard: Bücher über ihre ISBN hinzufügen, korrigieren und ordnen, mit Abfragen an offene Kataloge.
+origins_p2: Sie wurde aufgegriffen, verworfen, wieder aufgegriffen. Eine mobile App mit Symfony, dann mit Drupal und NativeScript, mit Barcode-Scan. Jedes Mal dieselbe Beharrlichkeit, und eine technische Grundlage, die nicht durchhielt.
+origins_p3: Die Version, die Sie heute installieren, stammt aus dem <strong>November 2025</strong>: ein Kern in Rust, eine Oberfläche in Flutter, und das Verleihen zwischen Lesenden im Zentrum statt nachträglich angebaut. Seit August 2026 in den Stores.
+origins_p4: Sechs Jahre, drei Generationen Code. Das ist zugleich die Antwort auf die Frage, die diese Seite weiter oben stellt: Was wird aus Ihrer Bibliothek, wenn die App verschwindet? Hier ist der Code öffentlich, das Exportformat dokumentiert, und Ihre Bücher liegen bereits auf Ihrem Gerät. Selbst der schlimmste Fall lässt sie Ihnen.
+ch_facts: Die Fakten
+facts_title: BiblioGenius in Kürze
+facts_k1: Was es ist
+facts_v1: Eine App für die persönliche Bibliothek: Bücher ordnen, Lektüre verfolgen und direkt an Vertraute verleihen.
+facts_k2: Seit wann
+facts_v2: November 2025 in der heutigen Form, nach einer ersten Fassung 2020. Seit August 2026 in den Stores.
+facts_k3: Lizenz
+facts_v3: <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a>. Quellcode öffentlich auf <a href="https://codeberg.org/bibliogenius">Codeberg</a>.
+facts_k4: Plattformen
+facts_v4: iOS, Android, macOS, Windows, Linux. Oberfläche auf Französisch, Englisch, Spanisch und Deutsch.
+facts_k5: Preis
+facts_v5: Kostenlos. Kein Abo, keine In-App-Käufe, keine Werbung.
+facts_k6: Ihre Daten
+facts_v6: Auf Ihrem Gerät. Kein Pflichtkonto; das optionale Konto speichert nur Verschlüsseltes, für den Server unlesbar. <a href="docs/privacy-data.html">Die Details</a>.
+facts_k7: Buchdaten
+facts_v7: Offene Kataloge: <a href="https://catalogue.bnf.fr/">BnF</a>, <a href="https://inventaire.io/">Inventaire</a>, <a href="https://openlibrary.org/">OpenLibrary</a>. Google&nbsp;Books bleibt optional, mit Ihrem eigenen Schlüssel.
+facts_k8: Wer dahintersteht
+facts_v8: Federico Calo, unabhängiger Entwickler, mit ehrenamtlichen Mitwirkenden. <a href="{{url:contribute}}">Die Danksagung</a>.

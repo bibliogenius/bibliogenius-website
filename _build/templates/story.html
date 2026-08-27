@@ -51,10 +51,43 @@
             color: #fff;
             margin: 0 0 1rem;
         }
-        .scene--hero p:last-of-type {
+        .scene--hero p.hero-coda {
             margin-top: 1.5rem;
             color: rgba(255, 255, 255, 0.7);
             font-style: italic;
+        }
+
+        /* The definition, placed where the hook lands: it answers the question
+           the hero asks, and is the first factual sentence of the page. */
+        .scene--hero p.hero-lede {
+            margin-top: 2.5rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .facts {
+            margin: 0;
+            display: grid;
+            grid-template-columns: minmax(8rem, 12rem) 1fr;
+            gap: 0.85rem 1.5rem;
+        }
+        .facts dt {
+            font-weight: 600;
+            color: var(--heading-color, #1f2937);
+        }
+        .facts dd {
+            margin: 0;
+        }
+        @media (max-width: 34rem) {
+            .facts {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+            }
+            .facts dd {
+                margin-bottom: 0.85rem;
+            }
         }
 
         .scene--light { background: var(--bg-color); }
@@ -334,7 +367,8 @@
             <p>{{hero_p1}}</p>
             <p>{{hero_p2}}</p>
             <p>{{hero_p3}}</p>
-            <p>{{hero_p4}}</p>
+            <p class="hero-coda">{{hero_p4}}</p>
+            <p class="hero-lede">{{hero_lede}}</p>
         </div>
     </header>
 
@@ -421,6 +455,42 @@
             <p>{{vision_p1}}</p>
             <p>{{vision_p2}}</p>
             <p>{{vision_p3}}</p>
+        </div>
+    </section>
+
+    <section class="scene scene--light">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">{{ch_origins}}</span>
+            <h2>{{origins_title}}</h2>
+            <p>{{origins_p1}}</p>
+            <p>{{origins_p2}}</p>
+            <p>{{origins_p3}}</p>
+            <p>{{origins_p4}}</p>
+        </div>
+    </section>
+
+    <section class="scene scene--alt">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">{{ch_facts}}</span>
+            <h2>{{facts_title}}</h2>
+            <dl class="facts">
+                <dt>{{facts_k1}}</dt>
+                <dd>{{facts_v1}}</dd>
+                <dt>{{facts_k2}}</dt>
+                <dd>{{facts_v2}}</dd>
+                <dt>{{facts_k3}}</dt>
+                <dd>{{facts_v3}}</dd>
+                <dt>{{facts_k4}}</dt>
+                <dd>{{facts_v4}}</dd>
+                <dt>{{facts_k5}}</dt>
+                <dd>{{facts_v5}}</dd>
+                <dt>{{facts_k6}}</dt>
+                <dd>{{facts_v6}}</dd>
+                <dt>{{facts_k7}}</dt>
+                <dd>{{facts_v7}}</dd>
+                <dt>{{facts_k8}}</dt>
+                <dd>{{facts_v8}}</dd>
+            </dl>
         </div>
     </section>
 

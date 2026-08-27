@@ -3,8 +3,144 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- build:chrome -->
+    <meta name="robots" content="max-image-preview:large">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://bibliogenius.org/#organization",
+                "name": "BiblioGenius",
+                "url": "https://bibliogenius.org/",
+                "description": "BiblioGenius es un proyecto libre que publica una aplicación de gestión de biblioteca personal, local y sin cuenta obligatoria, con licencia AGPL-3.0 y disponible en iOS, Android, macOS, Windows y Linux.",
+                "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://bibliogenius.org/#logo",
+                    "url": "https://bibliogenius.org/favicon-192x192.png",
+                    "contentUrl": "https://bibliogenius.org/favicon-192x192.png",
+                    "width": 192,
+                    "height": 192,
+                    "caption": "BiblioGenius"
+                },
+                "image": {
+                    "@id": "https://bibliogenius.org/#logo"
+                },
+                "email": "contact@bibliogenius.org",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "email": "contact@bibliogenius.org",
+                    "availableLanguage": [
+                        "fr",
+                        "en",
+                        "es",
+                        "de"
+                    ]
+                },
+                "knowsAbout": [
+                    "Biblioteca personal",
+                    "Catalogación de libros",
+                    "Préstamo de libros",
+                    "Software libre",
+                    "Local-first",
+                    "Cifrado de extremo a extremo",
+                    "Par a par",
+                    "ISBN"
+                ],
+                "foundingDate": "2025-11",
+                "founder": {
+                    "@type": "Person",
+                    "@id": "https://bibliogenius.org/#founder",
+                    "name": "Federico Calo",
+                    "url": "https://federico-calo.net/",
+                    "sameAs": [
+                        "https://federico-calo.net/"
+                    ]
+                },
+                "member": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://bibliogenius.org/#contributor-godet",
+                        "name": "Sébastien Godet",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"
+                        ]
+                    }
+                ],
+                "mainEntityOfPage": {
+                    "@id": "https://bibliogenius.org/#webpage"
+                },
+                "sameAs": [
+                    "https://codeberg.org/bibliogenius",
+                    "https://github.com/bibliogenius",
+                    "https://apps.apple.com/app/bibliogenius/id6757465461",
+                    "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://bibliogenius.org/#website",
+                "url": "https://bibliogenius.org/",
+                "name": "BiblioGenius",
+                "description": "BiblioGenius es un proyecto libre que publica una aplicación de gestión de biblioteca personal, local y sin cuenta obligatoria, con licencia AGPL-3.0 y disponible en iOS, Android, macOS, Windows y Linux.",
+                "inLanguage": [
+                    "fr",
+                    "en",
+                    "es",
+                    "de"
+                ],
+                "publisher": {
+                    "@id": "https://bibliogenius.org/#organization"
+                }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://bibliogenius.org/es/data-deletion.html#webpage",
+                "name": "Eliminación de datos",
+                "description": "Cómo solicitar la eliminación de tus datos de BiblioGenius (perfil del hub, catálogo, mensajes).",
+                "url": "https://bibliogenius.org/es/data-deletion.html",
+                "inLanguage": "es",
+                "isPartOf": {
+                    "@id": "https://bibliogenius.org/#website"
+                },
+                "about": {
+                    "@id": "https://bibliogenius.org/#organization"
+                },
+                "publisher": {
+                    "@id": "https://bibliogenius.org/#organization"
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- /build:chrome -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminación de datos — BiblioGenius</title>
+    <title>Eliminación de datos, BiblioGenius</title>
     <meta name="description" content="Cómo solicitar la eliminación de tus datos de BiblioGenius (perfil del hub, catálogo, mensajes).">
 
     <!-- Canonical & hreflang -->
@@ -44,7 +180,7 @@
     <a href="/de/data-deletion.html">DE</a>
 </p>
 
-<h1>Eliminación de datos — BiblioGenius</h1>
+<h1>Eliminación de datos - BiblioGenius</h1>
 <p><em>Última actualización: 27 de mayo de 2026</em></p>
 
 <p>
@@ -103,7 +239,7 @@
 
 <h3>Eliminados inmediatamente</h3>
 <ul>
-    <li>Perfil del hub (fila <code>library_profiles</code>) — nombre, identificadores, país, ciudad, etc.;</li>
+    <li>Perfil del hub (fila <code>library_profiles</code>), nombre, identificadores, país, ciudad, etc.;</li>
     <li>Catálogo ISBN eventualmente publicado;</li>
     <li>Bandeja de entrada y mensajes cifrados asociados;</li>
     <li>Relaciones de seguimiento (seguidores / seguidos);</li>
@@ -113,9 +249,9 @@
 <h3>Conservados temporalmente tras la eliminación</h3>
 <ul>
     <li><strong>Registros de eventos anonimizados</strong> (<code>hub_events</code>) relacionados con el mantenimiento
-        y la seguridad — eliminados automáticamente tras <strong>30 días</strong>.</li>
+        y la seguridad, eliminados automáticamente tras <strong>30 días</strong>.</li>
     <li><strong>Registros de intentos de inscripción</strong> (<code>registration_failures</code>)
-        utilizados para la detección de abusos — eliminados automáticamente tras <strong>90 días</strong>.</li>
+        utilizados para la detección de abusos, eliminados automáticamente tras <strong>90 días</strong>.</li>
     <li>Ninguno de estos datos permite remontar a tu identidad.</li>
 </ul>
 
@@ -139,5 +275,29 @@
     <a href="mailto:contact@bibliogenius.org">contact@bibliogenius.org</a>.
 </p>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- build:chrome --><footer style="margin-top:3rem;padding-top:1rem;border-top:1px solid #e5e7eb;color:#6b7280;font-size:0.9rem;"><p><a href="/es/" style="color:#2563eb;">bibliogenius.org</a></p><nav class="legal-line" style="font-size:0.85rem;line-height:1.9;" aria-label="Información legal"><a href="/privacy.html">Privacidad</a> &middot; <a href="/es/data-deletion.html">Eliminación de datos</a> &middot; <a href="/es/#contact">Contacto</a> &middot; <a href="https://codeberg.org/bibliogenius">Código fuente</a></nav></footer><!-- /build:chrome -->
 </body>
 </html>

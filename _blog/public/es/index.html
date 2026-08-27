@@ -67,17 +67,42 @@
         "inLanguage": "es",
         "publisher": {
             "@type": "Organization",
+            "@id": "https://bibliogenius.org/#organization",
             "name": "BiblioGenius",
             "url": "https://bibliogenius.org/",
-        "sameAs": [
-            "https://codeberg.org/bibliogenius",
-            "https://apps.apple.com/app/bibliogenius/id6757465461",
-            "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
-        ],
+            "email": "contact@bibliogenius.org",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://bibliogenius.org/favicon-192x192.png"
-            }
+                "@id": "https://bibliogenius.org/#logo",
+                "url": "https://bibliogenius.org/favicon-192x192.png",
+                "contentUrl": "https://bibliogenius.org/favicon-192x192.png",
+                "width": 192,
+                "height": 192,
+                "caption": "BiblioGenius"
+            },
+            "foundingDate": "2025-11",
+            "founder": {
+                "@type": "Person",
+                "@id": "https://bibliogenius.org/#founder",
+                "name": "Federico Calo",
+                "url": "https://federico-calo.net/",
+                "sameAs": ["https://federico-calo.net/"]
+            },
+            "member": [
+                {
+                    "@type": "Person",
+                    "@id": "https://bibliogenius.org/#contributor-godet",
+                    "name": "Sébastien Godet",
+                    "sameAs": ["https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"]
+                }
+            ],
+            "mainEntityOfPage": {"@id": "https://bibliogenius.org/#webpage"},
+            "sameAs": [
+                "https://codeberg.org/bibliogenius",
+                "https://github.com/bibliogenius",
+                "https://apps.apple.com/app/bibliogenius/id6757465461",
+                "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+            ]
         },
         "blogPost": [
             {
@@ -145,10 +170,11 @@
         <span class="hamburger-line"></span>
     </button>
     <div class="site-nav-menu" id="site-nav-menu">
-        <a href="https:&#x2F;&#x2F;bibliogenius.org/" class="site-nav-link">Home</a>
-        <a href="https:&#x2F;&#x2F;bibliogenius.org/story.html" class="site-nav-link">Our Story</a>
+        
+        <a href="https://bibliogenius.org/es/" class="site-nav-link">Inicio</a>
+        <a href="https://bibliogenius.org/es/story.html" class="site-nav-link">Nuestra historia</a>
         <a href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog/" class="site-nav-link" style="color:#fff;">Blog</a>
-        <a href="https:&#x2F;&#x2F;bibliogenius.org/docs/" class="site-nav-link">Documentation</a>
+        <a href="https://bibliogenius.org/es/docs/" class="site-nav-link">Documentation</a>
         
 
 <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Langue">
@@ -321,7 +347,13 @@
     <div class="container">
         <p>BiblioGenius · Open Source, local-first.</p>
         <div class="footer-bottom">
-            <p>&copy; 2025-2026 BiblioGenius — <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a></p>
+            <p>&copy; 2025-2026 BiblioGenius &middot; <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a></p>
+            <nav class="legal-line" aria-label="Información legal">
+                <a href="/privacy.html">Privacidad</a> &middot;
+                <a href="/es/data-deletion.html">Eliminación de datos</a> &middot;
+                <a href="/es/#contact">Contacto</a> &middot;
+                <a href="https://codeberg.org/bibliogenius">Código fuente</a>
+            </nav>
         </div>
     </div>
 </footer>

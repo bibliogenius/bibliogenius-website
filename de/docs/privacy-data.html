@@ -7,47 +7,118 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "TechArticle",
-        "headline": "Wo meine Daten gespeichert sind",
-        "description": "Was auf Ihrem Gerät bleibt, was es verlässt und wie Sie die Kontrolle behalten",
-        "url": "https://bibliogenius.org/de/docs/privacy-data.html",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://bibliogenius.org/de/docs/privacy-data.html"
-        },
-        "inLanguage": "de",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "BiblioGenius",
-            "url": "https://bibliogenius.org/"
-        },
-        "about": {
-            "@type": "SoftwareApplication",
-            "name": "BiblioGenius",
-            "url": "https://bibliogenius.org/"
-        },
-        "author": {
-            "@type": "Organization",
-            "name": "BiblioGenius",
-            "url": "https://bibliogenius.org/",
-            "logo": "https://bibliogenius.org/favicon-192x192.png",
-            "sameAs": [
-                "https://codeberg.org/bibliogenius",
-                "https://apps.apple.com/app/bibliogenius/id6757465461",
-                "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
-            ]
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "BiblioGenius",
-            "url": "https://bibliogenius.org/",
-            "logo": "https://bibliogenius.org/favicon-192x192.png",
-            "sameAs": [
-                "https://codeberg.org/bibliogenius",
-                "https://apps.apple.com/app/bibliogenius/id6757465461",
-                "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
-            ]
-        }
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://bibliogenius.org/#organization",
+                "name": "BiblioGenius",
+                "url": "https://bibliogenius.org/",
+                "description": "BiblioGenius ist ein freies Projekt, das eine App zur Verwaltung der persönlichen Bibliothek veröffentlicht: lokal, ohne Pflichtkonto, unter der AGPL-3.0-Lizenz für iOS, Android, macOS, Windows und Linux.",
+                "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://bibliogenius.org/#logo",
+                    "url": "https://bibliogenius.org/favicon-192x192.png",
+                    "contentUrl": "https://bibliogenius.org/favicon-192x192.png",
+                    "width": 192,
+                    "height": 192,
+                    "caption": "BiblioGenius"
+                },
+                "image": {
+                    "@id": "https://bibliogenius.org/#logo"
+                },
+                "email": "contact@bibliogenius.org",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "email": "contact@bibliogenius.org",
+                    "availableLanguage": [
+                        "fr",
+                        "en",
+                        "es",
+                        "de"
+                    ]
+                },
+                "knowsAbout": [
+                    "Persönliche Bibliothek",
+                    "Buchkatalogisierung",
+                    "Buchausleihe",
+                    "Freie Software",
+                    "Local-first",
+                    "Ende-zu-Ende-Verschlüsselung",
+                    "Peer-to-Peer",
+                    "ISBN"
+                ],
+                "foundingDate": "2025-11",
+                "founder": {
+                    "@type": "Person",
+                    "@id": "https://bibliogenius.org/#founder",
+                    "name": "Federico Calo",
+                    "url": "https://federico-calo.net/",
+                    "sameAs": [
+                        "https://federico-calo.net/"
+                    ]
+                },
+                "member": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://bibliogenius.org/#contributor-godet",
+                        "name": "Sébastien Godet",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"
+                        ]
+                    }
+                ],
+                "mainEntityOfPage": {
+                    "@id": "https://bibliogenius.org/#webpage"
+                },
+                "sameAs": [
+                    "https://codeberg.org/bibliogenius",
+                    "https://github.com/bibliogenius",
+                    "https://apps.apple.com/app/bibliogenius/id6757465461",
+                    "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://bibliogenius.org/#website",
+                "url": "https://bibliogenius.org/",
+                "name": "BiblioGenius",
+                "description": "BiblioGenius ist ein freies Projekt, das eine App zur Verwaltung der persönlichen Bibliothek veröffentlicht: lokal, ohne Pflichtkonto, unter der AGPL-3.0-Lizenz für iOS, Android, macOS, Windows und Linux.",
+                "inLanguage": [
+                    "fr",
+                    "en",
+                    "es",
+                    "de"
+                ],
+                "publisher": {
+                    "@id": "https://bibliogenius.org/#organization"
+                }
+            },
+            {
+                "@type": "TechArticle",
+                "@id": "https://bibliogenius.org/de/docs/privacy-data.html#article",
+                "headline": "Wo meine Daten gespeichert sind",
+                "description": "Was auf Ihrem Gerät bleibt, was es verlässt und wie Sie die Kontrolle behalten",
+                "url": "https://bibliogenius.org/de/docs/privacy-data.html",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://bibliogenius.org/de/docs/privacy-data.html"
+                },
+                "inLanguage": "de",
+                "isPartOf": {
+                    "@id": "https://bibliogenius.org/#website"
+                },
+                "about": {
+                    "@id": "https://bibliogenius.org/#organization"
+                },
+                "author": {
+                    "@id": "https://bibliogenius.org/#organization"
+                },
+                "publisher": {
+                    "@id": "https://bibliogenius.org/#organization"
+                }
+            }
+        ]
     }
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -403,7 +474,9 @@
         <div class="container">
             <p>BiblioGenius - Open Source, local-first.</p>
         </div>
-    </footer>
+    
+<nav class="legal-line" aria-label="Rechtliche Hinweise"><a href="/privacy.html">Datenschutz</a> &middot; <a href="/de/data-deletion.html">Datenlöschung</a> &middot; <a href="/de/#contact">Kontakt</a> &middot; <a href="https://codeberg.org/bibliogenius">Quellcode</a></nav>
+</footer>
 
     <script>
     (function() {

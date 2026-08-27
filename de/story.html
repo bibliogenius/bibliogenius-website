@@ -6,49 +6,140 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "AboutPage",
-        "name": "BiblioGenius — Ihre Bücher gehören Ihnen",
-        "description": "Entdecken Sie BiblioGenius: die kostenlose Open-Source-App zur Verwaltung Ihrer persönlichen Bibliothek und zum direkten Teilen von Büchern mit Ihrem Umfeld.",
-        "url": "https://bibliogenius.org/de/story.html",
-        "inLanguage": "de",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "BiblioGenius",
-            "url": "https://bibliogenius.org/"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "BiblioGenius",
-            "url": "https://bibliogenius.org/",
-            "logo": "https://bibliogenius.org/favicon-192x192.png",
-            "sameAs": [
-                "https://codeberg.org/bibliogenius",
-                "https://apps.apple.com/app/bibliogenius/id6757465461",
-                "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
-            ]
-        },
-        "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "BiblioGenius",
-                    "item": "https://bibliogenius.org/de/"
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://bibliogenius.org/#organization",
+                "name": "BiblioGenius",
+                "url": "https://bibliogenius.org/",
+                "description": "BiblioGenius ist ein freies Projekt, das eine App zur Verwaltung der persönlichen Bibliothek veröffentlicht: lokal, ohne Pflichtkonto, unter der AGPL-3.0-Lizenz für iOS, Android, macOS, Windows und Linux.",
+                "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://bibliogenius.org/#logo",
+                    "url": "https://bibliogenius.org/favicon-192x192.png",
+                    "contentUrl": "https://bibliogenius.org/favicon-192x192.png",
+                    "width": 192,
+                    "height": 192,
+                    "caption": "BiblioGenius"
                 },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "BiblioGenius — Ihre Bücher gehören Ihnen",
-                    "item": "https://bibliogenius.org/de/story.html"
+                "image": {
+                    "@id": "https://bibliogenius.org/#logo"
+                },
+                "email": "contact@bibliogenius.org",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "email": "contact@bibliogenius.org",
+                    "availableLanguage": [
+                        "fr",
+                        "en",
+                        "es",
+                        "de"
+                    ]
+                },
+                "knowsAbout": [
+                    "Persönliche Bibliothek",
+                    "Buchkatalogisierung",
+                    "Buchausleihe",
+                    "Freie Software",
+                    "Local-first",
+                    "Ende-zu-Ende-Verschlüsselung",
+                    "Peer-to-Peer",
+                    "ISBN"
+                ],
+                "foundingDate": "2025-11",
+                "founder": {
+                    "@type": "Person",
+                    "@id": "https://bibliogenius.org/#founder",
+                    "name": "Federico Calo",
+                    "url": "https://federico-calo.net/",
+                    "sameAs": [
+                        "https://federico-calo.net/"
+                    ]
+                },
+                "member": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://bibliogenius.org/#contributor-godet",
+                        "name": "Sébastien Godet",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"
+                        ]
+                    }
+                ],
+                "mainEntityOfPage": {
+                    "@id": "https://bibliogenius.org/#webpage"
+                },
+                "sameAs": [
+                    "https://codeberg.org/bibliogenius",
+                    "https://github.com/bibliogenius",
+                    "https://apps.apple.com/app/bibliogenius/id6757465461",
+                    "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://bibliogenius.org/#website",
+                "url": "https://bibliogenius.org/",
+                "name": "BiblioGenius",
+                "description": "BiblioGenius ist ein freies Projekt, das eine App zur Verwaltung der persönlichen Bibliothek veröffentlicht: lokal, ohne Pflichtkonto, unter der AGPL-3.0-Lizenz für iOS, Android, macOS, Windows und Linux.",
+                "inLanguage": [
+                    "fr",
+                    "en",
+                    "es",
+                    "de"
+                ],
+                "publisher": {
+                    "@id": "https://bibliogenius.org/#organization"
                 }
-            ]
-        }
+            },
+            {
+                "@type": "AboutPage",
+                "@id": "https://bibliogenius.org/de/story.html#webpage",
+                "name": "Unsere Geschichte: warum es BiblioGenius gibt",
+                "description": "BiblioGenius ist eine freie App für die persönliche Bibliothek. 2020 aus einem Studienprojekt entstanden, seither neu gebaut, seit August 2026 in den Stores.",
+                "url": "https://bibliogenius.org/de/story.html",
+                "inLanguage": "de",
+                "isPartOf": {
+                    "@id": "https://bibliogenius.org/#website"
+                },
+                "about": {
+                    "@id": "https://bibliogenius.org/#organization"
+                },
+                "publisher": {
+                    "@id": "https://bibliogenius.org/#organization"
+                },
+                "breadcrumb": {
+                    "@id": "https://bibliogenius.org/de/story.html#breadcrumb"
+                },
+                "mainEntity": {
+                    "@id": "https://bibliogenius.org/#organization"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://bibliogenius.org/de/story.html#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "BiblioGenius",
+                        "item": "https://bibliogenius.org/de/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Unsere Geschichte: warum es BiblioGenius gibt",
+                        "item": "https://bibliogenius.org/de/story.html"
+                    }
+                ]
+            }
+        ]
     }
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BiblioGenius — Ihre Bücher gehören Ihnen</title>
-    <meta name="description" content="Entdecken Sie BiblioGenius: die kostenlose Open-Source-App zur Verwaltung Ihrer persönlichen Bibliothek und zum direkten Teilen von Büchern mit Ihrem Umfeld.">
+    <title>Unsere Geschichte: warum es BiblioGenius gibt</title>
+    <meta name="description" content="BiblioGenius ist eine freie App für die persönliche Bibliothek. 2020 aus einem Studienprojekt entstanden, seither neu gebaut, seit August 2026 in den Stores.">
 
     <link rel="canonical" href="https://bibliogenius.org/de/story.html">
     <link rel="alternate" hreflang="de" href="https://bibliogenius.org/de/story.html">
@@ -62,7 +153,7 @@
 
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://bibliogenius.org/de/story.html">
-    <meta property="og:title" content="BiblioGenius — Ihre Bücher gehören Ihnen">
+    <meta property="og:title" content="Unsere Geschichte: warum es BiblioGenius gibt">
     <meta property="og:description" content="Verwalten Sie Ihre Bibliothek, teilen Sie Ihre Bücher, behalten Sie die Kontrolle. Kostenlos, Open Source, ohne Haken.">
     <meta property="og:image" content="https://bibliogenius.org/assets/home-bibliogenius-fr.jpg">
 
@@ -99,10 +190,43 @@
             color: #fff;
             margin: 0 0 1rem;
         }
-        .scene--hero p:last-of-type {
+        .scene--hero p.hero-coda {
             margin-top: 1.5rem;
             color: rgba(255, 255, 255, 0.7);
             font-style: italic;
+        }
+
+        /* The definition, placed where the hook lands: it answers the question
+           the hero asks, and is the first factual sentence of the page. */
+        .scene--hero p.hero-lede {
+            margin-top: 2.5rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .facts {
+            margin: 0;
+            display: grid;
+            grid-template-columns: minmax(8rem, 12rem) 1fr;
+            gap: 0.85rem 1.5rem;
+        }
+        .facts dt {
+            font-weight: 600;
+            color: var(--heading-color, #1f2937);
+        }
+        .facts dd {
+            margin: 0;
+        }
+        @media (max-width: 34rem) {
+            .facts {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+            }
+            .facts dd {
+                margin-bottom: 0.85rem;
+            }
         }
 
         .scene--light { background: var(--bg-color); }
@@ -385,7 +509,8 @@
             <p>Sie wissen, dass Sie <em>Les Misérables</em> jemandem geliehen haben. Aber&nbsp;wem?</p>
             <p>Sie stehen in der Buchhandlung, ein Roman fällt Ihnen auf, und Sie zögern: <em>„Habe ich das schon?"</em></p>
             <p>Und heute Abend klingelt Ihre Nachbarin: <em>„Hast du ein gutes Buch zum Ausleihen?"</em></p>
-            <p>Gute Frage. Vielleicht haben Sie es. Irgendwo. In einem Regal. Oder bei&nbsp;jemandem.</p>
+            <p class="hero-coda">Gute Frage. Vielleicht haben Sie es. Irgendwo. In einem Regal. Oder bei&nbsp;jemandem.</p>
+            <p class="hero-lede">BiblioGenius ist eine freie App für die Verwaltung Ihrer persönlichen Bibliothek. Sie läuft auf Ihrem Gerät, ohne Pflichtkonto, und Sie können Ihre Bücher direkt an Ihre Nächsten verleihen. Hier steht, warum es sie gibt.</p>
         </div>
     </header>
 
@@ -475,6 +600,42 @@
         </div>
     </section>
 
+    <section class="scene scene--light">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">Der Ursprung</span>
+            <h2>Woher BiblioGenius kommt</h2>
+            <p>Die Idee stammt aus dem Jahr 2020. Ein Abschlussprojekt im Online-Kurs CS50 von Harvard: Bücher über ihre ISBN hinzufügen, korrigieren und ordnen, mit Abfragen an offene Kataloge.</p>
+            <p>Sie wurde aufgegriffen, verworfen, wieder aufgegriffen. Eine mobile App mit Symfony, dann mit Drupal und NativeScript, mit Barcode-Scan. Jedes Mal dieselbe Beharrlichkeit, und eine technische Grundlage, die nicht durchhielt.</p>
+            <p>Die Version, die Sie heute installieren, stammt aus dem <strong>November 2025</strong>: ein Kern in Rust, eine Oberfläche in Flutter, und das Verleihen zwischen Lesenden im Zentrum statt nachträglich angebaut. Seit August 2026 in den Stores.</p>
+            <p>Sechs Jahre, drei Generationen Code. Das ist zugleich die Antwort auf die Frage, die diese Seite weiter oben stellt: Was wird aus Ihrer Bibliothek, wenn die App verschwindet? Hier ist der Code öffentlich, das Exportformat dokumentiert, und Ihre Bücher liegen bereits auf Ihrem Gerät. Selbst der schlimmste Fall lässt sie Ihnen.</p>
+        </div>
+    </section>
+
+    <section class="scene scene--alt">
+        <div class="story-col">
+            <span class="ch" aria-hidden="true">Die Fakten</span>
+            <h2>BiblioGenius in Kürze</h2>
+            <dl class="facts">
+                <dt>Was es ist</dt>
+                <dd>Eine App für die persönliche Bibliothek: Bücher ordnen, Lektüre verfolgen und direkt an Vertraute verleihen.</dd>
+                <dt>Seit wann</dt>
+                <dd>November 2025 in der heutigen Form, nach einer ersten Fassung 2020. Seit August 2026 in den Stores.</dd>
+                <dt>Lizenz</dt>
+                <dd><a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a>. Quellcode öffentlich auf <a href="https://codeberg.org/bibliogenius">Codeberg</a>.</dd>
+                <dt>Plattformen</dt>
+                <dd>iOS, Android, macOS, Windows, Linux. Oberfläche auf Französisch, Englisch, Spanisch und Deutsch.</dd>
+                <dt>Preis</dt>
+                <dd>Kostenlos. Kein Abo, keine In-App-Käufe, keine Werbung.</dd>
+                <dt>Ihre Daten</dt>
+                <dd>Auf Ihrem Gerät. Kein Pflichtkonto; das optionale Konto speichert nur Verschlüsseltes, für den Server unlesbar. <a href="docs/privacy-data.html">Die Details</a>.</dd>
+                <dt>Buchdaten</dt>
+                <dd>Offene Kataloge: <a href="https://catalogue.bnf.fr/">BnF</a>, <a href="https://inventaire.io/">Inventaire</a>, <a href="https://openlibrary.org/">OpenLibrary</a>. Google&nbsp;Books bleibt optional, mit Ihrem eigenen Schlüssel.</dd>
+                <dt>Wer dahintersteht</dt>
+                <dd>Federico Calo, unabhängiger Entwickler, mit ehrenamtlichen Mitwirkenden. <a href="contribute.html">Die Danksagung</a>.</dd>
+            </dl>
+        </div>
+    </section>
+
     <section class="scene scene--dark scene--cta">
         <div class="story-col">
             <h2>Ihre Bücher,<br>einfach&nbsp;Ihre.</h2>
@@ -501,7 +662,9 @@
 
 </main>
 
-<footer class="colophon">Open-Source-Projekt <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; Keine Daten erhoben</footer>
+<footer class="colophon">Open-Source-Projekt <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a> &middot; Keine Werbung, keine Tracker
+<nav class="legal-line" aria-label="Rechtliche Hinweise"><a href="/privacy.html">Datenschutz</a> &middot; <a href="/de/data-deletion.html">Datenlöschung</a> &middot; <a href="/de/#contact">Kontakt</a> &middot; <a href="https://codeberg.org/bibliogenius">Quellcode</a></nav>
+</footer>
 
 <script>function openContact(e){e.preventDefault();var u='contact',d='bibliogenius.org';location.href='mailto:'+u+'@'+d+'?subject=Test%20Android'}</script>
 <script>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="robots" content="max-image-preview:large">
-    <title>Faites avancer BiblioGenius : votre avis en 2 minutes — BiblioGenius Blog</title>
+    <title>Faites avancer BiblioGenius : votre avis en 2 minutes - BiblioGenius Blog</title>
     <meta name="description" content="Pour décider la suite de BiblioGenius, j&#x27;aimerais votre avis : qu&#x27;est-ce qui compte le plus pour vous dans une app de bibliothèque personnelle ? Un formulaire anonyme, sans compte, à remplir en 2 minutes.">
 
     <link rel="canonical" href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;sondage-faites-avancer&#x2F;">
@@ -21,7 +21,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog&#x2F;sondage-faites-avancer&#x2F;">
-    <meta property="og:title" content="Faites avancer BiblioGenius : votre avis en 2 minutes — BiblioGenius Blog">
+    <meta property="og:title" content="Faites avancer BiblioGenius : votre avis en 2 minutes - BiblioGenius Blog">
     <meta property="og:description" content="Pour décider la suite de BiblioGenius, j&#x27;aimerais votre avis : qu&#x27;est-ce qui compte le plus pour vous dans une app de bibliothèque personnelle ? Un formulaire anonyme, sans compte, à remplir en 2 minutes.">
     <meta property="og:site_name" content="BiblioGenius">
     <meta property="og:locale" content="fr_FR">
@@ -31,7 +31,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Faites avancer BiblioGenius : votre avis en 2 minutes — BiblioGenius Blog">
+    <meta name="twitter:title" content="Faites avancer BiblioGenius : votre avis en 2 minutes - BiblioGenius Blog">
     <meta name="twitter:description" content="Pour décider la suite de BiblioGenius, j&#x27;aimerais votre avis : qu&#x27;est-ce qui compte le plus pour vous dans une app de bibliothèque personnelle ? Un formulaire anonyme, sans compte, à remplir en 2 minutes.">
 
     <!-- Favicon -->
@@ -66,6 +66,10 @@
         .share-section p { font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem; }
         .share-links { display: flex; gap: 0.75rem; }
         .share-link { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.75rem; border: 1px solid #d1d5db; border-radius: 0.375rem; font-size: 0.8rem; color: var(--text-color); text-decoration: none; transition: border-color 0.2s; }
+        .about-box { margin: 3rem 0 0; padding: 1.5rem; background: var(--secondary-bg, #f8fafc); border-radius: 0.5rem; border-left: 4px solid var(--primary-color, #2563eb); }
+        .about-box h2 { font-size: 1.05rem; margin: 0 0 0.6rem; }
+        .about-box p { margin: 0 0 0.6rem; font-size: 0.95rem; line-height: 1.65; }
+        .about-box p:last-child { margin-bottom: 0; }
         .share-link:hover { border-color: var(--primary-color); color: var(--primary-color); }
     </style>
 
@@ -87,29 +91,46 @@
             "name": "BiblioGenius Blog",
             "url": "https://bibliogenius.org/blog/"
         },
-        "about": {
-            "@type": "SoftwareApplication",
-            "name": "BiblioGenius",
-            "url": "https://bibliogenius.org/"
-        },
-        "author": {
-            "@type": "Organization",
-            "name": "BiblioGenius",
-            "url": "https://bibliogenius.org/"
-        },
+        "about": {"@id": "https://bibliogenius.org/#software"},
+        "author": {"@id": "https://bibliogenius.org/#organization"},
         "publisher": {
             "@type": "Organization",
+            "@id": "https://bibliogenius.org/#organization",
             "name": "BiblioGenius",
             "url": "https://bibliogenius.org/",
-        "sameAs": [
-            "https://codeberg.org/bibliogenius",
-            "https://apps.apple.com/app/bibliogenius/id6757465461",
-            "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
-        ],
+            "email": "contact@bibliogenius.org",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://bibliogenius.org/favicon-192x192.png"
-            }
+                "@id": "https://bibliogenius.org/#logo",
+                "url": "https://bibliogenius.org/favicon-192x192.png",
+                "contentUrl": "https://bibliogenius.org/favicon-192x192.png",
+                "width": 192,
+                "height": 192,
+                "caption": "BiblioGenius"
+            },
+            "foundingDate": "2025-11",
+            "founder": {
+                "@type": "Person",
+                "@id": "https://bibliogenius.org/#founder",
+                "name": "Federico Calo",
+                "url": "https://federico-calo.net/",
+                "sameAs": ["https://federico-calo.net/"]
+            },
+            "member": [
+                {
+                    "@type": "Person",
+                    "@id": "https://bibliogenius.org/#contributor-godet",
+                    "name": "Sébastien Godet",
+                    "sameAs": ["https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"]
+                }
+            ],
+            "mainEntityOfPage": {"@id": "https://bibliogenius.org/#webpage"},
+            "sameAs": [
+                "https://codeberg.org/bibliogenius",
+                "https://github.com/bibliogenius",
+                "https://apps.apple.com/app/bibliogenius/id6757465461",
+                "https://play.google.com/store/apps/details?id=com.bibliogenius.app"
+            ]
         }
     }
     </script>
@@ -126,10 +147,11 @@
         <span class="hamburger-line"></span>
     </button>
     <div class="site-nav-menu" id="site-nav-menu">
-        <a href="https:&#x2F;&#x2F;bibliogenius.org/" class="site-nav-link">Accueil</a>
-        <a href="https:&#x2F;&#x2F;bibliogenius.org/story.html" class="site-nav-link">Notre histoire</a>
+        
+        <a href="https://bibliogenius.org/" class="site-nav-link">Accueil</a>
+        <a href="https://bibliogenius.org/story.html" class="site-nav-link">Notre histoire</a>
         <a href="https:&#x2F;&#x2F;bibliogenius.org&#x2F;blog/" class="site-nav-link" style="color:#fff;">Blog</a>
-        <a href="https:&#x2F;&#x2F;bibliogenius.org/docs/" class="site-nav-link">Documentation</a>
+        <a href="https://bibliogenius.org/docs/" class="site-nav-link">Documentation</a>
         
 
 <select onchange="sessionStorage.setItem('lang_chosen','1');location.href=this.value" class="lang-select" aria-label="Langue">
@@ -196,7 +218,20 @@
                     </div>
                 </div>
             </footer>
-        </article>
+        
+<aside class="about-box">
+    <h2>À propos de BiblioGenius</h2>
+    <p>
+        <strong>BiblioGenius</strong> est une application libre de gestion de bibliothèque personnelle : organisez vos livres, suivez vos lectures et prêtez-les directement à vos proches. Gratuite, open source, et vos données restent sur votre appareil.
+    </p>
+    <p>
+        <a href="/story.html">D'où vient BiblioGenius et pourquoi</a>
+        &middot;
+        <a href="/">Télécharger l'application</a>
+    </p>
+</aside>
+
+    </article>
     </main>
 
     
@@ -204,7 +239,13 @@
     <div class="container">
         <p>BiblioGenius · Open Source, local-first.</p>
         <div class="footer-bottom">
-            <p>&copy; 2025-2026 BiblioGenius — <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a></p>
+            <p>&copy; 2025-2026 BiblioGenius &middot; <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-color);">AGPL-3.0</a></p>
+            <nav class="legal-line" aria-label="Informations légales">
+                <a href="/privacy.html">Confidentialité</a> &middot;
+                <a href="/data-deletion.html">Suppression des données</a> &middot;
+                <a href="/#contact">Contact</a> &middot;
+                <a href="https://codeberg.org/bibliogenius">Code source</a>
+            </nav>
         </div>
     </div>
 </footer>

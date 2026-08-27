@@ -20,6 +20,18 @@ An account is optional. When one is created, it holds an end-to-end encrypted co
 
 Readers cataloguing a personal collection, families sharing shelves across a household, reading groups and associations, small libraries, booksellers, and teachers. The app is modular: features that do not apply to a given use can be left off.
 
+## Who makes it
+
+BiblioGenius is designed and developed by Federico Calo (https://federico-calo.net/), an independent developer who builds it outside his client work. Sebastien Godet contributes as a volunteer, on product framing, functional and UX testing, and bug reporting.
+
+It is an independent project, not a company product: no investor, and no business model resting on user data. Contributions are welcome on Codeberg.
+
+## Origins
+
+The idea started in 2020, as a project built during Harvard's CS50 online course: adding, editing and categorising books from their ISBN through third-party APIs (OpenLibrary, Google Books, ISBNdb). It was rebuilt over the following years, first as a mobile app on Symfony, then on Drupal with NativeScript and barcode scanning.
+
+BiblioGenius in its current form dates from November 2025: a mobile-first application with a Rust core and a Flutter interface, and peer-to-peer lending between readers as its centre of gravity. The app has been on the App Store and Google Play since August 2026.
+
 ## Price and availability
 
 - **Price**: free. No paid tier, no subscription, no in-app purchase.
@@ -31,7 +43,7 @@ Readers cataloguing a personal collection, families sharing shelves across a hou
 ## Key features
 
 - Local-first: works offline, no account and no cloud dependency
-- Barcode and ISBN scanning, with metadata from BNF (French National Library), Inventaire.io, OpenLibrary and Google Books
+- Barcode and ISBN scanning, with metadata from open catalogues: BNF (French National Library), Inventaire.io and OpenLibrary. The point of querying several is to widen the entry points for qualified, rights-free data. Google Books is optional, off by default, and needs the reader's own API key
 - Shelves, collections, series tracking, reading progress, wishlist
 - Peer-to-peer book lending with neighbors, end-to-end encrypted
 - Optional encrypted account for backup, recovery and multi-device sync
@@ -113,6 +125,8 @@ English guides:
 - Read-only mirror: https://github.com/bibliogenius
 - Contribute: https://bibliogenius.org/contribute.html
 - Privacy Policy: https://bibliogenius.org/privacy.html
+- Where the data is stored (detailed): https://bibliogenius.org/en/docs/privacy-data.html
+- Data deletion: https://bibliogenius.org/data-deletion.html
 
 ## Tech stack
 

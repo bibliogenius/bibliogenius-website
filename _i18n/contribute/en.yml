@@ -51,19 +51,19 @@ dev_desc: The code is 100% Open Source.
 stack_app_label: "App:"
 btn_explore_github: Explore the code
 where_to_start: Where to start?
-where_to_start_desc: "Check out our "Good First Issue" issues — accessible tasks to get started:"
+where_to_start_desc: "Check out our "Good First Issue" issues, accessible tasks to get started:"
 
 # -- Good First Issues --
 gfi_aria: Good First Issues by project
 gfi_app_title: Flutter App
 gfi_app_desc: Translations, tests, UI
-gfi_app_aria: "Good First Issues — Flutter App: translations, tests, UI"
+gfi_app_aria: "Good First Issues, Flutter App: translations, tests, UI"
 gfi_web_title: Website
 gfi_web_desc: Accessibility, translation
-gfi_web_aria: "Good First Issues — Website: accessibility, translation"
+gfi_web_aria: "Good First Issues, Website: accessibility, translation"
 gfi_rust_title: Rust Server
 gfi_rust_desc: Documentation, tests
-gfi_rust_aria: "Good First Issues — Rust Server: documentation, tests"
+gfi_rust_aria: "Good First Issues, Rust Server: documentation, tests"
 
 # -- Footer --
 footer_copyright: "© 2025-2026 BiblioGenius · <a href="https://www.gnu.org/licenses/agpl-3.0.html" style="color:var(--accent-light);">AGPL-3.0</a>"
@@ -77,7 +77,7 @@ thanks_intro: "BiblioGenius moves forward thanks to those who give their time an
 thanks_contributors_aria: "Contributors"
 thanks_federico_role: "Project lead: design and development."
 thanks_federico_aria: "Federico Calo, personal website"
-thanks_sebastien_role: "Support in shaping the project"
+thanks_sebastien_role: "Volunteer business analyst and functional tester: product framing, acceptance and UX testing, bug reports."
 thanks_sebastien_aria: "Sébastien Godet, LinkedIn profile"
 thanks_translators: "Thanks too to the app's translators, as well as to its contributors."
 thanks_family: "Thanks also to my loved ones, the app's first patient testers."
