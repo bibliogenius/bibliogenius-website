@@ -20,6 +20,20 @@ Your books, shelves, collections, tags, copies, loans and contacts are stored lo
 - **The encrypted account**, if you create one. The server then only stores encrypted blocks, unreadable to it. See [Encrypted account and multiple devices](account-sync.html).
 
 None of this is turned on for you.
+## The app's permissions
+
+Two Android permissions are classified as "dangerous" by the system. Here is what they are for.
+
+**Camera.** Scanning barcodes to add a book, and reading the pairing QR codes between libraries.
+
+**Microphone.** One function only: dictating a reading note or a quote instead of typing it. The microphone button appears in note fields. The permission is declared in the app manifest, but it is only requested the first time you use that button: if you never dictate, the app never asks.
+
+The app records no audio and keeps none. Only the recognized text is inserted into the note field. Turning speech into text, however, is done by the operating system: the app uses the speech recognition the device provides. That processing therefore depends on your device and its settings, and it is outside the app's hands. This is why dictation can be switched off: turning it off in the settings removes the microphone button. It is on by default, except on the bookseller profile.
+
+## An independent audit
+
+Exodus Privacy analyses the trackers and permissions of Android apps. Its report on BiblioGenius is public: [see the Exodus Privacy report](https://reports.exodus-privacy.eu.org/en/reports/com.bibliogenius.app/latest/).
+
 
 ## Choosing what others see
 

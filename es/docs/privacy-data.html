@@ -452,6 +452,13 @@
 <li><strong>La cuenta cifrada</strong>, si creas una. El servidor solo guarda bloques cifrados, ilegibles para él. Consulta <a href="../../en/docs/account-sync.html">Cuenta cifrada y varios dispositivos</a> (en inglés).</li>
 </ul>
 <p>Nada de esto se activa en tu lugar.</p>
+<h2 id="los-permisos-de-la-aplicacion">Los permisos de la aplicación</h2>
+<p>Dos permisos de Android están clasificados como "peligrosos" por el sistema. Esto es para lo que sirven.</p>
+<p><strong>Cámara.</strong> El escaneo de códigos de barras para añadir un libro, y la lectura de los códigos QR de emparejamiento entre bibliotecas.</p>
+<p><strong>Micrófono.</strong> Una sola función: dictar una nota de lectura o una cita en lugar de escribirla. El botón de micrófono aparece en los campos de notas. El permiso está declarado en el manifiesto de la aplicación, pero solo se pide la primera vez que usas ese botón: si nunca dictas, la aplicación nunca te lo pide.</p>
+<p>La aplicación no graba ningún sonido ni conserva ninguno. Solo el texto reconocido se inserta en el campo de nota. La conversión de voz a texto, en cambio, la hace el sistema operativo: la aplicación usa el reconocimiento de voz que proporciona el dispositivo. Ese tratamiento depende, por tanto, de tu dispositivo y de su configuración, y queda fuera del alcance de la aplicación. Por eso el dictado se puede desactivar: apagarlo en los Ajustes retira el botón de micrófono. Está activo por defecto, salvo en el perfil de librero.</p>
+<h2 id="una-auditoria-independiente">Una auditoría independiente</h2>
+<p>Exodus Privacy analiza los rastreadores y los permisos de las aplicaciones Android. Su informe sobre BiblioGenius es público: <a href="https://reports.exodus-privacy.eu.org/es/reports/com.bibliogenius.app/latest/">ver el informe de Exodus Privacy</a>.</p>
 <h2 id="elegir-lo-que-ven-los-demas">Elegir lo que ven los demás</h2>
 <p>Activa "Libros privados" en la configuración para desbloquear la opción Privado en cada libro: un libro privado se queda en tu biblioteca pero nunca aparece ante los demás, ni en tu perfil público ni en las búsquedas de la red.</p>
 <p>Para comprobarlo en vez de fiarte, abre <strong>"Lo que ven las otras bibliotecas"</strong>: esa lista es la respuesta exacta que tu dispositivo envía a una biblioteca que consulta tu catálogo, producida por el mismo código, sin ningún recálculo de fachada.</p>

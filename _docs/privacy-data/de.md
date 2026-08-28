@@ -20,6 +20,20 @@ Ihre Bücher, Regale, Sammlungen, Schlagwörter, Exemplare, Ausleihen und Kontak
 - **Das verschlüsselte Konto**, wenn Sie eines anlegen. Der Server speichert dann nur verschlüsselte Blöcke, für ihn unlesbar. Siehe [Verschlüsseltes Konto und mehrere Geräte](../../en/docs/account-sync.html) (auf Englisch).
 
 Nichts davon wird für Sie eingeschaltet.
+## Die Berechtigungen der App
+
+Zwei Android-Berechtigungen gelten dem System als "gefährlich". Wofür sie da sind:
+
+**Kamera.** Das Scannen von Barcodes, um ein Buch zu erfassen, und das Lesen der QR-Codes zum Koppeln von Bibliotheken.
+
+**Mikrofon.** Nur eine einzige Funktion: eine Lesenotiz oder ein Zitat diktieren, statt es zu tippen. Die Mikrofon-Schaltfläche erscheint in den Notizfeldern. Die Berechtigung steht im Manifest der App, angefragt wird sie aber erst bei der ersten Nutzung dieser Schaltfläche: Wer nie diktiert, wird nie gefragt.
+
+Die App zeichnet keinen Ton auf und speichert keinen. Nur der erkannte Text landet im Notizfeld. Die Umwandlung von Sprache in Text übernimmt dagegen das Betriebssystem: Die App nutzt die Spracherkennung, die das Gerät bereitstellt. Diese Verarbeitung hängt somit von Ihrem Gerät und dessen Einstellungen ab und liegt außerhalb der App. Deshalb lässt sich das Diktat abschalten: Ausschalten in den Einstellungen entfernt die Mikrofon-Schaltfläche. Standardmäßig ist es aktiv, außer im Buchhändler-Profil.
+
+## Eine unabhängige Prüfung
+
+Exodus Privacy untersucht Tracker und Berechtigungen von Android-Apps. Der Bericht zu BiblioGenius ist öffentlich: [zum Bericht von Exodus Privacy](https://reports.exodus-privacy.eu.org/de/reports/com.bibliogenius.app/latest/).
+
 
 ## Bestimmen, was andere sehen
 

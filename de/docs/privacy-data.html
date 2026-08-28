@@ -452,6 +452,13 @@
 <li><strong>Das verschlüsselte Konto</strong>, wenn Sie eines anlegen. Der Server speichert dann nur verschlüsselte Blöcke, für ihn unlesbar. Siehe <a href="../../en/docs/account-sync.html">Verschlüsseltes Konto und mehrere Geräte</a> (auf Englisch).</li>
 </ul>
 <p>Nichts davon wird für Sie eingeschaltet.</p>
+<h2 id="die-berechtigungen-der-app">Die Berechtigungen der App</h2>
+<p>Zwei Android-Berechtigungen gelten dem System als "gefährlich". Wofür sie da sind:</p>
+<p><strong>Kamera.</strong> Das Scannen von Barcodes, um ein Buch zu erfassen, und das Lesen der QR-Codes zum Koppeln von Bibliotheken.</p>
+<p><strong>Mikrofon.</strong> Nur eine einzige Funktion: eine Lesenotiz oder ein Zitat diktieren, statt es zu tippen. Die Mikrofon-Schaltfläche erscheint in den Notizfeldern. Die Berechtigung steht im Manifest der App, angefragt wird sie aber erst bei der ersten Nutzung dieser Schaltfläche: Wer nie diktiert, wird nie gefragt.</p>
+<p>Die App zeichnet keinen Ton auf und speichert keinen. Nur der erkannte Text landet im Notizfeld. Die Umwandlung von Sprache in Text übernimmt dagegen das Betriebssystem: Die App nutzt die Spracherkennung, die das Gerät bereitstellt. Diese Verarbeitung hängt somit von Ihrem Gerät und dessen Einstellungen ab und liegt außerhalb der App. Deshalb lässt sich das Diktat abschalten: Ausschalten in den Einstellungen entfernt die Mikrofon-Schaltfläche. Standardmäßig ist es aktiv, außer im Buchhändler-Profil.</p>
+<h2 id="eine-unabhangige-prufung">Eine unabhängige Prüfung</h2>
+<p>Exodus Privacy untersucht Tracker und Berechtigungen von Android-Apps. Der Bericht zu BiblioGenius ist öffentlich: <a href="https://reports.exodus-privacy.eu.org/de/reports/com.bibliogenius.app/latest/">zum Bericht von Exodus Privacy</a>.</p>
 <h2 id="bestimmen-was-andere-sehen">Bestimmen, was andere sehen</h2>
 <p>Aktivieren Sie "Private Bücher" in den Einstellungen, um bei jedem Buch die Option Privat freizuschalten: Ein privates Buch bleibt in Ihrer Bibliothek, taucht aber nie bei anderen auf, weder in Ihrem öffentlichen Profil noch in den Suchen im Netzwerk.</p>
 <p>Um es zu prüfen statt zu glauben, öffnen Sie <strong>"Was andere Bibliotheken sehen"</strong>: Diese Liste ist genau die Antwort, die Ihr Gerät einer Bibliothek schickt, die Ihren Katalog durchsieht, erzeugt vom selben Code, ohne kosmetische Neuberechnung.</p>

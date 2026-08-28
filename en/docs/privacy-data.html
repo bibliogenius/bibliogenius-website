@@ -481,6 +481,13 @@
 <li><strong>The encrypted account</strong>, if you create one. The server then only stores encrypted blocks, unreadable to it. See <a href="account-sync.html">Encrypted account and multiple devices</a>.</li>
 </ul>
 <p>None of this is turned on for you.</p>
+<h2 id="the-apps-permissions">The app's permissions</h2>
+<p>Two Android permissions are classified as "dangerous" by the system. Here is what they are for.</p>
+<p><strong>Camera.</strong> Scanning barcodes to add a book, and reading the pairing QR codes between libraries.</p>
+<p><strong>Microphone.</strong> One function only: dictating a reading note or a quote instead of typing it. The microphone button appears in note fields. The permission is declared in the app manifest, but it is only requested the first time you use that button: if you never dictate, the app never asks.</p>
+<p>The app records no audio and keeps none. Only the recognized text is inserted into the note field. Turning speech into text, however, is done by the operating system: the app uses the speech recognition the device provides. That processing therefore depends on your device and its settings, and it is outside the app's hands. This is why dictation can be switched off: turning it off in the settings removes the microphone button. It is on by default, except on the bookseller profile.</p>
+<h2 id="an-independent-audit">An independent audit</h2>
+<p>Exodus Privacy analyses the trackers and permissions of Android apps. Its report on BiblioGenius is public: <a href="https://reports.exodus-privacy.eu.org/en/reports/com.bibliogenius.app/latest/">see the Exodus Privacy report</a>.</p>
 <h2 id="choosing-what-others-see">Choosing what others see</h2>
 <p>Enable "Private books" in the settings to unlock the Private option on each book: a private book stays in your library but never shows up to others, neither on your public profile nor in network searches.</p>
 <p>To check rather than trust, open <strong>"What other libraries see"</strong>: this list is the exact answer your device sends to a library browsing your catalogue, produced by the same code, with no cosmetic recomputation.</p>

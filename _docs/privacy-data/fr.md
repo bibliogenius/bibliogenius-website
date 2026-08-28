@@ -20,6 +20,20 @@ Vos livres, étagères, collections, étiquettes, exemplaires, prêts et contact
 - **Le compte chiffré**, si vous en créez un. Le serveur ne stocke alors que des blocs chiffrés, illisibles pour lui. Voir [Compte chiffré et plusieurs appareils](account-sync.html).
 
 Rien de tout cela n'est activé à votre place.
+## Les permissions de l'application
+
+Deux permissions Android sont classées « dangereuses » par le système. Voici ce qu'elles servent à faire.
+
+**Caméra.** Le scan des codes-barres pour ajouter un livre, et la lecture des QR codes d'appairage entre bibliothèques.
+
+**Microphone.** Une seule fonction : dicter une note de lecture ou une citation au lieu de la taper. Le bouton micro apparaît dans les champs de notes. La permission est déclarée dans le manifeste de l'application, mais elle n'est demandée qu'à la première utilisation de ce bouton : si vous ne dictez jamais, l'application ne vous la demande jamais.
+
+L'application n'enregistre ni ne conserve aucun son. Seul le texte reconnu est inséré dans le champ de note. La conversion de la parole en texte, elle, est celle du système d'exploitation : l'application utilise la reconnaissance vocale que l'appareil fournit. Ce traitement dépend donc de votre appareil et de ses réglages, et il échappe à l'application. C'est pour cela que la dictée se désactive : la couper dans les Paramètres retire le bouton micro. Elle est active par défaut, sauf sur le profil libraire.
+
+## Un audit indépendant
+
+Exodus Privacy analyse les pisteurs et les permissions des applications Android. Son rapport sur BiblioGenius est public : [voir le rapport Exodus Privacy](https://reports.exodus-privacy.eu.org/fr/reports/com.bibliogenius.app/latest/).
+
 
 ## Choisir ce que les autres voient
 

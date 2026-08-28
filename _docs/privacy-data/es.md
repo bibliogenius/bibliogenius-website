@@ -20,6 +20,20 @@ Tus libros, estanterías, colecciones, etiquetas, ejemplares, préstamos y conta
 - **La cuenta cifrada**, si creas una. El servidor solo guarda bloques cifrados, ilegibles para él. Consulta [Cuenta cifrada y varios dispositivos](../../en/docs/account-sync.html) (en inglés).
 
 Nada de esto se activa en tu lugar.
+## Los permisos de la aplicación
+
+Dos permisos de Android están clasificados como "peligrosos" por el sistema. Esto es para lo que sirven.
+
+**Cámara.** El escaneo de códigos de barras para añadir un libro, y la lectura de los códigos QR de emparejamiento entre bibliotecas.
+
+**Micrófono.** Una sola función: dictar una nota de lectura o una cita en lugar de escribirla. El botón de micrófono aparece en los campos de notas. El permiso está declarado en el manifiesto de la aplicación, pero solo se pide la primera vez que usas ese botón: si nunca dictas, la aplicación nunca te lo pide.
+
+La aplicación no graba ningún sonido ni conserva ninguno. Solo el texto reconocido se inserta en el campo de nota. La conversión de voz a texto, en cambio, la hace el sistema operativo: la aplicación usa el reconocimiento de voz que proporciona el dispositivo. Ese tratamiento depende, por tanto, de tu dispositivo y de su configuración, y queda fuera del alcance de la aplicación. Por eso el dictado se puede desactivar: apagarlo en los Ajustes retira el botón de micrófono. Está activo por defecto, salvo en el perfil de librero.
+
+## Una auditoría independiente
+
+Exodus Privacy analiza los rastreadores y los permisos de las aplicaciones Android. Su informe sobre BiblioGenius es público: [ver el informe de Exodus Privacy](https://reports.exodus-privacy.eu.org/es/reports/com.bibliogenius.app/latest/).
+
 
 ## Elegir lo que ven los demás
 
