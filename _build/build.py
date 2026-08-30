@@ -263,11 +263,17 @@ SITE_LANGS = ['fr', 'en', 'es', 'de']
 # an entity from independent sources, so this list is the strongest lever the
 # site has. Store pages are product listings rather than identity profiles, so
 # the forge accounts carry most of the weight until a Wikidata item exists.
+# The AlternativeTo entry is the first URL here hosted by a party that is not
+# the project and not a distribution channel: it went through their review on
+# 2026-08-30. Keep this list to pages that identify the entity itself. The
+# Exodus Privacy report is deliberately absent: it analyses one Android build
+# rather than naming the entity, and its /latest/ URL moves with each version.
 SAME_AS = [
     'https://codeberg.org/bibliogenius',
     'https://github.com/bibliogenius',
     'https://apps.apple.com/app/bibliogenius/id6757465461',
     'https://play.google.com/store/apps/details?id=com.bibliogenius.app',
+    'https://alternativeto.net/software/bibliogenius/',
 ]
 
 # Description of the project as an entity, not of the app as a product: the
