@@ -1,6 +1,6 @@
 ---
 title: Comment jouer au Memory
-description: Testez votre mémoire avec les couvertures de vos livres
+description: Le Memory de BiblioGenius fabrique un jeu de paires avec les couvertures de vos propres livres : retournez les cartes et retrouvez les paires.
 order: 15
 group: games
 ---

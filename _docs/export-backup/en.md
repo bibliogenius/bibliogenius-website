@@ -1,6 +1,6 @@
 ---
 title: Exporting and backing up my library
-description: Catalogue export, CSV export for spreadsheets, full encrypted backup and restore
+description: BiblioGenius exports your catalog as CSV for a spreadsheet and produces a full encrypted backup that restores as is on another device.
 order: 13
 group: data
 ---

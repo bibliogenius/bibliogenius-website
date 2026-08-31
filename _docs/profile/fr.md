@@ -1,6 +1,6 @@
 ---
 title: Mon profil
-description: Statistiques de lecture, badges, objectifs et classement
+description: Le profil BiblioGenius rassemble vos statistiques de lecture, vos badges, vos objectifs personnels et votre classement entre amis.
 order: 16
 group: data
 ---

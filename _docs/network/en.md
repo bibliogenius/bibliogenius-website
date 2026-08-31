@@ -1,6 +1,6 @@
 ---
 title: How to explore the network
-description: Discover and browse your contacts' catalogs
+description: The BiblioGenius network lets you browse the catalog of the libraries you have added, and ask them to borrow a book.
 order: 7
 group: social
 ---

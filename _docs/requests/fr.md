@@ -1,6 +1,6 @@
 ---
 title: Gérer les demandes
-description: Visualisez et gérez vos demandes d'emprunt reçues et envoyées
+description: L'écran Demandes de BiblioGenius rassemble les emprunts qu'on vous demande et ceux que vous demandez : acceptez, refusez ou marquez un livre comme rendu.
 order: 9
 group: social
 ---

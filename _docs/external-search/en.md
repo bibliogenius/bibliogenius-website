@@ -1,6 +1,6 @@
 ---
 title: How to search external catalogs
-description: Find books in the BNF, OpenLibrary, Inventaire and other sources
+description: External search in BiblioGenius queries the BnF, OpenLibrary and Inventaire, and adds the book you pick to your library with its metadata.
 order: 4
 group: discovery
 ---

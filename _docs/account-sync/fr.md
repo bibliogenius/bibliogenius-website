@@ -1,6 +1,6 @@
 ---
 title: Compte chiffré et plusieurs appareils
-description: Sauvegarder votre bibliothèque chiffrée, la retrouver après une perte et l'utiliser sur plusieurs appareils
+description: Le compte chiffré de BiblioGenius garde une copie de votre bibliothèque que vous seul pouvez lire, pour ne rien perdre et la retrouver sur chacun de vos appareils.
 order: 14
 group: data
 ---

@@ -1,6 +1,6 @@
 ---
 title: Les sélections toutes prêtes
-description: Importer une liste de prix littéraires, de classiques ou de rentrée scolaire en quelques touches
+description: BiblioGenius embarque des sélections déjà constituées, prix littéraires, classiques, mangas, jeunesse ou rentrée scolaire, à importer en quelques touches.
 order: 6
 group: discovery
 ---

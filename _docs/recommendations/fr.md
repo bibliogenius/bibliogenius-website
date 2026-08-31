@@ -1,6 +1,6 @@
 ---
 title: Les suggestions de lecture
-description: L'onglet « À découvrir », d'où viennent les propositions, et comment écarter ce qui ne vous parle pas
+description: L'onglet À découvrir de BiblioGenius propose des lectures à partir de ce que vous possédez déjà, et le calcul reste sur votre appareil.
 order: 5
 group: discovery
 ---

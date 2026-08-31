@@ -1,6 +1,6 @@
 ---
 title: How to play Hangman
-description: Guess the title of a book from your library, letter by letter
+description: BiblioGenius Hangman draws its words from the titles in your own library: find the hidden title letter by letter.
 order: 17
 group: games
 ---

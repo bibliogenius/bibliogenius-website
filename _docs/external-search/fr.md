@@ -1,6 +1,6 @@
 ---
 title: Comment chercher dans les catalogues externes
-description: Trouvez des livres dans la BNF, OpenLibrary, Inventaire et d'autres sources
+description: La recherche externe de BiblioGenius interroge la BnF, OpenLibrary et Inventaire, et ajoute le livre trouvé à votre bibliothèque avec ses métadonnées.
 order: 4
 group: discovery
 ---

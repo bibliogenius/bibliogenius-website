@@ -1,6 +1,6 @@
 ---
 title: How to use audio features
-description: Listen to free audiobooks from LibriVox, Litterature Audio and Internet Archive
+description: The BiblioGenius audio module looks for a free audio version of your books on LibriVox, Litterature Audio and Internet Archive, and plays it in the app.
 order: 11
 group: advanced
 ---

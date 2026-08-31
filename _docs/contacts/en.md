@@ -1,6 +1,6 @@
 ---
 title: How to manage contacts
-description: Add friends and libraries to your network
+description: The BiblioGenius network holds two kinds of contact: borrowers, who can borrow your books, and libraries, whose catalog you can browse.
 order: 6
 group: social
 ---

@@ -1,6 +1,6 @@
 ---
 title: Following a series
-description: Order the volumes of a series and see at a glance where you are
+description: BiblioGenius treats a series as its own kind of collection: volumes are numbered and laid out on a timeline that shows where you are.
 order: 6
 group: library
 ---

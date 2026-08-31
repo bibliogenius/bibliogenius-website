@@ -1,6 +1,6 @@
 ---
 title: Comment suivre ma progression de lecture
-description: Suivez votre avancement dans vos livres et gagnez des XP
+description: Dans BiblioGenius, marquez un livre En lecture pour suivre votre avancement, puis Lu pour gagner des XP et débloquer des succès.
 order: 3
 group: library
 ---

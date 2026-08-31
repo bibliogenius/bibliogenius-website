@@ -1,6 +1,6 @@
 ---
 title: How to add a book
-description: Guide to adding books by scanning, searching or manual entry
+description: In BiblioGenius, a book is added by scanning its barcode, searching by title or ISBN, or typing it in by hand.
 order: 1
 group: library
 ---

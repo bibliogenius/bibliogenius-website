@@ -1,6 +1,6 @@
 ---
 title: How to play Sliding Puzzle
-description: Reconstruct a book cover by sliding tiles
+description: The BiblioGenius sliding puzzle takes a cover from your library as the picture to rebuild, one tile at a time.
 order: 16
 group: games
 ---

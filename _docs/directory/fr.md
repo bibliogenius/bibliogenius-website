@@ -1,6 +1,6 @@
 ---
 title: L'annuaire des bibliothèques
-description: Se rendre visible, découvrir d'autres bibliothèques et les suivre sans appairage
+description: L'annuaire de BiblioGenius rassemble les bibliothèques qui ont choisi d'être visibles : vous pouvez les découvrir et les suivre sans appairage.
 order: 10
 group: social
 ---

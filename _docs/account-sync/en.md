@@ -1,6 +1,6 @@
 ---
 title: Encrypted account and multiple devices
-description: Back up your library encrypted, recover it after a loss and use it on several devices
+description: The BiblioGenius encrypted account keeps a copy of your library that only you can read, so nothing is lost and every device shows the same shelves.
 order: 14
 group: data
 ---

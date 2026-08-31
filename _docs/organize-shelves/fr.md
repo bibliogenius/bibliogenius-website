@@ -1,6 +1,6 @@
 ---
 title: Comment organiser mes étagères
-description: Créez des étagères thématiques et organisez vos livres à votre façon
+description: Les étagères de BiblioGenius classent vos livres par thème, par genre ou selon le critère de votre choix.
 order: 2
 group: library
 ---

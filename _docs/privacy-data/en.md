@@ -1,6 +1,6 @@
 ---
 title: Where is my data stored
-description: What stays on your device, what leaves it, and how you keep control
+description: BiblioGenius is local first: your library lives on your device, and this page states exactly what leaves it, when, and where it goes.
 order: 12
 group: data
 ---

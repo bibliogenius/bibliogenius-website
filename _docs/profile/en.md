@@ -1,6 +1,6 @@
 ---
 title: My Profile
-description: Reading statistics, badges, goals and leaderboard
+description: The BiblioGenius profile gathers your reading statistics, badges, personal goals and the leaderboard you share with friends.
 order: 16
 group: data
 ---

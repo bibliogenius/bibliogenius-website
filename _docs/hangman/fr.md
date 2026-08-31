@@ -1,6 +1,6 @@
 ---
 title: Comment jouer au Pendu
-description: Devinez le titre d'un livre de votre bibliothèque, lettre par lettre
+description: Le Pendu de BiblioGenius tire ses mots des titres de votre propre bibliothèque : retrouvez le titre caché lettre par lettre.
 order: 17
 group: games
 ---

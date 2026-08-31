@@ -1,6 +1,6 @@
 ---
 title: Bulk-update your book data
-description: Automatically fill in the missing book data (summary, publisher, pages, cover) across your whole library at once
+description: BiblioGenius fills in the missing data across your whole library in one pass: summary, publisher, page count and cover.
 order: 4
 group: library
 ---

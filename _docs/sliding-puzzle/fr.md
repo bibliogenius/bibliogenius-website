@@ -1,6 +1,6 @@
 ---
 title: Comment jouer au Taquin
-description: Reconstituez une couverture en faisant glisser les tuiles
+description: Le Taquin de BiblioGenius prend une couverture de votre bibliothèque comme image à reconstituer, tuile par tuile.
 order: 16
 group: games
 ---

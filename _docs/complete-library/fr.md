@@ -1,6 +1,6 @@
 ---
 title: Mettre à jour les données de mes livres en masse
-description: Complétez automatiquement les données manquantes (résumé, éditeur, pages, couverture) de toute votre bibliothèque en une seule opération
+description: BiblioGenius complète en une seule opération les données manquantes de toute votre bibliothèque : résumé, éditeur, nombre de pages et couverture.
 order: 4
 group: library
 ---

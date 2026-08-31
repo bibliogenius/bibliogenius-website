@@ -1,6 +1,6 @@
 ---
 title: Reading suggestions
-description: The "To discover" tab, where the suggestions come from, and how to dismiss the ones that miss
+description: The BiblioGenius To discover tab suggests reading based on what you already own, and the computation stays on your device.
 order: 5
 group: discovery
 ---

@@ -1,6 +1,6 @@
 ---
 title: Comment prêter un livre
-description: Gérez les prêts de vos livres à vos contacts
+description: Dans BiblioGenius, un prêt se note depuis la fiche du livre, avec Gérer les copies puis Prêter, et l'application suit qui a le livre jusqu'au retour.
 order: 8
 group: social
 ---

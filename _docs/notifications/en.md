@@ -1,6 +1,6 @@
 ---
 title: Notifications
-description: Track connection requests, loans, and wishlist matches
+description: The BiblioGenius notifications screen gathers connection requests, loans, returns and wishlist matches in one place.
 order: 8
 group: social
 ---

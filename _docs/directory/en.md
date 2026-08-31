@@ -1,6 +1,6 @@
 ---
 title: The library directory
-description: Make yourself visible, discover other libraries and follow them without pairing
+description: The BiblioGenius directory lists the libraries that chose to be visible, so you can discover and follow them without pairing first.
 order: 10
 group: social
 ---

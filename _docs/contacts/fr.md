@@ -1,6 +1,6 @@
 ---
 title: Comment gérer mes contacts
-description: Ajoutez des amis et des bibliothèques à votre réseau
+description: Le Réseau de BiblioGenius distingue deux sortes de contacts : les emprunteurs, qui empruntent vos livres, et les bibliothèques, dont vous consultez le catalogue.
 order: 6
 group: social
 ---

@@ -1,6 +1,6 @@
 ---
 title: Exporter et sauvegarder ma bibliothèque
-description: Export du catalogue, export CSV pour tableur, sauvegarde complète chiffrée et restauration
+description: BiblioGenius exporte votre catalogue en CSV pour tableur et produit une sauvegarde complète chiffrée, restaurable telle quelle sur un autre appareil.
 order: 13
 group: data
 ---

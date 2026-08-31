@@ -1,6 +1,6 @@
 ---
 title: Où sont stockées mes données
-description: Ce qui reste sur votre appareil, ce qui en sort, et comment vous gardez la main
+description: BiblioGenius est local d'abord : votre bibliothèque vit sur votre appareil, et cette page dit exactement ce qui en sort, quand, et vers où.
 order: 12
 group: data
 ---

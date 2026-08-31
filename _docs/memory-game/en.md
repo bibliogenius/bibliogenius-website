@@ -1,6 +1,6 @@
 ---
 title: How to play Memory
-description: Test your memory with your book covers
+description: BiblioGenius Memory builds a pairs game out of your own book covers: flip the cards and match them as fast as you can.
 order: 15
 group: games
 ---

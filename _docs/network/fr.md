@@ -1,6 +1,6 @@
 ---
 title: Comment explorer le réseau
-description: Découvrez et parcourez les catalogues de vos contacts
+description: Le Réseau de BiblioGenius vous laisse parcourir le catalogue des bibliothèques que vous avez ajoutées, et leur demander un livre en prêt.
 order: 7
 group: social
 ---

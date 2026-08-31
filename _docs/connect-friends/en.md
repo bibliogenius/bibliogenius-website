@@ -1,6 +1,6 @@
 ---
 title: How to connect with friends
-description: Share your library and connect with other readers via QR code or invite link
+description: Two readers connect in BiblioGenius by scanning a QR code or sharing an invite link, and each then sees the other's library.
 order: 5
 group: social
 ---

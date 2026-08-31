@@ -1,6 +1,6 @@
 ---
 title: How to organize my shelves
-description: Create thematic shelves and organize your books your way
+description: BiblioGenius shelves sort your books by theme, by genre or by any criterion you choose.
 order: 2
 group: library
 ---

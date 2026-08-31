@@ -1,6 +1,6 @@
 ---
 title: Notifications
-description: Suivez les demandes de connexion, les emprunts et les correspondances de votre liste de souhaits
+description: L'écran Notifications de BiblioGenius centralise les demandes de connexion, les emprunts, les retours et les correspondances avec votre liste de souhaits.
 order: 8
 group: social
 ---

@@ -1,6 +1,6 @@
 ---
 title: Comment ajouter un livre
-description: Guide pour ajouter des livres par scan, recherche ou saisie manuelle
+description: Dans BiblioGenius, un livre s'ajoute en scannant son code-barres, en le cherchant par titre ou par ISBN, ou en le saisissant à la main.
 order: 1
 group: library
 ---

@@ -1,6 +1,6 @@
 ---
 title: Importing Books
-description: Import your books from Gleeph, Goodreads, Babelio or a CSV file
+description: BiblioGenius imports your books from Gleeph, Goodreads, Babelio or any CSV file, so your whole library lives in one place.
 order: 13
 group: discovery
 ---

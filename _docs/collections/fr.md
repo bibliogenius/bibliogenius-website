@@ -1,6 +1,6 @@
 ---
 title: Comment utiliser les Collections
-description: Regrouper des livres en listes, marquer ses favoris, partager une liste et en recevoir
+description: Les Collections de BiblioGenius regroupent vos livres en listes : une saga, un thème, un défi lecture, vos favoris, ou une liste reçue d'un autre lecteur.
 order: 10
 group: advanced
 ---

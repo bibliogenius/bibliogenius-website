@@ -1,6 +1,6 @@
 ---
 title: Ready-made lists
-description: Import a list of literary prizes, classics or back-to-school reading in a few taps
+description: BiblioGenius ships ready-made selections, literary prizes, classics, manga, children's books and back-to-school reading, importable in a few taps.
 order: 6
 group: discovery
 ---

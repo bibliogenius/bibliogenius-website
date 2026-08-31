@@ -1,6 +1,6 @@
 ---
 title: Comment utiliser les fonctionnalités audio
-description: Écoutez des livres audio gratuits depuis LibriVox, Littérature Audio et Internet Archive
+description: Le module Audio de BiblioGenius cherche une version audio gratuite de vos livres sur LibriVox, Littérature Audio et Internet Archive, et la lit dans l'application.
 order: 11
 group: advanced
 ---

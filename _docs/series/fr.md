@@ -1,6 +1,6 @@
 ---
 title: Suivre une série
-description: Ordonner les tomes d'une série et voir d'un coup d'œil où vous en êtes
+description: BiblioGenius traite les séries comme une collection à part : les tomes y sont numérotés et affichés sur une frise qui montre où vous en êtes.
 order: 6
 group: library
 ---

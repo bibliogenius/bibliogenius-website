@@ -1,6 +1,6 @@
 ---
 title: How to lend a book
-description: Manage lending your books to contacts
+description: In BiblioGenius, a loan is recorded from the book page, under Manage Copies then Lend, and the app tracks who has the book until it comes back.
 order: 8
 group: social
 ---

@@ -1,6 +1,6 @@
 ---
 title: My wishlist
-description: Note the books you are after, see who owns them, and know who is after yours
+description: The BiblioGenius wishlist keeps the books you are after, shows who owns them in your network, and tells you who is after yours.
 order: 5
 group: library
 ---

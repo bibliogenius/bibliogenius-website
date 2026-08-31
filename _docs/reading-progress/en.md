@@ -1,6 +1,6 @@
 ---
 title: How to track reading progress
-description: Track your progress through books and earn XP
+description: In BiblioGenius, mark a book as Reading to track how far you are, then as Read to earn XP and unlock achievements.
 order: 3
 group: library
 ---

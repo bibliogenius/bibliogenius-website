@@ -1,6 +1,6 @@
 ---
 title: How to manage requests
-description: View and manage incoming and outgoing borrow requests
+description: The BiblioGenius requests screen holds the loans people ask of you and the ones you ask for: accept, decline, or mark a book as returned.
 order: 9
 group: social
 ---

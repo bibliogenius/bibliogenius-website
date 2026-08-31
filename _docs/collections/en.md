@@ -1,6 +1,6 @@
 ---
 title: How to use Collections
-description: Group books into lists, mark your favorites, share a list and receive one
+description: BiblioGenius Collections group your books into lists: a saga, a theme, a reading challenge, your favorites, or a list received from another reader.
 order: 10
 group: advanced
 ---

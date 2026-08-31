@@ -1,6 +1,6 @@
 ---
 title: Ma liste de souhaits
-description: Noter les livres que vous cherchez, voir qui les possède, et savoir qui cherche les vôtres
+description: La liste de souhaits de BiblioGenius garde les livres que vous cherchez, montre qui les possède dans votre réseau, et signale qui cherche les vôtres.
 order: 5
 group: library
 ---
