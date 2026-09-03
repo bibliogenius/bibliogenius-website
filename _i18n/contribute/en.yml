@@ -45,6 +45,11 @@ bug_desc: "Report it easily:"
 btn_email: By Email
 btn_github: On Codeberg
 
+# -- Idea --
+idea_title: An idea for what comes next?
+idea_desc: "Tell us what you are missing, even in one sentence."
+btn_idea: Suggest an idea
+
 # -- Developer Card --
 dev_title: Contributors Space
 dev_desc: The code is 100% Open Source.

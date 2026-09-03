@@ -45,6 +45,11 @@ bug_desc: "Repórtelo fácilmente:"
 btn_email: Por Email
 btn_github: En Codeberg
 
+# -- Idea --
+idea_title: ¿Una idea para el futuro?
+idea_desc: "Cuéntanos qué te falta, aunque sea en una frase."
+btn_idea: Proponer una idea
+
 # -- Tarjeta Desarrollador --
 dev_title: Espacio de Contribuidores
 dev_desc: El código es 100% Open Source.

@@ -483,12 +483,22 @@
 <li>L'onglet <strong>À compléter</strong> liste les livres auxquels il manque des données ; l'onglet <strong>Récents</strong> montre ceux qui viennent d'être complétés.</li>
 <li>Les filtres permettent de cibler un champ manquant précis, ou d'isoler les livres <strong>Sans ISBN</strong>.</li>
 </ul>
+<h2 id="reparer-une-bibliotheque-importee-sans-isbn">Réparer une bibliothèque importée sans ISBN</h2>
+<p>Si vous avez importé votre bibliothèque depuis un fichier et que vos livres sont arrivés <strong>sans ISBN</strong>, la complétion automatique ne peut rien pour eux : c'est justement l'ISBN qui lui sert à les identifier. Plutôt que de les saisir un par un, reprenez le fichier d'origine.</p>
+<ol>
+<li>Ouvrez l'écran <strong>Compléter ma bibliothèque</strong>, puis le filtre <strong>Sans ISBN</strong>.</li>
+<li>Appuyez sur <strong>Compléter depuis le fichier</strong> et choisissez le fichier dont vos livres proviennent.</li>
+<li>Si aucune colonne ISBN n'est reconnue, BiblioGenius affiche les en-têtes du fichier et vous demande laquelle porte l'ISBN.</li>
+<li>Un bilan indique combien de lignes ont été lues, combien de livres ont été complétés, combien n'ont pas trouvé de correspondance et combien étaient ambigus.</li>
+</ol>
+<p>Ce mode <strong>n'ajoute jamais de livre</strong> : il ne fait que remplir l'ISBN, l'éditeur et l'année de publication des livres déjà présents, et seulement quand ces champs sont vides. Une ligne qui pourrait désigner deux livres à la fois n'est jamais devinée : elle est listée, à vous de trancher. Et la complétion entière s'annule d'un geste depuis l'onglet <strong>Récents</strong>.</p>
+<p>Une fois les ISBN retrouvés, la mise à jour en masse décrite plus haut redevient possible, et les couvertures et résumés arrivent d'eux-mêmes.</p>
 <h2 id="annuler-une-modification">Annuler une modification</h2>
 <p>Après coup, vous pouvez annuler le remplissage livre par livre, ou champ par champ. Les valeurs que vous avez saisies vous-même sont protégées : elles ne sont jamais écrasées ni annulées par erreur.</p>
 <h2 id="a-savoir">À savoir</h2>
 <ul>
 <li>La mise à jour ne concerne que les livres que vous <strong>possédez</strong>.</li>
-<li>Un <strong>ISBN</strong> est nécessaire pour retrouver les données : les livres sans ISBN sont signalés et ignorés. Ajoutez-leur un ISBN depuis leur fiche pour les rendre éligibles.</li>
+<li>Un <strong>ISBN</strong> est nécessaire pour retrouver les données : les livres sans ISBN sont signalés et ignorés. Ajoutez-leur un ISBN depuis leur fiche, ou, s'ils viennent tous d'un même fichier, voir « Réparer une bibliothèque importée sans ISBN » ci-dessus.</li>
 <li>Si aucune source ne fournit l'information, le champ reste vide ; vous pouvez alors le compléter manuellement depuis la fiche du livre.</li>
 </ul>
                 <aside class="doc-help">

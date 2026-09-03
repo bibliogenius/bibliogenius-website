@@ -25,6 +25,19 @@ Compléter toute une grande bibliothèque d'un seul coup peut être long. En tra
 - L'onglet **À compléter** liste les livres auxquels il manque des données ; l'onglet **Récents** montre ceux qui viennent d'être complétés.
 - Les filtres permettent de cibler un champ manquant précis, ou d'isoler les livres **Sans ISBN**.
 
+## Réparer une bibliothèque importée sans ISBN
+
+Si vous avez importé votre bibliothèque depuis un fichier et que vos livres sont arrivés **sans ISBN**, la complétion automatique ne peut rien pour eux : c'est justement l'ISBN qui lui sert à les identifier. Plutôt que de les saisir un par un, reprenez le fichier d'origine.
+
+1. Ouvrez l'écran **Compléter ma bibliothèque**, puis le filtre **Sans ISBN**.
+2. Appuyez sur **Compléter depuis le fichier** et choisissez le fichier dont vos livres proviennent.
+3. Si aucune colonne ISBN n'est reconnue, BiblioGenius affiche les en-têtes du fichier et vous demande laquelle porte l'ISBN.
+4. Un bilan indique combien de lignes ont été lues, combien de livres ont été complétés, combien n'ont pas trouvé de correspondance et combien étaient ambigus.
+
+Ce mode **n'ajoute jamais de livre** : il ne fait que remplir l'ISBN, l'éditeur et l'année de publication des livres déjà présents, et seulement quand ces champs sont vides. Une ligne qui pourrait désigner deux livres à la fois n'est jamais devinée : elle est listée, à vous de trancher. Et la complétion entière s'annule d'un geste depuis l'onglet **Récents**.
+
+Une fois les ISBN retrouvés, la mise à jour en masse décrite plus haut redevient possible, et les couvertures et résumés arrivent d'eux-mêmes.
+
 ## Annuler une modification
 
 Après coup, vous pouvez annuler le remplissage livre par livre, ou champ par champ. Les valeurs que vous avez saisies vous-même sont protégées : elles ne sont jamais écrasées ni annulées par erreur.
@@ -32,5 +45,5 @@ Après coup, vous pouvez annuler le remplissage livre par livre, ou champ par ch
 ## À savoir
 
 - La mise à jour ne concerne que les livres que vous **possédez**.
-- Un **ISBN** est nécessaire pour retrouver les données : les livres sans ISBN sont signalés et ignorés. Ajoutez-leur un ISBN depuis leur fiche pour les rendre éligibles.
+- Un **ISBN** est nécessaire pour retrouver les données : les livres sans ISBN sont signalés et ignorés. Ajoutez-leur un ISBN depuis leur fiche, ou, s'ils viennent tous d'un même fichier, voir « Réparer une bibliothèque importée sans ISBN » ci-dessus.
 - Si aucune source ne fournit l'information, le champ reste vide ; vous pouvez alors le compléter manuellement depuis la fiche du livre.

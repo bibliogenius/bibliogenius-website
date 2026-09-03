@@ -25,4 +25,10 @@ Vous pouvez importer des livres depuis Gleeph, Goodreads, Babelio ou n'importe q
 
 BiblioGenius enrichit automatiquement les livres importés avec les métadonnées des catalogues externes (couverture, description, etc.).
 
+## Si aucune colonne ISBN n'est reconnue
+
+L'ISBN est ce qui permet ensuite de retrouver couvertures, résumés et éditions. Quand aucune colonne du fichier ne porte un nom reconnu, BiblioGenius s'arrête et vous montre les en-têtes qu'il a lus. Vous pouvez alors **désigner vous-même la colonne** qui contient l'ISBN, ou choisir d'importer sans, en le sachant.
+
+Si vos livres sont déjà entrés sans ISBN lors d'un import précédent, ils ne sont pas perdus : reprenez le même fichier depuis l'écran « Compléter ma bibliothèque », qui retrouve chaque livre et lui rend son ISBN sans créer de doublon. Voir [Mettre à jour les données de mes livres en masse](complete-library.html).
+
 Pour l'opération inverse, sortir vos livres de BiblioGenius, voir [Exporter et sauvegarder](export-backup.html).

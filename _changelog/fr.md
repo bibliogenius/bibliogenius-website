@@ -14,6 +14,39 @@ lang_name: Français
 footer_text: "BiblioGenius - Open Source, local, chiffré."
 ---
 
+## 1.1.9 <small>3 septembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.8-beta.0...v1.1.9" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.9" class="changelog-link">release</a>
+
+- **Réparer une bibliothèque importée sans ISBN** : si vos livres sont arrivés sans ISBN, reprenez le même fichier depuis l'écran « Compléter ma bibliothèque » : chaque livre est retrouvé par son titre, son auteur et son année, et récupère son ISBN, son éditeur et son année de publication. Aucun livre n'est créé, aucune valeur existante n'est remplacée, les lignes ambiguës sont listées plutôt que devinées, et toute la complétion s'annule d'un geste
+- **Import** : les colonnes nommées `EAN`, les fichiers séparés par des points-virgules, les ISBN transformés en notation scientifique par un tableur et les titres tenant sur plusieurs lignes sont maintenant lus correctement ; quand aucune colonne ISBN n'est reconnue, vous pouvez la désigner vous-même au lieu de perdre vos ISBN sans le savoir
+- **Prêts** : un nom de destinataire trop long ne déborde plus de la liste
+
+## 1.1.8 <small>1er septembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.7-beta.1...v1.1.8-beta.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.8-beta.0" class="changelog-link">release</a>
+
+- **Fiche livre** : la page est réorganisée autour d'une action principale mise en avant, les actions d'administration passent dans le menu de la barre du haut, un résumé trop long se replie au lieu de repousser les notes et les suggestions hors de l'écran, et un livre supprimé répond au lieu de tourner indéfiniment
+- **Emprunter ou acheter** : une seule feuille remplace trois cartes qui disparaissaient dès qu'elles n'avaient rien à dire, si bien qu'un réseau vide et une fonction absente se ressemblaient ; elle s'ouvre toujours et sait dire que personne ne possède le livre
+- **Compléter ma bibliothèque** : une campagne peut se limiter à un seul champ manquant, les compteurs annoncent exactement ce qui sera traité, et l'écran a été repris (cibles tactiles, états vides illustrés, mise en page)
+- **Collections** : une collection se renomme depuis sa page comme depuis la liste, où l'appui long n'efface plus directement mais propose les deux actions
+- **Tableau de bord** : une section « Récemment terminés » s'ajoute au-dessus des ajouts récents
+- **Restauration** : quand une sauvegarde est refusée, le message dit pourquoi, au lieu du même « échec de lecture du fichier » pour un fichier illisible et pour un export trop ancien
+- **Emprunts** : un livre dont l'ISBN était enregistré avec des tirets est de nouveau retrouvé dans les catalogues des bibliothèques connectées
+
+## 1.1.7 <small>29 août 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.6-beta.3...v1.1.7-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.7-beta.1" class="changelog-link">release</a>
+
+- **Doublons** : un écran de fusion répare une bibliothèque qui a rejoint un compte depuis un appareil possédant déjà ses propres livres ; il montre ce qui sera fusionné avant d'agir, et il s'ouvre aussi depuis les réglages, donc après une restauration et pas seulement après une synchronisation
+- **Phrase secrète** : un indicateur de robustesse commun à la création de compte et à l'export chiffré, avec le même seuil minimal des deux côtés, et des conseils affichés dans votre langue ; l'avertissement avant de rejoindre un compte arrive maintenant avant la phrase secrète, et non après la synchronisation
+- **Réseau** : après une mise en veille, l'application vérifie que son serveur répond vraiment au lieu de le supposer, ce qui provoquait une trentaine de secondes d'échecs ; et l'alerte de port occupé ne se déclenche plus quand le port est tenu par l'application elle-même
+- **Import d'une liste partagée** : les accents ne sont plus doublés à la lecture du fichier, et les libellés de l'écran sont traduits
+
+## 1.1.6 <small>28 août 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.5-beta.0...v1.1.6-beta.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.6-beta.3" class="changelog-link">release</a>
+
+- **Livres souhaités** : sous la carte d'emprunt, un livre que vous cherchez propose le catalogue de votre médiathèque et des librairies indépendantes, configurables depuis la carte ou depuis les réglages ; ce sont de simples liens sortants, aucune donnée ne quitte l'appareil, et les préréglages libraire et bibliothécaire les désactivent
+- **Statut de lecture** : « Abandonné » devient enfin sélectionnable, alors que l'application le stockait, le colorait dans les graphiques et l'exportait sans jamais l'offrir ; un livre qui portait ce statut par un autre chemin le perdait au prochain enregistrement
+- **Fiche livre** : la carte « Ma bibliothèque » est rétablie, et un livre disponible dans une bibliothèque connectée porte une action explicite
+- **Couvertures** : quand une recherche n'aboutit pas, le message tient en une phrase au lieu d'énumérer des sources sur lesquelles vous ne pouvez rien, et il ne vous suit plus d'un écran à l'autre ; par ailleurs, un livre sans couverture n'est plus redemandé à toutes les sources à chaque démarrage
+- **Partager une liste** : le partage fonctionne de nouveau sur iPhone et iPad, où le bouton restait sans effet
+- **Traductions** : vingt libellés manquaient dans six des huit langues livrées et retombaient en anglais ; le compteur d'étagères affichait un symbole au lieu d'un nombre en espagnol et en allemand
+- **Interface** : sur mobile, le titre d'une page ne disparaît plus derrière le logo
+
 ## 1.1.5 <small>26 août 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.4-beta.2...v1.1.5-beta.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.5-beta.0" class="changelog-link">release</a>
 
 - **Couvertures** : un livre sans couverture peut en chercher une depuis sa fiche, avec le même moteur que la recherche d'ajout ; une couverture prise en photo ne se perd plus au redémarrage ; et l'envoi vers le compte chiffré ne signale plus un échec quand il n'y a simplement rien à envoyer

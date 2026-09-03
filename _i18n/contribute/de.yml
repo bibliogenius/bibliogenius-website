@@ -45,6 +45,11 @@ bug_desc: "Melden Sie ihn einfach:"
 btn_email: Per E-Mail
 btn_github: Auf Codeberg
 
+# -- Idea --
+idea_title: Eine Idee für die Zukunft?
+idea_desc: "Sagen Sie uns, was Ihnen fehlt, auch in einem Satz."
+btn_idea: Idee vorschlagen
+
 # -- Entwickler-Karte --
 dev_title: Mitwirkende
 dev_desc: Der Code ist 100% Open Source.

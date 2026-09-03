@@ -14,6 +14,39 @@ lang_name: English
 footer_text: "BiblioGenius - Open Source, local, encrypted."
 ---
 
+## 1.1.9 <small>September 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.8-beta.0...v1.1.9" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.9" class="changelog-link">release</a>
+
+- **Repair a library imported without ISBNs**: if your books arrived without ISBNs, hand the same file back from the "Complete my library" screen: each book is found by its title, author and year, and gets its ISBN, publisher and publication year back. No book is created, nothing you already have is replaced, ambiguous rows are listed rather than guessed, and the whole completion can be undone in one gesture
+- **Import**: columns named `EAN`, semicolon-separated files, ISBNs turned into scientific notation by a spreadsheet and titles spanning several lines are now read correctly; when no ISBN column is recognised, you can point at it yourself instead of silently losing your ISBNs
+- **Lending**: a long recipient name no longer overflows the list
+
+## 1.1.8 <small>September 1, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.7-beta.1...v1.1.8-beta.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.8-beta.0" class="changelog-link">release</a>
+
+- **Book page**: the page is reorganised around one primary action, admin actions move into the top bar menu, a long summary folds instead of pushing notes and suggestions off the screen, and a deleted book answers instead of spinning for ever
+- **Borrow or buy**: a single sheet replaces three cards that vanished as soon as they had nothing to say, which made an empty network and a missing feature look alike; it always opens, and it can say that nobody has the book
+- **Complete my library**: a run can be limited to one missing field, the counters announce exactly what will be processed, and the screen has been reworked (tap targets, illustrated empty states, layout)
+- **Collections**: a collection can be renamed from its own page as well as from the list, where a long press no longer deletes outright but offers both actions
+- **Dashboard**: a "Recently finished" section joins the recent additions
+- **Restore**: when a backup is refused, the message says why, instead of the same "failed to read the file" for an unreadable file and for an export too old to restore
+- **Borrowing**: a book whose ISBN was stored with hyphens is found again in the catalogues of connected libraries
+
+## 1.1.7 <small>August 29, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.6-beta.3...v1.1.7-beta.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.7-beta.1" class="changelog-link">release</a>
+
+- **Duplicates**: a merge screen repairs a library that joined an account from a device already holding its own copies; it shows what will be merged before acting, and it also opens from the settings, so after a restore and not only after a sync
+- **Passphrase**: a strength meter shared by account creation and the encrypted export, with the same minimum on both sides, and advice shown in your language; the warning before joining an account now comes before the passphrase rather than after the sync
+- **Network**: after the device wakes from sleep, the app checks that its server really answers instead of assuming it, which used to cause some thirty seconds of failures; and the busy-port alert no longer fires when the port is held by the app itself
+- **Importing a shared list**: accents are no longer doubled when the file is read, and the screen's labels are translated
+
+## 1.1.6 <small>August 28, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.5-beta.0...v1.1.6-beta.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.6-beta.3" class="changelog-link">release</a>
+
+- **Wanted books**: below the borrow card, a book you are looking for offers your public library catalogue and independent bookshops, configurable from the card or from the settings; these are plain outbound links, no data leaves the device, and the bookseller and librarian presets switch them off
+- **Reading status**: "Abandoned" can finally be selected, after being stored, coloured in the charts and exported without ever being offered; a book that carried that status by another route lost it on the next save
+- **Book page**: the "My library" card is restored, and a book available in a connected library carries an explicit action
+- **Covers**: when a search comes up empty, the message is one sentence instead of a list of sources you can do nothing about, and it no longer follows you from screen to screen; a book without a cover is also no longer asked of every source at each launch
+- **Sharing a list**: sharing works again on iPhone and iPad, where the button did nothing
+- **Translations**: twenty labels were missing from six of the eight shipped languages and fell back to English; the shelf counter showed a raw token instead of a number in Spanish and German
+- **Interface**: on mobile, a page title no longer disappears behind the logo
+
 ## 1.1.5 <small>August 26, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.4-beta.2...v1.1.5-beta.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.5-beta.0" class="changelog-link">release</a>
 
 - **Covers**: a book without a cover can go looking for one from its own page, on the same engine as the add-a-book search; a cover taken with the camera is no longer lost on restart; and the upload to your encrypted account no longer reports a failure when there is simply nothing to send
