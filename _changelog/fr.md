@@ -14,6 +14,45 @@ lang_name: Français
 footer_text: "BiblioGenius - Open Source, local, chiffré."
 ---
 
+## 1.2.0 <small>29 septembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.13...v1.2.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.0" class="changelog-link">release</a>
+
+- **Mes coordonnées** : vos coordonnées ont maintenant leur propre section en tête des réglages, sans avoir à activer l'annuaire. Vous choisissez qui les reçoit, vos bibliothèques appairées, vos abonnés de l'annuaire ou les deux, et décocher une case les retire aux bibliothèques concernées. L'application vous propose de les remplir au moment où elles servent : quand un appairage est accepté, et quand vous demandez un emprunt
+- **Inviter** : un seul écran « Mon invitation » réunit le code QR et le lien à partager, avec les boutons Copier et Envoyer toujours visibles ; la feuille « Ajouter une connexion » est réorganisée autour des bibliothèques et des contacts, et un lien vers une connexion en attente ouvre le bon onglet
+- **Appairage** : un bandeau de demande en attente disparaît une fois la demande acceptée ou refusée, au lieu de rester affiché
+- **Accessibilité** : les lecteurs d'écran annoncent le rôle de chaque élément du parcours principal (cartes de livres, filtres, note), ne lisent plus deux fois les livres qui ont une couverture et nomment onze boutons jusque-là muets, dont celui qui retire un livre d'un lot scanné ; les contrastes atteignent le niveau AA du WCAG quelle que soit la couleur d'accent
+
+## 1.1.13 <small>22 septembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.12...v1.1.13" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.13" class="changelog-link">release</a>
+
+- **Nombre de pages** : un livre scanné, importé ou choisi parmi les suggestions récupère enfin son nombre de pages, qui se perdait en route quelle que soit la source
+- **Ajout de livre** : choisir une suggestion ouvre le carrousel des éditions sur celle que vous avez cliquée, au lieu de la première ; une suggestion venue d'Inventaire apporte l'année et le nombre de pages de l'édition, et n'enregistre plus sa description d'une ligne comme résumé
+- **Recherche par ISBN** : les notices du SUDOC donnent de nouveau leur résumé et leur nombre de pages, et Open Library, muet depuis la mi-septembre à la suite d'un changement de son service, répond de nouveau
+
+## 1.1.12 <small>18 septembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.11...v1.1.12" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.12" class="changelog-link">release</a>
+
+- **Étagères** : la grille se met à jour dès qu'un livre change d'étagère, sans revenir en arrière ; supprimer une étagère la retire aussi de tous ses livres, en une seule opération, au lieu de la laisser réapparaître comme une étagère fantôme impossible à effacer ; une étagère parente annonce ses sous-étagères et donne accès à l'ensemble de ses livres
+- **Appairage** : ré-appairer un contact déjà connu met à jour son adresse et son canal de messages ; deux bibliothèques qui se succèdent sur la même adresse ne sont plus confondues, et les confirmations de prêt ne se perdent plus en route
+- **Import** : les livres importés depuis un fichier sur un appareil tout neuf apparaissaient comme non prêtables ; ils sont réparés automatiquement et les nouveaux imports ne reproduisent plus le problème
+
+## 1.1.11 <small>16 septembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.10...v1.1.11" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.11" class="changelog-link">release</a>
+
+- **Ajout par scan** : une fois le livre identifié par son ISBN, corriger le titre ne propose plus d'autres éditions ; choisir l'une d'elles remplaçait l'ISBN scanné, l'éditeur, l'année et la couverture
+- **Notice** : quand une édition réunit plusieurs œuvres (« Lettres à un jeune poète, suivies de… »), c'est bien la première qui donne son titre au livre, au lieu de la dernière
+- **Sauvegarde** : la sauvegarde complète aboutit de nouveau sur iPhone ; un réglage qu'une restauration ne sait pas réappliquer est désormais signalé au lieu d'être ignoré en silence
+- **Réglages** : sur iOS, ouvrir l'import depuis la recherche des réglages ne laisse plus le clavier bloqué à l'écran
+- **Fiche livre** : les bandeaux « Chercher par titre » disparaissent d'eux-mêmes au lieu de suivre le lecteur d'écran en écran et de retenir les messages suivants
+- **Célébrations** : fermer une animation d'un geste ne laissait plus l'écran répondre ; corrigé
+
+## 1.1.10 <small>11 septembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.9...v1.1.10" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.10" class="changelog-link">release</a>
+
+- **Changer de phrase secrète** : depuis l'espace compte, un appareil connecté peut choisir une nouvelle phrase secrète sans avoir à saisir l'ancienne ; vos données ne sont pas rechiffrées, et les autres appareils du compte restent connectés
+- **Chez les autres membres** : un bouton « Je l'ai lu » enregistre en un geste la lecture d'un livre qui n'est pas à vous, et chaque livre affiché indique si votre bibliothèque le possède, l'a lu ou le souhaite déjà, pour ne pas emprunter ce que vous avez sous la main
+- **Possession** : quand un livre que vous ne possédez pas change de statut, l'application demande s'il est entré dans votre bibliothèque plutôt que de deviner ; la recherche dans votre bibliothèque par les autres membres ne renvoie plus vos souhaits ni vos emprunts
+- **Compléter ma bibliothèque** : la vue d'ensemble compte désormais les livres sans auteur
+- **Phrase secrète** : l'indicateur de robustesse n'affiche plus « très faible » sur un champ encore vide
+- **Journal des opérations** : lisible sur téléphone, avec un bouton de retour et des identifiants courts ; son filtre par type fonctionne aussi sur les bibliothèques les plus anciennes
+- **Réglages** : le choix du style de navigation n'apparaît plus sur ordinateur et tablette, où il n'avait aucun effet
+- **Serveur autonome** : démarrage durci (port réservé jusqu'au lancement, écriture atomique du fichier de port, refus des configurations invalides au lieu d'un plantage)
+
 ## 1.1.9 <small>3 septembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.8-beta.0...v1.1.9" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.9" class="changelog-link">release</a>
 
 - **Réparer une bibliothèque importée sans ISBN** : si vos livres sont arrivés sans ISBN, reprenez le même fichier depuis l'écran « Compléter ma bibliothèque » : chaque livre est retrouvé par son titre, son auteur et son année, et récupère son ISBN, son éditeur et son année de publication. Aucun livre n'est créé, aucune valeur existante n'est remplacée, les lignes ambiguës sont listées plutôt que devinées, et toute la complétion s'annule d'un geste

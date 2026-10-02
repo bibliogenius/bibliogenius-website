@@ -14,6 +14,45 @@ lang_name: English
 footer_text: "BiblioGenius - Open Source, local, encrypted."
 ---
 
+## 1.2.0 <small>September 29, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.13...v1.2.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.0" class="changelog-link">release</a>
+
+- **My contact details**: your contact details now have their own section at the top of the settings, without turning on the directory. You choose who receives them, your paired libraries, your directory followers or both, and unticking a box withdraws them from those libraries. The app suggests filling them in when they matter: when a pairing is accepted, and when you ask to borrow a book
+- **Invite**: a single "My invitation" screen gathers the QR code and the link to share, with Copy and Send always in view; the "Add a connection" sheet is reorganised around libraries and contacts, and a link to a pending connection opens the right tab
+- **Pairing**: a pending request banner goes away once the request is accepted or declined, instead of staying on screen
+- **Accessibility**: screen readers announce the role of every element on the main journey (book cards, filters, rating), no longer read books with a cover twice, and name eleven buttons that were silent until now, including the one that removes a book from a scan batch; contrast meets WCAG AA whatever the accent colour
+
+## 1.1.13 <small>September 22, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.12...v1.1.13" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.13" class="changelog-link">release</a>
+
+- **Page count**: a book that is scanned, imported or picked from the suggestions finally gets its page count, which was lost on the way whatever the source
+- **Adding a book**: picking a suggestion opens the edition carousel on the one you clicked, rather than the first; a suggestion from Inventaire brings the edition's year and page count, and no longer stores its one-line description as the summary
+- **ISBN lookup**: SUDOC records give their summary and page count again, and Open Library, silent since mid-September after a change on their side, answers again
+
+## 1.1.12 <small>September 18, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.11...v1.1.12" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.12" class="changelog-link">release</a>
+
+- **Shelves**: the grid refreshes as soon as a book changes shelf, without navigating back; deleting a shelf also removes it from all its books in one operation, instead of leaving a ghost shelf nothing could delete; a parent shelf announces its sub-shelves and gives access to all of its books
+- **Pairing**: re-pairing a contact you already know refreshes their address and message channel; two libraries taking turns on the same address are no longer mixed up, and lending confirmations no longer get lost on the way
+- **Import**: books imported from a file on a brand-new device showed as not lendable; they are repaired automatically and new imports no longer reproduce the problem
+
+## 1.1.11 <small>September 16, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.10...v1.1.11" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.11" class="changelog-link">release</a>
+
+- **Adding by scan**: once a book is identified by its ISBN, correcting the title no longer offers other editions; picking one replaced the scanned ISBN, publisher, year and cover
+- **Record**: when an edition bundles several works ("Letters to a Young Poet, followed by…"), the first one gives the book its title, rather than the last
+- **Backup**: the full backup completes again on iPhone; a setting a restore cannot re-apply is now reported instead of being silently dropped
+- **Settings**: on iOS, opening the import from the settings search no longer leaves the keyboard stuck on screen
+- **Book details**: the "Search by title" bars expire on their own instead of following the reader from screen to screen and holding up later messages
+- **Celebrations**: dismissing an animation with a tap could leave the screen unresponsive; fixed
+
+## 1.1.10 <small>September 11, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.9...v1.1.10" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.10" class="changelog-link">release</a>
+
+- **Change your passphrase**: from the account area, a signed-in device can pick a new passphrase without entering the old one; your data is not re-encrypted, and the other devices on the account stay connected
+- **On other members' shelves**: an "I have read it" button records in one tap a reading of a book that is not yours, and each displayed book says whether your library already owns, has read or wishes for it, so you do not borrow what you have at hand
+- **Ownership**: when a book you do not own changes status, the app asks whether it entered your library rather than guessing; other members searching your library no longer get your wishes or your borrowed copies
+- **Complete my library**: the overview now counts books with no author
+- **Passphrase**: the strength meter no longer greets an empty field with "very weak"
+- **Operation log**: readable on a phone, with a back button and short identifiers; its type filter also works on the oldest libraries
+- **Settings**: the navigation style choice no longer appears on desktop and tablet, where it had no effect
+- **Standalone server**: hardened startup (port held until launch, atomic port file, invalid configurations refused instead of crashing)
+
 ## 1.1.9 <small>September 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.8-beta.0...v1.1.9" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.1.9" class="changelog-link">release</a>
 
 - **Repair a library imported without ISBNs**: if your books arrived without ISBNs, hand the same file back from the "Complete my library" screen: each book is found by its title, author and year, and gets its ISBN, publisher and publication year back. No book is created, nothing you already have is replaced, ambiguous rows are listed rather than guessed, and the whole completion can be undone in one gesture
