@@ -39,6 +39,7 @@ _docs/
 _blog/                  # Blog source (Zola): content/, templates/, zola.toml
 _changelog/
   {lang}.md             # Changelog source (fr, en), rendered into changelog.html
+                        # Sections scaffolded by `make changelog` (workspace root), see _build/changelog.py
 
 assets/                 # CSS, images, fonts
 docs/                   # Generated doc HTML (do not edit)
