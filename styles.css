@@ -228,6 +228,38 @@ a {
     z-index: 1;
 }
 
+/* Event badge above the hero title */
+.hero-event {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1.1rem;
+    border: 1px solid rgba(96, 165, 250, 0.5);
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.25);
+    color: var(--white);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.hero-event:hover {
+    background: rgba(37, 99, 235, 0.45);
+}
+
+.hero-event:focus-visible {
+    outline: 3px solid var(--accent-light);
+    outline-offset: 3px;
+}
+
+.hero-event-cta {
+    font-weight: 600;
+    color: var(--accent-light);
+}
+
 .hero h1 {
     font-size: 2.5rem;
     font-weight: 700;

@@ -24,6 +24,8 @@ nav_contribute: Contribute
 nav_blog: Blog
 nav_changelog: Changelog
 # -- Hero --
+# -- Webinar badge above the hero title (FR only) --
+hero_event_badge: ""
 hero_title: Your library,<br><span>at home.</span>
 hero_subtitle: Scan and organize your books. Lend and borrow with the people you trust.<br><span class="hero-tagline">Your books live on your device.</span>
 btn_github: View Code
@@ -77,6 +79,7 @@ ecoindex_alt: EcoIndex site score
 # -- Announcement banner (current blog post) --
 migration_banner_text: BiblioGenius is on the App Store and Google Play.
 migration_banner_cta: Read the post
+migration_banner_attrs: ""
 migration_banner_link: /blog/en/app-store-and-google-play/
 btn_linux: Download for Linux
 test_version_label: "Current version:"

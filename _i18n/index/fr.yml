@@ -24,6 +24,8 @@ nav_contribute: Contribuer
 nav_blog: Blog
 nav_changelog: Changelog
 # -- Hero --
+# -- Webinar badge above the hero title (FR only) --
+hero_event_badge: <a class="hero-event" href="https://framaforms.org/webinaire-bibliogenius-lundi-1210-19h-1790774187" data-hide-after="2026-10-12T18:00:00+02:00">Webinaire gratuit, lundi 12 octobre à 19h<span class="hero-event-cta">Inscrivez-vous <span aria-hidden="true">→</span></span></a>
 hero_title: Votre bibliothèque,<br><span>chez vous.</span>
 hero_subtitle: Scannez et organisez vos livres. Prêtez et empruntez entre proches.<br><span class="hero-tagline">Vos livres vivent sur votre appareil.</span>
 btn_github: Voir le Code
@@ -75,8 +77,10 @@ footer_copyright: © 2025-2026 BiblioGenius · Open Source (<a href="https://www
 ecoindex_alt: Score EcoIndex du site
 
 # -- Bandeau annonce (billet de blog du moment) --
-migration_banner_text: BiblioGenius est sur l'App Store et Google Play.
-migration_banner_cta: Lire l'article
-migration_banner_link: /blog/sortie-app-store-google-play/
+migration_banner_text: Découvrez BiblioGenius en direct, lundi 12 octobre à 19h : 30 minutes, gratuit.
+migration_banner_cta: Inscrivez-vous
+migration_banner_link: https://framaforms.org/webinaire-bibliogenius-lundi-1210-19h-1790774187
+# Hides the banner once webinar registrations close (FR only)
+migration_banner_attrs:  data-hide-after="2026-10-12T18:00:00+02:00"
 btn_linux: Télécharger pour Linux
 test_version_label: "Version actuelle :"
