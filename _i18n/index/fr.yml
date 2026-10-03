@@ -25,7 +25,7 @@ nav_blog: Blog
 nav_changelog: Changelog
 # -- Hero --
 # -- Webinar badge above the hero title (FR only) --
-hero_event_badge: <a class="hero-event" href="https://framaforms.org/webinaire-bibliogenius-lundi-1210-19h-1790774187" data-hide-after="2026-10-12T18:00:00+02:00">Webinaire gratuit, lundi 12 octobre à 19h<span class="hero-event-cta">Inscrivez-vous <span aria-hidden="true">→</span></span></a>
+hero_event_badge: ""
 hero_title: Votre bibliothèque,<br><span>chez vous.</span>
 hero_subtitle: Scannez et organisez vos livres. Prêtez et empruntez entre proches.<br><span class="hero-tagline">Vos livres vivent sur votre appareil.</span>
 btn_github: Voir le Code
