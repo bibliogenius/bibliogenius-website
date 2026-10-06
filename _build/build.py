@@ -255,6 +255,12 @@ MEMBERS = [
         'name': 'Sébastien Godet',
         'sameAs': ['https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/'],
     },
+    # No public profile to point at: named with his consent, without a link.
+    {
+        '@type': 'Person',
+        '@id': BASE_URL + '/#contributor-brunet',
+        'name': 'Matthieu Brunet',
+    },
 ]
 
 SITE_LANGS = ['fr', 'en', 'es', 'de']

@@ -22,7 +22,7 @@ Readers cataloguing a personal collection, families sharing shelves across a hou
 
 ## Who makes it
 
-BiblioGenius is designed and developed by Federico Calo (https://federico-calo.net/), an independent developer who builds it outside his client work. Sebastien Godet contributes as a volunteer, on product framing, functional and UX testing, and bug reporting.
+BiblioGenius is designed and developed by Federico Calo (https://federico-calo.net/), an independent developer who builds it outside his client work. Sebastien Godet contributes as a volunteer, on product framing, functional and UX testing, and bug reporting. Matthieu Brunet contributes code as a volunteer.
 
 It is an independent project, not a company product: no investor, and no business model resting on user data. Contributions are welcome on Codeberg.
 
