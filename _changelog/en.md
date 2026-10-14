@@ -14,6 +14,65 @@ lang_name: English
 footer_text: "BiblioGenius - Open Source, local, encrypted."
 ---
 
+## 1.2.3 <small>October 13, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.2...v1.2.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.3" class="changelog-link">release</a>
+
+<!-- changelog-draft: rewrite the commits below as user-facing bullets ("- **Area**: what changed for the reader"), then delete this whole comment. `make site` refuses to deploy while it is here.
+bibliogenius-app:
+  354302f update to version 1.2.3
+  bdcdbc1 Update Contact QR CodeScanner header title
+  c721612 fix(app): name the backend cause when a book write fails
+  f142bf1 feat: let manual borrows name a library or a place as lender
+  a33797f feat(library): select several books and file them in one go
+bibliogenius:
+  f9b2d44 update to version 1.2.3
+  f28d72b fix(household): do not name a lone reader on their own wishes
+  800f933 feat(shelving): bulk filing of books onto shelves and into collections
+-->
+
+## 1.2.2 <small>October 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.1...v1.2.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.2" class="changelog-link">release</a>
+
+<!-- changelog-draft: rewrite the commits below as user-facing bullets ("- **Area**: what changed for the reader"), then delete this whole comment. `make site` refuses to deploy while it is here.
+bibliogenius-app:
+  ebea71f update to version 1.2.2
+  4e52c83 feat(household): import my readings from the readers section
+  e289bd8 feat(import): carry reading status, rating and dates; read Babelio exports
+  0f3bfc5 feat(household): "Import my readings" button
+bibliogenius:
+  2f45d96 update to version 1.2.2
+  312b71e fix(household): harden the import of readings
+  51ba5d3 fix(books): keep the rating a new book is created with
+  974b0f1 feat(household): import my readings from a catalogue export
+-->
+
+## 1.2.1 <small>October 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.0...v1.2.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.1" class="changelog-link">release</a>
+
+<!-- changelog-draft: rewrite the commits below as user-facing bullets ("- **Area**: what changed for the reader"), then delete this whole comment. `make site` refuses to deploy while it is here.
+bibliogenius-app:
+  c247902 update to version 1.2.1
+  b48bb94 feat(household): tell devices and readers apart on the account screen
+  a07d7a3 feat(household): delete a reader from the section, after a confirmation
+  e350906 feat(household): manage readers from their own section
+  09e0833 feat(household): show who wished for a book under the status pill
+  21fa394 feat(household): show the shared wish behind a reader's own status
+  ff51af1 fix(household): keep the reader name controller alive on dialog close
+  fedc2b4 fix(import): recover a checksum-valid ISBN from a cell holding extra content
+  09e83b7 fix(network): single entry point to end a pairing (ADR-053 follow-up)
+  2ad7cd9 feat(household): pick who reads on this device
+bibliogenius:
+  b204333 update to version 1.2.1
+  d3b230c feat(household): remove a reader and their readings
+  cfd9da7 perf(household): index readings by reader, fetch the reader by id
+  557fcf9 feat(household): name the readers who wished for a book
+  635825d feat(household): expose the shared wish behind a reader's own status
+  aa078a5 refactor(household): split readers into domain, repository, service
+  b0799f4 fix(household): reading stats and collections follow the reader
+  621619c fix(household): a shared wish no longer hides a reader's own status
+  e2ed4b6 fix(household): bound the reader name length
+  3d05274 fix(account-sync): skip lanes of tables this build lacks, replay once after upgrade
+  26751a8 fix(peer): revoke the hub follow when a pairing ends (ADR-053 follow-up)
+  1e995c3 feat(household): one shared library, one reading state per reader
+-->
+
 ## 1.2.0 <small>September 29, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.13...v1.2.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.0" class="changelog-link">release</a>
 
 - **My contact details**: your contact details now have their own section at the top of the settings, without turning on the directory. You choose who receives them, your paired libraries, your directory followers or both, and unticking a box withdraws them from those libraries. The app suggests filling them in when they matter: when a pairing is accepted, and when you ask to borrow a book
