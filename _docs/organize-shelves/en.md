@@ -5,13 +5,17 @@ order: 2
 group: library
 ---
 
-Shelves let you classify your books by theme, genre or any other criteria.
+**Shelf: where you put a book.** By theme, by room, by genre. A book can sit on several shelves, and a shelf can hold other shelves.
+
+**Collection: a list of books that belong together, in an order.** The volumes of a series, a selection to lend, your favorites. See [My collections](collections.html).
+
+Does the order matter? A collection. Otherwise, a shelf.
 
 ![Shelves view](images/shelves-view.png)
 
 ## Create and manage shelves
 
-1. Create thematic shelves for your books (e.g., "SciFi", "Favorites").
+1. Create shelves for your books (e.g., "Living room", "Crime").
 2. In your Library, tap a shelf to filter.
 3. Tap the Sort icon to enter reorder mode.
 4. Drag books to your preferred order, or tap A-Z for auto-sort by author.

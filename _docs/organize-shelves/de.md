@@ -5,13 +5,17 @@ order: 2
 group: library
 ---
 
-Mit Regalen sortieren Sie Ihre Bücher nach Thema, Genre oder jedem anderen Kriterium.
+**Regal: wo Sie ein Buch einordnen.** Nach Thema, nach Raum, nach Genre. Ein Buch kann in mehreren Regalen stehen, und ein Regal kann weitere enthalten.
+
+**Sammlung: eine Liste von Büchern, die zusammengehören, in einer Reihenfolge.** Die Bände einer Reihe, eine Auswahl zum Verleihen, Ihre Favoriten.
+
+Zählt die Reihenfolge? Eine Sammlung. Sonst ein Regal.
 
 ![Ansicht der Regale](images/shelves-view.png)
 
 ## Regale anlegen und verwalten
 
-1. Legen Sie thematische Regale für Ihre Bücher an (etwa "Science-Fiction", "Favoriten").
+1. Legen Sie Regale für Ihre Bücher an (etwa "Wohnzimmer", "Krimi").
 2. Tippen Sie in Ihrer Bibliothek auf ein Regal, um zu filtern.
 3. Tippen Sie auf das Sortiersymbol, um in den Umsortier-Modus zu wechseln.
 4. Ziehen Sie die Bücher in die gewünschte Reihenfolge, oder tippen Sie auf A-Z, um automatisch nach Autor zu sortieren.

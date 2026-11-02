@@ -5,13 +5,17 @@ order: 2
 group: library
 ---
 
-Les étagères vous permettent de classer vos livres par thème, genre ou tout autre critère.
+**Étagère : où vous rangez un livre.** Par thème, par pièce, par genre. Un livre peut être sur plusieurs étagères, et une étagère peut en contenir d'autres.
+
+**Collection : une liste de livres qui vont ensemble, dans un ordre.** Les tomes d'une série, une sélection à prêter, vos favoris. Voir [Mes collections](collections.html).
+
+L'ordre compte ? Une collection. Sinon, une étagère.
 
 ![Vue des étagères](images/shelves-view.png)
 
 ## Créer et gérer des étagères
 
-1. Créez des étagères thématiques pour vos livres (ex : "SF", "Favoris").
+1. Créez des étagères pour vos livres (ex : "Salon", "Polar").
 2. Dans votre Bibliothèque, appuyez sur une étagère pour filtrer.
 3. Appuyez sur l'icône de tri pour entrer en mode réorganisation.
 4. Faites glisser les livres dans l'ordre souhaité, ou appuyez sur A-Z pour un tri automatique par auteur.

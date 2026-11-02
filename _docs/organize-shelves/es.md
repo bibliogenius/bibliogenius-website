@@ -5,13 +5,17 @@ order: 2
 group: library
 ---
 
-Las estanterías te permiten clasificar tus libros por tema, género o cualquier otro criterio.
+**Estantería: donde guardas un libro.** Por tema, por habitación, por género. Un libro puede estar en varias estanterías, y una estantería puede contener otras.
+
+**Colección: una lista de libros que van juntos, en un orden.** Los tomos de una serie, una selección para prestar, tus favoritos.
+
+¿Importa el orden? Una colección. Si no, una estantería.
 
 ![Vista de las estanterías](images/shelves-view.png)
 
 ## Crear y gestionar estanterías
 
-1. Crea estanterías temáticas para tus libros (por ejemplo "Ciencia ficción", "Favoritos").
+1. Crea estanterías para tus libros (por ejemplo "Salón", "Novela negra").
 2. En tu biblioteca, pulsa una estantería para filtrar.
 3. Pulsa el icono de orden para entrar en modo reorganización.
 4. Arrastra los libros hasta el orden que quieras, o pulsa A-Z para ordenarlos automáticamente por autor.
