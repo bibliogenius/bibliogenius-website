@@ -17,9 +17,9 @@ L'ordre compte ? Une collection. Sinon, une étagère.
 
 1. Créez des étagères pour vos livres (ex : "Salon", "Polar").
 2. Dans votre Bibliothèque, appuyez sur une étagère pour filtrer.
-3. Appuyez sur l'icône de tri pour entrer en mode réorganisation.
+3. Appuyez sur « Réordonner l'étagère » pour entrer en mode réorganisation.
 4. Faites glisser les livres dans l'ordre souhaité, ou appuyez sur A-Z pour un tri automatique par auteur.
-5. Appuyez sur le bouton de validation pour sauvegarder !
+5. Appuyez sur le bouton de validation pour enregistrer : l'étagère suit désormais votre ordre.
 
 ## Attribuer des livres aux étagères
 
@@ -27,7 +27,7 @@ Depuis la fiche d'un livre, vous pouvez l'assigner à une ou plusieurs étagère
 
 ## Réorganiser l'ordre
 
-Passez en mode réorganisation pour changer l'ordre des livres par glisser-déposer, ou utilisez le tri automatique (par auteur, titre, date d'ajout).
+Dans une étagère ouverte, « Réordonner l'étagère » change l'ordre des livres par glisser-déposer. Une fois enregistré, cet ordre est celui de l'étagère : il tient quand vous la quittez et la rouvrez, et la modification d'un livre ne le défait pas. Un livre n'a qu'une position : s'il est sur deux étagères, réordonner l'une le déplace aussi dans l'autre. Le menu de tri propose « Ordre de l'étagère » tant qu'une étagère est ouverte ; ailleurs, la bibliothèque reste triée par auteur ou par titre.
 
 ## Une étagère qui paraît vide
 

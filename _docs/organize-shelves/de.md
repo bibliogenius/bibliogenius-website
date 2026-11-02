@@ -17,9 +17,9 @@ Zählt die Reihenfolge? Eine Sammlung. Sonst ein Regal.
 
 1. Legen Sie Regale für Ihre Bücher an (etwa "Wohnzimmer", "Krimi").
 2. Tippen Sie in Ihrer Bibliothek auf ein Regal, um zu filtern.
-3. Tippen Sie auf das Sortiersymbol, um in den Umsortier-Modus zu wechseln.
+3. Tippen Sie auf „Regal neu ordnen“, um in den Umsortier-Modus zu wechseln.
 4. Ziehen Sie die Bücher in die gewünschte Reihenfolge, oder tippen Sie auf A-Z, um automatisch nach Autor zu sortieren.
-5. Tippen Sie auf die Bestätigung, um zu speichern.
+5. Tippen Sie auf die Bestätigung, um zu speichern: Das Regal folgt von nun an Ihrer Reihenfolge.
 
 ## Bücher Regalen zuordnen
 
@@ -27,7 +27,7 @@ Auf der Seite eines Buches ordnen Sie es einem oder mehreren Regalen zu. Dasselb
 
 ## Reihenfolge ändern
 
-Wechseln Sie in den Umsortier-Modus, um die Bücher per Ziehen neu anzuordnen, oder nutzen Sie die automatische Sortierung nach Autor, Titel oder Aufnahmedatum.
+In einem geöffneten Regal ordnet „Regal neu ordnen“ die Bücher per Ziehen neu an. Einmal gespeichert, ist diese Reihenfolge die des Regals: Sie bleibt erhalten, wenn Sie das Regal verlassen und wieder öffnen, und das Bearbeiten eines Buches hebt sie nicht auf. Ein Buch hat eine einzige Position: Steht es in zwei Regalen, verschiebt das Umsortieren des einen es auch im anderen. Das Sortiermenü bietet „Regalreihenfolge“ an, solange ein Regal geöffnet ist; überall sonst bleibt die Bibliothek nach Autor oder Titel sortiert.
 
 ## Die vorgeschlagenen Genres
 

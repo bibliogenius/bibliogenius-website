@@ -17,9 +17,9 @@ group: library
 
 1. Crea estanterías para tus libros (por ejemplo "Salón", "Novela negra").
 2. En tu biblioteca, pulsa una estantería para filtrar.
-3. Pulsa el icono de orden para entrar en modo reorganización.
+3. Pulsa «Reordenar estantería» para entrar en modo reorganización.
 4. Arrastra los libros hasta el orden que quieras, o pulsa A-Z para ordenarlos automáticamente por autor.
-5. Pulsa el botón de validación para guardar.
+5. Pulsa el botón de validación para guardar: la estantería sigue desde ahora tu orden.
 
 ## Asignar libros a las estanterías
 
@@ -27,7 +27,7 @@ Desde la ficha de un libro puedes asignarlo a una o varias estanterías. Un mism
 
 ## Cambiar el orden
 
-Entra en modo reorganización para cambiar el orden de los libros arrastrándolos, o usa la ordenación automática por autor, título o fecha de alta.
+En una estantería abierta, «Reordenar estantería» cambia el orden de los libros arrastrándolos. Una vez guardado, ese orden es el de la estantería: se mantiene al salir y volver a abrirla, y editar un libro no lo deshace. Un libro tiene una sola posición: si está en dos estanterías, reordenar una lo mueve también en la otra. El menú de orden ofrece «Orden de la estantería» mientras haya una estantería abierta; en el resto de la biblioteca, los libros siguen ordenados por autor o por título.
 
 ## Los géneros sugeridos
 

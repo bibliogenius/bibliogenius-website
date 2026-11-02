@@ -17,9 +17,9 @@ Does the order matter? A collection. Otherwise, a shelf.
 
 1. Create shelves for your books (e.g., "Living room", "Crime").
 2. In your Library, tap a shelf to filter.
-3. Tap the Sort icon to enter reorder mode.
+3. Tap "Reorder shelf" to enter reorder mode.
 4. Drag books to your preferred order, or tap A-Z for auto-sort by author.
-5. Tap the checkmark to save your arrangement!
+5. Tap the checkmark to save: the shelf now follows your order.
 
 ## Assign books to shelves
 
@@ -27,7 +27,7 @@ From a book's detail page, you can assign it to one or more shelves. A single bo
 
 ## Reorder books
 
-Switch to reorder mode to change the order of books by drag-and-drop, or use auto-sort (by author, title, date added).
+In an open shelf, "Reorder shelf" changes the order of books by drag-and-drop. Once saved, that order is the shelf's: it holds when you leave and reopen the shelf, and editing a book does not undo it. A book has a single position: if it sits on two shelves, reordering one moves it in the other too. The sort menu offers "Shelf order" while a shelf is open; elsewhere, the library stays sorted by author or by title.
 
 ## A shelf that looks empty
 
