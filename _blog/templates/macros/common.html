@@ -139,7 +139,7 @@
 
 
 {# The entity node, byte-for-byte the same identity the Python builder emits
-   for the vitrine pages. Blog and vitrine are two generators; without the
+   for the vitrine pages (jobTitle mirrors PERSON_JOB_TITLES in build.py). Blog and vitrine are two generators; without the
    shared @id they would declare two unrelated organisations. #}
 {% macro entity_org(site_url, lang) %}{
             "@type": "Organization",
@@ -162,19 +162,22 @@
                 "@id": "{{ site_url | safe }}/#founder",
                 "name": "Federico Calo",
                 "url": "https://federico-calo.net/",
-                "sameAs": ["https://federico-calo.net/"]
+                "sameAs": ["https://federico-calo.net/"],
+                "jobTitle": "{% if lang == "fr" %}Conception et développement{% elif lang == "es" %}Diseño y desarrollo{% elif lang == "de" %}Konzeption und Entwicklung{% else %}Design and development{% endif %}"
             },
             "member": [
                 {
                     "@type": "Person",
                     "@id": "{{ site_url | safe }}/#contributor-godet",
                     "name": "Sébastien Godet",
-                    "sameAs": ["https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"]
+                    "sameAs": ["https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"],
+                    "jobTitle": "{% if lang == "fr" %}Analyse fonctionnelle et tests{% elif lang == "es" %}Análisis funcional y pruebas{% elif lang == "de" %}Fachliche Analyse und Tests{% else %}Business analysis and testing{% endif %}"
                 },
                 {
                     "@type": "Person",
                     "@id": "{{ site_url | safe }}/#contributor-brunet",
-                    "name": "Matthieu Brunet"
+                    "name": "Matthieu Brunet",
+                    "jobTitle": "{% if lang == "fr" %}Développement{% elif lang == "es" %}Desarrollo{% elif lang == "de" %}Entwicklung{% else %}Development{% endif %}"
                 }
             ],
             "mainEntityOfPage": {"@id": "{{ site_url | safe }}/#webpage"},
