@@ -20,6 +20,7 @@ Adding a new page:
 """
 
 import json
+from html import escape as html_escape
 import os
 import re
 import shutil
@@ -511,6 +512,28 @@ def build_faq_nodes(t, url):
         '@id': url + '#faq',
         'mainEntity': entries,
     }
+
+
+# The share card of the vitrine pages: the library screen in the page
+# language. Alt text and size let link previews render it without guessing.
+SOCIAL_IMAGE_ALT = {
+    'fr': "L'écran Bibliothèque de BiblioGenius : une grille de couvertures avec leur statut de lecture",
+    'en': 'The BiblioGenius library screen: a grid of book covers with their reading status',
+    'es': 'La pantalla Biblioteca de BiblioGenius: una cuadrícula de portadas con su estado de lectura',
+    'de': 'Der Bibliotheksbildschirm von BiblioGenius: ein Raster aus Buchcovern mit ihrem Lesestatus',
+}
+
+
+def build_social_image_meta(lang):
+    """Share-card details that complete the og:image line of a template."""
+    alt = html_escape(_lang_value(SOCIAL_IMAGE_ALT, lang))
+    return '\n    '.join([
+        '<meta property="og:image:width" content="1921">',
+        '<meta property="og:image:height" content="1080">',
+        f'<meta property="og:image:alt" content="{alt}">',
+        '<meta property="og:site_name" content="BiblioGenius">',
+        f'<meta name="twitter:image:alt" content="{alt}">',
+    ])
 
 
 def build_page_schema(page, lang, t, app_version=''):
@@ -1695,6 +1718,7 @@ def build():
             html = html.replace('{{og_url}}', BASE_URL + page_url(page_name, lang))
             html = html.replace('{{app_version}}', app_version)
             html = html.replace('{{lang_switcher}}', build_switcher(page_name, langs, lang))
+            html = html.replace('{{social_image_meta}}', build_social_image_meta(lang))
 
             # Cross-page links: {{url:page_name}} (relative paths)
             def resolve_url(m, _lang=lang):
