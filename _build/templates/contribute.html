@@ -48,7 +48,6 @@
             padding: 2rem;
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            align-self: flex-start;
         }
 
         .split-card h2 {
@@ -118,6 +117,15 @@
             vertical-align: middle;
         }
 
+        .feedback-card {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+            gap: 1.5rem 2.5rem;
+        }
+        .feedback-card h3 {
+            margin-top: 0;
+        }
         .btn-row {
             display: flex;
             flex-wrap: wrap;
@@ -324,22 +332,6 @@
                     </li>
                 </ul>
 
-                <hr style="border-color: rgba(255,255,255,0.1); margin: 1.5rem 0;">
-
-                <h3><span aria-hidden="true">🐛</span> {{bug_title}}</h3>
-                <p>{{bug_desc}}</p>
-                <div class="btn-row">
-                    <a href="mailto:contact@bibliogenius.org" class="btn btn-secondary btn-small">{{btn_email}}</a>
-                    <a href="https://codeberg.org/bibliogenius/bibliogenius-app/issues" class="btn btn-secondary btn-small">{{btn_github}}</a>
-                </div>
-
-                <hr style="border-color: rgba(255,255,255,0.1); margin: 1.5rem 0;">
-
-                <h3><span aria-hidden="true">💡</span> {{idea_title}}</h3>
-                <p>{{idea_desc}}</p>
-                <div class="btn-row">
-                    <a href="mailto:contact@bibliogenius.org" class="btn btn-secondary btn-small">{{btn_idea}}</a>
-                </div>
             </div>
 
             <!-- Developer Section -->
@@ -395,6 +387,25 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback: full width under both columns so they end level -->
+        <div class="split-card feedback-card">
+            <div class="feedback-item">
+                <h3><span aria-hidden="true">🐛</span> {{bug_title}}</h3>
+                <p>{{bug_desc}}</p>
+                <div class="btn-row">
+                    <a href="mailto:contact@bibliogenius.org" class="btn btn-secondary btn-small">{{btn_email}}</a>
+                    <a href="https://codeberg.org/bibliogenius/bibliogenius-app/issues" class="btn btn-secondary btn-small">{{btn_github}}</a>
+                </div>
+            </div>
+            <div class="feedback-item">
+                <h3><span aria-hidden="true">💡</span> {{idea_title}}</h3>
+                <p>{{idea_desc}}</p>
+                <div class="btn-row">
+                    <a href="mailto:contact@bibliogenius.org" class="btn btn-secondary btn-small">{{btn_idea}}</a>
                 </div>
             </div>
         </div>
