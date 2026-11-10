@@ -323,6 +323,39 @@ def _lang_value(table, lang):
     return table.get(lang, table[DEFAULT_LANG])
 
 
+# Roles as the contribute page states them, so the structured data never
+# says more than the visible text. Keep in sync with thanks_*_role in
+# _i18n/contribute/{lang}.yml.
+PERSON_JOB_TITLES = {
+    BASE_URL + '/#founder': {
+        'fr': 'Porteur du projet : conception et développement',
+        'en': 'Project lead: design and development',
+        'es': 'Responsable del proyecto: diseño y desarrollo',
+        'de': 'Projektleiter: Konzeption und Entwicklung',
+    },
+    BASE_URL + '/#contributor-godet': {
+        'fr': 'Business analyst et testeur fonctionnel',
+        'en': 'Business analyst and functional tester',
+        'es': 'Business analyst y tester funcional',
+        'de': 'Business Analyst und Funktionstester',
+    },
+    BASE_URL + '/#contributor-brunet': {
+        'fr': 'Développeur',
+        'en': 'Developer',
+        'es': 'Desarrollador',
+        'de': 'Entwickler',
+    },
+}
+
+
+def _person_node(person, lang):
+    """A Person node with its role in the page language."""
+    titles = PERSON_JOB_TITLES.get(person['@id'])
+    if not titles:
+        return person
+    return {**person, 'jobTitle': _lang_value(titles, lang)}
+
+
 def build_organization_node(lang):
     """The entity itself. Emitted on every page, always under the same @id."""
     return {
@@ -350,8 +383,8 @@ def build_organization_node(lang):
         },
         'knowsAbout': _lang_value(ORG_KNOWS_ABOUT, lang),
         'foundingDate': FOUNDING_DATE,
-        'founder': FOUNDER,
-        'member': MEMBERS,
+        'founder': _person_node(FOUNDER, lang),
+        'member': [_person_node(m, lang) for m in MEMBERS],
         # The page that answers "what is this entity": its Entity Home.
         'mainEntityOfPage': {'@id': ENTITY_HOME_NODE_ID},
         'sameAs': SAME_AS,

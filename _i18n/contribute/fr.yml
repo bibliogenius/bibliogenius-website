@@ -23,7 +23,7 @@ nav_contribute: Contribuer
 nav_blog: Blog
 nav_changelog: Changelog
 # -- Hero --
-hero_title: Contribuer au Projet
+hero_title: Contribuer à BiblioGenius
 hero_subtitle: Devenez testeur ou rejoignez le développement.
 
 # -- Section --
@@ -53,7 +53,9 @@ btn_idea: Proposer une idée
 # -- Developer Card --
 dev_title: Espace Contributeurs
 dev_desc: Le code est 100% Open Source.
+stack_backend_label: "Backend :"
 stack_app_label: "Application :"
+stack_hub_label: "Hub :"
 btn_explore_github: Explorer le code
 where_to_start: Où commencer ?
 where_to_start_desc: "Consultez nos issues "Good First Issue", des tâches accessibles pour bien démarrer :"
@@ -79,12 +81,12 @@ linux_desc: AppImage (Ubuntu/Debian) · bêta
 # -- Acknowledgements / Remerciements --
 thanks_title: "Remerciements"
 thanks_intro: "BiblioGenius avance grâce à celles et ceux qui donnent de leur temps et de leurs idées."
-thanks_team_title: "L'équipe"
-thanks_contributors_title: "Contributeurs"
+thanks_badge_team: "Équipe"
+thanks_badge_contributor: "Contribution"
 thanks_federico_role: "Porteur du projet : conception et développement."
 thanks_federico_aria: "Federico Calo, site personnel"
-thanks_sebastien_role: "Business analyst et testeur fonctionnel bénévole."
+thanks_sebastien_role: "Business analyst et testeur fonctionnel."
 thanks_sebastien_aria: "Sébastien Godet, profil LinkedIn"
-thanks_matthieu_role: "Développeur bénévole."
+thanks_matthieu_role: "Développeur."
 thanks_translators: "Merci également aux traductrices et traducteurs de l'application, ainsi qu'aux contributeurs."
 thanks_family: "Merci aussi à mes proches, premiers testeurs patients de l'application."

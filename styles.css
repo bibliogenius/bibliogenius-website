@@ -686,16 +686,3 @@ a {
     margin-bottom: 0.5rem;
 }
 
-/* The closing notes of the acknowledgements read left-aligned with a small
-   indent, while the block around them stays centred. On a narrow screen that
-   indent competes with the container gutter, so drop it there. */
-.thanks-note {
-    text-align: left;
-    padding-left: 1.5rem;
-}
-
-@media (max-width: 34rem) {
-    .thanks-note {
-        padding-left: 0;
-    }
-}
