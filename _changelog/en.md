@@ -14,64 +14,40 @@ lang_name: English
 footer_text: "BiblioGenius - Open Source, local, encrypted."
 ---
 
+## 1.3.0 <small>October 23, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.3...v1.3.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.3.0" class="changelog-link">release</a>
+
+- **Cover photos**: on iPhone and Android, taking a photo of a cover opens the system document scanner, which finds the book's edges, crops the image and straightens it; you can still move the corners by hand. The "Automatic cover crop" setting (Settings > Modules > Advanced) brings back the plain camera. On Android the scanner comes from Google Play services: the app offers the plain camera before its first download, and keeps it on a phone without Google services
+- **Home page**: a new block in Settings > Theme gathers the cover size (small, medium or large), grouping by reading status (Reading, To read, Read, then the other books, two rows each with a link to the full list) and the top strip, moved from Modules. Grouping by status and by collection are exclusive: turning one on turns the other off
+- **Search**: book search ignores accents and special letters: "rene b" finds "René Barjavel", including in the catalogue of a directory library
+- **Directory**: when your library is unlisted or requires approval, the copy of your catalogue the server keeps for your followers is now encrypted as soon as they all run 1.3.0, and the server can no longer read it. A library visible without approval stays readable by the server, as cover photos do in every case, and the directory settings say so. Leaving the directory or requiring approval updates that copy at once, and a published library keeps its visibility and its followers after reconnecting to the server
+- **Connected libraries**: a library whose keys changed, after a reinstall for instance, is flagged with what to do (remove it, then scan it again) instead of a bare sync failure. Another library answering at the same address on the local network can no longer take the place of a trusted one
+- **Readers**: on a device that just joined the account, readers show up without restarting the app, even when a sync fails
+- **Book form**: a typed author is kept even without tapping the + button
+- **Dashboard**: the to-read section shows its count in its header
+- **Help**: the help screen cards share one size and are read properly by screen readers
+- **Logs**: diagnostic logs no longer hold tokens, pairing secrets or invitation contents
+
 ## 1.2.3 <small>October 13, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.2...v1.2.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.3" class="changelog-link">release</a>
 
-<!-- changelog-draft: rewrite the commits below as user-facing bullets ("- **Area**: what changed for the reader"), then delete this whole comment. `make site` refuses to deploy while it is here.
-bibliogenius-app:
-  354302f update to version 1.2.3
-  bdcdbc1 Update Contact QR CodeScanner header title
-  c721612 fix(app): name the backend cause when a book write fails
-  f142bf1 feat: let manual borrows name a library or a place as lender
-  a33797f feat(library): select several books and file them in one go
-bibliogenius:
-  f9b2d44 update to version 1.2.3
-  f28d72b fix(household): do not name a lone reader on their own wishes
-  800f933 feat(shelving): bulk filing of books onto shelves and into collections
--->
+- **File several books at once**: the book list has a selection mode (long press, or the filter bar button) to put a pile of books onto shelves and into collections in one go; a collection can also add all its books elsewhere, and you can choose to remove them from the shelf or collection they came from
+- **Borrows**: "I borrowed it" offers your connected libraries, your contacts, a new contact created on the spot or a free-text place (a public library, say), then an optional due date; it opens even with no contacts, and the book page shows who you borrowed it from
+- **Readers**: "Wished by" no longer shows when the account has a single reader, where it told nothing
+- **Errors**: when saving a book fails, the message gives the cause instead of a bare error code
 
 ## 1.2.2 <small>October 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.1...v1.2.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.2" class="changelog-link">release</a>
 
-<!-- changelog-draft: rewrite the commits below as user-facing bullets ("- **Area**: what changed for the reader"), then delete this whole comment. `make site` refuses to deploy while it is here.
-bibliogenius-app:
-  ebea71f update to version 1.2.2
-  4e52c83 feat(household): import my readings from the readers section
-  e289bd8 feat(import): carry reading status, rating and dates; read Babelio exports
-  0f3bfc5 feat(household): "Import my readings" button
-bibliogenius:
-  2f45d96 update to version 1.2.2
-  312b71e fix(household): harden the import of readings
-  51ba5d3 fix(books): keep the rating a new book is created with
-  974b0f1 feat(household): import my readings from a catalogue export
--->
+- **File import**: a CSV or Excel import now keeps the reading status, rating and reading dates, instead of filing everything as "To read" with no rating. Babelio and Goodreads exports are recognised, Babelio authors get back their given name first, and a file that is not UTF-8 reads correctly
+- **Import my readings**: in the Readers section, once your reader is chosen, you can bring in your readings from another library's catalogue export. Books already there get your status, dates and rating, the others are added, nothing is wiped, and a summary flags ambiguous books instead of guessing
+- **Ratings**: a book created with a rating keeps it, even on a device with no reader chosen
 
 ## 1.2.1 <small>October 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.0...v1.2.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.1" class="changelog-link">release</a>
 
-<!-- changelog-draft: rewrite the commits below as user-facing bullets ("- **Area**: what changed for the reader"), then delete this whole comment. `make site` refuses to deploy while it is here.
-bibliogenius-app:
-  c247902 update to version 1.2.1
-  b48bb94 feat(household): tell devices and readers apart on the account screen
-  a07d7a3 feat(household): delete a reader from the section, after a confirmation
-  e350906 feat(household): manage readers from their own section
-  09e0833 feat(household): show who wished for a book under the status pill
-  21fa394 feat(household): show the shared wish behind a reader's own status
-  ff51af1 fix(household): keep the reader name controller alive on dialog close
-  fedc2b4 fix(import): recover a checksum-valid ISBN from a cell holding extra content
-  09e83b7 fix(network): single entry point to end a pairing (ADR-053 follow-up)
-  2ad7cd9 feat(household): pick who reads on this device
-bibliogenius:
-  b204333 update to version 1.2.1
-  d3b230c feat(household): remove a reader and their readings
-  cfd9da7 perf(household): index readings by reader, fetch the reader by id
-  557fcf9 feat(household): name the readers who wished for a book
-  635825d feat(household): expose the shared wish behind a reader's own status
-  aa078a5 refactor(household): split readers into domain, repository, service
-  b0799f4 fix(household): reading stats and collections follow the reader
-  621619c fix(household): a shared wish no longer hides a reader's own status
-  e2ed4b6 fix(household): bound the reader name length
-  3d05274 fix(account-sync): skip lanes of tables this build lacks, replay once after upgrade
-  26751a8 fix(peer): revoke the hub follow when a pairing ends (ADR-053 follow-up)
-  1e995c3 feat(household): one shared library, one reading state per reader
--->
+- **Readers**: several people sharing a library through the encrypted account each keep their own reading status, dates and rating; the catalogue, copies, loans and the wishlist stay shared. The new Readers section of the account screen lets you create your reader, pick who reads on this device, rename it, delete it after a confirmation or go back to the shared view. Nothing changes until a reader is picked, and every device of the account must be up to date before using it
+- **Wishes**: a book page shows which readers wish for it, handy for a gift, and the wishlist can narrow to one reader's wishes. A reader's status is no longer hidden by another reader's wish
+- **Account screen**: devices and readers no longer look alike, each section says what it holds
+- **Import**: an ISBN buried in a cell ("ISBN-10: 3518368540", or followed by a price) is recovered, only when its check digit holds
+- **Pairing**: ending a pairing also withdraws the other library's access to your catalogue through the directory
+- **Encrypted account**: a device still on an older version no longer counts data it does not know yet as failures, and picks it up once updated
 
 ## 1.2.0 <small>September 29, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.13...v1.2.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.0" class="changelog-link">release</a>
 

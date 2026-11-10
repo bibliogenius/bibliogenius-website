@@ -56,7 +56,8 @@
                     "url": "https://federico-calo.net/",
                     "sameAs": [
                         "https://federico-calo.net/"
-                    ]
+                    ],
+                    "jobTitle": "Project lead: design and development"
                 },
                 "member": [
                     {
@@ -65,12 +66,14 @@
                         "name": "Sébastien Godet",
                         "sameAs": [
                             "https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"
-                        ]
+                        ],
+                        "jobTitle": "Business analyst and functional tester"
                     },
                     {
                         "@type": "Person",
                         "@id": "https://bibliogenius.org/#contributor-brunet",
-                        "name": "Matthieu Brunet"
+                        "name": "Matthieu Brunet",
+                        "jobTitle": "Developer"
                     }
                 ],
                 "mainEntityOfPage": {
@@ -344,6 +347,10 @@
 
             <nav class="changelog-nav" id="changelog-nav" aria-label="Versions">
                 <h2>Versions</h2>
+                <a href="#1-3-0">1.3.0</a>
+                <a href="#1-2-3">1.2.3</a>
+                <a href="#1-2-2">1.2.2</a>
+                <a href="#1-2-1">1.2.1</a>
                 <a href="#1-2-0">1.2.0</a>
                 <a href="#1-1-13">1.1.13</a>
                 <a href="#1-1-12">1.1.12</a>
@@ -382,6 +389,41 @@
             </nav>
 
             <article class="changelog-content">
+<h2 id="1-3-0">1.3.0 <small>October 23, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.3...v1.3.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.3.0" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>Cover photos</strong>: on iPhone and Android, taking a photo of a cover opens the system document scanner, which finds the book's edges, crops the image and straightens it; you can still move the corners by hand. The "Automatic cover crop" setting (Settings &gt; Modules &gt; Advanced) brings back the plain camera. On Android the scanner comes from Google Play services: the app offers the plain camera before its first download, and keeps it on a phone without Google services</li>
+<li><strong>Home page</strong>: a new block in Settings &gt; Theme gathers the cover size (small, medium or large), grouping by reading status (Reading, To read, Read, then the other books, two rows each with a link to the full list) and the top strip, moved from Modules. Grouping by status and by collection are exclusive: turning one on turns the other off</li>
+<li><strong>Search</strong>: book search ignores accents and special letters: "rene b" finds "René Barjavel", including in the catalogue of a directory library</li>
+<li><strong>Directory</strong>: when your library is unlisted or requires approval, the copy of your catalogue the server keeps for your followers is now encrypted as soon as they all run 1.3.0, and the server can no longer read it. A library visible without approval stays readable by the server, as cover photos do in every case, and the directory settings say so. Leaving the directory or requiring approval updates that copy at once, and a published library keeps its visibility and its followers after reconnecting to the server</li>
+<li><strong>Connected libraries</strong>: a library whose keys changed, after a reinstall for instance, is flagged with what to do (remove it, then scan it again) instead of a bare sync failure. Another library answering at the same address on the local network can no longer take the place of a trusted one</li>
+<li><strong>Readers</strong>: on a device that just joined the account, readers show up without restarting the app, even when a sync fails</li>
+<li><strong>Book form</strong>: a typed author is kept even without tapping the + button</li>
+<li><strong>Dashboard</strong>: the to-read section shows its count in its header</li>
+<li><strong>Help</strong>: the help screen cards share one size and are read properly by screen readers</li>
+<li><strong>Logs</strong>: diagnostic logs no longer hold tokens, pairing secrets or invitation contents</li>
+</ul>
+<h2 id="1-2-3">1.2.3 <small>October 13, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.2...v1.2.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.3" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>File several books at once</strong>: the book list has a selection mode (long press, or the filter bar button) to put a pile of books onto shelves and into collections in one go; a collection can also add all its books elsewhere, and you can choose to remove them from the shelf or collection they came from</li>
+<li><strong>Borrows</strong>: "I borrowed it" offers your connected libraries, your contacts, a new contact created on the spot or a free-text place (a public library, say), then an optional due date; it opens even with no contacts, and the book page shows who you borrowed it from</li>
+<li><strong>Readers</strong>: "Wished by" no longer shows when the account has a single reader, where it told nothing</li>
+<li><strong>Errors</strong>: when saving a book fails, the message gives the cause instead of a bare error code</li>
+</ul>
+<h2 id="1-2-2">1.2.2 <small>October 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.1...v1.2.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.2" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>File import</strong>: a CSV or Excel import now keeps the reading status, rating and reading dates, instead of filing everything as "To read" with no rating. Babelio and Goodreads exports are recognised, Babelio authors get back their given name first, and a file that is not UTF-8 reads correctly</li>
+<li><strong>Import my readings</strong>: in the Readers section, once your reader is chosen, you can bring in your readings from another library's catalogue export. Books already there get your status, dates and rating, the others are added, nothing is wiped, and a summary flags ambiguous books instead of guessing</li>
+<li><strong>Ratings</strong>: a book created with a rating keeps it, even on a device with no reader chosen</li>
+</ul>
+<h2 id="1-2-1">1.2.1 <small>October 3, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.0...v1.2.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.1" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>Readers</strong>: several people sharing a library through the encrypted account each keep their own reading status, dates and rating; the catalogue, copies, loans and the wishlist stay shared. The new Readers section of the account screen lets you create your reader, pick who reads on this device, rename it, delete it after a confirmation or go back to the shared view. Nothing changes until a reader is picked, and every device of the account must be up to date before using it</li>
+<li><strong>Wishes</strong>: a book page shows which readers wish for it, handy for a gift, and the wishlist can narrow to one reader's wishes. A reader's status is no longer hidden by another reader's wish</li>
+<li><strong>Account screen</strong>: devices and readers no longer look alike, each section says what it holds</li>
+<li><strong>Import</strong>: an ISBN buried in a cell ("ISBN-10: 3518368540", or followed by a price) is recovered, only when its check digit holds</li>
+<li><strong>Pairing</strong>: ending a pairing also withdraws the other library's access to your catalogue through the directory</li>
+<li><strong>Encrypted account</strong>: a device still on an older version no longer counts data it does not know yet as failures, and picks it up once updated</li>
+</ul>
 <h2 id="1-2-0">1.2.0 <small>September 29, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.13...v1.2.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.0" class="changelog-link">release</a></h2>
 <ul>
 <li><strong>My contact details</strong>: your contact details now have their own section at the top of the settings, without turning on the directory. You choose who receives them, your paired libraries, your directory followers or both, and unticking a box withdraws them from those libraries. The app suggests filling them in when they matter: when a pairing is accepted, and when you ask to borrow a book</li>

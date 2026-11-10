@@ -14,64 +14,40 @@ lang_name: Français
 footer_text: "BiblioGenius - Open Source, local, chiffré."
 ---
 
+## 1.3.0 <small>23 octobre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.3...v1.3.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.3.0" class="changelog-link">release</a>
+
+- **Photos de couverture** : sur iPhone et Android, prendre une couverture en photo ouvre le scanner de documents du système, qui trouve les bords du livre, recadre et redresse l'image ; vous pouvez toujours déplacer les coins à la main. Le réglage « Recadrage automatique des couvertures » (Réglages > Modules > Avancé) ramène l'appareil photo classique. Sur Android, le scanner vient des services Google Play : l'application propose l'appareil photo classique avant son premier téléchargement, et le garde sur un téléphone sans services Google
+- **Page d'accueil** : un nouveau bloc dans Réglages > Thème réunit la taille des couvertures (petite, moyenne ou grande), le regroupement par statut de lecture (En cours, À lire, Lu, puis les autres livres, deux rangées chacun avec un lien vers la liste complète) et le bandeau du haut, déplacé depuis Modules. Les regroupements par statut et par collection s'excluent : activer l'un désactive l'autre
+- **Recherche** : la recherche de livres ignore les accents et les lettres particulières : « rene b » trouve « René Barjavel », y compris dans le catalogue d'une bibliothèque de l'annuaire
+- **Annuaire** : quand votre bibliothèque n'est pas listée ou demande une approbation, la copie de votre catalogue que le serveur garde pour vos abonnés est désormais chiffrée dès que tous utilisent la version 1.3.0, et le serveur ne peut plus la lire. Une bibliothèque visible sans approbation reste lisible par le serveur, comme les photos de couverture dans tous les cas, et les réglages de l'annuaire le disent. Quitter l'annuaire ou exiger une approbation met cette copie à jour aussitôt, et une bibliothèque publiée garde sa visibilité et ses abonnés après une reconnexion au serveur
+- **Bibliothèques connectées** : une bibliothèque qui a changé de clés, après une réinstallation par exemple, est signalée avec la marche à suivre (la retirer puis la scanner de nouveau), au lieu d'un simple échec de synchronisation. Une autre bibliothèque qui répond à la même adresse sur le réseau local ne peut plus prendre la place d'une bibliothèque de confiance
+- **Lecteurs** : sur un appareil qui vient de rejoindre le compte, les lecteurs apparaissent sans redémarrer l'application, même quand une synchronisation échoue
+- **Fiche livre** : un auteur saisi est gardé même sans toucher le bouton +
+- **Tableau de bord** : la section des livres à lire affiche leur nombre dans son en-tête
+- **Aide** : les cartes de l'écran d'aide ont toutes la même taille et sont lues correctement par les lecteurs d'écran
+- **Journaux** : les journaux de diagnostic ne contiennent plus de jetons, de secrets d'appairage ni de contenu d'invitation
+
 ## 1.2.3 <small>13 octobre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.2...v1.2.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.3" class="changelog-link">release</a>
 
-<!-- changelog-draft: rewrite the commits below as user-facing bullets ("- **Area**: what changed for the reader"), then delete this whole comment. `make site` refuses to deploy while it is here.
-bibliogenius-app:
-  354302f update to version 1.2.3
-  bdcdbc1 Update Contact QR CodeScanner header title
-  c721612 fix(app): name the backend cause when a book write fails
-  f142bf1 feat: let manual borrows name a library or a place as lender
-  a33797f feat(library): select several books and file them in one go
-bibliogenius:
-  f9b2d44 update to version 1.2.3
-  f28d72b fix(household): do not name a lone reader on their own wishes
-  800f933 feat(shelving): bulk filing of books onto shelves and into collections
--->
+- **Ranger plusieurs livres** : la liste des livres a un mode sélection (appui long, ou bouton de la barre de filtres) pour ranger d'un coup une pile de livres sur des étagères et dans des collections ; une collection propose aussi d'ajouter tous ses livres ailleurs, et vous pouvez choisir de les retirer de leur étagère ou collection d'origine
+- **Emprunts** : « Je l'ai emprunté » propose vos bibliothèques connectées, vos contacts, un nouveau contact créé sur place ou un lieu saisi librement (une médiathèque, par exemple), puis une date de retour facultative ; il s'ouvre même sans aucun contact, et la fiche du livre indique de qui vous l'avez emprunté
+- **Lecteurs** : la mention « Souhaité par » n'apparaît plus quand le compte n'a qu'un seul lecteur, où elle n'apprenait rien
+- **Erreurs** : quand l'enregistrement d'un livre échoue, le message en donne la cause au lieu d'un simple code d'erreur
 
 ## 1.2.2 <small>3 octobre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.1...v1.2.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.2" class="changelog-link">release</a>
 
-<!-- changelog-draft: rewrite the commits below as user-facing bullets ("- **Area**: what changed for the reader"), then delete this whole comment. `make site` refuses to deploy while it is here.
-bibliogenius-app:
-  ebea71f update to version 1.2.2
-  4e52c83 feat(household): import my readings from the readers section
-  e289bd8 feat(import): carry reading status, rating and dates; read Babelio exports
-  0f3bfc5 feat(household): "Import my readings" button
-bibliogenius:
-  2f45d96 update to version 1.2.2
-  312b71e fix(household): harden the import of readings
-  51ba5d3 fix(books): keep the rating a new book is created with
-  974b0f1 feat(household): import my readings from a catalogue export
--->
+- **Import de fichier** : un import CSV ou Excel garde désormais le statut de lecture, la note et les dates de lecture, au lieu de tout ranger en « À lire » sans note. Les exports Babelio et Goodreads sont reconnus, les auteurs Babelio retrouvent l'ordre prénom puis nom, et un fichier qui n'est pas en UTF-8 est lu correctement
+- **Importer mes lectures** : dans la section Lecteurs, une fois votre lecteur choisi, vous pouvez reprendre vos lectures depuis l'export de catalogue d'une autre bibliothèque. Les livres déjà présents reçoivent votre statut, vos dates et votre note, les autres sont ajoutés, rien n'est effacé, et un résumé signale les livres ambigus plutôt que de deviner
+- **Notes** : un livre créé avec une note la garde, même sur un appareil sans lecteur choisi
 
 ## 1.2.1 <small>3 octobre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.0...v1.2.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.1" class="changelog-link">release</a>
 
-<!-- changelog-draft: rewrite the commits below as user-facing bullets ("- **Area**: what changed for the reader"), then delete this whole comment. `make site` refuses to deploy while it is here.
-bibliogenius-app:
-  c247902 update to version 1.2.1
-  b48bb94 feat(household): tell devices and readers apart on the account screen
-  a07d7a3 feat(household): delete a reader from the section, after a confirmation
-  e350906 feat(household): manage readers from their own section
-  09e0833 feat(household): show who wished for a book under the status pill
-  21fa394 feat(household): show the shared wish behind a reader's own status
-  ff51af1 fix(household): keep the reader name controller alive on dialog close
-  fedc2b4 fix(import): recover a checksum-valid ISBN from a cell holding extra content
-  09e83b7 fix(network): single entry point to end a pairing (ADR-053 follow-up)
-  2ad7cd9 feat(household): pick who reads on this device
-bibliogenius:
-  b204333 update to version 1.2.1
-  d3b230c feat(household): remove a reader and their readings
-  cfd9da7 perf(household): index readings by reader, fetch the reader by id
-  557fcf9 feat(household): name the readers who wished for a book
-  635825d feat(household): expose the shared wish behind a reader's own status
-  aa078a5 refactor(household): split readers into domain, repository, service
-  b0799f4 fix(household): reading stats and collections follow the reader
-  621619c fix(household): a shared wish no longer hides a reader's own status
-  e2ed4b6 fix(household): bound the reader name length
-  3d05274 fix(account-sync): skip lanes of tables this build lacks, replay once after upgrade
-  26751a8 fix(peer): revoke the hub follow when a pairing ends (ADR-053 follow-up)
-  1e995c3 feat(household): one shared library, one reading state per reader
--->
+- **Lecteurs** : plusieurs personnes qui partagent une bibliothèque avec le compte chiffré gardent chacune leurs statuts de lecture, leurs dates et leurs notes ; le catalogue, les exemplaires, les prêts et la liste de souhaits restent communs. La nouvelle section Lecteurs de l'écran du compte permet de créer son lecteur, de choisir qui lit sur cet appareil, de le renommer, de le supprimer après confirmation ou de revenir à la vue commune. Tant qu'aucun lecteur n'est choisi, rien ne change, et tous les appareils du compte doivent être à jour avant de s'en servir
+- **Souhaits** : la fiche d'un livre indique quels lecteurs le souhaitent, pratique pour un cadeau, et la liste de souhaits peut se limiter aux souhaits d'un lecteur. Le statut d'un lecteur n'est plus masqué par le souhait d'un autre
+- **Écran du compte** : appareils et lecteurs ne se confondent plus, chaque section dit ce qu'elle contient
+- **Import** : un ISBN noyé dans une cellule (« ISBN-10: 3518368540 », ou suivi d'un prix) est retrouvé, seulement si sa clé de contrôle est valide
+- **Appairage** : mettre fin à un appairage retire aussi l'accès de l'autre bibliothèque à votre catalogue par l'annuaire
+- **Compte chiffré** : un appareil resté sur une version plus ancienne ne compte plus en échec les données qu'il ne connaît pas encore, et les récupère une fois mis à jour
 
 ## 1.2.0 <small>29 septembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.13...v1.2.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.0" class="changelog-link">release</a>
 

@@ -56,7 +56,8 @@
                     "url": "https://federico-calo.net/",
                     "sameAs": [
                         "https://federico-calo.net/"
-                    ]
+                    ],
+                    "jobTitle": "Porteur du projet : conception et développement"
                 },
                 "member": [
                     {
@@ -65,12 +66,14 @@
                         "name": "Sébastien Godet",
                         "sameAs": [
                             "https://www.linkedin.com/in/s%C3%A9bastien-godet-142ba6145/"
-                        ]
+                        ],
+                        "jobTitle": "Business analyst et testeur fonctionnel"
                     },
                     {
                         "@type": "Person",
                         "@id": "https://bibliogenius.org/#contributor-brunet",
-                        "name": "Matthieu Brunet"
+                        "name": "Matthieu Brunet",
+                        "jobTitle": "Développeur"
                     }
                 ],
                 "mainEntityOfPage": {
@@ -344,6 +347,10 @@
 
             <nav class="changelog-nav" id="changelog-nav" aria-label="Versions">
                 <h2>Versions</h2>
+                <a href="#1-3-0">1.3.0</a>
+                <a href="#1-2-3">1.2.3</a>
+                <a href="#1-2-2">1.2.2</a>
+                <a href="#1-2-1">1.2.1</a>
                 <a href="#1-2-0">1.2.0</a>
                 <a href="#1-1-13">1.1.13</a>
                 <a href="#1-1-12">1.1.12</a>
@@ -382,6 +389,41 @@
             </nav>
 
             <article class="changelog-content">
+<h2 id="1-3-0">1.3.0 <small>23 octobre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.3...v1.3.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.3.0" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>Photos de couverture</strong> : sur iPhone et Android, prendre une couverture en photo ouvre le scanner de documents du système, qui trouve les bords du livre, recadre et redresse l'image ; vous pouvez toujours déplacer les coins à la main. Le réglage « Recadrage automatique des couvertures » (Réglages &gt; Modules &gt; Avancé) ramène l'appareil photo classique. Sur Android, le scanner vient des services Google Play : l'application propose l'appareil photo classique avant son premier téléchargement, et le garde sur un téléphone sans services Google</li>
+<li><strong>Page d'accueil</strong> : un nouveau bloc dans Réglages &gt; Thème réunit la taille des couvertures (petite, moyenne ou grande), le regroupement par statut de lecture (En cours, À lire, Lu, puis les autres livres, deux rangées chacun avec un lien vers la liste complète) et le bandeau du haut, déplacé depuis Modules. Les regroupements par statut et par collection s'excluent : activer l'un désactive l'autre</li>
+<li><strong>Recherche</strong> : la recherche de livres ignore les accents et les lettres particulières : « rene b » trouve « René Barjavel », y compris dans le catalogue d'une bibliothèque de l'annuaire</li>
+<li><strong>Annuaire</strong> : quand votre bibliothèque n'est pas listée ou demande une approbation, la copie de votre catalogue que le serveur garde pour vos abonnés est désormais chiffrée dès que tous utilisent la version 1.3.0, et le serveur ne peut plus la lire. Une bibliothèque visible sans approbation reste lisible par le serveur, comme les photos de couverture dans tous les cas, et les réglages de l'annuaire le disent. Quitter l'annuaire ou exiger une approbation met cette copie à jour aussitôt, et une bibliothèque publiée garde sa visibilité et ses abonnés après une reconnexion au serveur</li>
+<li><strong>Bibliothèques connectées</strong> : une bibliothèque qui a changé de clés, après une réinstallation par exemple, est signalée avec la marche à suivre (la retirer puis la scanner de nouveau), au lieu d'un simple échec de synchronisation. Une autre bibliothèque qui répond à la même adresse sur le réseau local ne peut plus prendre la place d'une bibliothèque de confiance</li>
+<li><strong>Lecteurs</strong> : sur un appareil qui vient de rejoindre le compte, les lecteurs apparaissent sans redémarrer l'application, même quand une synchronisation échoue</li>
+<li><strong>Fiche livre</strong> : un auteur saisi est gardé même sans toucher le bouton +</li>
+<li><strong>Tableau de bord</strong> : la section des livres à lire affiche leur nombre dans son en-tête</li>
+<li><strong>Aide</strong> : les cartes de l'écran d'aide ont toutes la même taille et sont lues correctement par les lecteurs d'écran</li>
+<li><strong>Journaux</strong> : les journaux de diagnostic ne contiennent plus de jetons, de secrets d'appairage ni de contenu d'invitation</li>
+</ul>
+<h2 id="1-2-3">1.2.3 <small>13 octobre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.2...v1.2.3" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.3" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>Ranger plusieurs livres</strong> : la liste des livres a un mode sélection (appui long, ou bouton de la barre de filtres) pour ranger d'un coup une pile de livres sur des étagères et dans des collections ; une collection propose aussi d'ajouter tous ses livres ailleurs, et vous pouvez choisir de les retirer de leur étagère ou collection d'origine</li>
+<li><strong>Emprunts</strong> : « Je l'ai emprunté » propose vos bibliothèques connectées, vos contacts, un nouveau contact créé sur place ou un lieu saisi librement (une médiathèque, par exemple), puis une date de retour facultative ; il s'ouvre même sans aucun contact, et la fiche du livre indique de qui vous l'avez emprunté</li>
+<li><strong>Lecteurs</strong> : la mention « Souhaité par » n'apparaît plus quand le compte n'a qu'un seul lecteur, où elle n'apprenait rien</li>
+<li><strong>Erreurs</strong> : quand l'enregistrement d'un livre échoue, le message en donne la cause au lieu d'un simple code d'erreur</li>
+</ul>
+<h2 id="1-2-2">1.2.2 <small>3 octobre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.1...v1.2.2" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.2" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>Import de fichier</strong> : un import CSV ou Excel garde désormais le statut de lecture, la note et les dates de lecture, au lieu de tout ranger en « À lire » sans note. Les exports Babelio et Goodreads sont reconnus, les auteurs Babelio retrouvent l'ordre prénom puis nom, et un fichier qui n'est pas en UTF-8 est lu correctement</li>
+<li><strong>Importer mes lectures</strong> : dans la section Lecteurs, une fois votre lecteur choisi, vous pouvez reprendre vos lectures depuis l'export de catalogue d'une autre bibliothèque. Les livres déjà présents reçoivent votre statut, vos dates et votre note, les autres sont ajoutés, rien n'est effacé, et un résumé signale les livres ambigus plutôt que de deviner</li>
+<li><strong>Notes</strong> : un livre créé avec une note la garde, même sur un appareil sans lecteur choisi</li>
+</ul>
+<h2 id="1-2-1">1.2.1 <small>3 octobre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.0...v1.2.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.1" class="changelog-link">release</a></h2>
+<ul>
+<li><strong>Lecteurs</strong> : plusieurs personnes qui partagent une bibliothèque avec le compte chiffré gardent chacune leurs statuts de lecture, leurs dates et leurs notes ; le catalogue, les exemplaires, les prêts et la liste de souhaits restent communs. La nouvelle section Lecteurs de l'écran du compte permet de créer son lecteur, de choisir qui lit sur cet appareil, de le renommer, de le supprimer après confirmation ou de revenir à la vue commune. Tant qu'aucun lecteur n'est choisi, rien ne change, et tous les appareils du compte doivent être à jour avant de s'en servir</li>
+<li><strong>Souhaits</strong> : la fiche d'un livre indique quels lecteurs le souhaitent, pratique pour un cadeau, et la liste de souhaits peut se limiter aux souhaits d'un lecteur. Le statut d'un lecteur n'est plus masqué par le souhait d'un autre</li>
+<li><strong>Écran du compte</strong> : appareils et lecteurs ne se confondent plus, chaque section dit ce qu'elle contient</li>
+<li><strong>Import</strong> : un ISBN noyé dans une cellule (« ISBN-10: 3518368540 », ou suivi d'un prix) est retrouvé, seulement si sa clé de contrôle est valide</li>
+<li><strong>Appairage</strong> : mettre fin à un appairage retire aussi l'accès de l'autre bibliothèque à votre catalogue par l'annuaire</li>
+<li><strong>Compte chiffré</strong> : un appareil resté sur une version plus ancienne ne compte plus en échec les données qu'il ne connaît pas encore, et les récupère une fois mis à jour</li>
+</ul>
 <h2 id="1-2-0">1.2.0 <small>29 septembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.1.13...v1.2.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.2.0" class="changelog-link">release</a></h2>
 <ul>
 <li><strong>Mes coordonnées</strong> : vos coordonnées ont maintenant leur propre section en tête des réglages, sans avoir à activer l'annuaire. Vous choisissez qui les reçoit, vos bibliothèques appairées, vos abonnés de l'annuaire ou les deux, et décocher une case les retire aux bibliothèques concernées. L'application vous propose de les remplir au moment où elles servent : quand un appairage est accepté, et quand vous demandez un emprunt</li>
