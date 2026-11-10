@@ -56,6 +56,9 @@ faq_q3: Sur quelles plateformes BiblioGenius fonctionne-t-il ?
 faq_a3: BiblioGenius est disponible sur iOS, Android, macOS, Windows et Linux.
 faq_q4: Comment me connecter à la bibliothèque d'un autre lecteur ?
 faq_a4: Vous pouvez vous connecter via un QR code ou un lien d'invitation. Voir le guide <a href='docs/connect-friends.html'>Se connecter avec des amis</a>.
+# Hors du FAQPage JSON-LD (cles non numerotees) : visible sur la page, pas mis en avant dans les moteurs.
+faq_report_q: Comment signaler un contenu visible dans l'annuaire ?
+faq_report_a: Si une couverture, une photo ou un autre contenu affiché dans l'annuaire en ligne vous pose problème, par exemple au regard du droit d'auteur ou des données personnelles, écrivez-nous à <a href='mailto:contact@bibliogenius.org'>contact@bibliogenius.org</a> en précisant le livre ou la bibliothèque concernés. Nous examinons chaque demande et retirons le contenu si nécessaire.
 
 # -- Footer --
 footer_copyright: © 2025-2026 BiblioGenius - <a href='https://www.gnu.org/licenses/agpl-3.0.html' style='color:var(--accent-light);'>AGPL-3.0</a>
