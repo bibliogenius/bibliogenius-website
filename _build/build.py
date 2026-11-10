@@ -329,22 +329,22 @@ def _lang_value(table, lang):
 # _i18n/contribute/{lang}.yml.
 PERSON_JOB_TITLES = {
     BASE_URL + '/#founder': {
-        'fr': 'Porteur du projet : conception et développement',
-        'en': 'Project lead: design and development',
-        'es': 'Responsable del proyecto: diseño y desarrollo',
-        'de': 'Projektleiter: Konzeption und Entwicklung',
+        'fr': 'Conception et développement',
+        'en': 'Design and development',
+        'es': 'Diseño y desarrollo',
+        'de': 'Konzeption und Entwicklung',
     },
     BASE_URL + '/#contributor-godet': {
-        'fr': 'Business analyst et testeur fonctionnel',
-        'en': 'Business analyst and functional tester',
-        'es': 'Business analyst y tester funcional',
-        'de': 'Business Analyst und Funktionstester',
+        'fr': 'Analyse fonctionnelle et tests',
+        'en': 'Business analysis and testing',
+        'es': 'Análisis funcional y pruebas',
+        'de': 'Fachliche Analyse und Tests',
     },
     BASE_URL + '/#contributor-brunet': {
-        'fr': 'Développeur',
-        'en': 'Developer',
-        'es': 'Desarrollador',
-        'de': 'Entwickler',
+        'fr': 'Développement',
+        'en': 'Development',
+        'es': 'Desarrollo',
+        'de': 'Entwicklung',
     },
 }
 

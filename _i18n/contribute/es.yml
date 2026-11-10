@@ -81,10 +81,10 @@ linux_desc: AppImage (Ubuntu/Debian) · beta
 # -- Acknowledgements / Remerciements --
 thanks_title: "Agradecimientos"
 thanks_intro: "BiblioGenius avanza gracias a quienes dedican su tiempo y sus ideas."
-thanks_federico_role: "Responsable del proyecto: diseño y desarrollo."
+thanks_federico_role: "Diseño y desarrollo"
 thanks_federico_aria: "Federico Calo, sitio web personal"
-thanks_sebastien_role: "Business analyst y tester funcional."
+thanks_sebastien_role: "Análisis funcional y pruebas"
 thanks_sebastien_aria: "Sébastien Godet, perfil de LinkedIn"
-thanks_matthieu_role: "Desarrollador."
+thanks_matthieu_role: "Desarrollo"
 thanks_translators: "Gracias también a quienes tradujeron la aplicación, así como a sus colaboradores."
 thanks_family: "Gracias también a mis seres queridos, los primeros pacientes probadores de la aplicación."
