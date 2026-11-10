@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bibliogenius.org/de/contribute.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/en/contribute.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/es/contribute.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/contribute.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -107,7 +107,7 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/de/docs/organize-shelves.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/de/docs/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -212,7 +212,7 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/en/docs/organize-shelves.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -257,7 +257,7 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/en/docs/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -277,7 +277,7 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/es/docs/organize-shelves.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -292,7 +292,7 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/es/docs/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -382,7 +382,7 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/docs/organize-shelves.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -427,17 +427,17 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/docs/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/en/changelog.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/changelog.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -562,27 +562,27 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/privacy.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/data-deletion.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/en/data-deletion.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/es/data-deletion.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/de/data-deletion.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.3</priority>
   </url>
 </urlset>
