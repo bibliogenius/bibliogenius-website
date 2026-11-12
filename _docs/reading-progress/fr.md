@@ -19,7 +19,7 @@ Il y a toujours un livre qui attend son tour, parfois toute une pile. BiblioGeni
 
 ## Votre pile à lire, enfin comptée
 
-Sur le tableau de bord, la section **À lire** affiche le nombre de livres qui vous attendent, par exemple « À lire · 23 ». **Voir toute la pile à lire** l'ouvre en entier. Vos lectures en cours ont leur propre section, juste au-dessus.
+Sur le tableau de bord (onglet « Aperçu » sur téléphone), la section **À lire** affiche le nombre de livres qui vous attendent, par exemple « À lire · 23 ». **Voir toute la pile à lire** l'ouvre en entier. Vos lectures en cours ont leur propre section, juste au-dessus.
 
 ## Ce soir, vous en commencez un
 
