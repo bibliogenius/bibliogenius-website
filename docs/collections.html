@@ -155,223 +155,478 @@
 
     <link rel="stylesheet" href="../styles.css">
     <style>
+        /* Page grid: calm sidebar on the left, reading column on the right.
+           Source order is article, guide list, end zone: on a phone the guide
+           list simply follows the article, and focus order matches what is
+           on screen. On wide screens the grid lifts the list into the left
+           column. */
         .doc-layout {
-            display: flex;
-            max-width: 1100px;
+            display: grid;
+            grid-template-columns: 14.5rem minmax(0, 1fr);
+            gap: 0 3.5rem;
+            max-width: var(--max-width);
             margin: 0 auto;
-            padding: 2rem 1.5rem;
-            gap: 2.5rem;
+            padding: 3rem 1.5rem 4.5rem;
         }
 
         /* Sidebar */
         .doc-sidebar {
-            width: 240px;
-            flex-shrink: 0;
+            grid-column: 1;
+            grid-row: 1 / span 2;
             position: sticky;
             top: 1.5rem;
-            align-self: flex-start;
+            align-self: start;
             max-height: calc(100vh - 3rem);
             overflow-y: auto;
+            padding-bottom: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.4;
         }
 
-        .doc-sidebar h2 {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #6b7280;
-            margin-bottom: 0.75rem;
+        .doc-sidebar-home {
+            display: inline-block;
+            margin-bottom: 1.25rem;
+            color: var(--heading-color);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .doc-sidebar-home:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
         }
 
         .sidebar-group {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
         }
 
         .sidebar-group-label {
-            font-size: 0.7rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: #9ca3af;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-            padding-left: 0.75rem;
+            color: #6b7280;
         }
 
         .sidebar-link {
             display: block;
-            padding: 0.35rem 0.75rem;
-            color: #374151;
+            padding: 0.3rem 0 0.3rem 0.85rem;
+            border-left: 1px solid #e5e7eb;
+            color: #4b5563;
             text-decoration: none;
-            font-size: 0.9rem;
-            border-radius: 0.375rem;
-            border-left: 2px solid transparent;
-            transition: background 0.15s, border-color 0.15s;
+            transition: color 0.15s, border-color 0.15s;
         }
 
         .sidebar-link:hover {
-            background: #f3f4f6;
-            color: var(--primary-color);
+            color: var(--heading-color);
+            border-left-color: #9ca3af;
         }
 
         .sidebar-link.active {
-            background: #eff6ff;
-            color: var(--primary-color);
+            padding-left: calc(0.85rem - 1px);
+            border-left: 2px solid var(--primary-color);
+            color: var(--primary-hover);
             font-weight: 600;
-            border-left-color: var(--primary-color);
         }
 
-        /* Content */
-        .doc-content {
-            flex: 1;
+        /* Sidebar toggle, shown on narrow screens only */
+        .sidebar-toggle {
+            display: none;
+            align-items: center;
+            gap: 0.6rem;
+            width: 100%;
+            min-height: 2.75rem;
+            padding: 0.5rem 0.9rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            background: var(--white);
+            color: var(--heading-color);
+            font-family: inherit;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .sidebar-toggle::after {
+            content: "";
+            width: 0.5rem;
+            height: 0.5rem;
+            margin-left: auto;
+            margin-right: 0.2rem;
+            border-right: 2px solid #6b7280;
+            border-bottom: 2px solid #6b7280;
+            transform: translateY(-2px) rotate(45deg);
+            transition: transform 0.15s;
+        }
+
+        .sidebar-toggle[aria-expanded="true"]::after {
+            transform: translateY(2px) rotate(-135deg);
+        }
+
+        /* Reading column */
+        .doc-content,
+        .doc-end {
+            grid-column: 2;
             min-width: 0;
+            max-width: 47.5rem;
+        }
+
+        .doc-content {
+            grid-row: 1;
+        }
+
+        .doc-end {
+            grid-row: 2;
+        }
+
+        .doc-content {
+            font-size: 1.0625rem;
+            line-height: 1.7;
+            overflow-wrap: break-word;
+        }
+
+        /* Text keeps a comfortable measure; screenshots, tables and code
+           may use the full column. */
+        .doc-content > * {
+            max-width: 41rem;
+        }
+
+        .doc-content > table,
+        .doc-content > pre,
+        .doc-content > p:has(> img) {
+            max-width: none;
         }
 
         .doc-content h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
+            font-size: clamp(1.875rem, 1.35rem + 2.4vw, 2.75rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.022em;
+            text-wrap: balance;
+        }
+
+        /* Opening paragraph reads as a standfirst */
+        .doc-content h1 + p {
+            font-size: 1.1875rem;
+            line-height: 1.6;
+            color: #374151;
         }
 
         .doc-content h2 {
-            font-size: 1.4rem;
-            margin-top: 2.5rem;
-            margin-bottom: 0.75rem;
-            padding-bottom: 0.25rem;
-            border-bottom: 1px solid #e5e7eb;
+            margin: 2.75rem 0 0.75rem;
+            font-size: 1.5rem;
+            letter-spacing: -0.012em;
+            text-wrap: balance;
         }
 
         .doc-content h3 {
-            font-size: 1.15rem;
-            margin-top: 1.75rem;
-            margin-bottom: 0.5rem;
+            margin: 2rem 0 0.5rem;
+            font-size: 1.1875rem;
         }
 
         .doc-content p {
             margin-bottom: 1rem;
-            line-height: 1.7;
         }
 
-        .doc-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            margin: 1rem 0;
+        .doc-content strong {
+            color: var(--heading-color);
         }
 
+        .doc-content a {
+            color: var(--primary-hover);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        .doc-content a:hover {
+            text-decoration-thickness: 2px;
+        }
+
+        /* Lists */
         .doc-content ul,
         .doc-content ol {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
-        .doc-content li {
-            margin-bottom: 0.35rem;
-            line-height: 1.6;
+        .doc-content ul {
+            padding-left: 1.25rem;
+        }
+
+        .doc-content ul > li {
+            margin-bottom: 0.4rem;
+            padding-left: 0.25rem;
+        }
+
+        .doc-content ul > li::marker {
+            color: var(--primary-color);
+        }
+
+        /* Ordered lists are step sequences: numbered discs. The native
+           marker stays in place, only made transparent, so the list keeps
+           its semantics for assistive technology. */
+        .doc-content ol {
+            margin-top: 1.25rem;
+            padding-left: 0;
+            counter-reset: doc-step;
+        }
+
+        .doc-content ol > li {
+            position: relative;
+            min-height: 2rem;
+            margin: 0 0 0.75rem 2.75rem;
+            padding-top: 0.1rem;
+            counter-increment: doc-step;
+        }
+
+        .doc-content ol > li::marker {
+            color: transparent;
+        }
+
+        .doc-content ol > li::before {
+            content: counter(doc-step);
+            content: counter(doc-step) / "";
+            position: absolute;
+            top: 0;
+            left: -2.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: var(--secondary-bg);
+            color: var(--secondary-text);
+            font-size: 0.9375rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .doc-content li > ul,
+        .doc-content li > ol {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Screenshots: framed capture resting on a soft mat. A tall, narrow
+           capture is capped in height, so it is never blown up to the full
+           column width. */
+        .doc-content img {
+            display: inline-block;
+            vertical-align: middle;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 30rem;
+            object-fit: contain;
+            border: 1px solid #dbe1ea;
+            border-radius: 0.5rem;
+            background: var(--white);
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 10px 24px -10px rgba(15, 23, 42, 0.22);
+        }
+
+        .doc-content p:has(> img) {
+            margin: 1.75rem 0 2.25rem;
+            padding: clamp(0.75rem, 3vw, 1.5rem);
+            border-radius: 1rem;
+            background: #f1f5f9;
+            text-align: center;
+        }
+
+        /* Convention for a paragraph holding two captures, same idea as the
+           home page showcase: the FIRST image is the phone capture, the
+           SECOND is the wide desktop capture. Below 700px only the phone
+           capture is shown; from 700px only the desktop capture is shown.
+           Both images carry a full alt text, since only one is rendered. */
+        @media (max-width: 699px) {
+            .doc-content p:has(> img ~ img) > img ~ img {
+                display: none;
+            }
+
+            /* Phones: no capture taller than about half the screen */
+            .doc-content img {
+                max-height: min(55vh, 30rem);
+            }
+        }
+
+        @media (min-width: 700px) {
+            .doc-content p:has(> img ~ img) > img:first-of-type {
+                display: none;
+            }
+
+            .doc-content p:has(> img ~ img) > img ~ img {
+                max-height: none;
+            }
         }
 
         .doc-content code {
-            background: #f3f4f6;
             padding: 0.15rem 0.4rem;
             border-radius: 0.25rem;
+            background: #f1f5f9;
             font-size: 0.9em;
         }
 
         .doc-content pre {
-            background: #1f2937;
-            color: #e5e7eb;
+            margin-bottom: 1.25rem;
             padding: 1rem 1.25rem;
             border-radius: 0.5rem;
+            background: #1f2937;
+            color: #e5e7eb;
             overflow-x: auto;
-            margin-bottom: 1rem;
         }
 
         .doc-content pre code {
-            background: none;
             padding: 0;
+            background: none;
             color: inherit;
         }
 
         .doc-content table {
             width: 100%;
+            margin-bottom: 1.25rem;
             border-collapse: collapse;
-            margin-bottom: 1rem;
+            font-size: 0.9375rem;
+            line-height: 1.5;
         }
 
         .doc-content th,
         .doc-content td {
-            border: 1px solid #e5e7eb;
-            padding: 0.5rem 0.75rem;
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid #e5e7eb;
             text-align: left;
+            vertical-align: top;
         }
 
         .doc-content th {
-            background: #f9fafb;
-            font-weight: 600;
+            border-bottom: 2px solid #d1d5db;
+            color: var(--heading-color);
+            font-weight: 700;
         }
 
-        .back-link {
+        /* End of the article: way back to the list of guides */
+        .doc-end-nav {
+            margin-top: 2.5rem;
+        }
+
+        .doc-end-nav a {
             display: inline-block;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
+            padding: 0.35rem 0;
+            color: var(--primary-hover);
             font-weight: 600;
         }
 
-        /* Mobile sidebar toggle */
-        .sidebar-toggle {
-            display: none;
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            margin-bottom: 1rem;
-            font-family: inherit;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 899px) {
             .doc-layout {
-                flex-direction: column;
-                padding: 1.5rem 1rem;
+                display: block;
+                padding: 1.75rem 1rem 3rem;
+            }
+
+            .doc-end .doc-app {
+                margin-top: 2rem;
+            }
+
+            .sidebar-toggle {
+                display: flex;
+                margin-top: 2.5rem;
+            }
+
+            /* The toggle right above already leads to the list of guides */
+            .doc-end-nav {
+                display: none;
             }
 
             .doc-sidebar {
-                width: 100%;
+                display: none;
                 position: static;
                 max-height: none;
-                display: none;
+                margin-top: 0.75rem;
+                padding: 1rem 1rem 0.25rem;
+                border: 1px solid #e5e7eb;
+                border-radius: 0.5rem;
+                font-size: 1rem;
             }
 
             .doc-sidebar.open {
                 display: block;
             }
 
-            .sidebar-toggle {
-                display: block;
+            /* 44px tap targets in the open panel */
+            .sidebar-link,
+            .doc-sidebar-home {
+                padding-top: 0.65rem;
+                padding-bottom: 0.65rem;
+            }
+
+            .doc-sidebar-home {
+                margin-bottom: 0.5rem;
+            }
+
+            .doc-content h2 {
+                margin-top: 2.25rem;
+                font-size: 1.375rem;
+            }
+
+            .doc-content h1 + p {
+                font-size: 1.125rem;
+            }
+
+            /* Tables must fit a phone screen without sideways scrolling */
+            .doc-content table {
+                font-size: 0.875rem;
+            }
+
+            .doc-content th,
+            .doc-content td {
+                padding: 0.5rem 0.4rem;
+                overflow-wrap: anywhere;
+                hyphens: auto;
             }
         }
 
-        .doc-help {
-            margin-top: 3rem;
-            padding: 1.5rem;
-            background: #eff6ff;
-            border: 1px solid #dbeafe;
+        /* Small interactive blocks inside a guide (a group of radio buttons
+           and its answer line) */
+        .doc-content fieldset {
+            margin: 1.5rem 0;
+            padding: 0.75rem 1.25rem 1rem;
+            border: 1px solid #d1d5db;
             border-radius: 0.75rem;
         }
 
-        .doc-help h2 {
-            font-size: 1.15rem;
-            margin: 0 0 0.4rem;
-            padding: 0;
-            border: none;
+        .doc-content legend {
+            padding: 0 0.5rem;
+            color: var(--heading-color);
+            font-weight: 700;
         }
 
-        .doc-help p {
-            margin: 0 0 1rem;
-            color: #4b5563;
-            line-height: 1.6;
+        .doc-content fieldset label {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            min-height: 2.75rem;
+            cursor: pointer;
+        }
+
+        .doc-content input[type="radio"],
+        .doc-content input[type="checkbox"] {
+            flex-shrink: 0;
+            width: 1.15rem;
+            height: 1.15rem;
+            accent-color: var(--primary-color);
+        }
+
+        .doc-content input:focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        .doc-content [aria-live]:not(:empty) {
+            padding: 0.75rem 1rem;
+            border-left: 3px solid var(--primary-color);
+            border-radius: 0 0.5rem 0.5rem 0;
+            background: var(--secondary-bg);
+            color: var(--heading-color);
         }
     </style>
     <script type="application/ld+json">
@@ -387,10 +642,10 @@
     </script>
 </head>
 
-<body>
-    <a href="#main-content" class="skip-link">Skip to content</a>
+<body class="doc-page">
+    <a href="#main-content" class="skip-link">Aller au contenu</a>
 
-    <header class="hero" style="padding: 2.5rem 1.5rem;">
+    <header class="doc-masthead">
         <nav class="site-nav" aria-label="Navigation principale">
             <a href="../index.html" class="site-nav-logo">BiblioGenius</a>
             <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
@@ -411,25 +666,68 @@
                 </select>
             </div>
         </nav>
-        <div class="hero-content">
-            <h1>Documentation</h1>
-            <p>Guides et tutoriels pour maîtriser BiblioGenius</p>
-        </div>
+        <p class="doc-signature"><span class="doc-signature-text"><strong>BiblioGenius</strong>, l'application gratuite pour scanner, ranger et prêter vos livres.</span> <a href="#get-app">Télécharger l'application<span aria-hidden="true"> &darr;</span></a></p>
     </header>
 
     <main id="main-content">
         <div class="doc-layout">
-            <button class="sidebar-toggle" aria-expanded="false" aria-controls="doc-sidebar" aria-label="Menu">
-                &#9776; Guide
+            <article class="doc-content">
+                <h1>Comment utiliser les Collections</h1>
+<p>Les Collections regroupent vos livres en listes personnalisées : une saga, un thème, un défi lecture, une liste à passer à quelqu'un. Elles se créent depuis l'onglet Collections, et se remplissent avec vos propres livres ou avec une liste importée.</p>
+<p><img alt="Vue des collections" src="images/collections/collections-view.png" /></p>
+<h2 id="creer-une-collection">Créer une collection</h2>
+<ol>
+<li>Allez dans l'onglet « Collections »</li>
+<li>Appuyez sur « + » pour créer une nouvelle collection</li>
+<li>Donnez-lui un nom et une description</li>
+<li>Ajoutez des livres depuis votre bibliothèque</li>
+</ol>
+<h2 id="les-favoris">Les favoris</h2>
+<p>Sur la fiche d'un livre, le marque-page étoile le range dans vos favoris. Il n'y a rien d'autre à faire : la collection <strong>« Favoris »</strong> existe d'elle-même, et l'étoile est son unique porte. Marquer un livre l'y ajoute, la retirer l'en sort.</p>
+<p>Un livre favori pèse double dans vos <a href="recommendations.html">suggestions de lecture</a> : c'est le signal le plus direct que vous puissiez donner à l'application sur vos goûts.</p>
+<p>Si vous teniez déjà une collection de ce genre à la main, BiblioGenius vous propose une fois de l'adopter comme collection Favoris. Ses livres deviennent alors des favoris. Vous pouvez refuser, la question ne revient pas.</p>
+<p>Tout reste sur votre appareil, comme le reste de vos collections.</p>
+<h2 id="les-collections-de-type-serie">Les collections de type série</h2>
+<p>Une collection peut être marquée comme <strong>série</strong>. Les tomes s'affichent alors dans l'ordre, et l'application peut vous signaler celui qui manque. Voir <a href="series.html">Suivre une série</a>.</p>
+<h2 id="partager-une-liste">Partager une liste</h2>
+<p>Depuis une collection, l'action <strong>« Partager »</strong> ouvre un récapitulatif de ce que vous êtes sur le point d'envoyer : le nom de la liste, le nombre de livres qu'elle contient, et les langues déclarées. Deux façons de la transmettre :</p>
+<ul>
+<li><strong>Copier</strong> met la liste dans le presse-papier, sous une forme que l'import sait relire ;</li>
+<li><strong>Envoyer le fichier</strong> produit un fichier <code>.bibliogenius.yml</code> que vous transmettez par le moyen de votre choix.</li>
+</ul>
+<p>Le fichier porte votre nom de bibliothèque comme contributeur, pour que votre correspondant puisse distinguer votre liste d'une autre du même nom.</p>
+<p>Rien n'entre dans la bibliothèque de votre correspondant avant qu'il ne confirme.</p>
+<h2 id="recevoir-une-liste">Recevoir une liste</h2>
+<p>L'action <strong>« Importer »</strong>, dans l'onglet Collections, accepte trois formes :</p>
+<ul>
+<li>un fichier <code>.bibliogenius.yml</code>, tel qu'envoyé par « Partager » ;</li>
+<li>un fichier <code>.yaml</code> ou <code>.yml</code> ;</li>
+<li>une liste collée depuis le presse-papier.</li>
+</ul>
+<p>L'import montre d'abord ce qu'il a compris : le titre, la description, le nombre de livres et le nom de l'expéditeur. Vous décidez ensuite du statut à donner aux livres, comme pour une <a href="curated-lists.html">sélection toute prête</a>. Une liste très longue vous est signalée avant de commencer, parce que l'import interroge une source de métadonnées pour chaque livre.</p>
+<p>Une liste reçue est une liste comme une autre : elle n'écrase rien, ne modifie aucun de vos livres existants, et ne peut rien déclencher toute seule.</p>
+<h2 id="les-selections-liees-a-votre-bibliotheque">Les sélections liées à votre bibliothèque</h2>
+<p>Sous vos collections, un bloc <strong>« Sélections liées à votre bibliothèque »</strong> propose des listes toutes prêtes qui recoupent ce que vous possédez déjà, avec la raison en clair : « 7 livres en commun ». Voir <a href="curated-lists.html">Les sélections toutes prêtes</a>.</p>
+<h2 id="exemples-dutilisation">Exemples d'utilisation</h2>
+<ul>
+<li>Regrouper les tomes d'une saga</li>
+<li>Créer une liste de lecture thématique</li>
+<li>Organiser un défi lecture</li>
+<li>Envoyer une sélection de livres recommandés à quelqu'un</li>
+</ul>
+            </article>
+
+            <button type="button" class="sidebar-toggle" aria-expanded="false" aria-controls="doc-sidebar">
+                <span aria-hidden="true">&#9776;</span> Tous les guides
             </button>
 
             <nav class="doc-sidebar" id="doc-sidebar" aria-label="Guide">
-                <h2>Guide</h2>
+                <a href="index.html" class="doc-sidebar-home">Documentation</a>
                 <div class="sidebar-group">
                     <div class="sidebar-group-label">Bibliothèque</div>
                     <a href="add-book.html" class="sidebar-link">Comment ajouter un livre</a>
                     <a href="organize-shelves.html" class="sidebar-link">Comment organiser mes étagères</a>
-                    <a href="reading-progress.html" class="sidebar-link">Comment suivre ma progression de lecture</a>
+                    <a href="reading-progress.html" class="sidebar-link">Comment suivre mes lectures et ma pile à lire</a>
                     <a href="complete-library.html" class="sidebar-link">Mettre à jour les données de mes livres en masse</a>
                     <a href="wishlist.html" class="sidebar-link">Ma liste de souhaits</a>
                     <a href="series.html" class="sidebar-link">Suivre une série</a>
@@ -471,57 +769,29 @@
                 </div>
             </nav>
 
-            <article class="doc-content">
-                <a href="index.html" class="back-link">&larr; Tous les guides</a>
-                <h1>Comment utiliser les Collections</h1>
-<p>Les Collections regroupent vos livres en listes personnalisées : une saga, un thème, un défi lecture, une liste à passer à quelqu'un. Elles se créent depuis l'onglet Collections, et se remplissent avec vos propres livres ou avec une liste importée.</p>
-<p><img loading="lazy" alt="Vue des collections" src="images/collections/collections-view.png" /></p>
-<h2 id="creer-une-collection">Créer une collection</h2>
-<ol>
-<li>Allez dans l'onglet « Collections »</li>
-<li>Appuyez sur « + » pour créer une nouvelle collection</li>
-<li>Donnez-lui un nom et une description</li>
-<li>Ajoutez des livres depuis votre bibliothèque</li>
-</ol>
-<h2 id="les-favoris">Les favoris</h2>
-<p>Sur la fiche d'un livre, le marque-page étoile le range dans vos favoris. Il n'y a rien d'autre à faire : la collection <strong>« Favoris »</strong> existe d'elle-même, et l'étoile est son unique porte. Marquer un livre l'y ajoute, la retirer l'en sort.</p>
-<p>Un livre favori pèse double dans vos <a href="recommendations.html">suggestions de lecture</a> : c'est le signal le plus direct que vous puissiez donner à l'application sur vos goûts.</p>
-<p>Si vous teniez déjà une collection de ce genre à la main, BiblioGenius vous propose une fois de l'adopter comme collection Favoris. Ses livres deviennent alors des favoris. Vous pouvez refuser, la question ne revient pas.</p>
-<p>Tout reste sur votre appareil, comme le reste de vos collections.</p>
-<h2 id="les-collections-de-type-serie">Les collections de type série</h2>
-<p>Une collection peut être marquée comme <strong>série</strong>. Les tomes s'affichent alors dans l'ordre, et l'application peut vous signaler celui qui manque. Voir <a href="series.html">Suivre une série</a>.</p>
-<h2 id="partager-une-liste">Partager une liste</h2>
-<p>Depuis une collection, l'action <strong>« Partager »</strong> ouvre un récapitulatif de ce que vous êtes sur le point d'envoyer : le nom de la liste, le nombre de livres qu'elle contient, et les langues déclarées. Deux façons de la transmettre :</p>
-<ul>
-<li><strong>Copier</strong> met la liste dans le presse-papier, sous une forme que l'import sait relire ;</li>
-<li><strong>Envoyer le fichier</strong> produit un fichier <code>.bibliogenius.yml</code> que vous transmettez par le moyen de votre choix.</li>
-</ul>
-<p>Le fichier porte votre nom de bibliothèque comme contributeur, pour que votre correspondant puisse distinguer votre liste d'une autre du même nom.</p>
-<p>Rien n'entre dans la bibliothèque de votre correspondant avant qu'il ne confirme.</p>
-<h2 id="recevoir-une-liste">Recevoir une liste</h2>
-<p>L'action <strong>« Importer »</strong>, dans l'onglet Collections, accepte trois formes :</p>
-<ul>
-<li>un fichier <code>.bibliogenius.yml</code>, tel qu'envoyé par « Partager » ;</li>
-<li>un fichier <code>.yaml</code> ou <code>.yml</code> ;</li>
-<li>une liste collée depuis le presse-papier.</li>
-</ul>
-<p>L'import montre d'abord ce qu'il a compris : le titre, la description, le nombre de livres et le nom de l'expéditeur. Vous décidez ensuite du statut à donner aux livres, comme pour une <a href="curated-lists.html">sélection toute prête</a>. Une liste très longue vous est signalée avant de commencer, parce que l'import interroge une source de métadonnées pour chaque livre.</p>
-<p>Une liste reçue est une liste comme une autre : elle n'écrase rien, ne modifie aucun de vos livres existants, et ne peut rien déclencher toute seule.</p>
-<h2 id="les-selections-liees-a-votre-bibliotheque">Les sélections liées à votre bibliothèque</h2>
-<p>Sous vos collections, un bloc <strong>« Sélections liées à votre bibliothèque »</strong> propose des listes toutes prêtes qui recoupent ce que vous possédez déjà, avec la raison en clair : « 7 livres en commun ». Voir <a href="curated-lists.html">Les sélections toutes prêtes</a>.</p>
-<h2 id="exemples-dutilisation">Exemples d'utilisation</h2>
-<ul>
-<li>Regrouper les tomes d'une saga</li>
-<li>Créer une liste de lecture thématique</li>
-<li>Organiser un défi lecture</li>
-<li>Envoyer une sélection de livres recommandés à quelqu'un</li>
-</ul>
-                <aside class="doc-help">
-                    <h2>Besoin d'aide ?</h2>
-                    <p>Vous ne trouvez pas la réponse à votre question dans les guides ? Notre équipe peut vous aider.</p>
-                    <a href="../support.html" class="btn btn-primary">Contacter le support</a>
+            <div class="doc-end">
+                <p class="doc-end-nav"><a href="index.html"><span aria-hidden="true">&larr; </span>Tous les guides</a></p>
+
+                <aside class="doc-app" id="get-app" aria-labelledby="doc-app-title">
+                    <p class="doc-app-eyebrow">BiblioGenius</p>
+                    <h2 id="doc-app-title">Votre bibliothèque, <span>chez vous.</span></h2>
+                    <p class="doc-app-desc">BiblioGenius scanne vos livres, les range sur vos étagères et se souvient de ceux que vous prêtez à vos proches. L'application est gratuite, sur iOS, Android, macOS, Windows et Linux. Vos livres restent sur votre appareil.</p>
+                    <div class="doc-app-actions">
+                        <a href="https://apps.apple.com/app/bibliogenius/id6757465461" class="btn btn-primary">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:1.2em;height:1.2em;fill:currentColor;flex-shrink:0;"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg> <span>App Store</span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.bibliogenius.app" class="btn btn-primary">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:1.2em;height:1.2em;fill:currentColor;flex-shrink:0;"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg> <span>Google Play</span>
+                        </a>
+                    </div>
+                    <a href="../contribute.html#downloads" class="doc-app-more">Aussi sur Windows et Linux, en bêta.</a>
                 </aside>
-            </article>
+                <aside class="doc-help" aria-labelledby="doc-help-title">
+                    <h2 id="doc-help-title">Besoin d'aide ?</h2>
+                    <p>Vous ne trouvez pas la réponse à votre question dans les guides ? Notre équipe peut vous aider.</p>
+                    <a href="../support.html">Contacter le support<span aria-hidden="true"> &rarr;</span></a>
+                </aside>
+            </div>
         </div>
     </main>
 
@@ -555,6 +825,13 @@
     (function() {
         var sidebar = document.getElementById('doc-sidebar');
         var toggle = document.querySelector('.sidebar-toggle');
+
+        // On wide screens the sidebar scrolls on its own: bring the current
+        // guide into view without moving the page.
+        var active = sidebar.querySelector('.sidebar-link.active');
+        if (active && sidebar.scrollHeight > sidebar.clientHeight) {
+            sidebar.scrollTop = active.offsetTop - sidebar.clientHeight / 2;
+        }
 
         // Toggle sidebar with aria-expanded
         toggle.addEventListener('click', function() {

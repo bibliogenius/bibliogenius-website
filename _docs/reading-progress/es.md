@@ -18,10 +18,6 @@ Cada libro puede tener un estado:
 - **Leído**: terminado
 - **Abandonado**: dejaste de leerlo
 
-## Avance por páginas
-
-Cuando un libro está en "Leyendo", puedes indicar por qué página vas. La barra de progreso se actualiza sola.
-
 ## Recompensas
 
 Terminar un libro te da experiencia y puede desbloquear logros en el sistema de gamificación.

@@ -806,6 +806,14 @@ def doc_langs(slug, langs):
     ]
 
 
+# UI strings shared by the guide template and the docs index: the skip link
+# and the app signature (masthead line, end-of-page download block).
+DOC_SHARED_UI_KEYS = (
+    'skip_link', 'app_pitch', 'app_download',
+    'app_block_title', 'app_block_desc', 'app_block_desktop',
+)
+
+
 def build_doc_sidebar(docs, current_slug, lang, ui):
     """Generate sidebar HTML grouped by category. Uses relative links (same dir)."""
     lines = []
@@ -1017,6 +1025,8 @@ def build_docs():
 
             # Add loading="lazy" to images for performance
             content_html = content_html.replace('<img ', '<img loading="lazy" ')
+            # The first image sits near the top of the page: load it eagerly.
+            content_html = content_html.replace('<img loading="lazy" ', '<img ', 1)
 
             sidebar = build_doc_sidebar(docs, slug, lang, ui)
             translated = doc_langs(slug, all_langs)
@@ -1058,6 +1068,8 @@ def build_docs():
             html = html.replace('{{help_title}}', ui.get('help_title', ''))
             html = html.replace('{{help_desc}}', ui.get('help_desc', ''))
             html = html.replace('{{help_cta}}', ui.get('help_cta', ''))
+            for key in DOC_SHARED_UI_KEYS:
+                html = html.replace('{{' + key + '}}', ui.get(key, ''))
             html = html.replace(
                 '{{changelog_url}}',
                 sibling_page_url('changelog', lang, root_path, changelog_langs),
@@ -1122,6 +1134,8 @@ def build_docs():
         html = html.replace('{{help_title}}', ui.get('help_title', ''))
         html = html.replace('{{help_desc}}', ui.get('help_desc', ''))
         html = html.replace('{{help_cta}}', ui.get('help_cta', ''))
+        for key in DOC_SHARED_UI_KEYS:
+            html = html.replace('{{' + key + '}}', ui.get(key, ''))
         html = html.replace(
             '{{changelog_url}}',
             sibling_page_url('changelog', lang, root_path, changelog_langs),

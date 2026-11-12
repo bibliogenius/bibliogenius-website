@@ -150,87 +150,109 @@
 
     <link rel="stylesheet" href="../../styles.css">
     <style>
-        .docs-container {
-            padding: 3rem 1.5rem;
-            max-width: 1000px;
+        .doc-index-hero {
+            max-width: var(--max-width);
             margin: 0 auto;
+            padding: 1.5rem 1.5rem 2.75rem;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            font-weight: 600;
+        .doc-index-hero h1 {
+            margin-bottom: 0.6rem;
+            color: var(--white);
+            font-size: clamp(2rem, 1.4rem + 2.6vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -0.022em;
         }
 
+        .doc-index-hero p {
+            max-width: 36rem;
+            color: #cbd5e1;
+            font-size: 1.125rem;
+        }
+
+        .docs-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 1.5rem 1.5rem 4.5rem;
+        }
+
+        /* Each group is a ruled row: its name on the left, its guides as a
+           plain two-column list on the right. */
         .doc-group {
-            margin-bottom: 2.5rem;
+            padding: 2rem 0 1.25rem;
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .doc-group-title {
-            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #6b7280;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #e5e7eb;
+            color: var(--primary-hover);
         }
 
         .doc-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1rem;
+            grid-template-columns: 1fr;
+            column-gap: 3rem;
         }
 
         .doc-card {
-            background: var(--white);
-            border-radius: 0.75rem;
-            padding: 1.25rem 1.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.15s, box-shadow 0.15s;
             display: block;
-        }
-
-        .doc-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            padding: 0.75rem 0;
+            color: inherit;
+            text-decoration: none;
         }
 
         .doc-card h4 {
-            font-size: 1.05rem;
-            margin-bottom: 0.35rem;
+            margin-bottom: 0.25rem;
             color: var(--heading-color);
+            font-size: 1.0625rem;
+            line-height: 1.35;
+            transition: color 0.15s;
+        }
+
+        .doc-card:hover h4,
+        .doc-card:focus-visible h4 {
+            color: var(--primary-hover);
+            text-decoration: underline;
+            text-underline-offset: 3px;
         }
 
         .doc-card p {
-            font-size: 0.9rem;
-            color: #6b7280;
-            line-height: 1.5;
             margin: 0;
-        }
-
-        .doc-help {
-            margin-top: 3rem;
-            padding: 1.5rem;
-            background: #eff6ff;
-            border: 1px solid #dbeafe;
-            border-radius: 0.75rem;
-        }
-
-        .doc-help h2 {
-            font-size: 1.15rem;
-            margin: 0 0 0.4rem;
-            padding: 0;
-            border: none;
-        }
-
-        .doc-help p {
-            margin: 0 0 1rem;
             color: #4b5563;
-            line-height: 1.6;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 640px) {
+            .doc-cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 900px) {
+            .doc-group {
+                display: grid;
+                grid-template-columns: 12rem minmax(0, 1fr);
+                column-gap: 3rem;
+            }
+
+            .doc-group-title {
+                padding-top: 1rem;
+            }
+        }
+
+        @media (max-width: 639px) {
+            .doc-index-hero {
+                padding: 1rem 1rem 2rem;
+            }
+
+            .docs-container {
+                padding: 0.5rem 1rem 3rem;
+            }
         }
     </style>
     <script type="application/ld+json">
@@ -245,10 +267,10 @@
     </script>
 </head>
 
-<body>
-    <a href="#main-content" class="skip-link">Skip to content</a>
+<body class="doc-page">
+    <a href="#main-content" class="skip-link">Ir al contenido</a>
 
-    <header class="hero" style="padding: 2.5rem 1.5rem;">
+    <header class="doc-masthead">
         <nav class="site-nav" aria-label="Navegación principal">
             <a href="../index.html" class="site-nav-logo">BiblioGenius</a>
             <button class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Menu">
@@ -271,17 +293,14 @@
                 </select>
             </div>
         </nav>
-        <div class="hero-content">
+        <div class="doc-index-hero">
             <h1>Documentación</h1>
             <p>Guías y tutoriales para dominar BiblioGenius</p>
         </div>
     </header>
 
     <main id="main-content" class="docs-container">
-        <a href="../../index.html" class="back-link">&larr; Volver al inicio</a>
-
-        <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Todas las guías</h2>
-        <p style="color: #6b7280; margin-bottom: 2rem;">Elige un tema para empezar</p>
+        <h2 class="sr-only">Todas las guías</h2>
 
         <div class="doc-group">
             <h3 class="doc-group-title">Biblioteca</h3>
@@ -323,10 +342,24 @@
             </div>
         </div>
 
-        <aside class="doc-help">
-            <h2>¿Necesitas ayuda?</h2>
+        <aside class="doc-app" id="get-app" aria-labelledby="doc-app-title">
+            <p class="doc-app-eyebrow">BiblioGenius</p>
+            <h2 id="doc-app-title">Tu biblioteca, <span>en casa.</span></h2>
+            <p class="doc-app-desc">BiblioGenius escanea tus libros, los ordena en tus estanterías y recuerda los que prestas a los tuyos. La aplicación es gratuita, en iOS, Android, macOS, Windows y Linux. Tus libros se quedan en tu dispositivo.</p>
+            <div class="doc-app-actions">
+                <a href="https://apps.apple.com/app/bibliogenius/id6757465461" class="btn btn-primary">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:1.2em;height:1.2em;fill:currentColor;flex-shrink:0;"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg> <span>App Store</span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.bibliogenius.app" class="btn btn-primary">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:1.2em;height:1.2em;fill:currentColor;flex-shrink:0;"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg> <span>Google Play</span>
+                </a>
+            </div>
+            <a href="../contribute.html#downloads" class="doc-app-more">También en Windows y Linux, en beta.</a>
+        </aside>
+        <aside class="doc-help" aria-labelledby="doc-help-title">
+            <h2 id="doc-help-title">¿Necesitas ayuda?</h2>
             <p>¿No encuentras la respuesta a tu pregunta en las guías? Nuestro equipo puede ayudarte.</p>
-            <a href="../../support.html" class="btn btn-primary">Contactar con soporte</a>
+            <a href="../../support.html">Contactar con soporte<span aria-hidden="true"> &rarr;</span></a>
         </aside>
     </main>
 

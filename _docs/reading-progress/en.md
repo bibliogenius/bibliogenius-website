@@ -18,10 +18,6 @@ Each book can have a status:
 - **Read**: finished!
 - **Abandoned**: you stopped reading
 
-## Page progress
-
-When a book is "Reading", you can enter which page you're on. The progress bar updates automatically.
-
 ## Rewards
 
 Finishing a book earns you XP and can unlock achievements in the gamification system.

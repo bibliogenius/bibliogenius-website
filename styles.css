@@ -686,3 +686,225 @@ a {
     margin-bottom: 0.5rem;
 }
 
+
+/* ==========================================================================
+   Documentation pages (guide template and docs index).
+   Everything below is scoped to body.doc-page or to .doc-* classes, so the
+   home, story and contribute pages are not affected.
+   ========================================================================== */
+
+.doc-page {
+    background: var(--white);
+}
+
+/* Stronger focus indicator than the site default: a solid ring that stays
+   visible on white as well as on the dark masthead. */
+.doc-page a:focus-visible,
+.doc-page button:focus-visible,
+.doc-page select:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--white);
+    border-radius: 4px;
+}
+
+.doc-masthead a:focus-visible,
+.doc-masthead button:focus-visible,
+.doc-masthead select:focus-visible,
+.doc-app a:focus-visible,
+.doc-page .footer a:focus-visible {
+    outline-color: var(--accent-light);
+    box-shadow: none;
+}
+
+/* Masthead: slim dark bar holding the site navigation, then either the app
+   signature line (guides) or the page title (docs index). */
+.doc-masthead {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: var(--white);
+}
+
+.doc-masthead .site-nav {
+    position: relative;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.doc-signature {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.15rem 1.5rem 1.35rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.0625rem;
+    line-height: 1.5;
+    color: #e2e8f0;
+}
+
+.doc-signature-text {
+    flex: 1 1 22rem;
+}
+
+.doc-signature strong {
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* The download link reads as a small pill button next to the sentence */
+.doc-signature a {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 9999px;
+    background: var(--primary-color);
+    color: var(--white);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.doc-signature a:hover {
+    background: var(--primary-hover);
+    color: var(--white);
+}
+
+@media (max-width: 639px) {
+    .doc-signature {
+        padding: 1rem 1rem 1.15rem;
+        font-size: 0.9375rem;
+    }
+
+    .doc-signature-text {
+        flex-basis: 100%;
+    }
+}
+
+/* End-of-page block: what the app is and where to get it. Mirrors the home
+   hero (dark gradient, accent on the second half of the signature). */
+.doc-app {
+    margin-top: 3.5rem;
+    /* Target of the masthead link */
+    scroll-margin-top: 1rem;
+    padding: clamp(1.5rem, 5vw, 2.5rem);
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #d1d5db;
+}
+
+.doc-app-eyebrow {
+    margin-bottom: 0.6rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+}
+
+.doc-app h2 {
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+    letter-spacing: -0.015em;
+    color: var(--white);
+}
+
+.doc-app h2 span {
+    color: var(--accent-color);
+    white-space: nowrap;
+}
+
+.doc-app-desc {
+    max-width: 36rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+}
+
+.doc-app-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.doc-app-actions .btn {
+    flex: 0 1 auto;
+    min-height: 2.75rem;
+    padding: 0.7rem 1.5rem;
+    white-space: nowrap;
+}
+
+/* Quiet line under the store buttons */
+.doc-app-more {
+    display: inline-block;
+    padding: 0.35rem 0;
+    color: #cbd5e1;
+    font-size: 0.9375rem;
+}
+
+.doc-app-more:hover {
+    color: var(--white);
+}
+
+/* Quiet help row under the app block */
+.doc-help {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.doc-help h2 {
+    margin-bottom: 0.35rem;
+    font-size: 1.0625rem;
+}
+
+.doc-help p {
+    max-width: 36rem;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+.doc-help a {
+    display: inline-block;
+    padding: 0.35rem 0;
+    color: var(--primary-hover);
+    font-weight: 600;
+}
+
+.doc-page .footer {
+    padding: 2.5rem 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .doc-page *,
+    .doc-page *::before,
+    .doc-page *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* The site-wide ".footer a" rule enlarges every footer link; keep the legal
+   line at its intended small size on documentation pages. */
+.doc-page .footer .legal-line a {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Keep the navigation on one line on narrow desktop widths */
+.doc-masthead .site-nav-link {
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+    .doc-masthead .site-nav-link {
+        padding: 0.35rem 0.45rem;
+    }
+}

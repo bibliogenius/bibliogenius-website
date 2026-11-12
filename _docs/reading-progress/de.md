@@ -18,10 +18,6 @@ Jedes Buch kann einen Status haben:
 - **Gelesen**: fertig
 - **Abgebrochen**: Sie haben es beiseitegelegt
 
-## Seitenfortschritt
-
-Solange ein Buch auf "Lesend" steht, können Sie eintragen, auf welcher Seite Sie sind. Der Fortschrittsbalken aktualisiert sich von selbst.
-
 ## Belohnungen
 
 Ein zu Ende gelesenes Buch bringt Erfahrungspunkte und kann Erfolge im Gamification-System freischalten.
