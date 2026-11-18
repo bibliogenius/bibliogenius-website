@@ -201,7 +201,24 @@ def finalize_html(html, lang, has_english, schema='', robots=ROBOTS_META):
         html = html.replace('</footer>', build_legal_line(lang) + '</footer>', 1)
     if lang == DEFAULT_LANG and has_english:
         html = html.replace('</body>', LANG_SUGGEST_SCRIPT + '\n</body>', 1)
-    return inject_lang_chosen(html)
+    return canonicalize_index_links(inject_lang_chosen(html))
+
+
+# Relative link or switcher target ending in index.html, with an optional
+# fragment or query after it. Absolute URLs never match: a scheme has a colon.
+_INDEX_LINK_RE = re.compile(
+    r'((?:href|value)=")((?:\.\./)*(?:[\w-]+/)*)index\.html(?=["#?])'
+)
+
+
+def canonicalize_index_links(html):
+    """Point internal links at the directory URL instead of its index.html.
+
+    Canonical tags and the sitemap declare `/`, `/en/`, `/docs/`. Templates
+    and URL helpers still emit `index.html`, which made every internal link
+    target a duplicate address of the page it meant.
+    """
+    return _INDEX_LINK_RE.sub(lambda m: m.group(1) + (m.group(2) or './'), html)
 
 
 def inject_lang_chosen(html):
