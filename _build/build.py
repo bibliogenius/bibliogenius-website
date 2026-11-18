@@ -298,6 +298,7 @@ SAME_AS = [
     'https://apps.apple.com/app/bibliogenius/id6757465461',
     'https://play.google.com/store/apps/details?id=com.bibliogenius.app',
     'https://alternativeto.net/software/bibliogenius/',
+    'https://framalibre.org/notices/bibliogenius.html',
 ]
 
 # Description of the project as an entity, not of the app as a product: the
