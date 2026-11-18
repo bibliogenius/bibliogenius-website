@@ -14,6 +14,26 @@ lang_name: English
 footer_text: "BiblioGenius - Open Source, local, encrypted."
 ---
 
+## 1.4.0 <small>November 11, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.3.0...v1.4.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.4.0" class="changelog-link">release</a>
+
+- **Shelves**: the Shelves tab becomes a grid of cards, each in the colour of its shelf and illustrated with a fan of its newest covers. Every shelf now has a page of its own, with its sub-shelves and its books. The count shown counts a book once even when it sits in several places, sub-shelves included
+- **Organize shelves**: a dedicated screen lets you move, rename and delete shelves, with undo. A name already taken is refused, whatever the case. A shelf can keep the order you give its books by hand
+- **To shelve**: a card gathers the books that sit on no shelf
+- **Book form**: choosing a shelf takes a single field, which offers the recently used shelves first. A new genre is filed at the first level
+- **Library**: books can be sorted by date added, newest or oldest first
+- **Home page**: on a phone, each cover size has its own column count, up to six small covers per row
+- **Settings**: sections are sorted into four groups and each opens on a page of its own, so that a setting lives in one place only
+- **Loans**: a book without an ISBN can be lent to a connected library, and its loan state is tracked. Cancelling a loan request now reaches the lender
+- **Connected libraries**: browsing a large catalogue no longer freezes the app, and the answer of a large remote catalogue is no longer lost. Messages for a library that is offline are kept until it comes back. Deleting a contact ends the link on both sides
+- **Import**: the creators column of a Libib export is read, and the app asks before importing books without an author. A source identifier placed in the ISBN column is no longer taken for an ISBN
+- **Books without an ISBN**: a book without an ISBN no longer takes the cover, author or details of another book
+- **Reset**: a full reset stays on this device, signs the device out and closes the app. A partial reset comes with a warning first, and is refused when it could delete books on your other devices
+- **Readers**: after adding a reader, the app says whose readings are shown
+- **Desktop**: the trackpad scrolls every screen
+- **Memory game**: a pair whose cover fails to draw is no longer dealt
+- **Error pages**: both error pages offer the bug report form
+- **Translations**: Japanese, Korean and Chinese are back to full parity with English, and several import and restore dialogs are translated in every language
+
 ## 1.3.0 <small>October 23, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.3...v1.3.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.3.0" class="changelog-link">release</a>
 
 - **Cover photos**: on iPhone and Android, taking a photo of a cover opens the system document scanner, which finds the book's edges, crops the image and straightens it; you can still move the corners by hand. The "Automatic cover crop" setting (Settings > Modules > Advanced) brings back the plain camera. On Android the scanner comes from Google Play services: the app offers the plain camera before its first download, and keeps it on a phone without Google services

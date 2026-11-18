@@ -14,6 +14,26 @@ lang_name: Français
 footer_text: "BiblioGenius - Open Source, local, chiffré."
 ---
 
+## 1.4.0 <small>11 novembre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.3.0...v1.4.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.4.0" class="changelog-link">release</a>
+
+- **Étagères** : l'onglet Étagères devient une grille de cartes, chacune à la couleur de son étagère et illustrée par un éventail de ses couvertures les plus récentes. Chaque étagère a désormais sa propre page, avec ses sous-étagères et ses livres. Le nombre affiché compte une seule fois un livre rangé à plusieurs endroits, sous-étagères comprises
+- **Organiser les étagères** : un écran dédié permet de déplacer, renommer et supprimer les étagères, avec la possibilité d'annuler. Un nom déjà pris est refusé, sans tenir compte des majuscules. Une étagère peut garder l'ordre que vous donnez à ses livres à la main
+- **À ranger** : une carte réunit les livres qui ne sont sur aucune étagère
+- **Fiche livre** : le choix d'une étagère tient en un seul champ, qui propose d'abord les étagères utilisées récemment. Un nouveau genre est rangé au premier niveau
+- **Bibliothèque** : les livres peuvent être triés par date d'ajout, récents ou anciens d'abord
+- **Page d'accueil** : sur téléphone, chaque taille de couverture a son propre nombre de colonnes, jusqu'à six petites couvertures par rangée
+- **Réglages** : les sections sont réparties en quatre groupes et chacune s'ouvre sur sa propre page, pour qu'un réglage n'existe qu'à un seul endroit
+- **Prêts** : un livre sans ISBN peut être prêté à une bibliothèque connectée, et l'état de son prêt est suivi. Annuler une demande de prêt prévient désormais le prêteur
+- **Bibliothèques connectées** : parcourir un grand catalogue ne fige plus l'application, et la réponse d'un grand catalogue à distance n'est plus perdue. Les messages destinés à une bibliothèque hors ligne sont gardés jusqu'à son retour. Supprimer un contact met fin au lien des deux côtés
+- **Import** : la colonne des auteurs d'un export Libib est lue, et l'application demande confirmation avant d'importer des livres sans auteur. Un identifiant de source placé dans la colonne ISBN n'est plus pris pour un ISBN
+- **Livres sans ISBN** : un livre sans ISBN ne reprend plus la couverture, l'auteur ou les informations d'un autre livre
+- **Réinitialisation** : une réinitialisation complète reste sur cet appareil, déconnecte l'appareil et ferme l'application. Une réinitialisation partielle est précédée d'un avertissement, et elle est refusée si elle risquait d'effacer des livres sur vos autres appareils
+- **Lecteurs** : après l'ajout d'un lecteur, l'application indique de qui sont les lectures affichées
+- **Ordinateur** : le pavé tactile fait défiler tous les écrans
+- **Jeu de mémoire** : une paire dont la couverture ne s'affiche pas n'est plus distribuée
+- **Pages d'erreur** : les deux pages d'erreur proposent le formulaire de signalement de bug
+- **Traductions** : le japonais, le coréen et le chinois retrouvent toutes les chaînes de l'anglais, et plusieurs dialogues d'import et de restauration sont traduits dans toutes les langues
+
 ## 1.3.0 <small>23 octobre 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.2.3...v1.3.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.3.0" class="changelog-link">release</a>
 
 - **Photos de couverture** : sur iPhone et Android, prendre une couverture en photo ouvre le scanner de documents du système, qui trouve les bords du livre, recadre et redresse l'image ; vous pouvez toujours déplacer les coins à la main. Le réglage « Recadrage automatique des couvertures » (Réglages > Modules > Avancé) ramène l'appareil photo classique. Sur Android, le scanner vient des services Google Play : l'application propose l'appareil photo classique avant son premier téléchargement, et le garde sur un téléphone sans services Google
