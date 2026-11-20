@@ -13,21 +13,39 @@ group: library
 
 ![Vista de las estanterías](images/shelves-view.png)
 
-## Crear y gestionar estanterías
+## La pestaña Estanterías
 
-1. Crea estanterías para tus libros (por ejemplo "Salón", "Novela negra").
-2. En tu biblioteca, pulsa una estantería para filtrar.
-3. Pulsa «Reordenar estantería» para entrar en modo reorganización.
-4. Arrastra los libros hasta el orden que quieras, o pulsa A-Z para ordenarlos automáticamente por autor.
-5. Pulsa el botón de validación para guardar: la estantería sigue desde ahora tu orden.
+En tu Biblioteca, la pestaña **Estanterías** muestra tus estanterías en tarjetas, cada una con su color e ilustrada con sus portadas más recientes. El número que se muestra cuenta una sola vez un libro colocado en varios sitios, sub-estanterías incluidas.
+
+El botón **«Crear estantería»** añade una en el primer nivel. Un nombre ya usado se rechaza, sin tener en cuenta las mayúsculas.
+
+## Cada estantería tiene su página
+
+Toca una tarjeta para entrar en la estantería. Su página muestra primero sus sub-estanterías, en tarjetas pequeñas, y luego los libros **«Colocados aquí»**.
+
+El menú **«…»** de la página reúne lo que concierne a esa estantería: **Renombrar**, **Añadir sub-estantería**, **Mover a…** y **Eliminar**. Una estantería puede contener otras, en varios niveles: «Novelas», luego «Policiacas» dentro, luego «Nórdicas».
+
+## Colocar los libros que no tienen estantería
+
+Arriba de la pestaña, la tarjeta **«Por colocar»** cuenta los libros que no están en ninguna estantería, por ejemplo después de escanear toda una caja. Tócala: esos libros se abren ya en modo selección. Márcalos, o **«Seleccionar todo»**, luego **«Añadir a…»** y elige la estantería. El número baja a medida que colocas.
+
+La tarjeta desaparece cuando todo está colocado. También puedes ocultarla: vuelve cuando hay libros nuevos por colocar.
+
+El mismo modo selección funciona en toda la biblioteca: una pulsación larga sobre un libro lo abre. Marca **«Quitar de»** la estantería de origen, y el botón pasa a **«Mover»**.
 
 ## Asignar libros a las estanterías
 
-Desde la ficha de un libro puedes asignarlo a una o varias estanterías. Un mismo libro puede aparecer en varias.
+Desde la ficha de un libro, al editarla, el campo de estanterías abre **«Elegir estanterías»**: se pueden elegir varias, y las usadas recientemente aparecen primero. Escribe un nombre para buscar una estantería, o para crearla en el momento, en el primer nivel o dentro de otra estantería.
 
-## Cambiar el orden
+## Reorganizar tus estanterías
 
-En una estantería abierta, «Reordenar estantería» cambia el orden de los libros arrastrándolos. Una vez guardado, ese orden es el de la estantería: se mantiene al salir y volver a abrirla, y editar un libro no lo deshace. Un libro tiene una sola posición: si está en dos estanterías, reordenar una lo mueve también en la otra. El menú de orden ofrece «Orden de la estantería» mientras haya una estantería abierta; en el resto de la biblioteca, los libros siguen ordenados por autor o por título.
+El botón **«Organizar»** de la pestaña abre la pantalla **«Organizar las estanterías»**: todas tus estanterías en árbol. Arrastra una estantería sobre otra para guardarla dentro (en el móvil, con una pulsación larga). El menú **«…»** de cada estantería hace lo mismo con el teclado o con un lector de pantalla. También permite editarla, añadirle una sub-estantería, escanear libros directamente en ella o eliminarla.
+
+Nada es definitivo en el momento: tras un movimiento o una eliminación, **«Deshacer»** devuelve la estantería a su sitio. Toca **«Hecho»** para volver a tus estanterías.
+
+## El orden de los libros en una estantería
+
+En la página de una estantería, **«Reordenar estantería»** cambia el orden de los libros arrastrándolos, o los ordena por autor con A-Z. Una vez guardado, ese orden es el de la estantería: se mantiene cuando sales y vuelves a abrirla, y editar un libro no lo deshace. Un libro tiene una sola posición: si está en dos estanterías, reordenar una lo mueve también en la otra.
 
 ## Los géneros sugeridos
 
