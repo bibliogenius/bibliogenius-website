@@ -1,10 +1,10 @@
 +++
 title = "Webinaire du 7 décembre : de la pile à l'étagère, comment organiser ses livres ?"
 description = "Lundi 7 décembre 2026 à 19h, un webinaire gratuit de 30 à 40 minutes : quatre questions que l'on se pose en rangeant ses livres, et la réponse montrée en direct dans BiblioGenius. Inscription libre, session enregistrée."
-date = 2026-11-19
-updated = 2026-11-19
+date = 2026-11-20
+updated = 2026-11-20
 template = "blog/page.html"
-draft = true
+draft = false
 
 [extra]
 tags = ["webinaire", "étagères", "communauté"]
