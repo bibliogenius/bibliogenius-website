@@ -1,6 +1,6 @@
 +++
 title = "Webinaire du 7 décembre : de la pile à l'étagère, comment organiser ses livres ?"
-description = "Lundi 7 décembre 2026 à 19h, un webinaire gratuit de 30 à 40 minutes : quatre questions que l'on se pose en rangeant ses livres, et la réponse montrée en direct dans BiblioGenius. Inscription libre, session enregistrée."
+description = "Lundi 7 décembre 2026 à 19h, un webinaire de 30 à 40 minutes : quatre questions que l'on se pose en rangeant ses livres, et la réponse montrée en direct dans BiblioGenius. Inscription libre, session enregistrée."
 date = 2026-11-20
 updated = 2026-11-20
 template = "blog/page.html"
@@ -34,7 +34,6 @@ La fin de la session vous est réservée : posez vos questions dans le chat, j'y
 - **Quand :** lundi 7 décembre 2026, 19h (heure de Paris)
 - **Durée :** 30 à 40 minutes, questions comprises
 - **Où :** en ligne, sur Proton Meet, depuis un navigateur ; le lien de connexion vous est envoyé après l'inscription
-- **Prix :** gratuit
 - **Enregistrement :** la session est enregistrée, et le replay sera ajouté à cette page
 
 ## S'inscrire
