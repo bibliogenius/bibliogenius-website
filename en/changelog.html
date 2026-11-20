@@ -393,85 +393,18 @@
 
             <article class="changelog-content">
 <h2 id="1-4-1">1.4.1 <small>November 19, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.4.0...v1.4.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.4.1" class="changelog-link">release</a></h2>
-<!-- changelog-draft: rewrite the commits below as user-facing bullets ("- **Area**: what changed for the reader"), then delete this whole comment. `make site` refuses to deploy while it is here.
-bibliogenius-app:
-  4c9032eb update to version 1.4.1
-  c7c8b1c9 fix(covers): put the publisher notice before its button, and give the dialog one decision
-  2e8539a1 feat(covers): look on the publisher's site on a tap, never on its own over a cover
-  ab44979f docs(readme): link to the official website
-  b7d58df2 fix(directory): honour the share-city setting in startup location passes
-  6dd15a14 feat(covers): steps of a next publisher image, and an abandoned search stops
-  096f54b9 feat(covers): say what the publisher site search is doing, and its review
-  876f54d1 feat(covers): look on the publisher's site as the Web cover dialog opens
-  e6e89b96 feat(notes): allow multi-line reading notes at creation
-  105daf78 feat(notes): delete a note without swiping
-  acc55b67 build(macos): refuse a backend binary without the embedded Info.plist
-  178a0cdc fix(notes): put the page before the note in exported notes
-  224c5106 feat(notes): export a book's reading notes as plain text or Markdown
-  e425dbac fix(covers): publish covers found after an import without a restart
-  5cba7246 fix(covers): keep a web cover whose origin could not be recorded
-  1697f1d1 feat(covers): explain how to get past a site that blocks automated access
-  be7bf8b1 fix(covers): crop mockups by opacity, whatever the bit depth
-  f382b9da feat(covers): crop a cover mockup down to the book
-  d62b1a01 fix(covers): next image searches on until it finds one
-  651ce770 feat(covers): previous image in the web cover preview
-  a2100b1d feat(covers): next image in the web cover preview, ranked by ISBN
-  72cbb42c fix(covers): address the review of the web cover dialog
-  28560c9e fix(covers): preview a web cover before it replaces anything
-  83012c59 feat(covers): take a cover from a web page the user points at
-bibliogenius:
-  c3d2d2f update to version 1.4.1
-  1f2ef18 fix(export): resolve a borrowed copy's lender from its library uuid on restore
-  f1b8105 fix(export): leave peers out of the catalog export and restore
-  0dedf53 feat(covers): name a book's publisher site, and keep a run's refusals
-  32f0156 fix(leaderboard): check who answered before applying direct scores
-  af5abcd fix(peers): check who answered before the background and by-id syncs write
-  60c9e8d fix(gamification): keep stored peer names on leaderboard refresh
-  a27a6e1 fix(e2ee): redact personal annotations from peer search and browse replies
-  2ee3db1 docs(readme): link to the official website
-  c73892c fix(covers): what a code review found in the shared publisher fetcher
-  d9a906a feat(covers): say what a publisher site lookup is doing while it runs
-  3632bd4 feat(covers): next image of a publisher cover through the lookup's rules
-  0034df5 fix(covers): one polite fetcher for every publisher site lookup
-  7159252 feat(covers): look for a book's cover on its publisher's site
-  bfcead9 fix(covers): what the second review of #13 found in states_isbn
-  f0ac158 chore(covers): table without one-time tokens
-  ce3bed4 fix(covers): what the author's review of #13 found
-  b72f471 docs(covers): the measure on a whole library
-  0230f40 fix(covers): tell a site that does not answer from a book it lacks
-  e753e1e fix(covers): what a review in a fresh session found
-  64927f7 feat(covers): look a book up with the table, and measure it
-  424bc4c chore(covers): full probe with the fixes, table at 414 sites
-  4aaa199 feat(covers): lint and diff the table, and fix recipes probes got wrong
-  e20c901 chore(covers): probe results and table with site maps and added publishers
-  116cd45 feat(covers): site map recipes, publishers outside Wikidata, shared prefixes
-  5103089 chore(covers): probe results and table after the witness and slug changes
-  ae18431 feat(covers): find witnesses beyond the home page and accept title-only pages
-  f5ca3a8 feat(covers): report page in English and French, following the browser
-  b0a1125 feat(covers): publisher site table and its maintenance tool
-  a2fb8c2 fix(mcp): tell the assistant to re-copy the config when the token is rejected
-  7b299b9 fix(mcp): embed an Info.plist so the sandboxed macOS helper can start
-  f786944 fix(mcp): probe port 8010, the dev build's preferred port
-  83fd7d1 fix(mcp): enforce the settings switch on the MCP endpoint and config
-  e126d8c fix(sync): stop an integer entity_id row from blocking the operation queue
-  366dd01 fix(books): delete a single book with its dependent rows
-  9151e83 test(hub): seed the cover cleanup tests with the real book uuid
-  089e4bd fix(batch): delete books in a batch the way a single delete does
-  21ec939 perf(covers): drop the OpenLibrary cover revalidation from the sweep
-  57667bb fix(covers): bound the img tags looked at on a web page
-  905f924 perf(covers): check a fetched PNG off the async runtime
-  e90585a feat(covers): tell apart a site that turns away automated clients
-  49c07fe fix(covers): judge a site image by its role, not its name
-  e80075c fix(covers): judge a lazy-loaded image by the address kept
-  e6d19ab fix(covers): rank content images before the site's own
-  363cb72 feat(covers): rank web cover candidates by ISBN and let the user step
-  ea4028e fix(covers): address the review of the web cover pick
-  4eec248 fix(covers): try the next candidate past an animated WebP
-  179567c fix(covers): read the cover of a bookshop Product page
-  5247ce8 fix(covers): harden the web cover pick after review
-  e3e1593 feat(covers): take a cover from a web page the user points at
--->
-
+<ul>
+<li><strong>Covers</strong>: a "Web" button, when adding or editing a book, fetches a cover from a web page: paste the address of the book's page or of the image itself. The image shows as a preview first and replaces nothing until "Use this cover". "Next image" and "Previous image" step through the other images on the page, and an image with empty space around the book is cropped down to the book. When a site blocks automated access, the app explains how to copy the image's address</li>
+<li><strong>Publisher's site</strong>: the same dialog offers to search the book's publisher's site, among more than 400 known sites. The search only starts on your tap, the app warns that the publisher's site will see which book is searched for, and it shows each step while it searches</li>
+<li><strong>Directory</strong>: covers found after an import are published without restarting the app</li>
+<li><strong>Reading notes</strong>: a note can span several lines from the moment you create it. A book's notes export as plain text or Markdown, to copy or share, with the page before each note, and a long press copies a single note. A note can also be deleted from the menu (long press or right click), from its edit dialog or with a screen reader, not only by swiping it</li>
+<li><strong>AI assistants (MCP)</strong>: turning off "AI Assistants (MCP)" in the settings now cuts assistant access over MCP and stops handing out the configuration; turning it back on makes the configuration you already copied work again as is. On Mac, the configuration copied from the App Store app now starts, and a rejected token tells the assistant to re-copy the configuration</li>
+<li><strong>Privacy</strong>: when a connected library searches or browses your catalogue, it no longer receives your reading statuses and dates, ratings, prices or cataloguing notes, as was already the case for catalogue sync. At startup, the app honours your city-sharing setting for the directory, and removes the city already recorded when the setting is off</li>
+<li><strong>Backup</strong>: restoring a catalogue export no longer cuts you off from your connected libraries, and a borrowed book finds its right lender again. The export no longer contains your connected libraries: a file handed to someone else carries neither that list nor their location</li>
+<li><strong>Connected libraries</strong>: the app checks which library is answering before saving its catalogue, name or scores, and the leaderboard keeps the names you know</li>
+<li><strong>Deleting</strong>: deleting a book, on its own or in a batch, also removes its copies, loans, notes and its links to shelves and collections</li>
+<li><strong>Sync</strong>: on a library created with an older version, a reading note no longer blocks the changes queued after it</li>
+</ul>
 <h2 id="1-4-0">1.4.0 <small>November 11, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.3.0...v1.4.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.4.0" class="changelog-link">release</a></h2>
 <ul>
 <li><strong>Shelves</strong>: the Shelves tab becomes a grid of cards, each in the colour of its shelf and illustrated with a fan of its newest covers. Every shelf now has a page of its own, with its sub-shelves and its books. The count shown counts a book once even when it sits in several places, sub-shelves included</li>

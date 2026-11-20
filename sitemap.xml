@@ -252,12 +252,12 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/en/docs/wishlist.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/en/docs/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -422,22 +422,22 @@
   </url>
   <url>
     <loc>https://bibliogenius.org/docs/wishlist.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/docs/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/en/changelog.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bibliogenius.org/changelog.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -558,6 +558,11 @@
   <url>
     <loc>https://bibliogenius.org/blog/validation-google-apple/</loc>
     <lastmod>2026-05-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bibliogenius.org/blog/webinaire-organiser-ses-livres/</loc>
+    <lastmod>2026-11-20</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
