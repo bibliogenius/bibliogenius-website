@@ -27,7 +27,7 @@ nav_changelog: Changelog
 # -- Webinar badge above the hero title (FR only) --
 hero_event_badge: ""
 hero_title: Votre bibliothèque,<br><span>chez vous.</span>
-hero_subtitle: Scannez et organisez vos livres. Prêtez et empruntez entre proches.<br><span class="hero-tagline">Vos livres vivent sur votre appareil.</span>
+hero_subtitle: Scannez, organisez et faites circuler vos livres autour de vous.<br><span class="hero-tagline">Vos livres vivent sur votre appareil.</span>
 btn_github: Voir le Code
 btn_download: Télécharger l'application
 btn_story: Découvrir l'histoire
