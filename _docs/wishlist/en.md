@@ -13,11 +13,15 @@ Add the book like any other, by scanning, searching or by hand, then give it the
 
 A wanted book does not count as owned: it does not show up as available to your contacts, and the CSV export marks it "Wanted".
 
-## Seeing who owns a book you are after
+## Getting hold of a book you are after
 
-On the details page of a wanted book, an **"Available from"** card appears when a library in your network owns it. You can send a borrow request straight from that card.
+On the details page of a wanted book, the **"Get hold of this book"** button gathers the ways to obtain it, from the most certain to the least:
 
-The card stays invisible while there is no match: these encounters are rare, they depend on the overlap between your libraries, not on a flaw in the app.
+- **Available from**: the libraries in your network that own the book. You can send them a borrow request from there. When nobody has it, the app says so: "Nobody in your network has it right now." These encounters are rare: they depend on the overlap between your libraries, not on a flaw in the app.
+- **At my library**: a link that runs a search for the book on your public library's catalogue, if you connected one. The app does not know whether the book is available there: it opens the search, and the answer is on the library's website.
+- **At my local bookshop**: availability at bookshops near you.
+
+Once the book is in your hands, say so under **"Once you have it"**. **"I borrowed it"** records the loan, from a contact or from your library, with a return date if you want one. **"I bought it"** counts it as owned and takes it off your wishlist.
 
 ## Knowing who is after your books
 

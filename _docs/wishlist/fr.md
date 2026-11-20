@@ -11,13 +11,20 @@ Un livre que vous voulez lire mais que vous ne possédez pas a sa place dans Bib
 
 Ajoutez le livre comme n'importe quel autre, par scan, par recherche ou à la main, puis donnez-lui le statut **« Liste de souhaits »** (le cœur). Vous pouvez aussi le faire depuis une sélection toute prête au moment de l'importer.
 
+![Fiche d'un livre en liste de souhaits, avec le statut marqué d'un cœur et le bouton Se procurer ce livre, sur téléphone](images/wishlist-book-mobile.png)
+![Fiche d'un livre en liste de souhaits, avec le statut marqué d'un cœur et le bouton Se procurer ce livre, sur ordinateur](images/wishlist-book-desktop.png)
+
 Un livre souhaité n'est pas compté comme possédé : il n'apparaît pas comme disponible pour vos contacts, et l'export CSV le note « Souhaité ».
 
-## Voir qui possède un livre que vous cherchez
+## Se procurer un livre que vous cherchez
 
-Sur la fiche d'un livre souhaité, une carte **« Disponible chez »** apparaît quand une bibliothèque de votre réseau le possède. Vous pouvez lui envoyer une demande d'emprunt directement depuis cette carte.
+Sur la fiche d'un livre souhaité, le bouton **« Se procurer ce livre »** rassemble les façons de l'obtenir, de la plus sûre à la moins sûre :
 
-La carte reste invisible tant qu'il n'y a pas de correspondance : ces rencontres sont rares, elles dépendent des goûts communs entre vos bibliothèques, pas d'un défaut de l'application.
+- **Disponible chez** : les bibliothèques de votre réseau qui possèdent ce livre. Vous pouvez leur envoyer une demande d'emprunt d'ici. Si personne ne l'a, l'application le dit : « Personne de votre réseau ne l'a pour l'instant. » Ces rencontres sont rares : elles dépendent des goûts communs entre vos bibliothèques, pas d'un défaut de l'application.
+- **Dans ma médiathèque** : un lien qui lance la recherche du livre sur le catalogue de votre médiathèque, si vous en avez connecté une. L'application ne sait pas si le livre y est disponible : elle ouvre la recherche, la réponse est sur le site de la médiathèque.
+- **Chez mon libraire** : la disponibilité dans les librairies près de chez vous.
+
+Une fois le livre entre vos mains, dites-le sous **« Une fois obtenu »**. **« Je l'ai emprunté »** note l'emprunt, auprès d'un proche ou de votre médiathèque, avec une date de retour si vous le souhaitez. **« Je l'ai acheté »** le compte comme possédé et le retire de votre liste de souhaits.
 
 ## Savoir qui cherche vos livres
 
