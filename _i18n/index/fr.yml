@@ -78,7 +78,7 @@ footer_copyright: © 2025-2026 BiblioGenius · Open Source (<a href="https://www
 ecoindex_alt: Score EcoIndex du site
 
 # -- Bandeau annonce (billet de blog du moment) --
-migration_banner_text: "Webinaire gratuit lundi 7 décembre à 19h : comment organiser ses livres."
+migration_banner_text: "Webinaire lundi 7 décembre à 19h : comment organiser ses livres."
 migration_banner_cta: Voir le programme
 # Hides the banner once the webinar starts (FR only)
 migration_banner_attrs: data-hide-after="2026-12-07T19:00:00+01:00"
