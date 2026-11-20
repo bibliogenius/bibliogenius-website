@@ -14,6 +14,19 @@ lang_name: English
 footer_text: "BiblioGenius - Open Source, local, encrypted."
 ---
 
+## 1.4.1 <small>November 19, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.4.0...v1.4.1" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.4.1" class="changelog-link">release</a>
+
+- **Covers**: a "Web" button, when adding or editing a book, fetches a cover from a web page: paste the address of the book's page or of the image itself. The image shows as a preview first and replaces nothing until "Use this cover". "Next image" and "Previous image" step through the other images on the page, and an image with empty space around the book is cropped down to the book. When a site blocks automated access, the app explains how to copy the image's address
+- **Publisher's site**: the same dialog offers to search the book's publisher's site, among more than 400 known sites. The search only starts on your tap, the app warns that the publisher's site will see which book is searched for, and it shows each step while it searches
+- **Directory**: covers found after an import are published without restarting the app
+- **Reading notes**: a note can span several lines from the moment you create it. A book's notes export as plain text or Markdown, to copy or share, with the page before each note, and a long press copies a single note. A note can also be deleted from the menu (long press or right click), from its edit dialog or with a screen reader, not only by swiping it
+- **AI assistants (MCP)**: turning off "AI Assistants (MCP)" in the settings now cuts assistant access over MCP and stops handing out the configuration; turning it back on makes the configuration you already copied work again as is. On Mac, the configuration copied from the App Store app now starts, and a rejected token tells the assistant to re-copy the configuration
+- **Privacy**: when a connected library searches or browses your catalogue, it no longer receives your reading statuses and dates, ratings, prices or cataloguing notes, as was already the case for catalogue sync. At startup, the app honours your city-sharing setting for the directory, and removes the city already recorded when the setting is off
+- **Backup**: restoring a catalogue export no longer cuts you off from your connected libraries, and a borrowed book finds its right lender again. The export no longer contains your connected libraries: a file handed to someone else carries neither that list nor their location
+- **Connected libraries**: the app checks which library is answering before saving its catalogue, name or scores, and the leaderboard keeps the names you know
+- **Deleting**: deleting a book, on its own or in a batch, also removes its copies, loans, notes and its links to shelves and collections
+- **Sync**: on a library created with an older version, a reading note no longer blocks the changes queued after it
+
 ## 1.4.0 <small>November 11, 2026</small> &nbsp; <a href="https://codeberg.org/bibliogenius/bibliogenius-app/compare/v1.3.0...v1.4.0" class="changelog-link">diff</a> · <a href="https://codeberg.org/bibliogenius/bibliogenius-app/releases/tag/v1.4.0" class="changelog-link">release</a>
 
 - **Shelves**: the Shelves tab becomes a grid of cards, each in the colour of its shelf and illustrated with a fan of its newest covers. Every shelf now has a page of its own, with its sub-shelves and its books. The count shown counts a book once even when it sits in several places, sub-shelves included
