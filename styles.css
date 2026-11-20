@@ -361,6 +361,13 @@ a {
     padding: 5rem 0;
 }
 
+.features-lead {
+    max-width: 44rem;
+    margin: 0 auto 3rem;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: 1fr;

@@ -5,7 +5,7 @@
 # -- Metadaten --
 lang_name: Deutsch
 title: BiblioGenius - Open-Source-Bibliotheksverwaltung, lokal und privat
-meta_description: "BiblioGenius: Open-Source-App zur Verwaltung Ihrer persönlichen Bibliothek, lokal gespeichert und verschlüsselt. Teilen Sie Ihre Bücher mit Ihren Nachbarn. Jetzt kostenlos herunterladen."
+meta_description: "BiblioGenius: die App, um Ihre Bücher zu katalogisieren, Ihre Lektüre zu verfolgen und zu verleihen. Kostenlos, quelloffen, offline und ohne Konto."
 og_title: BiblioGenius - Open-Source-Bibliotheksverwaltung, lokal und privat
 og_description: Open-Source-App zur Verwaltung Ihrer persönlichen Bibliothek, lokal gespeichert und verschlüsselt. Teilen Sie Ihre Bücher mit Ihren Nachbarn.
 og_locale: de_DE
@@ -37,6 +37,7 @@ showcase_alt: BiblioGenius-Screenshot mit der Bibliotheksansicht und Buchcovern
 
 # -- Funktionen --
 features_title: Funktionen
+features_lead: "BiblioGenius ist eine App, mit der Sie Ihre Bücher katalogisieren, Ihre Lektüre verfolgen und Bücher im Kreis Ihrer Liebsten verleihen. Sie ist kostenlos, quelloffen und funktioniert ohne Konto."
 feature_local_title: Local-First
 feature_local_desc: Ihre Daten gehören Ihnen. Alles bleibt standardmäßig auf Ihrem Gerät.
 feature_p2p_title: Netzwerk-Teilen
