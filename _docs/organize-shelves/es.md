@@ -11,13 +11,13 @@ group: library
 
 ¿Importa el orden? Una colección. Si no, una estantería.
 
-![Vista de las estanterías](images/shelves-view.png)
+![La pestaña Estanterías en el móvil: cada estantería en una tarjeta, con sus portadas y su número de libros, y el botón Organizar (interfaz en francés)](images/shelves-tab-mobile.jpg)
 
 ## La pestaña Estanterías
 
 En tu Biblioteca, la pestaña **Estanterías** muestra tus estanterías en tarjetas, cada una con su color e ilustrada con sus portadas más recientes. El número que se muestra cuenta una sola vez un libro colocado en varios sitios, sub-estanterías incluidas.
 
-El botón **«Crear estantería»** añade una en el primer nivel. Un nombre ya usado se rechaza, sin tener en cuenta las mayúsculas.
+El botón **+** (en el ordenador, **«Crear estantería»**) añade una en el primer nivel. Un nombre ya usado se rechaza, sin tener en cuenta las mayúsculas.
 
 ## Cada estantería tiene su página
 

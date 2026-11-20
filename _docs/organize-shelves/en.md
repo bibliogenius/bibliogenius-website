@@ -11,13 +11,13 @@ group: library
 
 Does the order matter? A collection. Otherwise, a shelf.
 
-![Shelves view](images/shelves-view.png)
+![The Shelves tab on a phone: each shelf as a card, with its covers and book count, and the Organize button (French interface)](images/shelves-tab-mobile.jpg)
 
 ## The Shelves tab
 
 In your Library, the **Shelves** tab shows your shelves as cards, each in its own colour and illustrated with its most recent covers. The count shown counts a book filed in several places only once, sub-shelves included.
 
-The **"Create Shelf"** button adds one at the first level. A name already taken is refused, whatever the capitals.
+The **+** button (on a computer, **"Create Shelf"**) adds one at the first level. A name already taken is refused, whatever the capitals.
 
 ## Every shelf has its page
 

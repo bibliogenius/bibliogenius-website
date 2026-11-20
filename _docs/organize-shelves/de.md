@@ -11,13 +11,13 @@ group: library
 
 Zählt die Reihenfolge? Eine Sammlung. Sonst ein Regal.
 
-![Ansicht der Regale](images/shelves-view.png)
+![Der Reiter Regale auf dem Smartphone: jedes Regal als Karte, mit seinen Covern und der Zahl der Bücher, und die Schaltfläche Organisieren (französische Oberfläche)](images/shelves-tab-mobile.jpg)
 
 ## Der Reiter Regale
 
 In Ihrer Bibliothek zeigt der Reiter **Regale** Ihre Regale als Karten, jede in ihrer eigenen Farbe und mit ihren neuesten Covern. Die angezeigte Zahl zählt ein Buch, das an mehreren Stellen steht, nur einmal, Unterregale eingeschlossen.
 
-Die Schaltfläche **„Regal erstellen“** legt ein Regal auf der obersten Ebene an. Ein bereits vergebener Name wird abgelehnt, unabhängig von Groß- und Kleinschreibung.
+Die Schaltfläche **+** (am Computer **„Regal erstellen“**) legt ein Regal auf der obersten Ebene an. Ein bereits vergebener Name wird abgelehnt, unabhängig von Groß- und Kleinschreibung.
 
 ## Jedes Regal hat seine Seite
 

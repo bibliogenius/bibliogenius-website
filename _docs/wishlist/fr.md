@@ -11,8 +11,8 @@ Un livre que vous voulez lire mais que vous ne possédez pas a sa place dans Bib
 
 Ajoutez le livre comme n'importe quel autre, par scan, par recherche ou à la main, puis donnez-lui le statut **« Liste de souhaits »** (le cœur). Vous pouvez aussi le faire depuis une sélection toute prête au moment de l'importer.
 
-![Fiche d'un livre en liste de souhaits, avec le statut marqué d'un cœur et le bouton Se procurer ce livre, sur téléphone](images/wishlist-book-mobile.png)
-![Fiche d'un livre en liste de souhaits, avec le statut marqué d'un cœur et le bouton Se procurer ce livre, sur ordinateur](images/wishlist-book-desktop.png)
+![Fiche d'un livre en liste de souhaits, avec le statut marqué d'un cœur et le bouton Se procurer ce livre, sur téléphone](images/wishlist-book-mobile.jpg)
+![Fiche d'un livre en liste de souhaits, avec le statut marqué d'un cœur et le bouton Se procurer ce livre, sur ordinateur](images/wishlist-book-desktop.jpg)
 
 Un livre souhaité n'est pas compté comme possédé : il n'apparaît pas comme disponible pour vos contacts, et l'export CSV le note « Souhaité ».
 

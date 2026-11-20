@@ -11,13 +11,13 @@ group: library
 
 L'ordre compte ? Une collection. Sinon, une étagère.
 
-![Vue des étagères](images/shelves-view.png)
+![L'onglet Étagères sur téléphone : chaque étagère en carte, avec ses couvertures et son nombre de livres, et le bouton Organiser](images/shelves-tab-mobile.jpg)
 
 ## L'onglet Étagères
 
 Dans votre Bibliothèque, l'onglet **Étagères** présente vos étagères en cartes, chacune à sa couleur et illustrée par ses couvertures les plus récentes. Le nombre affiché compte une seule fois un livre rangé à plusieurs endroits, sous-étagères comprises.
 
-Le bouton **« Créer une étagère »** en ajoute une au premier niveau. Un nom déjà pris est refusé, sans tenir compte des majuscules.
+Le bouton **+** (sur ordinateur, **« Créer une étagère »**) en ajoute une au premier niveau. Un nom déjà pris est refusé, sans tenir compte des majuscules.
 
 ## Chaque étagère a sa page
 
