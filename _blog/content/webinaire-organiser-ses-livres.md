@@ -1,8 +1,8 @@
 +++
 title = "Webinaire du 7 décembre : de la pile à l'étagère, comment organiser ses livres ?"
-description = "Lundi 7 décembre 2026 à 19h, un webinaire de 30 à 40 minutes : quatre questions que l'on se pose en rangeant ses livres, et la réponse montrée en direct dans BiblioGenius. Inscription libre, session enregistrée."
+description = "Lundi 7 décembre 2026 à 19h, un webinaire d'une demi-heure : trois questions que l'on se pose en rangeant ses livres, et la réponse montrée en direct dans BiblioGenius, l'app gratuite pour ranger et prêter ses livres. Session enregistrée."
 date = 2026-11-20
-updated = 2026-11-20
+updated = 2026-11-24
 template = "blog/page.html"
 draft = false
 
@@ -12,16 +12,15 @@ tags = ["webinaire", "étagères", "communauté"]
 
 Les livres sont scannés, la bibliothèque est dans l'app. Et maintenant, on les range comment ?
 
-C'est le sujet du prochain webinaire BiblioGenius : **lundi 7 décembre 2026 à 19h** (heure de Paris), en ligne, pendant 30 à 40 minutes. Le 12 octobre, nous avions vu comment ajouter ses livres. Cette fois, ils sont là, et il s'agit de s'y retrouver.
+C'est le sujet du prochain webinaire BiblioGenius : **lundi 7 décembre 2026 à 19h** (heure de Paris), en ligne, pendant une demi-heure, puis vos questions. Le 12 octobre, nous avions vu comment ajouter ses livres. Cette fois, ils sont là, et il s'agit de s'y retrouver.
 
-## Quatre questions, quatre réponses à l'écran
+## Trois questions, trois réponses à l'écran
 
 Pas de tour des menus. Chaque séquence part d'une question que vous vous posez en rangeant vos livres, et la réponse est montrée en direct dans l'app.
 
-- **« Ce livre est un polar et de la science-fiction, je le range où ? »** Sur les deux : une étagère n'est pas une place sur un meuble.
-- **« J'ai scanné cinquante livres, je ne vais pas les ranger un par un. »** Non, et vous verrez comment les ranger d'un coup.
-- **« Je voudrais Romans, puis Policiers dedans, puis Scandinaves. »** Des étagères dans les étagères.
-- **« Comment retrouver ce que je n'ai pas encore lu ? »** Le statut de lecture, croisé avec vos étagères.
+- **50 livres à ranger rapidement.** « J'ai scanné cinquante livres, je ne vais pas les ranger un par un. » Non : vous verrez comment les ranger d'un coup. Et ce roman qui est aussi un livre d'histoire ? Il va sur les deux étagères : une étagère n'est pas une place sur un meuble.
+- **Des étagères dans les étagères.** « Dans Histoire, je voudrais une étagère pour la Révolution française. » Vous verrez comment la créer, puis comment réorganiser tout l'ensemble d'un glisser-déposer.
+- **Trouver ce que je n'ai pas encore lu.** Le statut de lecture, croisé avec vos étagères.
 
 Vous repartez avec une astuce par question, à essayer le soir même sur votre propre bibliothèque. La soirée se termine par un aperçu de ce qui se prépare pour la suite.
 
@@ -32,7 +31,7 @@ La fin de la session vous est réservée : posez vos questions dans le chat, j'y
 ## En pratique
 
 - **Quand :** lundi 7 décembre 2026, 19h (heure de Paris)
-- **Durée :** 30 à 40 minutes, questions comprises
+- **Durée :** une demi-heure, puis vos questions
 - **Où :** en ligne, sur Proton Meet, depuis un navigateur ; le lien de connexion vous est envoyé après l'inscription
 - **Enregistrement :** la session est enregistrée, et le replay sera ajouté à cette page
 
